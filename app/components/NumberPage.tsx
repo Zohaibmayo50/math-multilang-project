@@ -245,6 +245,14 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 <span className="text-lg sm:text-xl">🎮</span>
                 <span>Oyunları Keşfet</span>
               </a>
+              <a 
+                href="#worksheets"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-green-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-white/50 text-sm sm:text-base"
+              >
+                <span className="text-lg sm:text-xl">📝</span>
+                <span className="hidden sm:inline">Alıştırma İndir</span>
+                <span className="sm:hidden">İndir</span>
+              </a>
             </div>
           </div>
         </div>
@@ -389,7 +397,9 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       </div>
 
       {/* Printable Worksheets */}
-      <PrintableExercises rangeStart={number} rangeEnd={number} />
+      <div id="worksheets">
+        <PrintableExercises rangeStart={number} rangeEnd={number} />
+      </div>
 
       {/* How to Practice */}
       <section className="section-container bg-white">
