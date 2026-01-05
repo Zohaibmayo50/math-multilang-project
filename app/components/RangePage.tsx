@@ -107,6 +107,15 @@ export default function RangePage({
         </div>
       </section>
 
+      {/* Practice Area */}
+      <PracticePreview rangeStart={rangeStart} rangeEnd={rangeEnd} />
+
+      {/* Games Section */}
+      <GamesSection rangeStart={rangeStart} rangeEnd={rangeEnd} />
+
+      {/* Printable Worksheets */}
+      <PrintableExercises rangeStart={rangeStart} rangeEnd={rangeEnd} />
+
       {/* Difficulty & Progression */}
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -400,15 +409,6 @@ export default function RangePage({
           </div>
         </div>
       </section>
-
-      {/* Practice Area */}
-      <PracticePreview rangeStart={rangeStart} rangeEnd={rangeEnd} />
-
-      {/* Games Section */}
-      <GamesSection rangeStart={rangeStart} rangeEnd={rangeEnd} />
-
-      {/* Printable Worksheets */}
-      <PrintableExercises rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
       {/* Navigation: Previous & Next Range */}
       <section className="section-container bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
