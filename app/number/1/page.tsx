@@ -1,8 +1,8 @@
 import NumberPage from '../../components/NumberPage'
 
 export const metadata = {
-  title: 'Multiplication Table of 1 | Learn 1 Times Table',
-  description: 'Master the multiplication table of 1 with clear explanations, patterns, and practice strategies. Understand the identity property and build a foundation for all multiplication.',
+  title: '1 Çarpım Tablosu | 1 İle Çarpmayı Öğrenin',
+  description: '1 çarpım tablosunda ustalaşın. Açık açıklamalar, desenler ve pratik stratejilerle özdeşlik özelliğini anlayın ve tüm çarpma işlemleri için temel oluşturun.',
 }
 
 export default function MultiplicationTableOf1() {

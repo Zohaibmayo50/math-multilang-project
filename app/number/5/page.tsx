@@ -1,8 +1,8 @@
 import NumberPage from '../../components/NumberPage'
 
 export const metadata = {
-  title: 'Multiplication Table of 5 | Learn 5 Times Table',
-  description: 'Learn the multiplication table of 5 with beautiful patterns, money-counting connections, and time-telling applications. Master this highly practical table.',
+  title: '5 Çarpım Tablosu | 5 İle Çarpmayı Öğrenin',
+  description: '5 çarpım tablosunu güzel desenleri, para sayma bağlantıları ve saat söyleme uygulamalarıyla öğrenin. Bu son derece pratik tabloda ustalaşın.',
 }
 
 export default function MultiplicationTableOf5() {

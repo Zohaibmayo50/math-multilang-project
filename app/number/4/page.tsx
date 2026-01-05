@@ -1,8 +1,8 @@
 import NumberPage from '../../components/NumberPage'
 
 export const metadata = {
-  title: 'Multiplication Table of 4 | Learn 4 Times Table',
-  description: 'Master the multiplication table of 4 using doubling techniques, geometric patterns, and effective practice methods. Build strong multiplication skills.',
+  title: '4 Çarpım Tablosu | 4 İle Çarpmayı Öğrenin',
+  description: '4 çarpım tablosunda ikiye katlama teknikleri, geometrik desenler ve etkili pratik yöntemleri kullanarak ustalaşın. Güçlü çarpma becerileri oluşturun.',
 }
 
 export default function MultiplicationTableOf4() {

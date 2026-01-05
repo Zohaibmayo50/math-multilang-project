@@ -23,52 +23,52 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   // Number-specific content
   const getNumberMeaning = () => {
     const meanings: { [key: number]: string } = {
-      1: "Multiplying by 1 is a special case in mathematics. When you multiply any number by 1, the result is always that same number. This is called the identity property of multiplication. Think of it as asking 'how many groups of something do I have?' When you have just 1 group, you have exactly what you started with.",
-      2: "Multiplying by 2 means doubling a number. When you multiply something by 2, you're adding it to itself. This is one of the most practical multiplication facts because we often need to double things in real life—like calculating pairs of shoes, bicycle wheels, or splitting something equally between two people.",
-      3: "Multiplying by 3 means taking a number three times. You can think of it as adding the same number to itself three times. This table is essential for understanding triangles, triplets, and anything that comes in groups of three.",
-      4: "Multiplying by 4 is like doubling twice. Since 4 = 2 × 2, you can double a number and then double the result. This makes the 4 times table easier to learn if you already know your 2s. The number 4 appears frequently in geometry (squares have 4 sides) and in measuring time (4 quarters in an hour).",
-      5: "Multiplying by 5 creates one of the most beautiful patterns in mathematics. All multiples of 5 end in either 0 or 5, making this table very predictable. This is incredibly useful for counting money (5 cents, 5 dollars) and telling time (5-minute intervals on a clock).",
+      1: "1 ile çarpmak, matematikte özel bir durumdur. Herhangi bir sayıyı 1 ile çarptığınızda, sonuç her zaman aynı sayıdır. Buna çarpmanın özdeşlik özelliği denir. Bunu 'bir şeyden kaç grubum var?' diye sormak gibi düşünün. Sadece 1 grubunuz olduğunda, tam olarak başladığınız şeye sahipsiniz.",
+      2: "2 ile çarpmak, bir sayıyı ikiye katlamak demektir. Bir şeyi 2 ile çarptığınızda, onu kendi üzerine ekliyorsunuz. Bu, en pratik çarpma işlemlerinden biridir çünkü gerçek hayatta sıklıkla şeyleri ikiye katlamaya ihtiyaç duyarız—ayakkabı çiftlerini saymak, bisiklet tekerlekleri ya da bir şeyi iki kişi arasında eşit olarak bölmek gibi.",
+      3: "3 ile çarpmak, bir sayıyı üç kez almak demektir. Bunu aynı sayıyı kendine üç kez eklemek olarak düşünebilirsiniz. Bu tablo, üçgenler, üçlüler ve üçerli gelen her şeyi anlamak için gereklidir.",
+      4: "4 ile çarpmak, iki kez ikiye katlamak gibidir. 4 = 2 × 2 olduğundan, bir sayıyı ikiye katlayabilir ve sonra sonucu tekrar ikiye katlayabilirsiniz. Bu, 2'leri zaten biliyorsanız 4 çarpım tablosunu öğrenmeyi kolaylaştırır. 4 sayısı geometride (karelerin 4 kenarı vardır) ve zamanı ölçmede (bir saatte 4 çeyrek) sıklıkla görülür.",
+      5: "5 ile çarpmak, matematikteki en güzel desenlerden birini oluşturur. 5'in tüm katları 0 veya 5 ile biter, bu da bu tabloyu çok öngörülebilir yapar. Bu, para saymak (5 kuruş, 5 lira) ve saati söylemek (5 dakikalık aralıklar) için son derece kullanışlıdır.",
     }
-    return meanings[number] || `Multiplying by ${number} means adding ${number} to itself repeatedly. Each time you multiply, you're counting groups of ${number}.`
+    return meanings[number] || `${number} ile çarpmak, ${number} sayısını tekrar tekrar ekleme demektir. Her çarptığınızda, ${number}'lik grupları sayıyorsunuz.`
   }
 
   const getWhyImportant = () => {
     const importance: { [key: number]: string } = {
-      1: "The multiplication table of 1 is the foundation of all multiplication. It teaches students that numbers have an identity—they remain themselves when multiplied by 1. This concept is crucial for understanding algebraic properties later. While it may seem simple, mastering this table builds confidence and establishes the pattern that multiplication is organized and predictable.",
-      2: "The table of 2 is often the first real multiplication table students learn, and for good reason. Doubling is a natural concept that children encounter daily. Mastering this table makes mental math much faster and prepares students for even numbers, fractions (halves), and basic division. Many students find this the easiest table, which builds their confidence for harder tables.",
-      3: "The multiplication table of 3 bridges the gap between easy and challenging tables. It requires students to move beyond simple doubling and start recognizing new patterns. This table appears constantly in real-world contexts like counting by threes, understanding triangular shapes, and working with time (three periods in a day). Students who master the 3 times table show they can handle abstract counting.",
-      4: "Learning the 4 times table strengthens students' understanding of even numbers and geometric thinking. Since 4 is 2 doubled, students can use the 2 times table as a stepping stone, which teaches mathematical efficiency. This table is essential for understanding squares, area calculations, and quarter divisions. It's also frequently used in everyday situations like counting chair legs or car wheels.",
-      5: "The multiplication table of 5 is one of the most practical and pattern-rich tables. Students love it because every answer ends in 0 or 5, making it highly predictable. This table directly connects to money (counting by fives), telling time (5-minute intervals), and measurement systems. Mastering the 5 times table gives students confidence and shows them that math has beautiful, consistent patterns.",
+      1: "1'in çarpım tablosu, tüm çarpma işlemlerinin temelidir. Öğrencilere sayıların bir kimliği olduğunu öğretir—1 ile çarpıldıklarında kendileri olarak kalırlar. Bu kavram, daha sonra cebirsel özellikleri anlamak için çok önemlidir. Basit görünse de, bu tabloyu öğrenmek güven oluşturur ve çarpmanın düzenli ve öngörülebilir olduğu kalıbını kurar.",
+      2: "2 çarpım tablosu, genellikle öğrencilerin öğrendiği ilk gerçek çarpım tablosudur ve bunun iyi bir nedeni vardır. İkiye katlama, çocukların günlük olarak karşılaştığı doğal bir kavramdır. Bu tabloyu öğrenmek, zihinsel hesaplamayı çok daha hızlı hale getirir ve öğrencileri çift sayılara, kesirlere (yarılar) ve temel bölmeye hazırlar. Birçok öğrenci bunu en kolay tablo olarak bulur, bu da daha zor tablolar için güven oluşturur.",
+      3: "3'ün çarpım tablosu, kolay ve zorlu tablolar arasındaki boşluğu kapatır. Öğrencilerin basit ikiye katlamanın ötesine geçmesini ve yeni örüntüleri tanımaya başlamasını gerektirir. Bu tablo, üçerli sayma, üçgen şekilleri anlama ve zamanla çalışma (günde üç dönem) gibi gerçek dünya bağlamlarında sürekli görülür. 3 çarpım tablosunu öğrenen öğrenciler, soyut saymayı yapabileceklerini gösterirler.",
+      4: "4 çarpım tablosunu öğrenmek, öğrencilerin çift sayıları ve geometrik düşünmeyi anlamalarını güçlendirir. 4, 2'nin iki katı olduğundan, öğrenciler 2 çarpım tablosunu bir basamak taşı olarak kullanabilirler, bu da matematiksel verimliliği öğretir. Bu tablo, kareleri, alan hesaplamalarını ve çeyrek bölmeleri anlamak için gereklidir. Ayrıca sandalye ayaklarını veya araba tekerleklerini saymak gibi günlük durumlarda sıkça kullanılır.",
+      5: "5'in çarpım tablosu, en pratik ve örüntü açısından zengin tablolardan biridir. Öğrenciler bunu severler çünkü her cevap 0 veya 5 ile biter, bu da onu son derece öngörülebilir yapar. Bu tablo doğrudan parayla (beşerli sayma), saati söylemekle (5 dakikalık aralıklar) ve ölçüm sistemleriyle bağlantılıdır. 5 çarpım tablosunu öğrenmek öğrencilere güven verir ve matematiğin güzel, tutarlı örüntüleri olduğunu gösterir.",
     }
-    return importance[number] || `Learning the multiplication table of ${number} helps students develop fluency with this important number. It appears frequently in mathematics and daily life, making it essential for building strong calculation skills.`
+    return importance[number] || `${number} çarpım tablosunu öğrenmek, öğrencilerin bu önemli sayıyla akıcılık geliştirmelerine yardımcı olur. Matematik ve günlük hayatta sıkça görülür, bu da güçlü hesaplama becerileri oluşturmak için gerekli kılar.`
   }
 
   const getPatterns = () => {
     const patterns: { [key: number]: { title: string; description: string }[] } = {
       1: [
-        { title: "Identity Pattern", description: "Every number multiplied by 1 equals itself. This never changes: 1×1=1, 1×2=2, 1×3=3, and so on." },
-        { title: "Predictable Sequence", description: "The results simply count up: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. You're just listing numbers in order." },
-        { title: "Foundation for All Tables", description: "Every multiplication table starts with multiplying by 1, so this pattern appears in every table." },
+        { title: "Özdeşlik Deseni", description: "1 ile çarpılan her sayı kendisine eşittir. Bu asla değişmez: 1×1=1, 1×2=2, 1×3=3, ve böyle devam eder." },
+        { title: "Öngörülebilir Sıra", description: "Sonuçlar basitçe yukarı doğru sayar: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Sadece sırayla sayıları listeliyorsunuz." },
+        { title: "Tüm Tabloların Temeli", description: "Her çarpım tablosu 1 ile çarpmakla başlar, bu yüzden bu desen her tabloda görülür." },
       ],
       2: [
-        { title: "Even Numbers Only", description: "All multiples of 2 are even numbers. The results always end in 0, 2, 4, 6, or 8." },
-        { title: "Skip Counting by 2", description: "Each answer is 2 more than the previous: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
-        { title: "Doubling Pattern", description: "Each result is exactly double the multiplier: 2×5=10 is double of 5." },
+        { title: "Sadece Çift Sayılar", description: "2'nin tüm katları çift sayılardır. Sonuçlar her zaman 0, 2, 4, 6 veya 8 ile biter." },
+        { title: "İkişerli Atlayarak Sayma", description: "Her cevap bir öncekinden 2 fazladır: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
+        { title: "İkiye Katlama Deseni", description: "Her sonuç çarpanın tam iki katıdır: 2×5=10, 5'in iki katıdır." },
       ],
       3: [
-        { title: "Digit Sum Pattern", description: "Add the digits of each result: 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). The pattern 3-6-9 repeats!" },
-        { title: "Skip Counting by 3", description: "Each answer increases by 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
-        { title: "Odd-Even Alternation", description: "The results alternate: odd (3), even (6), odd (9), even (12), creating a predictable rhythm." },
+        { title: "Basamak Toplama Deseni", description: "Her sonucun basamaklarını toplayın: 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). 3-6-9 deseni tekrar eder!" },
+        { title: "Üçerli Atlayarak Sayma", description: "Her cevap 3 artar: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
+        { title: "Tek-Çift Değişimi", description: "Sonuçlar değişir: tek (3), çift (6), tek (9), çift (12), öngörülebilir bir ritim oluşturur." },
       ],
       4: [
-        { title: "All Even Numbers", description: "Like the 2 times table, all multiples of 4 are even, ending in 0, 2, 4, 6, or 8." },
-        { title: "Double the 2s Table", description: "Each answer is exactly double the corresponding answer in the 2 times table: 4×3=12 is double of 2×3=6." },
-        { title: "Skip Counting by 4", description: "Each answer increases by 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40." },
+        { title: "Hep Çift Sayılar", description: "2 çarpım tablosu gibi, 4'ün tüm katları çifttir, 0, 2, 4, 6 veya 8 ile biter." },
+        { title: "2'ler Tablosunun İki Katı", description: "Her cevap 2 çarpım tablosundaki karşılık gelen cevabın tam iki katıdır: 4×3=12, 2×3=6'nın iki katıdır." },
+        { title: "Dörderli Atlayarak Sayma", description: "Her cevap 4 artar: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40." },
       ],
       5: [
-        { title: "Ends in 0 or 5", description: "Every multiple of 5 ends in either 0 or 5. This makes the pattern instantly recognizable." },
-        { title: "Alternating Pattern", description: "The results alternate between ending in 5 (odd) and 0 (even): 5, 10, 15, 20, 25, 30..." },
-        { title: "Half of 10s Table", description: "Each result is exactly half of the 10 times table: 5×4=20 is half of 10×4=40." },
+        { title: "0 veya 5 ile Biter", description: "5'in her katı 0 veya 5 ile biter. Bu, deseni anında tanınabilir yapar." },
+        { title: "Değişen Desen", description: "Sonuçlar 5 (tek) ve 0 (çift) ile bitme arasında değişir: 5, 10, 15, 20, 25, 30..." },
+        { title: "10'lar Tablosunun Yarısı", description: "Her sonuç 10 çarpım tablosunun tam yarısıdır: 5×4=20, 10×4=40'ın yarısıdır." },
       ],
     }
     return patterns[number] || []
@@ -77,24 +77,24 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   const getCommonMistakes = () => {
     const mistakes: { [key: number]: { mistake: string; solution: string }[] } = {
       1: [
-        { mistake: "Thinking 1×1=2", solution: "Remember: anything times 1 equals itself. 1 group of 1 is just 1." },
-        { mistake: "Confusing with addition", solution: "Multiplication by 1 is different from addition. 5+1=6, but 5×1=5." },
+        { mistake: "1×1=2 olduğunu düşünmek", solution: "Unutmayın: 1 ile çarpılan her şey kendisine eşittir. 1 grubun 1'i sadece 1'dir." },
+        { mistake: "Toplama ile karıştırmak", solution: "1 ile çarpma toplamadan farklıdır. 5+1=6, ama 5×1=5." },
       ],
       2: [
-        { mistake: "Mixing up 2×6=12 with 2×7=14", solution: "Use skip counting: 2, 4, 6, 8, 10, 12, 14. Count carefully to avoid skipping." },
-        { mistake: "Getting confused with larger numbers", solution: "Break it down: 2×8 is just 8+8. Doubling is simple addition." },
+        { mistake: "2×6=12 ile 2×7=14'ü karıştırmak", solution: "Atlayarak saymayı kullanın: 2, 4, 6, 8, 10, 12, 14. Atlamadan dikkatli sayın." },
+        { mistake: "Büyük sayılarla kafası karışmak", solution: "Parçalara ayırın: 2×8 sadece 8+8'dir. İkiye katlamak basit toplamadır." },
       ],
       3: [
-        { mistake: "Confusing 3×6=18 with 3×7=21", solution: "Remember the +3 pattern: after 18 comes 21. Count by threes to verify." },
-        { mistake: "Mixing up 3×8=24 with 3×9=27", solution: "Use the digit sum trick: 24 (2+4=6) and 27 (2+7=9) follow the 3-6-9 pattern." },
+        { mistake: "3×6=18 ile 3×7=21'i karıştırmak", solution: "+3 desenini hatırlayın: 18'den sonra 21 gelir. Doğrulamak için üçerli sayın." },
+        { mistake: "3×8=24 ile 3×9=27'yi karıştırmak", solution: "Basamak toplama hilesini kullanın: 24 (2+4=6) ve 27 (2+7=9), 3-6-9 desenini takip eder." },
       ],
       4: [
-        { mistake: "Thinking 4×7=24 instead of 28", solution: "Remember: 4×6=24, so 4×7 must be 4 more, which is 28." },
-        { mistake: "Confusing with the 2 times table", solution: "The 4 times table is always double the 2 times table. Check by doubling." },
+        { mistake: "4×7=24 olduğunu düşünmek (28 yerine)", solution: "Hatırlayın: 4×6=24, bu yüzden 4×7, 4 fazla olmalı, yani 28." },
+        { mistake: "2 çarpım tablosu ile karıştırmak", solution: "4 çarpım tablosu her zaman 2 çarpım tablosunun iki katıdır. İki katına çıkararak kontrol edin." },
       ],
       5: [
-        { mistake: "Mixing up the order (25 before 20)", solution: "The pattern is consistent: 5, 10, 15, 20, 25. Each increases by 5." },
-        { mistake: "Thinking 5×odd always ends in 5", solution: "Actually, 5×even ends in 0, and 5×odd ends in 5." },
+        { mistake: "Sırayı karıştırmak (20'den önce 25)", solution: "Desen tutarlıdır: 5, 10, 15, 20, 25. Her biri 5 artar." },
+        { mistake: "5×tek sayının her zaman 5 ile bittiğini düşünmek", solution: "Aslında 5×çift 0 ile, 5×tek 5 ile biter." },
       ],
     }
     return mistakes[number] || []
@@ -103,41 +103,41 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   const getPracticeStrategies = () => {
     const strategies: { [key: number]: string[] } = {
       1: [
-        "Say each multiplication out loud: '1 times 1 equals 1, 1 times 2 equals 2...'",
-        "Practice writing the table once each day for a week",
-        "Look for the pattern: the answer is always the same as the second number",
-        "Use flashcards, but this table is often mastered very quickly",
+        "Her çarpmayı yüksek sesle söyleyin: '1 çarpı 1 eşittir 1, 1 çarpı 2 eşittir 2...'",
+        "Tabloyu bir hafta boyunca her gün bir kez yazmayı pratik edin",
+        "Deseni arayın: cevap her zaman ikinci sayıyla aynıdır",
+        "Flash kartları kullanın, ancak bu tablo genellikle çok hızlı öğrenilir",
       ],
       2: [
-        "Count by 2s while walking or climbing stairs: 2, 4, 6, 8...",
-        "Use your fingers: hold up fingers in pairs and count by 2s",
-        "Practice doubling numbers in your head throughout the day",
-        "Say it out loud: '2 times 5 is 5 plus 5, which equals 10'",
+        "Yürürken veya merdiven çıkarken ikişerli sayın: 2, 4, 6, 8...",
+        "Parmaklarınızı kullanın: parmakları çift olarak tutun ve ikişerli sayın",
+        "Gün boyunca kafanızda sayıları ikiye katlamayı pratik edin",
+        "Yüksek sesle söyleyin: '2 çarpı 5, 5 artı 5'tir, bu da 10 eder'",
       ],
       3: [
-        "Count by 3s rhythmically: 3, 6, 9, 12, 15...",
-        "Use the finger trick: hold up fingers in groups of 3",
-        "Look for the digit sum pattern (3-6-9 repeating) to check your answers",
-        "Practice for 5-10 minutes daily rather than one long session",
+        "Ritmik olarak üçerli sayın: 3, 6, 9, 12, 15...",
+        "Parmak hilesini kullanın: parmakları 3'lü gruplar halinde tutun",
+        "Cevaplarınızı kontrol etmek için basamak toplama desenine bakın (3-6-9 tekrarı)",
+        "Uzun bir seans yerine günde 5-10 dakika pratik yapın",
       ],
       4: [
-        "Learn the 2 times table first, then double each answer to get the 4s",
-        "Count by 4s: 4, 8, 12, 16, 20...",
-        "Use objects in groups of 4 (chair legs, car wheels) to visualize",
-        "Practice the harder ones (4×6, 4×7, 4×8, 4×9) separately",
+        "Önce 2 çarpım tablosunu öğrenin, sonra 4'leri elde etmek için her cevabı ikiye katlayın",
+        "Dörderli sayın: 4, 8, 12, 16, 20...",
+        "Görselleştirmek için 4'lü gruplar halindeki nesneleri kullanın (sandalye ayakları, araba tekerlekleri)",
+        "Daha zor olanları (4×6, 4×7, 4×8, 4×9) ayrı olarak pratik edin",
       ],
       5: [
-        "Count by 5s using your fingers—each finger represents 5",
-        "Look at a clock and count by 5-minute intervals",
-        "Practice with money: count nickels (5 cents each)",
-        "Remember: even multipliers end in 0, odd multipliers end in 5",
+        "Parmaklarınızı kullanarak beşerli sayın—her parmak 5'i temsil eder",
+        "Bir saate bakın ve 5 dakikalık aralıklarla sayın",
+        "Parayla pratik yapın: beşlik madeni paraları sayın (5 kuruş)",
+        "Unutmayın: çift çarpanlar 0 ile, tek çarpanlar 5 ile biter",
       ],
     }
     return strategies[number] || [
-      `Practice counting by ${number}s out loud`,
-      "Write the table daily for one week",
-      "Use flashcards to test yourself randomly",
-      "Practice 5-10 minutes each day rather than cramming",
+      `Yüksek sesle ${number}'erli saymayı pratik edin`,
+      "Tabloyu bir hafta boyunca her gün yazın",
+      "Kendinizi rastgele test etmek için flash kartları kullanın",
+      "Bir seferde uzun çalışmak yerine her gün 5-10 dakika pratik yapın",
     ]
   }
 
@@ -158,14 +158,14 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           </div>
           
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Multiplication Table of {number}
+            {number} Çarpım Tablosu
           </h1>
           
           <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto">
-            This page will help you learn and understand the multiplication table of {number}. 
-            You'll discover how {number} behaves in multiplication, see its patterns, and learn 
-            practical ways to master it. The {number} times table is an important part of the 
-            complete multiplication system that every student needs to know.
+            Bu sayfa, {number} çarpım tablosunu öğrenmenize ve anlamanıza yardımcı olacaktır. 
+            {number}'in çarpmada nasıl davrandığını keşfedecek, desenlerini görecek ve 
+            ustalaşmak için pratik yollar öğreneceksiniz. {number} çarpım tablosu, her öğrencinin 
+            bilmesi gereken tam çarpma sisteminin önemli bir parçasıdır.
           </p>
         </div>
       </section>
@@ -174,7 +174,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            What Does the Number {number} Mean in Multiplication?
+            {number} Sayısı Çarpmada Ne Anlama Gelir?
           </h2>
           
           <p className="text-lg text-slate-700 leading-relaxed mb-6">
@@ -185,10 +185,10 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             <div className="flex items-start gap-4">
               <span className="text-4xl">💡</span>
               <div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">Simple Explanation</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">Basit Açıklama</h3>
                 <p className="text-slate-700 leading-relaxed">
-                  When you see {number} × 4, think: "I have 4 groups, and each group has {number} items in it." 
-                  So {number} × 4 = {number} + {number} + {number} + {number} = {number * 4}.
+                  {number} × 4 gördüğünüzde şunu düşünün: "4 grubum var ve her grupta {number} öğe var." 
+                  Yani {number} × 4 = {number} + {number} + {number} + {number} = {number * 4}.
                 </p>
               </div>
             </div>
@@ -200,7 +200,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Why Learning the Multiplication Table of {number} Is Important
+            {number} Çarpım Tablosunu Öğrenmek Neden Önemlidir
           </h2>
           
           <p className="text-lg text-slate-700 leading-relaxed">
@@ -213,12 +213,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Patterns in the Multiplication Table of {number}
+            {number} Çarpım Tablosundaki Desenler
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Understanding patterns makes learning easier and more enjoyable. The {number} times table 
-            has beautiful patterns that can help you remember it without pure memorization.
+            Desenleri anlamak öğrenmeyi daha kolay ve eğlenceli hale getirir. {number} çarpım tablosu, 
+            salt ezberleme yapmadan hatırlamanıza yardımcı olabilecek güzel desenlere sahiptir.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -241,11 +241,11 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Multiplication Table of {number}
+            {number} Çarpım Tablosu
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 text-center leading-relaxed">
-            Here is the complete multiplication table for {number}, from {number} × 1 to {number} × 10.
+            İşte {number} için tam çarpım tablosu, {number} × 1'den {number} × 10'a kadar.
           </p>
           
           <div className={`bg-gradient-to-br ${colors[colorIndex]} rounded-2xl p-8 text-white shadow-xl max-w-md mx-auto`}>
@@ -269,12 +269,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            How to Practice the Multiplication Table of {number}
+            {number} Çarpım Tablosu Nasıl Pratik Yapılır
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Learning multiplication tables requires consistent practice with the right strategies. 
-            Here are proven methods specifically for mastering the {number} times table:
+            Çarpım tablolarını öğrenmek doğru stratejilerle tutarlı pratik gerektirir. 
+            İşte özellikle {number} çarpım tablosunda ustalaşmak için kanıtlanmış yöntemler:
           </p>
           
           <div className="grid gap-4">
@@ -296,12 +296,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Common Mistakes When Learning the Table of {number}
+            {number} Tablosunu Öğrenirken Yapılan Yaygın Hatalar
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Many students make similar mistakes when learning this table. Being aware of these 
-            common errors will help you avoid them and learn more efficiently.
+            Birçok öğrenci bu tabloyu öğrenirken benzer hatalar yapar. Bu yaygın hataların 
+            farkında olmak, onlardan kaçınmanıza ve daha verimli öğrenmenize yardımcı olacaktır.
           </p>
           
           <div className="space-y-6">
@@ -314,7 +314,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                       {item.mistake}
                     </h3>
                     <p className="text-slate-700 leading-relaxed">
-                      <span className="font-semibold text-green-600">Solution:</span> {item.solution}
+                      <span className="font-semibold text-green-600">Çözüm:</span> {item.solution}
                     </p>
                   </div>
                 </div>
@@ -328,12 +328,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Related Multiplication Tables
+            İlgili Çarpım Tabloları
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            The multiplication table of {number} is part of a larger learning system. 
-            You can explore other tables in the same range or move to the next logical number.
+            {number} çarpım tablosu daha büyük bir öğrenme sisteminin parçasıdır. 
+            Aynı aralıktaki diğer tabloları keşfedebilir veya bir sonraki mantıksal sayıya geçebilirsiniz.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -344,9 +344,9 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm text-slate-600 mb-1">← Previous Number</div>
+                    <div className="text-sm text-slate-600 mb-1">← Önceki Sayı</div>
                     <div className="text-2xl font-bold text-slate-900">
-                      Multiplication Table of {number - 1}
+                      {number - 1} Çarpım Tablosu
                     </div>
                   </div>
                   <svg className="w-6 h-6 text-blue-600 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -363,9 +363,9 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-sm text-slate-600 mb-1">Next Number →</div>
+                    <div className="text-sm text-slate-600 mb-1">Sonraki Sayı →</div>
                     <div className="text-2xl font-bold text-slate-900">
-                      Multiplication Table of {number + 1}
+                      {number + 1} Çarpım Tablosu
                     </div>
                   </div>
                   <svg className="w-6 h-6 text-purple-600 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -381,12 +381,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-sm text-slate-600 mb-1">↑ Parent Range</div>
+                  <div className="text-sm text-slate-600 mb-1">↑ Üst Aralık</div>
                   <div className="text-2xl font-bold text-slate-900">
-                    Multiplication Tables {rangeStart} to {rangeEnd}
+                    {rangeStart}'den {rangeEnd}'a Çarpım Tabloları
                   </div>
                   <p className="text-slate-600 mt-2">
-                    Explore all multiplication tables in this range with practice tools and games
+                    Bu aralıktaki tüm çarpım tablolarını pratik araçları ve oyunlarla keşfedin
                   </p>
                 </div>
                 <svg className="w-6 h-6 text-green-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

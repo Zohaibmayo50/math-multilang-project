@@ -1,8 +1,8 @@
 import NumberPage from '../../components/NumberPage'
 
 export const metadata = {
-  title: 'Multiplication Table of 2 | Learn 2 Times Table',
-  description: 'Master the multiplication table of 2 with doubling strategies, patterns, and practical examples. Learn the most fundamental multiplication table with confidence.',
+  title: '2 Çarpım Tablosu | 2 İle Çarpmayı Öğrenin',
+  description: '2 çarpım tablosunda ustalaşın. İkiye katlama stratejileri, desenler ve pratik örneklerle en temel çarpım tablosunu güvenle öğrenin.',
 }
 
 export default function MultiplicationTableOf2() {
