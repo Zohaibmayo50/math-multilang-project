@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Footer from './Footer'
 import PracticePreview from './PracticePreview'
 import PrintableExercises from './PrintableExercises'
+import NumberGames from './NumberGames'
 
 interface NumberPageProps {
   number: number
@@ -263,6 +264,9 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
 
       {/* Practice Section */}
       <PracticePreview rangeStart={number} rangeEnd={number} />
+
+      {/* Interactive Games */}
+      <NumberGames number={number} />
 
       {/* Printable Worksheets */}
       <PrintableExercises rangeStart={number} rangeEnd={number} />
