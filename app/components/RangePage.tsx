@@ -165,50 +165,36 @@ export default function RangePage({
       </section>
 
       {/* Learning Context */}
-      <section className="section-container bg-white">
+      <section className="section-container bg-white py-12">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <span className="text-5xl mb-4 inline-block">📖</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <span className="text-3xl">📖</span>
               {rangeStart}'den {rangeEnd}'a Çarpım Tablosu Neyi Kapsar?
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
-          <p className="text-lg text-slate-700 mb-8 leading-relaxed text-center max-w-2xl mx-auto">
-            Bu aralık, {rangeStart} ile {rangeEnd} arasındaki her sayının kendi içindeki çarpım tablosunu içerir. 
-            Bu sayıların her biri, 1'den 10'a kadar olan sayılarla çarpılarak öğrenilir.
-          </p>
-          
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 mb-8 border-2 border-blue-100 shadow-lg">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl">🎯</span>
-              <h3 className="text-2xl font-bold text-slate-900">Kapsanan Sayılar:</h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-100 shadow-md">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
               {rangeNumbers.map((num, index) => (
-                <div key={num} className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-lg shadow-md">
+                <div key={num} className="flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow group">
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-xl shadow-md group-hover:scale-110 transition-transform">
                     {num}
                   </span>
-                  <span className="text-slate-700 font-medium">{num} Çarpım Tablosu</span>
-                  <span className="ml-auto text-2xl">{index % 4 === 0 ? '⭐' : index % 4 === 1 ? '🌟' : index % 4 === 2 ? '✨' : '💫'}</span>
+                  <span className="text-lg mt-1">{index % 4 === 0 ? '⭐' : index % 4 === 1 ? '🌟' : index % 4 === 2 ? '✨' : '💫'}</span>
                 </div>
               ))}
             </div>
-          </div>
-          
-          <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 border-2 border-purple-100">
-            <div className="flex items-start gap-4">
-              <span className="text-4xl">💡</span>
-              <div>
-                <p className="text-lg text-slate-700 leading-relaxed">
-                  <span className="font-bold text-purple-600">Öğrenciler</span> bu aralıkta toplam 
-                  <span className="font-bold text-indigo-600"> {rangeNumbers.length * 10} çarpma işlemini</span> öğrenirler. 
-                  <span className="font-bold text-pink-600"> Simetri özelliği</span> sayesinde gerçekte ezberlemeleri gereken işlem sayısı daha azdır 
-                  (örneğin <span className="font-mono bg-white px-2 py-1 rounded">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
-                </p>
-              </div>
+            
+            <div className="bg-white/60 rounded-xl p-4 flex items-center gap-3">
+              <span className="text-3xl">💡</span>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} işlem</span> öğreneceksiniz! 
+                <span className="font-bold text-purple-600"> Simetri özelliği</span> sayesinde 
+                <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart}×{rangeEnd} = {rangeEnd}×{rangeStart}</span> 
+                gibi tekrarları atlayabilirsiniz.
+              </p>
             </div>
           </div>
         </div>
