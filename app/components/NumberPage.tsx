@@ -147,29 +147,145 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Hero Section */}
-      <section className="section-container bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-5 sm:top-10 left-5 sm:left-10 text-6xl sm:text-9xl font-bold text-indigo-600">{number}</div>
-          <div className="absolute bottom-5 sm:bottom-10 right-5 sm:right-10 text-6xl sm:text-9xl font-bold text-blue-600">×</div>
+      <section className={`relative overflow-hidden bg-gradient-to-br ${colors[colorIndex]} pt-16 pb-12 sm:pt-20 sm:pb-16 md:pt-24 md:pb-20`}>
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Floating Numbers - Multiplication Results */}
+          {[1, 2, 3, 4, 5].map((multiplier, index) => (
+            <div
+              key={multiplier}
+              className={`absolute text-5xl sm:text-6xl md:text-7xl font-bold opacity-10 animate-float${index % 2 === 0 ? '' : '-delayed'}`}
+              style={{
+                top: `${10 + index * 15}%`,
+                left: index % 2 === 0 ? `${10 + index * 10}%` : 'auto',
+                right: index % 2 !== 0 ? `${5 + index * 8}%` : 'auto'
+              }}
+            >
+              {number * multiplier}
+            </div>
+          ))}
+          
+          {/* Colorful Circles */}
+          <div className="absolute top-20 right-[30%] w-24 sm:w-32 h-24 sm:h-32 bg-yellow-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-32 left-[20%] w-32 sm:w-40 h-32 sm:h-40 bg-pink-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-[45%] w-20 sm:w-28 h-20 sm:h-28 bg-green-300/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-[15%] w-28 sm:w-36 h-28 sm:h-36 bg-purple-300/20 rounded-full blur-3xl"></div>
         </div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="inline-block bg-white/80 backdrop-blur-sm rounded-2xl px-6 sm:px-8 py-3 sm:py-4 mb-4 sm:mb-6 shadow-lg">
-            <span className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              {number}
-            </span>
+
+        <div className="max-w-5xl mx-auto px-4 relative z-10">
+          {/* Number Badge with Fun Icons */}
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border-2 border-white/50">
+              <span className="text-2xl sm:text-3xl">🔢</span>
+              <span className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                {number}
+              </span>
+              <span className="text-2xl sm:text-3xl">✖️</span>
+            </div>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 px-4">
-            {number} Çarpım Tablosu
-          </h1>
+          {/* Main Heading with Fun Elements */}
+          <div className="text-center mb-6 sm:mb-8">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
+              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce">🎯</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-slate-900">{number}</span>
+                <br className="sm:hidden" />
+                <span className="sm:inline"> </span>
+                <span className="text-slate-900">Çarpım Tablosu</span>
+              </h1>
+              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce" style={{ animationDelay: '0.2s' }}>🎨</span>
+            </div>
+            
+            {/* Fun Stats Cards */}
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-2xl mx-auto mt-6 sm:mt-8 mb-4 sm:mb-6">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-blue-100">
+                <div className="text-2xl sm:text-3xl mb-1">📊</div>
+                <div className="text-xl sm:text-2xl font-bold text-blue-600">10</div>
+                <div className="text-xs text-slate-600">İşlem</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-indigo-100">
+                <div className="text-2xl sm:text-3xl mb-1">🎮</div>
+                <div className="text-xl sm:text-2xl font-bold text-indigo-600">3</div>
+                <div className="text-xs text-slate-600">Oyun</div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-purple-100">
+                <div className="text-2xl sm:text-3xl mb-1">📝</div>
+                <div className="text-xl sm:text-2xl font-bold text-purple-600">∞</div>
+                <div className="text-xs text-slate-600">Pratik</div>
+              </div>
+            </div>
+          </div>
           
-          <p className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto px-4">
-            Bu sayfa, {number} çarpım tablosunu öğrenmenize ve anlamanıza yardımcı olacaktır. 
-            {number}'in çarpmada nasıl davrandığını keşfedecek, desenlerini görecek ve 
-            ustalaşmak için pratik yollar öğreneceksiniz. {number} çarpım tablosu, her öğrencinin 
-            bilmesi gereken tam çarpma sisteminin önemli bir parçasıdır.
+          {/* Description with Better Typography */}
+          <div className="max-w-3xl mx-auto space-y-4 text-center px-4">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
+              Bu sayfa, <span className="font-semibold text-yellow-200">{number} çarpım tablosunu</span> öğrenmenize ve anlamanıza yardımcı olacaktır. 
+              {number}'in çarpmada nasıl davrandığını keşfedecek, 
+              <span className="font-semibold text-yellow-200"> desenlerini görecek</span> ve 
+              ustalaşmak için <span className="font-semibold text-yellow-200">pratik yollar</span> öğreneceksiniz.
+            </p>
+            
+            {/* Quick Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 pt-4">
+              <a 
+                href="#practice"
+                className="group inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-600 font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 text-sm sm:text-base"
+              >
+                <span className="text-lg sm:text-xl">🎯</span>
+                <span>Pratik Yap</span>
+                <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a 
+                href="#games"
+                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-purple-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-white/50 text-sm sm:text-base"
+              >
+                <span className="text-lg sm:text-xl">🎮</span>
+                <span>Oyunları Keşfet</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Introduction - What This Table Covers */}
+      <section className="section-container bg-white py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <span className="text-2xl sm:text-3xl">📖</span>
+              {number} Çarpım Tablosu Neyi Kapsar?
+            </h2>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <p className="text-sm sm:text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
+            {number} çarpım tablosu, {number} sayısının 1'den 10'a kadar olan tüm sayılarla çarpımını kapsar. 
+            Bu size günlük hayatta ve ileri matematik konularında çok yardımcı olacak <span className="font-bold text-indigo-600">10 temel işlemi</span> öğretir.
           </p>
+          
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-6 border-2 border-blue-100 shadow-md">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-3 mb-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((multiplier, index) => (
+                <div key={multiplier} className="flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-sm hover:shadow-md transition-shadow group">
+                  <span className="text-xs sm:text-sm text-slate-600 mb-1">{number} × {multiplier}</span>
+                  <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-base sm:text-xl shadow-md group-hover:scale-110 transition-transform">
+                    {number * multiplier}
+                  </span>
+                </div>
+              ))}
+            </div>
+            
+            <div className="bg-white/60 rounded-xl p-3 sm:p-4 flex items-start gap-2 sm:gap-3">
+              <span className="text-2xl sm:text-3xl">💡</span>
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                {number} çarpım tablosunda <span className="font-bold text-indigo-600">10 çarpma işlemi</span> var. 
+                Bu tablodaki desenleri anlayarak, bu işlemleri kolayca ezberleyebilir ve hızlı bir şekilde hesaplayabilirsiniz!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -263,10 +379,14 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       </section>
 
       {/* Practice Section */}
-      <PracticePreview rangeStart={number} rangeEnd={number} />
+      <div id="practice">
+        <PracticePreview rangeStart={number} rangeEnd={number} />
+      </div>
 
       {/* Interactive Games */}
-      <NumberGames number={number} />
+      <div id="games">
+        <NumberGames number={number} />
+      </div>
 
       {/* Printable Worksheets */}
       <PrintableExercises rangeStart={number} rangeEnd={number} />
