@@ -175,6 +175,11 @@ export default function RangePage({
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
+          <p className="text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
+            Bu aralık, {rangeStart} ile {rangeEnd} arasındaki her sayının kendi içindeki çarpım tablosunu içerir. 
+            Bu sayıların her biri, 1'den 10'a kadar olan sayılarla çarpılarak öğrenilir.
+          </p>
+          
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-100 shadow-md">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
               {rangeNumbers.map((num, index) => (
@@ -190,10 +195,9 @@ export default function RangePage({
             <div className="bg-white/60 rounded-xl p-4 flex items-center gap-3">
               <span className="text-3xl">💡</span>
               <p className="text-sm text-slate-700 leading-relaxed">
-                <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} işlem</span> öğreneceksiniz! 
-                <span className="font-bold text-purple-600"> Simetri özelliği</span> sayesinde 
-                <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart}×{rangeEnd} = {rangeEnd}×{rangeStart}</span> 
-                gibi tekrarları atlayabilirsiniz.
+                Öğrenciler bu aralıkta toplam <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} çarpma işlemini</span> öğrenirler. 
+                <span className="font-bold text-purple-600"> Simetri özelliği</span> sayesinde gerçekte ezberlemeleri gereken işlem sayısı daha azdır 
+                (örneğin <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
               </p>
             </div>
           </div>
