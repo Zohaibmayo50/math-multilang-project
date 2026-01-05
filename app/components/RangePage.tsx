@@ -213,6 +213,135 @@ export default function RangePage({
       {/* Printable Worksheets */}
       <PrintableExercises rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
+      {/* Range Table */}
+      <section className="section-container bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-3xl font-bold text-slate-900">
+              {rangeStart}'den {rangeEnd}'a Çarpım Tablosu - Tam Liste
+            </h2>
+            <button
+              onClick={() => {
+                const printWindow = window.open('', '_blank')
+                if (printWindow) {
+                  printWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                      <title>${rangeStart}'den ${rangeEnd}'a Çarpım Tablosu</title>
+                      <style>
+                        @media print {
+                          @page { margin: 1cm; }
+                        }
+                        body {
+                          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                          padding: 20px;
+                          max-width: 1200px;
+                          margin: 0 auto;
+                        }
+                        h1 {
+                          text-align: center;
+                          color: #1e293b;
+                          margin-bottom: 30px;
+                          font-size: 28px;
+                        }
+                        .grid {
+                          display: grid;
+                          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                          gap: 20px;
+                          margin-top: 20px;
+                        }
+                        .table-box {
+                          border: 2px solid #3b82f6;
+                          border-radius: 12px;
+                          padding: 15px;
+                          background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+                        }
+                        .table-title {
+                          font-size: 18px;
+                          font-weight: bold;
+                          text-align: center;
+                          margin-bottom: 12px;
+                          color: #1e40af;
+                        }
+                        .equation {
+                          display: flex;
+                          justify-content: space-between;
+                          padding: 6px 10px;
+                          margin: 4px 0;
+                          background: white;
+                          border-radius: 6px;
+                          font-size: 14px;
+                        }
+                        .equation-left {
+                          color: #475569;
+                        }
+                        .equation-right {
+                          font-weight: 600;
+                          color: #1e293b;
+                        }
+                      </style>
+                    </head>
+                    <body>
+                      <h1>${rangeStart}'den ${rangeEnd}'a Çarpım Tablosu - Tam Liste</h1>
+                      <div class="grid">
+                        ${rangeNumbers.map(num => `
+                          <div class="table-box">
+                            <div class="table-title">${num} Çarpım Tablosu</div>
+                            ${[...Array(10)].map((_, i) => `
+                              <div class="equation">
+                                <span class="equation-left">${num} × ${i + 1}</span>
+                                <span class="equation-right">= ${num * (i + 1)}</span>
+                              </div>
+                            `).join('')}
+                          </div>
+                        `).join('')}
+                      </div>
+                    </body>
+                    </html>
+                  `)
+                  printWindow.document.close()
+                  setTimeout(() => {
+                    printWindow.print()
+                  }, 250)
+                }
+              }}
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Tabloyu İndir / Yazdır
+            </button>
+          </div>
+          
+          <p className="text-center text-slate-700 mb-8 max-w-3xl mx-auto">
+            Aşağıda {rangeStart}'den {rangeEnd}'a kadar tüm çarpım tablolarını bir arada görebilirsiniz. 
+            Her sayının kendi renkli kutusu vardır.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {rangeNumbers.map((num, index) => {
+              const colorIndex = index % colors.length
+              
+              return (
+                <div key={num} className={`bg-gradient-to-br ${colors[colorIndex]} rounded-xl p-4 text-white`}>
+                  <div className="font-bold text-lg mb-3 text-center">{num} Çarpım Tablosu</div>
+                  <div className="space-y-1 text-sm">
+                    {[...Array(10)].map((_, i) => (
+                      <div key={i} className="flex justify-between items-center bg-white/20 rounded px-2 py-1">
+                        <span>{num} × {i + 1}</span>
+                        <span className="font-semibold">= {num * (i + 1)}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Difficulty & Progression */}
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -425,135 +554,6 @@ export default function RangePage({
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Range Table */}
-      <section className="section-container bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-3xl font-bold text-slate-900">
-              {rangeStart}'den {rangeEnd}'a Çarpım Tablosu - Tam Liste
-            </h2>
-            <button
-              onClick={() => {
-                const printWindow = window.open('', '_blank')
-                if (printWindow) {
-                  printWindow.document.write(`
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                      <title>${rangeStart}'den ${rangeEnd}'a Çarpım Tablosu</title>
-                      <style>
-                        @media print {
-                          @page { margin: 1cm; }
-                        }
-                        body {
-                          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-                          padding: 20px;
-                          max-width: 1200px;
-                          margin: 0 auto;
-                        }
-                        h1 {
-                          text-align: center;
-                          color: #1e293b;
-                          margin-bottom: 30px;
-                          font-size: 28px;
-                        }
-                        .grid {
-                          display: grid;
-                          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                          gap: 20px;
-                          margin-top: 20px;
-                        }
-                        .table-box {
-                          border: 2px solid #3b82f6;
-                          border-radius: 12px;
-                          padding: 15px;
-                          background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-                        }
-                        .table-title {
-                          font-size: 18px;
-                          font-weight: bold;
-                          text-align: center;
-                          margin-bottom: 12px;
-                          color: #1e40af;
-                        }
-                        .equation {
-                          display: flex;
-                          justify-content: space-between;
-                          padding: 6px 10px;
-                          margin: 4px 0;
-                          background: white;
-                          border-radius: 6px;
-                          font-size: 14px;
-                        }
-                        .equation-left {
-                          color: #475569;
-                        }
-                        .equation-right {
-                          font-weight: 600;
-                          color: #1e293b;
-                        }
-                      </style>
-                    </head>
-                    <body>
-                      <h1>${rangeStart}'den ${rangeEnd}'a Çarpım Tablosu - Tam Liste</h1>
-                      <div class="grid">
-                        ${rangeNumbers.map(num => `
-                          <div class="table-box">
-                            <div class="table-title">${num} Çarpım Tablosu</div>
-                            ${[...Array(10)].map((_, i) => `
-                              <div class="equation">
-                                <span class="equation-left">${num} × ${i + 1}</span>
-                                <span class="equation-right">= ${num * (i + 1)}</span>
-                              </div>
-                            `).join('')}
-                          </div>
-                        `).join('')}
-                      </div>
-                    </body>
-                    </html>
-                  `)
-                  printWindow.document.close()
-                  setTimeout(() => {
-                    printWindow.print()
-                  }, 250)
-                }
-              }}
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors shadow-md hover:shadow-lg"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Tabloyu İndir / Yazdır
-            </button>
-          </div>
-          
-          <p className="text-center text-slate-700 mb-8 max-w-3xl mx-auto">
-            Aşağıda {rangeStart}'den {rangeEnd}'a kadar tüm çarpım tablolarını bir arada görebilirsiniz. 
-            Her sayının kendi renkli kutusu vardır.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {rangeNumbers.map((num, index) => {
-              const colorIndex = index % colors.length
-              
-              return (
-                <div key={num} className={`bg-gradient-to-br ${colors[colorIndex]} rounded-xl p-4 text-white`}>
-                  <div className="font-bold text-lg mb-3 text-center">{num} Çarpım Tablosu</div>
-                  <div className="space-y-1 text-sm">
-                    {[...Array(10)].map((_, i) => (
-                      <div key={i} className="flex justify-between items-center bg-white/20 rounded px-2 py-1">
-                        <span>{num} × {i + 1}</span>
-                        <span className="font-semibold">= {num * (i + 1)}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            })}
           </div>
         </div>
       </section>
