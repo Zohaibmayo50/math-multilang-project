@@ -15,13 +15,13 @@ export default function ForStudents() {
     <>
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 md:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
                 Çarpım Tablosunu Öğrenmek Çok Kolay! 🎯
               </h1>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8">
                 Kendi hızında ilerle, eğlenerek öğren ve matematik kahramanı ol! 
                 Bu rehber, çarpım tablosunu adım adım öğrenmene yardımcı olacak.
               </p>
@@ -36,17 +36,17 @@ export default function ForStudents() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           {/* Why Learn */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Neden Çarpım Tablosu Öğrenmeliyim? 🤔
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
                 Çarpım tablosu, matematik dünyasının süper gücü! İşte sana neler kazandıracak:
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
                     ⚡
@@ -88,19 +88,19 @@ export default function ForStudents() {
           </section>
 
           {/* Learning Path */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Adım Adım Öğrenme Yolu 🚀
             </h2>
             <div className="space-y-4">
               {/* Step 1 */}
-              <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
-                <div className="flex items-start gap-4">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-green-500">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
                     1
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Basit Tablolarla Başla (1, 2, 5, 10)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Basit Tablolarla Başla (1, 2, 5, 10)</h3>
                     <p className="text-slate-700 mb-3">
                       En kolay tablolardan başlamak sana güven verecek! Bunlar çok basit ve çabuk öğreneceksin.
                     </p>
@@ -123,13 +123,13 @@ export default function ForStudents() {
               </div>
 
               {/* Step 2 */}
-              <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
-                <div className="flex items-start gap-4">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-blue-500">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Orta Seviye Tablolara Geç (3, 4, 6)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Orta Seviye Tablolara Geç (3, 4, 6)</h3>
                     <p className="text-slate-700 mb-3">
                       Artık biraz daha zorlayıcı tablolara hazırsın! Endişelenme, bunlar için de püf noktalar var.
                     </p>
@@ -195,15 +195,15 @@ export default function ForStudents() {
           </section>
 
           {/* Visual Learning */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Görsel Öğrenme - Resimlerle Anla 🎨
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
                 Çarpımı gözünde canlandırmak öğrenmeni kolaylaştırır! İşte bazı görsel teknikler:
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 {/* Arrays */}
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-slate-900 mb-3">Diziler (Arrays)</h3>
@@ -265,12 +265,12 @@ export default function ForStudents() {
           </section>
 
           {/* Practice Tips */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Pratik Yapma İpuçları 🎯
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                   🎮
                 </div>
@@ -316,12 +316,12 @@ export default function ForStudents() {
           </section>
 
           {/* Progress Tracking */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               İlerlemeni Takip Et 📊
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
                 Ne kadar ilerlediğini görmek seni motive eder! İşte takip yöntemleri:
               </p>
               <div className="space-y-4">
@@ -352,12 +352,12 @@ export default function ForStudents() {
           </section>
 
           {/* Motivation */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Motivasyon ve Başarı Sırları 💫
             </h2>
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg shadow-md p-8">
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🌟</span>
@@ -409,12 +409,12 @@ export default function ForStudents() {
           </section>
 
           {/* Quick Reference */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Hızlı Püf Noktaları Rehberi 🔑
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-bold text-blue-900 mb-2">0 ile Çarpım</h4>
                   <p className="text-sm text-slate-700">Her şey sıfır olur! 0×1000=0</p>
@@ -444,11 +444,11 @@ export default function ForStudents() {
           </section>
 
           {/* Call to Action */}
-          <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Şimdi Başlama Zamanı! 🚀
             </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Artık hazırsın! Unutma, her büyük matematik kahramanı küçük adımlarla başladı. 
               Sen de yapabilirsin! 💪✨
             </p>

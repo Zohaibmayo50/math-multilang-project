@@ -15,13 +15,13 @@ export default function ForTeachers() {
     <>
       <main className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-16">
+        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white py-12 md:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
                 Öğretmenler İçin Çarpım Tablosu Rehberi
               </h1>
-              <p className="text-xl text-emerald-100 mb-8">
+              <p className="text-lg sm:text-xl text-emerald-100 mb-6 md:mb-8">
                 Sınıfınızda çarpım tablosu öğretimi için profesyonel kaynaklar, pedagojik stratejiler ve aktivite önerileri.
               </p>
               <div className="flex items-center gap-4">
@@ -35,18 +35,18 @@ export default function ForTeachers() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           {/* Pedagogical Approach */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Pedagojik Yaklaşım
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
                 Çarpım tablosu öğretimi, sadece ezber değil, kavramsal anlama üzerine inşa edilmelidir. 
                 Öğrencilerin çarpmanın anlamını anlaması ve farklı stratejiler geliştirmesi önemlidir.
               </p>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
                   <h3 className="text-lg font-semibold text-emerald-900 mb-3">Somuttan Soyuta</h3>
                   <p className="text-slate-700">Fiziksel materyallerle başlayıp, görsel temsiller üzerinden soyut sayısal işlemlere geçiş.</p>
@@ -64,14 +64,14 @@ export default function ForTeachers() {
           </section>
 
           {/* Teaching Methods */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Öğretim Yöntemleri
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {/* Method 1 */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <div className="flex items-start gap-4">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
                     <span className="text-2xl">📦</span>
                   </div>
@@ -175,18 +175,18 @@ export default function ForTeachers() {
           </section>
 
           {/* Classroom Activities */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Sınıf İçi Aktivite Önerileri
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
               {/* Activity 1 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
                     1
                   </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Çarpım Tablosu Bingo</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-900">Çarpım Tablosu Bingo</h3>
                 </div>
                 <p className="text-slate-700 mb-3">
                   Her öğrenciye 4×4 veya 5×5 bingo kartı verin. Çarpım sorularını sesli okuyun, 
@@ -291,16 +291,16 @@ export default function ForTeachers() {
           </section>
 
           {/* Differentiated Instruction */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Farklılaştırılmış Öğretim
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
                 Her öğrencinin öğrenme hızı ve stili farklıdır. Sınıfınızda farklı seviyelerdeki 
                 öğrencilere uygun stratejiler geliştirin.
               </p>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {/* Struggling Students */}
                 <div className="bg-red-50 p-6 rounded-lg border-t-4 border-red-400">
                   <h3 className="text-lg font-semibold text-red-900 mb-4">Zorlan öğrenciler</h3>
@@ -386,11 +386,11 @@ export default function ForTeachers() {
           </section>
 
           {/* Assessment Tools */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Ölçme ve Değerlendirme Araçları
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               {/* Formative Assessment */}
               <div className="bg-white rounded-lg shadow-md p-8">
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">Biçimlendirici Değerlendirme</h3>
@@ -494,8 +494,8 @@ export default function ForTeachers() {
           </section>
 
           {/* Common Misconceptions */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Yaygın Kavram Yanılgıları ve Çözümleri
             </h2>
             <div className="space-y-4">
@@ -544,12 +544,12 @@ export default function ForTeachers() {
           </section>
 
           {/* Resources */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Ek Kaynaklar ve Materyaller
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900 mb-3">Yazdırılabilir Materyaller</h3>
                   <ul className="space-y-2 text-slate-700">
@@ -597,15 +597,15 @@ export default function ForTeachers() {
           </section>
 
           {/* Call to Action */}
-          <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg shadow-lg p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Sınıfınızda Kullanmaya Başlayın!
             </h2>
-            <p className="text-lg text-emerald-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-emerald-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Bu platformu sınıfınızda kullanarak öğrencilerinize etkili, eğlenceli ve 
               anlamlı bir çarpım tablosu öğrenme deneyimi sunun.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 
                 href="/1-10"
                 className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center"

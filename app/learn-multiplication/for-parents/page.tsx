@@ -15,13 +15,13 @@ export default function ForParents() {
     <>
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+        <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-12 md:py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
                 Ebeveynler İçin Çarpım Tablosu Rehberi
               </h1>
-              <p className="text-xl text-purple-100 mb-8">
+              <p className="text-lg sm:text-xl text-purple-100 mb-6 md:mb-8">
                 Çocuğunuzun çarpım tablosunu öğrenmesine nasıl destek olabilirsiniz? 
                 Bu rehber, etkili stratejiler ve pratik öneriler içerir.
               </p>
@@ -36,18 +36,18 @@ export default function ForParents() {
         </div>
 
         {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
           {/* Why It Matters */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Neden Önemli?
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <p className="text-lg text-slate-700 mb-4">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <p className="text-base sm:text-lg text-slate-700 mb-4">
                 Çarpım tablosu, çocuğunuzun matematik yolculuğunda atması gereken en önemli adımlardan biridir. 
                 Sadece matematik değil, problem çözme, mantıksal düşünme ve özgüven gelişimi için de kritik öneme sahiptir.
               </p>
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-purple-900 mb-2">Temel Beceri</h3>
                   <p className="text-slate-700">Gelecekteki tüm matematik konuları için sağlam bir temel oluşturur.</p>
@@ -65,13 +65,13 @@ export default function ForParents() {
           </section>
 
           {/* Learning Strategies */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Etkili Öğrenme Stratejileri
             </h2>
-            <div className="space-y-6">
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <div className="flex items-start gap-4">
+            <div className="space-y-4 md:space-y-6">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-purple-600">1</span>
                   </div>
@@ -189,12 +189,12 @@ export default function ForParents() {
           </section>
 
           {/* Motivation Tips */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Motivasyon Teknikleri
             </h2>
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg shadow-md p-8">
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-4 flex items-center">
                     <svg className="w-6 h-6 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -260,18 +260,18 @@ export default function ForParents() {
           </section>
 
           {/* Home Activities */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Ev İçi Pratik Aktiviteleri
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Mutfak Matematiği</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-3">Mutfak Matematiği</h3>
                 <p className="text-slate-700 mb-3">
                   Yemek yaparken çarpım tablosunu kullanın:
                 </p>
@@ -336,8 +336,8 @@ export default function ForParents() {
           </section>
 
           {/* Weekly Plan */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Örnek Haftalık Çalışma Planı
             </h2>
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
@@ -345,39 +345,39 @@ export default function ForParents() {
                 <table className="w-full">
                   <thead className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
                     <tr>
-                      <th className="px-6 py-4 text-left">Gün</th>
-                      <th className="px-6 py-4 text-left">Aktivite</th>
-                      <th className="px-6 py-4 text-left">Süre</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-sm sm:text-base">Gün</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-sm sm:text-base">Aktivite</th>
+                      <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-sm sm:text-base">Süre</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Pazartesi</td>
-                      <td className="px-6 py-4 text-slate-700">Yeni tablo öğrenme (görsel araçlarla)</td>
-                      <td className="px-6 py-4 text-slate-600">15 dakika</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Pazartesi</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-700 text-sm sm:text-base">Yeni tablo öğrenme (görsel araçlarla)</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-600 text-sm sm:text-base whitespace-nowrap">15 dakika</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Salı</td>
-                      <td className="px-6 py-4 text-slate-700">Önceki gün öğrenilen tablonun tekrarı</td>
-                      <td className="px-6 py-4 text-slate-600">10 dakika</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Salı</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-700 text-sm sm:text-base">Önceki gün öğrenilen tablonun tekrarı</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-600 text-sm sm:text-base whitespace-nowrap">10 dakika</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Çarşamba</td>
-                      <td className="px-6 py-4 text-slate-700">Oyunlarla pratik yapma</td>
-                      <td className="px-6 py-4 text-slate-600">20 dakika</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Çarşamba</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-700 text-sm sm:text-base">Oyunlarla pratik yapma</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-600 text-sm sm:text-base whitespace-nowrap">20 dakika</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Perşembe</td>
-                      <td className="px-6 py-4 text-slate-700">Günlük hayat problemleri</td>
-                      <td className="px-6 py-4 text-slate-600">15 dakika</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Perşembe</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-700 text-sm sm:text-base">Günlük hayat problemleri</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-600 text-sm sm:text-base whitespace-nowrap">15 dakika</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Cuma</td>
-                      <td className="px-6 py-4 text-slate-700">Haftanın tüm tablolarını gözden geçirme</td>
-                      <td className="px-6 py-4 text-slate-600">15 dakika</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Cuma</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-700 text-sm sm:text-base">Haftanın tüm tablolarını gözden geçirme</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-slate-600 text-sm sm:text-base whitespace-nowrap">15 dakika</td>
                     </tr>
                     <tr className="hover:bg-gray-50">
-                      <td className="px-6 py-4 font-semibold text-slate-900">Cumartesi</td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 font-semibold text-slate-900 text-sm sm:text-base">Cumartesi</td>
                       <td className="px-6 py-4 text-slate-700">Eğlenceli oyunlar ve yarışmalar</td>
                       <td className="px-6 py-4 text-slate-600">30 dakika</td>
                     </tr>
@@ -398,11 +398,11 @@ export default function ForParents() {
           </section>
 
           {/* Progress Tracking */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               İlerleme Takip Yöntemleri
             </h2>
-            <div className="bg-white rounded-lg shadow-md p-8">
+            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold text-slate-900 mb-3">1. Görsel İlerleme Tablosu</h3>
@@ -444,8 +444,8 @@ export default function ForParents() {
           </section>
 
           {/* Common Challenges */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">
+          <section className="mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
               Yaygın Zorluklar ve Çözümleri
             </h2>
             <div className="space-y-4">
@@ -525,15 +525,15 @@ export default function ForParents() {
           </section>
 
           {/* Call to Action */}
-          <section className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-lg p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <section className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
               Hemen Başlayın!
             </h2>
-            <p className="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-purple-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Çocuğunuzla birlikte çarpım tablosu yolculuğuna bugün başlayın. 
               Unutmayın, her çocuk kendi hızında öğrenir ve sizin desteğiniz en değerli kaynaktır.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 
                 href="/1-10"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
