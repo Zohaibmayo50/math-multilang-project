@@ -60,6 +60,15 @@ export default function AudienceSection() {
                 Her öğrencinin öğrenme hızı farklıdır. Kendi temponda ilerle!
               </p>
             </div>
+            <Link 
+              href="/learn-multiplication/for-students"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
+            >
+              Öğrenciler için rehber
+              <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </article>
           
           <article className="card bg-white">
