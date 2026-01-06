@@ -75,6 +75,9 @@ const schemaData = {
 export const metadata = {
   title: '5 Çarpım Tablosu | 5 İle Çarpmayı Öğrenin',
   description: '5 çarpım tablosunu güzel desenleri, para sayma bağlantıları ve saat söyleme uygulamalarıyla öğrenin. Bu son derece pratik tabloda ustalaşın.',
+  alternates: {
+    canonical: '/sayi/5',
+  },
 }
 
 export default function MultiplicationTableOf5() {

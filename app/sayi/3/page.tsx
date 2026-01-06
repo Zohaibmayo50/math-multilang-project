@@ -75,6 +75,9 @@ const schemaData = {
 export const metadata = {
   title: '3 Çarpım Tablosu | 3 İle Çarpmayı Öğrenin',
   description: '3 çarpım tablosunu basamak toplama desenleri, atlayıcı sayma stratejileri ve pratik ipuclarıyla öğrenin. Kanıtlanmış yöntemlerle bu önemli tabloda ustalaşın.',
+  alternates: {
+    canonical: '/sayi/3',
+  },
 }
 
 export default function MultiplicationTableOf3() {

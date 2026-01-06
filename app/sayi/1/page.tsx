@@ -75,6 +75,9 @@ const schemaData = {
 export const metadata = {
   title: '1 Çarpım Tablosu | 1 İle Çarpmayı Öğrenin',
   description: '1 çarpım tablosunda ustalaşın. Açık açıklamalar, desenler ve pratik stratejilerle özdeşlik özelliğini anlayın ve tüm çarpma işlemleri için temel oluşturun.',
+  alternates: {
+    canonical: '/sayi/1',
+  },
 }
 
 export default function MultiplicationTableOf1() {
