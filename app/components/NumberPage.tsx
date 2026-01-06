@@ -257,6 +257,16 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       88: "88 ile çarpmak, 8×11 ilişkisini veya 4×22 ilişkisini kullanır. 88, repdigit sayıdır (8'lerin tekrarı). 88=2×44 olarak da ifade edilebilir. 88'i 90-2 veya 80+8 olarak düşünmek zihinsel hesaplamayı kolaylaştırır. Çift sayı olduğu için tüm katları da çifttir.",
       89: "89 ile çarpmak, asal sayı özellikleri nedeniyle özel stratejiler gerektirir. 89'u 90-1 olarak düşünmek en kolay stratejidir: bir sayıyı 90 ile çarpıp kendisini çıkarın. 89 asal bir sayıdır ve sadece 1 ve 89 ile bölünebilir. 89 tablosunu öğrenmek, 90'a yakın hesaplamalar için mükemmel bir temel oluşturur.",
       90: "90 ile çarpmak, 9×10 ilişkisini kullanır ve çok kullanışlıdır. Bir sayıyı 90 ile çarpmak için, onu 9 ile çarpıp sonuna sıfır ekleyebilirsiniz. 90=2×45=3×30=5×18=6×15 gibi çok sayıda çarpan ilişkisi vardır. 90 derece dik açıdır, geometride çok önemlidir. Bu tablo, 9 tablosunu pekiştirir.",
+      91: "91 ile çarpmak, 7×13 ilişkisini kullanır. Her iki tablo da bilinen tablolarsa, 91 ile çarpma kolaydır. 91=7×13 olması, asal sayıların çarpımını anlamak için önemlidir. 91'i 90+1 olarak düşünmek zihinsel hesaplamayı kolaylaştırır. Hem 7'ye hem 13'e bölünebilir.",
+      92: "92 ile çarpmak, 4×23 ilişkisini veya 2×46 ilişkisini kullanır. 23 tablosunu dörde katlamak işe yarar. 92'yi 90+2 veya 100-8 olarak düşünmek hesaplamayı kolaylaştırır. Çift sayı olduğu için tüm katları da çifttir. 92, hem 4'e hem 23'e bölünebilir.",
+      93: "93 ile çarpmak, 3×31 ilişkisini kullanır. 31 tablosunu üçe katlamak veya 3 tablosunu 31 ile çarpmak işe yarar. 93'ü 90+3 veya 100-7 olarak düşünmek hesaplamayı kolaylaştırır. 93=3×31 olduğundan, hem 3'e hem 31'e bölünebilir.",
+      94: "94 ile çarpmak, 2×47 ilişkisini kullanır. 47 tablosunu biliyorsanız, her sonucu ikiye katlayarak 94 tablosunu bulabilirsiniz. 94'ü 100-6 veya 90+4 olarak düşünmek hesaplamayı kolaylaştırır. Çift sayı olduğu için tüm katları da çifttir. 94, hem 2'ye hem 47'ye bölünebilir.",
+      95: "95 ile çarpmak, 5×19 ilişkisini kullanır. Her iki tablo da bilinen tablolarsa, 95 ile çarpma kolaydır. 95=100-5 stratejisi çok pratiktir. 5'in deseni (5 veya 0 ile biter) hesaplamayı kolaylaştırır. 95, hem 5'e hem 19'a bölünebilir. Yüzde hesaplamalarında (95%) kullanışlıdır.",
+      96: "96 ile çarpmak, en çok yönlü tablolardan biridir. 96=8×12=6×16=4×24=3×32=2×48 olduğundan, birçok farklı yoldan hesaplanabilir. 96=2⁵×3 olması, 2'nin kuvvetleri açısından önemlidir. Çok sayıda böleni olması, kesir hesaplamalarında kullanışlıdır.",
+      97: "97 ile çarpmak, asal sayı özellikleri nedeniyle özel stratejiler gerektirir. 97'yi 100-3 olarak düşünmek en kolay stratejidir: bir sayıyı 100 ile çarpıp 3 katını çıkarın. 97 asal bir sayıdır ve sadece 1 ve 97 ile bölünebilir. 100'e en yakın asal sayı olması, zihinsel hesaplamayı çok kolaylaştırır.",
+      98: "98 ile çarpmak, 2×49 ilişkisini kullanır. 49 tablosunu biliyorsanız, her sonucu ikiye katlayarak 98 tablosunu bulabilirsiniz. 98=2×7² ilişkisi ilginçtir. 98'i 100-2 olarak düşünmek en kolay stratejidir. Çift sayı olduğu için tüm katları da çifttir.",
+      99: "99 ile çarpmak, 9×11 ilişkisini kullanır. 99, repdigit sayıdır (9'ların tekrarı). 99'u 100-1 olarak düşünmek en kolay stratejidir: bir sayıyı 100 ile çarpıp kendisini çıkarın. 99=9×11 olduğundan, hem 9'a hem 11'e bölünebilir. Zihinsel hesaplama için en kolay tablolardan biridir.",
+      100: "100 ile çarpmak, en kolay tablodur! Bir sayıyı 100 ile çarpmak için, sonuna iki sıfır ekleyin. 100=10×10=10² olması, onluk sistemi anlamak için temeldir. 100, yüzde hesaplamalarının (100%=tam) ve ondalık sistemin temelidir. Para birimleri (100 kuruş=1 lira), ölçü birimleri ve günlük matematik için kritik önem taşır.",
     }
     return meanings[number] || `${number} ile çarpmak, ${number} sayısını tekrar tekrar ekleme demektir. Her çarptığınızda, ${number}'lik grupları sayıyorsunuz.`
   }
@@ -353,6 +363,16 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       88: "88 çarpım tablosu, 8 ve 11 tablolarını birleştirerek her ikisini de pekiştirir. 8×11=88 ilişkisi, repdigit desen oluşturur. 4×22=2×44 alternatifleri, çoklu strateji kullanmayı öğretir. Repdigit özelliği (88) görsel tanımayı kolaylaştırır ve aklıda kalıcılık sağlar.",
       89: "89 çarpım tablosu, asal sayı stratejilerini en üst seviyeye çıkarır. 90-1 yaklaşımı, yuvarlak sayıları kullanarak hızlı hesaplama yapmayı mükemmelleştirir. Asal özellikler nedeniyle, zihinsel esneklik ve yaratıcı çözüm yöntemleri gerektirir. Bu tablo, 90'a yakın hesaplamalarda yetkinlik kazandırır ve ileri düzey matematik becerileri geliştirir.",
       90: "90 çarpım tablosu, 9 tablosunu pekiştirmek için mükemmeldir. 9×10 ilişkisi, onluk sistemi ve 9 tablosunu birleştirir. Geometride (90° dik açı) kritik öneme sahiptir. Çok sayıda çarpan ilişkisi (2×45=3×30=5×18=6×15), esneklik sağlar. Bu tablo, pratik hesaplama ve açı ölçümleri için son derece önemlidir.",
+      91: "91 çarpım tablosu, 7 ve 13 tablolarını birleştirerek matematiksel ilişkileri pekiştirir. 7×13 ilişkisi, asal sayıların çarpımını anlamak için önemlidir. Her iki tablo da orta zorlukta olduğundan, 91 tablosu bunları pekiştirmek için idealdir. İleri düzey matematik ve kriptografi için temel kavramdır.",
+      92: "92 çarpım tablosu, 4 ve 23 tablolarını birleştirerek matematiksel bağlantıları güçlendirir. 4×23=2×46 ilişkileri, çoklu strateji kullanmayı öğretir. 90+2 yaklaşımı, 90'larda hesaplama becerisini geliştirir. Bu tablo, çift sayı özellikleri ve 100'e yakın hesaplamalar için hazırlık yapar.",
+      93: "93 çarpım tablosu, 3 ve 31 tablolarını birleştirerek her ikisini de pekiştirir. 3×31 ilişkisi, hem küçük hem büyük çarpan stratejilerini birleştirir. 90+3 stratejisi, parçalama yöntemlerini öğretir. Bu tablo, büyük sayılarla çarpma pratiği sağlar ve zihinsel esneklik geliştirir.",
+      94: "94 çarpım tablosu, 47 tablosunu pekiştirmeye yardımcı olur. 94=2×47 ilişkisi, ikiye katlama ve asal sayı stratejilerini birleştirir. 100-6 stratejisi, yuvarlak sayılardan çıkarma yöntemini mükemmelleştirir. İleri düzey zihinsel matematik için kritik beceriler kazandırır.",
+      95: "95 çarpım tablosu, 5 ve 19 tablolarını birleştirerek matematiksel ilişkileri pekiştirir. 5×19 ilişkisi, her iki tabloyu da güçlendirir. 5'in deseni (5 veya 0 ile biter) hesaplamayı kolaylaştırır. Yüzde hesaplamalarında (95%=19/20) pratik öneme sahiptir. 100-5 stratejisi çok kullanışlıdır.",
+      96: "96 çarpım tablosu, en çok yönlü tablolardan biridir. Birçok böleni olması (1,2,3,4,6,8,12,16,24,32,48,96), kesirler ve oranlar için idealdir. 8×12=6×16 ilişkileri, çoklu çarpan stratejilerini öğretir. 2'nin kuvvetleri ile 3'ün ilişkisini gösterir (2⁵×3). Bu tablo, matematiksel esneklik ve sayı teorisi için mükemmeldir.",
+      97: "97 çarpım tablosu, asal sayı stratejilerini en üst seviyeye çıkarır. 100-3 yaklaşımı, yuvarlak sayı yaklaşımlarının gücünü gösterir. 100'e en yakın asal sayı olması, zihinsel hesaplamayı son derece kolaylaştırır. Asal sayı olması, sayı teorisi ve kriptografi için önemlidir.",
+      98: "98 çarpım tablosu, 49 tablosunu pekiştirmeye yardımcı olur. 98=2×49=2×7² ilişkisi, kare sayıları ve ikiye katlama stratejilerini birleştirir. 100-2 stratejisi, en kolay zihinsel matematik yöntemlerinden biridir. Bu tablo, 100'e yakın hesaplamalarda ustalaşmayı sağlar.",
+      99: "99 çarpım tablosu, 9 ve 11 tablolarını birleştirerek her ikisini de pekiştirir. 100-1 stratejisi, zihinsel matematik için MÜKEMMELDİR. Repdigit özelliği (99) desenleri anlamayı derinleştirir. 9×11=99 ilişkisi, her iki tabloyu da güçlendirir. Bu tablo, pratik hesaplama becerileri için son derece önemlidir.",
+      100: "100 çarpım tablosu, onluk sistemin temelidir. Yer değeri kavramını mükemmel anlamayı sağlar. Yüzde hesaplamalarının (100%=tam) ve ondalık sistemin temelini oluşturur. Para birimleri, ölçü birimleri ve günlük matematik için kritik önem taşır. EN KULLANIŞLI VE ÖNEMLİ TABLOLARDAN BİRİDİR!",
     }
     return importance[number] || `${number} çarpım tablosunu öğrenmek, öğrencilerin bu önemli sayıyla akıcılık geliştirmelerine yardımcı olur. Matematik ve günlük hayatta sıkça görülür, bu da güçlü hesaplama becerileri oluşturmak için gerekli kılar.`
   }
@@ -809,6 +829,56 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         { title: "Hep 0 ile Biter", description: "90'ın tüm katları 0 ile biter: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
         { title: "Çoklu Çarpan İlişkileri", description: "90=2×45=3×30=5×18=6×15=9×10. Çok sayıda yolla hesaplanabilir!" },
       ],
+      91: [
+        { title: "7×13 İlişkisi", description: "91=7×13. Hem 7 hem 13 tablolarını kullanabilirsiniz: 91×5 = 7×5×13 = 35×13 = 455." },
+        { title: "90+1 Stratejisi", description: "91=90+1. 91×n = (90×n) + n. Örnek: 91×6 = 540 + 6 = 546. Pratik!" },
+        { title: "Asal Sayıların Çarpımı", description: "91=7×13 (iki asalın çarpımı). Hem 7'ye hem 13'e bölünebilir." },
+      ],
+      92: [
+        { title: "4×23 İlişkisi", description: "92=4×23. 23 tablosunu dörde katlayın: 23×7=161, yani 92×7=644." },
+        { title: "90+2 veya 100-8", description: "92×n = (90×n)+(2×n) veya (100×n)-(8×n). Örnek: 92×5 = 450+10 = 460." },
+        { title: "Hep Çift Sayılar", description: "92'nin tüm katları çifttir: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920." },
+      ],
+      93: [
+        { title: "3×31 İlişkisi", description: "93=3×31. 31 tablosunu üçe katlayın: 31×6=186, yani 93×6=558." },
+        { title: "90+3 Stratejisi", description: "93=90+3. 93×n = (90×n) + (3×n). Örnek: 93×7 = 630 + 21 = 651." },
+        { title: "3'e Bölünebilir", description: "93'nün tüm katları 3'e bölünebilir. Basamaklar toplamı 3'ün katıdır." },
+      ],
+      94: [
+        { title: "2×47 İlişkisi", description: "94=2×47. 47 tablosunu ikiye katlayın: 47×7=329, yani 94×7=658." },
+        { title: "100-6 Stratejisi", description: "94=100-6. 94×n = (100×n) - (6×n). Örnek: 94×5 = 500 - 30 = 470. MÜKEMMEL!" },
+        { title: "Hep Çift Sayılar", description: "94'nün tüm katları çifttir: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940." },
+      ],
+      95: [
+        { title: "5×19 İlişkisi", description: "95=5×19. Hem 5 hem 19 tablolarını kullanabilirsiniz: 95×4 = 19×4×5 = 76×5 = 380." },
+        { title: "5 veya 0 ile Biter", description: "95'in tüm katları 5 veya 0 ile biter: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950." },
+        { title: "100-5 Stratejisi", description: "95=100-5. 95×n = (100×n) - (5×n). Örnek: 95×6 = 600 - 30 = 570. Çok kolay!" },
+      ],
+      96: [
+        { title: "8×12 İlişkisi", description: "96=8×12. Her iki tabloyu da kullanabilirsiniz: 96×5 = 12×5×8 = 60×8 = 480." },
+        { title: "Çoklu Çarpan İlişkileri", description: "96=8×12=6×16=4×24=3×32=2×48. Birçok yoldan hesaplanabilir!" },
+        { title: "2'nin Kuvveti × 3", description: "96=2⁵×3. 32×3 ilişkisi. Çok sayıda böleni var (12 bölen)." },
+      ],
+      97: [
+        { title: "100-3 Stratejisi", description: "97=100-3. 97×n = (100×n) - (3×n). Örnek: 97×7 = 700 - 21 = 679. MÜKEMMEL!" },
+        { title: "Asal Sayı Desenler", description: "97 asal olduğundan özel desenler vardır. Birler basamağı: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "100'e En Yakın Asal", description: "100'den küçük en büyük asal sayı. Bu özellik hesaplamayı çok kolayлаştırır." },
+      ],
+      98: [
+        { title: "2×49 İlişkisi", description: "98=2×49=2×7². 49 tablosunu ikiye katlayın: 49×7=343, yani 98×7=686." },
+        { title: "100-2 Stratejisi", description: "98=100-2. 98×n = (100×n) - (2×n). Örnek: 98×6 = 600 - 12 = 588. SÜPER KOLAY!" },
+        { title: "Hep Çift Sayılar", description: "98'in tüm katları çifttir: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980." },
+      ],
+      99: [
+        { title: "9×11 İlişkisi", description: "99=9×11. Her iki tabloyu da kullanabilirsiniz: 99×5 = 11×5×9 = 55×9 = 495." },
+        { title: "100-1 Stratejisi", description: "99=100-1. 99×n = (100×n) - n. Örnek: 99×7 = 700 - 7 = 693. MÜKEMMELDİR!" },
+        { title: "Repdigit Desen", description: "99 (9'ların tekrarı), 198, 297, 396, 495... Görsel tanıma kolaydır!" },
+      ],
+      100: [
+        { title: "10×10 İlişkisi", description: "100=10×10=10². Bir sayıyı 100 ile çarpmak: sonuna iki sıfır ekle. 7×100: 700!" },
+        { title: "Hep 00 ile Biter", description: "100'ün tüm katları 00 ile biter: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000." },
+        { title: "Onluk Sistemin Temeli", description: "100=10². Yüzlük sistemi, yüzde hesaplamalarını, ondalık sayıları anlamak için temeldir!" },
+      ],
     }
     return patterns[number] || []
   }
@@ -1180,6 +1250,46 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       90: [
         { mistake: "90×5'i zorlaştırmak", solution: "90×5 = 450 (9×50). Sadece 9×5=45, sonuna 0 ekle!" },
         { mistake: "Sıfırı unutmak", solution: "90=9×10. Sonuna her zaman 0 ekle: 90, 180, 270, 360, 450..." },
+      ],
+      91: [
+        { mistake: "91×5'i yanlış hesaplamak", solution: "91×5 = (90×5)+(1×5) = 450+5 = 455. Parçala ve topla!" },
+        { mistake: "91'i asal sanmak", solution: "91=7×13, asal değil! Hem 7'ye hem 13'e bölünebilir." },
+      ],
+      92: [
+        { mistake: "92×5'i zorlaştırmak", solution: "92×5 = (90×5)+(2×5) = 450+10 = 460. Parçala ve topla!" },
+        { mistake: "92'yi tek sayı sanmak", solution: "92=2×46, her zaman çift. Tüm katları çift sayılardır: 92, 184, 276..." },
+      ],
+      93: [
+        { mistake: "93×5'i yanlış hesaplamak", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. Parçala ve topla!" },
+        { mistake: "93'ü asal sanmak", solution: "93=3×31, asal değil! 3'e bölünebilir (9+3=12, 3'e tam bölünür)." },
+      ],
+      94: [
+        { mistake: "94×5'i zorlaştırmak", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. 100'den çıkarma daha kolay!" },
+        { mistake: "94'yü tek sayı sanmak", solution: "94=2×47, her zaman çift. Tüm katları çift sayılardır: 94, 188, 282..." },
+      ],
+      95: [
+        { mistake: "95×4'ü yanlış hesaplamak", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. Veya 95×4=19×20=380." },
+        { mistake: "Son rakamı unutmak", solution: "95'in katları hep 5 veya 0 ile biter: 95, 190, 285, 380, 475, 570..." },
+      ],
+      96: [
+        { mistake: "96×5'i zorlaştırmak", solution: "96×5 = (100×5)-(4×5) = 500-20 = 480. Veya 96×5=12×40=480." },
+        { mistake: "96'ın çarpanlarını unutmak", solution: "96=8×12=6×16=4×24=3×32. Birden fazla yoldan hesaplanabilir!" },
+      ],
+      97: [
+        { mistake: "97'yi yuvarlamadan hesaplamak", solution: "97=100-3. Örnek: 97×7 = (100×7)-21 = 700-21 = 679. ÇOK KOLAY!" },
+        { mistake: "97'yi 96+1 gibi hesaplamak", solution: "100-3 stratejisi çok daha kolaydır! 97×7: 100×7=700, sonra 21 çıkar: 679." },
+      ],
+      98: [
+        { mistake: "98×5'i zorlaştırmak", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. 100'den çıkarma SÜPER KOLAY!" },
+        { mistake: "98'i tek sayı sanmak", solution: "98=2×49, her zaman çift. Tüm katları çift sayılardır: 98, 196, 294..." },
+      ],
+      99: [
+        { mistake: "99'u yuvarlamadan hesaplamak", solution: "99=100-1. Örnek: 99×7 = (100×7)-7 = 700-7 = 693. MÜKEMMELDİR!" },
+        { mistake: "99'u 98+1 gibi hesaplamak", solution: "100-1 stratejisi çok daha kolaydır! 99×8: 100×8=800, sonra 8 çıkar: 792." },
+      ],
+      100: [
+        { mistake: "100×5'i zorlaştırmak", solution: "100×5 = 500! Sadece sonuna iki sıfır ekle: 5 → 500, 7 → 700!" },
+        { mistake: "Sıfırları unutmak", solution: "100 ile çarpma: sonuna İKİ sıfır ekle. 100×9=900, 90 değil!" },
       ],
     }
     return mistakes[number] || []
@@ -1811,6 +1921,76 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         "90'arlı sayın: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900",
         "9 tablosunu pekiştirir: Her sonuç 9'un 10 katı",
         "Çoklu yöntemler: 90=9×10=3×30=5×18=6×15",
+      ],
+      91: [
+        "7×13 ilişkisi: Her iki tabloyu da kullanabilirsiniz",
+        "Örnek: 91×5 = 13×5×7 = 65×7 = 455",
+        "90+1 stratejisi: 91×n = 90n + n. Örnek: 91×7 = 630+7 = 637",
+        "91'erli sayın: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
+        "En zor katları pratik edin: 91×7=637, 91×8=728, 91×9=819",
+      ],
+      92: [
+        "90+2 veya 100-8 stratejisi kullanın",
+        "Örnek: 92×6 = 480+12 = 492 veya 600-48 = 552",
+        "92'şerli sayın: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
+        "4×23 ilişkisi: 23 tablosunu dörde katlayın",
+        "En zor katları pratik edin: 92×7=644, 92×9=828",
+      ],
+      93: [
+        "90+3 stratejisi: 93×n = 90n + 3n",
+        "Örnek: 93×7 = 630 + 21 = 651",
+        "93'erli sayın: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
+        "3×31 ilişkisi: 31 tablosunu üçe katlayın",
+        "En zor katları pratik edin: 93×7=651, 93×8=744, 93×9=837",
+      ],
+      94: [
+        "100-6 stratejisi MÜKEMMEL: 94×n = 100n - 6n",
+        "Örnek: 94×7 = 700 - 42 = 658. Çok kolay!",
+        "94'erli sayın: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
+        "2×47 ilişkisi: 47 tablosunu ikiye katlayın",
+        "En zor katları pratik edin: 94×7=658, 94×8=752, 94×9=846",
+      ],
+      95: [
+        "5×19 ilişkisi: Hem 5 hem 19 tablolarını kullanabilirsiniz",
+        "Örnek: 95×4 = 19×4×5 = 76×5 = 380",
+        "95'erli sayın: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
+        "Son basamak: Hep 5 veya 0 ile biter",
+        "100-5 stratejisi: 95×6 = 600-30 = 570. Çok pratik!",
+      ],
+      96: [
+        "8×12 ilişkisi: Her iki tabloyu da kullanabilirsiniz",
+        "Örnek: 96×5 = 12×5×8 = 60×8 = 480",
+        "96'şarlı sayın: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
+        "Çoklu yöntemler: 96=8×12=6×16=4×24=3×32",
+        "En zor katları pratik edin: 96×7=672, 96×9=864",
+      ],
+      97: [
+        "100-3 stratejisi SÜPER KOLAY: 97×n = 100n - 3n",
+        "Örnek: 97×7 = 700 - 21 = 679. MÜKEMMELDİR!",
+        "97'şerli sayın: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
+        "En zor katları pratik edin: 97×7=679, 97×8=776, 97×9=873",
+        "Asal sayı: 100-3 stratejisi en pratik yöntemdir",
+      ],
+      98: [
+        "100-2 stratejisi ÇOK KOLAY: 98×n = 100n - 2n",
+        "Örnek: 98×7 = 700 - 14 = 686. Mükemmel!",
+        "98'erli sayın: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
+        "2×49 ilişkisi: 49 tablosunu ikiye katlayın",
+        "En zor katları pratik edin: 98×7=686, 98×8=784, 98×9=882",
+      ],
+      99: [
+        "100-1 stratejisi EN KOLAY: 99×n = 100n - n",
+        "Örnek: 99×7 = 700 - 7 = 693. MÜKEMMELDİR!",
+        "99'arlı sayın: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
+        "9×11 ilişkisi: Her iki tabloyu da kullanabilirsiniz",
+        "Repdigit deseni: 99 görsel tanıma kolaylığı sağlar",
+      ],
+      100: [
+        "EN KOLAY TABLO! Sonuna iki sıfır ekle",
+        "Örnek: 7×100 = 700. Sadece 7'nin sonuna 00 ekle!",
+        "100'erli sayın: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
+        "10×10 ilişkisi: 10 tablosunun 10 katı",
+        "Yüzde hesaplamaları için temeldir: 100%=tam, her şeyin temelidir!",
       ],
     }
     return strategies[number] || [
