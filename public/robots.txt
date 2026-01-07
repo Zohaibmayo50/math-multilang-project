@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://carpimtablosu.com.tr/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
