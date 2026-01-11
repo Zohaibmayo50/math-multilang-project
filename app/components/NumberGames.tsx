@@ -137,11 +137,11 @@ export default function NumberGames({ number }: NumberGamesProps) {
       }
     }
     
-    setRaceCar({
-      position: raceCar.position,
+    setRaceCar(prev => ({
+      position: prev.position,
       question: { multiplier, answer: correctAnswer },
       options: options.sort(() => Math.random() - 0.5)
-    })
+    }))
   }
 
   // Racing Game: Start
