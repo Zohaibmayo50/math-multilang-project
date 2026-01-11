@@ -64,7 +64,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
 
   const checkSpeedAnswer = () => {
     if (parseInt(speedAnswer) === speedQuestion.num1 * speedQuestion.num2) {
-      setSpeedScore(speedScore + 1)
+      setSpeedScore(prev => prev + 1)
       generateSpeedQuestion()
     } else {
       setSpeedAnswer('')
@@ -91,21 +91,26 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
   const checkHeroAnswer = () => {
     const isCorrect = parseInt(heroAnswer) === heroQuestion.num1 * heroQuestion.num2
     if (isCorrect) {
-      const newCleared = heroQuestionsCleared + 1
-      setHeroQuestionsCleared(newCleared)
-      if (newCleared >= heroLevel * 5) {
-        setHeroLevel(heroLevel + 1)
-        setHeroQuestionsCleared(0)
-        generateHeroQuestion()
-      } else {
-        generateHeroQuestion()
-      }
+      setHeroQuestionsCleared(prev => {
+        const newCleared = prev + 1
+        if (newCleared >= heroLevel * 5) {
+          setHeroLevel(prevLevel => prevLevel + 1)
+          setTimeout(() => generateHeroQuestion(), 0)
+          return 0
+        } else {
+          setTimeout(() => generateHeroQuestion(), 0)
+          return newCleared
+        }
+      })
     } else {
-      setHeroLives(heroLives - 1)
+      setHeroLives(prev => {
+        const newLives = prev - 1
+        if (newLives <= 0) {
+          setActiveGame(null)
+        }
+        return newLives
+      })
       setHeroAnswer('')
-      if (heroLives <= 1) {
-        setActiveGame(null)
-      }
     }
   }
 
@@ -140,19 +145,23 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
       const [first, second] = newFlipped
       if (memoryCards[first].answer === memoryCards[second].answer && first !== second) {
         setTimeout(() => {
-          const matchedCards = [...memoryCards]
-          matchedCards[first].matched = true
-          matchedCards[second].matched = true
-          setMemoryCards(matchedCards)
+          setMemoryCards(prev => {
+            const matchedCards = [...prev]
+            matchedCards[first].matched = true
+            matchedCards[second].matched = true
+            return matchedCards
+          })
           setMemoryFlipped([])
-          setMemoryMatches(memoryMatches + 1)
+          setMemoryMatches(prev => prev + 1)
         }, 500)
       } else {
         setTimeout(() => {
-          const resetCards = [...memoryCards]
-          resetCards[first].flipped = false
-          resetCards[second].flipped = false
-          setMemoryCards(resetCards)
+          setMemoryCards(prev => {
+            const resetCards = [...prev]
+            resetCards[first].flipped = false
+            resetCards[second].flipped = false
+            return resetCards
+          })
           setMemoryFlipped([])
         }, 1000)
       }
@@ -177,8 +186,8 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
   const checkSpaceAnswer = () => {
     const isCorrect = parseInt(spaceAnswer) === spaceQuestion.num1 * spaceQuestion.num2
     if (isCorrect) {
-      setRocketHeight(rocketHeight + 10)
-      setSpaceStreak(spaceStreak + 1)
+      setRocketHeight(prev => prev + 10)
+      setSpaceStreak(prev => prev + 1)
       generateSpaceQuestion()
     } else {
       setSpaceStreak(0)

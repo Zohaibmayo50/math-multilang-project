@@ -44,6 +44,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
 
     if (isCorrect) {
       setTimeout(() => {
+        setFeedback(null)
         generateQuestion()
       }, 1500)
     }

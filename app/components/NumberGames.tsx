@@ -115,13 +115,13 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Balloon Pop: Click balloon
   const popBalloon = (balloon: Balloon) => {
     if (balloon.isCorrect) {
-      setBpScore(bpScore + 1)
+      setBpScore(prev => prev + 1)
       setPopAnimation({ id: balloon.id, x: balloon.x, y: balloon.y })
       setTimeout(() => setPopAnimation(null), 500)
     } else {
-      setBpMissed(bpMissed + 1)
+      setBpMissed(prev => prev + 1)
     }
-    setBalloons(balloons.filter(b => b.id !== balloon.id))
+    setBalloons(prev => prev.filter(b => b.id !== balloon.id))
   }
 
   // Racing Game: Generate question
@@ -155,15 +155,16 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Racing Game: Check answer
   const checkRaceAnswer = (selected: number) => {
     if (selected === raceCar.question.answer) {
-      setRaceScore(raceScore + 1)
-      const newPosition = raceCar.position + 10
-      setRaceCar(prev => ({ ...prev, position: newPosition }))
-      
-      if (newPosition >= 90) {
-        setRaceGameActive(false)
-      } else {
-        setTimeout(() => generateRaceQuestion(), 300)
-      }
+      setRaceScore(prev => prev + 1)
+      setRaceCar(prev => {
+        const newPosition = prev.position + 10
+        if (newPosition >= 90) {
+          setTimeout(() => setRaceGameActive(false), 300)
+        } else {
+          setTimeout(() => generateRaceQuestion(), 300)
+        }
+        return { ...prev, position: newPosition }
+      })
     } else {
       setWrongAnimation(true)
       setTimeout(() => setWrongAnimation(false), 500)
