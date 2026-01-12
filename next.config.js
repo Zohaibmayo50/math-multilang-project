@@ -109,6 +109,18 @@ const nextConfig = {
       { source: '/learn-multiplication/for-students', destination: '/ogrenciler-icin', permanent: true },
       { source: '/learn-multiplication/for-parents', destination: '/veliler-icin', permanent: true },
       { source: '/learn-multiplication/for-teachers', destination: '/ogretmenler-icin', permanent: true },
+      
+      // Redirect incorrect "to" format URLs to correct "-" format
+      { source: '/1-to-10/:path*', destination: '/1-10', permanent: true },
+      { source: '/11-to-20/:path*', destination: '/11-20', permanent: true },
+      { source: '/21-to-30/:path*', destination: '/21-30', permanent: true },
+      { source: '/31-to-40/:path*', destination: '/31-40', permanent: true },
+      { source: '/41-to-50/:path*', destination: '/41-50', permanent: true },
+      { source: '/51-to-60/:path*', destination: '/51-60', permanent: true },
+      { source: '/61-to-70/:path*', destination: '/61-70', permanent: true },
+      { source: '/71-to-80/:path*', destination: '/71-80', permanent: true },
+      { source: '/81-to-90/:path*', destination: '/81-90', permanent: true },
+      { source: '/91-to-100/:path*', destination: '/91-100', permanent: true },
     ];
   },
 }

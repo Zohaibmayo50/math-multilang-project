@@ -2396,7 +2396,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             )}
             
             <Link
-              href={`/${rangeStart}-to-${rangeEnd}`}
+              href={`/${rangeStart}-${rangeEnd}`}
               className="block bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-4 sm:p-6 border-2 border-green-200 hover:border-green-400 hover:shadow-lg transition-all group sm:col-span-2"
             >
               <div className="flex items-center justify-between">
