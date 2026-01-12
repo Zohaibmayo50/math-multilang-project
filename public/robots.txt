@@ -2,6 +2,17 @@
 User-agent: *
 Allow: /
 
+# Block malformed and non-existent paths
+Disallow: /sayi/%7B
+Disallow: /sayi/{
+Disallow: /)
+Disallow: /wp-
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-admin/
+Disallow: /wordpress/
+Disallow: /*.php$
+
 # Sitemap location
 Sitemap: https://carpimtablosu.com.tr/sitemap.xml
 

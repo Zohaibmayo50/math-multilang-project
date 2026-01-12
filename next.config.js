@@ -121,6 +121,12 @@ const nextConfig = {
       { source: '/71-to-80/:path*', destination: '/71-80', permanent: true },
       { source: '/81-to-90/:path*', destination: '/81-90', permanent: true },
       { source: '/91-to-100/:path*', destination: '/91-100', permanent: true },
+      
+      // Redirect WordPress and malformed URLs to homepage
+      { source: '/wp-content/:path*', destination: '/', permanent: true },
+      { source: '/wp-includes/:path*', destination: '/', permanent: true },
+      { source: '/wp-admin/:path*', destination: '/', permanent: true },
+      { source: '/sayi/:slug(.*%7B.*)', destination: '/', permanent: true },
     ];
   },
 }
