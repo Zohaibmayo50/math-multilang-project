@@ -29,19 +29,3 @@ export default function HreflangLinks({ locale, path }: HreflangLinksProps) {
     </>
   )
 }
-
-/**
- * Server-side version for use in metadata
- */
-export function generateHreflangMetadata(path?: string) {
-  const alternates = getHreflangAlternates(path)
-  
-  return {
-    languages: alternates.reduce((acc, { hreflang, href }) => {
-      if (hreflang !== 'x-default') {
-        acc[hreflang] = href
-      }
-      return acc
-    }, {} as Record<string, string>),
-  }
-}

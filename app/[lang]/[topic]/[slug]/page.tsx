@@ -3,8 +3,7 @@ import { Metadata } from 'next'
 import RangePage from '@/app/components/RangePage'
 import NumberPage from '@/app/components/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
-import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber } from '@/lib/url-helpers'
-import { generateHreflangMetadata } from '@/app/components/HreflangLinks'
+import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 
 // Import guide page components

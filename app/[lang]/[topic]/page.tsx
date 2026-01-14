@@ -11,8 +11,7 @@ import PrintableExercises from '@/app/components/PrintableExercises'
 import AudienceSection from '@/app/components/AudienceSection'
 import Footer from '@/app/components/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
-import { getAbsoluteUrl, getHreflangAlternates } from '@/lib/url-helpers'
-import { generateHreflangMetadata } from '@/app/components/HreflangLinks'
+import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
 interface PageProps {
   params: {

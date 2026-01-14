@@ -75,3 +75,20 @@ export function getAllRanges(): string[] {
 export function getAllNumbers(): string[] {
   return Array.from({ length: 100 }, (_, i) => `${i + 1}`)
 }
+
+/**
+ * Generate hreflang metadata for Next.js metadata API
+ * Server-side version for use in generateMetadata functions
+ */
+export function generateHreflangMetadata(path?: string) {
+  const alternates = getHreflangAlternates(path)
+  
+  return {
+    languages: alternates.reduce((acc, { hreflang, href }) => {
+      if (hreflang !== 'x-default') {
+        acc[hreflang] = href
+      }
+      return acc
+    }, {} as Record<string, string>),
+  }
+}
