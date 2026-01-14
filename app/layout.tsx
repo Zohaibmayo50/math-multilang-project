@@ -3,12 +3,12 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://carpimtablosu.com.tr'),
-  title: 'Çarpım Tablosu 1-100 | PDF Alıştırmaları ve İnteraktif Oyunlar',
-  description: '1\'den 100\'e kadar çarpım tablolarını ücretsiz öğrenin. İnteraktif alıştırmalar, eğitici oyunlar ve PDF çalışma sayfalarıyla çocuklar için ideal matematik platformu.',
-  keywords: 'çarpım tablosu, multiplication table, matematik, öğrenme, pratik, eğitim, pdf alıştırmaları',
-  authors: [{ name: 'Çarpım Tablosu' }],
-  creator: 'Çarpım Tablosu',
-  publisher: 'Çarpım Tablosu',
+  title: {
+    template: '%s | Multiplication Tables',
+    default: 'Multiplication Tables | Learn in Your Language'
+  },
+  description: 'Learn multiplication tables in multiple languages. Interactive exercises, educational games, and printable worksheets for children.',
+  keywords: 'multiplication tables, çarpım tablosu, tablas de multiplicar, einmaleins, math learning',
   alternates: {
     canonical: '/',
   },
@@ -22,19 +22,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  openGraph: {
-    title: 'Çarpım Tablosu – Öğren, Anla ve Pratik Yap',
-    description: 'Çarpım tablosunu adım adım öğrenin, anlayın ve pratik yapın.',
-    type: 'website',
-    locale: 'tr_TR',
-    url: 'https://carpimtablosu.com.tr',
-    siteName: 'Çarpım Tablosu',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Çarpım Tablosu – Öğren, Anla ve Pratik Yap',
-    description: 'Çarpım tablosunu adım adım öğrenin, anlayın ve pratik yapın.',
   },
 }
 
