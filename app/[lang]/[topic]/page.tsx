@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { lang, topic } = params
+  const { lang, topic } = await params
   
   // Validate params
   if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
@@ -96,8 +96,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default function TopicHomePage({ params }: PageProps) {
-  const { lang, topic } = params
+export default async function TopicHomePage({ params }: PageProps) {
+  const { lang, topic } = await params
 
   // Validate language and topic match
   if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {

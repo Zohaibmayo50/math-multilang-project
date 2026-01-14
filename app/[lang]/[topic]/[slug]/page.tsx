@@ -169,7 +169,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { lang, topic, slug } = params
+  const { lang, topic, slug } = await params
   
   if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
@@ -261,8 +261,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-export default function SlugPage({ params }: PageProps) {
-  const { lang, topic, slug } = params
+export default async function SlugPage({ params }: PageProps) {
+  const { lang, topic, slug } = await params
 
   if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
