@@ -25,27 +25,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Çarpım Tablosu</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/1-10" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/1-10" className="text-slate-400 hover:text-white transition-colors">
                   1-10 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/11-20" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/11-20" className="text-slate-400 hover:text-white transition-colors">
                   11-20 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/21-30" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/21-30" className="text-slate-400 hover:text-white transition-colors">
                   21-30 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/31-40" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/31-40" className="text-slate-400 hover:text-white transition-colors">
                   31-40 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/41-50" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/41-50" className="text-slate-400 hover:text-white transition-colors">
                   41-50 Tablosu
                 </Link>
               </li>
@@ -57,27 +57,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-indigo-400">Devam</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/51-60" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/51-60" className="text-slate-400 hover:text-white transition-colors">
                   51-60 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/61-70" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/61-70" className="text-slate-400 hover:text-white transition-colors">
                   61-70 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/71-80" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/71-80" className="text-slate-400 hover:text-white transition-colors">
                   71-80 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/81-90" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/81-90" className="text-slate-400 hover:text-white transition-colors">
                   81-90 Tablosu
                 </Link>
               </li>
               <li>
-                <Link href="/91-100" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/91-100" className="text-slate-400 hover:text-white transition-colors">
                   91-100 Tablosu
                 </Link>
               </li>
@@ -89,17 +89,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-purple-400">Rehberler</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/ogrenciler-icin" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/ogrenciler-icin" className="text-slate-400 hover:text-white transition-colors">
                   Öğrenciler İçin
                 </Link>
               </li>
               <li>
-                <Link href="/veliler-icin" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/veliler-icin" className="text-slate-400 hover:text-white transition-colors">
                   Veliler İçin
                 </Link>
               </li>
               <li>
-                <Link href="/ogretmenler-icin" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu/ogretmenler-icin" className="text-slate-400 hover:text-white transition-colors">
                   Öğretmenler İçin
                 </Link>
               </li>
@@ -111,27 +111,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-emerald-400">Pratik & Oyunlar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
                   📄 PDF Alıştırmalar
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu#games" className="text-slate-400 hover:text-white transition-colors">
                   ⚡ Hız Oyunu
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu#games" className="text-slate-400 hover:text-white transition-colors">
                   🦸 Kahraman Oyunu
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu#games" className="text-slate-400 hover:text-white transition-colors">
                   🧠 Hafıza Oyunu
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/tr/carpim-tablosu#games" className="text-slate-400 hover:text-white transition-colors">
                   🚀 Uzay Oyunu
                 </Link>
               </li>

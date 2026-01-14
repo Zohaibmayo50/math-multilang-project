@@ -19,7 +19,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/tr/carpim-tablosu" className="flex items-center gap-3 group">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-lg">
               <span className="text-xl md:text-2xl font-bold text-white">×</span>
             </div>
@@ -43,34 +43,34 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/1-10" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/1-10" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     1-10 Tablosu
                   </Link>
-                  <Link href="/11-20" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/11-20" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     11-20 Tablosu
                   </Link>
-                  <Link href="/21-30" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/21-30" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     21-30 Tablosu
                   </Link>
-                  <Link href="/31-40" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/31-40" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     31-40 Tablosu
                   </Link>
-                  <Link href="/41-50" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/41-50" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     41-50 Tablosu
                   </Link>
-                  <Link href="/51-60" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/51-60" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     51-60 Tablosu
                   </Link>
-                  <Link href="/61-70" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/61-70" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     61-70 Tablosu
                   </Link>
-                  <Link href="/71-80" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/71-80" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     71-80 Tablosu
                   </Link>
-                  <Link href="/81-90" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/81-90" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     81-90 Tablosu
                   </Link>
-                  <Link href="/91-100" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/91-100" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     91-100 Tablosu
                   </Link>
                 </div>
@@ -87,13 +87,13 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/ogrenciler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/ogrenciler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍🎓 Öğrenciler İçin
                   </Link>
-                  <Link href="/veliler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/veliler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍👩‍👧‍👦 Veliler İçin
                   </Link>
-                  <Link href="/ogretmenler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/tr/carpim-tablosu/ogretmenler-icin" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👩‍🏫 Öğretmenler İçin
                   </Link>
                 </div>
@@ -101,19 +101,19 @@ export default function Header() {
             </div>
 
             <Link 
-              href="/#pdf-exercises" 
+              href="/tr/carpim-tablosu#pdf-exercises" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
               PDF Alıştırmalar
             </Link>
             <Link 
-              href="/#games" 
+              href="/tr/carpim-tablosu#games" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
               İnteraktif Oyunlar
             </Link>
             <Link 
-              href="/#learning-paths" 
+              href="/tr/carpim-tablosu#learning-paths" 
               className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               Hemen Başla 🚀
@@ -152,34 +152,34 @@ export default function Header() {
               📚 Çarpım Tablosu
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 1-10 Tablosu
               </Link>
-              <Link href="/11-20" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/11-20" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 11-20 Tablosu
               </Link>
-              <Link href="/21-30" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/21-30" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 21-30 Tablosu
               </Link>
-              <Link href="/31-40" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/31-40" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 31-40 Tablosu
               </Link>
-              <Link href="/41-50" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/41-50" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 41-50 Tablosu
               </Link>
-              <Link href="/51-60" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/51-60" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 51-60 Tablosu
               </Link>
-              <Link href="/61-70" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/61-70" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 61-70 Tablosu
               </Link>
-              <Link href="/71-80" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/71-80" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 71-80 Tablosu
               </Link>
-              <Link href="/81-90" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/81-90" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 81-90 Tablosu
               </Link>
-              <Link href="/91-100" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/91-100" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 91-100 Tablosu
               </Link>
             </div>
@@ -191,13 +191,13 @@ export default function Header() {
               📖 Rehberler
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/ogrenciler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/ogrenciler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍🎓 Öğrenciler İçin
               </Link>
-              <Link href="/veliler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/veliler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍👩‍👧‍👦 Veliler İçin
               </Link>
-              <Link href="/ogretmenler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/tr/carpim-tablosu/ogretmenler-icin" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👩‍🏫 Öğretmenler İçin
               </Link>
             </div>
@@ -206,21 +206,21 @@ export default function Header() {
           {/* Other Links */}
           <div className="py-2 border-t border-slate-200">
             <Link 
-              href="/#pdf-exercises" 
+              href="/tr/carpim-tablosu#pdf-exercises" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all font-medium"
             >
               📄 PDF Alıştırmalar
             </Link>
             <Link 
-              href="/#games" 
+              href="/tr/carpim-tablosu#games" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all font-medium"
             >
               🎮 İnteraktif Oyunlar
             </Link>
             <Link 
-              href="/#learning-paths" 
+              href="/tr/carpim-tablosu#learning-paths" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg text-center hover:shadow-lg transition-all"
             >

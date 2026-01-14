@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import './globals.css'
-import Header from './components/Header'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://carpimtablosu.com.tr'),
@@ -38,9 +36,6 @@ export const metadata: Metadata = {
     title: 'Çarpım Tablosu – Öğren, Anla ve Pratik Yap',
     description: 'Çarpım tablosunu adım adım öğrenin, anlayın ve pratik yapın.',
   },
-  verification: {
-    google: 'your-google-site-verification',
-  },
 }
 
 export default function RootLayout({
@@ -50,28 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
-      <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9085160424000244"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-KJXX9G2ZD2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-KJXX9G2ZD2');
-          `}
-        </Script>
-      </head>
       <body className="antialiased bg-gray-50">
-        <Header />
         {children}
       </body>
     </html>

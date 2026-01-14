@@ -61,7 +61,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/ogrenciler-icin"
+              href="/tr/carpim-tablosu/ogrenciler-icin"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
               Öğrenciler için rehber
@@ -114,7 +114,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/veliler-icin" 
+                href="/tr/carpim-tablosu/veliler-icin" 
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium pt-2"
               >
                 Ebeveynler için rehber
@@ -170,7 +170,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/ogretmenler-icin" 
+                href="/tr/carpim-tablosu/ogretmenler-icin" 
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium pt-2"
               >
                 Öğretmenler için rehber
