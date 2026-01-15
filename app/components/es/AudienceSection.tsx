@@ -61,7 +61,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/para-estudiantes"
+              href="/es/tablas-de-multiplicar/para-estudiantes"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
               Guía para estudiantes
@@ -114,7 +114,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/para-padres" 
+                href="/es/tablas-de-multiplicar/para-padres" 
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium pt-2"
               >
                 Guía para padres
@@ -170,7 +170,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/para-profesores" 
+                href="/es/tablas-de-multiplicar/para-profesores" 
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium pt-2"
               >
                 Guía para profesores

@@ -2359,7 +2359,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {number > 1 && (
               <Link
-                href={`/tabla/${number - 1}`}
+                href={`/es/tablas-de-multiplicar/${number - 1}`}
                 className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6 border-2 border-blue-200 hover:border-blue-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
@@ -2378,7 +2378,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             
             {number < 100 && (
               <Link
-                href={`/tabla/${number + 1}`}
+                href={`/es/tablas-de-multiplicar/${number + 1}`}
                 className="block bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 sm:p-6 border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
@@ -2396,7 +2396,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             )}
             
             <Link
-              href={`/${rangeStart}-${rangeEnd}`}
+              href={`/es/tablas-de-multiplicar/${rangeStart}-${rangeEnd}`}
               className="block bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-4 sm:p-6 border-2 border-green-200 hover:border-green-400 hover:shadow-lg transition-all group sm:col-span-2"
             >
               <div className="flex items-center justify-between">

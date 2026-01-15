@@ -25,27 +25,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Tablas de Multiplicar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/1-10" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/1-10" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 1-10
                 </Link>
               </li>
               <li>
-                <Link href="/11-20" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/11-20" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 11-20
                 </Link>
               </li>
               <li>
-                <Link href="/21-30" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/21-30" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 21-30
                 </Link>
               </li>
               <li>
-                <Link href="/31-40" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/31-40" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 31-40
                 </Link>
               </li>
               <li>
-                <Link href="/41-50" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/41-50" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 41-50
                 </Link>
               </li>
@@ -57,27 +57,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-indigo-400">Continuar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/51-60" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/51-60" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 51-60
                 </Link>
               </li>
               <li>
-                <Link href="/61-70" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/61-70" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 61-70
                 </Link>
               </li>
               <li>
-                <Link href="/71-80" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/71-80" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 71-80
                 </Link>
               </li>
               <li>
-                <Link href="/81-90" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/81-90" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 81-90
                 </Link>
               </li>
               <li>
-                <Link href="/91-100" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/91-100" className="text-slate-400 hover:text-white transition-colors">
                   Tablas 91-100
                 </Link>
               </li>
@@ -89,17 +89,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-purple-400">Guías</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/para-estudiantes" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/para-estudiantes" className="text-slate-400 hover:text-white transition-colors">
                   Para Estudiantes
                 </Link>
               </li>
               <li>
-                <Link href="/para-padres" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/para-padres" className="text-slate-400 hover:text-white transition-colors">
                   Para Padres
                 </Link>
               </li>
               <li>
-                <Link href="/para-profesores" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar/para-profesores" className="text-slate-400 hover:text-white transition-colors">
                   Para Profesores
                 </Link>
               </li>
@@ -111,27 +111,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
                   📄 Ejercicios PDF
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
                   ⚡ Juego de Velocidad
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
                   🦸 Juego del Héroe
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
                   🧠 Juego de Memoria
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
                   🚀 Juego Espacial
                 </Link>
               </li>

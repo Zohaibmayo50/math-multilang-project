@@ -14,7 +14,7 @@ export default function LearningPaths() {
         </p>
         
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          <Link href="/1-10" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/1-10" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">1-10</span>
@@ -34,7 +34,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/11-20" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/11-20" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">11-20</span>
@@ -54,7 +54,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/21-30" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/21-30" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">21-30</span>
@@ -74,7 +74,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/31-40" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/31-40" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">31-40</span>
@@ -94,7 +94,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/41-50" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/41-50" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">41-50</span>
@@ -114,7 +114,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/51-60" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/51-60" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">51-60</span>
@@ -134,7 +134,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/61-70" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/61-70" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">61-70</span>
@@ -154,7 +154,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/71-80" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/71-80" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">71-80</span>
@@ -174,7 +174,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/81-90" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/81-90" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-lime-500 to-lime-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">81-90</span>
@@ -194,7 +194,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/91-100" className="link-card group">
+          <Link href="/es/tablas-de-multiplicar/91-100" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-base font-bold text-white">91-100</span>
