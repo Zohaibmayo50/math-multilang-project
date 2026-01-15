@@ -28,12 +28,12 @@ export const siteConfig: Record<Locale, {
     description: '1\'den 100\'e kadar çarpım tablolarını öğrenmek için interaktif eğitim platformu.',
   },
   es: {
-    domain: 'https://tablasdemultiplicar.online',
+    domain: 'https://carpimtablosu.com.tr',
     name: 'Tablas de Multiplicar',
     description: 'Plataforma educativa interactiva para aprender las tablas de multiplicar del 1 al 100.',
   },
   de: {
-    domain: 'https://einmaleins.de',
+    domain: 'https://carpimtablosu.com.tr',
     name: 'Einmaleins',
     description: 'Interaktive Lernplattform für das Einmaleins von 1 bis 100.',
   },
