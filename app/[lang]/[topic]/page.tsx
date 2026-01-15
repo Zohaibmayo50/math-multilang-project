@@ -10,6 +10,16 @@ import GamesSection from '@/app/components/GamesSection'
 import PrintableExercises from '@/app/components/PrintableExercises'
 import AudienceSection from '@/app/components/AudienceSection'
 import Footer from '@/app/components/Footer'
+import HeroEs from '@/app/components/es/Hero'
+import DefinitionSectionEs from '@/app/components/es/DefinitionSection'
+import WhyItMattersEs from '@/app/components/es/WhyItMatters'
+import HowToLearnEs from '@/app/components/es/HowToLearn'
+import LearningPathsEs from '@/app/components/es/LearningPaths'
+import PracticePreviewEs from '@/app/components/es/PracticePreview'
+import GamesSectionEs from '@/app/components/es/GamesSection'
+import PrintableExercisesEs from '@/app/components/es/PrintableExercises'
+import AudienceSectionEs from '@/app/components/es/AudienceSection'
+import FooterEs from '@/app/components/es/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -79,7 +89,45 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  // Placeholder metadata for ES/DE
+  // Spanish metadata (production)
+  if (locale === 'es') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Tablas de Multiplicar del 1 al 100 | Ejercicios PDF y Juegos Interactivos',
+      description: 'Aprende las tablas de multiplicar del 1 al 100 gratis. Ejercicios interactivos, juegos educativos y hojas de trabajo en PDF para niños.',
+      keywords: 'tablas de multiplicar, tabla de multiplicar, matemáticas, aprendizaje, práctica, educación, ejercicios pdf',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Tablas de Multiplicar – Aprende, Comprende y Practica',
+        description: 'Aprende las tablas de multiplicar paso a paso.',
+        type: 'website',
+        locale: 'es_MX',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Tablas de Multiplicar – Aprende, Comprende y Practica',
+        description: 'Aprende las tablas de multiplicar paso a paso.',
+      },
+    }
+  }
+
+  // Placeholder metadata for DE
   return {
     metadataBase: new URL(config.domain),
     title: `${config.name} - Learn Multiplication Tables 1-100`,
@@ -223,7 +271,107 @@ export default async function TopicHomePage({ params }: PageProps) {
     )
   }
 
-  // Placeholder for ES/DE
+  // Spanish version (production-ready)
+  if (locale === 'es') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.es.domain}/#website`,
+          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
+          "name": "Tablas de Multiplicar",
+          "description": "Plataforma de educación interactiva para aprender las tablas de multiplicar del 1 al 100. Herramientas de aprendizaje visual para niños, ejercicios prácticos y juegos educativos.",
+          "inLanguage": "es",
+          "publisher": {
+            "@id": `${siteConfig.es.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#webpage`,
+          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
+          "name": "Tablas de Multiplicar - Del 1 al 100 Todas las Tablas",
+          "description": "Plataforma interactiva de aprendizaje de tablas de multiplicar para niños. Aprende todas las tablas de multiplicar del 1 al 100 practicando.",
+          "isPartOf": {
+            "@id": `${siteConfig.es.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#learningresource`
+          },
+          "inLanguage": "es"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.es.domain}/#organization`,
+          "name": "Tablas de Multiplicar",
+          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
+          "description": "Plataforma educativa que enseña las tablas de multiplicar a estudiantes de primaria",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["es", "tr", "de"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#learningresource`,
+          "name": "Plataforma de Aprendizaje de Tablas de Multiplicar",
+          "description": "Recurso educativo integral para aprender las tablas de multiplicar del 1 al 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "es",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "tablas de multiplicar",
+            "aprendizaje de matemáticas",
+            "matemáticas de primaria",
+            "operación de multiplicación"
+          ],
+          "teaches": "Habilidades para comprender, aplicar y memorizar la operación de multiplicación y las tablas de multiplicar",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroEs />
+          <LearningPathsEs />
+          <PracticePreviewEs />
+          <GamesSectionEs />
+          <PrintableExercisesEs />
+          <DefinitionSectionEs />
+          <WhyItMattersEs />
+          <HowToLearnEs />
+          <AudienceSectionEs />
+          <FooterEs />
+        </main>
+      </>
+    )
+  }
+
+  // Placeholder for DE
   const config = siteConfig[locale]
   
   return (
