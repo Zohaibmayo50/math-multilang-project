@@ -3,9 +3,9 @@ import HeaderEs from '@/app/components/es/Header'
 
 interface LayoutProps {
   children: React.ReactNode
-  params: {
+  params: Promise<{
     lang: string
-  }
+  }>
 }
 
 export default async function TopicLayout({ children, params }: LayoutProps) {
