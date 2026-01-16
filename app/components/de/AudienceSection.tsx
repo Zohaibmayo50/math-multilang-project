@@ -61,7 +61,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/fuer-schueler"
+              href="/de/einmaleins/fuer-schueler"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
               Leitfaden für Schüler
@@ -114,7 +114,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/fuer-eltern" 
+                href="/de/einmaleins/fuer-eltern" 
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium pt-2"
               >
                 Leitfaden für Eltern
@@ -170,7 +170,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/fuer-lehrer" 
+                href="/de/einmaleins/fuer-lehrer" 
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium pt-2"
               >
                 Leitfaden für Lehrer

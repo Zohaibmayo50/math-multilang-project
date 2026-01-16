@@ -25,27 +25,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-blue-400">Einmaleins Tabellen</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/1-10" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/1-10" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 1-10
                 </Link>
               </li>
               <li>
-                <Link href="/11-20" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/11-20" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 11-20
                 </Link>
               </li>
               <li>
-                <Link href="/21-30" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/21-30" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 21-30
                 </Link>
               </li>
               <li>
-                <Link href="/31-40" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/31-40" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 31-40
                 </Link>
               </li>
               <li>
-                <Link href="/41-50" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/41-50" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 41-50
                 </Link>
               </li>
@@ -57,27 +57,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-indigo-400">Weiterführen</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/51-60" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/51-60" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 51-60
                 </Link>
               </li>
               <li>
-                <Link href="/61-70" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/61-70" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 61-70
                 </Link>
               </li>
               <li>
-                <Link href="/71-80" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/71-80" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 71-80
                 </Link>
               </li>
               <li>
-                <Link href="/81-90" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/81-90" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 81-90
                 </Link>
               </li>
               <li>
-                <Link href="/91-100" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/91-100" className="text-slate-400 hover:text-white transition-colors">
                   Tabellen 91-100
                 </Link>
               </li>
@@ -89,17 +89,17 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-purple-400">Leitfäden</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fuer-schueler" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/fuer-schueler" className="text-slate-400 hover:text-white transition-colors">
                   Für Schüler
                 </Link>
               </li>
               <li>
-                <Link href="/fuer-eltern" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/fuer-eltern" className="text-slate-400 hover:text-white transition-colors">
                   Für Eltern
                 </Link>
               </li>
               <li>
-                <Link href="/fuer-lehrer" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins/fuer-lehrer" className="text-slate-400 hover:text-white transition-colors">
                   Für Lehrer
                 </Link>
               </li>
@@ -111,27 +111,27 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-emerald-400">Übung und Spiele</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
                   📄 Übungen PDF
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins#games" className="text-slate-400 hover:text-white transition-colors">
                   ⚡ Geschwindigkeitsspiel
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins#games" className="text-slate-400 hover:text-white transition-colors">
                   🦸 Helden-Spiel
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins#games" className="text-slate-400 hover:text-white transition-colors">
                   🧠 Memory-Spiel
                 </Link>
               </li>
               <li>
-                <Link href="/#games" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/de/einmaleins#games" className="text-slate-400 hover:text-white transition-colors">
                   🚀 Weltraum-Spiel
                 </Link>
               </li>
