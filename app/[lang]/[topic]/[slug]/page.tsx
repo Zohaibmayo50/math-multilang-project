@@ -8,12 +8,15 @@ import RangePageDe from '@/app/components/de/RangePage'
 import NumberPageDe from '@/app/components/de/NumberPage'
 import RangePageCs from '@/app/components/cs/RangePage'
 import NumberPageCs from '@/app/components/cs/NumberPage'
+import RangePageUk from '@/app/components/uk/RangePage'
+import NumberPageUk from '@/app/components/uk/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from '@/lib/number-metadata-es'
 import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from '@/lib/number-metadata-de'
 import { numberTitlesCs, numberDescriptionsCs, numberSpecialPropertiesCs } from '@/lib/number-metadata-cs'
+import { numberTitlesUk, numberDescriptionsUk, numberSpecialPropertiesUk } from '@/lib/number-metadata-uk'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -34,6 +37,11 @@ import ForParentsDe from '@/app/fuer-eltern/page'
 import ForStudentsCs from '@/app/pro-studenty/page'
 import ForTeachersCs from '@/app/pro-ucitele/page'
 import ForParentsCs from '@/app/pro-rodice/page'
+
+// Import Ukrainian guide page components
+import ForStudentsUk from '@/app/dlya-uchniv/page'
+import ForTeachersUk from '@/app/dlya-vchyteliv/page'
+import ForParentsUk from '@/app/dlya-batkiv/page'
 
 interface PageProps {
   params: {
@@ -385,6 +393,86 @@ const rangeMetadataCs: Record<string, {
   },
 }
 
+// Ukrainian Range Metadata
+const rangeMetadataUk: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Таблиці Множення 1-10 | Початковий Рівень',
+    description: 'Навчіться таблиць множення 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Легкі для розуміння пояснення для початківців, візуальні приклади та практичні вправи.',
+    keywords: 'таблиця множення 1-10, таблиця множення, множення, навчання математики',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Таблиці Множення 11-20 | Двозначні Числа',
+    description: 'Навчіться таблиць множення 11-20. Важливий крок для розуміння множення з двозначними числами.',
+    keywords: 'таблиця множення 11-20, таблиця множення, множення, навчання математики',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Таблиці Множення 21-30 | Середній Рівень',
+    description: 'Навчіться таблиць множення 21-30. Середній рівень та шаблони множення.',
+    keywords: 'таблиця множення 21-30, таблиця множення, множення, навчання математики',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Таблиці Множення 31-40 | Просунуте Множення',
+    description: 'Навчіться таблиць множення 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Просунуті навички обчислення напам\'ять.',
+    keywords: 'таблиця множення 31-40, таблиця множення, множення, навчання математики',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Таблиці Множення 41-50 | Середньо-Просунутий',
+    description: 'Навчіться таблиць множення 41-50. Інтерактивні вправи для освоєння множення з великими числами.',
+    keywords: 'таблиця множення 41-50, таблиця множення, множення, навчання математики',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Таблиці Множення 51-60 | Просунутий Рівень',
+    description: 'Навчіться таблиць множення 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Детальні навчальні матеріали для просунутих учнів.',
+    keywords: 'таблиця множення 51-60, таблиця множення, множення, навчання математики',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Таблиці Множення 61-70 | Великі Числа',
+    description: 'Навчіться таблиць множення 61-70. Комплексні освітні ресурси для множення з великими числами.',
+    keywords: 'таблиця множення 61-70, таблиця множення, множення, навчання математики',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Таблиці Множення 71-80 | Просунуте Множення',
+    description: 'Навчіться таблиць множення 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Розвивайте математичні навички на просунутому рівні.',
+    keywords: 'таблиця множення 71-80, таблиця множення, множення, навчання математики',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Таблиці Множення 81-90 | Експертний Рівень',
+    description: 'Навчіться таблиць множення 81-90. Складні операції множення та стратегії для експертів.',
+    keywords: 'таблиця множення 81-90, таблиця множення, множення, навчання математики',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Таблиці Множення 91-100 | Найвищий Рівень',
+    description: 'Навчіться таблиць множення 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Повна освіта для навичок множення на найвищому рівні.',
+    keywords: 'таблиця множення 91-100, таблиця множення, множення, навчання математики',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -454,6 +542,29 @@ const guideMetadataCs: Record<string, {
   },
 }
 
+// Ukrainian Guide Metadata
+const guideMetadataUk: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'dlya-uchniv': {
+    title: 'Посібник з Таблиці Множення для Учнів | Навчання Крок за Кроком',
+    description: 'Покроковий посібник для легкого вивчення таблиці множення. Візуальні матеріали, практичні вправи та цікаві ігри для навчання у власному темпі.',
+    keywords: 'вивчити таблицю множення, математика для учнів, посібник з таблиці множення, множення крок за кроком',
+  },
+  'dlya-vchyteliv': {
+    title: 'Посібник з Таблиці Множення для Вчителів | Стратегії Навчання',
+    description: 'Комплексні ресурси для вчителів про ефективне викладання таблиці множення. Включає педагогічні стратегії, класні активності, диференційоване навчання та методи оцінювання.',
+    keywords: 'викладати таблицю множення, педагогічні стратегії, математичні активності, диференційоване навчання, ресурси для вчителів',
+  },
+  'dlya-batkiv': {
+    title: 'Посібник з Таблиці Множення для Батьків | Підтримка Навчання Вдома',
+    description: 'Як допомогти вашій дитині вивчити таблицю множення вдома. Практичні поради, освітні ігри та мотиваційні стратегії.',
+    keywords: 'допомогти дітям з таблицею множення, математика вдома, освіта батьків, навчальні активності',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -467,6 +578,9 @@ const guideComponents: Record<string, any> = {
   'pro-studenty': ForStudentsCs,
   'pro-ucitele': ForTeachersCs,
   'pro-rodice': ForParentsCs,
+  'dlya-uchniv': ForStudentsUk,
+  'dlya-vchyteliv': ForTeachersUk,
+  'dlya-batkiv': ForParentsUk,
 }
 
 // Determine slug type
@@ -475,6 +589,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (/^\d+$/.test(slug)) return 'number'
   // Check against locale-specific guide metadata
   if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
+  if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -489,6 +604,7 @@ export async function generateStaticParams() {
     { lang: 'es', topic: 'tablas-de-multiplicar' },
     { lang: 'cs', topic: 'nasobilka' },
     { lang: 'de', topic: 'einmaleins' },
+    { lang: 'uk', topic: 'tablycya-mnozhennya' },
   ]
 
   langs.forEach(({ lang, topic }) => {
@@ -517,7 +633,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -781,13 +897,78 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Ukrainian metadata
+  if (locale === 'uk') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataUk[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesUk[num]
+      const description = numberDescriptionsUk[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataUk[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1493,6 +1674,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageCs number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Ukrainian version
+  if (locale === 'uk') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataUk[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#webpage`,
+            "url": `${baseUrl}/uk/tablycya-mnozhennya/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#learningresource`
+            },
+            "inLanguage": "uk-UA"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#learningresource`,
+            "name": `Навчальний Ресурс Таблиця Множення ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Навички розуміння та використання таблиці множення ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "uk-UA",
+            "educationalUse": ["practice", "self-study", "homework"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Таблиця Множення ${start + i}`,
+              "url": `${baseUrl}/uk/tablycya-mnozhennya/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageUk
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/uk/tablycya-mnozhennya/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/uk/tablycya-mnozhennya/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesUk[num] || `Множення з ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#webpage`,
+            "url": `${baseUrl}/uk/tablycya-mnozhennya/${num}`,
+            "name": `Таблиця Множення ${num} - ${specialProp}`,
+            "description": numberDescriptionsUk[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#breadcrumb`
+            },
+            "inLanguage": "uk-UA"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Головна"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/uk/tablycya-mnozhennya/${range}`,
+                  "name": `Таблиця Множення ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}`,
+                  "name": `Таблиця Множення ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#learningresource`,
+            "name": `Навчальний Ресурс Таблиця Множення ${num}`,
+            "description": numberDescriptionsUk[num],
+            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Таблиця множення ${num}, ${specialProp.toLowerCase()}, основні концепції множення`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "uk-UA",
+            "educationalUse": ["practice", "self-study"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageUk number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

@@ -40,6 +40,16 @@ import GamesSectionCs from '@/app/components/cs/GamesSection'
 import PrintableExercisesCs from '@/app/components/cs/PrintableExercises'
 import AudienceSectionCs from '@/app/components/cs/AudienceSection'
 import FooterCs from '@/app/components/cs/Footer'
+import HeroUk from '@/app/components/uk/Hero'
+import DefinitionSectionUk from '@/app/components/uk/DefinitionSection'
+import WhyItMattersUk from '@/app/components/uk/WhyItMatters'
+import HowToLearnUk from '@/app/components/uk/HowToLearn'
+import LearningPathsUk from '@/app/components/uk/LearningPaths'
+import PracticePreviewUk from '@/app/components/uk/PracticePreview'
+import GamesSectionUk from '@/app/components/uk/GamesSection'
+import PrintableExercisesUk from '@/app/components/uk/PrintableExercises'
+import AudienceSectionUk from '@/app/components/uk/AudienceSection'
+import FooterUk from '@/app/components/uk/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -56,6 +66,7 @@ export async function generateStaticParams() {
     { lang: 'es', topic: 'tablas-de-multiplicar' },
     { lang: 'de', topic: 'einmaleins' },
     { lang: 'cs', topic: 'nasobilka' },
+    { lang: 'uk', topic: 'tablycya-mnozhennya' },
   ]
 }
 
@@ -63,7 +74,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -224,6 +235,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Ukrainian metadata (production)
+  if (locale === 'uk') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Таблиця множення 1-100 | PDF Вправи та Інтерактивні Ігри',
+      description: 'Вивчіть таблицю множення від 1 до 100 безкоштовно. Інтерактивні вправи, освітні ігри та PDF робочі аркуші - ідеальна математична платформа для дітей.',
+      keywords: 'таблиця множення, multiplication table, математика, навчання, практика, освіта, pdf вправи',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Таблиця множення – Вчитися, Розуміти та Практикувати',
+        description: 'Навчіться таблиці множення крок за кроком.',
+        type: 'website',
+        locale: 'uk_UA',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Таблиця множення – Вчитися, Розуміти та Практикувати',
+        description: 'Навчіться таблиці множення крок за кроком.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -231,7 +280,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -658,6 +707,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnCs />
           <AudienceSectionCs />
           <FooterCs />
+        </main>
+      </>
+    )
+  }
+
+  // Ukrainian version (production-ready)
+  if (locale === 'uk') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.uk.domain}/#website`,
+          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
+          "name": "Таблиця множення",
+          "description": "Інтерактивна освітня платформа для вивчення таблиці множення від 1 до 100. Візуальні навчальні інструменти для дітей, практичні вправи та освітні ігри.",
+          "inLanguage": "uk-UA",
+          "publisher": {
+            "@id": `${siteConfig.uk.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#webpage`,
+          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
+          "name": "Таблиця множення - Від 1 до 100 Всі Таблиці",
+          "description": "Інтерактивна платформа для вивчення таблиці множення для дітей. Вивчіть всі таблиці множення від 1 до 100 через практику.",
+          "isPartOf": {
+            "@id": `${siteConfig.uk.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#learningresource`
+          },
+          "inLanguage": "uk-UA"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.uk.domain}/#organization`,
+          "name": "Таблиця множення",
+          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
+          "description": "Освітня платформа, яка навчає учнів початкової школи таблиці множення",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["uk", "tr", "es", "de", "cs"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#learningresource`,
+          "name": "Платформа для Вивчення Таблиці Множення",
+          "description": "Комплексний освітній ресурс для вивчення таблиці множення від 1 до 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "uk-UA",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "таблиця множення",
+            "вивчення математики",
+            "математика початкової школи",
+            "множення",
+            "вивчення таблиці множення",
+            "практика математики",
+            "вправи множення",
+            "ігри з таблиці множення"
+          ],
+          "teaches": "Навички розуміння, застосування та запам'ятовування множення та таблиці множення",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroUk />
+          <LearningPathsUk />
+          <PracticePreviewUk />
+          <GamesSectionUk />
+          <PrintableExercisesUk />
+          <DefinitionSectionUk />
+          <WhyItMattersUk />
+          <HowToLearnUk />
+          <AudienceSectionUk />
+          <FooterUk />
         </main>
       </>
     )
