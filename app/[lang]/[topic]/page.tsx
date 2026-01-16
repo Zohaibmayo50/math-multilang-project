@@ -20,6 +20,16 @@ import GamesSectionEs from '@/app/components/es/GamesSection'
 import PrintableExercisesEs from '@/app/components/es/PrintableExercises'
 import AudienceSectionEs from '@/app/components/es/AudienceSection'
 import FooterEs from '@/app/components/es/Footer'
+import HeroDe from '@/app/components/de/Hero'
+import DefinitionSectionDe from '@/app/components/de/DefinitionSection'
+import WhyItMattersDe from '@/app/components/de/WhyItMatters'
+import HowToLearnDe from '@/app/components/de/HowToLearn'
+import LearningPathsDe from '@/app/components/de/LearningPaths'
+import PracticePreviewDe from '@/app/components/de/PracticePreview'
+import GamesSectionDe from '@/app/components/de/GamesSection'
+import PrintableExercisesDe from '@/app/components/de/PrintableExercises'
+import AudienceSectionDe from '@/app/components/de/AudienceSection'
+import FooterDe from '@/app/components/de/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -127,20 +137,45 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  // Placeholder metadata for DE
-  return {
-    metadataBase: new URL(config.domain),
-    title: `${config.name} - Learn Multiplication Tables 1-100`,
-    description: config.description,
-    alternates: {
-      canonical: `/${lang}/${topic}`,
-      ...hreflang,
-    },
-    robots: {
-      index: false, // Don't index placeholder pages yet
-      follow: true,
-    },
+  // German metadata (production)
+  if (locale === 'de') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Einmaleins 1-100 | PDF-Übungen und Interaktive Spiele',
+      description: 'Lerne das Einmaleins von 1 bis 100 kostenlos. Interaktive Übungen, Lernspiele und druckbare Arbeitsblätter für Kinder.',
+      keywords: 'einmaleins, einmaleins-tabellen, multiplikation, mathematik, lernen, übung, bildung, pdf übungen',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Einmaleins – Lernen, Verstehen und Üben',
+        description: 'Lerne das Einmaleins Schritt für Schritt.',
+        type: 'website',
+        locale: 'de_DE',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Einmaleins – Lernen, Verstehen und Üben',
+        description: 'Lerne das Einmaleins Schritt für Schritt.',
+      },
+    }
   }
+
+  return {}
 }
 
 export default async function TopicHomePage({ params }: PageProps) {
@@ -371,22 +406,109 @@ export default async function TopicHomePage({ params }: PageProps) {
     )
   }
 
-  // Placeholder for DE
-  const config = siteConfig[locale]
-  
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">
-          {config.name}
-        </h1>
-        <p className="text-xl text-slate-600 mb-8">
-          {config.description}
-        </p>
-        <p className="text-slate-500">
-          Content coming soon in {lang.toUpperCase()}...
-        </p>
-      </div>
-    </main>
-  )
+  // German version (production-ready)
+  if (locale === 'de') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.de.domain}/#website`,
+          "url": `${siteConfig.de.domain}/de/einmaleins/`,
+          "name": "Einmaleins",
+          "description": "Interaktive Bildungsplattform zum Lernen des Einmaleins von 1 bis 100. Visuelle Lernwerkzeuge für Kinder, praktische Übungen und Lernspiele.",
+          "inLanguage": "de-DE",
+          "publisher": {
+            "@id": `${siteConfig.de.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.de.domain}/de/einmaleins/#webpage`,
+          "url": `${siteConfig.de.domain}/de/einmaleins/`,
+          "name": "Einmaleins - Von 1 bis 100 Alle Tabellen",
+          "description": "Interaktive Lernplattform für das Einmaleins für Kinder. Lerne alle Einmaleins-Tabellen von 1 bis 100 durch Üben.",
+          "isPartOf": {
+            "@id": `${siteConfig.de.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.de.domain}/de/einmaleins/#learningresource`
+          },
+          "inLanguage": "de-DE"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.de.domain}/#organization`,
+          "name": "Einmaleins",
+          "url": `${siteConfig.de.domain}/de/einmaleins/`,
+          "description": "Bildungsplattform, die Grundschülern das Einmaleins beibringt",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["de", "tr", "es"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.de.domain}/de/einmaleins/#learningresource`,
+          "name": "Einmaleins Lernplattform",
+          "description": "Umfassende Bildungsressource zum Lernen des Einmaleins von 1 bis 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "de-DE",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "einmaleins",
+            "mathematik lernen",
+            "grundschul-mathematik",
+            "multiplikation",
+            "einmaleins lernen",
+            "mathematik üben",
+            "multiplikationsübungen",
+            "einmaleins spiele"
+          ],
+          "teaches": "Fähigkeiten zum Verstehen, Anwenden und Auswendiglernen von Multiplikation und Einmaleins-Tabellen",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroDe />
+          <LearningPathsDe />
+          <PracticePreviewDe />
+          <GamesSectionDe />
+          <PrintableExercisesDe />
+          <DefinitionSectionDe />
+          <WhyItMattersDe />
+          <HowToLearnDe />
+          <AudienceSectionDe />
+          <FooterDe />
+        </main>
+      </>
+    )
+  }
+
+  notFound()
 }

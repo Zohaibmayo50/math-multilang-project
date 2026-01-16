@@ -4,10 +4,13 @@ import RangePage from '@/app/components/RangePage'
 import NumberPage from '@/app/components/NumberPage'
 import RangePageEs from '@/app/components/es/RangePage'
 import NumberPageEs from '@/app/components/es/NumberPage'
+import RangePageDe from '@/app/components/de/RangePage'
+import NumberPageDe from '@/app/components/de/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from '@/lib/number-metadata-es'
+import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from '@/lib/number-metadata-de'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -18,6 +21,11 @@ import ForParents from '@/app/veliler-icin/page'
 import ForStudentsEs from '@/app/para-estudiantes/page'
 import ForTeachersEs from '@/app/para-profesores/page'
 import ForParentsEs from '@/app/para-padres/page'
+
+// Import German guide page components
+import ForStudentsDe from '@/app/fuer-schueler/page'
+import ForTeachersDe from '@/app/fuer-lehrer/page'
+import ForParentsDe from '@/app/fuer-eltern/page'
 
 interface PageProps {
   params: {
@@ -209,6 +217,86 @@ const rangeMetadataEs: Record<string, {
   },
 }
 
+// German Range Metadata
+const rangeMetadataDe: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Einmaleins-Tabellen von 1 bis 10 | Anfänger-Level',
+    description: 'Lerne die Einmaleins-Tabellen von 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Ideal für Anfänger-Level, mit interaktiven Übungen und Lernspielen.',
+    keywords: 'einmaleins 1 bis 10, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Einmaleins-Tabellen von 11 bis 20 | Zweistellige Zahlen',
+    description: 'Lerne die Einmaleins-Tabellen von 11, 12, 13, 14, 15, 16, 17, 18, 19, 20. Meistere Multiplikationsoperationen mit zweistelligen Zahlen.',
+    keywords: 'einmaleins 11 bis 20, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'intermediate',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Einmaleins-Tabellen von 21 bis 30 | Mittelstufe',
+    description: 'Lerne die Einmaleins-Tabellen von 21 bis 30. Detaillierte Erklärungen und praktische Übungen für Mittelstufen-Schüler.',
+    keywords: 'einmaleins 21 bis 30, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Einmaleins-Tabellen von 31 bis 40 | Fortgeschrittene Multiplikation',
+    description: 'Lerne die Einmaleins-Tabellen von 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Umfassende Lernmaterialien für fortgeschrittene Multiplikationsfähigkeiten.',
+    keywords: 'einmaleins 31 bis 40, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Einmaleins-Tabellen von 41 bis 50 | Mittel-Fortgeschritten',
+    description: 'Lerne die Einmaleins-Tabellen von 41 bis 50. Interaktive Übungen zur Beherrschung der Multiplikation mit großen Zahlen.',
+    keywords: 'einmaleins 41 bis 50, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Einmaleins-Tabellen von 51 bis 60 | Fortgeschrittenes Level',
+    description: 'Lerne die Einmaleins-Tabellen von 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Detailliertes Studienmaterial für fortgeschrittene Schüler.',
+    keywords: 'einmaleins 51 bis 60, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Einmaleins-Tabellen von 61 bis 70 | Hohe Zahlen',
+    description: 'Lerne die Einmaleins-Tabellen von 61 bis 70. Umfassende Bildungsressourcen für Multiplikation mit hohen Zahlen.',
+    keywords: 'einmaleins 61 bis 70, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Einmaleins von 71 bis 80 | Fortgeschrittene Multiplikation',
+    description: 'Lerne die Einmaleins-Tabellen von 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Entwickle mathematische Fähigkeiten auf fortgeschrittenem Niveau.',
+    keywords: 'einmaleins 71 bis 80, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Einmaleins von 81 bis 90 | Experten-Level',
+    description: 'Lerne die Einmaleins-Tabellen von 81 bis 90. Anspruchsvolle Multiplikationsoperationen und Strategien für Experten-Schüler.',
+    keywords: 'einmaleins 81 bis 90, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Einmaleins-Tabellen von 91 bis 100 | Höchstes Level',
+    description: 'Lerne die Einmaleins-Tabellen von 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Vollständige Bildung für Multiplikationsfähigkeiten auf höchstem Level.',
+    keywords: 'einmaleins 91 bis 100, einmaleins-tabellen, multiplikation, mathematik lernen',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -232,6 +320,29 @@ const guideMetadataEs: Record<string, {
   },
 }
 
+// German Guide Metadata
+const guideMetadataDe: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'fuer-schueler': {
+    title: 'Einmaleins-Leitfaden für Schüler | Schritt-für-Schritt Lernen',
+    description: 'Schritt-für-Schritt-Leitfaden zum einfachen Lernen des Einmaleins. Visuelle Materialien, praktische Aktivitäten und unterhaltsame Spiele zum Lernen in deinem eigenen Tempo.',
+    keywords: 'einmaleins lernen, mathematik für schüler, lernhilfe, multiplikation schritt für schritt',
+  },
+  'fuer-lehrer': {
+    title: 'Einmaleins-Leitfaden für Lehrer | Unterrichtsstrategien',
+    description: 'Umfassende Ressourcen für Lehrer zum effektiven Unterrichten des Einmaleins. Enthält pädagogische Strategien, Klassenaktivitäten, differenzierte Anleitung und Bewertungsmethoden.',
+    keywords: 'einmaleins unterrichten, pädagogische strategien, mathematik aktivitäten, differenzierter unterricht, lehrerressourcen',
+  },
+  'fuer-eltern': {
+    title: 'Einmaleins-Leitfaden für Eltern | Unterstützen Sie das Lernen zu Hause',
+    description: 'Wie Sie Ihrem Kind beim Lernen des Einmaleins zu Hause helfen können. Praktische Tipps, Lernspiele und Motivationsstrategien.',
+    keywords: 'kindern beim einmaleins helfen, mathematik zu hause, elternbildung, lernaktivitäten',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -239,6 +350,9 @@ const guideComponents: Record<string, any> = {
   'para-estudiantes': ForStudentsEs,
   'para-profesores': ForTeachersEs,
   'para-padres': ForParentsEs,
+  'fuer-schueler': ForStudentsDe,
+  'fuer-lehrer': ForTeachersDe,
+  'fuer-eltern': ForParentsDe,
 }
 
 // Determine slug type
@@ -248,6 +362,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   // Check against locale-specific guide metadata
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
+  if (locale === 'de' && slug in guideMetadataDe) return 'guide'
   return null
 }
 
@@ -420,20 +535,72 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  // Placeholder for DE
-  return {
-    metadataBase: new URL(config.domain),
-    title: `${slug} - ${config.name}`,
-    description: `Learn ${slug}`,
-    alternates: {
-      canonical: `/${lang}/${topic}/${slug}`,
-      ...hreflang,
-    },
-    robots: {
-      index: false,
-      follow: true,
-    },
+  // German metadata
+  if (locale === 'de') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataDe[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesDe[num]
+      const description = numberDescriptionsDe[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataDe[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
   }
+
+  return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
@@ -804,17 +971,182 @@ export default async function SlugPage({ params }: PageProps) {
     }
   }
 
-  // Placeholder for DE
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-8">
-      <div className="max-w-2xl text-center">
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">
-          {slug} - {siteConfig[locale].name}
-        </h1>
-        <p className="text-slate-500">
-          Content coming soon in {lang.toUpperCase()}...
-        </p>
-      </div>
-    </main>
-  )
+  // German version
+  if (locale === 'de') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataDe[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/de/einmaleins/${slug}#webpage`,
+            "url": `${baseUrl}/de/einmaleins/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/de/einmaleins/${slug}#learningresource`
+            },
+            "inLanguage": "de-DE"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/de/einmaleins/${slug}#learningresource`,
+            "name": `Lernressource Einmaleins-Tabellen ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Fähigkeiten zum Verstehen und Anwenden der Einmaleins-Tabellen ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "de-DE",
+            "educationalUse": ["practice", "self-study", "homework"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `${start + i}er-Einmaleins`,
+              "url": `${baseUrl}/de/einmaleins/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageDe
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/de/einmaleins/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/de/einmaleins/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesDe[num] || `Multiplikation mit ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/de/einmaleins/${num}#webpage`,
+            "url": `${baseUrl}/de/einmaleins/${num}`,
+            "name": `${num}er-Einmaleins - ${specialProp}`,
+            "description": numberDescriptionsDe[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/de/einmaleins/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/de/einmaleins/${num}#breadcrumb`
+            },
+            "inLanguage": "de-DE"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/de/einmaleins/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Startseite"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/de/einmaleins/${range}`,
+                  "name": `Einmaleins ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/de/einmaleins/${num}`,
+                  "name": `${num}er-Einmaleins`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/de/einmaleins/${num}#learningresource`,
+            "name": `Lernressource ${num}er-Einmaleins`,
+            "description": numberDescriptionsDe[num],
+            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `${num}er-Einmaleins, ${specialProp.toLowerCase()}, grundlegende Multiplikationskonzepte`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "de-DE",
+            "educationalUse": ["practice", "self-study"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/de/einmaleins/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageDe number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  notFound()
 }
