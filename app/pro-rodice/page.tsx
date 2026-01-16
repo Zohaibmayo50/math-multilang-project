@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
+import Header from '@/app/components/cs/Header'
+import Footer from '@/app/components/cs/Footer'
 
 export const metadata = {
   title: 'Průvodce Násobilkou Pro Rodiče | Podpora Učení Doma',
@@ -13,6 +14,7 @@ export const metadata = {
 export default function ForParents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

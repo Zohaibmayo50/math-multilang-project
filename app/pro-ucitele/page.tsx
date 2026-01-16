@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Header from '../components/Header';
-import Footer from '@/app/components/Footer';
+import Header from '../components/cs/Header';
+import Footer from '@/app/components/cs/Footer';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Průvodce Násobilkou Pro Učitele',
     description: 'Komplexní zdroje pro učitele pro efektivní výuku násobilky.',
-    url: 'https://einmaleins.online/pro-ucitele',
+    url: 'https://multilang-math.com/pro-ucitele',
     siteName: 'Násobilka',
     locale: 'cs_CZ',
     type: 'website',
