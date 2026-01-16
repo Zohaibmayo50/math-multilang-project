@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
-  title: 'Multiplication Tables | Çarpım Tablosu | Tablas de Multiplicar',
-  description: 'Learn multiplication tables in your language. Choose Turkish, Spanish, or German.',
+  title: 'Multiplication Tables | Çarpım Tablosu | Tablas de Multiplicar | Einmaleins | Násobilka',
+  description: 'Learn multiplication tables in your language. Choose Turkish, Spanish, German, or Czech.',
   alternates: {
     canonical: '/',
   },
@@ -37,6 +37,13 @@ export default function LanguageSelector() {
       topic: 'Einmaleins',
       description: 'Lerne das Einmaleins von 1 bis 100',
     },
+    {
+      code: 'cs',
+      name: languageNames.cs,
+      flag: '🇨🇿',
+      topic: 'Násobilka',
+      description: 'Naučte se malou násobilku od 1 do 100',
+    },
   ]
 
   return (
@@ -51,7 +58,7 @@ export default function LanguageSelector() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-4 gap-6">
           {languages.map((lang) => (
             <Link
               key={lang.code}
