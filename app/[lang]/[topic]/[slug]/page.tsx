@@ -6,11 +6,14 @@ import RangePageEs from '@/app/components/es/RangePage'
 import NumberPageEs from '@/app/components/es/NumberPage'
 import RangePageDe from '@/app/components/de/RangePage'
 import NumberPageDe from '@/app/components/de/NumberPage'
+import RangePageCs from '@/app/components/cs/RangePage'
+import NumberPageCs from '@/app/components/cs/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from '@/lib/number-metadata-es'
 import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from '@/lib/number-metadata-de'
+import { numberTitlesCs, numberDescriptionsCs, numberSpecialPropertiesCs } from '@/lib/number-metadata-cs'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -26,6 +29,11 @@ import ForParentsEs from '@/app/para-padres/page'
 import ForStudentsDe from '@/app/fuer-schueler/page'
 import ForTeachersDe from '@/app/fuer-lehrer/page'
 import ForParentsDe from '@/app/fuer-eltern/page'
+
+// Import Czech guide page components
+import ForStudentsCs from '@/app/pro-studenty/page'
+import ForTeachersCs from '@/app/pro-ucitele/page'
+import ForParentsCs from '@/app/pro-rodice/page'
 
 interface PageProps {
   params: {
@@ -297,6 +305,86 @@ const rangeMetadataDe: Record<string, {
   },
 }
 
+// Czech Range Metadata
+const rangeMetadataCs: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Tabulky Násobilky 1 až 10 | Začátečnické Tabulky',
+    description: 'Naučte se násobilky 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Snadno srozumitelná vysvětlení pro začátečníky, vizuální příklady a praktická cvičení.',
+    keywords: 'násobilka 1 až 10, násobilka, násobení, učení matematiky',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Tabulky Násobilky 11 až 20 | Dvouciferná Čísla',
+    description: 'Naučte se násobilky 11 až 20. Důležitý krok pro pochopení násobilky s dvoucifernými čísly.',
+    keywords: 'násobilka 11 až 20, násobilka, násobení, učení matematiky',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Tabulky Násobilky 21 až 30 | Střední Úroveň',
+    description: 'Naučte se násobilky 21 až 30. Střední úroveň a vzory násobilky.',
+    keywords: 'násobilka 21 až 30, násobilka, násobení, učení matematiky',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Tabulky Násobilky 31 až 40 | Pokročilá Násobilka',
+    description: 'Naučte se násobilky 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Pokročilé dovednosti počítání zpaměti.',
+    keywords: 'násobilka 31 až 40, násobilka, násobení, učení matematiky',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Tabulky Násobilky 41 až 50 | Střední-Pokročilá',
+    description: 'Naučte se násobilky 41 až 50. Interaktivní cvičení pro zvládnutí násobilky s velkými čísly.',
+    keywords: 'násobilka 41 až 50, násobilka, násobení, učení matematiky',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Tabulky Násobilky 51 až 60 | Pokročilá Úroveň',
+    description: 'Naučte se násobilky 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Detailní studijní materiály pro pokročilé studenty.',
+    keywords: 'násobilka 51 až 60, násobilka, násobení, učení matematiky',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Tabulky Násobilky 61 až 70 | Vysoká Čísla',
+    description: 'Naučte se násobilky 61 až 70. Komplexní vzdělávací zdroje pro násobilku s vysokými čísly.',
+    keywords: 'násobilka 61 až 70, násobilka, násobení, učení matematiky',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Tabulky Násobilky 71 až 80 | Pokročilá Násobilka',
+    description: 'Naučte se násobilky 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Rozvíjejte matematické dovednosti na pokročilé úrovni.',
+    keywords: 'násobilka 71 až 80, násobilka, násobení, učení matematiky',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Tabulky Násobilky 81 až 90 | Expert Úroveň',
+    description: 'Naučte se násobilky 81 až 90. Náročné násobící operace a strategie pro experty.',
+    keywords: 'násobilka 81 až 90, násobilka, násobení, učení matematiky',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Tabulky Násobilky 91 až 100 | Nejvyšší Úroveň',
+    description: 'Naučte se násobilky 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Kompletní vzdělání pro dovednosti násobilky na nejvyšší úrovni.',
+    keywords: 'násobilka 91 až 100, násobilka, násobení, učení matematiky',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -343,6 +431,29 @@ const guideMetadataDe: Record<string, {
   },
 }
 
+// Czech Guide Metadata
+const guideMetadataCs: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'pro-studenty': {
+    title: 'Průvodce Násobilkou pro Studenty | Učení Krok za Krokem',
+    description: 'Průvodce krok za krokem pro snadné učení násobilky. Vizuální materiály, praktické aktivity a zábavné hry pro učení vlastním tempem.',
+    keywords: 'naučit se násobilku, matematika pro studenty, průvodce násobilkou, násobení krok za krokem',
+  },
+  'pro-ucitele': {
+    title: 'Průvodce Násobilkou pro Učitele | Výukové Strategie',
+    description: 'Komplexní zdroje pro učitele o efektivním vyučování násobilky. Zahrnuje pedagogické strategie, aktivity ve třídě, diferencovanou výuku a metody hodnocení.',
+    keywords: 'vyučovat násobilku, pedagogické strategie, matematické aktivity, diferencovaná výuka, zdroje pro učitele',
+  },
+  'pro-rodice': {
+    title: 'Průvodce Násobilkou pro Rodiče | Podpořte Učení Doma',
+    description: 'Jak pomoci vašemu dítěti naučit se násobilku doma. Praktické tipy, vzdělávací hry a motivační strategie.',
+    keywords: 'pomoci dětem s násobilkou, matematika doma, vzdělávání rodičů, výukové aktivity',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -353,6 +464,9 @@ const guideComponents: Record<string, any> = {
   'fuer-schueler': ForStudentsDe,
   'fuer-lehrer': ForTeachersDe,
   'fuer-eltern': ForParentsDe,
+  'pro-studenty': ForStudentsCs,
+  'pro-ucitele': ForTeachersCs,
+  'pro-rodice': ForParentsCs,
 }
 
 // Determine slug type
@@ -360,6 +474,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (/^\d+-\d+$/.test(slug)) return 'range'
   if (/^\d+$/.test(slug)) return 'number'
   // Check against locale-specific guide metadata
+  if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -372,6 +487,7 @@ export async function generateStaticParams() {
   const langs = [
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
+    { lang: 'cs', topic: 'nasobilka' },
     { lang: 'de', topic: 'einmaleins' },
   ]
 
@@ -401,7 +517,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -600,13 +716,78 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Czech metadata
+  if (locale === 'cs') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataCs[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesCs[num]
+      const description = numberDescriptionsCs[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataCs[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
-  const { lang, topic, slug} = await params
+  const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1135,6 +1316,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageDe number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Czech version
+  if (locale === 'cs') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataCs[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/cs/nasobilka/${slug}#webpage`,
+            "url": `${baseUrl}/cs/nasobilka/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/cs/nasobilka/${slug}#learningresource`
+            },
+            "inLanguage": "cs-CZ"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/cs/nasobilka/${slug}#learningresource`,
+            "name": `Výuková Pomůcka Násobilka ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Dovednosti pro pochopení a použití násobilky ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "cs-CZ",
+            "educationalUse": ["practice", "self-study", "homework"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Násobilka ${start + i}`,
+              "url": `${baseUrl}/cs/nasobilka/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageCs
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/cs/nasobilka/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/cs/nasobilka/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesCs[num] || `Násobení s ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/cs/nasobilka/${num}#webpage`,
+            "url": `${baseUrl}/cs/nasobilka/${num}`,
+            "name": `Násobilka ${num} - ${specialProp}`,
+            "description": numberDescriptionsCs[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/cs/nasobilka/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/cs/nasobilka/${num}#breadcrumb`
+            },
+            "inLanguage": "cs-CZ"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/cs/nasobilka/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Domů"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/cs/nasobilka/${range}`,
+                  "name": `Násobilka ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/cs/nasobilka/${num}`,
+                  "name": `Násobilka ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/cs/nasobilka/${num}#learningresource`,
+            "name": `Výuková Pomůcka Násobilka ${num}`,
+            "description": numberDescriptionsCs[num],
+            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Násobilka ${num}, ${specialProp.toLowerCase()}, základní koncepty násobení`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "cs-CZ",
+            "educationalUse": ["practice", "self-study"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/cs/nasobilka/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageCs number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

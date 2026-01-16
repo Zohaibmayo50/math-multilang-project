@@ -30,6 +30,16 @@ import GamesSectionDe from '@/app/components/de/GamesSection'
 import PrintableExercisesDe from '@/app/components/de/PrintableExercises'
 import AudienceSectionDe from '@/app/components/de/AudienceSection'
 import FooterDe from '@/app/components/de/Footer'
+import HeroCs from '@/app/components/cs/Hero'
+import DefinitionSectionCs from '@/app/components/cs/DefinitionSection'
+import WhyItMattersCs from '@/app/components/cs/WhyItMatters'
+import HowToLearnCs from '@/app/components/cs/HowToLearn'
+import LearningPathsCs from '@/app/components/cs/LearningPaths'
+import PracticePreviewCs from '@/app/components/cs/PracticePreview'
+import GamesSectionCs from '@/app/components/cs/GamesSection'
+import PrintableExercisesCs from '@/app/components/cs/PrintableExercises'
+import AudienceSectionCs from '@/app/components/cs/AudienceSection'
+import FooterCs from '@/app/components/cs/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -45,6 +55,7 @@ export async function generateStaticParams() {
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
     { lang: 'de', topic: 'einmaleins' },
+    { lang: 'cs', topic: 'nasobilka' },
   ]
 }
 
@@ -52,7 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -175,6 +186,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Czech metadata (production)
+  if (locale === 'cs') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Násobilka 1-100 | PDF Cvičení a Interaktivní Hry',
+      description: 'Naučte se násobilku od 1 do 100 zdarma. Interaktivní cvičení, vzdělávací hry a PDF pracovní listy - ideální platforma matematiky pro děti.',
+      keywords: 'násobilka, multiplication table, matematika, učení, cvičení, vzdělávání, pdf cvičení',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Násobilka – Učit se, Rozumět a Cvičit',
+        description: 'Naučte se násobilku krok za krokem.',
+        type: 'website',
+        locale: 'cs_CZ',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Násobilka – Učit se, Rozumět a Cvičit',
+        description: 'Naučte se násobilku krok za krokem.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -182,7 +231,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -505,6 +554,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnDe />
           <AudienceSectionDe />
           <FooterDe />
+        </main>
+      </>
+    )
+  }
+
+  // Czech version (production-ready)
+  if (locale === 'cs') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.cs.domain}/#website`,
+          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
+          "name": "Násobilka",
+          "description": "Interaktivní vzdělávací platforma pro učení násobilky od 1 do 100. Vizuální výukové nástroje pro děti, praktická cvičení a vzdělávací hry.",
+          "inLanguage": "cs-CZ",
+          "publisher": {
+            "@id": `${siteConfig.cs.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.cs.domain}/cs/nasobilka/#webpage`,
+          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
+          "name": "Násobilka - Od 1 do 100 Všechny Tabulky",
+          "description": "Interaktivní platforma pro učení násobilky pro děti. Naučte se všechny násobilky od 1 do 100 procvičováním.",
+          "isPartOf": {
+            "@id": `${siteConfig.cs.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.cs.domain}/cs/nasobilka/#learningresource`
+          },
+          "inLanguage": "cs-CZ"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.cs.domain}/#organization`,
+          "name": "Násobilka",
+          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
+          "description": "Vzdělávací platforma, která učí žáky základních škol násobilku",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["cs", "tr", "es", "de"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.cs.domain}/cs/nasobilka/#learningresource`,
+          "name": "Platforma pro Učení Násobilky",
+          "description": "Komplexní vzdělávací zdroj pro učení násobilky od 1 do 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "cs-CZ",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "násobilka",
+            "učení matematiky",
+            "základní škola matematika",
+            "násobení",
+            "učení násobilky",
+            "procvičování matematiky",
+            "cvičení násobení",
+            "násobilka hry"
+          ],
+          "teaches": "Dovednosti porozumět, aplikovat a zapamatovat si násobení a násobilku",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroCs />
+          <LearningPathsCs />
+          <PracticePreviewCs />
+          <GamesSectionCs />
+          <PrintableExercisesCs />
+          <DefinitionSectionCs />
+          <WhyItMattersCs />
+          <HowToLearnCs />
+          <AudienceSectionCs />
+          <FooterCs />
         </main>
       </>
     )
