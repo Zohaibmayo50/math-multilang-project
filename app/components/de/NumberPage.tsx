@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Footer from './Footer'
 import PracticePreview from './PracticePreview'
 import PrintableExercises from './PrintableExercises'
-import NumberGames from './NumberGames'
+import NumberGames from '../NumberGames'
 
 interface NumberPageProps {
   number: number
