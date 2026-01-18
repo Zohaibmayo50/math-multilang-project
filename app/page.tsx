@@ -72,7 +72,7 @@ export default function LanguageSelector() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-6 gap-6">
+        <div className="grid md:grid-cols-4 gap-6">
           {languages.map((lang) => (
             <Link
               key={lang.code}
