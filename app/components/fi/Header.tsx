@@ -25,7 +25,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Кертotaulut
+                Kertotaulut
               </span>
               <span className="text-xs text-slate-500 hidden sm:block">Opi, Ymmärrä, Harjoittele</span>
             </div>
