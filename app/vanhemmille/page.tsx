@@ -323,7 +323,7 @@ export default function ForParents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/fi/kertotaulu/1-10"
+                href="/fi/kertotaulut/1-10"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>

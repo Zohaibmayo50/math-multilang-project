@@ -357,7 +357,7 @@ export default function RangePage({
             {rangeNumbers.map((num) => (
               <Link
                 key={num}
-                href={`/fi/kertotaulu/${num}`}
+                href={`/fi/kertotaulut/${num}`}
                 className="block bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
