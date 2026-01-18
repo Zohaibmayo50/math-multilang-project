@@ -240,10 +240,10 @@ export default function NumberGames({ number }: NumberGamesProps) {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            🎮 {number} Kertotaulun Pelit
+            🎮 {number} Kertotaulu Pelit
           </h2>
           <p className="text-lg text-slate-700">
-            Vahvista {number} kertotaulu hauskoilla animoiduilla peleillä!
+            Vahvista {number} kertotaulua hauskoilla animoiduilla peleillä!
           </p>
         </div>
 
@@ -377,13 +377,13 @@ export default function NumberGames({ number }: NumberGamesProps) {
                     </div>
                   </>
                 ) : (
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Oletko valmis kilpaan?</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Yarışa Hazır mısınız?</h3>
                 )}
                 <button
                   onClick={startRaceGame}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  {raceCar.position >= 90 ? 'Pelaa uudelleen' : 'Aloita kilpailu'} 🏎️
+                  {raceCar.position >= 90 ? 'Tekrar Oyna' : 'Yarışı Başlat'} 🏎️
                 </button>
               </div>
             ) : (
@@ -448,15 +448,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'memory' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Muistipeli</h3>
-              <p className="text-slate-600">Etsi parit!</p>
+              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Hafıza Oyunu</h3>
+              <p className="text-slate-600">Eşleşen kartları bulun!</p>
             </div>
 
             {cards.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🃏</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Yhdistä kortit</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Yhdistä kertolaskut tuloksiin!</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Kartları Eşleştir</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Çarpma işlemlerini sonuçlarıyla eşleştirin!</p>
                 <button
                   onClick={initMemoryGame}
                   className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
