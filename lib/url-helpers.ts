@@ -27,7 +27,7 @@ export function getHreflangAlternates(path?: string): Array<{
   hreflang: string
   href: string
 }> {
-  const locales: Locale[] = ['tr', 'es', 'de', 'cs', 'uk']
+  const locales: Locale[] = ['tr', 'es', 'de', 'cs', 'uk', 'fi']
   
   const alternates = locales.map(locale => ({
     hreflang: locale as string,

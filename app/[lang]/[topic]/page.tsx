@@ -50,6 +50,16 @@ import GamesSectionUk from '@/app/components/uk/GamesSection'
 import PrintableExercisesUk from '@/app/components/uk/PrintableExercises'
 import AudienceSectionUk from '@/app/components/uk/AudienceSection'
 import FooterUk from '@/app/components/uk/Footer'
+import HeroFi from '@/app/components/fi/Hero'
+import DefinitionSectionFi from '@/app/components/fi/DefinitionSection'
+import WhyItMattersFi from '@/app/components/fi/WhyItMatters'
+import HowToLearnFi from '@/app/components/fi/HowToLearn'
+import LearningPathsFi from '@/app/components/fi/LearningPaths'
+import PracticePreviewFi from '@/app/components/fi/PracticePreview'
+import GamesSectionFi from '@/app/components/fi/GamesSection'
+import PrintableExercisesFi from '@/app/components/fi/PrintableExercises'
+import AudienceSectionFi from '@/app/components/fi/AudienceSection'
+import FooterFi from '@/app/components/fi/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -67,6 +77,7 @@ export async function generateStaticParams() {
     { lang: 'de', topic: 'einmaleins' },
     { lang: 'cs', topic: 'nasobilka' },
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
+    { lang: 'fi', topic: 'kertotaulut' },
   ]
 }
 
@@ -74,7 +85,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -273,6 +284,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Finnish metadata (production)
+  if (locale === 'fi') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Kertotaulut 1-100 | PDF-harjoitukset ja Interaktiiviset Pelit',
+      description: 'Opi kertotaulut 1-100 ilmaiseksi. Interaktiiviset harjoitukset, opetuspelit ja PDF-työarkit lapsille.',
+      keywords: 'kertotaulut, kertotaulu, matematiikka, oppiminen, harjoittelu, koulutus, pdf harjoitukset',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Kertotaulut – Opi, Ymmärrä ja Harjoittele',
+        description: 'Opi kertotaulut askel askeleelta.',
+        type: 'website',
+        locale: 'fi_FI',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Kertotaulut – Opi, Ymmärrä ja Harjoittele',
+        description: 'Opi kertotaulut askel askeleelta.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -280,7 +329,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -811,6 +860,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnUk />
           <AudienceSectionUk />
           <FooterUk />
+        </main>
+      </>
+    )
+  }
+
+  // Finnish version (production-ready)
+  if (locale === 'fi') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.fi.domain}/#website`,
+          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
+          "name": "Kertotaulut",
+          "description": "Interaktiivinen oppimisalusta kertotaulujen oppimiseen 1-100. Visuaaliset oppimistyökalut lapsille, käytännön harjoitukset ja opetuspelit.",
+          "inLanguage": "fi-FI",
+          "publisher": {
+            "@id": `${siteConfig.fi.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#webpage`,
+          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
+          "name": "Kertotaulut - 1-100 Kaikki Taulut",
+          "description": "Interaktiivinen kertotaulujen oppimisalusta lapsille. Opi kaikki kertotaulut 1-100 harjoittelemalla.",
+          "isPartOf": {
+            "@id": `${siteConfig.fi.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#learningresource`
+          },
+          "inLanguage": "fi-FI"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.fi.domain}/#organization`,
+          "name": "Kertotaulut",
+          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
+          "description": "Oppimisalusta, joka opettaa alakoululaisille kertotaulut",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["fi", "tr", "es", "de", "cs", "uk"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#learningresource`,
+          "name": "Kertotaulujen Oppimisalusta",
+          "description": "Kattava oppimisresurssi kertotaulujen oppimiseen 1-100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "fi-FI",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "kertotaulut",
+            "matematiikan oppiminen",
+            "alakoulun matematiikka",
+            "kertominen",
+            "kertotaulujen oppiminen",
+            "matematiikan harjoittelu",
+            "kertolaskuharjoitukset",
+            "kertotaulupelit"
+          ],
+          "teaches": "Taidot ymmärtää, soveltaa ja muistaa kertolaskuja ja kertotauluja",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroFi />
+          <LearningPathsFi />
+          <PracticePreviewFi />
+          <GamesSectionFi />
+          <PrintableExercisesFi />
+          <DefinitionSectionFi />
+          <WhyItMattersFi />
+          <HowToLearnFi />
+          <AudienceSectionFi />
+          <FooterFi />
         </main>
       </>
     )

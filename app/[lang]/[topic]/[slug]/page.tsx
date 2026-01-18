@@ -10,6 +10,8 @@ import RangePageCs from '@/app/components/cs/RangePage'
 import NumberPageCs from '@/app/components/cs/NumberPage'
 import RangePageUk from '@/app/components/uk/RangePage'
 import NumberPageUk from '@/app/components/uk/NumberPage'
+import RangePageFi from '@/app/components/fi/RangePage'
+import NumberPageFi from '@/app/components/fi/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -17,6 +19,7 @@ import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from 
 import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from '@/lib/number-metadata-de'
 import { numberTitlesCs, numberDescriptionsCs, numberSpecialPropertiesCs } from '@/lib/number-metadata-cs'
 import { numberTitlesUk, numberDescriptionsUk, numberSpecialPropertiesUk } from '@/lib/number-metadata-uk'
+import { numberTitlesFi, numberDescriptionsFi, numberSpecialPropertiesFi } from '@/lib/number-metadata-fi'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -42,6 +45,11 @@ import ForParentsCs from '@/app/pro-rodice/page'
 import ForStudentsUk from '@/app/dlya-uchniv/page'
 import ForTeachersUk from '@/app/dlya-vchyteliv/page'
 import ForParentsUk from '@/app/dlya-batkiv/page'
+
+// Import Finnish guide page components
+import ForStudentsFi from '@/app/oppilaille/page'
+import ForTeachersFi from '@/app/opettajille/page'
+import ForParentsFi from '@/app/vanhemmille/page'
 
 interface PageProps {
   params: {
@@ -473,6 +481,86 @@ const rangeMetadataUk: Record<string, {
   },
 }
 
+// Finnish Range Metadata
+const rangeMetadataFi: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Kertotaulut 1-10 | Aloittelijan Taso',
+    description: 'Opi kertotaulut 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Helposti ymmärrettävät selitykset aloittelijoille, visuaaliset esimerkit ja käytännön harjoitukset.',
+    keywords: 'kertotaulu 1-10, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Kertotaulut 11-20 | Kaksinumeroiset Luvut',
+    description: 'Opi kertotaulut 11-20. Tärkeä askel kaksinumeroisten lukujen kertolaskun ymmärtämiseen.',
+    keywords: 'kertotaulu 11-20, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Kertotaulut 21-30 | Keskitaso',
+    description: 'Opi kertotaulut 21-30. Keskitaso ja kertolaskun mallit.',
+    keywords: 'kertotaulu 21-30, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Kertotaulut 31-40 | Edistynyt Kertolasku',
+    description: 'Opi kertotaulut 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Edistyneet päässälaskutaidot.',
+    keywords: 'kertotaulu 31-40, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Kertotaulut 41-50 | Keskitaso-Edistynyt',
+    description: 'Opi kertotaulut 41-50. Interaktiiviset harjoitukset isojen lukujen kertolaskun hallitsemiseen.',
+    keywords: 'kertotaulu 41-50, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Kertotaulut 51-60 | Edistynyt Taso',
+    description: 'Opi kertotaulut 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Yksityiskohtaiset oppimateriaalit edistyneille oppilaille.',
+    keywords: 'kertotaulu 51-60, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Kertotaulut 61-70 | Suuret Luvut',
+    description: 'Opi kertotaulut 61-70. Kattavat opetusresurssit suurten lukujen kertolaskuun.',
+    keywords: 'kertotaulu 61-70, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Kertotaulut 71-80 | Edistynyt Kertolasku',
+    description: 'Opi kertotaulut 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Kehitä matemaattisia taitoja edistyneellä tasolla.',
+    keywords: 'kertotaulu 71-80, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Kertotaulut 81-90 | Asiantuntijataso',
+    description: 'Opi kertotaulut 81-90. Haastavat kertolaskut ja strategiat asiantuntijoille.',
+    keywords: 'kertotaulu 81-90, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Kertotaulut 91-100 | Korkein Taso',
+    description: 'Opi kertotaulut 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Täydellinen opetus kertolaskutaidoille korkeimmalla tasolla.',
+    keywords: 'kertotaulu 91-100, kertotaulu, kertominen, matematiikan oppiminen',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -565,6 +653,29 @@ const guideMetadataUk: Record<string, {
   },
 }
 
+// Finnish Guide Metadata
+const guideMetadataFi: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'oppilaille': {
+    title: 'Kertotauluopas Oppilaille | Opiskele Vaihe Vaiheelta',
+    description: 'Vaiheittainen opas kertotaulun helpppoon oppimiseen. Visuaaliset materiaalit, käytännön harjoitukset ja hauskat pelit omaan tahtiin opiskeluun.',
+    keywords: 'oppia kertotaulu, matematiikka oppilaille, kertotauluopas, kertolasku vaihe vaiheelta',
+  },
+  'opettajille': {
+    title: 'Kertotauluopas Opettajille | Opetusstrategiat',
+    description: 'Kattavat resurssit opettajille kertotaulun tehokkaasta opettamisesta. Sisältää pedagogisia strategioita, luokkahuoneen toimintoja, eriyttävää opetusta ja arviointimenetelmiä.',
+    keywords: 'opettaa kertotaulu, pedagogiset strategiat, matematiikan toiminnot, eriyttävä opetus, opettajan resurssit',
+  },
+  'vanhemmille': {
+    title: 'Kertotauluopas Vanhemmille | Tue Oppimista Kotona',
+    description: 'Kuinka auttaa lastasi oppimaan kertotaulu kotona. Käytännön vinkkejä, opetuspelejä ja motivointistrategioita.',
+    keywords: 'auttaa lapsia kertotaulussa, matematiikka kotona, vanhempien koulutus, opetustoiminnot',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -581,6 +692,9 @@ const guideComponents: Record<string, any> = {
   'dlya-uchniv': ForStudentsUk,
   'dlya-vchyteliv': ForTeachersUk,
   'dlya-batkiv': ForParentsUk,
+  'oppilaille': ForStudentsFi,
+  'opettajille': ForTeachersFi,
+  'vanhemmille': ForParentsFi,
 }
 
 // Determine slug type
@@ -590,6 +704,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   // Check against locale-specific guide metadata
   if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
   if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
+  if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -605,6 +720,7 @@ export async function generateStaticParams() {
     { lang: 'cs', topic: 'nasobilka' },
     { lang: 'de', topic: 'einmaleins' },
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
+    { lang: 'fi', topic: 'kertotaulut' },
   ]
 
   langs.forEach(({ lang, topic }) => {
@@ -633,7 +749,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -962,13 +1078,78 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Finnish metadata
+  if (locale === 'fi') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataFi[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesFi[num]
+      const description = numberDescriptionsFi[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataFi[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs', 'uk'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1851,6 +2032,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageUk number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Finnish version
+  if (locale === 'fi') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataFi[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/fi/kertotaulut/${slug}#webpage`,
+            "url": `${baseUrl}/fi/kertotaulut/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/fi/kertotaulut/${slug}#learningresource`
+            },
+            "inLanguage": "fi-FI"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/fi/kertotaulut/${slug}#learningresource`,
+            "name": `Oppimisresurssi Kertotaulu ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Taidot ymmärtää ja käyttää kertotaulua ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "fi-FI",
+            "educationalUse": ["practice", "self-study", "homework"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Kertotaulu ${start + i}`,
+              "url": `${baseUrl}/fi/kertotaulut/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageFi
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/fi/kertotaulut/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/fi/kertotaulut/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesFi[num] || `Kertominen ${num}:llä`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/fi/kertotaulut/${num}#webpage`,
+            "url": `${baseUrl}/fi/kertotaulut/${num}`,
+            "name": `Kertotaulu ${num} - ${specialProp}`,
+            "description": numberDescriptionsFi[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/fi/kertotaulut/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/fi/kertotaulut/${num}#breadcrumb`
+            },
+            "inLanguage": "fi-FI"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/fi/kertotaulut/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Etusivu"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/fi/kertotaulut/${range}`,
+                  "name": `Kertotaulu ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/fi/kertotaulut/${num}`,
+                  "name": `Kertotaulu ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/fi/kertotaulut/${num}#learningresource`,
+            "name": `Oppimisresurssi Kertotaulu ${num}`,
+            "description": numberDescriptionsFi[num],
+            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Kertotaulu ${num}, ${specialProp.toLowerCase()}, kertolaskun peruskäsitteet`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "fi-FI",
+            "educationalUse": ["practice", "self-study"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/fi/kertotaulut/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageFi number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }
