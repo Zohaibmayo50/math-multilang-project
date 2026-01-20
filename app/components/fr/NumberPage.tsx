@@ -34,7 +34,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         printWindow.document.write(`
           <html>
             <head>
-              <title>Tabla de Multiplicar del ${number}</title>
+              <title>Table de Multiplication de ${number}</title>
               <style>
                 body {
                   font-family: Arial, sans-serif;
@@ -70,7 +70,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               </style>
             </head>
             <body>
-              <h1>Tabla de Multiplicar del ${number}</h1>
+              <h1>Table de Multiplication de ${number}</h1>
               ${Array.from({ length: 10 }, (_, i) => `
                 <div class="table-item">
                   <span class="equation">${number} × ${i + 1}</span>
@@ -171,15 +171,15 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       2: "Multiplicar por 2 significa duplicar un número. Cuando multiplicas algo por 2, lo estás agregando a sí mismo. Esta es una de las operaciones de multiplicación más prácticas porque frecuentemente necesitamos duplicar cosas en la vida real—contar pares de zapatos, ruedas de bicicleta, o dividir algo equitativamente entre dos personas.",
       3: "Multiplicar por 3 significa tomar un número tres veces. Puedes pensarlo como sumar el mismo número a sí mismo tres veces. Esta tabla es esencial para entender triángulos, tríos y todo lo que viene en grupos de tres.",
       4: "Multiplicar por 4 es como duplicar dos veces. Como 4 = 2 × 2, puedes duplicar un número y luego duplicar el resultado otra vez. Esto hace que aprender la tabla del 4 sea más fácil si ya conoces la del 2. El número 4 aparece frecuentemente en geometría (los cuadrados tienen 4 lados) y en la medición del tiempo (hay 4 cuartos en una hora).",
-      5: "Multiplicar por 5 crea uno de los patrones más hermosos en matemáticas. Todos los múltiplos de 5 terminan en 0 o 5, lo que hace que esta tabla sea muy predecible. Es extremadamente útil para contar dinero (monedas de 5 centavos, billetes de 5 pesos) y decir la hora (intervalos de 5 minutos).",
+      5: "Multiplicar por 5 crea uno de los ModÃ¨les más hermosos en matemáticas. Todos los múltiplos de 5 terminan en 0 o 5, lo que hace que esta tabla sea muy predecible. Es extremadamente útil para contar dinero (monedas de 5 centavos, billetes de 5 pesos) y decir la hora (intervalos de 5 minutos).",
       6: "Multiplicar por 6 significa tomar seis grupos de un número. El 6 es la primera tabla de multiplicar 'real' porque no es simplemente múltiplos de 2 o 3. Sin embargo, como 6 = 2 × 3, puedes multiplicar un número por 2 y luego por 3 (o al revés) para multiplicar por 6. El número 6 aparece frecuentemente en la naturaleza (celdas de panal de abeja) y en la vida cotidiana (cartones de huevos, caras de dados).",
-      7: "Multiplicar por 7 es generalmente una de las tablas con las que los estudiantes tienen más dificultades porque 7 es un número primo y no se puede derivar de otras tablas simples. Sin embargo, hay patrones hermosos en todos los múltiplos del 7 y se puede aprender con práctica. El 7 es un número importante en los días de la semana, los continentes del mundo y muchas referencias culturales.",
+      7: "Multiplicar por 7 es generalmente una de las tablas con las que los estudiantes tienen más dificultades porque 7 es un número primo y no se puede derivar de otras tablas simples. Sin embargo, hay ModÃ¨les hermosos en todos los múltiplos del 7 y se puede aprender con práctica. El 7 es un número importante en los días de la semana, los continentes del mundo y muchas referencias culturales.",
       8: "Multiplicar por 8 es como duplicar tres veces (8 = 2 × 2 × 2). Duplica un número, duplica el resultado otra vez, y duplícalo una vez más—habrás multiplicado por 8. Esta tabla es más fácil de aprender si conoces bien las tablas del 2 y 4. El 8 es un número importante en geometría (octógonos) y música (octava).",
-      9: "Multiplicar por 9 tiene uno de los patrones más fascinantes en matemáticas. Cuando sumas los dígitos de todos los múltiplos del 9, el resultado siempre es divisible por 9. Además, el dígito de las decenas de 9 × n siempre es n-1. Esta tabla también se puede aprender con el truco de los dedos. Como 9 es solo 1 menos que 10, también se puede calcular usando la tabla del 10.",
+      9: "Multiplicar por 9 tiene uno de los ModÃ¨les más fascinantes en matemáticas. Cuando sumas los dígitos de todos los múltiplos del 9, el resultado siempre es divisible por 9. Además, el dígito de las decenas de 9 × n siempre es n-1. Esta tabla también se puede aprender con el truco de los dedos. Como 9 es solo 1 menos que 10, también se puede calcular usando la tabla del 10.",
       10: "Multiplicar por 10 es una de las tablas de multiplicar más fáciles. Cuando multiplicas cualquier número por 10, simplemente agregas un cero al final. Esto forma la base de nuestro sistema decimal. Aprender a multiplicar por 10 enseña a los estudiantes el concepto de valor posicional y cómo trabajar con números grandes. La tabla del 10 es un punto de referencia para entender todas las demás tablas de multiplicar.",
-      11: "Multiplicar por 11 tiene uno de los patrones más interesantes en matemáticas. Cuando multiplicas números de un dígito por 11, el resultado es ese número repetido dos veces (11×3=33, 11×7=77). Al multiplicar números de dos dígitos por 11, también hay un patrón hermoso: sumas los dígitos y los colocas en el medio. El 11 es un número primo y tiene propiedades matemáticas especiales.",
+      11: "Multiplicar por 11 tiene uno de los ModÃ¨les más interesantes en matemáticas. Cuando multiplicas números de un dígito por 11, el resultado es ese número repetido dos veces (11×3=33, 11×7=77). Al multiplicar números de dos dígitos por 11, también hay un patrón hermoso: sumas los dígitos y los colocas en el medio. El 11 es un número primo y tiene propiedades matemáticas especiales.",
       12: "Multiplicar por 12 es una de las tablas más prácticas porque 12 es divisible por muchos números (1, 2, 3, 4, 6, 12). Esta característica hace que el 12 sea muy útil en la vida diaria—hay 12 objetos en una docena, 12 horas en un reloj, 12 meses en un año. Como 12 = 3 × 4 = 2 × 6, puedes aprender esta tabla de múltiples maneras.",
-      13: "Multiplicar por 13 desarrolla las habilidades de reconocimiento de patrones de los estudiantes. El 13 es un número primo, por lo que no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 13 como 10+3 es muy útil: multiplicar un número por 13 significa multiplicarlo por 10 y sumar el resultado de multiplicarlo por 3. El 13 es un número con significado especial en muchas culturas.",
+      13: "Multiplicar por 13 desarrolla las habilidades de reconocimiento de ModÃ¨les de los estudiantes. El 13 es un número primo, por lo que no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 13 como 10+3 es muy útil: multiplicar un número por 13 significa multiplicarlo por 10 y sumar el resultado de multiplicarlo por 3. El 13 es un número con significado especial en muchas culturas.",
       14: "Multiplicar por 14 es el doble de la tabla del 7. Como 14 = 2 × 7, si conoces la tabla del 7, puedes duplicar cada resultado para encontrar la tabla del 14. El 14 es importante en la planificación semanal (2 semanas = 14 días) y muestra propiedades de números pares.",
       15: "Multiplicar por 15 combina los múltiplos tanto del 3 como del 5. Como 15 = 3 × 5, esta tabla lleva las propiedades de ambos números. Todos los múltiplos del 15 son divisibles tanto por 3 como por 5. Como 15 minutos es un cuarto de hora, se usa mucho en cálculos de tiempo.",
       16: "Multiplicar por 16 es la cuarta potencia del 2 (2×2×2×2=16). Esto hace posible aprender la tabla del 16 mediante cadenas de duplicación. Puedes duplicar el 8 para obtener 16. En informática, el 16 es un número importante (sistema hexadecimal) y también aparece frecuentemente en la vida diaria.",
@@ -199,8 +199,8 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       30: "Multiplicar por 30 usa la relación 10×3. Para multiplicar un número por 30, puedes multiplicarlo por 10 y luego multiplicar el resultado por 3. 30 días es el número de días en muchos meses (abril, junio, septiembre, noviembre). El 30 también es media hora (30 minutos). La tabla del 30 se usa frecuentemente en cálculos de porcentaje (30% de descuento).",
       31: "Multiplicar por 31 requiere estrategias especiales debido a sus propiedades de número primo. El método más práctico es pensar en 31 como 30+1: multiplica un número por 30 y agrégale el número mismo. 31 días es el número máximo de días en muchos meses (enero, marzo, mayo, julio, agosto, octubre, diciembre). Aprender la tabla del 31 desarrolla habilidades de cálculo mental con números grandes.",
       32: "Multiplicar por 32 es la quinta potencia del 2 (2⁵=2×2×2×2×2=32). Esto hace posible aprender el 32 mediante cadenas de duplicación. Puedes duplicar el 16 para obtener 32. 32 grados Fahrenheit es el punto de congelación del agua. En informática, los sistemas de 32 bits son comunes. Las relaciones 32=4×8=2×16 ofrecen diferentes métodos de cálculo.",
-      33: "Multiplicar por 33 usa la relación 3×11. Si conoces la tabla del 11, puedes triplicarla, o si conoces la tabla del 3, puedes multiplicarla por 11 para encontrar la tabla del 33. El 33 es el número repdigit de dos dígitos más grande (repetición de los mismos dígitos). Que todos los dígitos del 33 sean iguales crea algunos patrones interesantes.",
-      34: "Multiplicar por 34 es el doble del 17 (34=2×17). Si conoces la tabla del 17, puedes duplicar cada resultado para encontrar la tabla del 34. La suma de los dígitos en 34 es 7 (3+4=7), lo que conduce a patrones relacionados con el 7. Pensar en 34 como 35-1 o 30+4 facilita los cálculos.",
+      33: "Multiplicar por 33 usa la relación 3×11. Si conoces la tabla del 11, puedes triplicarla, o si conoces la tabla del 3, puedes multiplicarla por 11 para encontrar la tabla del 33. El 33 es el número repdigit de dos dígitos más grande (repetición de los mismos dígitos). Que todos los dígitos del 33 sean iguales crea algunos ModÃ¨les interesantes.",
+      34: "Multiplicar por 34 es el doble del 17 (34=2×17). Si conoces la tabla del 17, puedes duplicar cada resultado para encontrar la tabla del 34. La suma de los dígitos en 34 es 7 (3+4=7), lo que conduce a ModÃ¨les relacionados con el 7. Pensar en 34 como 35-1 o 30+4 facilita los cálculos.",
       35: "Multiplicar por 35 usa la relación 5×7. Si ambas tablas son conocidas, multiplicar por 35 es bastante fácil. Todos los múltiplos del 35 terminan en 5 o 0 (como los múltiplos del 5). 35 minutos son 5 minutos más que media hora. La relación 35=5×7 combina las propiedades de ambas tablas del 5 y del 7.",
       36: "Multiplicar por 36 es una de las tablas más versátiles. Como 36=6×6=4×9=3×12=2×18, se puede calcular de muchas maneras diferentes. El 36 es el cuadrado de 6 (6²). El 36 son múltiplos de una docena completa (1 docena = 12, 3 docenas = 36). El 36 tiene muchos divisores, lo que lo hace muy útil en fracciones.",
       37: "Multiplicar por 37 requiere estrategias especiales debido a que es número primo. Pensar en 37 como 40-3 o 35+2 facilita los cálculos. El 37 tiene relaciones interesantes con números repdigit: 37×3=111. Esta propiedad especial del 37 se puede usar para algunos cálculos trucos.",
@@ -215,7 +215,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       46: "Multiplicar por 46 es el doble del 23 (46=2×23). Si conoces la tabla del 23, puedes duplicar cada resultado para encontrar la tabla del 46. Pensar en 46 como 45+1 o 50-4 facilita los cálculos. El 46 es el número total de cromosomas humanos (23 pares).",
       47: "Multiplicar por 47 requiere estrategias mentales debido a sus propiedades de número primo. Los métodos más efectivos son pensar en 47 como 50-3 o 45+2. El 47 es un número primo y tiene propiedades matemáticas especiales. Aprender la tabla del 47 desarrolla la habilidad de trabajar cómodamente con números complejos.",
       48: "Multiplicar por 48 tiene muchas relaciones de factores. Como 48=6×8=4×12=3×16=2×24, se puede calcular de múltiples maneras. Como el 48 es 4 veces 12, es útil en cálculos de docenas (4 docenas). 48 horas = 2 días, se encuentra frecuentemente en cálculos de tiempo.",
-      49: "Multiplicar por 49 es el cuadrado de 7 (49=7×7=7²). Esta relación especial requiere conocer perfectamente la tabla del 7. Pensar en 49 como 50-1 facilita muchísimo el cálculo mental. Como es un número cuadrado, el 49 es importante en geometría y cálculos de área. El 49 también es importante para patrones matemáticos, aunque no es un tablero de ajedrez 7×7.",
+      49: "Multiplicar por 49 es el cuadrado de 7 (49=7×7=7²). Esta relación especial requiere conocer perfectamente la tabla del 7. Pensar en 49 como 50-1 facilita muchísimo el cálculo mental. Como es un número cuadrado, el 49 es importante en geometría y cálculos de área. El 49 también es importante para ModÃ¨les matemáticos, aunque no es un tablero de ajedrez 7×7.",
       50: "Multiplicar por 50 usa la relación 5×10 y es una de las tablas más fáciles. Para multiplicar un número por 50, puedes multiplicarlo por 5 y agregar un cero al final. O pensar en ello como la mitad de 100. El 50 se usa frecuentemente: medio siglo, y en cálculos de porcentaje (50%=1/2).",
       51: "Multiplicar por 51 usa la estrategia 50+1. Para multiplicar un número por 51, multiplicálo por 50 y agrégale el número mismo. La relación 51=3×17 ofrece un método alternativo. Aprender la tabla del 51 desarrolla la habilidad de calcular con números cercanos a 50.",
       52: "Multiplicar por 52 usa la relación 4×13. Es el número de semanas en un año (52 semanas) y el número de cartas en una baraja estándar (52 cartas). Como 52=2×26, duplicar la tabla del 26 también funciona. Pensar en 52 como 50+2 facilita el cálculo mental. Esta tabla es muy útil en cálculos de tiempo y calendario.",
@@ -232,7 +232,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       63: "Multiplicar por 63 usa la relación 7×9. Como combina estas dos tablas importantes, refuerza ambas. La alternativa 63=3×21 ofrece una estrategia diferente. Pensar en 63 como 60+3 o 65-2 facilita el cálculo mental. El 63 es muy versátil porque es divisible tanto por 7 como por 9.",
       64: "Multiplicar por 64 es una potencia de 2 (64=2⁶=8×8). Como la arquitectura de 64 bits es común en informática, es importante en la era tecnológica. La relación 64=8² (ocho al cuadrado) es crítica para entender números cuadrados. Pensar en 64 como 60+4 o 65-1 facilita el cálculo. Hay 64 casillas en un tablero de ajedrez (8×8).",
       65: "Multiplicar por 65 usa la relación 5×13. Si ambas tablas son conocidas, multiplicar por 65 es fácil. El 65 se usa como edad de jubilación en muchos países. Pensar en 65 como 60+5 o 70-5 facilita el cálculo mental. El patrón del 5 (termina en 5 o 0) facilita el cálculo.",
-      66: "Multiplicar por 66 usa la relación 6×11 o la relación 2×33. Como 66=6×11, tiene patrones similares a repdigit. Pensar en 66 como 60+6 o 70-4 facilita el cálculo. El 66 es divisible tanto por 6 como por 11. Como es un número par, todos sus múltiplos también son pares.",
+      66: "Multiplicar por 66 usa la relación 6×11 o la relación 2×33. Como 66=6×11, tiene ModÃ¨les similares a repdigit. Pensar en 66 como 60+6 o 70-4 facilita el cálculo. El 66 es divisible tanto por 6 como por 11. Como es un número par, todos sus múltiplos también son pares.",
       67: "Multiplicar por 67 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 67 como 70-3 o 65+2. El 67 es un número primo y solo es divisible por 1 y 67. Aprender la tabla del 67 aumenta la capacidad de trabajar con números primos grandes.",
       68: "Multiplicar por 68 usa la relación 4×17 o la relación 2×34. Cuadruplicar la tabla del 17 o duplicar la tabla del 34 funciona. Pensar en 68 como 70-2 o 60+8 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 68 es divisible tanto por 4 como por 17.",
       69: "Multiplicar por 69 usa la relación 3×23. Triplicar la tabla del 23 o multiplicar la tabla del 3 por 23 funciona. La estrategia más fácil es pensar en 69 como 70-1: multiplica un número por 70 y réstale el número mismo. Como 69=3×23, es divisible tanto por 3 como por 23. Esta tabla es útil para cálculos cercanos a 70.",
@@ -275,15 +275,15 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
     const importance: { [key: number]: string } = {
       1: "La tabla del 1 es la base de todas las operaciones de multiplicación. Enseña a los estudiantes que los números tienen una identidad: al multiplicarse por 1, permanecen como ellos mismos. Este concepto es crucial para comprender propiedades algebraicas posteriores. Aunque parezca simple, aprender esta tabla genera confianza y establece el patrón de que la multiplicación es ordenada y predecible.",
       2: "La tabla del 2 es generalmente la primera tabla de multiplicación real que aprenden los estudiantes, y por una buena razón. Duplicar es un concepto natural que los niños encuentran diariamente. Aprender esta tabla hace el cálculo mental mucho más rápido y prepara a los estudiantes para números pares, fracciones (mitades) y división básica. Muchos estudiantes la encuentran la tabla más fácil, lo que genera confianza para tablas más difíciles.",
-      3: "La tabla del 3 cierra la brecha entre las tablas fáciles y desafiantes. Requiere que los estudiantes vayan más allá de la simple duplicación y comiencen a reconocer nuevos patrones. Esta tabla se ve constantemente en contextos del mundo real como contar de tres en tres, entender formas triangulares y trabajar con tiempo (tres periodos por día). Los estudiantes que aprenden la tabla del 3 demuestran que pueden hacer conteo abstracto.",
+      3: "La tabla del 3 cierra la brecha entre las tablas fáciles y desafiantes. Requiere que los estudiantes vayan más allá de la simple duplicación y comiencen a reconocer nuevos ModÃ¨les. Esta tabla se ve constantemente en contextos del mundo real como contar de tres en tres, entender formas triangulares y trabajar con tiempo (tres periodos por día). Los estudiantes que aprenden la tabla del 3 demuestran que pueden hacer conteo abstracto.",
       4: "Aprender la tabla del 4 refuerza la comprensión de números pares y pensamiento geométrico de los estudiantes. Como 4 es el doble de 2, los estudiantes pueden usar la tabla del 2 como escalera, lo que enseña eficiencia matemática. Esta tabla es necesaria para entender cuadrados, cálculos de área y divisiones por cuartos. También se usa frecuentemente en situaciones cotidianas como contar patas de sillas o ruedas de autos.",
-      5: "La tabla del 5 es una de las más prácticas y ricas en patrones. Los estudiantes la aman porque cada respuesta termina en 0 o 5, haciéndola extremadamente predecible. Esta tabla se conecta directamente con el dinero (contar de cinco en cinco), decir la hora (intervalos de 5 minutos) y sistemas de medición. Aprender la tabla del 5 da confianza a los estudiantes y muestra que las matemáticas tienen patrones hermosos y consistentes.",
-      6: "Aprender la tabla del 6 permite a los estudiantes transicionar a multiplicaciones más complejas. Que 6 sea múltiplo tanto de 2 como de 3 muestra a los estudiantes la propiedad distributiva de la multiplicación. Esta tabla se ve constantemente en la vida diaria: contar cartones de huevos, juegos de dados, paquetes de seis. Aprender la tabla del 6 da a los estudiantes confianza para trabajar con números más grandes.",
-      7: "La tabla del 7 realmente pone a prueba las habilidades de memorización y reconocimiento de patrones de los estudiantes. Como 7 es un número primo, no se puede derivar fácilmente de otras tablas, haciéndola una experiencia de aprendizaje desafiante pero gratificante. Aprender la tabla del 7 da a los estudiantes la oportunidad de superar desafíos y desarrollar nuevas estrategias. Se usa en muchos lugares, desde contar los días de la semana hasta cálculos de calendario.",
+      5: "La tabla del 5 es una de las más prácticas y ricas en ModÃ¨les. Los estudiantes la aman porque cada respuesta termina en 0 o 5, haciéndola extremadamente predecible. Esta tabla se conecta directamente con el dinero (contar de cinco en cinco), decir la hora (intervalos de 5 minutos) y sistemas de medición. Aprender la tabla del 5 da confianza a los estudiantes y muestra que las matemáticas tienen ModÃ¨les hermosos y consistentes.",
+      6: "Aprender la tabla del 6 permite a los estudiantes transicionar a multiplicaciones más complejas. Que 6 sea múltiplo tanto de 2 como de 3 muestra a los estudiantes la propiedad distributiva de la multiplicación. Esta tabla se ve constantemente en la vida diaria: contar cartones de huevos, Jeux de dados, paquetes de seis. Aprender la tabla del 6 da a los estudiantes confianza para trabajar con números más grandes.",
+      7: "La tabla del 7 realmente pone a prueba las habilidades de memorización y reconocimiento de ModÃ¨les de los estudiantes. Como 7 es un número primo, no se puede derivar fácilmente de otras tablas, haciéndola una experiencia de aprendizaje desafiante pero gratificante. Aprender la tabla del 7 da a los estudiantes la oportunidad de superar desafíos y desarrollar nuevas estrategias. Se usa en muchos lugares, desde contar los días de la semana hasta cálculos de calendario.",
       8: "Aprender la tabla del 8 ayuda a los estudiantes a reforzar estrategias de duplicación. Como 8 = 2 × 2 × 2, los estudiantes pueden aprender la tabla del 8 usando las tablas del 2 y 4. Esta tabla es importante en cálculos de área (figuras de 8 lados), teoría musical (octavas) y ciencias de la computación (8 bits = 1 byte). Aprender la tabla del 8 desarrolla habilidades de pensamiento matemático.",
-      9: "La tabla del 9 tiene uno de los patrones matemáticos más fascinantes. La regla de suma de dígitos y el truco de los dedos muestran a los estudiantes el lado mágico de las matemáticas. Aprender la tabla del 9 no es solo memorización, enseña reconocimiento de patrones y comprensión de relaciones matemáticas. Esta tabla es perfecta para desarrollar habilidades de cálculo mental y construir confianza matemática.",
+      9: "La tabla del 9 tiene uno de los ModÃ¨les matemáticos más fascinantes. La regla de suma de dígitos y el truco de los dedos muestran a los estudiantes el lado mágico de las matemáticas. Aprender la tabla del 9 no es solo memorización, enseña reconocimiento de ModÃ¨les y comprensión de relaciones matemáticas. Esta tabla es perfecta para desarrollar habilidades de cálculo mental y construir confianza matemática.",
       10: "La tabla del 10 es fundamental para enseñar el concepto de valor posicional. Cuando los estudiantes aprenden a multiplicar por 10, comienzan a entender cómo funciona nuestro sistema decimal. Esta tabla es vital para cálculos de dinero, conversiones entre unidades de medida y trabajo con números grandes. Aprender la tabla del 10 crea una base sólida para entender todas las demás tablas de multiplicación y mejora enormemente las habilidades de matemática mental.",
-      11: "La tabla del 11 es perfecta para desarrollar habilidades de reconocimiento de patrones. El patrón de repetición que surge al multiplicar con números de un dígito (11×4=44) muestra a los estudiantes la belleza de las matemáticas. Aprender la tabla del 11 desarrolla estrategias de cálculo mental y aumenta la capacidad de reconocer patrones numéricos. Esta tabla genera confianza para trabajar con números grandes.",
+      11: "La tabla del 11 es perfecta para desarrollar habilidades de reconocimiento de ModÃ¨les. El patrón de repetición que surge al multiplicar con números de un dígito (11×4=44) muestra a los estudiantes la belleza de las matemáticas. Aprender la tabla del 11 desarrolla estrategias de cálculo mental y aumenta la capacidad de reconocer ModÃ¨les numéricos. Esta tabla genera confianza para trabajar con números grandes.",
       12: "La tabla del 12 es una de las más utilizadas en la vida diaria. El 12 se usa en muchas áreas como contar docenas, leer el reloj y planificación anual. Que el 12 tenga muchos divisores (1,2,3,4,6,12) lo hace ideal para entender fracciones y proporciones. Aprender esta tabla mejora significativamente las habilidades matemáticas prácticas.",
       13: "La tabla del 13 desarrolla la resiliencia matemática de los estudiantes. Por ser un número primo, no hay atajos fáciles, lo que requiere verdadera comprensión. Aprender la tabla del 13 fortalece las habilidades aritméticas mentales y enseña a pensar en los números de diferentes maneras (estrategia de descomposición 10+3).",
       14: "La tabla del 14 ayuda a reforzar la tabla del 7. La relación 14=2×7 muestra a los estudiantes la propiedad distributiva de la multiplicación. Es necesaria para calcular periodos semanales y quincenales. Esta tabla profundiza la comprensión de las propiedades de números pares y estrategias de duplicación.",
@@ -291,7 +291,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       16: "La tabla del 16 es perfecta para entender sistemas binarios y números exponenciales. La relación 2⁴=16 muestra el poder de los exponentes. Tiene importancia crítica en ciencias de la computación (16 bits, sistema hexadecimal). Esta tabla desarrolla la comprensión de estrategias de múltiple duplicación y secuencias geométricas.",
       17: "La tabla del 17 es una herramienta excelente para desarrollar estrategias de matemática mental. Ser un número primo obliga a los estudiantes a encontrar métodos creativos de cálculo (estrategias 20-3 o 10+7). Esta tabla desarrolla habilidades de resolución de problemas y flexibilidad con los números.",
       18: "La tabla del 18 muestra la riqueza de las relaciones matemáticas. Que 18=2×9=3×6 enseña a entender diferentes combinaciones de factores. Tiene importancia cultural como edad de mayoría de edad. Esta tabla enseña a abordar un problema con múltiples estrategias y elegir el método más eficiente.",
-      19: "La tabla del 19 maximiza las habilidades de cálculo mental. La estrategia '20-1' enseña a los estudiantes a usar números complementarios. Ser un número primo enfatiza la comprensión real más que el reconocimiento de patrones. Esta tabla desarrolla la habilidad de dividir cálculos complejos en pasos simples.",
+      19: "La tabla del 19 maximiza las habilidades de cálculo mental. La estrategia '20-1' enseña a los estudiantes a usar números complementarios. Ser un número primo enfatiza la comprensión real más que el reconocimiento de ModÃ¨les. Esta tabla desarrolla la habilidad de dividir cálculos complejos en pasos simples.",
       20: "La tabla del 20 es crítica para reforzar el sistema de valor posicional y trabajar cómodamente con números grandes. La relación 20=2×10 profundiza la comprensión del sistema decimal. Se usa constantemente en cálculos de dinero (billetes de 20) y mediciones. Esta tabla forma la base para cálculos de porcentaje (descuento del 20%).",
       21: "La tabla del 21 es perfecta para entender la relación de factorización 3×7. Esta tabla muestra a los estudiantes que un número puede tener más de un factor. El 21 tiene importancia social como edad para transacciones legales y mayoría de edad. Aprender esta tabla profundiza la comprensión de las relaciones entre factores y múltiplos.",
       22: "La tabla del 22 ayuda a reforzar la tabla del 11. La relación 22=2×11 fortalece las estrategias de duplicación. Se usa en deportes (equipo de fútbol) y conteo diario. Esta tabla desarrolla la comprensión de propiedades de números pares y relaciones matemáticas.",
@@ -305,11 +305,11 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       30: "La tabla del 30 es el puente entre el sistema decimal y la multiplicación. La relación 30=3×10 fortalece la comprensión del valor posicional. Se usa constantemente en tiempo (media hora), calendario (días del mes) y medidas de ángulo (30°). Esta tabla forma la base de cálculos de porcentaje (descuento del 30%) y matemática práctica.",
       31: "Multiplicar por 31 es crítico para el conocimiento del calendario. Como la mayoría de los meses tienen 31 días, se usa constantemente en cálculos de fecha y tiempo. Como 31 es un número primo, es perfecto para desarrollar estrategias de cálculo mental. La estrategia 30+1 enseña a usar números complementarios y proporciona competencia en cálculos de números grandes.",
       32: "Multiplicar por 32 es importante para entender números exponenciales (2⁵) y sistemas binarios. Como la arquitectura de 32 bits es común en ciencias de la computación, tiene importancia práctica en la era de la tecnología. Es perfecto para perfeccionar cadenas de duplicación. Se usa en conversiones de temperatura (Fahrenheit).",
-      33: "Multiplicar por 33 fortalece las relaciones matemáticas combinando las tablas del 3 y 11. La propiedad repdigit (33, 66, 99...) facilita el reconocimiento de patrones. La relación 33=3×11 profundiza la comprensión de las conexiones entre factores y múltiplos. Esta tabla enseña estrategias de multiplicación múltiple.",
+      33: "Multiplicar por 33 fortalece las relaciones matemáticas combinando las tablas del 3 y 11. La propiedad repdigit (33, 66, 99...) facilita el reconocimiento de ModÃ¨les. La relación 33=3×11 profundiza la comprensión de las conexiones entre factores y múltiplos. Esta tabla enseña estrategias de multiplicación múltiple.",
       34: "Multiplicar por 34 ayuda a reforzar la tabla del 17. La relación 34=2×17 muestra la conexión entre números primos y pares. Esta tabla desarrolla flexibilidad mental y métodos de cálculo alternativos (35-1, 30+4). Refuerza propiedades de números pares y habilidades de duplicación.",
-      35: "Multiplicar por 35 desarrolla habilidades de factorización como combinación de las tablas del 5 y 7. La relación 5×7 refuerza ambas tablas. Se usa en cálculos de tiempo (35 minutos) y matemática cotidiana. Esta tabla crea patrones reconocibles con el patrón del 5 (último dígito 5 o 0).",
+      35: "Multiplicar por 35 desarrolla habilidades de factorización como combinación de las tablas del 5 y 7. La relación 5×7 refuerza ambas tablas. Se usa en cálculos de tiempo (35 minutos) y matemática cotidiana. Esta tabla crea ModÃ¨les reconocibles con el patrón del 5 (último dígito 5 o 0).",
       36: "Multiplicar por 36 es una de las tablas más útiles. Que 36=6² es crítico para entender números cuadrados. Tener muchos divisores (1,2,3,4,6,9,12,18,36) lo hace ideal para fracciones y proporciones. Se usa frecuentemente en el sistema de docenas (3 docenas) y medidas de ángulos (un décimo de 360°).",
-      37: "Multiplicar por 37 perfecciona propiedades de números primos y estrategias de matemática mental. Relaciones especiales como 37×3=111 proporcionan comprensión profunda de patrones numéricos. Estrategias como 40-3 o 35+2 desarrollan habilidades creativas de resolución de problemas. Esta tabla fomenta la curiosidad matemática y el espíritu de descubrimiento.",
+      37: "Multiplicar por 37 perfecciona propiedades de números primos y estrategias de matemática mental. Relaciones especiales como 37×3=111 proporcionan comprensión profunda de ModÃ¨les numéricos. Estrategias como 40-3 o 35+2 desarrollan habilidades creativas de resolución de problemas. Esta tabla fomenta la curiosidad matemática y el espíritu de descubrimiento.",
       38: "Multiplicar por 38 ayuda a reforzar la tabla del 19. La relación 38=2×19 combina estrategias de duplicación y números primos. El enfoque 40-2 enseña a usar números complementarios. Tiene importancia práctica en contexto de salud (temperatura corporal).",
       39: "Multiplicar por 39 fortalece las conexiones matemáticas combinando las tablas del 3 y 13. La estrategia 40-1 enseña a calcular rápidamente usando números redondos. Esta tabla desarrolla habilidades de factorización múltiple (3×13) y proporciona flexibilidad mental.",
       40: "La tabla del 40 es perfecta para comprender profundamente el sistema decimal. La relación 40=4×10 muestra la conexión entre valor posicional y multiplicación. Se usa mucho en la vida diaria debido a horas de trabajo (semana de 40 horas) y normas sociales (40 años). Esta tabla forma una base para números grandes y cálculos de porcentaje.",
@@ -323,11 +323,11 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       48: "La tabla del 48 es una de las más versátiles. Tener muchos divisores (1,2,3,4,6,8,12,16,24,48) lo hace ideal para fracciones y proporciones. Se usa en el sistema de docenas (4 docenas) y cálculos de tiempo (48 horas=2 días). Las relaciones de factores múltiples profundizan la comprensión de conexiones matemáticas.",
       49: "La tabla del 49 es crítica para entender números cuadrados (7²). Requiere conocer perfectamente la tabla del 7 y la refuerza. La estrategia 50-1 enseña cálculo rápido usando números redondos. Es importante en geometría y cálculos de área debido a propiedades cuadradas.",
       50: "La tabla del 50 forma la base de cálculos de porcentaje (50%=1/2). La relación 5×10 combina el sistema decimal y la multiplicación. Está directamente conectada con el concepto de mitad (½). Se usa constantemente en sistemas monetarios (50 centavos, 50 pesos), mediciones de tiempo y matemática cotidiana. Esta tabla mejora significativamente las habilidades de cálculo práctico.",
-      51: "La tabla del 51 desarrolla la habilidad de trabajar con números cercanos a 50. La estrategia 50+1 refuerza el uso de números complementarios. La relación 3×17 fortalece las habilidades de factorización. Tiene importancia práctica en el contexto de juegos de cartas (52 cartas). Esta tabla enseña a calcular con pequeñas desviaciones de números redondos.",
+      51: "La tabla del 51 desarrolla la habilidad de trabajar con números cercanos a 50. La estrategia 50+1 refuerza el uso de números complementarios. La relación 3×17 fortalece las habilidades de factorización. Tiene importancia práctica en el contexto de Jeux de cartas (52 cartas). Esta tabla enseña a calcular con pequeñas desviaciones de números redondos.",
       52: "La tabla del 52 es crítica para cálculos de tiempo y calendario. Debido al número de semanas en un año (52 semanas), se usa constantemente en planificación y cálculos anuales. La relación 4×13 refuerza tanto la tabla del 4 como la del 13. La baraja de cartas (52 cartas) proporciona contexto al pensamiento matemático. Esta tabla es muy importante para matemática de vida práctica.",
       53: "La tabla del 53 lleva las estrategias de números primos a un nivel avanzado. El enfoque 50+3 desarrolla flexibilidad mental y métodos alternativos de cálculo. Debido a propiedades primas, requiere resolución creativa de problemas. Esta tabla aumenta la habilidad de trabajar con números primos grandes y expande la profundidad del pensamiento matemático.",
       54: "La tabla del 54 perfecciona las habilidades de factorización múltiple. Las relaciones 54=6×9=2×27=3×18 enseñan a ver conexiones matemáticas. Como combina las tablas del 6 y 9, fortalece ambas. Tener muchos divisores (1,2,3,6,9,18,27,54) lo hace ideal para fracciones y proporciones. Esta tabla fomenta el pensamiento matemático flexible.",
-      55: "La tabla del 55 refuerza las relaciones matemáticas combinando las tablas del 5 y 11. La propiedad de número triangular (1+2+...+10=55) profundiza la comprensión de patrones matemáticos. La relación 5×11 fortalece ambas tablas. Esta tabla forma una base para patrones numéricos y fórmulas de suma.",
+      55: "La tabla del 55 refuerza las relaciones matemáticas combinando las tablas del 5 y 11. La propiedad de número triangular (1+2+...+10=55) profundiza la comprensión de ModÃ¨les matemáticos. La relación 5×11 fortalece ambas tablas. Esta tabla forma una base para ModÃ¨les numéricos y fórmulas de suma.",
       56: "La tabla del 56 refuerza tanto la tabla del 7 como la del 8. 7×8=56 es uno de los pares de multiplicación más difíciles y aprender esta tabla lo fortalece. Las alternativas 4×14=2×28 enseñan a usar múltiples estrategias. Tiene importancia práctica en cálculos laborales (semana de 7 días × día de 8 horas). Esta tabla proporciona dominio de multiplicaciones difíciles.",
       57: "La tabla del 57 fortalece las conexiones matemáticas combinando las tablas del 3 y 19. La estrategia 60-3 perfecciona la habilidad de restar de números redondos. La relación 3×19 combina estrategias de números primos y no primos. Esta tabla desarrolla el cálculo mental con números grandes de nivel medio.",
       58: "La tabla del 58 ayuda a reforzar la tabla del 29. La relación 58=2×29 combina estrategias de duplicación y números primos. El enfoque 60-2 enseña la estrategia de aproximarse a números redondos. Esta tabla forma una base para propiedades de números pares y cálculos cercanos a 60.",
@@ -353,7 +353,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       78: "La tabla del 78 desarrolla habilidades de factorización múltiple. Las relaciones 78=2×39=3×26=6×13 proporcionan flexibilidad matemática. El enfoque 80-2 enseña la estrategia de restar de números redondos. Tener muchos divisores ofrece varios métodos de cálculo. Esta tabla perfecciona el uso de múltiples estrategias.",
       79: "La tabla del 79 maximiza las estrategias de números primos. El enfoque 80-1 perfecciona el cálculo rápido usando números redondos. Debido a propiedades primas, requiere flexibilidad mental y métodos de solución creativos. Esta tabla proporciona competencia en cálculos cercanos a 80 y desarrolla habilidades matemáticas avanzadas.",
       80: "La tabla del 80 es perfecta para reforzar la tabla del 8. La relación 8×10 combina el sistema decimal y la tabla del 8. Las alternativas 2×40=4×20=5×16 enseñan a usar múltiples estrategias. Tiene importancia social en el contexto de esperanza de vida (límite superior 80 años). Esta tabla mejora significativamente el cálculo práctico y la habilidad de trabajar con números grandes.",
-      81: "Multiplicar por 81 usa la relación 81=9² (nueve al cuadrado) o 81=3⁴ (tres a la cuarta potencia). Como 81 es un cuadrado perfecto, todos sus múltiplos con cuadrados perfectos forman números cuadrados también. Pensar en 81 como 80+1 o 9×9 facilita el cálculo. El 81 es divisible tanto por 9 como por 27 (27=3³). Los múltiplos de 81 se dividen uniformemente por 9. El 81 es la suma de los números impares del 1 al 9 (1+3+5+7+9+11+13+15+17=81). Esta tabla desarrolla la comprensión de patrones matemáticos.",
+      81: "Multiplicar por 81 usa la relación 81=9² (nueve al cuadrado) o 81=3⁴ (tres a la cuarta potencia). Como 81 es un cuadrado perfecto, todos sus múltiplos con cuadrados perfectos forman números cuadrados también. Pensar en 81 como 80+1 o 9×9 facilita el cálculo. El 81 es divisible tanto por 9 como por 27 (27=3³). Los múltiplos de 81 se dividen uniformemente por 9. El 81 es la suma de los números impares del 1 al 9 (1+3+5+7+9+11+13+15+17=81). Esta tabla desarrolla la comprensión de ModÃ¨les matemáticos.",
       82: "Multiplicar por 82 usa la relación 2×41. Si conoces la tabla del 41, puedes duplicar cada resultado para encontrar la tabla del 82. Pensar en 82 como 80+2 o 85-3 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 82 es divisible tanto por 2 como por 41. Esta tabla establece una base para cálculos después de 80.",
       83: "Multiplicar por 83 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 83 como 80+3 o 85-2. El 83 es un número primo y solo es divisible por 1 y 83. Aprender la tabla del 83 desarrolla la habilidad de calcular rápidamente con números primos grandes.",
       84: "Multiplicar por 84 es una de las tablas más versátiles. Como 84=12×7=6×14=4×21=3×28=2×42, se puede calcular de muchas maneras diferentes. El 84 es 7 veces 12 (7 docenas). Tener muchos divisores (1,2,3,4,6,7,12,14,21,28,42,84) lo hace extremadamente útil en cálculos de fracciones. El 84 es útil en cálculos de tiempo (84 horas=1 semana+1/2 día). Esta tabla perfecciona el uso de múltiples estrategias.",
@@ -371,7 +371,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       96: "Multiplicar por 96 usa las relaciones 32×3=16×6=12×8=4×24=2×48. Se puede calcular de muchas maneras diferentes. Pensar en 96 como 100-4 o 90+6 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 96 tiene muchos divisores (1,2,3,4,6,8,12,16,24,32,48,96), lo que lo hace útil en cálculos de fracciones. Muestra la relación entre potencias de 2 y 3 (2⁵×3). Esta tabla es perfecta para flexibilidad matemática y teoría de números.",
       97: "Multiplicar por 97 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. La estrategia más fácil es pensar en 97 como 100-3: multiplica un número por 100 y réstale tres veces el número mismo. El 97 es un número primo y solo es divisible por 1 y 97. Aprender la tabla del 97 facilita cálculos cercanos a 100. Ser el primo más cercano a 100 facilita extremadamente el cálculo mental. Ser primo es importante para teoría de números y criptografía.",
       98: "Multiplicar por 98 usa las relaciones 2×49=7×14. Se puede calcular de múltiples maneras. La estrategia más fácil es pensar en 98 como 100-2: multiplica un número por 100 y réstale dos veces el número mismo. Como es un número par, todos sus múltiplos también son pares. El 98 es divisible tanto por 2 como por 7 y 49. La relación 98=2×49=2×7² combina números cuadrados y estrategias de duplicación. Esta tabla proporciona dominio en cálculos cercanos a 100.",
-      99: "Multiplicar por 99 usa la relación 9×11. La estrategia más fácil es pensar en 99 como 100-1: multiplica un número por 100 y réstale el número mismo. El 99 muestra un patrón similar a repdigit (repetición de 9s). Como 99=9×11, es divisible tanto por 9 como por 11. Esta tabla es extremadamente útil para cálculos cercanos a 100. La estrategia 100-1 es PERFECTA para matemática mental. La propiedad repdigit (99) profundiza la comprensión de patrones. Esta tabla es extremadamente importante para habilidades de cálculo práctico.",
+      99: "Multiplicar por 99 usa la relación 9×11. La estrategia más fácil es pensar en 99 como 100-1: multiplica un número por 100 y réstale el número mismo. El 99 muestra un patrón similar a repdigit (repetición de 9s). Como 99=9×11, es divisible tanto por 9 como por 11. Esta tabla es extremadamente útil para cálculos cercanos a 100. La estrategia 100-1 es PERFECTA para matemática mental. La propiedad repdigit (99) profundiza la comprensión de ModÃ¨les. Esta tabla es extremadamente importante para habilidades de cálculo práctico.",
       100: "La tabla del 100 es la base del sistema decimal. Proporciona una comprensión perfecta del concepto de valor posicional. Forma la base de cálculos de porcentaje (100%=completo) y el sistema decimal. Tiene importancia crítica para unidades monetarias, unidades de medida y matemática cotidiana. ¡ES UNA DE LAS TABLAS MÁS ÚTILES E IMPORTANTES!",
     }
     return importance[number] || `Aprender la tabla del ${number} ayuda a los estudiantes a desarrollar fluidez con este número importante. Se ve frecuentemente en matemáticas y la vida cotidiana, haciéndolo necesario para construir sólidas habilidades de cálculo.`
@@ -462,7 +462,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       17: [
         { title: "Estrategia 20-3", description: "Piensa en 17=20-3. 17×6 = (20×6) - (3×6) = 120 - 18 = 102." },
         { title: "Descomposición 10+7", description: "17×n = (10×n) + (7×n). Ejemplo: 17×4 = 40 + 28 = 68." },
-        { title: "Singularidad de Número Primo", description: "17 es primo, por lo que solo tiene patrones únicos. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Singularidad de Número Primo", description: "17 es primo, por lo que solo tiene ModÃ¨les únicos. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
       18: [
         { title: "Doble del 9", description: "Como 18=2×9, duplica la tabla del 9: 9×5=45, entonces 18×5=90." },
@@ -472,7 +472,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       19: [
         { title: "Estrategia 20-1", description: "Piensa en 19=20-1. 19×6 = (20×6) - 6 = 120 - 6 = 114. ¡Método muy práctico!" },
         { title: "Descomposición 10+9", description: "19×n = (10×n) + (9×n). Ejemplo: 19×3 = 30 + 27 = 57." },
-        { title: "Patrón de Número Primo", description: "Como 19 es primo tiene patrones especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente)." },
+        { title: "Patrón de Número Primo", description: "Como 19 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente)." },
       ],
       20: [
         { title: "Agrega Cero y Duplica", description: "20=10×2. Para multiplicar por 20: 7×10=70, luego 70×2=140. (No es 7×20: 70×2=140 directamente)." },
@@ -562,7 +562,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       37: [
         { title: "Estrategia 40-3", description: "37=40-3. 37×n = (40×n) - (3×n). Ejemplo: 37×6 = 240 - 18 = 222." },
         { title: "Relación Mágica con 111", description: "37×3=111. Esta relación especial: 37×6=222, 37×9=333. ¡En cada múltiplo de 3 hay resultado repdigit!" },
-        { title: "Singularidad de Número Primo", description: "Como 37 es primo tiene patrones especiales. Las estrategias 35+2 o 40-3 son útiles." },
+        { title: "Singularidad de Número Primo", description: "Como 37 es primo tiene ModÃ¨les especiales. Las estrategias 35+2 o 40-3 son útiles." },
       ],
       38: [
         { title: "Doble del 19", description: "38=2×19. Duplica la tabla del 19: 19×7=133, entonces 38×7=266." },
@@ -612,7 +612,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       47: [
         { title: "Estrategia 50-3", description: "47=50-3. 47×n = (50×n) - (3×n). Ejemplo: 47×6 = 300 - 18 = 282. ¡El más efectivo!" },
         { title: "Alternativa 45+2", description: "47=45+2. Ejemplo: 47×8 = 360 + 16 = 376. Útil si conoces la tabla del 45." },
-        { title: "Singularidad de Número Primo", description: "Como 47 es primo tiene patrones especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Singularidad de Número Primo", description: "Como 47 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
       48: [
         { title: "Relaciones de Múltiples Factores", description: "48=6×8=4×12=3×16=2×24. Puede calcularse de muchas formas: 48×5 = 12×20 = 240." },
@@ -671,7 +671,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
       59: [
         { title: "Estrategia 60-1", description: "59=60-1. 59×n = (60×n) - n. Ejemplo: 59×7 = 420 - 7 = 413. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 59 es primo tiene patrones especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Singularidad de Número Primo", description: "Como 59 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "Alternativa 55+4", description: "59=55+4. Ejemplo: 59×8 = 440 + 32 = 472. Útil si conoces la tabla del 55." },
       ],
       60: [
@@ -771,7 +771,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
       79: [
         { title: "Estrategia 80-1", description: "79=80-1. 79×n = (80×n) - n. Ejemplo: 79×7 = 560 - 7 = 553. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 79 es primo tiene patrones especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Singularidad de Número Primo", description: "Como 79 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "Alternativa 75+4", description: "79=75+4. Ejemplo: 79×8 = 600 + 32 = 632. Útil si conoces la tabla del 75." },
       ],
       80: [
@@ -821,7 +821,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
       89: [
         { title: "Estrategia 90-1", description: "89=90-1. 89×n = (90×n) - n. Ejemplo: 89×7 = 630 - 7 = 623. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 89 es primo tiene patrones especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Singularidad de Número Primo", description: "Como 89 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "Alternativa 85+4", description: "89=85+4. Ejemplo: 89×8 = 680 + 32 = 712. Útil si conoces la tabla del 85." },
       ],
       90: [
@@ -861,7 +861,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
       97: [
         { title: "Estrategia 100-3", description: "97=100-3. 97×n = (100×n) - (3×n). Ejemplo: 97×7 = 700 - 21 = 679. ¡PERFECTO!" },
-        { title: "Patrones de Número Primo", description: "Como 97 es primo tiene patrones especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "ModÃ¨les de Número Primo", description: "Como 97 es primo tiene ModÃ¨les especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
         { title: "Primo Más Cercano a 100", description: "El mayor número primo menor que 100. Esta propiedad facilita mucho el cálculo." },
       ],
       98: [
@@ -1423,7 +1423,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         "Ejemplo: 19×7 = 140-7 = 133. ¡Muy simple y efectivo!",
         "Descomposición 10+9: 19×4 = 40+36 = 76",
         "Practica los múltiplos más difíciles: 19×7=133, 19×8=152, 19×9=171",
-        "Aprende la tabla del 19 hacia atrás: 190, 171, 152, 133... para flexibilidad mental",
+        "Apprenez la tabla del 19 hacia atrás: 190, 171, 152, 133... para flexibilidad mental",
       ],
       20: [
         "Lo más fácil: Multiplica por 10, luego duplica",
@@ -1654,7 +1654,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         "Ejemplo: 13×7=91, ×4=364, entonces 52×7=364",
         "Cuenta de cincuenta y dos en cincuenta y dos: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
         "Calendario: 52 semanas = 1 año. Para cálculos anuales",
-        "Cartas: 52 cartas para juegos y problemas de probabilidad",
+        "Cartas: 52 cartas para Jeux y problemas de probabilidad",
       ],
       53: [
         "Estrategia 50+3: 53×n = 50n + 3n",
@@ -2064,7 +2064,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-indigo-100">
                 <div className="text-2xl sm:text-3xl mb-1">🎮</div>
                 <div className="text-xl sm:text-2xl font-bold text-indigo-600">3</div>
-                <div className="text-xs text-slate-600">Juegos</div>
+                <div className="text-xs text-slate-600">Jeux</div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-purple-100">
                 <div className="text-2xl sm:text-3xl mb-1">📝</div>
@@ -2077,9 +2077,9 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           {/* Description with Better Typography */}
           <div className="max-w-3xl mx-auto space-y-4 text-center px-4">
             <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-              Esta página te ayudará a aprender y entender <span className="font-semibold text-yellow-200">la tabla de multiplicar del {number}</span>. 
+              Esta página te ayudará a aprender y entender <span className="font-semibold text-yellow-200">la Table de Multiplication de {number}</span>. 
               Descubrirás cómo se comporta el {number} en la multiplicación, 
-              <span className="font-semibold text-yellow-200"> verás sus patrones</span> y 
+              <span className="font-semibold text-yellow-200"> verás sus ModÃ¨les</span> y 
               aprenderás <span className="font-semibold text-yellow-200">formas prácticas</span> para dominarla.
             </p>
             
@@ -2100,7 +2100,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-purple-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-white/50 text-sm sm:text-base"
               >
                 <span className="text-lg sm:text-xl">🎮</span>
-                <span>Explorar Juegos</span>
+                <span>Explorar Jeux</span>
               </a>
               <a 
                 href="#worksheets"
@@ -2127,7 +2127,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           </div>
           
           <p className="text-sm sm:text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
-            La tabla de multiplicar del {number} cubre el producto del número {number} con todos los números del 1 al 10. 
+            La Table de Multiplication de {number} cubre el producto del número {number} con todos los números del 1 al 10. 
             Esto te enseña <span className="font-bold text-indigo-600">10 operaciones fundamentales</span> que te ayudarán mucho en la vida diaria y en temas matemáticos avanzados.
           </p>
           
@@ -2147,7 +2147,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               <span className="text-2xl sm:text-3xl">💡</span>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
                 La tabla del {number} tiene <span className="font-bold text-indigo-600">10 operaciones de multiplicación</span>. 
-                ¡Al entender los patrones de esta tabla, puedes memorizar fácilmente estas operaciones y calcularlas rápidamente!
+                ¡Al entender los ModÃ¨les de esta tabla, puedes memorizar fácilmente estas operaciones y calcularlas rápidamente!
               </p>
             </div>
           </div>
@@ -2246,12 +2246,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white py-8 sm:py-12">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
-            Patrones en la Tabla del {number}
+            ModÃ¨les en la Tabla del {number}
           </h2>
           
           <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 leading-relaxed">
-            Entender los patrones hace que el aprendizaje sea más fácil y divertido. La tabla del {number} tiene 
-            hermosos patrones que pueden ayudarte a recordarla sin memorizar de memoria.
+            Entender los ModÃ¨les hace que el aprendizaje sea más fácil y divertido. La tabla del {number} tiene 
+            hermosos ModÃ¨les que pueden ayudarte a recordarla sin memorizar de memoria.
           </p>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
@@ -2406,7 +2406,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                     Tablas del {rangeStart} al {rangeEnd}
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 sm:mt-2">
-                    Explora todas las tablas de multiplicar en este rango con herramientas de práctica y juegos
+                    Explora todas las tablas de multiplicar en este rango con herramientas de práctica y Jeux
                   </p>
                 </div>
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
