@@ -12,6 +12,8 @@ import RangePageUk from '@/app/components/uk/RangePage'
 import NumberPageUk from '@/app/components/uk/NumberPage'
 import RangePageFi from '@/app/components/fi/RangePage'
 import NumberPageFi from '@/app/components/fi/NumberPage'
+import RangePageFr from '@/app/components/fr/RangePage'
+import NumberPageFr from '@/app/components/fr/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -20,6 +22,7 @@ import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from 
 import { numberTitlesCs, numberDescriptionsCs, numberSpecialPropertiesCs } from '@/lib/number-metadata-cs'
 import { numberTitlesUk, numberDescriptionsUk, numberSpecialPropertiesUk } from '@/lib/number-metadata-uk'
 import { numberTitlesFi, numberDescriptionsFi, numberSpecialPropertiesFi } from '@/lib/number-metadata-fi'
+import { numberTitlesFr, numberDescriptionsFr, numberSpecialPropertiesFr } from '@/lib/number-metadata-fr'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -50,6 +53,11 @@ import ForParentsUk from '@/app/dlya-batkiv/page'
 import ForStudentsFi from '@/app/oppilaille/page'
 import ForTeachersFi from '@/app/opettajille/page'
 import ForParentsFi from '@/app/vanhemmille/page'
+
+// Import French guide page components
+import ForStudentsFr from '@/app/pour-les-eleves/page'
+import ForTeachersFr from '@/app/pour-les-enseignants/page'
+import ForParentsFr from '@/app/pour-les-parents/page'
 
 interface PageProps {
   params: {
@@ -721,6 +729,7 @@ export async function generateStaticParams() {
     { lang: 'de', topic: 'einmaleins' },
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
     { lang: 'fi', topic: 'kertotaulut' },
+    { lang: 'fr', topic: 'table-de-multiplication' },
   ]
 
   langs.forEach(({ lang, topic }) => {
@@ -749,7 +758,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 

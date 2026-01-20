@@ -60,6 +60,16 @@ import GamesSectionFi from '@/app/components/fi/GamesSection'
 import PrintableExercisesFi from '@/app/components/fi/PrintableExercises'
 import AudienceSectionFi from '@/app/components/fi/AudienceSection'
 import FooterFi from '@/app/components/fi/Footer'
+import HeroFr from '@/app/components/fr/Hero'
+import DefinitionSectionFr from '@/app/components/fr/DefinitionSection'
+import WhyItMattersFr from '@/app/components/fr/WhyItMatters'
+import HowToLearnFr from '@/app/components/fr/HowToLearn'
+import LearningPathsFr from '@/app/components/fr/LearningPaths'
+import PracticePreviewFr from '@/app/components/fr/PracticePreview'
+import GamesSectionFr from '@/app/components/fr/GamesSection'
+import PrintableExercisesFr from '@/app/components/fr/PrintableExercises'
+import AudienceSectionFr from '@/app/components/fr/AudienceSection'
+import FooterFr from '@/app/components/fr/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -78,6 +88,7 @@ export async function generateStaticParams() {
     { lang: 'cs', topic: 'nasobilka' },
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
     { lang: 'fi', topic: 'kertotaulut' },
+    { lang: 'fr', topic: 'table-de-multiplication' },
   ]
 }
 
@@ -85,7 +96,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -322,6 +333,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // French metadata (production)
+  if (locale === 'fr') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Table de Multiplication 1-100 | Exercices PDF et Jeux Interactifs',
+      description: 'Apprenez les tables de multiplication de 1 à 100 gratuitement. Exercices interactifs, jeux éducatifs et feuilles de travail PDF pour enfants.',
+      keywords: 'table de multiplication, tables de multiplication, mathématiques, apprentissage, pratique, éducation, exercices pdf',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Table de Multiplication – Apprendre, Comprendre et Pratiquer',
+        description: 'Apprenez les tables de multiplication étape par étape.',
+        type: 'website',
+        locale: 'fr_FR',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Table de Multiplication – Apprendre, Comprendre et Pratiquer',
+        description: 'Apprenez les tables de multiplication étape par étape.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -329,7 +378,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -964,6 +1013,109 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnFi />
           <AudienceSectionFi />
           <FooterFi />
+        </main>
+      </>
+    )
+  }
+
+  // French version (production-ready)
+  if (locale === 'fr') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.fr.domain}/#website`,
+          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
+          "name": "Table de Multiplication",
+          "description": "Plateforme éducative interactive pour apprendre les tables de multiplication de 1 à 100. Outils d'apprentissage visuel pour les enfants, exercices pratiques et jeux éducatifs.",
+          "inLanguage": "fr-FR",
+          "publisher": {
+            "@id": `${siteConfig.fr.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#webpage`,
+          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
+          "name": "Table de Multiplication - Toutes les Tables de 1 à 100",
+          "description": "Plateforme d'apprentissage interactive des tables de multiplication pour les enfants. Apprenez toutes les tables de multiplication de 1 à 100 par la pratique.",
+          "isPartOf": {
+            "@id": `${siteConfig.fr.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#learningresource`
+          },
+          "inLanguage": "fr-FR"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.fr.domain}/#organization`,
+          "name": "Table de Multiplication",
+          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
+          "description": "Plateforme éducative qui enseigne les tables de multiplication aux élèves du primaire",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["fr", "tr", "es", "de", "cs", "uk", "fi"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#learningresource`,
+          "name": "Plateforme d'Apprentissage des Tables de Multiplication",
+          "description": "Ressource éducative complète pour apprendre les tables de multiplication de 1 à 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "fr-FR",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "table de multiplication",
+            "apprentissage des mathématiques",
+            "mathématiques primaire",
+            "multiplication",
+            "apprendre les tables",
+            "exercices de mathématiques",
+            "jeux de multiplication"
+          ],
+          "teaches": "Compétences pour comprendre, appliquer et mémoriser la multiplication et les tables de multiplication",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <HeroFr />
+          <LearningPathsFr />
+          <PracticePreviewFr />
+          <GamesSectionFr />
+          <PrintableExercisesFr />
+          <DefinitionSectionFr />
+          <WhyItMattersFr />
+          <HowToLearnFr />
+          <AudienceSectionFr />
+          <FooterFr />
         </main>
       </>
     )

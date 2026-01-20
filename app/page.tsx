@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
-  title: 'Multiplication Tables | Çarpım Tablosu | Tablas de Multiplicar | Einmaleins | Násobilka | Таблиця множення | Kertotaulut',
-  description: 'Learn multiplication tables in your language. Choose Turkish, Spanish, German, Czech, Ukrainian, or Finnish.',
+  title: 'Multiplication Tables | Çarpım Tablosu | Tablas de Multiplicar | Einmaleins | Násobilka | Таблиця множення | Kertotaulut | Table de Multiplication',
+  description: 'Learn multiplication tables in your language. Choose Turkish, Spanish, German, Czech, Ukrainian, Finnish, or French.',
   alternates: {
     canonical: '/',
   },
@@ -57,6 +57,13 @@ export default function LanguageSelector() {
       flag: '🇫🇮',
       topic: 'Kertotaulut',
       description: 'Opi kertotaulut 1:stä 100:aan',
+    },
+    {
+      code: 'fr',
+      name: languageNames.fr,
+      flag: '🇫🇷',
+      topic: 'Table de Multiplication',
+      description: 'Apprenez les tables de multiplication de 1 à 100',
     },
   ]
 

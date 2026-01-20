@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: 'tr',
-  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi'],
+  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'],
 } as const
 
 export type Locale = (typeof i18n)['locales'][number]
@@ -12,6 +12,7 @@ export const languageNames: Record<Locale, string> = {
   cs: 'Čeština',
   uk: 'Українська',
   fi: 'Suomi',
+  fr: 'Français',
 }
 
 export const topicSlugs: Record<Locale, string> = {
@@ -21,6 +22,7 @@ export const topicSlugs: Record<Locale, string> = {
   de: 'einmaleins',
   uk: 'tablycya-mnozhennya',
   fi: 'kertotaulut',
+  fr: 'table-de-multiplication',
 }
 
 export const siteConfig: Record<Locale, {
@@ -58,6 +60,11 @@ export const siteConfig: Record<Locale, {
     name: 'Kertotaulut',
     description: 'Interaktiivinen oppimisalusta kertotaulujen oppimiseen 1:stä 100:aan.',
   },
+  fr: {
+    domain: 'https://multilang-math.com',
+    name: 'Table de Multiplication',
+    description: 'Plateforme éducative interactive pour apprendre les tables de multiplication de 1 à 100.',
+  },
 }
 
 export const guides: Record<Locale, {
@@ -94,5 +101,10 @@ export const guides: Record<Locale, {
     students: 'oppilaille',
     teachers: 'opettajille',
     parents: 'vanhemmille',
+  },
+  fr: {
+    students: 'pour-les-eleves',
+    teachers: 'pour-les-enseignants',
+    parents: 'pour-les-parents',
   },
 }
