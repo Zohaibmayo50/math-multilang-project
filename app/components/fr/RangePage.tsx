@@ -35,9 +35,9 @@ export default function RangePage({
   }
   
   const difficultyDescriptions = {
-    beginner: 'Este Plage es ideau para estudiantes que están comenzando a Apprenezr la multiplicación.',
-    intermediate: 'Este Plage es para estudiantes que conocen las Tables básicas y quieren mejorar sus habilidades.',
-    advanced: 'Este Plage es para estudiantes avanzados que quieren Pratiquezr la multiplicación con números más grandes.'
+    beginner: 'Este rango es ideal para estudiantes que están comenzando a aprender la multiplicación.',
+    intermediate: 'Este rango es para estudiantes que conocen las tablas básicas y quieren mejorar sus habilidades.',
+    advanced: 'Este rango es para estudiantes avanzados que quieren practicar la multiplicación con números más grandes.'
   }
   
   const colors = [
@@ -50,7 +50,7 @@ export default function RangePage({
     'from-amber-500 to-amber-600',
     'from-yellow-500 to-yellow-600',
     'from-lime-500 to-lime-600',
-    'from-emeraud-500 to-emeraud-600'
+    'from-emerald-500 to-emerald-600'
   ]
   
   return (
@@ -106,7 +106,7 @@ export default function RangePage({
                   {rangeStart} - {rangeEnd}
                 </span>
                 <br />
-                <span className="text-slate-900">Table de multiplication</span>
+                <span className="text-slate-900">Tabla de Multiplicar</span>
               </h1>
               <span className="text-5xl md:text-6xl animate-bounce" style={{ animationDelay: '0.2s' }}>🎨</span>
             </div>
@@ -134,9 +134,9 @@ export default function RangePage({
           {/* Description with Better Typography */}
           <div className="max-w-3xl mx-auto space-y-4 text-center">
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-              ¡Apprenez la <span className="font-semibold text-blue-600">Table de multiplication del {rangeStart} au {rangeEnd}</span> con 
+              ¡Aprende la <span className="font-semibold text-blue-600">tabla de multiplicar del {rangeStart} al {rangeEnd}</span> con 
               <span className="font-semibold text-indigo-600"> juegos divertidos</span>, 
-              <span className="font-semibold text-purple-600"> Exercices interactivos</span> y 
+              <span className="font-semibold text-purple-600"> ejercicios interactivos</span> y 
               <span className="font-semibold text-pink-600"> hojas de trabajo imprimibles</span>!
             </p>
             
@@ -144,20 +144,20 @@ export default function RangePage({
             <div className="flex flex-wrap items-center justify-center gap-3 pt-4">
               <a 
                 href="#practice"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scaue-105 transition-aul duration-200"
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
               >
                 <span className="text-xl">🎯</span>
-                <span>Pratiquezr Ahora</span>
+                <span>Practicar Ahora</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
               <a 
                 href="#games"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm text-indigo-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scaue-105 transition-aul duration-200 border-2 border-indigo-100"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm text-indigo-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-indigo-100"
               >
                 <span className="text-xl">🎮</span>
-                <span>Apprenezr Jugando</span>
+                <span>Aprender Jugando</span>
               </a>
             </div>
           </div>
@@ -170,21 +170,21 @@ export default function RangePage({
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
               <span className="text-3xl">📖</span>
-              ¿Qué Cubre la Table del {rangeStart} au {rangeEnd}?
+              ¿Qué Cubre la Tabla del {rangeStart} al {rangeEnd}?
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
           <p className="text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
-            Este Plage incluye la Table de multiplication de cada número entre {rangeStart} y {rangeEnd}. 
-            Cada uno de estos números se multiplica por los números del 1 au 10 para Apprenezrlos.
+            Este rango incluye la tabla de multiplicar de cada número entre {rangeStart} y {rangeEnd}. 
+            Cada uno de estos números se multiplica por los números del 1 al 10 para aprenderlos.
           </p>
           
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-100 shadow-md">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
               {rangeNumbers.map((num, index) => (
                 <div key={num} className="flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl p-3 shadow-sm hover:shadow-md transition-shadow group">
-                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-xl shadow-md group-hover:scaue-110 transition-transform">
+                  <span className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-xl shadow-md group-hover:scale-110 transition-transform">
                     {num}
                   </span>
                   <span className="text-lg mt-1">{index % 4 === 0 ? '⭐' : index % 4 === 1 ? '🌟' : index % 4 === 2 ? '✨' : '💫'}</span>
@@ -195,8 +195,8 @@ export default function RangePage({
             <div className="bg-white/60 rounded-xl p-4 flex items-center gap-3">
               <span className="text-3xl">💡</span>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Los estudiantes Apprenezn un totau de <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} operaciones de multiplicación</span> en este Plage. 
-                Gracias a la <span className="font-bold text-purple-600">propiedad conmutativa</span>, en reauidad necesitan memorizar menos operaciones 
+                Los estudiantes aprenden un total de <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} operaciones de multiplicación</span> en este rango. 
+                Gracias a la <span className="font-bold text-purple-600">propiedad conmutativa</span>, en realidad necesitan memorizar menos operaciones 
                 (por ejemplo <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
               </p>
             </div>
@@ -218,7 +218,7 @@ export default function RangePage({
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-3xl font-bold text-slate-900">
-              Table de multiplication del {rangeStart} au {rangeEnd} - Lista Completa
+              Tabla de Multiplicar del {rangeStart} al {rangeEnd} - Lista Completa
             </h2>
             <button
               onClick={() => {
@@ -228,7 +228,7 @@ export default function RangePage({
                     <!DOCTYPE html>
                     <html>
                     <head>
-                      <title>Table de multiplication del ${rangeStart} au ${rangeEnd}</title>
+                      <title>Tabla de Multiplicar del ${rangeStart} al ${rangeEnd}</title>
                       <style>
                         @media print {
                           @page { margin: 1cm; }
@@ -240,7 +240,7 @@ export default function RangePage({
                           margin: 0 auto;
                         }
                         h1 {
-                          text-auign: center;
+                          text-align: center;
                           color: #1e293b;
                           margin-bottom: 30px;
                           font-size: 28px;
@@ -260,7 +260,7 @@ export default function RangePage({
                         .table-title {
                           font-size: 18px;
                           font-weight: bold;
-                          text-auign: center;
+                          text-align: center;
                           margin-bottom: 12px;
                           color: #1e40af;
                         }
@@ -283,11 +283,11 @@ export default function RangePage({
                       </style>
                     </head>
                     <body>
-                      <h1>Table de multiplication del ${rangeStart} au ${rangeEnd} - Lista Completa</h1>
+                      <h1>Tabla de Multiplicar del ${rangeStart} al ${rangeEnd} - Lista Completa</h1>
                       <div class="grid">
                         ${rangeNumbers.map(num => `
                           <div class="table-box">
-                            <div class="table-title">Table del ${num}</div>
+                            <div class="table-title">Tabla del ${num}</div>
                             ${[...Array(10)].map((_, i) => `
                               <div class="equation">
                                 <span class="equation-left">${num} × ${i + 1}</span>
@@ -311,12 +311,12 @@ export default function RangePage({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              T�l�charger / Imprimer Table
+              Descargar / Imprimir Tabla
             </button>
           </div>
           
           <p className="text-center text-slate-700 mb-8 max-w-3xl mx-auto">
-            A continuación puedes ver todas las tables de multiplication del {rangeStart} au {rangeEnd} juntas. 
+            A continuación puedes ver todas las tablas de multiplicar del {rangeStart} al {rangeEnd} juntas. 
             Cada número tiene su propia casilla de color.
           </p>
           
@@ -326,7 +326,7 @@ export default function RangePage({
               
               return (
                 <div key={num} className={`bg-gradient-to-br ${colors[colorIndex]} rounded-xl p-4 text-white`}>
-                  <div className="font-bold text-lg mb-3 text-center">Table del {num}</div>
+                  <div className="font-bold text-lg mb-3 text-center">Tabla del {num}</div>
                   <div className="space-y-1 text-sm">
                     {[...Array(10)].map((_, i) => (
                       <div key={i} className="flex justify-between items-center bg-white/20 rounded px-2 py-1">
@@ -346,12 +346,12 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            tables de multiplication Individuaues en este Plage
+            Tablas de Multiplicar Individuales en este Rango
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Si deseas Apprenezr la Table de multiplication de cada número en detaule, puedes acceder a la 
-            página correspondiente a través de los Suivants enlaces. Cada página contiene patrones, 
+            Si deseas aprender la tabla de multiplicar de cada número en detalle, puedes acceder a la 
+            página correspondiente a través de los siguientes enlaces. Cada página contiene patrones, 
             consejos y herramientas de práctica específicas para ese número.
           </p>
           
@@ -359,16 +359,16 @@ export default function RangePage({
             {rangeNumbers.map((num) => (
               <Link
                 key={num}
-                href={`/fr/table-de-multiplication/${num}`}
-                className="block bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-aul group"
+                href={`/es/tablas-de-multiplicar/${num}`}
+                className="block bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-slate-900 mb-1">
-                      Table de multiplication del {num}
+                      Tabla de Multiplicar del {num}
                     </div>
                     <p className="text-slate-600">
-                      Explicación detaulada y ejemplos del número {num}
+                      Explicación detallada y ejemplos del número {num}
                     </p>
                   </div>
                   <svg 
@@ -390,7 +390,7 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            ¿Por Qué es Importante este Plage?
+            ¿Por Qué es Importante este Rango?
           </h2>
           
           <div className="space-y-6">
@@ -405,7 +405,7 @@ export default function RangePage({
               <p className="text-slate-700 leading-relaxed">
                 {difficultyDescriptions[difficultyLevel]} {rangeStart === 1 ? 
                   'Como los números son pequeños, los estudiantes pueden entender y verificar los resultados más fácilmente.' :
-                  'Este Plage se construye sobre el conocimiento adquirido en el Plage Pr�c�dente.'}
+                  'Este rango se construye sobre el conocimiento adquirido en el rango anterior.'}
               </p>
             </div>
             
@@ -414,7 +414,7 @@ export default function RangePage({
                 🧠 Desarrollo Cognitivo
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                Este Plage ayuda a los estudiantes a desarrollar sus habilidades de cálculo mentau. 
+                Este rango ayuda a los estudiantes a desarrollar sus habilidades de cálculo mental. 
                 Con la práctica regular, comienzan a recordar automáticamente las multiplicaciones de estos números.
               </p>
             </div>
@@ -422,11 +422,11 @@ export default function RangePage({
             {nextRangeUrl && (
               <div className="bg-white rounded-xl p-6 border-l-4 border-purple-500">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  📈 Preparación para el Suivant Paso
+                  📈 Preparación para el Siguiente Paso
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Los estudiantes que Apprenezn bien este Plage están listos para pasar au Suivant. 
-                  Cada Plage refuerza aún más la lógica de la multiplicación y desarrolla el pensamiento matemático.
+                  Los estudiantes que aprenden bien este rango están listos para pasar al siguiente. 
+                  Cada rango refuerza aún más la lógica de la multiplicación y desarrolla el pensamiento matemático.
                 </p>
               </div>
             )}
@@ -438,11 +438,11 @@ export default function RangePage({
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Patrones en la Table de multiplication del {rangeStart} au {rangeEnd}
+            Patrones en la Tabla de Multiplicar del {rangeStart} al {rangeEnd}
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            En lugar de intentar memorizar la Table de multiplication, entender los patrones que contiene 
+            En lugar de intentar memorizar la tabla de multiplicar, entender los patrones que contiene 
             acelera el proceso de aprendizaje y lo hace más duradero.
           </p>
           
@@ -456,7 +456,7 @@ export default function RangePage({
                 En la multiplicación, el orden se puede cambiar: {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
                 Esta propiedad facilita el aprendizaje.
               </p>
-              <p className="text-sm text-slate-600 itauic">
+              <p className="text-sm text-slate-600 italic">
                 Ejemplo: Si conoces un número, también conoces su inverso.
               </p>
             </div>
@@ -470,8 +470,8 @@ export default function RangePage({
                 {rangeStart} × 3 = {rangeStart} + {rangeStart} + {rangeStart} = {rangeStart * 3}. 
                 La multiplicación es la suma repetida del mismo número.
               </p>
-              <p className="text-sm text-slate-600 itauic">
-                Esta lógica es importante para comprender el significado fundamentau de la multiplicación.
+              <p className="text-sm text-slate-600 italic">
+                Esta lógica es importante para comprender el significado fundamental de la multiplicación.
               </p>
             </div>
             
@@ -482,11 +482,11 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeNumbers.filter(n => n % 2 === 0).length > 0 ? 
-                  `Los números pares en este Plage (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) siempre dan resultados pares.` :
-                  'Las tables de multiplication de los números en este Plage muestran patrones específicos.'
+                  `Los números pares en este rango (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) siempre dan resultados pares.` :
+                  'Las tablas de multiplicar de los números en este rango muestran patrones específicos.'
                 }
               </p>
-              <p className="text-sm text-slate-600 itauic">
+              <p className="text-sm text-slate-600 italic">
                 Comprender la lógica de los números pares e impares reduce los errores.
               </p>
             </div>
@@ -497,10 +497,10 @@ export default function RangePage({
                 Patrones del Último Dígito
               </h3>
               <p className="text-slate-700 mb-3">
-                En la Table de multiplication de cada número, los últimos dígitos se repiten en un orden específico. 
+                En la tabla de multiplicar de cada número, los últimos dígitos se repiten en un orden específico. 
                 Notar este patrón es útil para la verificación.
               </p>
-              <p className="text-sm text-slate-600 itauic">
+              <p className="text-sm text-slate-600 italic">
                 Por ejemplo: Los números que terminan en 5 siempre terminan en 0 o 5.
               </p>
             </div>
@@ -512,7 +512,7 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            ¿Cómo Apprenezr la Table de multiplication del {rangeStart} au {rangeEnd}?
+            ¿Cómo Aprender la Tabla de Multiplicar del {rangeStart} al {rangeEnd}?
           </h2>
           
           <div className="space-y-8">
@@ -521,8 +521,8 @@ export default function RangePage({
                 1. Enfoque Sistemático
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                En lugar de intentar Apprenezr todos los números de este Plage a la vez, concéntrate en 1-2 números 
-                cada día. Después de Apprenezr bien un número, pasa au Suivant.
+                En lugar de intentar aprender todos los números de este rango a la vez, concéntrate en 1-2 números 
+                cada día. Después de aprender bien un número, pasa al siguiente.
               </p>
               <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600">
                 <p className="text-slate-700">
@@ -534,10 +534,10 @@ export default function RangePage({
             
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                2. Técnicas de Visuauización
+                2. Técnicas de Visualización
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                Imaginar los números visuaumente facilita recordarlos:
+                Imaginar los números visualmente facilita recordarlos:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start text-slate-700">
@@ -557,8 +557,8 @@ export default function RangePage({
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
-                    <strong>Usa tarjetas de colores:</strong> Asignar un color diferente a cada número fortauece 
-                    la memoria visuau.
+                    <strong>Usa tarjetas de colores:</strong> Asignar un color diferente a cada número fortalece 
+                    la memoria visual.
                   </div>
                 </li>
               </ul>
@@ -566,7 +566,7 @@ export default function RangePage({
             
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                3. Exercices de Práctica
+                3. Ejercicios de Práctica
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
                 La práctica regular asegura que la información aprendida sea permanente:
@@ -575,19 +575,19 @@ export default function RangePage({
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Preguntas y Respuestas Rápidas</p>
                   <p className="text-slate-700 text-sm">
-                    Resuelve au menos 10 preguntas aueatorias au día y mide tu tiempo.
+                    Resuelve al menos 10 preguntas aleatorias al día y mide tu tiempo.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Pruebas Escritas</p>
                   <p className="text-slate-700 text-sm">
-                    Haz una prueba escrita una vez a la semana y anauiza tus errores.
+                    Haz una prueba escrita una vez a la semana y analiza tus errores.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Juegos</p>
                   <p className="text-slate-700 text-sm">
-                    Jugar juegos de tables de multiplication permite Apprenezr mientras te diviertes.
+                    Jugar juegos de tablas de multiplicar permite aprender mientras te diviertes.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
@@ -612,28 +612,28 @@ export default function RangePage({
           {nextRangeUrl ? (
             <>
               <p className="text-xl mb-8 leading-relaxed opacity-95 text-center">
-                Si puedes usar cómodamente la Table de multiplication del {rangeStart} au {rangeEnd}, 
-                ¡estás listo para pasar au Suivant paso!
+                Si puedes usar cómodamente la tabla de multiplicar del {rangeStart} al {rangeEnd}, 
+                ¡estás listo para pasar al siguiente paso!
               </p>
               
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 {prevRangeUrl && (
                   <Link
                     href={prevRangeUrl}
-                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-aul"
+                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-white px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                     </svg>
-                    Plage Pr�c�dente
+                    Rango Anterior
                   </Link>
                 )}
                 
                 <Link
                   href={nextRangeUrl}
-                  className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-aul shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
                 >
-                  Ir au Suivant Plage
+                  Ir al Siguiente Rango
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -642,12 +642,12 @@ export default function RangePage({
             </>
           ) : (
             <p className="text-xl leading-relaxed opacity-95 text-center">
-              ¡Has completado todas las tables de multiplication! Ahora conoces todas las operaciones de multiplicación del 1 au 100.
+              ¡Has completado todas las tablas de multiplicar! Ahora conoces todas las operaciones de multiplicación del 1 al 100.
             </p>
           )}
           
           <p className="mt-6 text-sm opacity-80 text-center">
-            Sé paciente y constante para Apprenezr todas las tables de multiplication. Cada Plage se construye sobre el Pr�c�dent.
+            Sé paciente y constante para aprender todas las tablas de multiplicar. Cada rango se construye sobre el anterior.
           </p>
         </div>
       </section>
@@ -657,6 +657,3 @@ export default function RangePage({
     </main>
   )
 }
-
-
-

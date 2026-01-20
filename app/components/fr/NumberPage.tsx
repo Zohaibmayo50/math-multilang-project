@@ -1,4 +1,4 @@
-'use client'
+ï»¿'use client'
 
 import { useRef } from 'react'
 import Link from 'next/link'
@@ -34,7 +34,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         printWindow.document.write(`
           <html>
             <head>
-              <title>Table de multiplication del ${number}</title>
+              <title>Tabla de Multiplicar del ${number}</title>
               <style>
                 body {
                   font-family: Arial, sans-serif;
@@ -70,10 +70,10 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
               </style>
             </head>
             <body>
-              <h1>Table de multiplication del ${number}</h1>
+              <h1>Tabla de Multiplicar del ${number}</h1>
               ${Array.from({ length: 10 }, (_, i) => `
                 <div class="table-item">
-                  <span class="equation">${number} × ${i + 1}</span>
+                  <span class="equation">${number} Ã— ${i + 1}</span>
                   <span class="result">= ${number * (i + 1)}</span>
                 </div>
               `).join('')}
@@ -138,7 +138,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           ctx.fillStyle = '#ffffff'
           ctx.textAlign = 'left'
           ctx.font = '22px Arial'
-          ctx.fillText(number + ' × ' + i, 50, y)
+          ctx.fillText(number + ' Ã— ' + i, 50, y)
           
           ctx.textAlign = 'right'
           ctx.font = 'bold 26px Arial'
@@ -167,717 +167,717 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   // Number-specific content
   const getNumberMeaning = () => {
     const meanings: { [key: number]: string} = {
-      1: "Multiplicar por 1 es un caso especial en matemáticas. Cuando multiplicas cualquier número por 1, el resultado siempre es ese mismo número. Esto se llama la propiedad de identidad de la multiplicación. Piénsalo como preguntar '¿cuántos grupos de algo tengo?' Cuando solo tienes 1 grupo, tienes exactamente lo que empezaste.",
-      2: "Multiplicar por 2 significa duplicar un número. Cuando multiplicas algo por 2, lo estás agregando a sí mismo. Esta es una de las opérations de multiplication más prácticas porque frecuentemente necesitamos duplicar cosas en la vida real—contar pares de zapatos, ruedas de bicicleta, o dividir algo equitativamente entre dos personas.",
-      3: "Multiplicar por 3 significa tomar un número tres veces. Puedes pensarlo como sumar el mismo número a sí mismo tres veces. Esta tabla es esencial para entender triángulos, tríos y todo lo que viene en grupos de tres.",
-      4: "Multiplicar por 4 es como duplicar dos veces. Como 4 = 2 × 2, puedes duplicar un número y luego duplicar el resultado otra vez. Esto hace que Apprenezr la tabla del 4 sea más fácil si ya conoces la del 2. El número 4 aparece frecuentemente en geometría (los cuadrados tienen 4 lados) y en la medición del tiempo (hay 4 cuartos en una hora).",
-      5: "Multiplicar por 5 crea uno de los patrones más hermosos en matemáticas. Todos los múltiplos de 5 terminan en 0 o 5, lo que hace que esta tabla sea muy predecible. Es extremadamente útil para contar dinero (monedas de 5 centavos, billetes de 5 pesos) y decir la hora (intervalos de 5 minutos).",
-      6: "Multiplicar por 6 significa tomar seis grupos de un número. El 6 es la primera Table de multiplication 'real' porque no es simplemente múltiplos de 2 o 3. Sin embargo, como 6 = 2 × 3, puedes multiplicar un número por 2 y luego por 3 (o al revés) para multiplicar por 6. El número 6 aparece frecuentemente en la naturaleza (celdas de panal de abeja) y en la vida cotidiana (cartones de huevos, caras de dados).",
-      7: "Multiplicar por 7 es generalmente una de las tablas con las que los estudiantes tienen más dificultades porque 7 es un número primo y no se puede derivar de otras tablas simples. Sin embargo, hay patrones hermosos en todos los múltiplos del 7 y se puede Apprenezr con práctica. El 7 es un número importante en los días de la semana, los continentes del mundo y muchas referencias culturales.",
-      8: "Multiplicar por 8 es como duplicar tres veces (8 = 2 × 2 × 2). Duplica un número, duplica el resultado otra vez, y duplícalo una vez más—habrás multiplicado por 8. Esta tabla es más fácil de Apprenezr si conoces bien las tablas del 2 y 4. El 8 es un número importante en geometría (octógonos) y música (octava).",
-      9: "Multiplicar por 9 tiene uno de los patrones más fascinantes en matemáticas. Cuando sumas los dígitos de todos los múltiplos del 9, el resultado siempre es divisible por 9. Además, el dígito de las decenas de 9 × n siempre es n-1. Esta tabla también se puede Apprenezr con el truco de los dedos. Como 9 es solo 1 menos que 10, también se puede calcular usando la tabla del 10.",
-      10: "Multiplicar por 10 es una de las tables de multiplication más fáciles. Cuando multiplicas cualquier número por 10, simplemente agregas un cero al final. Esto forma la base de nuestro sistema decimal. Apprenezr a multiplicar por 10 enseña a los estudiantes el concepto de valor posicional y cómo trabajar con números grandes. La tabla del 10 es un punto de referencia para entender todas las demás tables de multiplication.",
-      11: "Multiplicar por 11 tiene uno de los patrones más interesantes en matemáticas. Cuando multiplicas números de un dígito por 11, el resultado es ese número repetido dos veces (11×3=33, 11×7=77). Al multiplicar números de dos dígitos por 11, también hay un patrón hermoso: sumas los dígitos y los colocas en el medio. El 11 es un número primo y tiene propiedades matemáticas especiales.",
-      12: "Multiplicar por 12 es una de las tablas más prácticas porque 12 es divisible por muchos números (1, 2, 3, 4, 6, 12). Esta característica hace que el 12 sea muy útil en la vida diaria—hay 12 objetos en una docena, 12 horas en un reloj, 12 meses en un año. Como 12 = 3 × 4 = 2 × 6, puedes Apprenezr esta tabla de múltiples maneras.",
-      13: "Multiplicar por 13 desarrolla las habilidades de reconocimiento de patrones de los estudiantes. El 13 es un número primo, por lo que no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 13 como 10+3 es muy útil: multiplicar un número por 13 significa multiplicarlo por 10 y sumar el resultado de multiplicarlo por 3. El 13 es un número con significado especial en muchas culturas.",
-      14: "Multiplicar por 14 es el doble de la tabla del 7. Como 14 = 2 × 7, si conoces la tabla del 7, puedes duplicar cada resultado para encontrar la tabla del 14. El 14 es importante en la planificación semanal (2 semanas = 14 días) y muestra propiedades de números pares.",
-      15: "Multiplicar por 15 combina los múltiplos tanto del 3 como del 5. Como 15 = 3 × 5, esta tabla lleva las propiedades de ambos números. Todos los múltiplos del 15 son divisibles tanto por 3 como por 5. Como 15 minutos es un cuarto de hora, se usa mucho en cálculos de tiempo.",
-      16: "Multiplicar por 16 es la cuarta potencia del 2 (2×2×2×2=16). Esto hace posible Apprenezr la tabla del 16 mediante cadenas de duplicación. Puedes duplicar el 8 para obtener 16. En informática, el 16 es un número importante (sistema hexadecimal) y también aparece frecuentemente en la vida diaria.",
-      17: "Multiplicar por 17 puede ser difícil debido a sus propiedades de número primo. El 17 no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 17 como 20-3 o 10+7 facilita los cálculos. Apprenezr la tabla del 17 desarrolla habilidades de matemática mental y estrategias de resolución de problemas.",
-      18: "Multiplicar por 18 contiene muchas relaciones. Como 18 = 2 × 9 = 3 × 6, puedes Apprenezr esta tabla de múltiples maneras. Duplicar la tabla del 9 o triplicar la tabla del 6 da la tabla del 18. El 18 es importante como edad de mayoría de edad en muchos países.",
-      19: "Multiplicar por 19 no se puede derivar de otras tablas porque el 19 es un número primo. Sin embargo, pensar en 19 como 20-1 es muy práctico: multiplica un número por 20 y réstale el número mismo. Esta estrategia facilita mucho el cálculo mental de la tabla del 19.",
-      20: "Multiplicar por 20 es la extensión natural de la tabla del 10. Cuando multiplicas cualquier número por 20, puedes multiplicarlo por 10 y duplicar el resultado. O simplemente agrega un cero al final y duplica. La tabla del 20 se usa constantemente en cálculos monetarios (20 pesos) y mediciones (20 metros, 20 kilogramos).",
-      21: "Multiplicar por 21 requiere entender la relación 3×7. Como 21=3×7, esta tabla lleva las propiedades de las tablas del 3 y del 7. El 21 es importante como edad legal de mayoría en muchos países. Pensar en 21 como 20+1 facilita los cálculos: multiplica un número por 20 y agrégale el número mismo.",
-      22: "Multiplicar por 22 es el doble del 11 (22=2×11). Si conoces la tabla del 11, puedes duplicar cada resultado para encontrar la tabla del 22. Como 22 también es 2×11, muestra propiedades de números pares. El 22 aparece frecuentemente en deportes (equipo de fútbol) y conteo diario.",
-      23: "Multiplicar por 23 no se puede derivar de otras tablas debido a sus propiedades de número primo. Sin embargo, pensar en 23 como 20+3 o 25-2 facilita los cálculos. El 23 es un número importante en biología (número de pares de cromosomas humanos). Apprenezr la tabla del 23 fortalece las habilidades de aritmética mental.",
-      24: "Multiplicar por 24 es una de las tablas más versátiles. Como 24=2×12=3×8=4×6, se puede calcular de muchas maneras diferentes. Debido a la relación día-hora (24 horas), es un número fundamental en cálculos de tiempo. El 24 también son 2 docenas y se usa frecuentemente en embalaje y agrupación.",
-      25: "Multiplicar por 25 usa la relación 5×5 (5²). Como 25 es el cuadrado de 5, tiene propiedades matemáticas muy especiales. Es importante en cálculos monetarios (25 centavos son un cuarto). Todos los múltiplos del 25 terminan en 25, 50, 75, 00 - un patrón muy regular.",
-      26: "Multiplicar por 26 es el doble del 13 (26=2×13). Si conoces la tabla del 13, puedes duplicar cada resultado para encontrar la tabla del 26. El 26 es el número de letras en el alfabeto inglés. Pensar en 26 como 25+1 o 30-4 facilita los cálculos.",
-      27: "Multiplicar por 27 es la tercera potencia del 3 (27=3³=3×3×3). Esta relación especial hace que el 27 sea importante en matemáticas y geometría. Como 27=3×9, se puede calcular usando las tablas del 3 o del 9. Pensar en 27 como 30-3 facilita el cálculo mental.",
-      28: "Multiplicar por 28 usa la relación 4×7. Como 28=4×7=2×14, se puede Apprenezr de múltiples maneras. 28 días es el número de días en febrero (cuando no es año bisiesto). El 28 también es un número perfecto (la suma de sus divisores es igual a sí mismo: 1+2+4+7+14=28).",
-      29: "Multiplicar por 29 requiere estrategias especiales debido a que es número primo. El método más práctico es pensar en 29 como 30-1: multiplica un número por 30 y réstale el número mismo. 29 días es el número de días en febrero en años bisiestos. Apprenezr la tabla del 29 desarrolla habilidades de resolución de problemas.",
-      30: "Multiplicar por 30 usa la relación 10×3. Para multiplicar un número por 30, puedes multiplicarlo por 10 y luego multiplicar el resultado por 3. 30 días es el número de días en muchos meses (abril, junio, septiembre, noviembre). El 30 también es media hora (30 minutos). La tabla del 30 se usa frecuentemente en cálculos de porcentaje (30% de descuento).",
-      31: "Multiplicar por 31 requiere estrategias especiales debido a sus propiedades de número primo. El método más práctico es pensar en 31 como 30+1: multiplica un número por 30 y agrégale el número mismo. 31 días es el número máximo de días en muchos meses (enero, marzo, mayo, julio, agosto, octubre, diciembre). Apprenezr la tabla del 31 desarrolla habilidades de cálculo mental con números grandes.",
-      32: "Multiplicar por 32 es la quinta potencia del 2 (25=2×2×2×2×2=32). Esto hace posible Apprenezr el 32 mediante cadenas de duplicación. Puedes duplicar el 16 para obtener 32. 32 grados Fahrenheit es el punto de congelación del agua. En informática, los sistemas de 32 bits son comunes. Las relaciones 32=4×8=2×16 ofrecen diferentes métodos de cálculo.",
-      33: "Multiplicar por 33 usa la relación 3×11. Si conoces la tabla del 11, puedes triplicarla, o si conoces la tabla del 3, puedes multiplicarla por 11 para encontrar la tabla del 33. El 33 es el número repdigit de dos dígitos más grande (repetición de los mismos dígitos). Que todos los dígitos del 33 sean iguales crea algunos patrones interesantes.",
-      34: "Multiplicar por 34 es el doble del 17 (34=2×17). Si conoces la tabla del 17, puedes duplicar cada resultado para encontrar la tabla del 34. La suma de los dígitos en 34 es 7 (3+4=7), lo que conduce a patrones relacionados con el 7. Pensar en 34 como 35-1 o 30+4 facilita los cálculos.",
-      35: "Multiplicar por 35 usa la relación 5×7. Si ambas tablas son conocidas, multiplicar por 35 es bastante fácil. Todos los múltiplos del 35 terminan en 5 o 0 (como los múltiplos del 5). 35 minutos son 5 minutos más que media hora. La relación 35=5×7 combina las propiedades de ambas tablas del 5 y del 7.",
-      36: "Multiplicar por 36 es una de las tablas más versátiles. Como 36=6×6=4×9=3×12=2×18, se puede calcular de muchas maneras diferentes. El 36 es el cuadrado de 6 (6²). El 36 son múltiplos de una docena completa (1 docena = 12, 3 docenas = 36). El 36 tiene muchos divisores, lo que lo hace muy útil en fracciones.",
-      37: "Multiplicar por 37 requiere estrategias especiales debido a que es número primo. Pensar en 37 como 40-3 o 35+2 facilita los cálculos. El 37 tiene relaciones interesantes con números repdigit: 37×3=111. Esta propiedad especial del 37 se puede usar para algunos cálculos trucos.",
-      38: "Multiplicar por 38 es el doble del 19 (38=2×19). Si conoces la tabla del 19, puedes duplicar cada resultado para encontrar la tabla del 38. Pensar en 38 como 40-2 facilita el cálculo mental. 38 grados Celsius es fiebre leve para la temperatura corporal humana.",
-      39: "Multiplicar por 39 usa la relación 3×13. Como 39=3×13, se puede calcular triplicando la tabla del 13 o multiplicando la tabla del 3 por 13. El método más práctico es pensar en 39 como 40-1. El 39 es un número interesante divisible tanto por 3 como por 13.",
-      40: "Multiplicar por 40 usa la relación 4×10. Para multiplicar un número por 40, puedes multiplicarlo por 10 y luego multiplicar el resultado por 4. O multiplic por 4 y agrega un cero al final. El 40 se usa frecuentemente en la vida diaria: 40 horas de semana laboral, 40 años se considera mediana edad. La tabla del 40 es muy regular porque son los 10s multiplicados por 4.",
-      41: "Multiplicar por 41 desarrolla habilidades de matemática mental debido a sus propiedades de número primo. El método más práctico es pensar en 41 como 40+1: multiplica un número por 40 y agrégale el número mismo. El 41 es un número primo y no se puede derivar simplemente de otras tablas. Apprenezr la tabla del 41 aumenta la capacidad de calcular rápidamente con números grandes.",
-      42: "Multiplicar por 42 es una de las tablas más versátiles. Como 42=6×7=2×21=3×14, se puede calcular de múltiples maneras. El 42 es famoso en la cultura de ciencia ficción como 'La Respuesta Final al Universo, la Vida y Todo' (Guía del Autoestopista Galáctico). Como combina las tablas del 6 y del 7, refuerza ambas.",
-      43: "Multiplicar por 43 requiere estrategias especiales debido a que es número primo. Pensar en 43 como 40+3 o 45-2 facilita los cálculos. El 43 es un número primo y solo es divisible por 1 y 43. Apprenezr la tabla del 43 desarrolla la habilidad de pensar creativamente con números.",
-      44: "Multiplicar por 44 es cuatro veces el 11 (44=4×11). Si conoces la tabla del 11, puedes cuadruplicarla, o multiplicar la tabla del 4 por 11 para calcularla. La relación 44=2×22 también ofrece un método diferente. El 44 muestra un patrón similar a repdigit y tiene propiedades de números pares.",
-      45: "Multiplicar por 45 usa la relación 5×9. Si ambas tablas son conocidas, multiplicar por 45 es fácil. 45 grados es medio ángulo recto, un ángulo importante en geometría. 45 minutos son tres cuartos de hora (45 minutos = 0.75 horas). Todos los múltiplos del 45 terminan en 5 o 0.",
-      46: "Multiplicar por 46 es el doble del 23 (46=2×23). Si conoces la tabla del 23, puedes duplicar cada resultado para encontrar la tabla del 46. Pensar en 46 como 45+1 o 50-4 facilita los cálculos. El 46 es el número total de cromosomas humanos (23 pares).",
-      47: "Multiplicar por 47 requiere estrategias mentales debido a sus propiedades de número primo. Los métodos más efectivos son pensar en 47 como 50-3 o 45+2. El 47 es un número primo y tiene propiedades matemáticas especiales. Apprenezr la tabla del 47 desarrolla la habilidad de trabajar cómodamente con números complejos.",
-      48: "Multiplicar por 48 tiene muchas relaciones de factores. Como 48=6×8=4×12=3×16=2×24, se puede calcular de múltiples maneras. Como el 48 es 4 veces 12, es útil en cálculos de docenas (4 docenas). 48 horas = 2 días, se encuentra frecuentemente en cálculos de tiempo.",
-      49: "Multiplicar por 49 es el cuadrado de 7 (49=7×7=7²). Esta relación especial requiere conocer perfectamente la tabla del 7. Pensar en 49 como 50-1 facilita muchísimo el cálculo mental. Como es un número cuadrado, el 49 es importante en geometría y cálculos de área. El 49 también es importante para patrones matemáticos, aunque no es un tablero de ajedrez 7×7.",
-      50: "Multiplicar por 50 usa la relación 5×10 y es una de las tablas más fáciles. Para multiplicar un número por 50, puedes multiplicarlo por 5 y agregar un cero al final. O pensar en ello como la mitad de 100. El 50 se usa frecuentemente: medio siglo, y en cálculos de porcentaje (50%=1/2).",
-      51: "Multiplicar por 51 usa la estrategia 50+1. Para multiplicar un número por 51, multiplicálo por 50 y agrégale el número mismo. La relación 51=3×17 ofrece un método alternativo. Apprenezr la tabla del 51 desarrolla la habilidad de calcular con números cercanos a 50.",
-      52: "Multiplicar por 52 usa la relación 4×13. Es el número de semanas en un año (52 semanas) y el número de cartas en una baraja estándar (52 cartas). Como 52=2×26, duplicar la tabla del 26 también funciona. Pensar en 52 como 50+2 facilita el cálculo mental. Esta tabla es muy útil en cálculos de tiempo y calendario.",
-      53: "Multiplicar por 53 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 53 como 50+3 o 55-2. El 53 es un número primo y solo es divisible por 1 y 53. Apprenezr la tabla del 53 aumenta la capacidad de trabajar con números primos grandes y profundiza el pensamiento matemático.",
-      54: "Multiplicar por 54 es una de las tablas más versátiles. Como 54=6×9=2×27=3×18, se puede calcular de muchas maneras diferentes. El 54 es 3 veces la suma de los números del 1 al 10 (1+2+...+10=55 aproximadamente). Como combina las tablas del 6 y del 9, refuerza ambas. Tener muchos divisores lo hace útil en cálculos de fracciones.",
-      55: "Multiplicar por 55 usa la relación 5×11. Si ambas tablas son conocidas, multiplicar por 55 es fácil. La estrategia 55=50+5 también es muy práctica. El 55 es la suma de los números del 1 al 10 (1+2+3+...+10=55), esta relación matemática especial lo hace interesante. El patrón del 5 (termina en 5 o 0) facilita el cálculo.",
-      56: "Multiplicar por 56 usa la relación 7×8. Como combina estas dos tablas difíciles, refuerza ambas. Las alternativas 56=4×14=2×28 ofrecen diferentes estrategias. El 56 es el número total de horas en 7 días con jornadas laborales de 8 horas (7×8). Pensar en 56 como 60-4 también facilita el cálculo mental.",
-      57: "Multiplicar por 57 usa la relación 3×19. Triplicar la tabla del 19 o multiplicar la tabla del 3 por 19 funciona. Pensar en 57 como 60-3 o 55+2 facilita el cálculo. Como 57=3×19, es divisible tanto por 3 como por 19. Apprenezr la tabla del 57 desarrolla la habilidad de trabajar con números grandes de nivel medio.",
-      58: "Multiplicar por 58 es el doble del 29 (58=2×29). Si conoces la tabla del 29, puedes duplicar cada resultado para encontrar la tabla del 58. Pensar en 58 como 60-2 o 50+8 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. Esta tabla refuerza estrategias de duplicación y aproximación a números redondos.",
-      59: "Multiplicar por 59 requiere estrategias especiales debido a sus propiedades de número primo y proximidad al 60. El método más efectivo es pensar en 59 como 60-1: multiplica un número por 60 y réstale el número mismo. El 59 es un número primo y solo es divisible por 1 y 59. La tabla del 59 proporciona contexto para cálculos de minutos y tiempo (59 minutos) debido a su proximidad al 60.",
-      60: "Multiplicar por 60 usa la relación 6×10 y es muy útil. Para multiplicar un número por 60, puedes multiplicarlo por 6 y agregar un cero al final. El 60 es el número de minutos en una hora, el número de segundos en un minuto, y un sexto de los 360° de un círculo. Hay muchas relaciones de factores como 60=2×30=3×20=4×15=5×12. Esta tabla es crítica para cálculos de tiempo.",
-      61: "Multiplicar por 61 requiere estrategias especiales debido a sus propiedades de número primo y proximidad al 60. El método más práctico es pensar en 61 como 60+1: multiplica un número por 60 y agrégale el número mismo. El 61 es un número primo y solo es divisible por 1 y 61. Apprenezr la tabla del 61 desarrolla la habilidad de cálculo mental con números por encima de 60.",
-      62: "Multiplicar por 62 es el doble del 31 (62=2×31). Si conoces la tabla del 31, puedes duplicar cada resultado para encontrar la tabla del 62. Pensar en 62 como 60+2 o 65-3 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. Esta tabla es útil para duplicación y cálculos cercanos a 60.",
-      63: "Multiplicar por 63 usa la relación 7×9. Como combina estas dos tablas importantes, refuerza ambas. La alternativa 63=3×21 ofrece una estrategia diferente. Pensar en 63 como 60+3 o 65-2 facilita el cálculo mental. El 63 es muy versátil porque es divisible tanto por 7 como por 9.",
-      64: "Multiplicar por 64 es una potencia de 2 (64=26=8×8). Como la arquitectura de 64 bits es común en informática, es importante en la era tecnológica. La relación 64=8² (ocho al cuadrado) es crítica para entender números cuadrados. Pensar en 64 como 60+4 o 65-1 facilita el cálculo. Hay 64 casillas en un tablero de ajedrez (8×8).",
-      65: "Multiplicar por 65 usa la relación 5×13. Si ambas tablas son conocidas, multiplicar por 65 es fácil. El 65 se usa como edad de jubilación en muchos países. Pensar en 65 como 60+5 o 70-5 facilita el cálculo mental. El patrón del 5 (termina en 5 o 0) facilita el cálculo.",
-      66: "Multiplicar por 66 usa la relación 6×11 o la relación 2×33. Como 66=6×11, tiene patrones similares a repdigit. Pensar en 66 como 60+6 o 70-4 facilita el cálculo. El 66 es divisible tanto por 6 como por 11. Como es un número par, todos sus múltiplos también son pares.",
-      67: "Multiplicar por 67 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 67 como 70-3 o 65+2. El 67 es un número primo y solo es divisible por 1 y 67. Apprenezr la tabla del 67 aumenta la capacidad de trabajar con números primos grandes.",
-      68: "Multiplicar por 68 usa la relación 4×17 o la relación 2×34. Cuadruplicar la tabla del 17 o duplicar la tabla del 34 funciona. Pensar en 68 como 70-2 o 60+8 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 68 es divisible tanto por 4 como por 17.",
-      69: "Multiplicar por 69 usa la relación 3×23. Triplicar la tabla del 23 o multiplicar la tabla del 3 por 23 funciona. La estrategia más fácil es pensar en 69 como 70-1: multiplica un número por 70 y réstale el número mismo. Como 69=3×23, es divisible tanto por 3 como por 23. Esta tabla es útil para cálculos cercanos a 70.",
-      70: "Multiplicar por 70 usa la relación 7×10 y es muy útil. Para multiplicar un número por 70, puedes multiplicarlo por 7 y agregar un cero al final. El 70 se asocia con la esperanza de vida promedio de una persona (entre 70-80 en la mayoría de los países). Hay relaciones de factores alternativos como 70=2×35=5×14. Esta tabla refuerza la tabla del 7.",
-      71: "Multiplicar por 71 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. El método más práctico es pensar en 71 como 70+1: multiplica un número por 70 y agrégale el número mismo. El 71 es un número primo y solo es divisible por 1 y 71. Apprenezr la tabla del 71 desarrolla la capacidad de calcular rápidamente con números primos grandes.",
-      72: "Multiplicar por 72 es una de las tablas más versátiles. Como 72=8×9=6×12=4×18=3×24=2×36, se puede calcular de muchas maneras diferentes. El 72 es 3 veces el número de horas en un día (72 horas = 3 días). Tener muchos divisores lo hace extremadamente útil en cálculos de fracciones. El 72 es 6 veces 12 (6 docenas).",
-      73: "Multiplicar por 73 desarrolla propiedades de número primo y estrategias de cálculo mental. Los métodos más prácticos son pensar en 73 como 70+3 o 75-2. El 73 es un número primo y solo es divisible por 1 y 73. El 73 también es el primo número 21 y tiene propiedades matemáticas interesantes.",
-      74: "Multiplicar por 74 usa la relación 2×37. Si conoces la tabla del 37, puedes duplicar cada resultado para encontrar la tabla del 74. Pensar en 74 como 70+4 o 75-1 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 74 es divisible tanto por 2 como por 37.",
-      75: "Multiplicar por 75 usa las relaciones 3×25=5×15. El 75 es tres cuartos de 100 (75%=3/4). También se puede expresar como 75=3×5×5. Pensar en 75 como 70+5 o 80-5 facilita el cálculo mental. El patrón del 5 (termina en 5 o 0) facilita el cálculo. Se usa frecuentemente en cálculos de porcentaje (75%=¾).",
-      76: "Multiplicar por 76 usa la relación 4×19 o la relación 2×38. Cuadruplicar la tabla del 19 o duplicar la tabla del 38 funciona. Pensar en 76 como 75+1 o 80-4 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 76 es divisible tanto por 4 como por 19.",
-      77: "Multiplicar por 77 usa la relación 7×11. Si ambas tablas son conocidas, multiplicar por 77 es fácil. El 77 muestra un patrón similar a repdigit (repetición de 7s). Pensar en 77 como 80-3 o 75+2 facilita el cálculo. Como 77=7×11, es divisible tanto por 7 como por 11.",
-      78: "Multiplicar por 78 usa las relaciones 2×39=3×26=6×13. Se puede calcular de múltiples maneras. Pensar en 78 como 80-2 o 75+3 facilita el cálculo mental. Como es un número par, todos sus múltiplos también son pares. El 78 es divisible por 2, 3, 6, 13, 26, 39.",
-      79: "Multiplicar por 79 requiere estrategias especiales debido a sus propiedades de número primo. La estrategia más fácil es pensar en 79 como 80-1: multiplica un número por 80 y réstale el número mismo. El 79 es un número primo y solo es divisible por 1 y 79. Apprenezr la tabla del 79 establece una base perfecta para cálculos cercanos a 80.",
-      80: "Multiplicar por 80 usa la relación 8×10 y es muy útil. Para multiplicar un número por 80, puedes multiplicarlo por 8 y agregar un cero al final. Hay relaciones de factores alternativos como 80=2×40=4×20=5×16. El 80 se asocia con el límite superior de la esperanza de vida promedio (entre 70-80 en la mayoría de los países). Esta tabla refuerza la tabla del 8.",
-      81: "Multiplicar por 81 es el cuadrado de 9 (81=9×9=9²). Esta relación especial requiere conocer perfectamente la tabla del 9. También es interesante que 81=34 (la cuarta potencia de 3). Pensar en 81 como 80+1 facilita el cálculo mental. Como 81 es un número cuadrado, es importante en geometría y cálculos de área.",
-      82: "Multiplicar por 82 usa la relación 2×41. Si conoces la tabla del 41, puedes duplicar cada resultado para encontrar la tabla del 82. Pensar en 82 como 80+2 o 85-3 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 82 es divisible tanto por 2 como por 41.",
-      83: "Multiplicar por 83 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 83 como 80+3 o 85-2. El 83 es un número primo y solo es divisible por 1 y 83. Apprenezr la tabla del 83 aumenta la capacidad de trabajar con números primos grandes.",
-      84: "Multiplicar por 84 es una de las tablas más versátiles. Como 84=7×12=6×14=4×21=3×28=2×42, se puede calcular de muchas maneras diferentes. El 84 es 12 veces el número de horas en una semana, o 7 veces un medio día de 12 horas. Tener muchos divisores lo hace útil en cálculos de fracciones.",
-      85: "Multiplicar por 85 usa la relación 5×17. Si ambas tablas son conocidas, multiplicar por 85 es fácil. La estrategia 85=80+5 o 90-5 también es muy práctica. El patrón del 5 (termina en 5 o 0) facilita el cálculo. El 85 es divisible tanto por 5 como por 17.",
-      86: "Multiplicar por 86 usa la relación 2×43. Si conoces la tabla del 43, puedes duplicar cada resultado para encontrar la tabla del 86. Pensar en 86 como 90-4 o 85+1 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 86 es divisible tanto por 2 como por 43.",
-      87: "Multiplicar por 87 usa la relación 3×29. Triplicar la tabla del 29 o multiplicar la tabla del 3 por 29 funciona. Pensar en 87 como 90-3 o 85+2 facilita el cálculo. Como 87=3×29, es divisible tanto por 3 como por 29.",
-      88: "Multiplicar por 88 usa la relación 8×11 o la relación 4×22. El 88 es un número repdigit (repetición de 8s). También se puede expresar como 88=2×44. Pensar en 88 como 90-2 o 80+8 facilita el cálculo mental. Como es un número par, todos sus múltiplos también son pares.",
-      89: "Multiplicar por 89 requiere estrategias especiales debido a sus propiedades de número primo. La estrategia más fácil es pensar en 89 como 90-1: multiplica un número por 90 y réstale el número mismo. El 89 es un número primo y solo es divisible por 1 y 89. Apprenezr la tabla del 89 establece una base perfecta para cálculos cercanos a 90.",
-      90: "Multiplicar por 90 usa la relación 9×10 y es muy útil. Para multiplicar un número por 90, puedes multiplicarlo por 9 y agregar un cero al final. Hay muchas relaciones de factores como 90=2×45=3×30=5×18=6×15. El 90 grados es un ángulo recto, muy importante en geometría. Esta tabla refuerza la tabla del 9.",
-      91: "Multiplicar por 91 usa la relación 7×13. Si ambas tablas son conocidas, multiplicar por 91 es fácil. Que 91=7×13 es importante para entender el producto de números primos. Pensar en 91 como 90+1 facilita el cálculo mental. Es divisible tanto por 7 como por 13.",
-      92: "Multiplicar por 92 usa la relación 4×23 o la relación 2×46. Cuadruplicar la tabla del 23 funciona. Pensar en 92 como 90+2 o 100-8 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 92 es divisible tanto por 4 como por 23.",
-      93: "Multiplicar por 93 usa la relación 3×31. Triplicar la tabla del 31 o multiplicar la tabla del 3 por 31 funciona. Pensar en 93 como 90+3 o 100-7 facilita el cálculo. Como 93=3×31, es divisible tanto por 3 como por 31.",
-      94: "Multiplicar por 94 usa la relación 2×47. Si conoces la tabla del 47, puedes duplicar cada resultado para encontrar la tabla del 94. Pensar en 94 como 100-6 o 90+4 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 94 es divisible tanto por 2 como por 47.",
-      95: "Multiplicar por 95 usa la relación 5×19. Si ambas tablas son conocidas, multiplicar por 95 es fácil. La estrategia 95=100-5 es muy práctica. El patrón del 5 (termina en 5 o 0) facilita el cálculo. El 95 es divisible tanto por 5 como por 19. Es útil en cálculos de porcentaje (95%).",
-      96: "Multiplicar por 96 es una de las tablas más versátiles. Como 96=8×12=6×16=4×24=3×32=2×48, se puede calcular de muchas maneras diferentes. Que 96=25×3 es importante en términos de potencias de 2. Tener muchos divisores lo hace útil en cálculos de fracciones.",
-      97: "Multiplicar por 97 requiere estrategias especiales debido a sus propiedades de número primo. La estrategia más fácil es pensar en 97 como 100-3: multiplica un número por 100 y réstale 3 veces el número. El 97 es un número primo y solo es divisible por 1 y 97. Ser el número primo más cercano a 100 facilita mucho el cálculo mental.",
-      98: "Multiplicar por 98 usa la relación 2×49. Si conoces la tabla del 49, puedes duplicar cada resultado para encontrar la tabla del 98. La relación 98=2×7² es interesante. Pensar en 98 como 100-2 es la estrategia más fácil. Como es un número par, todos sus múltiplos también son pares.",
-      99: "Multiplicar por 99 usa la relación 9×11. El 99 es un número repdigit (repetición de 9s). Pensar en 99 como 100-1 es la estrategia más fácil: multiplica un número por 100 y réstale el número mismo. Como 99=9×11, es divisible tanto por 9 como por 11. Es una de las tablas más fáciles para el cálculo mental.",
-      100: "Multiplicar por 100 es la tabla más fácil! Para multiplicar un número por 100, solo agrega dos ceros al final. Que 100=10×10=10² es fundamental para entender el sistema decimal. El 100 es la base de cálculos de porcentaje (100%=completo) y el sistema decimal. Tiene importancia crítica para monedas, unidades de medida y matemática cotidiana.",
+      1: "Multiplicar por 1 es un caso especial en matemÃ¡ticas. Cuando multiplicas cualquier nÃºmero por 1, el resultado siempre es ese mismo nÃºmero. Esto se llama la propiedad de identidad de la multiplicaciÃ³n. PiÃ©nsalo como preguntar 'Â¿cuÃ¡ntos grupos de algo tengo?' Cuando solo tienes 1 grupo, tienes exactamente lo que empezaste.",
+      2: "Multiplicar por 2 significa duplicar un nÃºmero. Cuando multiplicas algo por 2, lo estÃ¡s agregando a sÃ­ mismo. Esta es una de las operaciones de multiplicaciÃ³n mÃ¡s prÃ¡cticas porque frecuentemente necesitamos duplicar cosas en la vida realâ€”contar pares de zapatos, ruedas de bicicleta, o dividir algo equitativamente entre dos personas.",
+      3: "Multiplicar por 3 significa tomar un nÃºmero tres veces. Puedes pensarlo como sumar el mismo nÃºmero a sÃ­ mismo tres veces. Esta tabla es esencial para entender triÃ¡ngulos, trÃ­os y todo lo que viene en grupos de tres.",
+      4: "Multiplicar por 4 es como duplicar dos veces. Como 4 = 2 Ã— 2, puedes duplicar un nÃºmero y luego duplicar el resultado otra vez. Esto hace que aprender la tabla del 4 sea mÃ¡s fÃ¡cil si ya conoces la del 2. El nÃºmero 4 aparece frecuentemente en geometrÃ­a (los cuadrados tienen 4 lados) y en la mediciÃ³n del tiempo (hay 4 cuartos en una hora).",
+      5: "Multiplicar por 5 crea uno de los patrones mÃ¡s hermosos en matemÃ¡ticas. Todos los mÃºltiplos de 5 terminan en 0 o 5, lo que hace que esta tabla sea muy predecible. Es extremadamente Ãºtil para contar dinero (monedas de 5 centavos, billetes de 5 pesos) y decir la hora (intervalos de 5 minutos).",
+      6: "Multiplicar por 6 significa tomar seis grupos de un nÃºmero. El 6 es la primera tabla de multiplicar 'real' porque no es simplemente mÃºltiplos de 2 o 3. Sin embargo, como 6 = 2 Ã— 3, puedes multiplicar un nÃºmero por 2 y luego por 3 (o al revÃ©s) para multiplicar por 6. El nÃºmero 6 aparece frecuentemente en la naturaleza (celdas de panal de abeja) y en la vida cotidiana (cartones de huevos, caras de dados).",
+      7: "Multiplicar por 7 es generalmente una de las tablas con las que los estudiantes tienen mÃ¡s dificultades porque 7 es un nÃºmero primo y no se puede derivar de otras tablas simples. Sin embargo, hay patrones hermosos en todos los mÃºltiplos del 7 y se puede aprender con prÃ¡ctica. El 7 es un nÃºmero importante en los dÃ­as de la semana, los continentes del mundo y muchas referencias culturales.",
+      8: "Multiplicar por 8 es como duplicar tres veces (8 = 2 Ã— 2 Ã— 2). Duplica un nÃºmero, duplica el resultado otra vez, y duplÃ­calo una vez mÃ¡sâ€”habrÃ¡s multiplicado por 8. Esta tabla es mÃ¡s fÃ¡cil de aprender si conoces bien las tablas del 2 y 4. El 8 es un nÃºmero importante en geometrÃ­a (octÃ³gonos) y mÃºsica (octava).",
+      9: "Multiplicar por 9 tiene uno de los patrones mÃ¡s fascinantes en matemÃ¡ticas. Cuando sumas los dÃ­gitos de todos los mÃºltiplos del 9, el resultado siempre es divisible por 9. AdemÃ¡s, el dÃ­gito de las decenas de 9 Ã— n siempre es n-1. Esta tabla tambiÃ©n se puede aprender con el truco de los dedos. Como 9 es solo 1 menos que 10, tambiÃ©n se puede calcular usando la tabla del 10.",
+      10: "Multiplicar por 10 es una de las tablas de multiplicar mÃ¡s fÃ¡ciles. Cuando multiplicas cualquier nÃºmero por 10, simplemente agregas un cero al final. Esto forma la base de nuestro sistema decimal. Aprender a multiplicar por 10 enseÃ±a a los estudiantes el concepto de valor posicional y cÃ³mo trabajar con nÃºmeros grandes. La tabla del 10 es un punto de referencia para entender todas las demÃ¡s tablas de multiplicar.",
+      11: "Multiplicar por 11 tiene uno de los patrones mÃ¡s interesantes en matemÃ¡ticas. Cuando multiplicas nÃºmeros de un dÃ­gito por 11, el resultado es ese nÃºmero repetido dos veces (11Ã—3=33, 11Ã—7=77). Al multiplicar nÃºmeros de dos dÃ­gitos por 11, tambiÃ©n hay un patrÃ³n hermoso: sumas los dÃ­gitos y los colocas en el medio. El 11 es un nÃºmero primo y tiene propiedades matemÃ¡ticas especiales.",
+      12: "Multiplicar por 12 es una de las tablas mÃ¡s prÃ¡cticas porque 12 es divisible por muchos nÃºmeros (1, 2, 3, 4, 6, 12). Esta caracterÃ­stica hace que el 12 sea muy Ãºtil en la vida diariaâ€”hay 12 objetos en una docena, 12 horas en un reloj, 12 meses en un aÃ±o. Como 12 = 3 Ã— 4 = 2 Ã— 6, puedes aprender esta tabla de mÃºltiples maneras.",
+      13: "Multiplicar por 13 desarrolla las habilidades de reconocimiento de patrones de los estudiantes. El 13 es un nÃºmero primo, por lo que no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 13 como 10+3 es muy Ãºtil: multiplicar un nÃºmero por 13 significa multiplicarlo por 10 y sumar el resultado de multiplicarlo por 3. El 13 es un nÃºmero con significado especial en muchas culturas.",
+      14: "Multiplicar por 14 es el doble de la tabla del 7. Como 14 = 2 Ã— 7, si conoces la tabla del 7, puedes duplicar cada resultado para encontrar la tabla del 14. El 14 es importante en la planificaciÃ³n semanal (2 semanas = 14 dÃ­as) y muestra propiedades de nÃºmeros pares.",
+      15: "Multiplicar por 15 combina los mÃºltiplos tanto del 3 como del 5. Como 15 = 3 Ã— 5, esta tabla lleva las propiedades de ambos nÃºmeros. Todos los mÃºltiplos del 15 son divisibles tanto por 3 como por 5. Como 15 minutos es un cuarto de hora, se usa mucho en cÃ¡lculos de tiempo.",
+      16: "Multiplicar por 16 es la cuarta potencia del 2 (2Ã—2Ã—2Ã—2=16). Esto hace posible aprender la tabla del 16 mediante cadenas de duplicaciÃ³n. Puedes duplicar el 8 para obtener 16. En informÃ¡tica, el 16 es un nÃºmero importante (sistema hexadecimal) y tambiÃ©n aparece frecuentemente en la vida diaria.",
+      17: "Multiplicar por 17 puede ser difÃ­cil debido a sus propiedades de nÃºmero primo. El 17 no se puede derivar simplemente de otras tablas. Sin embargo, pensar en 17 como 20-3 o 10+7 facilita los cÃ¡lculos. Aprender la tabla del 17 desarrolla habilidades de matemÃ¡tica mental y estrategias de resoluciÃ³n de problemas.",
+      18: "Multiplicar por 18 contiene muchas relaciones. Como 18 = 2 Ã— 9 = 3 Ã— 6, puedes aprender esta tabla de mÃºltiples maneras. Duplicar la tabla del 9 o triplicar la tabla del 6 da la tabla del 18. El 18 es importante como edad de mayorÃ­a de edad en muchos paÃ­ses.",
+      19: "Multiplicar por 19 no se puede derivar de otras tablas porque el 19 es un nÃºmero primo. Sin embargo, pensar en 19 como 20-1 es muy prÃ¡ctico: multiplica un nÃºmero por 20 y rÃ©stale el nÃºmero mismo. Esta estrategia facilita mucho el cÃ¡lculo mental de la tabla del 19.",
+      20: "Multiplicar por 20 es la extensiÃ³n natural de la tabla del 10. Cuando multiplicas cualquier nÃºmero por 20, puedes multiplicarlo por 10 y duplicar el resultado. O simplemente agrega un cero al final y duplica. La tabla del 20 se usa constantemente en cÃ¡lculos monetarios (20 pesos) y mediciones (20 metros, 20 kilogramos).",
+      21: "Multiplicar por 21 requiere entender la relaciÃ³n 3Ã—7. Como 21=3Ã—7, esta tabla lleva las propiedades de las tablas del 3 y del 7. El 21 es importante como edad legal de mayorÃ­a en muchos paÃ­ses. Pensar en 21 como 20+1 facilita los cÃ¡lculos: multiplica un nÃºmero por 20 y agrÃ©gale el nÃºmero mismo.",
+      22: "Multiplicar por 22 es el doble del 11 (22=2Ã—11). Si conoces la tabla del 11, puedes duplicar cada resultado para encontrar la tabla del 22. Como 22 tambiÃ©n es 2Ã—11, muestra propiedades de nÃºmeros pares. El 22 aparece frecuentemente en deportes (equipo de fÃºtbol) y conteo diario.",
+      23: "Multiplicar por 23 no se puede derivar de otras tablas debido a sus propiedades de nÃºmero primo. Sin embargo, pensar en 23 como 20+3 o 25-2 facilita los cÃ¡lculos. El 23 es un nÃºmero importante en biologÃ­a (nÃºmero de pares de cromosomas humanos). Aprender la tabla del 23 fortalece las habilidades de aritmÃ©tica mental.",
+      24: "Multiplicar por 24 es una de las tablas mÃ¡s versÃ¡tiles. Como 24=2Ã—12=3Ã—8=4Ã—6, se puede calcular de muchas maneras diferentes. Debido a la relaciÃ³n dÃ­a-hora (24 horas), es un nÃºmero fundamental en cÃ¡lculos de tiempo. El 24 tambiÃ©n son 2 docenas y se usa frecuentemente en embalaje y agrupaciÃ³n.",
+      25: "Multiplicar por 25 usa la relaciÃ³n 5Ã—5 (5Â²). Como 25 es el cuadrado de 5, tiene propiedades matemÃ¡ticas muy especiales. Es importante en cÃ¡lculos monetarios (25 centavos son un cuarto). Todos los mÃºltiplos del 25 terminan en 25, 50, 75, 00 - un patrÃ³n muy regular.",
+      26: "Multiplicar por 26 es el doble del 13 (26=2Ã—13). Si conoces la tabla del 13, puedes duplicar cada resultado para encontrar la tabla del 26. El 26 es el nÃºmero de letras en el alfabeto inglÃ©s. Pensar en 26 como 25+1 o 30-4 facilita los cÃ¡lculos.",
+      27: "Multiplicar por 27 es la tercera potencia del 3 (27=3Â³=3Ã—3Ã—3). Esta relaciÃ³n especial hace que el 27 sea importante en matemÃ¡ticas y geometrÃ­a. Como 27=3Ã—9, se puede calcular usando las tablas del 3 o del 9. Pensar en 27 como 30-3 facilita el cÃ¡lculo mental.",
+      28: "Multiplicar por 28 usa la relaciÃ³n 4Ã—7. Como 28=4Ã—7=2Ã—14, se puede aprender de mÃºltiples maneras. 28 dÃ­as es el nÃºmero de dÃ­as en febrero (cuando no es aÃ±o bisiesto). El 28 tambiÃ©n es un nÃºmero perfecto (la suma de sus divisores es igual a sÃ­ mismo: 1+2+4+7+14=28).",
+      29: "Multiplicar por 29 requiere estrategias especiales debido a que es nÃºmero primo. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 29 como 30-1: multiplica un nÃºmero por 30 y rÃ©stale el nÃºmero mismo. 29 dÃ­as es el nÃºmero de dÃ­as en febrero en aÃ±os bisiestos. Aprender la tabla del 29 desarrolla habilidades de resoluciÃ³n de problemas.",
+      30: "Multiplicar por 30 usa la relaciÃ³n 10Ã—3. Para multiplicar un nÃºmero por 30, puedes multiplicarlo por 10 y luego multiplicar el resultado por 3. 30 dÃ­as es el nÃºmero de dÃ­as en muchos meses (abril, junio, septiembre, noviembre). El 30 tambiÃ©n es media hora (30 minutos). La tabla del 30 se usa frecuentemente en cÃ¡lculos de porcentaje (30% de descuento).",
+      31: "Multiplicar por 31 requiere estrategias especiales debido a sus propiedades de nÃºmero primo. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 31 como 30+1: multiplica un nÃºmero por 30 y agrÃ©gale el nÃºmero mismo. 31 dÃ­as es el nÃºmero mÃ¡ximo de dÃ­as en muchos meses (enero, marzo, mayo, julio, agosto, octubre, diciembre). Aprender la tabla del 31 desarrolla habilidades de cÃ¡lculo mental con nÃºmeros grandes.",
+      32: "Multiplicar por 32 es la quinta potencia del 2 (2âµ=2Ã—2Ã—2Ã—2Ã—2=32). Esto hace posible aprender el 32 mediante cadenas de duplicaciÃ³n. Puedes duplicar el 16 para obtener 32. 32 grados Fahrenheit es el punto de congelaciÃ³n del agua. En informÃ¡tica, los sistemas de 32 bits son comunes. Las relaciones 32=4Ã—8=2Ã—16 ofrecen diferentes mÃ©todos de cÃ¡lculo.",
+      33: "Multiplicar por 33 usa la relaciÃ³n 3Ã—11. Si conoces la tabla del 11, puedes triplicarla, o si conoces la tabla del 3, puedes multiplicarla por 11 para encontrar la tabla del 33. El 33 es el nÃºmero repdigit de dos dÃ­gitos mÃ¡s grande (repeticiÃ³n de los mismos dÃ­gitos). Que todos los dÃ­gitos del 33 sean iguales crea algunos patrones interesantes.",
+      34: "Multiplicar por 34 es el doble del 17 (34=2Ã—17). Si conoces la tabla del 17, puedes duplicar cada resultado para encontrar la tabla del 34. La suma de los dÃ­gitos en 34 es 7 (3+4=7), lo que conduce a patrones relacionados con el 7. Pensar en 34 como 35-1 o 30+4 facilita los cÃ¡lculos.",
+      35: "Multiplicar por 35 usa la relaciÃ³n 5Ã—7. Si ambas tablas son conocidas, multiplicar por 35 es bastante fÃ¡cil. Todos los mÃºltiplos del 35 terminan en 5 o 0 (como los mÃºltiplos del 5). 35 minutos son 5 minutos mÃ¡s que media hora. La relaciÃ³n 35=5Ã—7 combina las propiedades de ambas tablas del 5 y del 7.",
+      36: "Multiplicar por 36 es una de las tablas mÃ¡s versÃ¡tiles. Como 36=6Ã—6=4Ã—9=3Ã—12=2Ã—18, se puede calcular de muchas maneras diferentes. El 36 es el cuadrado de 6 (6Â²). El 36 son mÃºltiplos de una docena completa (1 docena = 12, 3 docenas = 36). El 36 tiene muchos divisores, lo que lo hace muy Ãºtil en fracciones.",
+      37: "Multiplicar por 37 requiere estrategias especiales debido a que es nÃºmero primo. Pensar en 37 como 40-3 o 35+2 facilita los cÃ¡lculos. El 37 tiene relaciones interesantes con nÃºmeros repdigit: 37Ã—3=111. Esta propiedad especial del 37 se puede usar para algunos cÃ¡lculos trucos.",
+      38: "Multiplicar por 38 es el doble del 19 (38=2Ã—19). Si conoces la tabla del 19, puedes duplicar cada resultado para encontrar la tabla del 38. Pensar en 38 como 40-2 facilita el cÃ¡lculo mental. 38 grados Celsius es fiebre leve para la temperatura corporal humana.",
+      39: "Multiplicar por 39 usa la relaciÃ³n 3Ã—13. Como 39=3Ã—13, se puede calcular triplicando la tabla del 13 o multiplicando la tabla del 3 por 13. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 39 como 40-1. El 39 es un nÃºmero interesante divisible tanto por 3 como por 13.",
+      40: "Multiplicar por 40 usa la relaciÃ³n 4Ã—10. Para multiplicar un nÃºmero por 40, puedes multiplicarlo por 10 y luego multiplicar el resultado por 4. O multiplic por 4 y agrega un cero al final. El 40 se usa frecuentemente en la vida diaria: 40 horas de semana laboral, 40 aÃ±os se considera mediana edad. La tabla del 40 es muy regular porque son los 10s multiplicados por 4.",
+      41: "Multiplicar por 41 desarrolla habilidades de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 41 como 40+1: multiplica un nÃºmero por 40 y agrÃ©gale el nÃºmero mismo. El 41 es un nÃºmero primo y no se puede derivar simplemente de otras tablas. Aprender la tabla del 41 aumenta la capacidad de calcular rÃ¡pidamente con nÃºmeros grandes.",
+      42: "Multiplicar por 42 es una de las tablas mÃ¡s versÃ¡tiles. Como 42=6Ã—7=2Ã—21=3Ã—14, se puede calcular de mÃºltiples maneras. El 42 es famoso en la cultura de ciencia ficciÃ³n como 'La Respuesta Final al Universo, la Vida y Todo' (GuÃ­a del Autoestopista GalÃ¡ctico). Como combina las tablas del 6 y del 7, refuerza ambas.",
+      43: "Multiplicar por 43 requiere estrategias especiales debido a que es nÃºmero primo. Pensar en 43 como 40+3 o 45-2 facilita los cÃ¡lculos. El 43 es un nÃºmero primo y solo es divisible por 1 y 43. Aprender la tabla del 43 desarrolla la habilidad de pensar creativamente con nÃºmeros.",
+      44: "Multiplicar por 44 es cuatro veces el 11 (44=4Ã—11). Si conoces la tabla del 11, puedes cuadruplicarla, o multiplicar la tabla del 4 por 11 para calcularla. La relaciÃ³n 44=2Ã—22 tambiÃ©n ofrece un mÃ©todo diferente. El 44 muestra un patrÃ³n similar a repdigit y tiene propiedades de nÃºmeros pares.",
+      45: "Multiplicar por 45 usa la relaciÃ³n 5Ã—9. Si ambas tablas son conocidas, multiplicar por 45 es fÃ¡cil. 45 grados es medio Ã¡ngulo recto, un Ã¡ngulo importante en geometrÃ­a. 45 minutos son tres cuartos de hora (45 minutos = 0.75 horas). Todos los mÃºltiplos del 45 terminan en 5 o 0.",
+      46: "Multiplicar por 46 es el doble del 23 (46=2Ã—23). Si conoces la tabla del 23, puedes duplicar cada resultado para encontrar la tabla del 46. Pensar en 46 como 45+1 o 50-4 facilita los cÃ¡lculos. El 46 es el nÃºmero total de cromosomas humanos (23 pares).",
+      47: "Multiplicar por 47 requiere estrategias mentales debido a sus propiedades de nÃºmero primo. Los mÃ©todos mÃ¡s efectivos son pensar en 47 como 50-3 o 45+2. El 47 es un nÃºmero primo y tiene propiedades matemÃ¡ticas especiales. Aprender la tabla del 47 desarrolla la habilidad de trabajar cÃ³modamente con nÃºmeros complejos.",
+      48: "Multiplicar por 48 tiene muchas relaciones de factores. Como 48=6Ã—8=4Ã—12=3Ã—16=2Ã—24, se puede calcular de mÃºltiples maneras. Como el 48 es 4 veces 12, es Ãºtil en cÃ¡lculos de docenas (4 docenas). 48 horas = 2 dÃ­as, se encuentra frecuentemente en cÃ¡lculos de tiempo.",
+      49: "Multiplicar por 49 es el cuadrado de 7 (49=7Ã—7=7Â²). Esta relaciÃ³n especial requiere conocer perfectamente la tabla del 7. Pensar en 49 como 50-1 facilita muchÃ­simo el cÃ¡lculo mental. Como es un nÃºmero cuadrado, el 49 es importante en geometrÃ­a y cÃ¡lculos de Ã¡rea. El 49 tambiÃ©n es importante para patrones matemÃ¡ticos, aunque no es un tablero de ajedrez 7Ã—7.",
+      50: "Multiplicar por 50 usa la relaciÃ³n 5Ã—10 y es una de las tablas mÃ¡s fÃ¡ciles. Para multiplicar un nÃºmero por 50, puedes multiplicarlo por 5 y agregar un cero al final. O pensar en ello como la mitad de 100. El 50 se usa frecuentemente: medio siglo, y en cÃ¡lculos de porcentaje (50%=1/2).",
+      51: "Multiplicar por 51 usa la estrategia 50+1. Para multiplicar un nÃºmero por 51, multiplicÃ¡lo por 50 y agrÃ©gale el nÃºmero mismo. La relaciÃ³n 51=3Ã—17 ofrece un mÃ©todo alternativo. Aprender la tabla del 51 desarrolla la habilidad de calcular con nÃºmeros cercanos a 50.",
+      52: "Multiplicar por 52 usa la relaciÃ³n 4Ã—13. Es el nÃºmero de semanas en un aÃ±o (52 semanas) y el nÃºmero de cartas en una baraja estÃ¡ndar (52 cartas). Como 52=2Ã—26, duplicar la tabla del 26 tambiÃ©n funciona. Pensar en 52 como 50+2 facilita el cÃ¡lculo mental. Esta tabla es muy Ãºtil en cÃ¡lculos de tiempo y calendario.",
+      53: "Multiplicar por 53 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. Los mÃ©todos mÃ¡s prÃ¡cticos son pensar en 53 como 50+3 o 55-2. El 53 es un nÃºmero primo y solo es divisible por 1 y 53. Aprender la tabla del 53 aumenta la capacidad de trabajar con nÃºmeros primos grandes y profundiza el pensamiento matemÃ¡tico.",
+      54: "Multiplicar por 54 es una de las tablas mÃ¡s versÃ¡tiles. Como 54=6Ã—9=2Ã—27=3Ã—18, se puede calcular de muchas maneras diferentes. El 54 es 3 veces la suma de los nÃºmeros del 1 al 10 (1+2+...+10=55 aproximadamente). Como combina las tablas del 6 y del 9, refuerza ambas. Tener muchos divisores lo hace Ãºtil en cÃ¡lculos de fracciones.",
+      55: "Multiplicar por 55 usa la relaciÃ³n 5Ã—11. Si ambas tablas son conocidas, multiplicar por 55 es fÃ¡cil. La estrategia 55=50+5 tambiÃ©n es muy prÃ¡ctica. El 55 es la suma de los nÃºmeros del 1 al 10 (1+2+3+...+10=55), esta relaciÃ³n matemÃ¡tica especial lo hace interesante. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo.",
+      56: "Multiplicar por 56 usa la relaciÃ³n 7Ã—8. Como combina estas dos tablas difÃ­ciles, refuerza ambas. Las alternativas 56=4Ã—14=2Ã—28 ofrecen diferentes estrategias. El 56 es el nÃºmero total de horas en 7 dÃ­as con jornadas laborales de 8 horas (7Ã—8). Pensar en 56 como 60-4 tambiÃ©n facilita el cÃ¡lculo mental.",
+      57: "Multiplicar por 57 usa la relaciÃ³n 3Ã—19. Triplicar la tabla del 19 o multiplicar la tabla del 3 por 19 funciona. Pensar en 57 como 60-3 o 55+2 facilita el cÃ¡lculo. Como 57=3Ã—19, es divisible tanto por 3 como por 19. Aprender la tabla del 57 desarrolla la habilidad de trabajar con nÃºmeros grandes de nivel medio.",
+      58: "Multiplicar por 58 es el doble del 29 (58=2Ã—29). Si conoces la tabla del 29, puedes duplicar cada resultado para encontrar la tabla del 58. Pensar en 58 como 60-2 o 50+8 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. Esta tabla refuerza estrategias de duplicaciÃ³n y aproximaciÃ³n a nÃºmeros redondos.",
+      59: "Multiplicar por 59 requiere estrategias especiales debido a sus propiedades de nÃºmero primo y proximidad al 60. El mÃ©todo mÃ¡s efectivo es pensar en 59 como 60-1: multiplica un nÃºmero por 60 y rÃ©stale el nÃºmero mismo. El 59 es un nÃºmero primo y solo es divisible por 1 y 59. La tabla del 59 proporciona contexto para cÃ¡lculos de minutos y tiempo (59 minutos) debido a su proximidad al 60.",
+      60: "Multiplicar por 60 usa la relaciÃ³n 6Ã—10 y es muy Ãºtil. Para multiplicar un nÃºmero por 60, puedes multiplicarlo por 6 y agregar un cero al final. El 60 es el nÃºmero de minutos en una hora, el nÃºmero de segundos en un minuto, y un sexto de los 360Â° de un cÃ­rculo. Hay muchas relaciones de factores como 60=2Ã—30=3Ã—20=4Ã—15=5Ã—12. Esta tabla es crÃ­tica para cÃ¡lculos de tiempo.",
+      61: "Multiplicar por 61 requiere estrategias especiales debido a sus propiedades de nÃºmero primo y proximidad al 60. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 61 como 60+1: multiplica un nÃºmero por 60 y agrÃ©gale el nÃºmero mismo. El 61 es un nÃºmero primo y solo es divisible por 1 y 61. Aprender la tabla del 61 desarrolla la habilidad de cÃ¡lculo mental con nÃºmeros por encima de 60.",
+      62: "Multiplicar por 62 es el doble del 31 (62=2Ã—31). Si conoces la tabla del 31, puedes duplicar cada resultado para encontrar la tabla del 62. Pensar en 62 como 60+2 o 65-3 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. Esta tabla es Ãºtil para duplicaciÃ³n y cÃ¡lculos cercanos a 60.",
+      63: "Multiplicar por 63 usa la relaciÃ³n 7Ã—9. Como combina estas dos tablas importantes, refuerza ambas. La alternativa 63=3Ã—21 ofrece una estrategia diferente. Pensar en 63 como 60+3 o 65-2 facilita el cÃ¡lculo mental. El 63 es muy versÃ¡til porque es divisible tanto por 7 como por 9.",
+      64: "Multiplicar por 64 es una potencia de 2 (64=2â¶=8Ã—8). Como la arquitectura de 64 bits es comÃºn en informÃ¡tica, es importante en la era tecnolÃ³gica. La relaciÃ³n 64=8Â² (ocho al cuadrado) es crÃ­tica para entender nÃºmeros cuadrados. Pensar en 64 como 60+4 o 65-1 facilita el cÃ¡lculo. Hay 64 casillas en un tablero de ajedrez (8Ã—8).",
+      65: "Multiplicar por 65 usa la relaciÃ³n 5Ã—13. Si ambas tablas son conocidas, multiplicar por 65 es fÃ¡cil. El 65 se usa como edad de jubilaciÃ³n en muchos paÃ­ses. Pensar en 65 como 60+5 o 70-5 facilita el cÃ¡lculo mental. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo.",
+      66: "Multiplicar por 66 usa la relaciÃ³n 6Ã—11 o la relaciÃ³n 2Ã—33. Como 66=6Ã—11, tiene patrones similares a repdigit. Pensar en 66 como 60+6 o 70-4 facilita el cÃ¡lculo. El 66 es divisible tanto por 6 como por 11. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares.",
+      67: "Multiplicar por 67 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. Los mÃ©todos mÃ¡s prÃ¡cticos son pensar en 67 como 70-3 o 65+2. El 67 es un nÃºmero primo y solo es divisible por 1 y 67. Aprender la tabla del 67 aumenta la capacidad de trabajar con nÃºmeros primos grandes.",
+      68: "Multiplicar por 68 usa la relaciÃ³n 4Ã—17 o la relaciÃ³n 2Ã—34. Cuadruplicar la tabla del 17 o duplicar la tabla del 34 funciona. Pensar en 68 como 70-2 o 60+8 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 68 es divisible tanto por 4 como por 17.",
+      69: "Multiplicar por 69 usa la relaciÃ³n 3Ã—23. Triplicar la tabla del 23 o multiplicar la tabla del 3 por 23 funciona. La estrategia mÃ¡s fÃ¡cil es pensar en 69 como 70-1: multiplica un nÃºmero por 70 y rÃ©stale el nÃºmero mismo. Como 69=3Ã—23, es divisible tanto por 3 como por 23. Esta tabla es Ãºtil para cÃ¡lculos cercanos a 70.",
+      70: "Multiplicar por 70 usa la relaciÃ³n 7Ã—10 y es muy Ãºtil. Para multiplicar un nÃºmero por 70, puedes multiplicarlo por 7 y agregar un cero al final. El 70 se asocia con la esperanza de vida promedio de una persona (entre 70-80 en la mayorÃ­a de los paÃ­ses). Hay relaciones de factores alternativos como 70=2Ã—35=5Ã—14. Esta tabla refuerza la tabla del 7.",
+      71: "Multiplicar por 71 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. El mÃ©todo mÃ¡s prÃ¡ctico es pensar en 71 como 70+1: multiplica un nÃºmero por 70 y agrÃ©gale el nÃºmero mismo. El 71 es un nÃºmero primo y solo es divisible por 1 y 71. Aprender la tabla del 71 desarrolla la capacidad de calcular rÃ¡pidamente con nÃºmeros primos grandes.",
+      72: "Multiplicar por 72 es una de las tablas mÃ¡s versÃ¡tiles. Como 72=8Ã—9=6Ã—12=4Ã—18=3Ã—24=2Ã—36, se puede calcular de muchas maneras diferentes. El 72 es 3 veces el nÃºmero de horas en un dÃ­a (72 horas = 3 dÃ­as). Tener muchos divisores lo hace extremadamente Ãºtil en cÃ¡lculos de fracciones. El 72 es 6 veces 12 (6 docenas).",
+      73: "Multiplicar por 73 desarrolla propiedades de nÃºmero primo y estrategias de cÃ¡lculo mental. Los mÃ©todos mÃ¡s prÃ¡cticos son pensar en 73 como 70+3 o 75-2. El 73 es un nÃºmero primo y solo es divisible por 1 y 73. El 73 tambiÃ©n es el primo nÃºmero 21 y tiene propiedades matemÃ¡ticas interesantes.",
+      74: "Multiplicar por 74 usa la relaciÃ³n 2Ã—37. Si conoces la tabla del 37, puedes duplicar cada resultado para encontrar la tabla del 74. Pensar en 74 como 70+4 o 75-1 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 74 es divisible tanto por 2 como por 37.",
+      75: "Multiplicar por 75 usa las relaciones 3Ã—25=5Ã—15. El 75 es tres cuartos de 100 (75%=3/4). TambiÃ©n se puede expresar como 75=3Ã—5Ã—5. Pensar en 75 como 70+5 o 80-5 facilita el cÃ¡lculo mental. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. Se usa frecuentemente en cÃ¡lculos de porcentaje (75%=Â¾).",
+      76: "Multiplicar por 76 usa la relaciÃ³n 4Ã—19 o la relaciÃ³n 2Ã—38. Cuadruplicar la tabla del 19 o duplicar la tabla del 38 funciona. Pensar en 76 como 75+1 o 80-4 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 76 es divisible tanto por 4 como por 19.",
+      77: "Multiplicar por 77 usa la relaciÃ³n 7Ã—11. Si ambas tablas son conocidas, multiplicar por 77 es fÃ¡cil. El 77 muestra un patrÃ³n similar a repdigit (repeticiÃ³n de 7s). Pensar en 77 como 80-3 o 75+2 facilita el cÃ¡lculo. Como 77=7Ã—11, es divisible tanto por 7 como por 11.",
+      78: "Multiplicar por 78 usa las relaciones 2Ã—39=3Ã—26=6Ã—13. Se puede calcular de mÃºltiples maneras. Pensar en 78 como 80-2 o 75+3 facilita el cÃ¡lculo mental. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 78 es divisible por 2, 3, 6, 13, 26, 39.",
+      79: "Multiplicar por 79 requiere estrategias especiales debido a sus propiedades de nÃºmero primo. La estrategia mÃ¡s fÃ¡cil es pensar en 79 como 80-1: multiplica un nÃºmero por 80 y rÃ©stale el nÃºmero mismo. El 79 es un nÃºmero primo y solo es divisible por 1 y 79. Aprender la tabla del 79 establece una base perfecta para cÃ¡lculos cercanos a 80.",
+      80: "Multiplicar por 80 usa la relaciÃ³n 8Ã—10 y es muy Ãºtil. Para multiplicar un nÃºmero por 80, puedes multiplicarlo por 8 y agregar un cero al final. Hay relaciones de factores alternativos como 80=2Ã—40=4Ã—20=5Ã—16. El 80 se asocia con el lÃ­mite superior de la esperanza de vida promedio (entre 70-80 en la mayorÃ­a de los paÃ­ses). Esta tabla refuerza la tabla del 8.",
+      81: "Multiplicar por 81 es el cuadrado de 9 (81=9Ã—9=9Â²). Esta relaciÃ³n especial requiere conocer perfectamente la tabla del 9. TambiÃ©n es interesante que 81=3â´ (la cuarta potencia de 3). Pensar en 81 como 80+1 facilita el cÃ¡lculo mental. Como 81 es un nÃºmero cuadrado, es importante en geometrÃ­a y cÃ¡lculos de Ã¡rea.",
+      82: "Multiplicar por 82 usa la relaciÃ³n 2Ã—41. Si conoces la tabla del 41, puedes duplicar cada resultado para encontrar la tabla del 82. Pensar en 82 como 80+2 o 85-3 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 82 es divisible tanto por 2 como por 41.",
+      83: "Multiplicar por 83 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. Los mÃ©todos mÃ¡s prÃ¡cticos son pensar en 83 como 80+3 o 85-2. El 83 es un nÃºmero primo y solo es divisible por 1 y 83. Aprender la tabla del 83 aumenta la capacidad de trabajar con nÃºmeros primos grandes.",
+      84: "Multiplicar por 84 es una de las tablas mÃ¡s versÃ¡tiles. Como 84=7Ã—12=6Ã—14=4Ã—21=3Ã—28=2Ã—42, se puede calcular de muchas maneras diferentes. El 84 es 12 veces el nÃºmero de horas en una semana, o 7 veces un medio dÃ­a de 12 horas. Tener muchos divisores lo hace Ãºtil en cÃ¡lculos de fracciones.",
+      85: "Multiplicar por 85 usa la relaciÃ³n 5Ã—17. Si ambas tablas son conocidas, multiplicar por 85 es fÃ¡cil. La estrategia 85=80+5 o 90-5 tambiÃ©n es muy prÃ¡ctica. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. El 85 es divisible tanto por 5 como por 17.",
+      86: "Multiplicar por 86 usa la relaciÃ³n 2Ã—43. Si conoces la tabla del 43, puedes duplicar cada resultado para encontrar la tabla del 86. Pensar en 86 como 90-4 o 85+1 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 86 es divisible tanto por 2 como por 43.",
+      87: "Multiplicar por 87 usa la relaciÃ³n 3Ã—29. Triplicar la tabla del 29 o multiplicar la tabla del 3 por 29 funciona. Pensar en 87 como 90-3 o 85+2 facilita el cÃ¡lculo. Como 87=3Ã—29, es divisible tanto por 3 como por 29.",
+      88: "Multiplicar por 88 usa la relaciÃ³n 8Ã—11 o la relaciÃ³n 4Ã—22. El 88 es un nÃºmero repdigit (repeticiÃ³n de 8s). TambiÃ©n se puede expresar como 88=2Ã—44. Pensar en 88 como 90-2 o 80+8 facilita el cÃ¡lculo mental. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares.",
+      89: "Multiplicar por 89 requiere estrategias especiales debido a sus propiedades de nÃºmero primo. La estrategia mÃ¡s fÃ¡cil es pensar en 89 como 90-1: multiplica un nÃºmero por 90 y rÃ©stale el nÃºmero mismo. El 89 es un nÃºmero primo y solo es divisible por 1 y 89. Aprender la tabla del 89 establece una base perfecta para cÃ¡lculos cercanos a 90.",
+      90: "Multiplicar por 90 usa la relaciÃ³n 9Ã—10 y es muy Ãºtil. Para multiplicar un nÃºmero por 90, puedes multiplicarlo por 9 y agregar un cero al final. Hay muchas relaciones de factores como 90=2Ã—45=3Ã—30=5Ã—18=6Ã—15. El 90 grados es un Ã¡ngulo recto, muy importante en geometrÃ­a. Esta tabla refuerza la tabla del 9.",
+      91: "Multiplicar por 91 usa la relaciÃ³n 7Ã—13. Si ambas tablas son conocidas, multiplicar por 91 es fÃ¡cil. Que 91=7Ã—13 es importante para entender el producto de nÃºmeros primos. Pensar en 91 como 90+1 facilita el cÃ¡lculo mental. Es divisible tanto por 7 como por 13.",
+      92: "Multiplicar por 92 usa la relaciÃ³n 4Ã—23 o la relaciÃ³n 2Ã—46. Cuadruplicar la tabla del 23 funciona. Pensar en 92 como 90+2 o 100-8 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 92 es divisible tanto por 4 como por 23.",
+      93: "Multiplicar por 93 usa la relaciÃ³n 3Ã—31. Triplicar la tabla del 31 o multiplicar la tabla del 3 por 31 funciona. Pensar en 93 como 90+3 o 100-7 facilita el cÃ¡lculo. Como 93=3Ã—31, es divisible tanto por 3 como por 31.",
+      94: "Multiplicar por 94 usa la relaciÃ³n 2Ã—47. Si conoces la tabla del 47, puedes duplicar cada resultado para encontrar la tabla del 94. Pensar en 94 como 100-6 o 90+4 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 94 es divisible tanto por 2 como por 47.",
+      95: "Multiplicar por 95 usa la relaciÃ³n 5Ã—19. Si ambas tablas son conocidas, multiplicar por 95 es fÃ¡cil. La estrategia 95=100-5 es muy prÃ¡ctica. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. El 95 es divisible tanto por 5 como por 19. Es Ãºtil en cÃ¡lculos de porcentaje (95%).",
+      96: "Multiplicar por 96 es una de las tablas mÃ¡s versÃ¡tiles. Como 96=8Ã—12=6Ã—16=4Ã—24=3Ã—32=2Ã—48, se puede calcular de muchas maneras diferentes. Que 96=2âµÃ—3 es importante en tÃ©rminos de potencias de 2. Tener muchos divisores lo hace Ãºtil en cÃ¡lculos de fracciones.",
+      97: "Multiplicar por 97 requiere estrategias especiales debido a sus propiedades de nÃºmero primo. La estrategia mÃ¡s fÃ¡cil es pensar en 97 como 100-3: multiplica un nÃºmero por 100 y rÃ©stale 3 veces el nÃºmero. El 97 es un nÃºmero primo y solo es divisible por 1 y 97. Ser el nÃºmero primo mÃ¡s cercano a 100 facilita mucho el cÃ¡lculo mental.",
+      98: "Multiplicar por 98 usa la relaciÃ³n 2Ã—49. Si conoces la tabla del 49, puedes duplicar cada resultado para encontrar la tabla del 98. La relaciÃ³n 98=2Ã—7Â² es interesante. Pensar en 98 como 100-2 es la estrategia mÃ¡s fÃ¡cil. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares.",
+      99: "Multiplicar por 99 usa la relaciÃ³n 9Ã—11. El 99 es un nÃºmero repdigit (repeticiÃ³n de 9s). Pensar en 99 como 100-1 es la estrategia mÃ¡s fÃ¡cil: multiplica un nÃºmero por 100 y rÃ©stale el nÃºmero mismo. Como 99=9Ã—11, es divisible tanto por 9 como por 11. Es una de las tablas mÃ¡s fÃ¡ciles para el cÃ¡lculo mental.",
+      100: "Multiplicar por 100 es la tabla mÃ¡s fÃ¡cil! Para multiplicar un nÃºmero por 100, solo agrega dos ceros al final. Que 100=10Ã—10=10Â² es fundamental para entender el sistema decimal. El 100 es la base de cÃ¡lculos de porcentaje (100%=completo) y el sistema decimal. Tiene importancia crÃ­tica para monedas, unidades de medida y matemÃ¡tica cotidiana.",
     }
-    return meanings[number] || `Multiplicar por ${number} significa sumar el número ${number} repetidamente. Cada vez que multiplicas, estás contando grupos de ${number}.`
+    return meanings[number] || `Multiplicar por ${number} significa sumar el nÃºmero ${number} repetidamente. Cada vez que multiplicas, estÃ¡s contando grupos de ${number}.`
   }
 
   const getWhyImportant = () => {
     const importance: { [key: number]: string } = {
-      1: "La tabla del 1 es la base de todas las opérations de multiplication. Enseña a los estudiantes que los números tienen una identidad: al multiplicarse por 1, permanecen como ellos mismos. Este concepto es crucial para comprender propiedades algebraicas posteriores. Aunque parezca simple, Apprenezr esta tabla genera confianza y establece el patrón de que la multiplicación es ordenada y predecible.",
-      2: "La tabla del 2 es generalmente la primera tabla de multiplicación real que Apprenezn los estudiantes, y por una buena razón. Duplicar es un concepto natural que los niños encuentran diariamente. Apprenezr esta tabla hace el cálculo mental mucho más rápido y prepara a los estudiantes para números pares, fracciones (mitades) y división básica. Muchos estudiantes la encuentran la tabla más fácil, lo que genera confianza para tablas más difíciles.",
-      3: "La tabla del 3 cierra la brecha entre las tablas fáciles y desafiantes. Requiere que los estudiantes vayan más allá de la simple duplicación y comiencen a reconocer nuevos patrones. Esta tabla se ve constantemente en contextos del mundo real como contar de tres en tres, entender formas triangulares y trabajar con tiempo (tres periodos por día). Los estudiantes que Apprenezn la tabla del 3 demuestran que pueden hacer conteo abstracto.",
-      4: "Apprenezr la tabla del 4 refuerza la comprensión de números pares y pensamiento geométrico de los estudiantes. Como 4 es el doble de 2, los estudiantes pueden usar la tabla del 2 como escalera, lo que enseña eficiencia matemática. Esta tabla es necesaria para entender cuadrados, cálculos de área y divisiones por cuartos. También se usa frecuentemente en situaciones cotidianas como contar patas de sillas o ruedas de autos.",
-      5: "La tabla del 5 es una de las más prácticas y ricas en patrones. Los estudiantes la aman porque cada respuesta termina en 0 o 5, haciéndola extremadamente predecible. Esta tabla se conecta directamente con el dinero (contar de cinco en cinco), decir la hora (intervalos de 5 minutos) y sistemas de medición. Apprenezr la tabla del 5 da confianza a los estudiantes y muestra que las matemáticas tienen patrones hermosos y consistentes.",
-      6: "Apprenezr la tabla del 6 permite a los estudiantes transicionar a multiplicaciones más complejas. Que 6 sea múltiplo tanto de 2 como de 3 muestra a los estudiantes la propiedad distributiva de la multiplicación. Esta tabla se ve constantemente en la vida diaria: contar cartones de huevos, juegos de dados, paquetes de seis. Apprenezr la tabla del 6 da a los estudiantes confianza para trabajar con números más grandes.",
-      7: "La tabla del 7 realmente pone a prueba las habilidades de memorización y reconocimiento de patrones de los estudiantes. Como 7 es un número primo, no se puede derivar fácilmente de otras tablas, haciéndola una experiencia de aprendizaje desafiante pero gratificante. Apprenezr la tabla del 7 da a los estudiantes la oportunidad de superar desafíos y desarrollar nuevas estrategias. Se usa en muchos lugares, desde contar los días de la semana hasta cálculos de calendario.",
-      8: "Apprenezr la tabla del 8 ayuda a los estudiantes a reforzar estrategias de duplicación. Como 8 = 2 × 2 × 2, los estudiantes pueden Apprenezr la tabla del 8 usando las tablas del 2 y 4. Esta tabla es importante en cálculos de área (figuras de 8 lados), teoría musical (octavas) y ciencias de la computación (8 bits = 1 byte). Apprenezr la tabla del 8 desarrolla habilidades de pensamiento matemático.",
-      9: "La tabla del 9 tiene uno de los patrones matemáticos más fascinantes. La regla de suma de dígitos y el truco de los dedos muestran a los estudiantes el lado mágico de las matemáticas. Apprenezr la tabla del 9 no es solo memorización, enseña reconocimiento de patrones y comprensión de relaciones matemáticas. Esta tabla es perfecta para desarrollar habilidades de cálculo mental y construir confianza matemática.",
-      10: "La tabla del 10 es fundamental para enseñar el concepto de valor posicional. Cuando los estudiantes Apprenezn a multiplicar por 10, comienzan a entender cómo funciona nuestro sistema decimal. Esta tabla es vital para cálculos de dinero, conversiones entre unidades de medida y trabajo con números grandes. Apprenezr la tabla del 10 crea una base sólida para entender todas las demás tablas de multiplicación y mejora enormemente las habilidades de matemática mental.",
-      11: "La tabla del 11 es perfecta para desarrollar habilidades de reconocimiento de patrones. El patrón de repetición que surge al multiplicar con números de un dígito (11×4=44) muestra a los estudiantes la belleza de las matemáticas. Apprenezr la tabla del 11 desarrolla estrategias de cálculo mental y aumenta la capacidad de reconocer patrones numéricos. Esta tabla genera confianza para trabajar con números grandes.",
-      12: "La tabla del 12 es una de las más utilizadas en la vida diaria. El 12 se usa en muchas áreas como contar docenas, leer el reloj y planificación anual. Que el 12 tenga muchos divisores (1,2,3,4,6,12) lo hace ideal para entender fracciones y proporciones. Apprenezr esta tabla mejora significativamente las habilidades matemáticas prácticas.",
-      13: "La tabla del 13 desarrolla la resiliencia matemática de los estudiantes. Por ser un número primo, no hay atajos fáciles, lo que requiere verdadera comprensión. Apprenezr la tabla del 13 fortalece las habilidades aritméticas mentales y enseña a pensar en los números de diferentes maneras (estrategia de descomposición 10+3).",
-      14: "La tabla del 14 ayuda a reforzar la tabla del 7. La relación 14=2×7 muestra a los estudiantes la propiedad distributiva de la multiplicación. Es necesaria para calcular periodos semanales y quincenales. Esta tabla profundiza la comprensión de las propiedades de números pares y estrategias de duplicación.",
-      15: "La tabla del 15 combina tanto la tabla del 3 como la del 5, lo cual es excelente para entender conexiones matemáticas. Es vital para cálculos de cuarto de hora (15 minutos). Apprenezr la tabla del 15 enseña a entender reglas de divisibilidad y ver relaciones entre números. Se usa frecuentemente en cálculos de porcentaje (como propina del 15%).",
-      16: "La tabla del 16 es perfecta para entender sistemas binarios y números exponenciales. La relación 24=16 muestra el poder de los exponentes. Tiene importancia crítica en ciencias de la computación (16 bits, sistema hexadecimal). Esta tabla desarrolla la comprensión de estrategias de múltiple duplicación y secuencias geométricas.",
-      17: "La tabla del 17 es una herramienta excelente para desarrollar estrategias de matemática mental. Ser un número primo obliga a los estudiantes a encontrar métodos creativos de cálculo (estrategias 20-3 o 10+7). Esta tabla desarrolla habilidades de resolución de problemas y flexibilidad con los números.",
-      18: "La tabla del 18 muestra la riqueza de las relaciones matemáticas. Que 18=2×9=3×6 enseña a entender diferentes combinaciones de factores. Tiene importancia cultural como edad de mayoría de edad. Esta tabla enseña a abordar un problema con múltiples estrategias y elegir el método más eficiente.",
-      19: "La tabla del 19 maximiza las habilidades de cálculo mental. La estrategia '20-1' enseña a los estudiantes a usar números complementarios. Ser un número primo enfatiza la comprensión real más que el reconocimiento de patrones. Esta tabla desarrolla la habilidad de dividir cálculos complejos en pasos simples.",
-      20: "La tabla del 20 es crítica para reforzar el sistema de valor posicional y trabajar cómodamente con números grandes. La relación 20=2×10 profundiza la comprensión del sistema decimal. Se usa constantemente en cálculos de dinero (billetes de 20) y mediciones. Esta tabla forma la base para cálculos de porcentaje (descuento del 20%).",
-      21: "La tabla del 21 es perfecta para entender la relación de factorización 3×7. Esta tabla muestra a los estudiantes que un número puede tener más de un factor. El 21 tiene importancia social como edad para transacciones legales y mayoría de edad. Apprenezr esta tabla profundiza la comprensión de las relaciones entre factores y múltiplos.",
-      22: "La tabla del 22 ayuda a reforzar la tabla del 11. La relación 22=2×11 fortalece las estrategias de duplicación. Se usa en deportes (equipo de fútbol) y conteo diario. Esta tabla desarrolla la comprensión de propiedades de números pares y relaciones matemáticas.",
-      23: "La tabla del 23 desarrolla habilidades para trabajar con números primos. Como no se puede derivar de otras tablas, los estudiantes deben desarrollar nuevas estrategias. El 23 es un número importante en biología (pares de cromosomas). Apprenezr esta tabla aumenta la flexibilidad mental y capacidades de resolución de problemas.",
-      24: "La tabla del 24 es una de las más útiles en la vida diaria. Se encuentra constantemente debido a la relación día-hora (24 horas). Que el 24 tenga muchos divisores (1,2,3,4,6,8,12,24) lo hace ideal para fracciones y proporciones. Esta tabla desarrolla habilidades de gestión del tiempo y planificación.",
-      25: "La tabla del 25 es fundamental para entender números cuadrados (5²). Tiene un papel central en sistemas monetarios (25 centavos). El patrón regular del 25 (25,50,75,00) facilita mucho los cálculos. Esta tabla se usa frecuentemente en cálculos de porcentaje (25%=1/4) y fracciones.",
-      26: "La tabla del 26 ayuda a reforzar la tabla del 13. Es importante en sistemas alfabéticos (26 letras). La relación 26=2×13 muestra la conexión entre números primos y pares. Apprenezr esta tabla desarrolla la capacidad de ver relaciones matemáticas.",
-      27: "La tabla del 27 es crítica para entender números exponenciales (3³). Es importante en geometría (cubo 3×3×3 en espacio 3D) y cálculos de volumen. La relación 27=3×9 fortalece la conexión entre las tablas del 3 y 9. Esta tabla forma una base en pensamiento matemático y números exponenciales.",
-      28: "La tabla del 28 es importante para conocimiento de calendario (mes de febrero). Que el 28 sea un número perfecto (suma de divisores igual a sí mismo) muestra propiedades matemáticas especiales. La relación 28=4×7 profundiza la comprensión de factorización. Esta tabla se usa en cálculos de tiempo y planificación semanal.",
-      29: "La tabla del 29 es perfecta para perfeccionar estrategias de números primos. La relación 30-1 enseña a usar números complementarios. Es necesaria para conocimiento de calendario (febrero en año bisiesto). Apprenezr esta tabla maximiza las habilidades de cálculo mental.",
-      30: "La tabla del 30 es el puente entre el sistema decimal y la multiplicación. La relación 30=3×10 fortalece la comprensión del valor posicional. Se usa constantemente en tiempo (media hora), calendario (días del mes) y medidas de ángulo (30°). Esta tabla forma la base de cálculos de porcentaje (descuento del 30%) y matemática práctica.",
-      31: "Multiplicar por 31 es crítico para el conocimiento del calendario. Como la mayoría de los meses tienen 31 días, se usa constantemente en cálculos de fecha y tiempo. Como 31 es un número primo, es perfecto para desarrollar estrategias de cálculo mental. La estrategia 30+1 enseña a usar números complementarios y proporciona competencia en cálculos de números grandes.",
-      32: "Multiplicar por 32 es importante para entender números exponenciales (25) y sistemas binarios. Como la arquitectura de 32 bits es común en ciencias de la computación, tiene importancia práctica en la era de la tecnología. Es perfecto para perfeccionar cadenas de duplicación. Se usa en conversiones de temperatura (Fahrenheit).",
-      33: "Multiplicar por 33 fortalece las relaciones matemáticas combinando las tablas del 3 y 11. La propiedad repdigit (33, 66, 99...) facilita el reconocimiento de patrones. La relación 33=3×11 profundiza la comprensión de las conexiones entre factores y múltiplos. Esta tabla enseña estrategias de multiplicación múltiple.",
-      34: "Multiplicar por 34 ayuda a reforzar la tabla del 17. La relación 34=2×17 muestra la conexión entre números primos y pares. Esta tabla desarrolla flexibilidad mental y métodos de cálculo alternativos (35-1, 30+4). Refuerza propiedades de números pares y habilidades de duplicación.",
-      35: "Multiplicar por 35 desarrolla habilidades de factorización como combinación de las tablas del 5 y 7. La relación 5×7 refuerza ambas tablas. Se usa en cálculos de tiempo (35 minutos) y matemática cotidiana. Esta tabla crea patrones reconocibles con el patrón del 5 (último dígito 5 o 0).",
-      36: "Multiplicar por 36 es una de las tablas más útiles. Que 36=6² es crítico para entender números cuadrados. Tener muchos divisores (1,2,3,4,6,9,12,18,36) lo hace ideal para fracciones y proporciones. Se usa frecuentemente en el sistema de docenas (3 docenas) y medidas de ángulos (un décimo de 360°).",
-      37: "Multiplicar por 37 perfecciona propiedades de números primos y estrategias de matemática mental. Relaciones especiales como 37×3=111 proporcionan comprensión profunda de patrones numéricos. Estrategias como 40-3 o 35+2 desarrollan habilidades creativas de resolución de problemas. Esta tabla fomenta la curiosidad matemática y el espíritu de descubrimiento.",
-      38: "Multiplicar por 38 ayuda a reforzar la tabla del 19. La relación 38=2×19 combina estrategias de duplicación y números primos. El enfoque 40-2 enseña a usar números complementarios. Tiene importancia práctica en contexto de salud (temperatura corporal).",
-      39: "Multiplicar por 39 fortalece las conexiones matemáticas combinando las tablas del 3 y 13. La estrategia 40-1 enseña a calcular rápidamente usando números redondos. Esta tabla desarrolla habilidades de factorización múltiple (3×13) y proporciona flexibilidad mental.",
-      40: "La tabla del 40 es perfecta para comprender profundamente el sistema decimal. La relación 40=4×10 muestra la conexión entre valor posicional y multiplicación. Se usa mucho en la vida diaria debido a horas de trabajo (semana de 40 horas) y normas sociales (40 años). Esta tabla forma una base para números grandes y cálculos de porcentaje.",
-      41: "La tabla del 41 lleva las estrategias de números primos a un nivel avanzado. El enfoque 40+1 proporciona dominio en el uso de números complementarios. Por ser un número primo, requiere flexibilidad mental y resolución creativa de problemas. Esta tabla desarrolla la habilidad de calcular rápidamente con números grandes.",
-      42: "La tabla del 42 perfecciona las habilidades de factorización. Las relaciones 42=6×7=2×21=3×14 enseñan a ver conexiones matemáticas. Como combina las tablas del 6 y 7, refuerza ambas. Es memorable debido a referencias de la cultura pop (Guía del Autoestopista Galáctico).",
-      43: "La tabla del 43 desarrolla propiedades de números primos y estrategias de cálculo mental. Enfoques alternativos como 40+3 o 45-2 proporcionan flexibilidad en el pensamiento matemático. Esta tabla aumenta la habilidad de trabajar creativamente con números y enriquece las estrategias de resolución de problemas.",
-      44: "La tabla del 44 es perfecta para reforzar la tabla del 11. La relación 44=4×11 desarrolla habilidades de multiplicación múltiple. El patrón similar a repdigit (44, 88) facilita el reconocimiento visual. Profundiza la comprensión de propiedades de números pares y ser múltiplo de cuatro.",
-      45: "La tabla del 45 fortalece las relaciones matemáticas combinando las tablas del 5 y 9. Se usa frecuentemente en geometría (ángulo de 45°) y cálculos de tiempo (tres cuartos de hora). La relación 5×9 refuerza tanto la tabla del 5 como la del 9. Esta tabla es muy útil para matemática práctica y cálculos cotidianos.",
-      46: "La tabla del 46 ayuda a reforzar la tabla del 23. La relación 46=2×23 combina estrategias de duplicación y números primos. Es un número importante en biología (46 cromosomas). Esta tabla desarrolla propiedades de números pares y cálculos con números grandes.",
-      47: "La tabla del 47 maximiza las estrategias de números primos. El enfoque 50-3 perfecciona la estrategia de restar de números redondos. Debido a propiedades primas, requiere flexibilidad mental y métodos de solución alternativos. Esta tabla proporciona habilidades avanzadas de matemática mental.",
-      48: "La tabla del 48 es una de las más versátiles. Tener muchos divisores (1,2,3,4,6,8,12,16,24,48) lo hace ideal para fracciones y proporciones. Se usa en el sistema de docenas (4 docenas) y cálculos de tiempo (48 horas=2 días). Las relaciones de factores múltiples profundizan la comprensión de conexiones matemáticas.",
-      49: "La tabla del 49 es crítica para entender números cuadrados (7²). Requiere conocer perfectamente la tabla del 7 y la refuerza. La estrategia 50-1 enseña cálculo rápido usando números redondos. Es importante en geometría y cálculos de área debido a propiedades cuadradas.",
-      50: "La tabla del 50 forma la base de cálculos de porcentaje (50%=1/2). La relación 5×10 combina el sistema decimal y la multiplicación. Está directamente conectada con el concepto de mitad (½). Se usa constantemente en sistemas monetarios (50 centavos, 50 pesos), mediciones de tiempo y matemática cotidiana. Esta tabla mejora significativamente las habilidades de cálculo práctico.",
-      51: "La tabla del 51 desarrolla la habilidad de trabajar con números cercanos a 50. La estrategia 50+1 refuerza el uso de números complementarios. La relación 3×17 fortalece las habilidades de factorización. Tiene importancia práctica en el contexto de juegos de cartas (52 cartas). Esta tabla enseña a calcular con pequeñas desviaciones de números redondos.",
-      52: "La tabla del 52 es crítica para cálculos de tiempo y calendario. Debido al número de semanas en un año (52 semanas), se usa constantemente en planificación y cálculos anuales. La relación 4×13 refuerza tanto la tabla del 4 como la del 13. La baraja de cartas (52 cartas) proporciona contexto al pensamiento matemático. Esta tabla es muy importante para matemática de vida práctica.",
-      53: "La tabla del 53 lleva las estrategias de números primos a un nivel avanzado. El enfoque 50+3 desarrolla flexibilidad mental y métodos alternativos de cálculo. Debido a propiedades primas, requiere resolución creativa de problemas. Esta tabla aumenta la habilidad de trabajar con números primos grandes y expande la profundidad del pensamiento matemático.",
-      54: "La tabla del 54 perfecciona las habilidades de factorización múltiple. Las relaciones 54=6×9=2×27=3×18 enseñan a ver conexiones matemáticas. Como combina las tablas del 6 y 9, fortalece ambas. Tener muchos divisores (1,2,3,6,9,18,27,54) lo hace ideal para fracciones y proporciones. Esta tabla fomenta el pensamiento matemático flexible.",
-      55: "La tabla del 55 refuerza las relaciones matemáticas combinando las tablas del 5 y 11. La propiedad de número triangular (1+2+...+10=55) profundiza la comprensión de patrones matemáticos. La relación 5×11 fortalece ambas tablas. Esta tabla forma una base para patrones numéricos y fórmulas de suma.",
-      56: "La tabla del 56 refuerza tanto la tabla del 7 como la del 8. 7×8=56 es uno de los pares de multiplicación más difíciles y Apprenezr esta tabla lo fortalece. Las alternativas 4×14=2×28 enseñan a usar múltiples estrategias. Tiene importancia práctica en cálculos laborales (semana de 7 días × día de 8 horas). Esta tabla proporciona dominio de multiplicaciones difíciles.",
-      57: "La tabla del 57 fortalece las conexiones matemáticas combinando las tablas del 3 y 19. La estrategia 60-3 perfecciona la habilidad de restar de números redondos. La relación 3×19 combina estrategias de números primos y no primos. Esta tabla desarrolla el cálculo mental con números grandes de nivel medio.",
-      58: "La tabla del 58 ayuda a reforzar la tabla del 29. La relación 58=2×29 combina estrategias de duplicación y números primos. El enfoque 60-2 enseña la estrategia de aproximarse a números redondos. Esta tabla forma una base para propiedades de números pares y cálculos cercanos a 60.",
-      59: "La tabla del 59 maximiza las estrategias de números primos. El enfoque 60-1 perfecciona el cálculo rápido usando números redondos. Debido a propiedades primas, requiere flexibilidad mental y métodos creativos de solución. Tiene importancia práctica en contexto de tiempo (59 minutos, 59 segundos). Esta tabla proporciona habilidades avanzadas de matemática mental.",
-      60: "La tabla del 60 forma la base de cálculos de tiempo (60 minutos=1 hora, 60 segundos=1 minuto). La relación 6×10 combina el sistema decimal y la multiplicación. Tener muchos divisores (1,2,3,4,5,6,10,12,15,20,30,60) lo hace ideal para fracciones y proporciones. Tiene importancia geométrica en medidas de ángulo (360°÷6=60°). Esta tabla es una de las más utilizadas en la vida diaria.",
-      61: "La tabla del 61 lleva las estrategias de números primos a un nivel avanzado. El enfoque 60+1 proporciona asociación con unidades de tiempo (minuto 61, segundo 61). Debido a sus propiedades primas, requiere flexibilidad mental y resolución creativa de problemas. Esta tabla desarrolla la habilidad de calcular rápidamente con números mayores a 60.",
-      62: "La tabla del 62 ayuda a reforzar la tabla del 31. La relación 62=2×31 combina estrategias de duplicación y números primos. El enfoque 60+2 enseña la estrategia de calcular cerca de números redondos. Esta tabla forma una base para propiedades de números pares y cálculos después de 60.",
-      63: "La tabla del 63 refuerza tanto la tabla del 7 como la del 9 al combinarlas. 7×9=63 es un par de multiplicación importante. La alternativa 3×21 enseña a usar múltiples estrategias. Ser divisible tanto por 7 como por 9 lo hace útil para fracciones y proporciones. Esta tabla profundiza la comprensión de relaciones de factores múltiples.",
-      64: "La tabla del 64 es crítica para entender potencias de 2 (números exponenciales). Las relaciones 64=26=8² refuerzan tanto exponentes como números cuadrados. Tiene importancia tecnológica en ciencias de la computación debido a la arquitectura de 64 bits. El tablero de ajedrez (8×8=64 casillas) proporciona aplicaciones geométricas. Esta tabla es fundamental para números exponenciales y sistema binario.",
-      65: "La tabla del 65 fortalece las relaciones matemáticas combinando las tablas del 5 y 13. La relación 5×13 refuerza ambas tablas. Tiene importancia práctica en contexto social (edad de jubilación 65 años). El patrón del 5 (termina en 5 o 0) facilita el cálculo. Esta tabla es útil para matemática de vida práctica.",
-      66: "La tabla del 66 refuerza tanto la tabla del 6 como la del 11 al combinarlas. La relación 6×11=66 crea un patrón similar a repdigit. La alternativa 2×33 ofrece diferentes estrategias. Ser divisible tanto por 6 como por 11 proporciona usos múltiples. Esta tabla desarrolla habilidades de factores múltiples.",
-      67: "La tabla del 67 maximiza las estrategias de números primos. El enfoque 70-3 perfecciona la estrategia de restar de números redondos. Debido a propiedades primas, requiere flexibilidad mental y métodos de solución alternativos. Esta tabla proporciona habilidades de matemática mental avanzada y comodidad con números primos grandes.",
-      68: "La tabla del 68 fortalece las conexiones matemáticas combinando las tablas del 4 y 17. Las relaciones 4×17=2×34 enseñan a usar múltiples estrategias. El enfoque 70-2 desarrolla la habilidad de aproximarse a números redondos. Esta tabla forma una base para propiedades de números pares y cálculos cercanos a 70.",
-      69: "La tabla del 69 refuerza tanto la tabla del 3 como la del 23 al combinarlas. La estrategia 70-1 enseña a calcular rápidamente usando números redondos. La relación 3×23 combina estrategias de factores pequeños y grandes. Esta tabla proporciona competencia en cálculos cercanos a 70.",
-      70: "La tabla del 70 es perfecta para reforzar la tabla del 7. La relación 7×10 combina el sistema decimal y la tabla del 7. Tiene importancia social en el contexto de esperanza de vida (promedio 70-80 años). Las alternativas 2×35=5×14 enseñan a usar múltiples estrategias. Esta tabla es muy útil para cálculo práctico y gestión del tiempo.",
-      71: "La tabla del 71 maximiza las estrategias de números primos. El enfoque 70+1 proporciona dominio en el uso de números complementarios. Debido a sus propiedades primas, requiere flexibilidad mental y resolución creativa de problemas. Esta tabla desarrolla la habilidad de calcular rápidamente con números primos grandes y profundiza el pensamiento matemático.",
-      72: "La tabla del 72 es una de las más versátiles. Tener muchos divisores (1,2,3,4,6,8,9,12,18,24,36,72) lo hace ideal para fracciones y proporciones. Las relaciones 8×9=6×12 enseñan estrategias de factores múltiples. Tiene importancia práctica en cálculos de tiempo (72 horas=3 días). Esta tabla perfecciona la flexibilidad matemática y el uso de múltiples estrategias.",
-      73: "La tabla del 73 lleva las estrategias de números primos a un nivel avanzado. El enfoque 70+3 desarrolla habilidades de cálculo mental. Ser el primo número 21 despierta curiosidad matemática. Debido a propiedades primas, requiere métodos de solución alternativos y pensamiento creativo. Esta tabla proporciona habilidades de matemática mental avanzada.",
-      74: "La tabla del 74 ayuda a reforzar la tabla del 37. La relación 74=2×37 combina estrategias de duplicación y números primos. El enfoque 75-1 enseña la estrategia de aproximarse a números redondos. Esta tabla forma una base para propiedades de números pares y cálculos cercanos a 75.",
-      75: "La tabla del 75 forma la base de cálculos de porcentaje (75%=3/4). Las relaciones 3×25=5×15 enseñan a usar múltiples estrategias. Está directamente conectada con el concepto de tres cuartos (¾). El patrón del 5 (termina en 5 o 0) facilita el cálculo. Esta tabla es extremadamente importante para matemática práctica y cálculos de porcentaje.",
-      76: "La tabla del 76 fortalece las conexiones matemáticas combinando las tablas del 4 y 19. Las relaciones 4×19=2×38 enseñan estrategias de multiplicación múltiple. Los enfoques 75+1 o 80-4 proporcionan flexibilidad. Esta tabla prepara para cálculos cercanos a 80 con propiedades de números pares.",
-      77: "La tabla del 77 refuerza tanto la tabla del 7 como la del 11 al combinarlas. La relación 7×11=77 crea un patrón similar a repdigit. Como ambas tablas son de dificultad media, la tabla del 77 es perfecta para reforzarlas. Ser divisible tanto por 7 como por 11 lo hace útil para fracciones.",
-      78: "La tabla del 78 desarrolla habilidades de factorización múltiple. Las relaciones 78=2×39=3×26=6×13 proporcionan flexibilidad matemática. El enfoque 80-2 enseña la estrategia de restar de números redondos. Tener muchos divisores ofrece varios métodos de cálculo. Esta tabla perfecciona el uso de múltiples estrategias.",
-      79: "La tabla del 79 maximiza las estrategias de números primos. El enfoque 80-1 perfecciona el cálculo rápido usando números redondos. Debido a propiedades primas, requiere flexibilidad mental y métodos de solución creativos. Esta tabla proporciona competencia en cálculos cercanos a 80 y desarrolla habilidades matemáticas avanzadas.",
-      80: "La tabla del 80 es perfecta para reforzar la tabla del 8. La relación 8×10 combina el sistema decimal y la tabla del 8. Las alternativas 2×40=4×20=5×16 enseñan a usar múltiples estrategias. Tiene importancia social en el contexto de esperanza de vida (límite superior 80 años). Esta tabla mejora significativamente el cálculo práctico y la habilidad de trabajar con números grandes.",
-      81: "Multiplicar por 81 usa la relación 81=9² (nueve al cuadrado) o 81=34 (tres a la cuarta potencia). Como 81 es un cuadrado perfecto, todos sus múltiplos con cuadrados perfectos forman números cuadrados también. Pensar en 81 como 80+1 o 9×9 facilita el cálculo. El 81 es divisible tanto por 9 como por 27 (27=3³). Los múltiplos de 81 se dividen uniformemente por 9. El 81 es la suma de los números impares del 1 al 9 (1+3+5+7+9+11+13+15+17=81). Esta tabla desarrolla la comprensión de patrones matemáticos.",
-      82: "Multiplicar por 82 usa la relación 2×41. Si conoces la tabla del 41, puedes duplicar cada resultado para encontrar la tabla del 82. Pensar en 82 como 80+2 o 85-3 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 82 es divisible tanto por 2 como por 41. Esta tabla establece una base para cálculos después de 80.",
-      83: "Multiplicar por 83 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. Los métodos más prácticos son pensar en 83 como 80+3 o 85-2. El 83 es un número primo y solo es divisible por 1 y 83. Apprenezr la tabla del 83 desarrolla la habilidad de calcular rápidamente con números primos grandes.",
-      84: "Multiplicar por 84 es una de las tablas más versátiles. Como 84=12×7=6×14=4×21=3×28=2×42, se puede calcular de muchas maneras diferentes. El 84 es 7 veces 12 (7 docenas). Tener muchos divisores (1,2,3,4,6,7,12,14,21,28,42,84) lo hace extremadamente útil en cálculos de fracciones. El 84 es útil en cálculos de tiempo (84 horas=1 semana+1/2 día). Esta tabla perfecciona el uso de múltiples estrategias.",
-      85: "Multiplicar por 85 usa la relación 5×17. Si ambas tablas son conocidas, multiplicar por 85 es fácil. Pensar en 85 como 80+5 o 90-5 facilita el cálculo mental. El patrón del 5 (termina en 5 o 0) facilita el cálculo. El 85 se usa frecuentemente en cálculos de porcentaje (85%=17/20). Esta tabla prepara para cálculos cercanos a 90.",
-      86: "Multiplicar por 86 usa la relación 2×43. Si conoces la tabla del 43, puedes duplicar cada resultado para encontrar la tabla del 86. Pensar en 86 como 80+6 o 90-4 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 86 es divisible tanto por 2 como por 43. Esta tabla establece una base para cálculos cercanos a 90.",
-      87: "Multiplicar por 87 usa la relación 3×29. Triplicar la tabla del 29 o multiplicar la tabla del 3 por 29 funciona. Pensar en 87 como 90-3 o 85+2 facilita el cálculo mental. Como 87=3×29, es divisible tanto por 3 como por 29. Esta tabla es útil para cálculos cercanos a 90 y perfecciona la habilidad de restar de números redondos.",
-      88: "Multiplicar por 88 usa las relaciones 8×11=4×22=2×44. Se puede calcular de múltiples maneras. El 88 muestra un patrón similar a repdigit (repetición de 8s). Pensar en 88 como 90-2 o 80+8 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 88 tiene muchos divisores. La propiedad repdigit (88) facilita el reconocimiento visual y la memorización.",
-      89: "Multiplicar por 89 requiere estrategias especiales debido a sus propiedades de número primo. La estrategia más fácil es pensar en 89 como 90-1: multiplica un número por 90 y réstale el número mismo. El 89 es un número primo y solo es divisible por 1 y 89. El 89 es muy cercano a 90, por lo que es útil para aproximaciones. Esta tabla proporciona competencia en cálculos cercanos a 90 y desarrolla habilidades matemáticas avanzadas.",
-      90: "Multiplicar por 90 usa la relación 9×10 y es muy útil. Para multiplicar un número por 90, puedes multiplicarlo por 9 y agregar un cero al final. Hay relaciones de factores alternativos como 90=2×45=3×30=5×18=6×15. Un ángulo recto mide 90°. El 90 tiene importancia crítica en geometría (ángulo recto de 90°). El 90 se usa frecuentemente en medidas de ángulos y porcentajes. Esta tabla refuerza la tabla del 9 y es extremadamente importante para cálculos prácticos y medidas de ángulos.",
-      91: "Multiplicar por 91 usa la relación 7×13. Si ambas tablas son conocidas, multiplicar por 91 es fácil. Pensar en 91 como 90+1 o 100-9 facilita el cálculo. Como 91=7×13, es divisible tanto por 7 como por 13. Esta tabla refuerza la comprensión de relaciones de factores. Como ambas tablas son de dificultad media, la tabla del 91 es ideal para reforzarlas. Es un concepto fundamental para matemáticas avanzadas y criptografía.",
-      92: "Multiplicar por 92 usa las relaciones 4×23=2×46. Se puede calcular de múltiples maneras. Pensar en 92 como 90+2 o 100-8 facilita el cálculo mental. Como es un número par, todos sus múltiplos también son pares. El 92 es divisible tanto por 4 como por 23. Esta tabla prepara para cálculos cercanos a 100 y desarrolla habilidades de cálculo en los 90s.",
-      93: "Multiplicar por 93 usa la relación 3×31. Triplicar la tabla del 31 o multiplicar la tabla del 3 por 31 funciona. Pensar en 93 como 90+3 o 100-7 facilita el cálculo. Como 93=3×31, es divisible tanto por 3 como por 31. Esta tabla es útil para cálculos cercanos a 100. Proporciona práctica de multiplicación con números grandes y desarrolla flexibilidad mental.",
-      94: "Multiplicar por 94 usa la relación 2×47. Si conoces la tabla del 47, puedes duplicar cada resultado para encontrar la tabla del 94. Pensar en 94 como 100-6 o 90+4 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 94 es divisible tanto por 2 como por 47. La estrategia 100-6 perfecciona el método de restar de números redondos. Proporciona habilidades críticas para matemática mental avanzada.",
-      95: "Multiplicar por 95 usa la relación 5×19. Si ambas tablas son conocidas, multiplicar por 95 es fácil. Pensar en 95 como 100-5 o 90+5 facilita el cálculo mental. El patrón del 5 (termina en 5 o 0) facilita el cálculo. El 95 se usa frecuentemente en cálculos de porcentaje (95%=19/20). La estrategia 100-5 es muy útil.",
-      96: "Multiplicar por 96 usa las relaciones 32×3=16×6=12×8=4×24=2×48. Se puede calcular de muchas maneras diferentes. Pensar en 96 como 100-4 o 90+6 facilita el cálculo. Como es un número par, todos sus múltiplos también son pares. El 96 tiene muchos divisores (1,2,3,4,6,8,12,16,24,32,48,96), lo que lo hace útil en cálculos de fracciones. Muestra la relación entre potencias de 2 y 3 (25×3). Esta tabla es perfecta para flexibilidad matemática y teoría de números.",
-      97: "Multiplicar por 97 desarrolla estrategias de matemática mental debido a sus propiedades de número primo. La estrategia más fácil es pensar en 97 como 100-3: multiplica un número por 100 y réstale tres veces el número mismo. El 97 es un número primo y solo es divisible por 1 y 97. Apprenezr la tabla del 97 facilita cálculos cercanos a 100. Ser el primo más cercano a 100 facilita extremadamente el cálculo mental. Ser primo es importante para teoría de números y criptografía.",
-      98: "Multiplicar por 98 usa las relaciones 2×49=7×14. Se puede calcular de múltiples maneras. La estrategia más fácil es pensar en 98 como 100-2: multiplica un número por 100 y réstale dos veces el número mismo. Como es un número par, todos sus múltiplos también son pares. El 98 es divisible tanto por 2 como por 7 y 49. La relación 98=2×49=2×7² combina números cuadrados y estrategias de duplicación. Esta tabla proporciona dominio en cálculos cercanos a 100.",
-      99: "Multiplicar por 99 usa la relación 9×11. La estrategia más fácil es pensar en 99 como 100-1: multiplica un número por 100 y réstale el número mismo. El 99 muestra un patrón similar a repdigit (repetición de 9s). Como 99=9×11, es divisible tanto por 9 como por 11. Esta tabla es extremadamente útil para cálculos cercanos a 100. La estrategia 100-1 es PERFECTA para matemática mental. La propiedad repdigit (99) profundiza la comprensión de patrones. Esta tabla es extremadamente importante para habilidades de cálculo práctico.",
-      100: "La tabla del 100 es la base del sistema decimal. Proporciona una comprensión perfecta del concepto de valor posicional. Forma la base de cálculos de porcentaje (100%=completo) y el sistema decimal. Tiene importancia crítica para unidades monetarias, unidades de medida y matemática cotidiana. ¡ES UNA DE LAS TABLAS MÁS ÚTILES E IMPORTANTES!",
+      1: "La tabla del 1 es la base de todas las operaciones de multiplicaciÃ³n. EnseÃ±a a los estudiantes que los nÃºmeros tienen una identidad: al multiplicarse por 1, permanecen como ellos mismos. Este concepto es crucial para comprender propiedades algebraicas posteriores. Aunque parezca simple, aprender esta tabla genera confianza y establece el patrÃ³n de que la multiplicaciÃ³n es ordenada y predecible.",
+      2: "La tabla del 2 es generalmente la primera tabla de multiplicaciÃ³n real que aprenden los estudiantes, y por una buena razÃ³n. Duplicar es un concepto natural que los niÃ±os encuentran diariamente. Aprender esta tabla hace el cÃ¡lculo mental mucho mÃ¡s rÃ¡pido y prepara a los estudiantes para nÃºmeros pares, fracciones (mitades) y divisiÃ³n bÃ¡sica. Muchos estudiantes la encuentran la tabla mÃ¡s fÃ¡cil, lo que genera confianza para tablas mÃ¡s difÃ­ciles.",
+      3: "La tabla del 3 cierra la brecha entre las tablas fÃ¡ciles y desafiantes. Requiere que los estudiantes vayan mÃ¡s allÃ¡ de la simple duplicaciÃ³n y comiencen a reconocer nuevos patrones. Esta tabla se ve constantemente en contextos del mundo real como contar de tres en tres, entender formas triangulares y trabajar con tiempo (tres periodos por dÃ­a). Los estudiantes que aprenden la tabla del 3 demuestran que pueden hacer conteo abstracto.",
+      4: "Aprender la tabla del 4 refuerza la comprensiÃ³n de nÃºmeros pares y pensamiento geomÃ©trico de los estudiantes. Como 4 es el doble de 2, los estudiantes pueden usar la tabla del 2 como escalera, lo que enseÃ±a eficiencia matemÃ¡tica. Esta tabla es necesaria para entender cuadrados, cÃ¡lculos de Ã¡rea y divisiones por cuartos. TambiÃ©n se usa frecuentemente en situaciones cotidianas como contar patas de sillas o ruedas de autos.",
+      5: "La tabla del 5 es una de las mÃ¡s prÃ¡cticas y ricas en patrones. Los estudiantes la aman porque cada respuesta termina en 0 o 5, haciÃ©ndola extremadamente predecible. Esta tabla se conecta directamente con el dinero (contar de cinco en cinco), decir la hora (intervalos de 5 minutos) y sistemas de mediciÃ³n. Aprender la tabla del 5 da confianza a los estudiantes y muestra que las matemÃ¡ticas tienen patrones hermosos y consistentes.",
+      6: "Aprender la tabla del 6 permite a los estudiantes transicionar a multiplicaciones mÃ¡s complejas. Que 6 sea mÃºltiplo tanto de 2 como de 3 muestra a los estudiantes la propiedad distributiva de la multiplicaciÃ³n. Esta tabla se ve constantemente en la vida diaria: contar cartones de huevos, juegos de dados, paquetes de seis. Aprender la tabla del 6 da a los estudiantes confianza para trabajar con nÃºmeros mÃ¡s grandes.",
+      7: "La tabla del 7 realmente pone a prueba las habilidades de memorizaciÃ³n y reconocimiento de patrones de los estudiantes. Como 7 es un nÃºmero primo, no se puede derivar fÃ¡cilmente de otras tablas, haciÃ©ndola una experiencia de aprendizaje desafiante pero gratificante. Aprender la tabla del 7 da a los estudiantes la oportunidad de superar desafÃ­os y desarrollar nuevas estrategias. Se usa en muchos lugares, desde contar los dÃ­as de la semana hasta cÃ¡lculos de calendario.",
+      8: "Aprender la tabla del 8 ayuda a los estudiantes a reforzar estrategias de duplicaciÃ³n. Como 8 = 2 Ã— 2 Ã— 2, los estudiantes pueden aprender la tabla del 8 usando las tablas del 2 y 4. Esta tabla es importante en cÃ¡lculos de Ã¡rea (figuras de 8 lados), teorÃ­a musical (octavas) y ciencias de la computaciÃ³n (8 bits = 1 byte). Aprender la tabla del 8 desarrolla habilidades de pensamiento matemÃ¡tico.",
+      9: "La tabla del 9 tiene uno de los patrones matemÃ¡ticos mÃ¡s fascinantes. La regla de suma de dÃ­gitos y el truco de los dedos muestran a los estudiantes el lado mÃ¡gico de las matemÃ¡ticas. Aprender la tabla del 9 no es solo memorizaciÃ³n, enseÃ±a reconocimiento de patrones y comprensiÃ³n de relaciones matemÃ¡ticas. Esta tabla es perfecta para desarrollar habilidades de cÃ¡lculo mental y construir confianza matemÃ¡tica.",
+      10: "La tabla del 10 es fundamental para enseÃ±ar el concepto de valor posicional. Cuando los estudiantes aprenden a multiplicar por 10, comienzan a entender cÃ³mo funciona nuestro sistema decimal. Esta tabla es vital para cÃ¡lculos de dinero, conversiones entre unidades de medida y trabajo con nÃºmeros grandes. Aprender la tabla del 10 crea una base sÃ³lida para entender todas las demÃ¡s tablas de multiplicaciÃ³n y mejora enormemente las habilidades de matemÃ¡tica mental.",
+      11: "La tabla del 11 es perfecta para desarrollar habilidades de reconocimiento de patrones. El patrÃ³n de repeticiÃ³n que surge al multiplicar con nÃºmeros de un dÃ­gito (11Ã—4=44) muestra a los estudiantes la belleza de las matemÃ¡ticas. Aprender la tabla del 11 desarrolla estrategias de cÃ¡lculo mental y aumenta la capacidad de reconocer patrones numÃ©ricos. Esta tabla genera confianza para trabajar con nÃºmeros grandes.",
+      12: "La tabla del 12 es una de las mÃ¡s utilizadas en la vida diaria. El 12 se usa en muchas Ã¡reas como contar docenas, leer el reloj y planificaciÃ³n anual. Que el 12 tenga muchos divisores (1,2,3,4,6,12) lo hace ideal para entender fracciones y proporciones. Aprender esta tabla mejora significativamente las habilidades matemÃ¡ticas prÃ¡cticas.",
+      13: "La tabla del 13 desarrolla la resiliencia matemÃ¡tica de los estudiantes. Por ser un nÃºmero primo, no hay atajos fÃ¡ciles, lo que requiere verdadera comprensiÃ³n. Aprender la tabla del 13 fortalece las habilidades aritmÃ©ticas mentales y enseÃ±a a pensar en los nÃºmeros de diferentes maneras (estrategia de descomposiciÃ³n 10+3).",
+      14: "La tabla del 14 ayuda a reforzar la tabla del 7. La relaciÃ³n 14=2Ã—7 muestra a los estudiantes la propiedad distributiva de la multiplicaciÃ³n. Es necesaria para calcular periodos semanales y quincenales. Esta tabla profundiza la comprensiÃ³n de las propiedades de nÃºmeros pares y estrategias de duplicaciÃ³n.",
+      15: "La tabla del 15 combina tanto la tabla del 3 como la del 5, lo cual es excelente para entender conexiones matemÃ¡ticas. Es vital para cÃ¡lculos de cuarto de hora (15 minutos). Aprender la tabla del 15 enseÃ±a a entender reglas de divisibilidad y ver relaciones entre nÃºmeros. Se usa frecuentemente en cÃ¡lculos de porcentaje (como propina del 15%).",
+      16: "La tabla del 16 es perfecta para entender sistemas binarios y nÃºmeros exponenciales. La relaciÃ³n 2â´=16 muestra el poder de los exponentes. Tiene importancia crÃ­tica en ciencias de la computaciÃ³n (16 bits, sistema hexadecimal). Esta tabla desarrolla la comprensiÃ³n de estrategias de mÃºltiple duplicaciÃ³n y secuencias geomÃ©tricas.",
+      17: "La tabla del 17 es una herramienta excelente para desarrollar estrategias de matemÃ¡tica mental. Ser un nÃºmero primo obliga a los estudiantes a encontrar mÃ©todos creativos de cÃ¡lculo (estrategias 20-3 o 10+7). Esta tabla desarrolla habilidades de resoluciÃ³n de problemas y flexibilidad con los nÃºmeros.",
+      18: "La tabla del 18 muestra la riqueza de las relaciones matemÃ¡ticas. Que 18=2Ã—9=3Ã—6 enseÃ±a a entender diferentes combinaciones de factores. Tiene importancia cultural como edad de mayorÃ­a de edad. Esta tabla enseÃ±a a abordar un problema con mÃºltiples estrategias y elegir el mÃ©todo mÃ¡s eficiente.",
+      19: "La tabla del 19 maximiza las habilidades de cÃ¡lculo mental. La estrategia '20-1' enseÃ±a a los estudiantes a usar nÃºmeros complementarios. Ser un nÃºmero primo enfatiza la comprensiÃ³n real mÃ¡s que el reconocimiento de patrones. Esta tabla desarrolla la habilidad de dividir cÃ¡lculos complejos en pasos simples.",
+      20: "La tabla del 20 es crÃ­tica para reforzar el sistema de valor posicional y trabajar cÃ³modamente con nÃºmeros grandes. La relaciÃ³n 20=2Ã—10 profundiza la comprensiÃ³n del sistema decimal. Se usa constantemente en cÃ¡lculos de dinero (billetes de 20) y mediciones. Esta tabla forma la base para cÃ¡lculos de porcentaje (descuento del 20%).",
+      21: "La tabla del 21 es perfecta para entender la relaciÃ³n de factorizaciÃ³n 3Ã—7. Esta tabla muestra a los estudiantes que un nÃºmero puede tener mÃ¡s de un factor. El 21 tiene importancia social como edad para transacciones legales y mayorÃ­a de edad. Aprender esta tabla profundiza la comprensiÃ³n de las relaciones entre factores y mÃºltiplos.",
+      22: "La tabla del 22 ayuda a reforzar la tabla del 11. La relaciÃ³n 22=2Ã—11 fortalece las estrategias de duplicaciÃ³n. Se usa en deportes (equipo de fÃºtbol) y conteo diario. Esta tabla desarrolla la comprensiÃ³n de propiedades de nÃºmeros pares y relaciones matemÃ¡ticas.",
+      23: "La tabla del 23 desarrolla habilidades para trabajar con nÃºmeros primos. Como no se puede derivar de otras tablas, los estudiantes deben desarrollar nuevas estrategias. El 23 es un nÃºmero importante en biologÃ­a (pares de cromosomas). Aprender esta tabla aumenta la flexibilidad mental y capacidades de resoluciÃ³n de problemas.",
+      24: "La tabla del 24 es una de las mÃ¡s Ãºtiles en la vida diaria. Se encuentra constantemente debido a la relaciÃ³n dÃ­a-hora (24 horas). Que el 24 tenga muchos divisores (1,2,3,4,6,8,12,24) lo hace ideal para fracciones y proporciones. Esta tabla desarrolla habilidades de gestiÃ³n del tiempo y planificaciÃ³n.",
+      25: "La tabla del 25 es fundamental para entender nÃºmeros cuadrados (5Â²). Tiene un papel central en sistemas monetarios (25 centavos). El patrÃ³n regular del 25 (25,50,75,00) facilita mucho los cÃ¡lculos. Esta tabla se usa frecuentemente en cÃ¡lculos de porcentaje (25%=1/4) y fracciones.",
+      26: "La tabla del 26 ayuda a reforzar la tabla del 13. Es importante en sistemas alfabÃ©ticos (26 letras). La relaciÃ³n 26=2Ã—13 muestra la conexiÃ³n entre nÃºmeros primos y pares. Aprender esta tabla desarrolla la capacidad de ver relaciones matemÃ¡ticas.",
+      27: "La tabla del 27 es crÃ­tica para entender nÃºmeros exponenciales (3Â³). Es importante en geometrÃ­a (cubo 3Ã—3Ã—3 en espacio 3D) y cÃ¡lculos de volumen. La relaciÃ³n 27=3Ã—9 fortalece la conexiÃ³n entre las tablas del 3 y 9. Esta tabla forma una base en pensamiento matemÃ¡tico y nÃºmeros exponenciales.",
+      28: "La tabla del 28 es importante para conocimiento de calendario (mes de febrero). Que el 28 sea un nÃºmero perfecto (suma de divisores igual a sÃ­ mismo) muestra propiedades matemÃ¡ticas especiales. La relaciÃ³n 28=4Ã—7 profundiza la comprensiÃ³n de factorizaciÃ³n. Esta tabla se usa en cÃ¡lculos de tiempo y planificaciÃ³n semanal.",
+      29: "La tabla del 29 es perfecta para perfeccionar estrategias de nÃºmeros primos. La relaciÃ³n 30-1 enseÃ±a a usar nÃºmeros complementarios. Es necesaria para conocimiento de calendario (febrero en aÃ±o bisiesto). Aprender esta tabla maximiza las habilidades de cÃ¡lculo mental.",
+      30: "La tabla del 30 es el puente entre el sistema decimal y la multiplicaciÃ³n. La relaciÃ³n 30=3Ã—10 fortalece la comprensiÃ³n del valor posicional. Se usa constantemente en tiempo (media hora), calendario (dÃ­as del mes) y medidas de Ã¡ngulo (30Â°). Esta tabla forma la base de cÃ¡lculos de porcentaje (descuento del 30%) y matemÃ¡tica prÃ¡ctica.",
+      31: "Multiplicar por 31 es crÃ­tico para el conocimiento del calendario. Como la mayorÃ­a de los meses tienen 31 dÃ­as, se usa constantemente en cÃ¡lculos de fecha y tiempo. Como 31 es un nÃºmero primo, es perfecto para desarrollar estrategias de cÃ¡lculo mental. La estrategia 30+1 enseÃ±a a usar nÃºmeros complementarios y proporciona competencia en cÃ¡lculos de nÃºmeros grandes.",
+      32: "Multiplicar por 32 es importante para entender nÃºmeros exponenciales (2âµ) y sistemas binarios. Como la arquitectura de 32 bits es comÃºn en ciencias de la computaciÃ³n, tiene importancia prÃ¡ctica en la era de la tecnologÃ­a. Es perfecto para perfeccionar cadenas de duplicaciÃ³n. Se usa en conversiones de temperatura (Fahrenheit).",
+      33: "Multiplicar por 33 fortalece las relaciones matemÃ¡ticas combinando las tablas del 3 y 11. La propiedad repdigit (33, 66, 99...) facilita el reconocimiento de patrones. La relaciÃ³n 33=3Ã—11 profundiza la comprensiÃ³n de las conexiones entre factores y mÃºltiplos. Esta tabla enseÃ±a estrategias de multiplicaciÃ³n mÃºltiple.",
+      34: "Multiplicar por 34 ayuda a reforzar la tabla del 17. La relaciÃ³n 34=2Ã—17 muestra la conexiÃ³n entre nÃºmeros primos y pares. Esta tabla desarrolla flexibilidad mental y mÃ©todos de cÃ¡lculo alternativos (35-1, 30+4). Refuerza propiedades de nÃºmeros pares y habilidades de duplicaciÃ³n.",
+      35: "Multiplicar por 35 desarrolla habilidades de factorizaciÃ³n como combinaciÃ³n de las tablas del 5 y 7. La relaciÃ³n 5Ã—7 refuerza ambas tablas. Se usa en cÃ¡lculos de tiempo (35 minutos) y matemÃ¡tica cotidiana. Esta tabla crea patrones reconocibles con el patrÃ³n del 5 (Ãºltimo dÃ­gito 5 o 0).",
+      36: "Multiplicar por 36 es una de las tablas mÃ¡s Ãºtiles. Que 36=6Â² es crÃ­tico para entender nÃºmeros cuadrados. Tener muchos divisores (1,2,3,4,6,9,12,18,36) lo hace ideal para fracciones y proporciones. Se usa frecuentemente en el sistema de docenas (3 docenas) y medidas de Ã¡ngulos (un dÃ©cimo de 360Â°).",
+      37: "Multiplicar por 37 perfecciona propiedades de nÃºmeros primos y estrategias de matemÃ¡tica mental. Relaciones especiales como 37Ã—3=111 proporcionan comprensiÃ³n profunda de patrones numÃ©ricos. Estrategias como 40-3 o 35+2 desarrollan habilidades creativas de resoluciÃ³n de problemas. Esta tabla fomenta la curiosidad matemÃ¡tica y el espÃ­ritu de descubrimiento.",
+      38: "Multiplicar por 38 ayuda a reforzar la tabla del 19. La relaciÃ³n 38=2Ã—19 combina estrategias de duplicaciÃ³n y nÃºmeros primos. El enfoque 40-2 enseÃ±a a usar nÃºmeros complementarios. Tiene importancia prÃ¡ctica en contexto de salud (temperatura corporal).",
+      39: "Multiplicar por 39 fortalece las conexiones matemÃ¡ticas combinando las tablas del 3 y 13. La estrategia 40-1 enseÃ±a a calcular rÃ¡pidamente usando nÃºmeros redondos. Esta tabla desarrolla habilidades de factorizaciÃ³n mÃºltiple (3Ã—13) y proporciona flexibilidad mental.",
+      40: "La tabla del 40 es perfecta para comprender profundamente el sistema decimal. La relaciÃ³n 40=4Ã—10 muestra la conexiÃ³n entre valor posicional y multiplicaciÃ³n. Se usa mucho en la vida diaria debido a horas de trabajo (semana de 40 horas) y normas sociales (40 aÃ±os). Esta tabla forma una base para nÃºmeros grandes y cÃ¡lculos de porcentaje.",
+      41: "La tabla del 41 lleva las estrategias de nÃºmeros primos a un nivel avanzado. El enfoque 40+1 proporciona dominio en el uso de nÃºmeros complementarios. Por ser un nÃºmero primo, requiere flexibilidad mental y resoluciÃ³n creativa de problemas. Esta tabla desarrolla la habilidad de calcular rÃ¡pidamente con nÃºmeros grandes.",
+      42: "La tabla del 42 perfecciona las habilidades de factorizaciÃ³n. Las relaciones 42=6Ã—7=2Ã—21=3Ã—14 enseÃ±an a ver conexiones matemÃ¡ticas. Como combina las tablas del 6 y 7, refuerza ambas. Es memorable debido a referencias de la cultura pop (GuÃ­a del Autoestopista GalÃ¡ctico).",
+      43: "La tabla del 43 desarrolla propiedades de nÃºmeros primos y estrategias de cÃ¡lculo mental. Enfoques alternativos como 40+3 o 45-2 proporcionan flexibilidad en el pensamiento matemÃ¡tico. Esta tabla aumenta la habilidad de trabajar creativamente con nÃºmeros y enriquece las estrategias de resoluciÃ³n de problemas.",
+      44: "La tabla del 44 es perfecta para reforzar la tabla del 11. La relaciÃ³n 44=4Ã—11 desarrolla habilidades de multiplicaciÃ³n mÃºltiple. El patrÃ³n similar a repdigit (44, 88) facilita el reconocimiento visual. Profundiza la comprensiÃ³n de propiedades de nÃºmeros pares y ser mÃºltiplo de cuatro.",
+      45: "La tabla del 45 fortalece las relaciones matemÃ¡ticas combinando las tablas del 5 y 9. Se usa frecuentemente en geometrÃ­a (Ã¡ngulo de 45Â°) y cÃ¡lculos de tiempo (tres cuartos de hora). La relaciÃ³n 5Ã—9 refuerza tanto la tabla del 5 como la del 9. Esta tabla es muy Ãºtil para matemÃ¡tica prÃ¡ctica y cÃ¡lculos cotidianos.",
+      46: "La tabla del 46 ayuda a reforzar la tabla del 23. La relaciÃ³n 46=2Ã—23 combina estrategias de duplicaciÃ³n y nÃºmeros primos. Es un nÃºmero importante en biologÃ­a (46 cromosomas). Esta tabla desarrolla propiedades de nÃºmeros pares y cÃ¡lculos con nÃºmeros grandes.",
+      47: "La tabla del 47 maximiza las estrategias de nÃºmeros primos. El enfoque 50-3 perfecciona la estrategia de restar de nÃºmeros redondos. Debido a propiedades primas, requiere flexibilidad mental y mÃ©todos de soluciÃ³n alternativos. Esta tabla proporciona habilidades avanzadas de matemÃ¡tica mental.",
+      48: "La tabla del 48 es una de las mÃ¡s versÃ¡tiles. Tener muchos divisores (1,2,3,4,6,8,12,16,24,48) lo hace ideal para fracciones y proporciones. Se usa en el sistema de docenas (4 docenas) y cÃ¡lculos de tiempo (48 horas=2 dÃ­as). Las relaciones de factores mÃºltiples profundizan la comprensiÃ³n de conexiones matemÃ¡ticas.",
+      49: "La tabla del 49 es crÃ­tica para entender nÃºmeros cuadrados (7Â²). Requiere conocer perfectamente la tabla del 7 y la refuerza. La estrategia 50-1 enseÃ±a cÃ¡lculo rÃ¡pido usando nÃºmeros redondos. Es importante en geometrÃ­a y cÃ¡lculos de Ã¡rea debido a propiedades cuadradas.",
+      50: "La tabla del 50 forma la base de cÃ¡lculos de porcentaje (50%=1/2). La relaciÃ³n 5Ã—10 combina el sistema decimal y la multiplicaciÃ³n. EstÃ¡ directamente conectada con el concepto de mitad (Â½). Se usa constantemente en sistemas monetarios (50 centavos, 50 pesos), mediciones de tiempo y matemÃ¡tica cotidiana. Esta tabla mejora significativamente las habilidades de cÃ¡lculo prÃ¡ctico.",
+      51: "La tabla del 51 desarrolla la habilidad de trabajar con nÃºmeros cercanos a 50. La estrategia 50+1 refuerza el uso de nÃºmeros complementarios. La relaciÃ³n 3Ã—17 fortalece las habilidades de factorizaciÃ³n. Tiene importancia prÃ¡ctica en el contexto de juegos de cartas (52 cartas). Esta tabla enseÃ±a a calcular con pequeÃ±as desviaciones de nÃºmeros redondos.",
+      52: "La tabla del 52 es crÃ­tica para cÃ¡lculos de tiempo y calendario. Debido al nÃºmero de semanas en un aÃ±o (52 semanas), se usa constantemente en planificaciÃ³n y cÃ¡lculos anuales. La relaciÃ³n 4Ã—13 refuerza tanto la tabla del 4 como la del 13. La baraja de cartas (52 cartas) proporciona contexto al pensamiento matemÃ¡tico. Esta tabla es muy importante para matemÃ¡tica de vida prÃ¡ctica.",
+      53: "La tabla del 53 lleva las estrategias de nÃºmeros primos a un nivel avanzado. El enfoque 50+3 desarrolla flexibilidad mental y mÃ©todos alternativos de cÃ¡lculo. Debido a propiedades primas, requiere resoluciÃ³n creativa de problemas. Esta tabla aumenta la habilidad de trabajar con nÃºmeros primos grandes y expande la profundidad del pensamiento matemÃ¡tico.",
+      54: "La tabla del 54 perfecciona las habilidades de factorizaciÃ³n mÃºltiple. Las relaciones 54=6Ã—9=2Ã—27=3Ã—18 enseÃ±an a ver conexiones matemÃ¡ticas. Como combina las tablas del 6 y 9, fortalece ambas. Tener muchos divisores (1,2,3,6,9,18,27,54) lo hace ideal para fracciones y proporciones. Esta tabla fomenta el pensamiento matemÃ¡tico flexible.",
+      55: "La tabla del 55 refuerza las relaciones matemÃ¡ticas combinando las tablas del 5 y 11. La propiedad de nÃºmero triangular (1+2+...+10=55) profundiza la comprensiÃ³n de patrones matemÃ¡ticos. La relaciÃ³n 5Ã—11 fortalece ambas tablas. Esta tabla forma una base para patrones numÃ©ricos y fÃ³rmulas de suma.",
+      56: "La tabla del 56 refuerza tanto la tabla del 7 como la del 8. 7Ã—8=56 es uno de los pares de multiplicaciÃ³n mÃ¡s difÃ­ciles y aprender esta tabla lo fortalece. Las alternativas 4Ã—14=2Ã—28 enseÃ±an a usar mÃºltiples estrategias. Tiene importancia prÃ¡ctica en cÃ¡lculos laborales (semana de 7 dÃ­as Ã— dÃ­a de 8 horas). Esta tabla proporciona dominio de multiplicaciones difÃ­ciles.",
+      57: "La tabla del 57 fortalece las conexiones matemÃ¡ticas combinando las tablas del 3 y 19. La estrategia 60-3 perfecciona la habilidad de restar de nÃºmeros redondos. La relaciÃ³n 3Ã—19 combina estrategias de nÃºmeros primos y no primos. Esta tabla desarrolla el cÃ¡lculo mental con nÃºmeros grandes de nivel medio.",
+      58: "La tabla del 58 ayuda a reforzar la tabla del 29. La relaciÃ³n 58=2Ã—29 combina estrategias de duplicaciÃ³n y nÃºmeros primos. El enfoque 60-2 enseÃ±a la estrategia de aproximarse a nÃºmeros redondos. Esta tabla forma una base para propiedades de nÃºmeros pares y cÃ¡lculos cercanos a 60.",
+      59: "La tabla del 59 maximiza las estrategias de nÃºmeros primos. El enfoque 60-1 perfecciona el cÃ¡lculo rÃ¡pido usando nÃºmeros redondos. Debido a propiedades primas, requiere flexibilidad mental y mÃ©todos creativos de soluciÃ³n. Tiene importancia prÃ¡ctica en contexto de tiempo (59 minutos, 59 segundos). Esta tabla proporciona habilidades avanzadas de matemÃ¡tica mental.",
+      60: "La tabla del 60 forma la base de cÃ¡lculos de tiempo (60 minutos=1 hora, 60 segundos=1 minuto). La relaciÃ³n 6Ã—10 combina el sistema decimal y la multiplicaciÃ³n. Tener muchos divisores (1,2,3,4,5,6,10,12,15,20,30,60) lo hace ideal para fracciones y proporciones. Tiene importancia geomÃ©trica en medidas de Ã¡ngulo (360Â°Ã·6=60Â°). Esta tabla es una de las mÃ¡s utilizadas en la vida diaria.",
+      61: "La tabla del 61 lleva las estrategias de nÃºmeros primos a un nivel avanzado. El enfoque 60+1 proporciona asociaciÃ³n con unidades de tiempo (minuto 61, segundo 61). Debido a sus propiedades primas, requiere flexibilidad mental y resoluciÃ³n creativa de problemas. Esta tabla desarrolla la habilidad de calcular rÃ¡pidamente con nÃºmeros mayores a 60.",
+      62: "La tabla del 62 ayuda a reforzar la tabla del 31. La relaciÃ³n 62=2Ã—31 combina estrategias de duplicaciÃ³n y nÃºmeros primos. El enfoque 60+2 enseÃ±a la estrategia de calcular cerca de nÃºmeros redondos. Esta tabla forma una base para propiedades de nÃºmeros pares y cÃ¡lculos despuÃ©s de 60.",
+      63: "La tabla del 63 refuerza tanto la tabla del 7 como la del 9 al combinarlas. 7Ã—9=63 es un par de multiplicaciÃ³n importante. La alternativa 3Ã—21 enseÃ±a a usar mÃºltiples estrategias. Ser divisible tanto por 7 como por 9 lo hace Ãºtil para fracciones y proporciones. Esta tabla profundiza la comprensiÃ³n de relaciones de factores mÃºltiples.",
+      64: "La tabla del 64 es crÃ­tica para entender potencias de 2 (nÃºmeros exponenciales). Las relaciones 64=2â¶=8Â² refuerzan tanto exponentes como nÃºmeros cuadrados. Tiene importancia tecnolÃ³gica en ciencias de la computaciÃ³n debido a la arquitectura de 64 bits. El tablero de ajedrez (8Ã—8=64 casillas) proporciona aplicaciones geomÃ©tricas. Esta tabla es fundamental para nÃºmeros exponenciales y sistema binario.",
+      65: "La tabla del 65 fortalece las relaciones matemÃ¡ticas combinando las tablas del 5 y 13. La relaciÃ³n 5Ã—13 refuerza ambas tablas. Tiene importancia prÃ¡ctica en contexto social (edad de jubilaciÃ³n 65 aÃ±os). El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. Esta tabla es Ãºtil para matemÃ¡tica de vida prÃ¡ctica.",
+      66: "La tabla del 66 refuerza tanto la tabla del 6 como la del 11 al combinarlas. La relaciÃ³n 6Ã—11=66 crea un patrÃ³n similar a repdigit. La alternativa 2Ã—33 ofrece diferentes estrategias. Ser divisible tanto por 6 como por 11 proporciona usos mÃºltiples. Esta tabla desarrolla habilidades de factores mÃºltiples.",
+      67: "La tabla del 67 maximiza las estrategias de nÃºmeros primos. El enfoque 70-3 perfecciona la estrategia de restar de nÃºmeros redondos. Debido a propiedades primas, requiere flexibilidad mental y mÃ©todos de soluciÃ³n alternativos. Esta tabla proporciona habilidades de matemÃ¡tica mental avanzada y comodidad con nÃºmeros primos grandes.",
+      68: "La tabla del 68 fortalece las conexiones matemÃ¡ticas combinando las tablas del 4 y 17. Las relaciones 4Ã—17=2Ã—34 enseÃ±an a usar mÃºltiples estrategias. El enfoque 70-2 desarrolla la habilidad de aproximarse a nÃºmeros redondos. Esta tabla forma una base para propiedades de nÃºmeros pares y cÃ¡lculos cercanos a 70.",
+      69: "La tabla del 69 refuerza tanto la tabla del 3 como la del 23 al combinarlas. La estrategia 70-1 enseÃ±a a calcular rÃ¡pidamente usando nÃºmeros redondos. La relaciÃ³n 3Ã—23 combina estrategias de factores pequeÃ±os y grandes. Esta tabla proporciona competencia en cÃ¡lculos cercanos a 70.",
+      70: "La tabla del 70 es perfecta para reforzar la tabla del 7. La relaciÃ³n 7Ã—10 combina el sistema decimal y la tabla del 7. Tiene importancia social en el contexto de esperanza de vida (promedio 70-80 aÃ±os). Las alternativas 2Ã—35=5Ã—14 enseÃ±an a usar mÃºltiples estrategias. Esta tabla es muy Ãºtil para cÃ¡lculo prÃ¡ctico y gestiÃ³n del tiempo.",
+      71: "La tabla del 71 maximiza las estrategias de nÃºmeros primos. El enfoque 70+1 proporciona dominio en el uso de nÃºmeros complementarios. Debido a sus propiedades primas, requiere flexibilidad mental y resoluciÃ³n creativa de problemas. Esta tabla desarrolla la habilidad de calcular rÃ¡pidamente con nÃºmeros primos grandes y profundiza el pensamiento matemÃ¡tico.",
+      72: "La tabla del 72 es una de las mÃ¡s versÃ¡tiles. Tener muchos divisores (1,2,3,4,6,8,9,12,18,24,36,72) lo hace ideal para fracciones y proporciones. Las relaciones 8Ã—9=6Ã—12 enseÃ±an estrategias de factores mÃºltiples. Tiene importancia prÃ¡ctica en cÃ¡lculos de tiempo (72 horas=3 dÃ­as). Esta tabla perfecciona la flexibilidad matemÃ¡tica y el uso de mÃºltiples estrategias.",
+      73: "La tabla del 73 lleva las estrategias de nÃºmeros primos a un nivel avanzado. El enfoque 70+3 desarrolla habilidades de cÃ¡lculo mental. Ser el primo nÃºmero 21 despierta curiosidad matemÃ¡tica. Debido a propiedades primas, requiere mÃ©todos de soluciÃ³n alternativos y pensamiento creativo. Esta tabla proporciona habilidades de matemÃ¡tica mental avanzada.",
+      74: "La tabla del 74 ayuda a reforzar la tabla del 37. La relaciÃ³n 74=2Ã—37 combina estrategias de duplicaciÃ³n y nÃºmeros primos. El enfoque 75-1 enseÃ±a la estrategia de aproximarse a nÃºmeros redondos. Esta tabla forma una base para propiedades de nÃºmeros pares y cÃ¡lculos cercanos a 75.",
+      75: "La tabla del 75 forma la base de cÃ¡lculos de porcentaje (75%=3/4). Las relaciones 3Ã—25=5Ã—15 enseÃ±an a usar mÃºltiples estrategias. EstÃ¡ directamente conectada con el concepto de tres cuartos (Â¾). El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. Esta tabla es extremadamente importante para matemÃ¡tica prÃ¡ctica y cÃ¡lculos de porcentaje.",
+      76: "La tabla del 76 fortalece las conexiones matemÃ¡ticas combinando las tablas del 4 y 19. Las relaciones 4Ã—19=2Ã—38 enseÃ±an estrategias de multiplicaciÃ³n mÃºltiple. Los enfoques 75+1 o 80-4 proporcionan flexibilidad. Esta tabla prepara para cÃ¡lculos cercanos a 80 con propiedades de nÃºmeros pares.",
+      77: "La tabla del 77 refuerza tanto la tabla del 7 como la del 11 al combinarlas. La relaciÃ³n 7Ã—11=77 crea un patrÃ³n similar a repdigit. Como ambas tablas son de dificultad media, la tabla del 77 es perfecta para reforzarlas. Ser divisible tanto por 7 como por 11 lo hace Ãºtil para fracciones.",
+      78: "La tabla del 78 desarrolla habilidades de factorizaciÃ³n mÃºltiple. Las relaciones 78=2Ã—39=3Ã—26=6Ã—13 proporcionan flexibilidad matemÃ¡tica. El enfoque 80-2 enseÃ±a la estrategia de restar de nÃºmeros redondos. Tener muchos divisores ofrece varios mÃ©todos de cÃ¡lculo. Esta tabla perfecciona el uso de mÃºltiples estrategias.",
+      79: "La tabla del 79 maximiza las estrategias de nÃºmeros primos. El enfoque 80-1 perfecciona el cÃ¡lculo rÃ¡pido usando nÃºmeros redondos. Debido a propiedades primas, requiere flexibilidad mental y mÃ©todos de soluciÃ³n creativos. Esta tabla proporciona competencia en cÃ¡lculos cercanos a 80 y desarrolla habilidades matemÃ¡ticas avanzadas.",
+      80: "La tabla del 80 es perfecta para reforzar la tabla del 8. La relaciÃ³n 8Ã—10 combina el sistema decimal y la tabla del 8. Las alternativas 2Ã—40=4Ã—20=5Ã—16 enseÃ±an a usar mÃºltiples estrategias. Tiene importancia social en el contexto de esperanza de vida (lÃ­mite superior 80 aÃ±os). Esta tabla mejora significativamente el cÃ¡lculo prÃ¡ctico y la habilidad de trabajar con nÃºmeros grandes.",
+      81: "Multiplicar por 81 usa la relaciÃ³n 81=9Â² (nueve al cuadrado) o 81=3â´ (tres a la cuarta potencia). Como 81 es un cuadrado perfecto, todos sus mÃºltiplos con cuadrados perfectos forman nÃºmeros cuadrados tambiÃ©n. Pensar en 81 como 80+1 o 9Ã—9 facilita el cÃ¡lculo. El 81 es divisible tanto por 9 como por 27 (27=3Â³). Los mÃºltiplos de 81 se dividen uniformemente por 9. El 81 es la suma de los nÃºmeros impares del 1 al 9 (1+3+5+7+9+11+13+15+17=81). Esta tabla desarrolla la comprensiÃ³n de patrones matemÃ¡ticos.",
+      82: "Multiplicar por 82 usa la relaciÃ³n 2Ã—41. Si conoces la tabla del 41, puedes duplicar cada resultado para encontrar la tabla del 82. Pensar en 82 como 80+2 o 85-3 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 82 es divisible tanto por 2 como por 41. Esta tabla establece una base para cÃ¡lculos despuÃ©s de 80.",
+      83: "Multiplicar por 83 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. Los mÃ©todos mÃ¡s prÃ¡cticos son pensar en 83 como 80+3 o 85-2. El 83 es un nÃºmero primo y solo es divisible por 1 y 83. Aprender la tabla del 83 desarrolla la habilidad de calcular rÃ¡pidamente con nÃºmeros primos grandes.",
+      84: "Multiplicar por 84 es una de las tablas mÃ¡s versÃ¡tiles. Como 84=12Ã—7=6Ã—14=4Ã—21=3Ã—28=2Ã—42, se puede calcular de muchas maneras diferentes. El 84 es 7 veces 12 (7 docenas). Tener muchos divisores (1,2,3,4,6,7,12,14,21,28,42,84) lo hace extremadamente Ãºtil en cÃ¡lculos de fracciones. El 84 es Ãºtil en cÃ¡lculos de tiempo (84 horas=1 semana+1/2 dÃ­a). Esta tabla perfecciona el uso de mÃºltiples estrategias.",
+      85: "Multiplicar por 85 usa la relaciÃ³n 5Ã—17. Si ambas tablas son conocidas, multiplicar por 85 es fÃ¡cil. Pensar en 85 como 80+5 o 90-5 facilita el cÃ¡lculo mental. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. El 85 se usa frecuentemente en cÃ¡lculos de porcentaje (85%=17/20). Esta tabla prepara para cÃ¡lculos cercanos a 90.",
+      86: "Multiplicar por 86 usa la relaciÃ³n 2Ã—43. Si conoces la tabla del 43, puedes duplicar cada resultado para encontrar la tabla del 86. Pensar en 86 como 80+6 o 90-4 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 86 es divisible tanto por 2 como por 43. Esta tabla establece una base para cÃ¡lculos cercanos a 90.",
+      87: "Multiplicar por 87 usa la relaciÃ³n 3Ã—29. Triplicar la tabla del 29 o multiplicar la tabla del 3 por 29 funciona. Pensar en 87 como 90-3 o 85+2 facilita el cÃ¡lculo mental. Como 87=3Ã—29, es divisible tanto por 3 como por 29. Esta tabla es Ãºtil para cÃ¡lculos cercanos a 90 y perfecciona la habilidad de restar de nÃºmeros redondos.",
+      88: "Multiplicar por 88 usa las relaciones 8Ã—11=4Ã—22=2Ã—44. Se puede calcular de mÃºltiples maneras. El 88 muestra un patrÃ³n similar a repdigit (repeticiÃ³n de 8s). Pensar en 88 como 90-2 o 80+8 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 88 tiene muchos divisores. La propiedad repdigit (88) facilita el reconocimiento visual y la memorizaciÃ³n.",
+      89: "Multiplicar por 89 requiere estrategias especiales debido a sus propiedades de nÃºmero primo. La estrategia mÃ¡s fÃ¡cil es pensar en 89 como 90-1: multiplica un nÃºmero por 90 y rÃ©stale el nÃºmero mismo. El 89 es un nÃºmero primo y solo es divisible por 1 y 89. El 89 es muy cercano a 90, por lo que es Ãºtil para aproximaciones. Esta tabla proporciona competencia en cÃ¡lculos cercanos a 90 y desarrolla habilidades matemÃ¡ticas avanzadas.",
+      90: "Multiplicar por 90 usa la relaciÃ³n 9Ã—10 y es muy Ãºtil. Para multiplicar un nÃºmero por 90, puedes multiplicarlo por 9 y agregar un cero al final. Hay relaciones de factores alternativos como 90=2Ã—45=3Ã—30=5Ã—18=6Ã—15. Un Ã¡ngulo recto mide 90Â°. El 90 tiene importancia crÃ­tica en geometrÃ­a (Ã¡ngulo recto de 90Â°). El 90 se usa frecuentemente en medidas de Ã¡ngulos y porcentajes. Esta tabla refuerza la tabla del 9 y es extremadamente importante para cÃ¡lculos prÃ¡cticos y medidas de Ã¡ngulos.",
+      91: "Multiplicar por 91 usa la relaciÃ³n 7Ã—13. Si ambas tablas son conocidas, multiplicar por 91 es fÃ¡cil. Pensar en 91 como 90+1 o 100-9 facilita el cÃ¡lculo. Como 91=7Ã—13, es divisible tanto por 7 como por 13. Esta tabla refuerza la comprensiÃ³n de relaciones de factores. Como ambas tablas son de dificultad media, la tabla del 91 es ideal para reforzarlas. Es un concepto fundamental para matemÃ¡ticas avanzadas y criptografÃ­a.",
+      92: "Multiplicar por 92 usa las relaciones 4Ã—23=2Ã—46. Se puede calcular de mÃºltiples maneras. Pensar en 92 como 90+2 o 100-8 facilita el cÃ¡lculo mental. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 92 es divisible tanto por 4 como por 23. Esta tabla prepara para cÃ¡lculos cercanos a 100 y desarrolla habilidades de cÃ¡lculo en los 90s.",
+      93: "Multiplicar por 93 usa la relaciÃ³n 3Ã—31. Triplicar la tabla del 31 o multiplicar la tabla del 3 por 31 funciona. Pensar en 93 como 90+3 o 100-7 facilita el cÃ¡lculo. Como 93=3Ã—31, es divisible tanto por 3 como por 31. Esta tabla es Ãºtil para cÃ¡lculos cercanos a 100. Proporciona prÃ¡ctica de multiplicaciÃ³n con nÃºmeros grandes y desarrolla flexibilidad mental.",
+      94: "Multiplicar por 94 usa la relaciÃ³n 2Ã—47. Si conoces la tabla del 47, puedes duplicar cada resultado para encontrar la tabla del 94. Pensar en 94 como 100-6 o 90+4 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 94 es divisible tanto por 2 como por 47. La estrategia 100-6 perfecciona el mÃ©todo de restar de nÃºmeros redondos. Proporciona habilidades crÃ­ticas para matemÃ¡tica mental avanzada.",
+      95: "Multiplicar por 95 usa la relaciÃ³n 5Ã—19. Si ambas tablas son conocidas, multiplicar por 95 es fÃ¡cil. Pensar en 95 como 100-5 o 90+5 facilita el cÃ¡lculo mental. El patrÃ³n del 5 (termina en 5 o 0) facilita el cÃ¡lculo. El 95 se usa frecuentemente en cÃ¡lculos de porcentaje (95%=19/20). La estrategia 100-5 es muy Ãºtil.",
+      96: "Multiplicar por 96 usa las relaciones 32Ã—3=16Ã—6=12Ã—8=4Ã—24=2Ã—48. Se puede calcular de muchas maneras diferentes. Pensar en 96 como 100-4 o 90+6 facilita el cÃ¡lculo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 96 tiene muchos divisores (1,2,3,4,6,8,12,16,24,32,48,96), lo que lo hace Ãºtil en cÃ¡lculos de fracciones. Muestra la relaciÃ³n entre potencias de 2 y 3 (2âµÃ—3). Esta tabla es perfecta para flexibilidad matemÃ¡tica y teorÃ­a de nÃºmeros.",
+      97: "Multiplicar por 97 desarrolla estrategias de matemÃ¡tica mental debido a sus propiedades de nÃºmero primo. La estrategia mÃ¡s fÃ¡cil es pensar en 97 como 100-3: multiplica un nÃºmero por 100 y rÃ©stale tres veces el nÃºmero mismo. El 97 es un nÃºmero primo y solo es divisible por 1 y 97. Aprender la tabla del 97 facilita cÃ¡lculos cercanos a 100. Ser el primo mÃ¡s cercano a 100 facilita extremadamente el cÃ¡lculo mental. Ser primo es importante para teorÃ­a de nÃºmeros y criptografÃ­a.",
+      98: "Multiplicar por 98 usa las relaciones 2Ã—49=7Ã—14. Se puede calcular de mÃºltiples maneras. La estrategia mÃ¡s fÃ¡cil es pensar en 98 como 100-2: multiplica un nÃºmero por 100 y rÃ©stale dos veces el nÃºmero mismo. Como es un nÃºmero par, todos sus mÃºltiplos tambiÃ©n son pares. El 98 es divisible tanto por 2 como por 7 y 49. La relaciÃ³n 98=2Ã—49=2Ã—7Â² combina nÃºmeros cuadrados y estrategias de duplicaciÃ³n. Esta tabla proporciona dominio en cÃ¡lculos cercanos a 100.",
+      99: "Multiplicar por 99 usa la relaciÃ³n 9Ã—11. La estrategia mÃ¡s fÃ¡cil es pensar en 99 como 100-1: multiplica un nÃºmero por 100 y rÃ©stale el nÃºmero mismo. El 99 muestra un patrÃ³n similar a repdigit (repeticiÃ³n de 9s). Como 99=9Ã—11, es divisible tanto por 9 como por 11. Esta tabla es extremadamente Ãºtil para cÃ¡lculos cercanos a 100. La estrategia 100-1 es PERFECTA para matemÃ¡tica mental. La propiedad repdigit (99) profundiza la comprensiÃ³n de patrones. Esta tabla es extremadamente importante para habilidades de cÃ¡lculo prÃ¡ctico.",
+      100: "La tabla del 100 es la base del sistema decimal. Proporciona una comprensiÃ³n perfecta del concepto de valor posicional. Forma la base de cÃ¡lculos de porcentaje (100%=completo) y el sistema decimal. Tiene importancia crÃ­tica para unidades monetarias, unidades de medida y matemÃ¡tica cotidiana. Â¡ES UNA DE LAS TABLAS MÃS ÃšTILES E IMPORTANTES!",
     }
-    return importance[number] || `Apprenezr la tabla del ${number} ayuda a los estudiantes a desarrollar fluidez con este número importante. Se ve frecuentemente en matemáticas y la vida cotidiana, haciéndolo necesario para construir sólidas habilidades de cálculo.`
+    return importance[number] || `Aprender la tabla del ${number} ayuda a los estudiantes a desarrollar fluidez con este nÃºmero importante. Se ve frecuentemente en matemÃ¡ticas y la vida cotidiana, haciÃ©ndolo necesario para construir sÃ³lidas habilidades de cÃ¡lculo.`
   }
 
   const getPatterns = () => {
     const patterns: { [key: number]: { title: string; description: string }[] } = {
       1: [
-        { title: "Patrón de Identidad", description: "Todo número multiplicado por 1 es igual a sí mismo. Esto nunca cambia: 1×1=1, 1×2=2, 1×3=3, y así sucesivamente." },
-        { title: "Secuencia Predecible", description: "Los resultados simplemente cuentan hacia arriba: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Solo estás listando números en orden." },
-        { title: "Base de Todas las Tablas", description: "Cada Table de multiplication comienza con multiplicar por 1, por lo que este patrón aparece en todas las tablas." },
+        { title: "PatrÃ³n de Identidad", description: "Todo nÃºmero multiplicado por 1 es igual a sÃ­ mismo. Esto nunca cambia: 1Ã—1=1, 1Ã—2=2, 1Ã—3=3, y asÃ­ sucesivamente." },
+        { title: "Secuencia Predecible", description: "Los resultados simplemente cuentan hacia arriba: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Solo estÃ¡s listando nÃºmeros en orden." },
+        { title: "Base de Todas las Tablas", description: "Cada tabla de multiplicar comienza con multiplicar por 1, por lo que este patrÃ³n aparece en todas las tablas." },
       ],
       2: [
-        { title: "Solo Números Pares", description: "Todos los múltiplos de 2 son números pares. Los resultados siempre terminan en 0, 2, 4, 6 u 8." },
-        { title: "Contar de Dos en Dos", description: "Cada respuesta es 2 más que la Précédent: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
-        { title: "Patrón de Duplicación", description: "Cada resultado es exactamente el doble del factor: 2×5=10 es el doble de 5." },
+        { title: "Solo NÃºmeros Pares", description: "Todos los mÃºltiplos de 2 son nÃºmeros pares. Los resultados siempre terminan en 0, 2, 4, 6 u 8." },
+        { title: "Contar de Dos en Dos", description: "Cada respuesta es 2 mÃ¡s que la anterior: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
+        { title: "PatrÃ³n de DuplicaciÃ³n", description: "Cada resultado es exactamente el doble del factor: 2Ã—5=10 es el doble de 5." },
       ],
       3: [
-        { title: "Patrón de Suma de Dígitos", description: "Suma los dígitos de cada resultado: 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). ¡El patrón 3-6-9 se repite!" },
+        { title: "PatrÃ³n de Suma de DÃ­gitos", description: "Suma los dÃ­gitos de cada resultado: 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). Â¡El patrÃ³n 3-6-9 se repite!" },
         { title: "Contar de Tres en Tres", description: "Cada respuesta aumenta en 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
         { title: "Alternancia Impar-Par", description: "Los resultados alternan: impar (3), par (6), impar (9), par (12), creando un ritmo predecible." },
       ],
       4: [
-        { title: "Siempre Números Pares", description: "Como la tabla del 2, todos los múltiplos de 4 son pares, terminan en 0, 2, 4, 6 u 8." },
-        { title: "Doble de la Tabla del 2", description: "Cada respuesta es exactamente el doble de la respuesta correspondiente en la tabla del 2: 4×3=12 es el doble de 2×3=6." },
+        { title: "Siempre NÃºmeros Pares", description: "Como la tabla del 2, todos los mÃºltiplos de 4 son pares, terminan en 0, 2, 4, 6 u 8." },
+        { title: "Doble de la Tabla del 2", description: "Cada respuesta es exactamente el doble de la respuesta correspondiente en la tabla del 2: 4Ã—3=12 es el doble de 2Ã—3=6." },
         { title: "Contar de Cuatro en Cuatro", description: "Cada respuesta aumenta en 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40." },
       ],
       5: [
-        { title: "Termina en 0 o 5", description: "Cada múltiplo de 5 termina en 0 o 5. Esto hace que el patrón sea instantáneamente reconocible." },
-        { title: "Patrón Alternante", description: "Los resultados alternan entre terminar en 5 (impar) y 0 (par): 5, 10, 15, 20, 25, 30..." },
-        { title: "Mitad de la Tabla del 10", description: "Cada resultado es exactamente la mitad de la tabla del 10: 5×4=20 es la mitad de 10×4=40." },
+        { title: "Termina en 0 o 5", description: "Cada mÃºltiplo de 5 termina en 0 o 5. Esto hace que el patrÃ³n sea instantÃ¡neamente reconocible." },
+        { title: "PatrÃ³n Alternante", description: "Los resultados alternan entre terminar en 5 (impar) y 0 (par): 5, 10, 15, 20, 25, 30..." },
+        { title: "Mitad de la Tabla del 10", description: "Cada resultado es exactamente la mitad de la tabla del 10: 5Ã—4=20 es la mitad de 10Ã—4=40." },
       ],
       6: [
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 6 son pares. Los resultados progresan como 6, 12, 18, 24, 30... y todos son divisibles por 2." },
-        { title: "Doble de la Tabla del 3", description: "Cada respuesta es exactamente el doble de la tabla del 3: 6×4=24 es el doble de 3×4=12." },
-        { title: "Patrón del Dígito de las Unidades", description: "El dígito de las unidades sigue este patrón: 6, 2, 8, 4, 0 y se repite. Este patrón te ayuda a identificar la tabla del 6." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 6 son pares. Los resultados progresan como 6, 12, 18, 24, 30... y todos son divisibles por 2." },
+        { title: "Doble de la Tabla del 3", description: "Cada respuesta es exactamente el doble de la tabla del 3: 6Ã—4=24 es el doble de 3Ã—4=12." },
+        { title: "PatrÃ³n del DÃ­gito de las Unidades", description: "El dÃ­gito de las unidades sigue este patrÃ³n: 6, 2, 8, 4, 0 y se repite. Este patrÃ³n te ayuda a identificar la tabla del 6." },
       ],
       7: [
-        { title: "Patrón de Suma de Dígitos", description: "Cuando sumas los dígitos de los múltiplos de 7, emerge un patrón interesante: 7, 14(1+4=5), 21(2+1=3), 28(2+8=10)..." },
-        { title: "Repetición del Dígito de las Unidades", description: "El dígito de las unidades sigue esta secuencia: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 y se repite." },
-        { title: "Propiedad de Número Primo", description: "El 7 es un número primo, por lo que no tiene relaciones simples con otras tablas. Sin embargo, memorizar pares especiales como 7×8=56 ayuda." },
+        { title: "PatrÃ³n de Suma de DÃ­gitos", description: "Cuando sumas los dÃ­gitos de los mÃºltiplos de 7, emerge un patrÃ³n interesante: 7, 14(1+4=5), 21(2+1=3), 28(2+8=10)..." },
+        { title: "RepeticiÃ³n del DÃ­gito de las Unidades", description: "El dÃ­gito de las unidades sigue esta secuencia: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 y se repite." },
+        { title: "Propiedad de NÃºmero Primo", description: "El 7 es un nÃºmero primo, por lo que no tiene relaciones simples con otras tablas. Sin embargo, memorizar pares especiales como 7Ã—8=56 ayuda." },
       ],
       8: [
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 8 son tanto pares como divisibles por 4: 8, 16, 24, 32, 40, 48..." },
-        { title: "Doble de la Tabla del 4", description: "Cada respuesta es exactamente el doble de la tabla del 4: 8×5=40 es el doble de 4×5=20." },
-        { title: "Patrón del Dígito de las Unidades", description: "El dígito de las unidades sigue este patrón: 8, 6, 4, 2, 0 y se repite. Siempre un patrón descendente con números pares." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 8 son tanto pares como divisibles por 4: 8, 16, 24, 32, 40, 48..." },
+        { title: "Doble de la Tabla del 4", description: "Cada respuesta es exactamente el doble de la tabla del 4: 8Ã—5=40 es el doble de 4Ã—5=20." },
+        { title: "PatrÃ³n del DÃ­gito de las Unidades", description: "El dÃ­gito de las unidades sigue este patrÃ³n: 8, 6, 4, 2, 0 y se repite. Siempre un patrÃ³n descendente con nÃºmeros pares." },
       ],
       9: [
-        { title: "Suma de Dígitos Siempre es 9", description: "Suma los dígitos de los múltiplos de 9: 18(1+8=9), 27(2+7=9), 36(3+6=9), 45(4+5=9). ¡Este patrón mágico siempre funciona!" },
-        { title: "Patrón del Dígito de las Decenas", description: "Si haces 9×n, el dígito de las decenas es n-1: 9×3=27 (decenas:2), 9×6=54 (decenas:5), 9×9=81 (decenas:8)." },
-        { title: "1 Menos que 10", description: "La fórmula 9×n = (10×n) - n es muy útil: 9×6 = 60-6 = 54, 9×8 = 80-8 = 72." },
+        { title: "Suma de DÃ­gitos Siempre es 9", description: "Suma los dÃ­gitos de los mÃºltiplos de 9: 18(1+8=9), 27(2+7=9), 36(3+6=9), 45(4+5=9). Â¡Este patrÃ³n mÃ¡gico siempre funciona!" },
+        { title: "PatrÃ³n del DÃ­gito de las Decenas", description: "Si haces 9Ã—n, el dÃ­gito de las decenas es n-1: 9Ã—3=27 (decenas:2), 9Ã—6=54 (decenas:5), 9Ã—9=81 (decenas:8)." },
+        { title: "1 Menos que 10", description: "La fÃ³rmula 9Ã—n = (10Ã—n) - n es muy Ãºtil: 9Ã—6 = 60-6 = 54, 9Ã—8 = 80-8 = 72." },
       ],
       10: [
-        { title: "Agrega un Cero al Final", description: "Cuando multiplicas cualquier número por 10, simplemente agregas un cero al final: 7×10=70, 23×10=230." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 10 terminan en 0: 10, 20, 30, 40, 50... Este patrón nunca cambia." },
-        { title: "Sistema de Valor Posicional", description: "Multiplicar por 10 desplaza cada dígito una posición a la izquierda. Esta es la base de nuestro sistema decimal: 25×10=250." },
+        { title: "Agrega un Cero al Final", description: "Cuando multiplicas cualquier nÃºmero por 10, simplemente agregas un cero al final: 7Ã—10=70, 23Ã—10=230." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 10 terminan en 0: 10, 20, 30, 40, 50... Este patrÃ³n nunca cambia." },
+        { title: "Sistema de Valor Posicional", description: "Multiplicar por 10 desplaza cada dÃ­gito una posiciÃ³n a la izquierda. Esta es la base de nuestro sistema decimal: 25Ã—10=250." },
       ],
       11: [
-        { title: "Patrón de Dígitos Dobles", description: "Cuando se multiplica por números de un dígito, el resultado es dígitos dobles: 11×2=22, 11×3=33, 11×7=77, 11×9=99." },
-        { title: "Truco de Suma de Dígitos", description: "Multiplica un número de dos dígitos por 11: suma los dígitos y colócalos en el medio. 23×11: 2_(2+3)_3 = 253." },
-        { title: "Incremento de Decenas", description: "Múltiplos de 11: 11, 22, 33, 44, 55, 66, 77, 88, 99, 110. Los primeros 9 muestran el patrón de dígitos dobles." },
+        { title: "PatrÃ³n de DÃ­gitos Dobles", description: "Cuando se multiplica por nÃºmeros de un dÃ­gito, el resultado es dÃ­gitos dobles: 11Ã—2=22, 11Ã—3=33, 11Ã—7=77, 11Ã—9=99." },
+        { title: "Truco de Suma de DÃ­gitos", description: "Multiplica un nÃºmero de dos dÃ­gitos por 11: suma los dÃ­gitos y colÃ³calos en el medio. 23Ã—11: 2_(2+3)_3 = 253." },
+        { title: "Incremento de Decenas", description: "MÃºltiplos de 11: 11, 22, 33, 44, 55, 66, 77, 88, 99, 110. Los primeros 9 muestran el patrÃ³n de dÃ­gitos dobles." },
       ],
       12: [
-        { title: "Patrón de Docena", description: "Múltiplos de 12: 12, 24, 36, 48, 60, 72, 84, 96, 108, 120. Cada uno muestra un aumento de una docena." },
-        { title: "Múltiplos de Ambos 3 y 4", description: "Como 12=3×4, todos los resultados son divisibles tanto por 3 como por 4. 12×5=60: 60÷3=20, 60÷4=15." },
-        { title: "Patrón de Números Pares", description: "Todos los múltiplos de 12 son pares y divisibles por 4: 12, 24, 36, 48..." },
+        { title: "PatrÃ³n de Docena", description: "MÃºltiplos de 12: 12, 24, 36, 48, 60, 72, 84, 96, 108, 120. Cada uno muestra un aumento de una docena." },
+        { title: "MÃºltiplos de Ambos 3 y 4", description: "Como 12=3Ã—4, todos los resultados son divisibles tanto por 3 como por 4. 12Ã—5=60: 60Ã·3=20, 60Ã·4=15." },
+        { title: "PatrÃ³n de NÃºmeros Pares", description: "Todos los mÃºltiplos de 12 son pares y divisibles por 4: 12, 24, 36, 48..." },
       ],
       13: [
-        { title: "Descomposición 10+3", description: "13×n = (10×n) + (3×n). Ejemplo: 13×4 = 40 + 12 = 52. Esta estrategia facilita el cálculo." },
-        { title: "Ciclo del Dígito de las Unidades", description: "Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 y se repite. Se completa un ciclo en exactamente 10 pasos." },
-        { title: "Comportamiento de Número Primo", description: "Como 13 es primo, solo es divisible por 1 y 13. Esto requiere estrategias especiales de memorización." },
+        { title: "DescomposiciÃ³n 10+3", description: "13Ã—n = (10Ã—n) + (3Ã—n). Ejemplo: 13Ã—4 = 40 + 12 = 52. Esta estrategia facilita el cÃ¡lculo." },
+        { title: "Ciclo del DÃ­gito de las Unidades", description: "DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 y se repite. Se completa un ciclo en exactamente 10 pasos." },
+        { title: "Comportamiento de NÃºmero Primo", description: "Como 13 es primo, solo es divisible por 1 y 13. Esto requiere estrategias especiales de memorizaciÃ³n." },
       ],
       14: [
-        { title: "Doble del 7", description: "Como 14=2×7, si conoces la tabla del 7 duplica cada resultado: 7×6=42, entonces 14×6=84." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 14 son pares: 14, 28, 42, 56, 70, 84, 98, 112, 126, 140." },
-        { title: "Patrón de Dos Semanas", description: "14 días = 2 semanas. Los múltiplos de 14 se usan en planificación semanal: 28 días = 4 semanas." },
+        { title: "Doble del 7", description: "Como 14=2Ã—7, si conoces la tabla del 7 duplica cada resultado: 7Ã—6=42, entonces 14Ã—6=84." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 14 son pares: 14, 28, 42, 56, 70, 84, 98, 112, 126, 140." },
+        { title: "PatrÃ³n de Dos Semanas", description: "14 dÃ­as = 2 semanas. Los mÃºltiplos de 14 se usan en planificaciÃ³n semanal: 28 dÃ­as = 4 semanas." },
       ],
       15: [
-        { title: "Termina en 0 o 5", description: "Todos los múltiplos de 15 terminan en 0 o 5: 15, 30, 45, 60, 75, 90, 105, 120, 135, 150." },
-        { title: "Relación 3×5", description: "Como 15=3×5, está relacionado con las tablas del 3 y 5. 15×4=60: 3×4=12, 5×4=20, no es 12+20=32 pero sí 3×20=60 o 5×12=60." },
-        { title: "Múltiplos de Cuarto de Hora", description: "15 minutos = cuarto de hora. 30 minutos = media hora, 45 minutos = tres cuartos, 60 minutos = 1 hora." },
+        { title: "Termina en 0 o 5", description: "Todos los mÃºltiplos de 15 terminan en 0 o 5: 15, 30, 45, 60, 75, 90, 105, 120, 135, 150." },
+        { title: "RelaciÃ³n 3Ã—5", description: "Como 15=3Ã—5, estÃ¡ relacionado con las tablas del 3 y 5. 15Ã—4=60: 3Ã—4=12, 5Ã—4=20, no es 12+20=32 pero sÃ­ 3Ã—20=60 o 5Ã—12=60." },
+        { title: "MÃºltiplos de Cuarto de Hora", description: "15 minutos = cuarto de hora. 30 minutos = media hora, 45 minutos = tres cuartos, 60 minutos = 1 hora." },
       ],
       16: [
-        { title: "Potencia de 2", description: "16=24 (2×2×2×2). Cadena de duplicación: 2?4?8?16. Cada múltiplo preserva este patrón." },
-        { title: "Doble del 8", description: "Como 16=2×8, si conoces la tabla del 8 duplica cada resultado: 8×3=24, entonces 16×3=48." },
-        { title: "Siempre Par y Divisible por 8", description: "Todos los múltiplos de 16 son pares y divisibles por 4 y 8: 16, 32, 48, 64, 80..." },
+        { title: "Potencia de 2", description: "16=2â´ (2Ã—2Ã—2Ã—2). Cadena de duplicaciÃ³n: 2â†’4â†’8â†’16. Cada mÃºltiplo preserva este patrÃ³n." },
+        { title: "Doble del 8", description: "Como 16=2Ã—8, si conoces la tabla del 8 duplica cada resultado: 8Ã—3=24, entonces 16Ã—3=48." },
+        { title: "Siempre Par y Divisible por 8", description: "Todos los mÃºltiplos de 16 son pares y divisibles por 4 y 8: 16, 32, 48, 64, 80..." },
       ],
       17: [
-        { title: "Estrategia 20-3", description: "Piensa en 17=20-3. 17×6 = (20×6) - (3×6) = 120 - 18 = 102." },
-        { title: "Descomposición 10+7", description: "17×n = (10×n) + (7×n). Ejemplo: 17×4 = 40 + 28 = 68." },
-        { title: "Singularidad de Número Primo", description: "17 es primo, por lo que solo tiene patrones únicos. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Estrategia 20-3", description: "Piensa en 17=20-3. 17Ã—6 = (20Ã—6) - (3Ã—6) = 120 - 18 = 102." },
+        { title: "DescomposiciÃ³n 10+7", description: "17Ã—n = (10Ã—n) + (7Ã—n). Ejemplo: 17Ã—4 = 40 + 28 = 68." },
+        { title: "Singularidad de NÃºmero Primo", description: "17 es primo, por lo que solo tiene patrones Ãºnicos. DÃ­gito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
       18: [
-        { title: "Doble del 9", description: "Como 18=2×9, duplica la tabla del 9: 9×5=45, entonces 18×5=90." },
-        { title: "Triple del 6", description: "Como 18=3×6, triplica la tabla del 6: 6×4=24, entonces 18×4=72." },
-        { title: "Siempre Par y Divisible por 9", description: "Los múltiplos de 18 son pares y divisibles por 9. La suma de dígitos es múltiplo de 9: 18(1+8=9), 36(3+6=9), 54(5+4=9)." },
+        { title: "Doble del 9", description: "Como 18=2Ã—9, duplica la tabla del 9: 9Ã—5=45, entonces 18Ã—5=90." },
+        { title: "Triple del 6", description: "Como 18=3Ã—6, triplica la tabla del 6: 6Ã—4=24, entonces 18Ã—4=72." },
+        { title: "Siempre Par y Divisible por 9", description: "Los mÃºltiplos de 18 son pares y divisibles por 9. La suma de dÃ­gitos es mÃºltiplo de 9: 18(1+8=9), 36(3+6=9), 54(5+4=9)." },
       ],
       19: [
-        { title: "Estrategia 20-1", description: "Piensa en 19=20-1. 19×6 = (20×6) - 6 = 120 - 6 = 114. ¡Método muy práctico!" },
-        { title: "Descomposición 10+9", description: "19×n = (10×n) + (9×n). Ejemplo: 19×3 = 30 + 27 = 57." },
-        { title: "Patrón de Número Primo", description: "Como 19 es primo a des motifs spéciaux. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente)." },
+        { title: "Estrategia 20-1", description: "Piensa en 19=20-1. 19Ã—6 = (20Ã—6) - 6 = 120 - 6 = 114. Â¡MÃ©todo muy prÃ¡ctico!" },
+        { title: "DescomposiciÃ³n 10+9", description: "19Ã—n = (10Ã—n) + (9Ã—n). Ejemplo: 19Ã—3 = 30 + 27 = 57." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 19 es primo tiene patrones especiales. DÃ­gito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente)." },
       ],
       20: [
-        { title: "Agrega Cero y Duplica", description: "20=10×2. Para multiplicar por 20: 7×10=70, luego 70×2=140. (No es 7×20: 70×2=140 directamente)." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 20 terminan en 0: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200." },
-        { title: "Decenas Pares", description: "20, 40, 60, 80, 100... Cada uno aumenta en 20. Son múltiplos pares de 10." },
+        { title: "Agrega Cero y Duplica", description: "20=10Ã—2. Para multiplicar por 20: 7Ã—10=70, luego 70Ã—2=140. (No es 7Ã—20: 70Ã—2=140 directamente)." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 20 terminan en 0: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200." },
+        { title: "Decenas Pares", description: "20, 40, 60, 80, 100... Cada uno aumenta en 20. Son mÃºltiplos pares de 10." },
       ],
       21: [
-        { title: "Relación 3×7", description: "21=3×7. Puedes usar ambas tablas del 3 y 7: 21×4 = 3×4×7 = 12×7 = 84." },
-        { title: "Estrategia 20+1", description: "21×n = (20×n) + n. Ejemplo: 21×6 = 120 + 6 = 126. ¡Muy práctico!" },
-        { title: "Ciclo del Dígito de las Unidades", description: "Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 y se repite. Patrón de incremento simple." },
+        { title: "RelaciÃ³n 3Ã—7", description: "21=3Ã—7. Puedes usar ambas tablas del 3 y 7: 21Ã—4 = 3Ã—4Ã—7 = 12Ã—7 = 84." },
+        { title: "Estrategia 20+1", description: "21Ã—n = (20Ã—n) + n. Ejemplo: 21Ã—6 = 120 + 6 = 126. Â¡Muy prÃ¡ctico!" },
+        { title: "Ciclo del DÃ­gito de las Unidades", description: "DÃ­gito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 y se repite. PatrÃ³n de incremento simple." },
       ],
       22: [
-        { title: "Doble del 11", description: "22=2×11. Si conoces la tabla del 11 duplica: 11×3=33, entonces 22×3=66." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 22 son pares: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220." },
-        { title: "Patrón de Dígitos Dobles", description: "22×1=22, 22×2=44, 22×3=66, 22×4=88. Los primeros 4 muestran patrón de dígitos dobles." },
+        { title: "Doble del 11", description: "22=2Ã—11. Si conoces la tabla del 11 duplica: 11Ã—3=33, entonces 22Ã—3=66." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 22 son pares: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220." },
+        { title: "PatrÃ³n de DÃ­gitos Dobles", description: "22Ã—1=22, 22Ã—2=44, 22Ã—3=66, 22Ã—4=88. Los primeros 4 muestran patrÃ³n de dÃ­gitos dobles." },
       ],
       23: [
-        { title: "Descomposición 20+3", description: "23×n = (20×n) + (3×n). Ejemplo: 23×5 = 100 + 15 = 115." },
-        { title: "Estrategia 25-2", description: "23=25-2. Ejemplo: 23×4 = 100 - 8 = 92. Útil cuando multiplicar por 25 es más fácil." },
-        { title: "Patrón de Número Primo", description: "Como 23 es primo tiene patrón especial. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "DescomposiciÃ³n 20+3", description: "23Ã—n = (20Ã—n) + (3Ã—n). Ejemplo: 23Ã—5 = 100 + 15 = 115." },
+        { title: "Estrategia 25-2", description: "23=25-2. Ejemplo: 23Ã—4 = 100 - 8 = 92. Ãštil cuando multiplicar por 25 es mÃ¡s fÃ¡cil." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 23 es primo tiene patrÃ³n especial. DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
       ],
       24: [
-        { title: "Relaciones de Múltiples Factores", description: "24=2×12=3×8=4×6. Puede calcularse de muchas formas. 24×5 = 12×10 = 120." },
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 24 son pares y divisibles por 3, 4, 6 y 8." },
-        { title: "Relación con las Horas", description: "24 horas = 1 día. 48 horas = 2 días, 72 horas = 3 días. Útil en cálculos de tiempo." },
+        { title: "Relaciones de MÃºltiples Factores", description: "24=2Ã—12=3Ã—8=4Ã—6. Puede calcularse de muchas formas. 24Ã—5 = 12Ã—10 = 120." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 24 son pares y divisibles por 3, 4, 6 y 8." },
+        { title: "RelaciÃ³n con las Horas", description: "24 horas = 1 dÃ­a. 48 horas = 2 dÃ­as, 72 horas = 3 dÃ­as. Ãštil en cÃ¡lculos de tiempo." },
       ],
       25: [
-        { title: "Patrón 25, 50, 75, 00", description: "Todos los múltiplos de 25 terminan en 25, 50, 75 o 00. Muy regular y predecible." },
-        { title: "Relación de Cuarto", description: "25 = 100÷4. Entonces 25×4=100. Esta relación es muy útil en cálculos de porcentajes y fracciones." },
-        { title: "Cuadrado del 5", description: "25=5². Esta relación especial: 25×n = 5×5×n. Ejemplo: 25×8 = 5×40 = 200." },
+        { title: "PatrÃ³n 25, 50, 75, 00", description: "Todos los mÃºltiplos de 25 terminan en 25, 50, 75 o 00. Muy regular y predecible." },
+        { title: "RelaciÃ³n de Cuarto", description: "25 = 100Ã·4. Entonces 25Ã—4=100. Esta relaciÃ³n es muy Ãºtil en cÃ¡lculos de porcentajes y fracciones." },
+        { title: "Cuadrado del 5", description: "25=5Â². Esta relaciÃ³n especial: 25Ã—n = 5Ã—5Ã—n. Ejemplo: 25Ã—8 = 5Ã—40 = 200." },
       ],
       26: [
-        { title: "Doble del 13", description: "26=2×13. Si conoces la tabla del 13 duplica: 13×7=91, entonces 26×7=182." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 26 son pares: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260." },
-        { title: "25+1 o 30-4", description: "26×n = (25×n) + n o (30×n) - (4×n). Ejemplo: 26×4 = 100+4 = 104." },
+        { title: "Doble del 13", description: "26=2Ã—13. Si conoces la tabla del 13 duplica: 13Ã—7=91, entonces 26Ã—7=182." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 26 son pares: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260." },
+        { title: "25+1 o 30-4", description: "26Ã—n = (25Ã—n) + n o (30Ã—n) - (4Ã—n). Ejemplo: 26Ã—4 = 100+4 = 104." },
       ],
       27: [
-        { title: "Potencia del 3", description: "27=3³ (3×3×3). Relación de número cúbico: 27, 54, 81, 108... (múltiplos de 3)." },
-        { title: "Triple del 9", description: "27=3×9. Triplica la tabla del 9: 9×4=36, entonces 27×4=108." },
-        { title: "Estrategia 30-3", description: "27=30-3. Ejemplo: 27×6 = 180-18 = 162. Método de cálculo fácil." },
+        { title: "Potencia del 3", description: "27=3Â³ (3Ã—3Ã—3). RelaciÃ³n de nÃºmero cÃºbico: 27, 54, 81, 108... (mÃºltiplos de 3)." },
+        { title: "Triple del 9", description: "27=3Ã—9. Triplica la tabla del 9: 9Ã—4=36, entonces 27Ã—4=108." },
+        { title: "Estrategia 30-3", description: "27=30-3. Ejemplo: 27Ã—6 = 180-18 = 162. MÃ©todo de cÃ¡lculo fÃ¡cil." },
       ],
       28: [
-        { title: "4×7 o 2×14", description: "28=4×7=2×14. Puede calcularse de múltiples formas: 28×3 = 4×3×7 = 12×7 = 84." },
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 28 son pares y divisibles por 4 y 7: 28, 56, 84, 112, 140..." },
-        { title: "Relación con la Semana", description: "28 días = 4 semanas. Esta relación es útil en cálculos de calendario." },
+        { title: "4Ã—7 o 2Ã—14", description: "28=4Ã—7=2Ã—14. Puede calcularse de mÃºltiples formas: 28Ã—3 = 4Ã—3Ã—7 = 12Ã—7 = 84." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 28 son pares y divisibles por 4 y 7: 28, 56, 84, 112, 140..." },
+        { title: "RelaciÃ³n con la Semana", description: "28 dÃ­as = 4 semanas. Esta relaciÃ³n es Ãºtil en cÃ¡lculos de calendario." },
       ],
       29: [
-        { title: "Estrategia 30-1", description: "29=30-1. 29×n = (30×n) - n. Ejemplo: 29×7 = 210-7 = 203. ¡El método más efectivo!" },
-        { title: "Patrón del Dígito de las Unidades", description: "Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente). Predecible." },
-        { title: "Propiedad de Número Primo", description: "Como 29 es primo no tiene relaciones simples de factores. Requiere estrategias mentales." },
+        { title: "Estrategia 30-1", description: "29=30-1. 29Ã—n = (30Ã—n) - n. Ejemplo: 29Ã—7 = 210-7 = 203. Â¡El mÃ©todo mÃ¡s efectivo!" },
+        { title: "PatrÃ³n del DÃ­gito de las Unidades", description: "DÃ­gito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente). Predecible." },
+        { title: "Propiedad de NÃºmero Primo", description: "Como 29 es primo no tiene relaciones simples de factores. Requiere estrategias mentales." },
       ],
       30: [
-        { title: "Relación 3×10", description: "30=3×10. Multiplicar por 30: multiplica por 10, luego por 3. 7×30 = 70×3 = 210." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 30 terminan en 0: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300." },
-        { title: "Múltiplos Triples de las Decenas", description: "30, 60, 90, 120, 150... Cada uno aumenta en 30. Son 3 veces las decenas." },
+        { title: "RelaciÃ³n 3Ã—10", description: "30=3Ã—10. Multiplicar por 30: multiplica por 10, luego por 3. 7Ã—30 = 70Ã—3 = 210." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 30 terminan en 0: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300." },
+        { title: "MÃºltiplos Triples de las Decenas", description: "30, 60, 90, 120, 150... Cada uno aumenta en 30. Son 3 veces las decenas." },
       ],
       31: [
-        { title: "Estrategia 30+1", description: "31=30+1. 31×n = (30×n) + n. Ejemplo: 31×7 = 210 + 7 = 217." },
-        { title: "Patrón de Número Primo", description: "Como 31 es primo tiene patrón especial. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Relación con Días del Mes", description: "31 días es la longitud máxima de un mes. 31, 62 (2 meses), 93 (3 meses), 124 (4 meses) en cálculos de calendario." },
+        { title: "Estrategia 30+1", description: "31=30+1. 31Ã—n = (30Ã—n) + n. Ejemplo: 31Ã—7 = 210 + 7 = 217." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 31 es primo tiene patrÃ³n especial. DÃ­gito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "RelaciÃ³n con DÃ­as del Mes", description: "31 dÃ­as es la longitud mÃ¡xima de un mes. 31, 62 (2 meses), 93 (3 meses), 124 (4 meses) en cÃ¡lculos de calendario." },
       ],
       32: [
-        { title: "Potencia de 2", description: "32=25. Cadena de duplicación: 2?4?8?16?32. Todos los múltiplos preservan este patrón." },
-        { title: "Doble del 16", description: "32=2×16. Si conoces la tabla del 16 duplica: 16×5=80, entonces 32×5=160." },
-        { title: "Siempre Par y Divisible por 8", description: "Todos los múltiplos de 32 son pares y divisibles por 4, 8 y 16: 32, 64, 96, 128..." },
+        { title: "Potencia de 2", description: "32=2âµ. Cadena de duplicaciÃ³n: 2â†’4â†’8â†’16â†’32. Todos los mÃºltiplos preservan este patrÃ³n." },
+        { title: "Doble del 16", description: "32=2Ã—16. Si conoces la tabla del 16 duplica: 16Ã—5=80, entonces 32Ã—5=160." },
+        { title: "Siempre Par y Divisible por 8", description: "Todos los mÃºltiplos de 32 son pares y divisibles por 4, 8 y 16: 32, 64, 96, 128..." },
       ],
       33: [
-        { title: "Relación 3×11", description: "33=3×11. Triplica la tabla del 11: 11×4=44, entonces 33×4=132. O multiplica la tabla del 3 por 11." },
-        { title: "Patrón Repdigit", description: "33×1=33, 33×2=66, 33×3=99. Los primeros 3 muestran dígitos dobles. Luego 132, 165..." },
-        { title: "Siempre Divisible por 3", description: "Todos los múltiplos de 33 son divisibles por 3 y 11. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—11", description: "33=3Ã—11. Triplica la tabla del 11: 11Ã—4=44, entonces 33Ã—4=132. O multiplica la tabla del 3 por 11." },
+        { title: "PatrÃ³n Repdigit", description: "33Ã—1=33, 33Ã—2=66, 33Ã—3=99. Los primeros 3 muestran dÃ­gitos dobles. Luego 132, 165..." },
+        { title: "Siempre Divisible por 3", description: "Todos los mÃºltiplos de 33 son divisibles por 3 y 11. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       34: [
-        { title: "Doble del 17", description: "34=2×17. Duplica la tabla del 17: 17×6=102, entonces 34×6=204." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 34 son pares: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340." },
-        { title: "35-1 o 30+4", description: "34×n = (35×n) - n o (30×n) + (4×n). Ejemplo: 34×5 = 175-5 = 170." },
+        { title: "Doble del 17", description: "34=2Ã—17. Duplica la tabla del 17: 17Ã—6=102, entonces 34Ã—6=204." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 34 son pares: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340." },
+        { title: "35-1 o 30+4", description: "34Ã—n = (35Ã—n) - n o (30Ã—n) + (4Ã—n). Ejemplo: 34Ã—5 = 175-5 = 170." },
       ],
       35: [
-        { title: "Relación 5×7", description: "35=5×7. Puedes usar ambas tablas del 5 y 7: 35×4 = 5×4×7 = 20×7 = 140." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 35 terminan en 5 o 0: 35, 70, 105, 140, 175, 210, 245, 280..." },
-        { title: "Cincos del 7", description: "35, 70, 105, 140, 175... Multiplica múltiplos del 7 por 5. O múltiplos del 5 por 7." },
+        { title: "RelaciÃ³n 5Ã—7", description: "35=5Ã—7. Puedes usar ambas tablas del 5 y 7: 35Ã—4 = 5Ã—4Ã—7 = 20Ã—7 = 140." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 35 terminan en 5 o 0: 35, 70, 105, 140, 175, 210, 245, 280..." },
+        { title: "Cincos del 7", description: "35, 70, 105, 140, 175... Multiplica mÃºltiplos del 7 por 5. O mÃºltiplos del 5 por 7." },
       ],
       36: [
-        { title: "Cuadrado del 6", description: "36=6². Además 36=4×9=3×12=2×18. Relaciones de múltiples factores." },
-        { title: "Muchos Divisores", description: "36 tiene 9 divisores: 1,2,3,4,6,9,12,18,36. Esto lo hace muy útil para fracciones." },
-        { title: "Divisible por 9 y 4", description: "Todos los múltiplos de 36 son divisibles por 4 y 9. La suma de dígitos es múltiplo de 9." },
+        { title: "Cuadrado del 6", description: "36=6Â². AdemÃ¡s 36=4Ã—9=3Ã—12=2Ã—18. Relaciones de mÃºltiples factores." },
+        { title: "Muchos Divisores", description: "36 tiene 9 divisores: 1,2,3,4,6,9,12,18,36. Esto lo hace muy Ãºtil para fracciones." },
+        { title: "Divisible por 9 y 4", description: "Todos los mÃºltiplos de 36 son divisibles por 4 y 9. La suma de dÃ­gitos es mÃºltiplo de 9." },
       ],
       37: [
-        { title: "Estrategia 40-3", description: "37=40-3. 37×n = (40×n) - (3×n). Ejemplo: 37×6 = 240 - 18 = 222." },
-        { title: "Relación Mágica con 111", description: "37×3=111. Esta relación especial: 37×6=222, 37×9=333. ¡En cada múltiplo de 3 hay resultado repdigit!" },
-        { title: "Singularidad de Número Primo", description: "Como 37 es primo a des motifs spéciaux. Las estrategias 35+2 o 40-3 son útiles." },
+        { title: "Estrategia 40-3", description: "37=40-3. 37Ã—n = (40Ã—n) - (3Ã—n). Ejemplo: 37Ã—6 = 240 - 18 = 222." },
+        { title: "RelaciÃ³n MÃ¡gica con 111", description: "37Ã—3=111. Esta relaciÃ³n especial: 37Ã—6=222, 37Ã—9=333. Â¡En cada mÃºltiplo de 3 hay resultado repdigit!" },
+        { title: "Singularidad de NÃºmero Primo", description: "Como 37 es primo tiene patrones especiales. Las estrategias 35+2 o 40-3 son Ãºtiles." },
       ],
       38: [
-        { title: "Doble del 19", description: "38=2×19. Duplica la tabla del 19: 19×7=133, entonces 38×7=266." },
-        { title: "Estrategia 40-2", description: "38=40-2. 38×n = (40×n) - (2×n). Ejemplo: 38×5 = 200 - 10 = 190." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 38 son pares: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380." },
+        { title: "Doble del 19", description: "38=2Ã—19. Duplica la tabla del 19: 19Ã—7=133, entonces 38Ã—7=266." },
+        { title: "Estrategia 40-2", description: "38=40-2. 38Ã—n = (40Ã—n) - (2Ã—n). Ejemplo: 38Ã—5 = 200 - 10 = 190." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 38 son pares: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380." },
       ],
       39: [
-        { title: "Relación 3×13", description: "39=3×13. Triplica la tabla del 13: 13×4=52, entonces 39×4=156." },
-        { title: "Estrategia 40-1", description: "39=40-1. 39×n = (40×n) - n. Ejemplo: 39×7 = 280 - 7 = 273. ¡Muy práctico!" },
-        { title: "Divisible por 3", description: "Todos los múltiplos de 39 son divisibles por 3 y 13. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—13", description: "39=3Ã—13. Triplica la tabla del 13: 13Ã—4=52, entonces 39Ã—4=156." },
+        { title: "Estrategia 40-1", description: "39=40-1. 39Ã—n = (40Ã—n) - n. Ejemplo: 39Ã—7 = 280 - 7 = 273. Â¡Muy prÃ¡ctico!" },
+        { title: "Divisible por 3", description: "Todos los mÃºltiplos de 39 son divisibles por 3 y 13. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       40: [
-        { title: "Relación 4×10", description: "40=4×10. Multiplicar por 40: multiplica por 4, agrega un 0 al final. 7×40: 7×4=28, agrega 0: 280." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 40 terminan en 0: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
+        { title: "RelaciÃ³n 4Ã—10", description: "40=4Ã—10. Multiplicar por 40: multiplica por 4, agrega un 0 al final. 7Ã—40: 7Ã—4=28, agrega 0: 280." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 40 terminan en 0: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
         { title: "Cuatro Veces las Decenas", description: "40, 80, 120, 160, 200... Cada uno aumenta en 40. Son 4 veces las decenas." },
       ],
       41: [
-        { title: "Estrategia 40+1", description: "41=40+1. 41×n = (40×n) + n. Ejemplo: 41×6 = 240 + 6 = 246. ¡El método más práctico!" },
-        { title: "Propiedades de Número Primo", description: "Como 41 es primo solo es divisible por 1 y 41. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "45-4 o 50-9", description: "Estrategias alternativas: 41×4 = 180-16 = 164. O 41×5 = 250-45 = 205." },
+        { title: "Estrategia 40+1", description: "41=40+1. 41Ã—n = (40Ã—n) + n. Ejemplo: 41Ã—6 = 240 + 6 = 246. Â¡El mÃ©todo mÃ¡s prÃ¡ctico!" },
+        { title: "Propiedades de NÃºmero Primo", description: "Como 41 es primo solo es divisible por 1 y 41. DÃ­gito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "45-4 o 50-9", description: "Estrategias alternativas: 41Ã—4 = 180-16 = 164. O 41Ã—5 = 250-45 = 205." },
       ],
       42: [
-        { title: "Relación 6×7", description: "42=6×7. Puedes usar ambas tablas del 6 y 7: 42×3 = 6×3×7 = 18×7 = 126." },
-        { title: "2×21 o 3×14", description: "42=2×21=3×14. Se puede calcular de múltiples maneras: 42×5 = 21×10 = 210." },
-        { title: "Siempre Divisible por 6", description: "Todos los múltiplos de 42 son divisibles por 2, 3, 6 y 7: 42, 84, 126, 168, 210..." },
+        { title: "RelaciÃ³n 6Ã—7", description: "42=6Ã—7. Puedes usar ambas tablas del 6 y 7: 42Ã—3 = 6Ã—3Ã—7 = 18Ã—7 = 126." },
+        { title: "2Ã—21 o 3Ã—14", description: "42=2Ã—21=3Ã—14. Se puede calcular de mÃºltiples maneras: 42Ã—5 = 21Ã—10 = 210." },
+        { title: "Siempre Divisible por 6", description: "Todos los mÃºltiplos de 42 son divisibles por 2, 3, 6 y 7: 42, 84, 126, 168, 210..." },
       ],
       43: [
-        { title: "40+3 o 45-2", description: "43=40+3 o 45-2. Ejemplo: 43×7 = 280+21 = 301 o 315-14 = 301." },
-        { title: "Patrón de Número Primo", description: "Como 43 es primo requiere estrategias especiales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 50-7", description: "Con números grandes: 43×8 = 400-56 = 344. Restar de 50 es un método alternativo." },
+        { title: "40+3 o 45-2", description: "43=40+3 o 45-2. Ejemplo: 43Ã—7 = 280+21 = 301 o 315-14 = 301." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 43 es primo requiere estrategias especiales. DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Estrategia 50-7", description: "Con nÃºmeros grandes: 43Ã—8 = 400-56 = 344. Restar de 50 es un mÃ©todo alternativo." },
       ],
       44: [
-        { title: "Cuatro Veces el 11", description: "44=4×11. Cuadruplica la tabla del 11: 11×6=66, entonces 44×6=264." },
-        { title: "Similar a Repdigit", description: "44×1=44, 44×2=88. Los primeros 2 muestran dígitos dobles. Luego 132, 176, 220..." },
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 44 son pares y divisibles por 4 y 11: 44, 88, 132, 176, 220..." },
+        { title: "Cuatro Veces el 11", description: "44=4Ã—11. Cuadruplica la tabla del 11: 11Ã—6=66, entonces 44Ã—6=264." },
+        { title: "Similar a Repdigit", description: "44Ã—1=44, 44Ã—2=88. Los primeros 2 muestran dÃ­gitos dobles. Luego 132, 176, 220..." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 44 son pares y divisibles por 4 y 11: 44, 88, 132, 176, 220..." },
       ],
       45: [
-        { title: "Relación 5×9", description: "45=5×9. Puedes usar ambas tablas del 5 y 9: 45×4 = 5×4×9 = 20×9 = 180." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 45 terminan en 5 o 0: 45, 90, 135, 180, 225, 270, 315, 360..." },
-        { title: "Divisible por 9", description: "Todos los múltiplos de 45 son divisibles por 9. La suma de dígitos es múltiplo de 9: 135 (1+3+5=9)." },
+        { title: "RelaciÃ³n 5Ã—9", description: "45=5Ã—9. Puedes usar ambas tablas del 5 y 9: 45Ã—4 = 5Ã—4Ã—9 = 20Ã—9 = 180." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 45 terminan en 5 o 0: 45, 90, 135, 180, 225, 270, 315, 360..." },
+        { title: "Divisible por 9", description: "Todos los mÃºltiplos de 45 son divisibles por 9. La suma de dÃ­gitos es mÃºltiplo de 9: 135 (1+3+5=9)." },
       ],
       46: [
-        { title: "Doble del 23", description: "46=2×23. Duplica la tabla del 23: 23×7=161, entonces 46×7=322." },
-        { title: "45+1 o 50-4", description: "46×n = (45×n) + n o (50×n) - (4×n). Ejemplo: 46×5 = 225+5 = 230." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 46 son pares: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460." },
+        { title: "Doble del 23", description: "46=2Ã—23. Duplica la tabla del 23: 23Ã—7=161, entonces 46Ã—7=322." },
+        { title: "45+1 o 50-4", description: "46Ã—n = (45Ã—n) + n o (50Ã—n) - (4Ã—n). Ejemplo: 46Ã—5 = 225+5 = 230." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 46 son pares: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460." },
       ],
       47: [
-        { title: "Estrategia 50-3", description: "47=50-3. 47×n = (50×n) - (3×n). Ejemplo: 47×6 = 300 - 18 = 282. ¡El más efectivo!" },
-        { title: "Alternativa 45+2", description: "47=45+2. Ejemplo: 47×8 = 360 + 16 = 376. Útil si conoces la tabla del 45." },
-        { title: "Singularidad de Número Primo", description: "Como 47 es primo a des motifs spéciaux. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Estrategia 50-3", description: "47=50-3. 47Ã—n = (50Ã—n) - (3Ã—n). Ejemplo: 47Ã—6 = 300 - 18 = 282. Â¡El mÃ¡s efectivo!" },
+        { title: "Alternativa 45+2", description: "47=45+2. Ejemplo: 47Ã—8 = 360 + 16 = 376. Ãštil si conoces la tabla del 45." },
+        { title: "Singularidad de NÃºmero Primo", description: "Como 47 es primo tiene patrones especiales. DÃ­gito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
       48: [
-        { title: "Relaciones de Múltiples Factores", description: "48=6×8=4×12=3×16=2×24. Puede calcularse de muchas formas: 48×5 = 12×20 = 240." },
-        { title: "Siempre Par y Múltiples Divisores", description: "Todos los múltiplos de 48 son divisibles por 2, 3, 4, 6, 8 y 12." },
-        { title: "Estrategia 50-2", description: "48=50-2. Ejemplo: 48×7 = 350 - 14 = 336. Restar de números redondos." },
+        { title: "Relaciones de MÃºltiples Factores", description: "48=6Ã—8=4Ã—12=3Ã—16=2Ã—24. Puede calcularse de muchas formas: 48Ã—5 = 12Ã—20 = 240." },
+        { title: "Siempre Par y MÃºltiples Divisores", description: "Todos los mÃºltiplos de 48 son divisibles por 2, 3, 4, 6, 8 y 12." },
+        { title: "Estrategia 50-2", description: "48=50-2. Ejemplo: 48Ã—7 = 350 - 14 = 336. Restar de nÃºmeros redondos." },
       ],
       49: [
-        { title: "Cuadrado del 7", description: "49=7². Usa la tabla del 7: 49×3 = 7×7×3 = 7×21 = 147. O 7×3×7." },
-        { title: "Estrategia 50-1", description: "49=50-1. 49×n = (50×n) - n. Ejemplo: 49×6 = 300 - 6 = 294. ¡Muy fácil!" },
-        { title: "Patrón de Número Cuadrado", description: "49, 98, 147, 196, 245... Múltiplos del 7 por 7. También 7²×1, 7²×2, 7²×3..." },
+        { title: "Cuadrado del 7", description: "49=7Â². Usa la tabla del 7: 49Ã—3 = 7Ã—7Ã—3 = 7Ã—21 = 147. O 7Ã—3Ã—7." },
+        { title: "Estrategia 50-1", description: "49=50-1. 49Ã—n = (50Ã—n) - n. Ejemplo: 49Ã—6 = 300 - 6 = 294. Â¡Muy fÃ¡cil!" },
+        { title: "PatrÃ³n de NÃºmero Cuadrado", description: "49, 98, 147, 196, 245... MÃºltiplos del 7 por 7. TambiÃ©n 7Â²Ã—1, 7Â²Ã—2, 7Â²Ã—3..." },
       ],
       50: [
-        { title: "Relación 5×10", description: "50=5×10. Multiplicar por 50: multiplica por 5, agrega un 0 al final. 8×50: 8×5=40, agrega 0: 400." },
-        { title: "Siempre Termina en 0 o 50", description: "Todos los múltiplos de 50 terminan en 0 o 50: 50, 100, 150, 200, 250, 300, 350, 400..." },
-        { title: "Mitad de 100", description: "50×n = (100×n)÷2. Ejemplo: 50×7 = 700÷2 = 350. Útil en cálculos de porcentajes." },
+        { title: "RelaciÃ³n 5Ã—10", description: "50=5Ã—10. Multiplicar por 50: multiplica por 5, agrega un 0 al final. 8Ã—50: 8Ã—5=40, agrega 0: 400." },
+        { title: "Siempre Termina en 0 o 50", description: "Todos los mÃºltiplos de 50 terminan en 0 o 50: 50, 100, 150, 200, 250, 300, 350, 400..." },
+        { title: "Mitad de 100", description: "50Ã—n = (100Ã—n)Ã·2. Ejemplo: 50Ã—7 = 700Ã·2 = 350. Ãštil en cÃ¡lculos de porcentajes." },
       ],
       51: [
-        { title: "Estrategia 50+1", description: "51=50+1. 51×n = (50×n) + n. Ejemplo: 51×7 = 350 + 7 = 357. ¡Muy práctico!" },
-        { title: "Relación 3×17", description: "51=3×17. Triplica la tabla del 17: 17×6=102, entonces 51×6=306." },
-        { title: "Alternativa 55-4", description: "51=55-4. Ejemplo: 51×5 = 275-20 = 255. Útil cuando multiplicar por 55 es más fácil." },
+        { title: "Estrategia 50+1", description: "51=50+1. 51Ã—n = (50Ã—n) + n. Ejemplo: 51Ã—7 = 350 + 7 = 357. Â¡Muy prÃ¡ctico!" },
+        { title: "RelaciÃ³n 3Ã—17", description: "51=3Ã—17. Triplica la tabla del 17: 17Ã—6=102, entonces 51Ã—6=306." },
+        { title: "Alternativa 55-4", description: "51=55-4. Ejemplo: 51Ã—5 = 275-20 = 255. Ãštil cuando multiplicar por 55 es mÃ¡s fÃ¡cil." },
       ],
       52: [
-        { title: "Relación 4×13", description: "52=4×13. Cuadruplica la tabla del 13: 13×7=91, entonces 52×7=364." },
-        { title: "50+2 o 2×26", description: "52×n = (50×n) + (2×n) o duplica la tabla del 26. Ejemplo: 52×5 = 250+10 = 260." },
-        { title: "Patrón de Número de Semanas", description: "52 semanas = 1 año. 52, 104 (2 años), 156 (3 años)... Útil en cálculos de calendario." },
+        { title: "RelaciÃ³n 4Ã—13", description: "52=4Ã—13. Cuadruplica la tabla del 13: 13Ã—7=91, entonces 52Ã—7=364." },
+        { title: "50+2 o 2Ã—26", description: "52Ã—n = (50Ã—n) + (2Ã—n) o duplica la tabla del 26. Ejemplo: 52Ã—5 = 250+10 = 260." },
+        { title: "PatrÃ³n de NÃºmero de Semanas", description: "52 semanas = 1 aÃ±o. 52, 104 (2 aÃ±os), 156 (3 aÃ±os)... Ãštil en cÃ¡lculos de calendario." },
       ],
       53: [
-        { title: "50+3 o 55-2", description: "53=50+3 o 55-2. Ejemplo: 53×6 = 300+18 = 318 o 330-12 = 318." },
-        { title: "Patrón de Número Primo", description: "Como 53 es primo requiere estrategias especiales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 60-7", description: "Con números grandes: 53×8 = 480-56 = 424. Restar de 60 es un método alternativo." },
+        { title: "50+3 o 55-2", description: "53=50+3 o 55-2. Ejemplo: 53Ã—6 = 300+18 = 318 o 330-12 = 318." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 53 es primo requiere estrategias especiales. DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Estrategia 60-7", description: "Con nÃºmeros grandes: 53Ã—8 = 480-56 = 424. Restar de 60 es un mÃ©todo alternativo." },
       ],
       54: [
-        { title: "Relación 6×9", description: "54=6×9. Puedes usar ambas tablas del 6 y 9: 54×5 = 9×5×6 = 45×6 = 270." },
-        { title: "2×27 o 3×18", description: "54=2×27=3×18. Puede calcularse de múltiples formas: 54×4 = 27×8 = 216." },
-        { title: "Divisible por 9", description: "Todos los múltiplos de 54 son divisibles por 9. La suma de dígitos es múltiplo de 9: 108 (1+0+8=9)." },
+        { title: "RelaciÃ³n 6Ã—9", description: "54=6Ã—9. Puedes usar ambas tablas del 6 y 9: 54Ã—5 = 9Ã—5Ã—6 = 45Ã—6 = 270." },
+        { title: "2Ã—27 o 3Ã—18", description: "54=2Ã—27=3Ã—18. Puede calcularse de mÃºltiples formas: 54Ã—4 = 27Ã—8 = 216." },
+        { title: "Divisible por 9", description: "Todos los mÃºltiplos de 54 son divisibles por 9. La suma de dÃ­gitos es mÃºltiplo de 9: 108 (1+0+8=9)." },
       ],
       55: [
-        { title: "Relación 5×11", description: "55=5×11. Puedes usar ambas tablas del 5 y 11: 55×4 = 11×4×5 = 44×5 = 220." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 55 terminan en 5 o 0: 55, 110, 165, 220, 275, 330, 385, 440..." },
-        { title: "Número Triangular", description: "55 = 1+2+3+4+5+6+7+8+9+10. Esta propiedad de suma especial hace que 55 sea matemáticamente interesante." },
+        { title: "RelaciÃ³n 5Ã—11", description: "55=5Ã—11. Puedes usar ambas tablas del 5 y 11: 55Ã—4 = 11Ã—4Ã—5 = 44Ã—5 = 220." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 55 terminan en 5 o 0: 55, 110, 165, 220, 275, 330, 385, 440..." },
+        { title: "NÃºmero Triangular", description: "55 = 1+2+3+4+5+6+7+8+9+10. Esta propiedad de suma especial hace que 55 sea matemÃ¡ticamente interesante." },
       ],
       56: [
-        { title: "Relación 7×8", description: "56=7×8. ¡Una de las parejas de multiplicación más difíciles! Refuerza tanto la tabla del 7 como del 8." },
-        { title: "4×14 o 2×28", description: "56=4×14=2×28. Puede calcularse de múltiples formas: 56×5 = 14×20 = 280." },
-        { title: "Siempre Par y Divisible por 7", description: "Todos los múltiplos de 56 son pares y divisibles por 4, 7 y 8: 56, 112, 168, 224..." },
+        { title: "RelaciÃ³n 7Ã—8", description: "56=7Ã—8. Â¡Una de las parejas de multiplicaciÃ³n mÃ¡s difÃ­ciles! Refuerza tanto la tabla del 7 como del 8." },
+        { title: "4Ã—14 o 2Ã—28", description: "56=4Ã—14=2Ã—28. Puede calcularse de mÃºltiples formas: 56Ã—5 = 14Ã—20 = 280." },
+        { title: "Siempre Par y Divisible por 7", description: "Todos los mÃºltiplos de 56 son pares y divisibles por 4, 7 y 8: 56, 112, 168, 224..." },
       ],
       57: [
-        { title: "Relación 3×19", description: "57=3×19. Triplica la tabla del 19: 19×7=133, entonces 57×7=399." },
-        { title: "Estrategia 60-3", description: "57=60-3. 57×n = (60×n) - (3×n). Ejemplo: 57×6 = 360 - 18 = 342. ¡Muy fácil!" },
-        { title: "Divisible por 3", description: "Todos los múltiplos de 57 son divisibles por 3 y 19. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—19", description: "57=3Ã—19. Triplica la tabla del 19: 19Ã—7=133, entonces 57Ã—7=399." },
+        { title: "Estrategia 60-3", description: "57=60-3. 57Ã—n = (60Ã—n) - (3Ã—n). Ejemplo: 57Ã—6 = 360 - 18 = 342. Â¡Muy fÃ¡cil!" },
+        { title: "Divisible por 3", description: "Todos los mÃºltiplos de 57 son divisibles por 3 y 19. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       58: [
-        { title: "Doble del 29", description: "58=2×29. Duplica la tabla del 29: 29×7=203, entonces 58×7=406." },
-        { title: "Estrategia 60-2", description: "58=60-2. 58×n = (60×n) - (2×n). Ejemplo: 58×6 = 360 - 12 = 348." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 58 son pares: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580." },
+        { title: "Doble del 29", description: "58=2Ã—29. Duplica la tabla del 29: 29Ã—7=203, entonces 58Ã—7=406." },
+        { title: "Estrategia 60-2", description: "58=60-2. 58Ã—n = (60Ã—n) - (2Ã—n). Ejemplo: 58Ã—6 = 360 - 12 = 348." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 58 son pares: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580." },
       ],
       59: [
-        { title: "Estrategia 60-1", description: "59=60-1. 59×n = (60×n) - n. Ejemplo: 59×7 = 420 - 7 = 413. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 59 es primo a des motifs spéciaux. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 55+4", description: "59=55+4. Ejemplo: 59×8 = 440 + 32 = 472. Útil si conoces la tabla del 55." },
+        { title: "Estrategia 60-1", description: "59=60-1. 59Ã—n = (60Ã—n) - n. Ejemplo: 59Ã—7 = 420 - 7 = 413. Â¡PERFECTO!" },
+        { title: "Singularidad de NÃºmero Primo", description: "Como 59 es primo tiene patrones especiales. DÃ­gito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternativa 55+4", description: "59=55+4. Ejemplo: 59Ã—8 = 440 + 32 = 472. Ãštil si conoces la tabla del 55." },
       ],
       60: [
-        { title: "Relación 6×10", description: "60=6×10. Multiplicar por 60: multiplica por 6, agrega un 0 al final. 7×60: 7×6=42, agrega 0: 420." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 60 terminan en 0: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
-        { title: "Relaciones de Múltiples Factores", description: "60=2×30=3×20=4×15=5×12=6×10. ¡Puede calcularse de muchas formas!" },
+        { title: "RelaciÃ³n 6Ã—10", description: "60=6Ã—10. Multiplicar por 60: multiplica por 6, agrega un 0 al final. 7Ã—60: 7Ã—6=42, agrega 0: 420." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 60 terminan en 0: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
+        { title: "Relaciones de MÃºltiples Factores", description: "60=2Ã—30=3Ã—20=4Ã—15=5Ã—12=6Ã—10. Â¡Puede calcularse de muchas formas!" },
       ],
       61: [
-        { title: "Estrategia 60+1", description: "61=60+1. 61×n = (60×n) + n. Ejemplo: 61×7 = 420 + 7 = 427. ¡Muy práctico!" },
-        { title: "Propiedades de Número Primo", description: "Como 61 es primo solo es divisible por 1 y 61. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Alternativa 65-4", description: "61=65-4. Ejemplo: 61×5 = 325-20 = 305. Útil cuando multiplicar por 65 es más fácil." },
+        { title: "Estrategia 60+1", description: "61=60+1. 61Ã—n = (60Ã—n) + n. Ejemplo: 61Ã—7 = 420 + 7 = 427. Â¡Muy prÃ¡ctico!" },
+        { title: "Propiedades de NÃºmero Primo", description: "Como 61 es primo solo es divisible por 1 y 61. DÃ­gito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "Alternativa 65-4", description: "61=65-4. Ejemplo: 61Ã—5 = 325-20 = 305. Ãštil cuando multiplicar por 65 es mÃ¡s fÃ¡cil." },
       ],
       62: [
-        { title: "Doble del 31", description: "62=2×31. Duplica la tabla del 31: 31×7=217, entonces 62×7=434." },
-        { title: "Estrategia 60+2", description: "62=60+2. 62×n = (60×n) + (2×n). Ejemplo: 62×6 = 360 + 12 = 372." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 62 son pares: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620." },
+        { title: "Doble del 31", description: "62=2Ã—31. Duplica la tabla del 31: 31Ã—7=217, entonces 62Ã—7=434." },
+        { title: "Estrategia 60+2", description: "62=60+2. 62Ã—n = (60Ã—n) + (2Ã—n). Ejemplo: 62Ã—6 = 360 + 12 = 372." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 62 son pares: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620." },
       ],
       63: [
-        { title: "Relación 7×9", description: "63=7×9. Puedes usar ambas tablas del 7 y 9: 63×5 = 9×5×7 = 45×7 = 315." },
-        { title: "Alternativa 3×21", description: "63=3×21. Triplica la tabla del 21: 21×4=84, entonces 63×4=252." },
-        { title: "Divisible por 7 y 9", description: "Todos los múltiplos de 63 son divisibles por 7 y 9. La suma de dígitos es múltiplo de 9." },
+        { title: "RelaciÃ³n 7Ã—9", description: "63=7Ã—9. Puedes usar ambas tablas del 7 y 9: 63Ã—5 = 9Ã—5Ã—7 = 45Ã—7 = 315." },
+        { title: "Alternativa 3Ã—21", description: "63=3Ã—21. Triplica la tabla del 21: 21Ã—4=84, entonces 63Ã—4=252." },
+        { title: "Divisible por 7 y 9", description: "Todos los mÃºltiplos de 63 son divisibles por 7 y 9. La suma de dÃ­gitos es mÃºltiplo de 9." },
       ],
       64: [
-        { title: "Cuadrado del 8", description: "64=8×8=8². Además 64=26. Cadena de duplicación: 2?4?8?16?32?64." },
-        { title: "Sexta Potencia del 2", description: "64=26. Importante para arquitectura de 64 bits en computación. Forma la base del sistema binario." },
-        { title: "Siempre Par y Divisible por 8", description: "Todos los múltiplos de 64 son pares y divisibles por 4, 8, 16 y 32: 64, 128, 192, 256..." },
+        { title: "Cuadrado del 8", description: "64=8Ã—8=8Â². AdemÃ¡s 64=2â¶. Cadena de duplicaciÃ³n: 2â†’4â†’8â†’16â†’32â†’64." },
+        { title: "Sexta Potencia del 2", description: "64=2â¶. Importante para arquitectura de 64 bits en computaciÃ³n. Forma la base del sistema binario." },
+        { title: "Siempre Par y Divisible por 8", description: "Todos los mÃºltiplos de 64 son pares y divisibles por 4, 8, 16 y 32: 64, 128, 192, 256..." },
       ],
       65: [
-        { title: "Relación 5×13", description: "65=5×13. Puedes usar ambas tablas del 5 y 13: 65×4 = 13×4×5 = 52×5 = 260." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 65 terminan en 5 o 0: 65, 130, 195, 260, 325, 390, 455, 520..." },
-        { title: "60+5 o 70-5", description: "65×n = (60×n) + (5×n) o (70×n) - (5×n). Ejemplo: 65×6 = 360+30 = 390." },
+        { title: "RelaciÃ³n 5Ã—13", description: "65=5Ã—13. Puedes usar ambas tablas del 5 y 13: 65Ã—4 = 13Ã—4Ã—5 = 52Ã—5 = 260." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 65 terminan en 5 o 0: 65, 130, 195, 260, 325, 390, 455, 520..." },
+        { title: "60+5 o 70-5", description: "65Ã—n = (60Ã—n) + (5Ã—n) o (70Ã—n) - (5Ã—n). Ejemplo: 65Ã—6 = 360+30 = 390." },
       ],
       66: [
-        { title: "Relación 6×11", description: "66=6×11. Puedes usar ambas tablas del 6 y 11: 66×5 = 11×5×6 = 55×6 = 330." },
-        { title: "Similar a Repdigit", description: "66×1=66, 66×2=132. Como 6 veces 11, sigue el patrón de la tabla del 11." },
-        { title: "Alternativa 2×33", description: "66=2×33. Duplica la tabla del 33: 33×7=231, entonces 66×7=462." },
+        { title: "RelaciÃ³n 6Ã—11", description: "66=6Ã—11. Puedes usar ambas tablas del 6 y 11: 66Ã—5 = 11Ã—5Ã—6 = 55Ã—6 = 330." },
+        { title: "Similar a Repdigit", description: "66Ã—1=66, 66Ã—2=132. Como 6 veces 11, sigue el patrÃ³n de la tabla del 11." },
+        { title: "Alternativa 2Ã—33", description: "66=2Ã—33. Duplica la tabla del 33: 33Ã—7=231, entonces 66Ã—7=462." },
       ],
       67: [
-        { title: "Estrategia 70-3", description: "67=70-3. 67×n = (70×n) - (3×n). Ejemplo: 67×7 = 490 - 21 = 469. ¡Muy fácil!" },
-        { title: "Patrón de Número Primo", description: "Como 67 es primo requiere estrategias especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
-        { title: "Alternativa 65+2", description: "67=65+2. Ejemplo: 67×8 = 520 + 16 = 536. Útil si conoces la tabla del 65." },
+        { title: "Estrategia 70-3", description: "67=70-3. 67Ã—n = (70Ã—n) - (3Ã—n). Ejemplo: 67Ã—7 = 490 - 21 = 469. Â¡Muy fÃ¡cil!" },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 67 es primo requiere estrategias especiales. DÃ­gito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Alternativa 65+2", description: "67=65+2. Ejemplo: 67Ã—8 = 520 + 16 = 536. Ãštil si conoces la tabla del 65." },
       ],
       68: [
-        { title: "Relación 4×17", description: "68=4×17. Cuadruplica la tabla del 17: 17×7=119, entonces 68×7=476." },
-        { title: "2×34 o 70-2", description: "68=2×34 o 70-2. Ejemplo: 68×6 = 420 - 12 = 408." },
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 68 son pares y divisibles por 4 y 17: 68, 136, 204, 272, 340..." },
+        { title: "RelaciÃ³n 4Ã—17", description: "68=4Ã—17. Cuadruplica la tabla del 17: 17Ã—7=119, entonces 68Ã—7=476." },
+        { title: "2Ã—34 o 70-2", description: "68=2Ã—34 o 70-2. Ejemplo: 68Ã—6 = 420 - 12 = 408." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 68 son pares y divisibles por 4 y 17: 68, 136, 204, 272, 340..." },
       ],
       69: [
-        { title: "Relación 3×23", description: "69=3×23. Triplica la tabla del 23: 23×7=161, entonces 69×7=483." },
-        { title: "Estrategia 70-1", description: "69=70-1. 69×n = (70×n) - n. Ejemplo: 69×6 = 420 - 6 = 414. ¡PERFECTO!" },
-        { title: "Divisible por 3", description: "Todos los múltiplos de 69 son divisibles por 3 y 23. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—23", description: "69=3Ã—23. Triplica la tabla del 23: 23Ã—7=161, entonces 69Ã—7=483." },
+        { title: "Estrategia 70-1", description: "69=70-1. 69Ã—n = (70Ã—n) - n. Ejemplo: 69Ã—6 = 420 - 6 = 414. Â¡PERFECTO!" },
+        { title: "Divisible por 3", description: "Todos los mÃºltiplos de 69 son divisibles por 3 y 23. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       70: [
-        { title: "Relación 7×10", description: "70=7×10. Multiplicar por 70: multiplica por 7, agrega un 0 al final. 8×70: 8×7=56, agrega 0: 560." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 70 terminan en 0: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
-        { title: "Relaciones de Múltiples Factores", description: "70=2×35=5×14=7×10. ¡Puede calcularse de muchas formas!" },
+        { title: "RelaciÃ³n 7Ã—10", description: "70=7Ã—10. Multiplicar por 70: multiplica por 7, agrega un 0 al final. 8Ã—70: 8Ã—7=56, agrega 0: 560." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 70 terminan en 0: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
+        { title: "Relaciones de MÃºltiples Factores", description: "70=2Ã—35=5Ã—14=7Ã—10. Â¡Puede calcularse de muchas formas!" },
       ],
       71: [
-        { title: "Estrategia 70+1", description: "71=70+1. 71×n = (70×n) + n. Ejemplo: 71×7 = 490 + 7 = 497. ¡Muy práctico!" },
-        { title: "Propiedades de Número Primo", description: "Como 71 es primo solo es divisible por 1 y 71. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Alternativa 75-4", description: "71=75-4. Ejemplo: 71×5 = 375-20 = 355. Útil cuando multiplicar por 75 es más fácil." },
+        { title: "Estrategia 70+1", description: "71=70+1. 71Ã—n = (70Ã—n) + n. Ejemplo: 71Ã—7 = 490 + 7 = 497. Â¡Muy prÃ¡ctico!" },
+        { title: "Propiedades de NÃºmero Primo", description: "Como 71 es primo solo es divisible por 1 y 71. DÃ­gito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "Alternativa 75-4", description: "71=75-4. Ejemplo: 71Ã—5 = 375-20 = 355. Ãštil cuando multiplicar por 75 es mÃ¡s fÃ¡cil." },
       ],
       72: [
-        { title: "Relación 8×9", description: "72=8×9. Puedes usar ambas tablas del 8 y 9: 72×5 = 9×5×8 = 45×8 = 360." },
-        { title: "6×12 o 3×24", description: "72=6×12=3×24=4×18. Puede calcularse de múltiples formas: 72×4 = 12×24 = 288." },
-        { title: "Muchos Divisores", description: "72 tiene 12 divisores: 1,2,3,4,6,8,9,12,18,24,36,72. ¡Muy útil para fracciones!" },
+        { title: "RelaciÃ³n 8Ã—9", description: "72=8Ã—9. Puedes usar ambas tablas del 8 y 9: 72Ã—5 = 9Ã—5Ã—8 = 45Ã—8 = 360." },
+        { title: "6Ã—12 o 3Ã—24", description: "72=6Ã—12=3Ã—24=4Ã—18. Puede calcularse de mÃºltiples formas: 72Ã—4 = 12Ã—24 = 288." },
+        { title: "Muchos Divisores", description: "72 tiene 12 divisores: 1,2,3,4,6,8,9,12,18,24,36,72. Â¡Muy Ãºtil para fracciones!" },
       ],
       73: [
-        { title: "70+3 o 75-2", description: "73=70+3 o 75-2. Ejemplo: 73×6 = 420+18 = 438 o 450-12 = 438." },
-        { title: "Patrón de Número Primo", description: "Como 73 es primo requiere estrategias especiales. Es el 21º número primo. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 80-7", description: "Con números grandes: 73×8 = 640-56 = 584. Restar de 80 es un método alternativo." },
+        { title: "70+3 o 75-2", description: "73=70+3 o 75-2. Ejemplo: 73Ã—6 = 420+18 = 438 o 450-12 = 438." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 73 es primo requiere estrategias especiales. Es el 21Âº nÃºmero primo. DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Estrategia 80-7", description: "Con nÃºmeros grandes: 73Ã—8 = 640-56 = 584. Restar de 80 es un mÃ©todo alternativo." },
       ],
       74: [
-        { title: "Relación 2×37", description: "74=2×37. Duplica la tabla del 37: 37×7=259, entonces 74×7=518." },
-        { title: "75-1 o 70+4", description: "74×n = (75×n) - n o (70×n) + (4×n). Ejemplo: 74×5 = 375-5 = 370." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 74 son pares: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740." },
+        { title: "RelaciÃ³n 2Ã—37", description: "74=2Ã—37. Duplica la tabla del 37: 37Ã—7=259, entonces 74Ã—7=518." },
+        { title: "75-1 o 70+4", description: "74Ã—n = (75Ã—n) - n o (70Ã—n) + (4Ã—n). Ejemplo: 74Ã—5 = 375-5 = 370." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 74 son pares: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740." },
       ],
       75: [
-        { title: "3×25 o 5×15", description: "75=3×25=5×15. Ejemplo: 75×4 = 25×12 = 300 o 15×20 = 300." },
-        { title: "Patrón 25, 50, 75, 00", description: "Todos los múltiplos de 75 terminan en 25, 50, 75 o 00. Muy regular y predecible." },
-        { title: "Relación de Porcentaje", description: "75 = 100×¾. Entonces 75% = 3/4. Esta relación es muy útil en cálculos de porcentajes." },
+        { title: "3Ã—25 o 5Ã—15", description: "75=3Ã—25=5Ã—15. Ejemplo: 75Ã—4 = 25Ã—12 = 300 o 15Ã—20 = 300." },
+        { title: "PatrÃ³n 25, 50, 75, 00", description: "Todos los mÃºltiplos de 75 terminan en 25, 50, 75 o 00. Muy regular y predecible." },
+        { title: "RelaciÃ³n de Porcentaje", description: "75 = 100Ã—Â¾. Entonces 75% = 3/4. Esta relaciÃ³n es muy Ãºtil en cÃ¡lculos de porcentajes." },
       ],
       76: [
-        { title: "Relación 4×19", description: "76=4×19. Cuadruplica la tabla del 19: 19×7=133, entonces 76×7=532." },
-        { title: "2×38 o 80-4", description: "76=2×38 o 80-4. Ejemplo: 76×6 = 480 - 24 = 456." },
-        { title: "Siempre Par y Divisible por 4", description: "Todos los múltiplos de 76 son pares y divisibles por 4 y 19: 76, 152, 228, 304, 380..." },
+        { title: "RelaciÃ³n 4Ã—19", description: "76=4Ã—19. Cuadruplica la tabla del 19: 19Ã—7=133, entonces 76Ã—7=532." },
+        { title: "2Ã—38 o 80-4", description: "76=2Ã—38 o 80-4. Ejemplo: 76Ã—6 = 480 - 24 = 456." },
+        { title: "Siempre Par y Divisible por 4", description: "Todos los mÃºltiplos de 76 son pares y divisibles por 4 y 19: 76, 152, 228, 304, 380..." },
       ],
       77: [
-        { title: "Relación 7×11", description: "77=7×11. Puedes usar ambas tablas del 7 y 11: 77×5 = 11×5×7 = 55×7 = 385." },
-        { title: "Patrón Similar a Repdigit", description: "77×1=77, 77×2=154. Como producto de 7 y 11 muestra un patrón especial." },
-        { title: "Estrategia 80-3", description: "77=80-3. Ejemplo: 77×6 = 480 - 18 = 462. Restar de números redondos." },
+        { title: "RelaciÃ³n 7Ã—11", description: "77=7Ã—11. Puedes usar ambas tablas del 7 y 11: 77Ã—5 = 11Ã—5Ã—7 = 55Ã—7 = 385." },
+        { title: "PatrÃ³n Similar a Repdigit", description: "77Ã—1=77, 77Ã—2=154. Como producto de 7 y 11 muestra un patrÃ³n especial." },
+        { title: "Estrategia 80-3", description: "77=80-3. Ejemplo: 77Ã—6 = 480 - 18 = 462. Restar de nÃºmeros redondos." },
       ],
       78: [
-        { title: "Relación 6×13", description: "78=6×13=2×39=3×26. Puede calcularse de múltiples formas: 78×5 = 13×30 = 390." },
-        { title: "Estrategia 80-2", description: "78=80-2. 78×n = (80×n) - (2×n). Ejemplo: 78×7 = 560 - 14 = 546." },
-        { title: "Divisible por 2 y 3", description: "Todos los múltiplos de 78 son divisibles por 2 y 3. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 6Ã—13", description: "78=6Ã—13=2Ã—39=3Ã—26. Puede calcularse de mÃºltiples formas: 78Ã—5 = 13Ã—30 = 390." },
+        { title: "Estrategia 80-2", description: "78=80-2. 78Ã—n = (80Ã—n) - (2Ã—n). Ejemplo: 78Ã—7 = 560 - 14 = 546." },
+        { title: "Divisible por 2 y 3", description: "Todos los mÃºltiplos de 78 son divisibles por 2 y 3. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       79: [
-        { title: "Estrategia 80-1", description: "79=80-1. 79×n = (80×n) - n. Ejemplo: 79×7 = 560 - 7 = 553. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 79 es primo a des motifs spéciaux. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 75+4", description: "79=75+4. Ejemplo: 79×8 = 600 + 32 = 632. Útil si conoces la tabla del 75." },
+        { title: "Estrategia 80-1", description: "79=80-1. 79Ã—n = (80Ã—n) - n. Ejemplo: 79Ã—7 = 560 - 7 = 553. Â¡PERFECTO!" },
+        { title: "Singularidad de NÃºmero Primo", description: "Como 79 es primo tiene patrones especiales. DÃ­gito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternativa 75+4", description: "79=75+4. Ejemplo: 79Ã—8 = 600 + 32 = 632. Ãštil si conoces la tabla del 75." },
       ],
       80: [
-        { title: "Relación 8×10", description: "80=8×10. Multiplicar por 80: multiplica por 8, agrega un 0 al final. 7×80: 7×8=56, agrega 0: 560." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 80 terminan en 0: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
-        { title: "Relaciones de Múltiples Factores", description: "80=2×40=4×20=5×16=8×10. ¡Puede calcularse de muchas formas!" },
+        { title: "RelaciÃ³n 8Ã—10", description: "80=8Ã—10. Multiplicar por 80: multiplica por 8, agrega un 0 al final. 7Ã—80: 7Ã—8=56, agrega 0: 560." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 80 terminan en 0: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
+        { title: "Relaciones de MÃºltiples Factores", description: "80=2Ã—40=4Ã—20=5Ã—16=8Ã—10. Â¡Puede calcularse de muchas formas!" },
       ],
       81: [
-        { title: "Cuadrado del 9", description: "81=9×9=9². Además 81=34. Ejemplo perfecto de relaciones de cuadrados y potencias." },
-        { title: "Estrategia 80+1", description: "81=80+1. 81×n = (80×n) + n. Ejemplo: 81×7 = 560 + 7 = 567. ¡Muy práctico!" },
-        { title: "Cuarta Potencia del 3", description: "81=34=3×3×3×3. Importante para entender números con exponentes. Divisible por 9 y 27." },
+        { title: "Cuadrado del 9", description: "81=9Ã—9=9Â². AdemÃ¡s 81=3â´. Ejemplo perfecto de relaciones de cuadrados y potencias." },
+        { title: "Estrategia 80+1", description: "81=80+1. 81Ã—n = (80Ã—n) + n. Ejemplo: 81Ã—7 = 560 + 7 = 567. Â¡Muy prÃ¡ctico!" },
+        { title: "Cuarta Potencia del 3", description: "81=3â´=3Ã—3Ã—3Ã—3. Importante para entender nÃºmeros con exponentes. Divisible por 9 y 27." },
       ],
       82: [
-        { title: "Relación 2×41", description: "82=2×41. Duplica la tabla del 41: 41×7=287, entonces 82×7=574." },
-        { title: "Estrategia 80+2", description: "82=80+2. 82×n = (80×n) + (2×n). Ejemplo: 82×6 = 480 + 12 = 492." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 82 son pares: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820." },
+        { title: "RelaciÃ³n 2Ã—41", description: "82=2Ã—41. Duplica la tabla del 41: 41Ã—7=287, entonces 82Ã—7=574." },
+        { title: "Estrategia 80+2", description: "82=80+2. 82Ã—n = (80Ã—n) + (2Ã—n). Ejemplo: 82Ã—6 = 480 + 12 = 492." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 82 son pares: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820." },
       ],
       83: [
-        { title: "80+3 o 85-2", description: "83=80+3 o 85-2. Ejemplo: 83×6 = 480+18 = 498 o 510-12 = 498." },
-        { title: "Patrón de Número Primo", description: "Como 83 es primo requiere estrategias especiales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 90-7", description: "Con números grandes: 83×8 = 720-56 = 664. Restar de 90 es un método alternativo." },
+        { title: "80+3 o 85-2", description: "83=80+3 o 85-2. Ejemplo: 83Ã—6 = 480+18 = 498 o 510-12 = 498." },
+        { title: "PatrÃ³n de NÃºmero Primo", description: "Como 83 es primo requiere estrategias especiales. DÃ­gito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Estrategia 90-7", description: "Con nÃºmeros grandes: 83Ã—8 = 720-56 = 664. Restar de 90 es un mÃ©todo alternativo." },
       ],
       84: [
-        { title: "Relación 7×12", description: "84=7×12. Puedes usar ambas tablas del 7 y 12: 84×5 = 12×5×7 = 60×7 = 420." },
-        { title: "6×14 o 4×21", description: "84=6×14=4×21=3×28. Puede calcularse de múltiples formas: 84×4 = 21×16 = 336." },
-        { title: "Muchos Divisores", description: "84 tiene 12 divisores: 1,2,3,4,6,7,12,14,21,28,42,84. ¡Muy útil para fracciones!" },
+        { title: "RelaciÃ³n 7Ã—12", description: "84=7Ã—12. Puedes usar ambas tablas del 7 y 12: 84Ã—5 = 12Ã—5Ã—7 = 60Ã—7 = 420." },
+        { title: "6Ã—14 o 4Ã—21", description: "84=6Ã—14=4Ã—21=3Ã—28. Puede calcularse de mÃºltiples formas: 84Ã—4 = 21Ã—16 = 336." },
+        { title: "Muchos Divisores", description: "84 tiene 12 divisores: 1,2,3,4,6,7,12,14,21,28,42,84. Â¡Muy Ãºtil para fracciones!" },
       ],
       85: [
-        { title: "Relación 5×17", description: "85=5×17. Puedes usar ambas tablas del 5 y 17: 85×4 = 17×4×5 = 68×5 = 340." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 85 terminan en 5 o 0: 85, 170, 255, 340, 425, 510, 595, 680..." },
-        { title: "90-5 o 80+5", description: "85×n = (90×n) - (5×n) o (80×n) + (5×n). Ejemplo: 85×6 = 540-30 = 510." },
+        { title: "RelaciÃ³n 5Ã—17", description: "85=5Ã—17. Puedes usar ambas tablas del 5 y 17: 85Ã—4 = 17Ã—4Ã—5 = 68Ã—5 = 340." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 85 terminan en 5 o 0: 85, 170, 255, 340, 425, 510, 595, 680..." },
+        { title: "90-5 o 80+5", description: "85Ã—n = (90Ã—n) - (5Ã—n) o (80Ã—n) + (5Ã—n). Ejemplo: 85Ã—6 = 540-30 = 510." },
       ],
       86: [
-        { title: "Relación 2×43", description: "86=2×43. Duplica la tabla del 43: 43×7=301, entonces 86×7=602." },
-        { title: "Estrategia 90-4", description: "86=90-4. 86×n = (90×n) - (4×n). Ejemplo: 86×6 = 540 - 24 = 516." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 86 son pares: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860." },
+        { title: "RelaciÃ³n 2Ã—43", description: "86=2Ã—43. Duplica la tabla del 43: 43Ã—7=301, entonces 86Ã—7=602." },
+        { title: "Estrategia 90-4", description: "86=90-4. 86Ã—n = (90Ã—n) - (4Ã—n). Ejemplo: 86Ã—6 = 540 - 24 = 516." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 86 son pares: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860." },
       ],
       87: [
-        { title: "Relación 3×29", description: "87=3×29. Triplica la tabla del 29: 29×7=203, entonces 87×7=609." },
-        { title: "Estrategia 90-3", description: "87=90-3. 87×n = (90×n) - (3×n). Ejemplo: 87×7 = 630 - 21 = 609. ¡Muy fácil!" },
-        { title: "Divisible por 3", description: "Todos los múltiplos de 87 son divisibles por 3 y 29. La suma de dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—29", description: "87=3Ã—29. Triplica la tabla del 29: 29Ã—7=203, entonces 87Ã—7=609." },
+        { title: "Estrategia 90-3", description: "87=90-3. 87Ã—n = (90Ã—n) - (3Ã—n). Ejemplo: 87Ã—7 = 630 - 21 = 609. Â¡Muy fÃ¡cil!" },
+        { title: "Divisible por 3", description: "Todos los mÃºltiplos de 87 son divisibles por 3 y 29. La suma de dÃ­gitos es mÃºltiplo de 3." },
       ],
       88: [
-        { title: "Relación 8×11", description: "88=8×11. Puedes usar ambas tablas del 8 y 11: 88×5 = 11×5×8 = 55×8 = 440." },
-        { title: "Número Repdigit", description: "88×1=88, 88×2=176. La propiedad repdigit (repetición de 8s) facilita el reconocimiento visual." },
-        { title: "4×22 o 2×44", description: "88=4×22=2×44. Puede calcularse de múltiples formas: 88×5 = 22×20 = 440." },
+        { title: "RelaciÃ³n 8Ã—11", description: "88=8Ã—11. Puedes usar ambas tablas del 8 y 11: 88Ã—5 = 11Ã—5Ã—8 = 55Ã—8 = 440." },
+        { title: "NÃºmero Repdigit", description: "88Ã—1=88, 88Ã—2=176. La propiedad repdigit (repeticiÃ³n de 8s) facilita el reconocimiento visual." },
+        { title: "4Ã—22 o 2Ã—44", description: "88=4Ã—22=2Ã—44. Puede calcularse de mÃºltiples formas: 88Ã—5 = 22Ã—20 = 440." },
       ],
       89: [
-        { title: "Estrategia 90-1", description: "89=90-1. 89×n = (90×n) - n. Ejemplo: 89×7 = 630 - 7 = 623. ¡PERFECTO!" },
-        { title: "Singularidad de Número Primo", description: "Como 89 es primo a des motifs spéciaux. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 85+4", description: "89=85+4. Ejemplo: 89×8 = 680 + 32 = 712. Útil si conoces la tabla del 85." },
+        { title: "Estrategia 90-1", description: "89=90-1. 89Ã—n = (90Ã—n) - n. Ejemplo: 89Ã—7 = 630 - 7 = 623. Â¡PERFECTO!" },
+        { title: "Singularidad de NÃºmero Primo", description: "Como 89 es primo tiene patrones especiales. DÃ­gito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternativa 85+4", description: "89=85+4. Ejemplo: 89Ã—8 = 680 + 32 = 712. Ãštil si conoces la tabla del 85." },
       ],
       90: [
-        { title: "Relación 9×10", description: "90=9×10. Multiplicar por 90: multiplica por 9, agrega un 0 al final. 7×90: 7×9=63, agrega 0: 630." },
-        { title: "Siempre Termina en 0", description: "Todos los múltiplos de 90 terminan en 0: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
-        { title: "Relaciones de Múltiples Factores", description: "90=2×45=3×30=5×18=6×15=9×10. ¡Puede calcularse de muchas formas!" },
+        { title: "RelaciÃ³n 9Ã—10", description: "90=9Ã—10. Multiplicar por 90: multiplica por 9, agrega un 0 al final. 7Ã—90: 7Ã—9=63, agrega 0: 630." },
+        { title: "Siempre Termina en 0", description: "Todos los mÃºltiplos de 90 terminan en 0: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
+        { title: "Relaciones de MÃºltiples Factores", description: "90=2Ã—45=3Ã—30=5Ã—18=6Ã—15=9Ã—10. Â¡Puede calcularse de muchas formas!" },
       ],
       91: [
-        { title: "Relación 7×13", description: "91=7×13. Puedes usar ambas tablas del 7 y 13: 91×5 = 7×5×13 = 35×13 = 455." },
-        { title: "Estrategia 90+1", description: "91=90+1. 91×n = (90×n) + n. Ejemplo: 91×6 = 540 + 6 = 546. ¡Práctico!" },
-        { title: "Producto de Primos", description: "91=7×13 (producto de dos primos). Divisible por 7 y 13." },
+        { title: "RelaciÃ³n 7Ã—13", description: "91=7Ã—13. Puedes usar ambas tablas del 7 y 13: 91Ã—5 = 7Ã—5Ã—13 = 35Ã—13 = 455." },
+        { title: "Estrategia 90+1", description: "91=90+1. 91Ã—n = (90Ã—n) + n. Ejemplo: 91Ã—6 = 540 + 6 = 546. Â¡PrÃ¡ctico!" },
+        { title: "Producto de Primos", description: "91=7Ã—13 (producto de dos primos). Divisible por 7 y 13." },
       ],
       92: [
-        { title: "Relación 4×23", description: "92=4×23. Cuadruplica la tabla del 23: 23×7=161, entonces 92×7=644." },
-        { title: "90+2 o 100-8", description: "92×n = (90×n)+(2×n) o (100×n)-(8×n). Ejemplo: 92×5 = 450+10 = 460." },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 92 son pares: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920." },
+        { title: "RelaciÃ³n 4Ã—23", description: "92=4Ã—23. Cuadruplica la tabla del 23: 23Ã—7=161, entonces 92Ã—7=644." },
+        { title: "90+2 o 100-8", description: "92Ã—n = (90Ã—n)+(2Ã—n) o (100Ã—n)-(8Ã—n). Ejemplo: 92Ã—5 = 450+10 = 460." },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 92 son pares: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920." },
       ],
       93: [
-        { title: "Relación 3×31", description: "93=3×31. Triplica la tabla del 31: 31×6=186, entonces 93×6=558." },
-        { title: "Estrategia 90+3", description: "93=90+3. 93×n = (90×n) + (3×n). Ejemplo: 93×7 = 630 + 21 = 651." },
-        { title: "Divisible por 3", description: "Todos los múltiplos de 93 son divisibles por 3. La suma de los dígitos es múltiplo de 3." },
+        { title: "RelaciÃ³n 3Ã—31", description: "93=3Ã—31. Triplica la tabla del 31: 31Ã—6=186, entonces 93Ã—6=558." },
+        { title: "Estrategia 90+3", description: "93=90+3. 93Ã—n = (90Ã—n) + (3Ã—n). Ejemplo: 93Ã—7 = 630 + 21 = 651." },
+        { title: "Divisible por 3", description: "Todos los mÃºltiplos de 93 son divisibles por 3. La suma de los dÃ­gitos es mÃºltiplo de 3." },
       ],
       94: [
-        { title: "Relación 2×47", description: "94=2×47. Duplica la tabla del 47: 47×7=329, entonces 94×7=658." },
-        { title: "Estrategia 100-6", description: "94=100-6. 94×n = (100×n) - (6×n). Ejemplo: 94×5 = 500 - 30 = 470. ¡PERFECTO!" },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 94 son pares: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940." },
+        { title: "RelaciÃ³n 2Ã—47", description: "94=2Ã—47. Duplica la tabla del 47: 47Ã—7=329, entonces 94Ã—7=658." },
+        { title: "Estrategia 100-6", description: "94=100-6. 94Ã—n = (100Ã—n) - (6Ã—n). Ejemplo: 94Ã—5 = 500 - 30 = 470. Â¡PERFECTO!" },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 94 son pares: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940." },
       ],
       95: [
-        { title: "Relación 5×19", description: "95=5×19. Puedes usar ambas tablas del 5 y 19: 95×4 = 19×4×5 = 76×5 = 380." },
-        { title: "Termina en 5 o 0", description: "Todos los múltiplos de 95 terminan en 5 o 0: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950." },
-        { title: "Estrategia 100-5", description: "95=100-5. 95×n = (100×n) - (5×n). Ejemplo: 95×6 = 600 - 30 = 570. ¡Muy fácil!" },
+        { title: "RelaciÃ³n 5Ã—19", description: "95=5Ã—19. Puedes usar ambas tablas del 5 y 19: 95Ã—4 = 19Ã—4Ã—5 = 76Ã—5 = 380." },
+        { title: "Termina en 5 o 0", description: "Todos los mÃºltiplos de 95 terminan en 5 o 0: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950." },
+        { title: "Estrategia 100-5", description: "95=100-5. 95Ã—n = (100Ã—n) - (5Ã—n). Ejemplo: 95Ã—6 = 600 - 30 = 570. Â¡Muy fÃ¡cil!" },
       ],
       96: [
-        { title: "Relación 8×12", description: "96=8×12. Puedes usar ambas tablas: 96×5 = 12×5×8 = 60×8 = 480." },
-        { title: "Relaciones de Múltiples Factores", description: "96=8×12=6×16=4×24=3×32=2×48. ¡Puede calcularse de muchas formas!" },
-        { title: "Potencia de 2 × 3", description: "96=25×3. Relación 32×3. Tiene muchos divisores (12 divisores)." },
+        { title: "RelaciÃ³n 8Ã—12", description: "96=8Ã—12. Puedes usar ambas tablas: 96Ã—5 = 12Ã—5Ã—8 = 60Ã—8 = 480." },
+        { title: "Relaciones de MÃºltiples Factores", description: "96=8Ã—12=6Ã—16=4Ã—24=3Ã—32=2Ã—48. Â¡Puede calcularse de muchas formas!" },
+        { title: "Potencia de 2 Ã— 3", description: "96=2âµÃ—3. RelaciÃ³n 32Ã—3. Tiene muchos divisores (12 divisores)." },
       ],
       97: [
-        { title: "Estrategia 100-3", description: "97=100-3. 97×n = (100×n) - (3×n). Ejemplo: 97×7 = 700 - 21 = 679. ¡PERFECTO!" },
-        { title: "Patrones de Número Primo", description: "Como 97 es primo a des motifs spéciaux. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
-        { title: "Primo Más Cercano a 100", description: "El mayor número primo menor que 100. Esta propiedad facilita mucho el cálculo." },
+        { title: "Estrategia 100-3", description: "97=100-3. 97Ã—n = (100Ã—n) - (3Ã—n). Ejemplo: 97Ã—7 = 700 - 21 = 679. Â¡PERFECTO!" },
+        { title: "Patrones de NÃºmero Primo", description: "Como 97 es primo tiene patrones especiales. DÃ­gito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Primo MÃ¡s Cercano a 100", description: "El mayor nÃºmero primo menor que 100. Esta propiedad facilita mucho el cÃ¡lculo." },
       ],
       98: [
-        { title: "Relación 2×49", description: "98=2×49=2×7². Duplica la tabla del 49: 49×7=343, entonces 98×7=686." },
-        { title: "Estrategia 100-2", description: "98=100-2. 98×n = (100×n) - (2×n). Ejemplo: 98×6 = 600 - 12 = 588. ¡SÚPER FÁCIL!" },
-        { title: "Siempre Números Pares", description: "Todos los múltiplos de 98 son pares: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980." },
+        { title: "RelaciÃ³n 2Ã—49", description: "98=2Ã—49=2Ã—7Â². Duplica la tabla del 49: 49Ã—7=343, entonces 98Ã—7=686." },
+        { title: "Estrategia 100-2", description: "98=100-2. 98Ã—n = (100Ã—n) - (2Ã—n). Ejemplo: 98Ã—6 = 600 - 12 = 588. Â¡SÃšPER FÃCIL!" },
+        { title: "Siempre NÃºmeros Pares", description: "Todos los mÃºltiplos de 98 son pares: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980." },
       ],
       99: [
-        { title: "Relación 9×11", description: "99=9×11. Puedes usar ambas tablas: 99×5 = 11×5×9 = 55×9 = 495." },
-        { title: "Estrategia 100-1", description: "99=100-1. 99×n = (100×n) - n. Ejemplo: 99×7 = 700 - 7 = 693. ¡PERFECTO!" },
-        { title: "Patrón Repdigit", description: "99 (repetición de 9s), 198, 297, 396, 495... ¡El reconocimiento visual es fácil!" },
+        { title: "RelaciÃ³n 9Ã—11", description: "99=9Ã—11. Puedes usar ambas tablas: 99Ã—5 = 11Ã—5Ã—9 = 55Ã—9 = 495." },
+        { title: "Estrategia 100-1", description: "99=100-1. 99Ã—n = (100Ã—n) - n. Ejemplo: 99Ã—7 = 700 - 7 = 693. Â¡PERFECTO!" },
+        { title: "PatrÃ³n Repdigit", description: "99 (repeticiÃ³n de 9s), 198, 297, 396, 495... Â¡El reconocimiento visual es fÃ¡cil!" },
       ],
       100: [
-        { title: "Relación 10×10", description: "100=10×10=10². Multiplicar por 100: agrega dos ceros al final. 7×100: ¡700!" },
-        { title: "Siempre Termina en 00", description: "Todos los múltiplos de 100 terminan en 00: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000." },
-        { title: "Base del Sistema Decimal", description: "100=10². Sistema de centenas, cálculos de porcentajes, ¡base para entender números decimales!" },
+        { title: "RelaciÃ³n 10Ã—10", description: "100=10Ã—10=10Â². Multiplicar por 100: agrega dos ceros al final. 7Ã—100: Â¡700!" },
+        { title: "Siempre Termina en 00", description: "Todos los mÃºltiplos de 100 terminan en 00: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000." },
+        { title: "Base del Sistema Decimal", description: "100=10Â². Sistema de centenas, cÃ¡lculos de porcentajes, Â¡base para entender nÃºmeros decimales!" },
       ],
     }
     return patterns[number] || []
@@ -886,410 +886,410 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   const getCommonMistakes = () => {
     const mistakes: { [key: number]: { mistake: string; solution: string }[] } = {
       1: [
-        { mistake: "Pensar que 1×1=2", solution: "Recuerda: Todo lo que se multiplica por 1 es igual a sí mismo. 1 grupo de 1 es solo 1." },
-        { mistake: "Confundir con la suma", solution: "Multiplicar por 1 es diferente de sumar. 5+1=6, pero 5×1=5." },
+        { mistake: "Pensar que 1Ã—1=2", solution: "Recuerda: Todo lo que se multiplica por 1 es igual a sÃ­ mismo. 1 grupo de 1 es solo 1." },
+        { mistake: "Confundir con la suma", solution: "Multiplicar por 1 es diferente de sumar. 5+1=6, pero 5Ã—1=5." },
       ],
       2: [
-        { mistake: "Confundir 2×6=12 con 2×7=14", solution: "Usa contar de dos en dos: 2, 4, 6, 8, 10, 12, 14. Cuenta cuidadosamente sin saltarte." },
-        { mistake: "Confundirse con números grandes", solution: "Descompón: 2×8 es solo 8+8. Duplicar es suma simple." },
+        { mistake: "Confundir 2Ã—6=12 con 2Ã—7=14", solution: "Usa contar de dos en dos: 2, 4, 6, 8, 10, 12, 14. Cuenta cuidadosamente sin saltarte." },
+        { mistake: "Confundirse con nÃºmeros grandes", solution: "DescompÃ³n: 2Ã—8 es solo 8+8. Duplicar es suma simple." },
       ],
       3: [
-        { mistake: "Confundir 3×6=18 con 3×7=21", solution: "Recuerda el patrón +3: después de 18 viene 21. Cuenta de tres en tres para verificar." },
-        { mistake: "Confundir 3×8=24 con 3×9=27", solution: "Usa el truco de suma de dígitos: 24 (2+4=6) y 27 (2+7=9), sigue el patrón 3-6-9." },
+        { mistake: "Confundir 3Ã—6=18 con 3Ã—7=21", solution: "Recuerda el patrÃ³n +3: despuÃ©s de 18 viene 21. Cuenta de tres en tres para verificar." },
+        { mistake: "Confundir 3Ã—8=24 con 3Ã—9=27", solution: "Usa el truco de suma de dÃ­gitos: 24 (2+4=6) y 27 (2+7=9), sigue el patrÃ³n 3-6-9." },
       ],
       4: [
-        { mistake: "Pensar que 4×7=24 (en lugar de 28)", solution: "Recuerda: 4×6=24, entonces 4×7 debe ser 4 más, es decir 28." },
+        { mistake: "Pensar que 4Ã—7=24 (en lugar de 28)", solution: "Recuerda: 4Ã—6=24, entonces 4Ã—7 debe ser 4 mÃ¡s, es decir 28." },
         { mistake: "Confundir con la tabla del 2", solution: "La tabla del 4 es siempre el doble de la tabla del 2. Verifica duplicando." },
       ],
       5: [
-        { mistake: "Confundir el orden (25 antes de 20)", solution: "El patrón es consistente: 5, 10, 15, 20, 25. Cada uno aumenta en 5." },
-        { mistake: "Pensar que 5×impar siempre termina en 5", solution: "En realidad 5×par termina en 0, 5×impar termina en 5." },
+        { mistake: "Confundir el orden (25 antes de 20)", solution: "El patrÃ³n es consistente: 5, 10, 15, 20, 25. Cada uno aumenta en 5." },
+        { mistake: "Pensar que 5Ã—impar siempre termina en 5", solution: "En realidad 5Ã—par termina en 0, 5Ã—impar termina en 5." },
       ],
       6: [
-        { mistake: "Confundir 6×7=42 con 6×8=48", solution: "¡Esta es una pareja difícil! Recuerda: 6×7=42 (rima 'siete seis'), luego agrega 6: 48." },
-        { mistake: "Confundir 6×9=54 con 6×8=48", solution: "Usa la tabla del 6: 6×8=48, luego +6=54. O calcula 6×9 como 60-6=54." },
-        { mistake: "Confundir con la tabla del 3", solution: "La tabla del 6 es siempre el doble de la tabla del 3. 3×4=12, entonces 6×4=24." },
+        { mistake: "Confundir 6Ã—7=42 con 6Ã—8=48", solution: "Â¡Esta es una pareja difÃ­cil! Recuerda: 6Ã—7=42 (rima 'siete seis'), luego agrega 6: 48." },
+        { mistake: "Confundir 6Ã—9=54 con 6Ã—8=48", solution: "Usa la tabla del 6: 6Ã—8=48, luego +6=54. O calcula 6Ã—9 como 60-6=54." },
+        { mistake: "Confundir con la tabla del 3", solution: "La tabla del 6 es siempre el doble de la tabla del 3. 3Ã—4=12, entonces 6Ã—4=24." },
       ],
       7: [
-        { mistake: "Confundir 7×8=56 con 7×6=42", solution: "¡Estos son los más difíciles! Truco de memoria: '5-6-7-8' (56=7×8). O desde 7×7=49, luego +7=56." },
-        { mistake: "Confundir 7×9=63 con 7×8=56", solution: "Patrón: 7×8=56, luego +7=63. O suma de dígitos: 63 (6+3=9), 56 (5+6=11)." },
-        { mistake: "Saltarse completamente la tabla del 7", solution: "Aunque el 7 parezca difícil, se puede Apprenezr con práctica. Empieza con pasos pequeños: memoriza los fáciles 7×1, 7×2, 7×5, 7×10." },
+        { mistake: "Confundir 7Ã—8=56 con 7Ã—6=42", solution: "Â¡Estos son los mÃ¡s difÃ­ciles! Truco de memoria: '5-6-7-8' (56=7Ã—8). O desde 7Ã—7=49, luego +7=56." },
+        { mistake: "Confundir 7Ã—9=63 con 7Ã—8=56", solution: "PatrÃ³n: 7Ã—8=56, luego +7=63. O suma de dÃ­gitos: 63 (6+3=9), 56 (5+6=11)." },
+        { mistake: "Saltarse completamente la tabla del 7", solution: "Aunque el 7 parezca difÃ­cil, se puede aprender con prÃ¡ctica. Empieza con pasos pequeÃ±os: memoriza los fÃ¡ciles 7Ã—1, 7Ã—2, 7Ã—5, 7Ã—10." },
       ],
       8: [
-        { mistake: "Confundir 8×7=56 con 8×8=64", solution: "Forma fácil de memorizar 8×8=64: 'ocho ocho 64' o '8²=64'." },
-        { mistake: "Confundir 8×9=72 con 8×8=64", solution: "Comienza desde 8×8=64, luego +8=72. O 80-8=72 (10×8 menos 8)." },
-        { mistake: "Confundir con la tabla del 4", solution: "El 8 es siempre el doble del 4. 4×6=24, entonces 8×6=48. Verifica duplicando." },
+        { mistake: "Confundir 8Ã—7=56 con 8Ã—8=64", solution: "Forma fÃ¡cil de memorizar 8Ã—8=64: 'ocho ocho 64' o '8Â²=64'." },
+        { mistake: "Confundir 8Ã—9=72 con 8Ã—8=64", solution: "Comienza desde 8Ã—8=64, luego +8=72. O 80-8=72 (10Ã—8 menos 8)." },
+        { mistake: "Confundir con la tabla del 4", solution: "El 8 es siempre el doble del 4. 4Ã—6=24, entonces 8Ã—6=48. Verifica duplicando." },
       ],
       9: [
-        { mistake: "Confundir 9×8=72 con 9×7=63", solution: "Usa el truco de los dedos o suma de dígitos: 72 (7+2=9), 63 (6+3=9). Recuerda que 72>63." },
+        { mistake: "Confundir 9Ã—8=72 con 9Ã—7=63", solution: "Usa el truco de los dedos o suma de dÃ­gitos: 72 (7+2=9), 63 (6+3=9). Recuerda que 72>63." },
         { mistake: "Aplicar mal el truco de los dedos", solution: "Orden correcto: Dedos izquierdos 1-5, dedos derechos 6-10. Los dedos a la izquierda del dedo doblado son decenas, los de la derecha son unidades." },
-        { mistake: "Confundir 9×9=81 con 9×8=72", solution: "9×9=81 es especial: 'nueve nueve 81' o '9²=81'. Suma de dígitos: 81 (8+1=9), 72 (7+2=9)." },
+        { mistake: "Confundir 9Ã—9=81 con 9Ã—8=72", solution: "9Ã—9=81 es especial: 'nueve nueve 81' o '9Â²=81'. Suma de dÃ­gitos: 81 (8+1=9), 72 (7+2=9)." },
       ],
       10: [
-        { mistake: "Olvidar el cero", solution: "El recordatorio más fácil: cuando multiplicas por 10, SOLO agrega un cero al final. 6×10=60, 25×10=250." },
+        { mistake: "Olvidar el cero", solution: "El recordatorio mÃ¡s fÃ¡cil: cuando multiplicas por 10, SOLO agrega un cero al final. 6Ã—10=60, 25Ã—10=250." },
         { mistake: "Agregar demasiados ceros", solution: "Multiplicar por 10 agrega SOLO un cero. No 100 (dos ceros), 1000 (tres ceros), solo 10 (un cero)." },
       ],
       11: [
-        { mistake: "Pensar que 11×12=121 (en lugar de 132)", solution: "El patrón de dígitos dobles solo funciona de 11×1 a 11×9. 11×10=110, 11×12=132." },
-        { mistake: "Aplicar mal el truco de suma de dígitos", solution: "23×11: Suma los dígitos (2+3=5), colócalo en el medio: 253. Si la suma >9, hay acarreo: 67×11: 6_(6+7=13)_7 = 6_(13)_7 = 737." },
-        { mistake: "Pensar que 11×11=111", solution: "11×11=121, no 111. Cada múltiplo de 11 agrega 11 al Précédent: 99+11=110, 110+11=121." },
+        { mistake: "Pensar que 11Ã—12=121 (en lugar de 132)", solution: "El patrÃ³n de dÃ­gitos dobles solo funciona de 11Ã—1 a 11Ã—9. 11Ã—10=110, 11Ã—12=132." },
+        { mistake: "Aplicar mal el truco de suma de dÃ­gitos", solution: "23Ã—11: Suma los dÃ­gitos (2+3=5), colÃ³calo en el medio: 253. Si la suma >9, hay acarreo: 67Ã—11: 6_(6+7=13)_7 = 6_(13)_7 = 737." },
+        { mistake: "Pensar que 11Ã—11=111", solution: "11Ã—11=121, no 111. Cada mÃºltiplo de 11 agrega 11 al anterior: 99+11=110, 110+11=121." },
       ],
       12: [
-        { mistake: "Confundir 12×8=84 con 12×9=108", solution: "12×8=96 (8 docenas), 12×9=108 (9 docenas). 84 en realidad es 12×7. Verifica contando docenas." },
-        { mistake: "Confundir 12 con 10", solution: "12×5=60, 10×5=50. El 12 es siempre 20% más que 10 (10 más 2)." },
+        { mistake: "Confundir 12Ã—8=84 con 12Ã—9=108", solution: "12Ã—8=96 (8 docenas), 12Ã—9=108 (9 docenas). 84 en realidad es 12Ã—7. Verifica contando docenas." },
+        { mistake: "Confundir 12 con 10", solution: "12Ã—5=60, 10Ã—5=50. El 12 es siempre 20% mÃ¡s que 10 (10 mÃ¡s 2)." },
       ],
       13: [
-        { mistake: "Confundir 13×7=91 con 13×8=104", solution: "13×7=91, 13×8=104. La diferencia es 13. Usa la estrategia 10+3: 70+21=91, 80+24=104." },
-        { mistake: "Confundir 13 con 3 o 30", solution: "13×4=52, no 3×4=12. Tampoco 30×4=120. El 13 es exactamente 10+3." },
+        { mistake: "Confundir 13Ã—7=91 con 13Ã—8=104", solution: "13Ã—7=91, 13Ã—8=104. La diferencia es 13. Usa la estrategia 10+3: 70+21=91, 80+24=104." },
+        { mistake: "Confundir 13 con 3 o 30", solution: "13Ã—4=52, no 3Ã—4=12. Tampoco 30Ã—4=120. El 13 es exactamente 10+3." },
       ],
       14: [
-        { mistake: "Pensar que 14×7=98 (¡correcto es 14×7=98!)", solution: "¡14×7=98 es correcto! Pero no olvides 14×8=112 (98+14=112). Recuerda que es el doble de la tabla del 7." },
-        { mistake: "Confundir 14×6=72 con 14×6=84", solution: "14×6=84 es correcto (7×6=42, ×2=84). 72 en realidad es 12×6 o 8×9." },
+        { mistake: "Pensar que 14Ã—7=98 (Â¡correcto es 14Ã—7=98!)", solution: "Â¡14Ã—7=98 es correcto! Pero no olvides 14Ã—8=112 (98+14=112). Recuerda que es el doble de la tabla del 7." },
+        { mistake: "Confundir 14Ã—6=72 con 14Ã—6=84", solution: "14Ã—6=84 es correcto (7Ã—6=42, Ã—2=84). 72 en realidad es 12Ã—6 o 8Ã—9." },
       ],
       15: [
-        { mistake: "Pensar que 15×6=80 (en lugar de 90)", solution: "15×6=90 (1.5 docenas). 80 en realidad es 16×5. Calcula 15×6 como 3×6=18, luego ×5=90 o 5×6=30, luego ×3=90." },
-        { mistake: "Confundir 15×4=50", solution: "15×4=60, no 50. Recuerda que 15 minutos×4 = 1 hora (60 minutos)." },
+        { mistake: "Pensar que 15Ã—6=80 (en lugar de 90)", solution: "15Ã—6=90 (1.5 docenas). 80 en realidad es 16Ã—5. Calcula 15Ã—6 como 3Ã—6=18, luego Ã—5=90 o 5Ã—6=30, luego Ã—3=90." },
+        { mistake: "Confundir 15Ã—4=50", solution: "15Ã—4=60, no 50. Recuerda que 15 minutosÃ—4 = 1 hora (60 minutos)." },
       ],
       16: [
-        { mistake: "Confundir 16×6=84 con 16×6=96", solution: "16×6=96 es correcto (8×6=48, ×2=96). 84 en realidad es 14×6 o 12×7." },
-        { mistake: "Confundir 16 con 6", solution: "16×4=64, no 6×4=24. 16 es muy diferente de 6. Recuerda que 16=24." },
+        { mistake: "Confundir 16Ã—6=84 con 16Ã—6=96", solution: "16Ã—6=96 es correcto (8Ã—6=48, Ã—2=96). 84 en realidad es 14Ã—6 o 12Ã—7." },
+        { mistake: "Confundir 16 con 6", solution: "16Ã—4=64, no 6Ã—4=24. 16 es muy diferente de 6. Recuerda que 16=2â´." },
       ],
       17: [
-        { mistake: "Confundir 17×6=102 con 17×7=119", solution: "Estrategia 20-3: 17×6=120-18=102, 17×7=140-21=119. O 10+7: 60+42=102, 70+49=119." },
-        { mistake: "Confundir 17×8=126 con 17×9=153", solution: "17×8=136 (170-34), 17×9=153 (180-27). 126 en realidad es 18×7." },
+        { mistake: "Confundir 17Ã—6=102 con 17Ã—7=119", solution: "Estrategia 20-3: 17Ã—6=120-18=102, 17Ã—7=140-21=119. O 10+7: 60+42=102, 70+49=119." },
+        { mistake: "Confundir 17Ã—8=126 con 17Ã—9=153", solution: "17Ã—8=136 (170-34), 17Ã—9=153 (180-27). 126 en realidad es 18Ã—7." },
       ],
       18: [
-        { mistake: "Confundir 18×7=126 con 18×8=144", solution: "18×7=126 (9×7=63, ×2), 18×8=144 (9×8=72, ×2). La diferencia es 18." },
-        { mistake: "Confundir 18×6=108 con 18×6=104", solution: "18×6=108 es correcto (6×6=36, ×3 o 9×6=54, ×2). 104 en realidad es 13×8." },
+        { mistake: "Confundir 18Ã—7=126 con 18Ã—8=144", solution: "18Ã—7=126 (9Ã—7=63, Ã—2), 18Ã—8=144 (9Ã—8=72, Ã—2). La diferencia es 18." },
+        { mistake: "Confundir 18Ã—6=108 con 18Ã—6=104", solution: "18Ã—6=108 es correcto (6Ã—6=36, Ã—3 o 9Ã—6=54, Ã—2). 104 en realidad es 13Ã—8." },
       ],
       19: [
-        { mistake: "Pensar que 19×5=100 (en lugar de 95)", solution: "19×5=95, no 100 (20×5=100). 19 es 1 menos que 20, así que 100-5=95." },
-        { mistake: "Confundir 19×6=114 con 19×7=133", solution: "Estrategia 20-1: 19×6=120-6=114, 19×7=140-7=133. Cada vez resta el multiplicador de 20." },
+        { mistake: "Pensar que 19Ã—5=100 (en lugar de 95)", solution: "19Ã—5=95, no 100 (20Ã—5=100). 19 es 1 menos que 20, asÃ­ que 100-5=95." },
+        { mistake: "Confundir 19Ã—6=114 con 19Ã—7=133", solution: "Estrategia 20-1: 19Ã—6=120-6=114, 19Ã—7=140-7=133. Cada vez resta el multiplicador de 20." },
       ],
       20: [
-        { mistake: "Pensar que 20×7=120 (en lugar de 140)", solution: "20×7=140, no 120 (20×6=120). 10×7=70, duplica: 140. O 7×20=7×10×2." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 20 deben terminar en 0: 20, 40, 60, 80, 100... ¡20×8=160, no 16!" },
+        { mistake: "Pensar que 20Ã—7=120 (en lugar de 140)", solution: "20Ã—7=140, no 120 (20Ã—6=120). 10Ã—7=70, duplica: 140. O 7Ã—20=7Ã—10Ã—2." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 20 deben terminar en 0: 20, 40, 60, 80, 100... Â¡20Ã—8=160, no 16!" },
       ],
       21: [
-        { mistake: "Pensar que 21×5=100 (en lugar de 105)", solution: "21×5=105, no 100. 20×5=100, más 5 más: 105. O 3×7×5 = 21×5 = 105." },
-        { mistake: "Confundir 21×7=140 con 21×7=147", solution: "21×7=147 es correcto (3×7×7 o 140+7). 140 en realidad es 20×7." },
-        { mistake: "Confundir 21 con 12", solution: "21×4=84, no 12×4=48. Presta atención al orden de los dígitos: 21 es muy diferente de 12." },
+        { mistake: "Pensar que 21Ã—5=100 (en lugar de 105)", solution: "21Ã—5=105, no 100. 20Ã—5=100, mÃ¡s 5 mÃ¡s: 105. O 3Ã—7Ã—5 = 21Ã—5 = 105." },
+        { mistake: "Confundir 21Ã—7=140 con 21Ã—7=147", solution: "21Ã—7=147 es correcto (3Ã—7Ã—7 o 140+7). 140 en realidad es 20Ã—7." },
+        { mistake: "Confundir 21 con 12", solution: "21Ã—4=84, no 12Ã—4=48. Presta atenciÃ³n al orden de los dÃ­gitos: 21 es muy diferente de 12." },
       ],
       22: [
-        { mistake: "Pensar que 22×5=100 (en lugar de 110)", solution: "22×5=110, no 100. 11×5=55, duplica: 110. O 20×5=100, más 2×5=10: 110." },
-        { mistake: "Confundir 22×9=198 con 22×9=188", solution: "22×9=198 es correcto (11×9=99, ×2). 188 es otro cálculo." },
+        { mistake: "Pensar que 22Ã—5=100 (en lugar de 110)", solution: "22Ã—5=110, no 100. 11Ã—5=55, duplica: 110. O 20Ã—5=100, mÃ¡s 2Ã—5=10: 110." },
+        { mistake: "Confundir 22Ã—9=198 con 22Ã—9=188", solution: "22Ã—9=198 es correcto (11Ã—9=99, Ã—2). 188 es otro cÃ¡lculo." },
       ],
       23: [
-        { mistake: "Pensar que 23×4=82 (en lugar de 92)", solution: "23×4=92, no 82. 20×4=80, más 3×4=12: 92. 82 es otro resultado." },
-        { mistake: "Confundir 23×5=105 con 23×5=115", solution: "23×5=115 es correcto (20×5=100, 3×5=15, total 115). 105 en realidad es 21×5." },
+        { mistake: "Pensar que 23Ã—4=82 (en lugar de 92)", solution: "23Ã—4=92, no 82. 20Ã—4=80, mÃ¡s 3Ã—4=12: 92. 82 es otro resultado." },
+        { mistake: "Confundir 23Ã—5=105 con 23Ã—5=115", solution: "23Ã—5=115 es correcto (20Ã—5=100, 3Ã—5=15, total 115). 105 en realidad es 21Ã—5." },
       ],
       24: [
-        { mistake: "Pensar que 24×5=100 (en lugar de 120)", solution: "24×5=120, no 100. Un día tiene 24 horas, 5 días = 120 horas. O 12×10=120." },
-        { mistake: "Confundir 24×7=158 con 24×7=168", solution: "24×7=168 es correcto (4×6×7 o 3×8×7). 158 es otro resultado." },
+        { mistake: "Pensar que 24Ã—5=100 (en lugar de 120)", solution: "24Ã—5=120, no 100. Un dÃ­a tiene 24 horas, 5 dÃ­as = 120 horas. O 12Ã—10=120." },
+        { mistake: "Confundir 24Ã—7=158 con 24Ã—7=168", solution: "24Ã—7=168 es correcto (4Ã—6Ã—7 o 3Ã—8Ã—7). 158 es otro resultado." },
       ],
       25: [
-        { mistake: "Pensar que 25×8=180 (en lugar de 200)", solution: "25×8=200, no 180. 25×4=100, entonces 25×8=200. O 5×5×8 = 25×8 = 200." },
-        { mistake: "Adivinar incorrectamente los últimos dos dígitos", solution: "¡Los múltiplos de 25 siempre terminan en 25, 50, 75 o 00. No puede ser otra cosa!" },
+        { mistake: "Pensar que 25Ã—8=180 (en lugar de 200)", solution: "25Ã—8=200, no 180. 25Ã—4=100, entonces 25Ã—8=200. O 5Ã—5Ã—8 = 25Ã—8 = 200." },
+        { mistake: "Adivinar incorrectamente los Ãºltimos dos dÃ­gitos", solution: "Â¡Los mÃºltiplos de 25 siempre terminan en 25, 50, 75 o 00. No puede ser otra cosa!" },
       ],
       26: [
-        { mistake: "Confundir 26×5=120 con 26×5=130", solution: "26×5=130 es correcto (13×5=65, ×2). 120 en realidad es 24×5." },
-        { mistake: "Confundir 26 con 16 o 36", solution: "26×4=104, no 16×4=64 o 36×4=144. Lee los dígitos cuidadosamente." },
+        { mistake: "Confundir 26Ã—5=120 con 26Ã—5=130", solution: "26Ã—5=130 es correcto (13Ã—5=65, Ã—2). 120 en realidad es 24Ã—5." },
+        { mistake: "Confundir 26 con 16 o 36", solution: "26Ã—4=104, no 16Ã—4=64 o 36Ã—4=144. Lee los dÃ­gitos cuidadosamente." },
       ],
       27: [
-        { mistake: "Pensar que 27×4=98 (en lugar de 108)", solution: "27×4=108, no 98. 30×4=120, menos 3×4=12: 108. O 9×4=36, ×3=108." },
-        { mistake: "Confundir 27×7=179 con 27×7=189", solution: "27×7=189 es correcto (30×7=210, menos 3×7=21: 189). 179 es otro resultado." },
+        { mistake: "Pensar que 27Ã—4=98 (en lugar de 108)", solution: "27Ã—4=108, no 98. 30Ã—4=120, menos 3Ã—4=12: 108. O 9Ã—4=36, Ã—3=108." },
+        { mistake: "Confundir 27Ã—7=179 con 27Ã—7=189", solution: "27Ã—7=189 es correcto (30Ã—7=210, menos 3Ã—7=21: 189). 179 es otro resultado." },
       ],
       28: [
-        { mistake: "Pensar que 28×5=130 (en lugar de 140)", solution: "28×5=140, no 130. 4×7×5 = 20×7 = 140. O 14×10=140." },
-        { mistake: "Confundir 28×9=242 con 28×9=252", solution: "28×9=252 es correcto (4×7×9 o 30×9 menos 2×9). 242 es otro resultado." },
+        { mistake: "Pensar que 28Ã—5=130 (en lugar de 140)", solution: "28Ã—5=140, no 130. 4Ã—7Ã—5 = 20Ã—7 = 140. O 14Ã—10=140." },
+        { mistake: "Confundir 28Ã—9=242 con 28Ã—9=252", solution: "28Ã—9=252 es correcto (4Ã—7Ã—9 o 30Ã—9 menos 2Ã—9). 242 es otro resultado." },
       ],
       29: [
-        { mistake: "Pensar que 29×5=140 (en lugar de 145)", solution: "29×5=145, no 140. 30×5=150, menos 5: 145. 140 en realidad es 28×5." },
-        { mistake: "Confundir 29×7=203 con 29×7=193", solution: "29×7=203 es correcto (30×7=210, menos 7). 193 es otro cálculo." },
+        { mistake: "Pensar que 29Ã—5=140 (en lugar de 145)", solution: "29Ã—5=145, no 140. 30Ã—5=150, menos 5: 145. 140 en realidad es 28Ã—5." },
+        { mistake: "Confundir 29Ã—7=203 con 29Ã—7=193", solution: "29Ã—7=203 es correcto (30Ã—7=210, menos 7). 193 es otro cÃ¡lculo." },
       ],
       30: [
-        { mistake: "Pensar que 30×7=200 (en lugar de 210)", solution: "30×7=210, no 200 (30×6=180, 30×7=210). 10×7=70, ×3=210." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 30 deben terminar en 0: 30, 60, 90, 120, 150... ¡30×8=240, no 24!" },
+        { mistake: "Pensar que 30Ã—7=200 (en lugar de 210)", solution: "30Ã—7=210, no 200 (30Ã—6=180, 30Ã—7=210). 10Ã—7=70, Ã—3=210." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 30 deben terminar en 0: 30, 60, 90, 120, 150... Â¡30Ã—8=240, no 24!" },
       ],
       31: [
-        { mistake: "Pensar que 31×5=145 (en lugar de 155)", solution: "31×5=155, no 145. 30×5=150, más 5: 155. 145 en realidad es 29×5." },
-        { mistake: "Confundir 31×7=207 con 31×7=217", solution: "31×7=217 es correcto (30×7=210, más 7). 207 es otro resultado." },
+        { mistake: "Pensar que 31Ã—5=145 (en lugar de 155)", solution: "31Ã—5=155, no 145. 30Ã—5=150, mÃ¡s 5: 155. 145 en realidad es 29Ã—5." },
+        { mistake: "Confundir 31Ã—7=207 con 31Ã—7=217", solution: "31Ã—7=217 es correcto (30Ã—7=210, mÃ¡s 7). 207 es otro resultado." },
       ],
       32: [
-        { mistake: "Pensar que 32×5=150 (en lugar de 160)", solution: "32×5=160, no 150. 16×5=80, duplica: 160. O 32×10=320, la mitad es 160." },
-        { mistake: "Confundir 32×7=214 con 32×7=224", solution: "32×7=224 es correcto (16×7=112, ×2). 214 es otro cálculo." },
+        { mistake: "Pensar que 32Ã—5=150 (en lugar de 160)", solution: "32Ã—5=160, no 150. 16Ã—5=80, duplica: 160. O 32Ã—10=320, la mitad es 160." },
+        { mistake: "Confundir 32Ã—7=214 con 32Ã—7=224", solution: "32Ã—7=224 es correcto (16Ã—7=112, Ã—2). 214 es otro cÃ¡lculo." },
       ],
       33: [
-        { mistake: "Pensar que 33×4=122 (en lugar de 132)", solution: "33×4=132, no 122. 11×4=44, ×3=132. O 30×4=120, más 3×4=12: 132." },
-        { mistake: "Confundir 33×9=297 con 33×9=287", solution: "33×9=297 es correcto (11×9=99, ×3). 287 es otro resultado." },
+        { mistake: "Pensar que 33Ã—4=122 (en lugar de 132)", solution: "33Ã—4=132, no 122. 11Ã—4=44, Ã—3=132. O 30Ã—4=120, mÃ¡s 3Ã—4=12: 132." },
+        { mistake: "Confundir 33Ã—9=297 con 33Ã—9=287", solution: "33Ã—9=297 es correcto (11Ã—9=99, Ã—3). 287 es otro resultado." },
       ],
       34: [
-        { mistake: "Pensar que 34×5=160 (en lugar de 170)", solution: "34×5=170, no 160. 17×5=85, duplica: 170. 160 en realidad es 32×5." },
-        { mistake: "Confundir 34×8=262 con 34×8=272", solution: "34×8=272 es correcto (17×8=136, ×2). 262 es otro resultado." },
+        { mistake: "Pensar que 34Ã—5=160 (en lugar de 170)", solution: "34Ã—5=170, no 160. 17Ã—5=85, duplica: 170. 160 en realidad es 32Ã—5." },
+        { mistake: "Confundir 34Ã—8=262 con 34Ã—8=272", solution: "34Ã—8=272 es correcto (17Ã—8=136, Ã—2). 262 es otro resultado." },
       ],
       35: [
-        { mistake: "Pensar que 35×6=200 (en lugar de 210)", solution: "35×6=210, no 200. 5×6=30, 7×6=42, 30×7=210 o 5×42=210." },
-        { mistake: "Confundir 35×8=270 con 35×8=280", solution: "35×8=280 es correcto (5×8=40, 7×8=56, 40×7=280). 270 en realidad es 27×10." },
+        { mistake: "Pensar que 35Ã—6=200 (en lugar de 210)", solution: "35Ã—6=210, no 200. 5Ã—6=30, 7Ã—6=42, 30Ã—7=210 o 5Ã—42=210." },
+        { mistake: "Confundir 35Ã—8=270 con 35Ã—8=280", solution: "35Ã—8=280 es correcto (5Ã—8=40, 7Ã—8=56, 40Ã—7=280). 270 en realidad es 27Ã—10." },
       ],
       36: [
-        { mistake: "Pensar que 36×5=170 (en lugar de 180)", solution: "36×5=180, no 170. 6×5=30, ×6=180. O 18×10=180. 170 en realidad es 34×5." },
-        { mistake: "Confundir 36×7=242 con 36×7=252", solution: "36×7=252 es correcto (6×7=42, ×6 o 9×7=63, ×4). 242 es otro resultado." },
+        { mistake: "Pensar que 36Ã—5=170 (en lugar de 180)", solution: "36Ã—5=180, no 170. 6Ã—5=30, Ã—6=180. O 18Ã—10=180. 170 en realidad es 34Ã—5." },
+        { mistake: "Confundir 36Ã—7=242 con 36Ã—7=252", solution: "36Ã—7=252 es correcto (6Ã—7=42, Ã—6 o 9Ã—7=63, Ã—4). 242 es otro resultado." },
       ],
       37: [
-        { mistake: "Pensar que 37×5=175 (en lugar de 185)", solution: "37×5=185, no 175. 40×5=200, menos 3×5=15: 185. 175 en realidad es 35×5." },
-        { mistake: "Calcular incorrectamente después de 37×3=111", solution: "37×3=111, 37×6=222, 37×9=333. ¡Cada múltiplo de 3 es repdigit! 37×7=259, 37×8=296." },
+        { mistake: "Pensar que 37Ã—5=175 (en lugar de 185)", solution: "37Ã—5=185, no 175. 40Ã—5=200, menos 3Ã—5=15: 185. 175 en realidad es 35Ã—5." },
+        { mistake: "Calcular incorrectamente despuÃ©s de 37Ã—3=111", solution: "37Ã—3=111, 37Ã—6=222, 37Ã—9=333. Â¡Cada mÃºltiplo de 3 es repdigit! 37Ã—7=259, 37Ã—8=296." },
       ],
       38: [
-        { mistake: "Pensar que 38×5=180 (en lugar de 190)", solution: "38×5=190, no 180. 19×5=95, duplica: 190. 180 en realidad es 36×5." },
-        { mistake: "Confundir 38×9=332 con 38×9=342", solution: "38×9=342 es correcto (19×9=171, ×2 o 40×9=360, menos 2×9=18). 332 es otro resultado." },
+        { mistake: "Pensar que 38Ã—5=180 (en lugar de 190)", solution: "38Ã—5=190, no 180. 19Ã—5=95, duplica: 190. 180 en realidad es 36Ã—5." },
+        { mistake: "Confundir 38Ã—9=332 con 38Ã—9=342", solution: "38Ã—9=342 es correcto (19Ã—9=171, Ã—2 o 40Ã—9=360, menos 2Ã—9=18). 332 es otro resultado." },
       ],
       39: [
-        { mistake: "Pensar que 39×5=185 (en lugar de 195)", solution: "39×5=195, no 185. 40×5=200, menos 5: 195. 185 en realidad es 37×5." },
-        { mistake: "Confundir 39×8=302 con 39×8=312", solution: "39×8=312 es correcto (40×8=320, menos 8). 302 es otro resultado." },
+        { mistake: "Pensar que 39Ã—5=185 (en lugar de 195)", solution: "39Ã—5=195, no 185. 40Ã—5=200, menos 5: 195. 185 en realidad es 37Ã—5." },
+        { mistake: "Confundir 39Ã—8=302 con 39Ã—8=312", solution: "39Ã—8=312 es correcto (40Ã—8=320, menos 8). 302 es otro resultado." },
       ],
       40: [
-        { mistake: "Pensar que 40×7=270 (en lugar de 280)", solution: "40×7=280, no 270. 4×7=28, agrega un 0: 280. O 10×7=70, ×4=280." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 40 deben terminar en 0: 40, 80, 120, 160, 200... ¡40×9=360, no 36!" },
+        { mistake: "Pensar que 40Ã—7=270 (en lugar de 280)", solution: "40Ã—7=280, no 270. 4Ã—7=28, agrega un 0: 280. O 10Ã—7=70, Ã—4=280." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 40 deben terminar en 0: 40, 80, 120, 160, 200... Â¡40Ã—9=360, no 36!" },
       ],
       41: [
-        { mistake: "Pensar que 41×5=200 (en lugar de 205)", solution: "41×5=205, no 200. 40×5=200, más 5: 205. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 41×9=360 con 41×9=369", solution: "41×9=369 es correcto (40×9=360, más 9). 360 en realidad es 40×9." },
+        { mistake: "Pensar que 41Ã—5=200 (en lugar de 205)", solution: "41Ã—5=205, no 200. 40Ã—5=200, mÃ¡s 5: 205. Siempre recuerda agregar ese 1 extra." },
+        { mistake: "Confundir 41Ã—9=360 con 41Ã—9=369", solution: "41Ã—9=369 es correcto (40Ã—9=360, mÃ¡s 9). 360 en realidad es 40Ã—9." },
       ],
       42: [
-        { mistake: "Pensar que 42×5=200 (en lugar de 210)", solution: "42×5=210, no 200. 6×5=30, 7×5=35, 30+35=65... O 40×5=200, más 2×5=10: 210." },
-        { mistake: "Confundir 42×8=326 con 42×8=336", solution: "42×8=336 es correcto (6×8=48, 7×8=56 o 40×8=320, más 16). 326 es otro resultado." },
+        { mistake: "Pensar que 42Ã—5=200 (en lugar de 210)", solution: "42Ã—5=210, no 200. 6Ã—5=30, 7Ã—5=35, 30+35=65... O 40Ã—5=200, mÃ¡s 2Ã—5=10: 210." },
+        { mistake: "Confundir 42Ã—8=326 con 42Ã—8=336", solution: "42Ã—8=336 es correcto (6Ã—8=48, 7Ã—8=56 o 40Ã—8=320, mÃ¡s 16). 326 es otro resultado." },
       ],
       43: [
-        { mistake: "Pensar que 43×5=205 (en lugar de 215)", solution: "43×5=215, no 205. 40×5=200, más 3×5=15: 215. 205 en realidad es 41×5." },
-        { mistake: "Confundir 43×9=377 con 43×9=387", solution: "43×9=387 es correcto (40×9=360, más 3×9=27). 377 es otro resultado." },
+        { mistake: "Pensar que 43Ã—5=205 (en lugar de 215)", solution: "43Ã—5=215, no 205. 40Ã—5=200, mÃ¡s 3Ã—5=15: 215. 205 en realidad es 41Ã—5." },
+        { mistake: "Confundir 43Ã—9=377 con 43Ã—9=387", solution: "43Ã—9=387 es correcto (40Ã—9=360, mÃ¡s 3Ã—9=27). 377 es otro resultado." },
       ],
       44: [
-        { mistake: "Pensar que 44×5=210 (en lugar de 220)", solution: "44×5=220, no 210. 11×5=55, ×4=220. O 40×5=200, más 4×5=20: 220." },
-        { mistake: "Confundir 44×9=386 con 44×9=396", solution: "44×9=396 es correcto (11×9=99, ×4 o 40×9=360, más 4×9=36). 386 es otro resultado." },
+        { mistake: "Pensar que 44Ã—5=210 (en lugar de 220)", solution: "44Ã—5=220, no 210. 11Ã—5=55, Ã—4=220. O 40Ã—5=200, mÃ¡s 4Ã—5=20: 220." },
+        { mistake: "Confundir 44Ã—9=386 con 44Ã—9=396", solution: "44Ã—9=396 es correcto (11Ã—9=99, Ã—4 o 40Ã—9=360, mÃ¡s 4Ã—9=36). 386 es otro resultado." },
       ],
       45: [
-        { mistake: "Pensar que 45×5=220 (en lugar de 225)", solution: "45×5=225, no 220. 9×5=45, ×5=225. O 40×5=200, más 5×5=25: 225." },
-        { mistake: "Confundir 45×8=350 con 45×8=360", solution: "45×8=360 es correcto (9×8=72, ×5 o 5×8=40, ×9). 350 es otro resultado." },
+        { mistake: "Pensar que 45Ã—5=220 (en lugar de 225)", solution: "45Ã—5=225, no 220. 9Ã—5=45, Ã—5=225. O 40Ã—5=200, mÃ¡s 5Ã—5=25: 225." },
+        { mistake: "Confundir 45Ã—8=350 con 45Ã—8=360", solution: "45Ã—8=360 es correcto (9Ã—8=72, Ã—5 o 5Ã—8=40, Ã—9). 350 es otro resultado." },
       ],
       46: [
-        { mistake: "Pensar que 46×5=225 (en lugar de 230)", solution: "46×5=230, no 225. 23×5=115, ×2=230. O 50×5=250, menos 4×5=20: 230." },
-        { mistake: "Confundir 46×9=404 con 46×9=414", solution: "46×9=414 es correcto (23×9=207, ×2 o 50×9=450, menos 4×9=36). 404 es otro resultado." },
+        { mistake: "Pensar que 46Ã—5=225 (en lugar de 230)", solution: "46Ã—5=230, no 225. 23Ã—5=115, Ã—2=230. O 50Ã—5=250, menos 4Ã—5=20: 230." },
+        { mistake: "Confundir 46Ã—9=404 con 46Ã—9=414", solution: "46Ã—9=414 es correcto (23Ã—9=207, Ã—2 o 50Ã—9=450, menos 4Ã—9=36). 404 es otro resultado." },
       ],
       47: [
-        { mistake: "Pensar que 47×5=230 (en lugar de 235)", solution: "47×5=235, no 230. 50×5=250, menos 3×5=15: 235. 230 en realidad es 46×5." },
-        { mistake: "Confundir 47×9=413 con 47×9=423", solution: "47×9=423 es correcto (50×9=450, menos 3×9=27). 413 es otro resultado." },
+        { mistake: "Pensar que 47Ã—5=230 (en lugar de 235)", solution: "47Ã—5=235, no 230. 50Ã—5=250, menos 3Ã—5=15: 235. 230 en realidad es 46Ã—5." },
+        { mistake: "Confundir 47Ã—9=413 con 47Ã—9=423", solution: "47Ã—9=423 es correcto (50Ã—9=450, menos 3Ã—9=27). 413 es otro resultado." },
       ],
       48: [
-        { mistake: "Pensar que 48×5=230 (en lugar de 240)", solution: "48×5=240, no 230. 6×5=30, 8×5=40, 30×8=240. O 50×5=250, menos 2×5=10: 240." },
-        { mistake: "Confundir 48×9=422 con 48×9=432", solution: "48×9=432 es correcto (6×9=54, ×8 o 50×9=450, menos 2×9=18). 422 es otro resultado." },
+        { mistake: "Pensar que 48Ã—5=230 (en lugar de 240)", solution: "48Ã—5=240, no 230. 6Ã—5=30, 8Ã—5=40, 30Ã—8=240. O 50Ã—5=250, menos 2Ã—5=10: 240." },
+        { mistake: "Confundir 48Ã—9=422 con 48Ã—9=432", solution: "48Ã—9=432 es correcto (6Ã—9=54, Ã—8 o 50Ã—9=450, menos 2Ã—9=18). 422 es otro resultado." },
       ],
       49: [
-        { mistake: "Pensar que 49×5=240 (en lugar de 245)", solution: "49×5=245, no 240. 50×5=250, menos 5: 245. O 7×5=35, ×7=245." },
-        { mistake: "Confundir 49×9=431 con 49×9=441", solution: "49×9=441 es correcto (50×9=450, menos 9). Además 441=21² (número cuadrado). 431 es otro resultado." },
+        { mistake: "Pensar que 49Ã—5=240 (en lugar de 245)", solution: "49Ã—5=245, no 240. 50Ã—5=250, menos 5: 245. O 7Ã—5=35, Ã—7=245." },
+        { mistake: "Confundir 49Ã—9=431 con 49Ã—9=441", solution: "49Ã—9=441 es correcto (50Ã—9=450, menos 9). AdemÃ¡s 441=21Â² (nÃºmero cuadrado). 431 es otro resultado." },
       ],
       50: [
-        { mistake: "Pensar que 50×7=340 (en lugar de 350)", solution: "50×7=350, no 340. 5×7=35, agrega un 0: 350. O 100×7=700, ÷2=350." },
-        { mistake: "Olvidar el cero", solution: "Los múltiplos impares de 50 terminan en 50, los pares en 0: 50, 100, 150, 200, 250... ¡50×8=400, no 40!" },
+        { mistake: "Pensar que 50Ã—7=340 (en lugar de 350)", solution: "50Ã—7=350, no 340. 5Ã—7=35, agrega un 0: 350. O 100Ã—7=700, Ã·2=350." },
+        { mistake: "Olvidar el cero", solution: "Los mÃºltiplos impares de 50 terminan en 50, los pares en 0: 50, 100, 150, 200, 250... Â¡50Ã—8=400, no 40!" },
       ],
       51: [
-        { mistake: "Pensar que 51×5=250 (en lugar de 255)", solution: "51×5=255, no 250. 50×5=250, más 5: 255. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 51×9=450 con 51×9=459", solution: "51×9=459 es correcto (50×9=450, más 9). 450 en realidad es 50×9." },
+        { mistake: "Pensar que 51Ã—5=250 (en lugar de 255)", solution: "51Ã—5=255, no 250. 50Ã—5=250, mÃ¡s 5: 255. Siempre recuerda agregar ese 1 extra." },
+        { mistake: "Confundir 51Ã—9=450 con 51Ã—9=459", solution: "51Ã—9=459 es correcto (50Ã—9=450, mÃ¡s 9). 450 en realidad es 50Ã—9." },
       ],
       52: [
-        { mistake: "Pensar que 52×5=250 (en lugar de 260)", solution: "52×5=260, no 250. 13×5=65, ×4=260. O 50×5=250, más 2×5=10: 260." },
-        { mistake: "Confundir 52×9=458 con 52×9=468", solution: "52×9=468 es correcto (13×9=117, ×4 o 50×9=450, más 18). 458 es otro resultado." },
+        { mistake: "Pensar que 52Ã—5=250 (en lugar de 260)", solution: "52Ã—5=260, no 250. 13Ã—5=65, Ã—4=260. O 50Ã—5=250, mÃ¡s 2Ã—5=10: 260." },
+        { mistake: "Confundir 52Ã—9=458 con 52Ã—9=468", solution: "52Ã—9=468 es correcto (13Ã—9=117, Ã—4 o 50Ã—9=450, mÃ¡s 18). 458 es otro resultado." },
       ],
       53: [
-        { mistake: "Pensar que 53×5=255 (en lugar de 265)", solution: "53×5=265, no 255. 50×5=250, más 3×5=15: 265. 255 en realidad es 51×5." },
-        { mistake: "Confundir 53×9=467 con 53×9=477", solution: "53×9=477 es correcto (50×9=450, más 3×9=27). 467 es otro resultado." },
+        { mistake: "Pensar que 53Ã—5=255 (en lugar de 265)", solution: "53Ã—5=265, no 255. 50Ã—5=250, mÃ¡s 3Ã—5=15: 265. 255 en realidad es 51Ã—5." },
+        { mistake: "Confundir 53Ã—9=467 con 53Ã—9=477", solution: "53Ã—9=477 es correcto (50Ã—9=450, mÃ¡s 3Ã—9=27). 467 es otro resultado." },
       ],
       54: [
-        { mistake: "Pensar que 54×5=260 (en lugar de 270)", solution: "54×5=270, no 260. 6×5=30, 9×5=45, 30×9=270. O 50×5=250, más 4×5=20: 270." },
-        { mistake: "Confundir 54×9=476 con 54×9=486", solution: "54×9=486 es correcto (6×9=54, ×9 o 60×9=540, menos 6×9=54). 476 es otro resultado." },
+        { mistake: "Pensar que 54Ã—5=260 (en lugar de 270)", solution: "54Ã—5=270, no 260. 6Ã—5=30, 9Ã—5=45, 30Ã—9=270. O 50Ã—5=250, mÃ¡s 4Ã—5=20: 270." },
+        { mistake: "Confundir 54Ã—9=476 con 54Ã—9=486", solution: "54Ã—9=486 es correcto (6Ã—9=54, Ã—9 o 60Ã—9=540, menos 6Ã—9=54). 476 es otro resultado." },
       ],
       55: [
-        { mistake: "Pensar que 55×5=270 (en lugar de 275)", solution: "55×5=275, no 270. 11×5=55, ×5=275. O 50×5=250, más 5×5=25: 275." },
-        { mistake: "Confundir 55×9=485 con 55×9=495", solution: "55×9=495 es correcto (11×9=99, ×5 o 60×9=540, menos 5×9=45). 485 es otro resultado." },
+        { mistake: "Pensar que 55Ã—5=270 (en lugar de 275)", solution: "55Ã—5=275, no 270. 11Ã—5=55, Ã—5=275. O 50Ã—5=250, mÃ¡s 5Ã—5=25: 275." },
+        { mistake: "Confundir 55Ã—9=485 con 55Ã—9=495", solution: "55Ã—9=495 es correcto (11Ã—9=99, Ã—5 o 60Ã—9=540, menos 5Ã—9=45). 485 es otro resultado." },
       ],
       56: [
-        { mistake: "Pensar que 56×5=270 (en lugar de 280)", solution: "56×5=280, no 270. 7×5=35, 8×5=40, 35×8=280. O 60×5=300, menos 4×5=20: 280." },
-        { mistake: "Confundir 56×9=494 con 56×9=504", solution: "56×9=504 es correcto (7×9=63, ×8 o 60×9=540, menos 4×9=36). 494 es otro resultado." },
+        { mistake: "Pensar que 56Ã—5=270 (en lugar de 280)", solution: "56Ã—5=280, no 270. 7Ã—5=35, 8Ã—5=40, 35Ã—8=280. O 60Ã—5=300, menos 4Ã—5=20: 280." },
+        { mistake: "Confundir 56Ã—9=494 con 56Ã—9=504", solution: "56Ã—9=504 es correcto (7Ã—9=63, Ã—8 o 60Ã—9=540, menos 4Ã—9=36). 494 es otro resultado." },
       ],
       57: [
-        { mistake: "Pensar que 57×5=280 (en lugar de 285)", solution: "57×5=285, no 280. 60×5=300, menos 3×5=15: 285. 280 en realidad es 56×5." },
-        { mistake: "Confundir 57×9=503 con 57×9=513", solution: "57×9=513 es correcto (60×9=540, menos 3×9=27). 503 es otro resultado." },
+        { mistake: "Pensar que 57Ã—5=280 (en lugar de 285)", solution: "57Ã—5=285, no 280. 60Ã—5=300, menos 3Ã—5=15: 285. 280 en realidad es 56Ã—5." },
+        { mistake: "Confundir 57Ã—9=503 con 57Ã—9=513", solution: "57Ã—9=513 es correcto (60Ã—9=540, menos 3Ã—9=27). 503 es otro resultado." },
       ],
       58: [
-        { mistake: "Pensar que 58×5=280 (en lugar de 290)", solution: "58×5=290, no 280. 29×5=145, ×2=290. O 60×5=300, menos 2×5=10: 290." },
-        { mistake: "Confundir 58×9=512 con 58×9=522", solution: "58×9=522 es correcto (29×9=261, ×2 o 60×9=540, menos 2×9=18). 512 es otro resultado." },
+        { mistake: "Pensar que 58Ã—5=280 (en lugar de 290)", solution: "58Ã—5=290, no 280. 29Ã—5=145, Ã—2=290. O 60Ã—5=300, menos 2Ã—5=10: 290." },
+        { mistake: "Confundir 58Ã—9=512 con 58Ã—9=522", solution: "58Ã—9=522 es correcto (29Ã—9=261, Ã—2 o 60Ã—9=540, menos 2Ã—9=18). 512 es otro resultado." },
       ],
       59: [
-        { mistake: "Pensar que 59×5=290 (en lugar de 295)", solution: "59×5=295, no 290. 60×5=300, menos 5: 295. ¡Muy simple!" },
-        { mistake: "Confundir 59×9=521 con 59×9=531", solution: "59×9=531 es correcto (60×9=540, menos 9). 531 también es 9×59. 521 es otro resultado." },
+        { mistake: "Pensar que 59Ã—5=290 (en lugar de 295)", solution: "59Ã—5=295, no 290. 60Ã—5=300, menos 5: 295. Â¡Muy simple!" },
+        { mistake: "Confundir 59Ã—9=521 con 59Ã—9=531", solution: "59Ã—9=531 es correcto (60Ã—9=540, menos 9). 531 tambiÃ©n es 9Ã—59. 521 es otro resultado." },
       ],
       60: [
-        { mistake: "Pensar que 60×7=410 (en lugar de 420)", solution: "60×7=420, no 410. 6×7=42, agrega un 0: 420. O 10×7=70, ×6=420." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 60 deben terminar en 0: 60, 120, 180, 240, 300, 360, 420... ¡60×9=540, no 54!" },
+        { mistake: "Pensar que 60Ã—7=410 (en lugar de 420)", solution: "60Ã—7=420, no 410. 6Ã—7=42, agrega un 0: 420. O 10Ã—7=70, Ã—6=420." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 60 deben terminar en 0: 60, 120, 180, 240, 300, 360, 420... Â¡60Ã—9=540, no 54!" },
       ],
       61: [
-        { mistake: "Pensar que 61×5=300 (en lugar de 305)", solution: "61×5=305, no 300. 60×5=300, más 5: 305. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 61×9=540 con 61×9=549", solution: "61×9=549 es correcto (60×9=540, más 9). 540 en realidad es 60×9." },
+        { mistake: "Pensar que 61Ã—5=300 (en lugar de 305)", solution: "61Ã—5=305, no 300. 60Ã—5=300, mÃ¡s 5: 305. Siempre recuerda agregar ese 1 extra." },
+        { mistake: "Confundir 61Ã—9=540 con 61Ã—9=549", solution: "61Ã—9=549 es correcto (60Ã—9=540, mÃ¡s 9). 540 en realidad es 60Ã—9." },
       ],
       62: [
-        { mistake: "Pensar que 62×5=300 (en lugar de 310)", solution: "62×5=310, no 300. 31×5=155, ×2=310. O 60×5=300, más 2×5=10: 310." },
-        { mistake: "Confundir 62×9=548 con 62×9=558", solution: "62×9=558 es correcto (31×9=279, ×2 o 60×9=540, más 18). 548 es otro resultado." },
+        { mistake: "Pensar que 62Ã—5=300 (en lugar de 310)", solution: "62Ã—5=310, no 300. 31Ã—5=155, Ã—2=310. O 60Ã—5=300, mÃ¡s 2Ã—5=10: 310." },
+        { mistake: "Confundir 62Ã—9=548 con 62Ã—9=558", solution: "62Ã—9=558 es correcto (31Ã—9=279, Ã—2 o 60Ã—9=540, mÃ¡s 18). 548 es otro resultado." },
       ],
       63: [
-        { mistake: "Pensar que 63×5=305 (en lugar de 315)", solution: "63×5=315, no 305. 7×5=35, 9×5=45, 35×9=315. O 60×5=300, más 3×5=15: 315." },
-        { mistake: "Confundir 63×9=557 con 63×9=567", solution: "63×9=567 es correcto (7×9=63, ×9 o 60×9=540, más 27). 557 es otro resultado." },
+        { mistake: "Pensar que 63Ã—5=305 (en lugar de 315)", solution: "63Ã—5=315, no 305. 7Ã—5=35, 9Ã—5=45, 35Ã—9=315. O 60Ã—5=300, mÃ¡s 3Ã—5=15: 315." },
+        { mistake: "Confundir 63Ã—9=557 con 63Ã—9=567", solution: "63Ã—9=567 es correcto (7Ã—9=63, Ã—9 o 60Ã—9=540, mÃ¡s 27). 557 es otro resultado." },
       ],
       64: [
-        { mistake: "Pensar que 64×5=310 (en lugar de 320)", solution: "64×5=320, no 310. 8×5=40, ×8=320. O 60×5=300, más 4×5=20: 320." },
-        { mistake: "Confundir 64×9=566 con 64×9=576", solution: "64×9=576 es correcto (8×9=72, ×8 o 60×9=540, más 36). Además 576=24². 566 es otro resultado." },
+        { mistake: "Pensar que 64Ã—5=310 (en lugar de 320)", solution: "64Ã—5=320, no 310. 8Ã—5=40, Ã—8=320. O 60Ã—5=300, mÃ¡s 4Ã—5=20: 320." },
+        { mistake: "Confundir 64Ã—9=566 con 64Ã—9=576", solution: "64Ã—9=576 es correcto (8Ã—9=72, Ã—8 o 60Ã—9=540, mÃ¡s 36). AdemÃ¡s 576=24Â². 566 es otro resultado." },
       ],
       65: [
-        { mistake: "Pensar que 65×5=320 (en lugar de 325)", solution: "65×5=325, no 320. 13×5=65, ×5=325. O 60×5=300, más 5×5=25: 325." },
-        { mistake: "Confundir 65×9=575 con 65×9=585", solution: "65×9=585 es correcto (13×9=117, ×5 o 70×9=630, menos 5×9=45). 575 es otro resultado." },
+        { mistake: "Pensar que 65Ã—5=320 (en lugar de 325)", solution: "65Ã—5=325, no 320. 13Ã—5=65, Ã—5=325. O 60Ã—5=300, mÃ¡s 5Ã—5=25: 325." },
+        { mistake: "Confundir 65Ã—9=575 con 65Ã—9=585", solution: "65Ã—9=585 es correcto (13Ã—9=117, Ã—5 o 70Ã—9=630, menos 5Ã—9=45). 575 es otro resultado." },
       ],
       66: [
-        { mistake: "Pensar que 66×5=325 (en lugar de 330)", solution: "66×5=330, no 325. 11×5=55, ×6=330. O 60×5=300, más 6×5=30: 330." },
-        { mistake: "Confundir 66×9=584 con 66×9=594", solution: "66×9=594 es correcto (11×9=99, ×6 o 70×9=630, menos 4×9=36). 584 es otro resultado." },
+        { mistake: "Pensar que 66Ã—5=325 (en lugar de 330)", solution: "66Ã—5=330, no 325. 11Ã—5=55, Ã—6=330. O 60Ã—5=300, mÃ¡s 6Ã—5=30: 330." },
+        { mistake: "Confundir 66Ã—9=584 con 66Ã—9=594", solution: "66Ã—9=594 es correcto (11Ã—9=99, Ã—6 o 70Ã—9=630, menos 4Ã—9=36). 584 es otro resultado." },
       ],
       67: [
-        { mistake: "Pensar que 67×5=330 (en lugar de 335)", solution: "67×5=335, no 330. 70×5=350, menos 3×5=15: 335. 330 en realidad es 66×5." },
-        { mistake: "Confundir 67×9=593 con 67×9=603", solution: "67×9=603 es correcto (70×9=630, menos 3×9=27). 593 es otro resultado." },
+        { mistake: "Pensar que 67Ã—5=330 (en lugar de 335)", solution: "67Ã—5=335, no 330. 70Ã—5=350, menos 3Ã—5=15: 335. 330 en realidad es 66Ã—5." },
+        { mistake: "Confundir 67Ã—9=593 con 67Ã—9=603", solution: "67Ã—9=603 es correcto (70Ã—9=630, menos 3Ã—9=27). 593 es otro resultado." },
       ],
       68: [
-        { mistake: "Pensar que 68×5=330 (en lugar de 340)", solution: "68×5=340, no 330. 17×5=85, ×4=340. O 70×5=350, menos 2×5=10: 340." },
-        { mistake: "Confundir 68×9=602 con 68×9=612", solution: "68×9=612 es correcto (17×9=153, ×4 o 70×9=630, menos 2×9=18). 602 es otro resultado." },
+        { mistake: "Pensar que 68Ã—5=330 (en lugar de 340)", solution: "68Ã—5=340, no 330. 17Ã—5=85, Ã—4=340. O 70Ã—5=350, menos 2Ã—5=10: 340." },
+        { mistake: "Confundir 68Ã—9=602 con 68Ã—9=612", solution: "68Ã—9=612 es correcto (17Ã—9=153, Ã—4 o 70Ã—9=630, menos 2Ã—9=18). 602 es otro resultado." },
       ],
       69: [
-        { mistake: "Pensar que 69×5=340 (en lugar de 345)", solution: "69×5=345, no 340. 70×5=350, menos 5: 345. ¡Muy simple!" },
-        { mistake: "Confundir 69×9=611 con 69×9=621", solution: "69×9=621 es correcto (70×9=630, menos 9). 621=3×207. 611 es otro resultado." },
+        { mistake: "Pensar que 69Ã—5=340 (en lugar de 345)", solution: "69Ã—5=345, no 340. 70Ã—5=350, menos 5: 345. Â¡Muy simple!" },
+        { mistake: "Confundir 69Ã—9=611 con 69Ã—9=621", solution: "69Ã—9=621 es correcto (70Ã—9=630, menos 9). 621=3Ã—207. 611 es otro resultado." },
       ],
       70: [
-        { mistake: "Pensar que 70×7=480 (en lugar de 490)", solution: "70×7=490, no 480. 7×7=49, agrega un 0: 490. O 10×7=70, ×7=490." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 70 deben terminar en 0: 70, 140, 210, 280, 350, 420, 490... ¡70×9=630, no 63!" },
+        { mistake: "Pensar que 70Ã—7=480 (en lugar de 490)", solution: "70Ã—7=490, no 480. 7Ã—7=49, agrega un 0: 490. O 10Ã—7=70, Ã—7=490." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 70 deben terminar en 0: 70, 140, 210, 280, 350, 420, 490... Â¡70Ã—9=630, no 63!" },
       ],
       71: [
-        { mistake: "Pensar que 71×5=350 (en lugar de 355)", solution: "71×5=355, no 350. 70×5=350, más 5: 355. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 71×9=630 con 71×9=639", solution: "71×9=639 es correcto (70×9=630, más 9). 630 en realidad es 70×9." },
+        { mistake: "Pensar que 71Ã—5=350 (en lugar de 355)", solution: "71Ã—5=355, no 350. 70Ã—5=350, mÃ¡s 5: 355. Siempre recuerda agregar ese 1 extra." },
+        { mistake: "Confundir 71Ã—9=630 con 71Ã—9=639", solution: "71Ã—9=639 es correcto (70Ã—9=630, mÃ¡s 9). 630 en realidad es 70Ã—9." },
       ],
       72: [
-        { mistake: "Pensar que 72×5=350 (en lugar de 360)", solution: "72×5=360, no 350. 8×5=40, 9×5=45, 40×9=360. O 70×5=350, más 2×5=10: 360." },
-        { mistake: "Confundir 72×9=638 con 72×9=648", solution: "72×9=648 es correcto (8×9=72, ×9 o 80×9=720, menos 72). 638 es otro resultado." },
+        { mistake: "Pensar que 72Ã—5=350 (en lugar de 360)", solution: "72Ã—5=360, no 350. 8Ã—5=40, 9Ã—5=45, 40Ã—9=360. O 70Ã—5=350, mÃ¡s 2Ã—5=10: 360." },
+        { mistake: "Confundir 72Ã—9=638 con 72Ã—9=648", solution: "72Ã—9=648 es correcto (8Ã—9=72, Ã—9 o 80Ã—9=720, menos 72). 638 es otro resultado." },
       ],
       73: [
-        { mistake: "Pensar que 73×5=355 (en lugar de 365)", solution: "73×5=365, no 355. 70×5=350, más 3×5=15: 365. ¡Además 365=número de días en un año!" },
-        { mistake: "Confundir 73×9=647 con 73×9=657", solution: "73×9=657 es correcto (70×9=630, más 3×9=27). 647 es otro resultado." },
+        { mistake: "Pensar que 73Ã—5=355 (en lugar de 365)", solution: "73Ã—5=365, no 355. 70Ã—5=350, mÃ¡s 3Ã—5=15: 365. Â¡AdemÃ¡s 365=nÃºmero de dÃ­as en un aÃ±o!" },
+        { mistake: "Confundir 73Ã—9=647 con 73Ã—9=657", solution: "73Ã—9=657 es correcto (70Ã—9=630, mÃ¡s 3Ã—9=27). 647 es otro resultado." },
       ],
       74: [
-        { mistake: "Pensar que 74×5=360 (en lugar de 370)", solution: "74×5=370, no 360. 37×5=185, ×2=370. O 75×5=375, menos 5: 370." },
-        { mistake: "Confundir 74×9=656 con 74×9=666", solution: "74×9=666 es correcto (37×9=333, ×2 o 75×9=675, menos 9). 666 es un número repdigit. 656 es otro resultado." },
+        { mistake: "Pensar que 74Ã—5=360 (en lugar de 370)", solution: "74Ã—5=370, no 360. 37Ã—5=185, Ã—2=370. O 75Ã—5=375, menos 5: 370." },
+        { mistake: "Confundir 74Ã—9=656 con 74Ã—9=666", solution: "74Ã—9=666 es correcto (37Ã—9=333, Ã—2 o 75Ã—9=675, menos 9). 666 es un nÃºmero repdigit. 656 es otro resultado." },
       ],
       75: [
-        { mistake: "Pensar que 75×5=370 (en lugar de 375)", solution: "75×5=375, no 370. 15×5=75, ×5=375. O 25×5=125, ×3=375." },
-        { mistake: "Confundir 75×9=665 con 75×9=675", solution: "75×9=675 es correcto (25×9=225, ×3 o 80×9=720, menos 5×9=45). 675=3³×5². 665 es otro resultado." },
+        { mistake: "Pensar que 75Ã—5=370 (en lugar de 375)", solution: "75Ã—5=375, no 370. 15Ã—5=75, Ã—5=375. O 25Ã—5=125, Ã—3=375." },
+        { mistake: "Confundir 75Ã—9=665 con 75Ã—9=675", solution: "75Ã—9=675 es correcto (25Ã—9=225, Ã—3 o 80Ã—9=720, menos 5Ã—9=45). 675=3Â³Ã—5Â². 665 es otro resultado." },
       ],
       76: [
-        { mistake: "Pensar que 76×5=370 (en lugar de 380)", solution: "76×5=380, no 370. 19×5=95, ×4=380. O 80×5=400, menos 4×5=20: 380." },
-        { mistake: "Confundir 76×9=674 con 76×9=684", solution: "76×9=684 es correcto (19×9=171, ×4 o 80×9=720, menos 4×9=36). 684 es otro resultado." },
+        { mistake: "Pensar que 76Ã—5=370 (en lugar de 380)", solution: "76Ã—5=380, no 370. 19Ã—5=95, Ã—4=380. O 80Ã—5=400, menos 4Ã—5=20: 380." },
+        { mistake: "Confundir 76Ã—9=674 con 76Ã—9=684", solution: "76Ã—9=684 es correcto (19Ã—9=171, Ã—4 o 80Ã—9=720, menos 4Ã—9=36). 684 es otro resultado." },
       ],
       77: [
-        { mistake: "Pensar que 77×5=380 (en lugar de 385)", solution: "77×5=385, no 380. 7×5=35, 11×5=55, 35×11=385. O 80×5=400, menos 3×5=15: 385." },
-        { mistake: "Confundir 77×9=683 con 77×9=693", solution: "77×9=693 es correcto (7×9=63, ×11 o 80×9=720, menos 3×9=27). 693=7×9×11. 683 es otro resultado." },
+        { mistake: "Pensar que 77Ã—5=380 (en lugar de 385)", solution: "77Ã—5=385, no 380. 7Ã—5=35, 11Ã—5=55, 35Ã—11=385. O 80Ã—5=400, menos 3Ã—5=15: 385." },
+        { mistake: "Confundir 77Ã—9=683 con 77Ã—9=693", solution: "77Ã—9=693 es correcto (7Ã—9=63, Ã—11 o 80Ã—9=720, menos 3Ã—9=27). 693=7Ã—9Ã—11. 683 es otro resultado." },
       ],
       78: [
-        { mistake: "Pensar que 78×5=380 (en lugar de 390)", solution: "78×5=390, no 380. 13×5=65, 6×5=30, 65×6=390. O 80×5=400, menos 2×5=10: 390." },
-        { mistake: "Confundir 78×9=692 con 78×9=702", solution: "78×9=702 es correcto (13×9=117, ×6 o 80×9=720, menos 2×9=18). 702 es otro resultado." },
+        { mistake: "Pensar que 78Ã—5=380 (en lugar de 390)", solution: "78Ã—5=390, no 380. 13Ã—5=65, 6Ã—5=30, 65Ã—6=390. O 80Ã—5=400, menos 2Ã—5=10: 390." },
+        { mistake: "Confundir 78Ã—9=692 con 78Ã—9=702", solution: "78Ã—9=702 es correcto (13Ã—9=117, Ã—6 o 80Ã—9=720, menos 2Ã—9=18). 702 es otro resultado." },
       ],
       79: [
-        { mistake: "Pensar que 79×5=390 (en lugar de 395)", solution: "79×5=395, no 390. 80×5=400, menos 5: 395. ¡Muy simple!" },
-        { mistake: "Confundir 79×9=701 con 79×9=711", solution: "79×9=711 es correcto (80×9=720, menos 9). 711 es otro resultado." },
+        { mistake: "Pensar que 79Ã—5=390 (en lugar de 395)", solution: "79Ã—5=395, no 390. 80Ã—5=400, menos 5: 395. Â¡Muy simple!" },
+        { mistake: "Confundir 79Ã—9=701 con 79Ã—9=711", solution: "79Ã—9=711 es correcto (80Ã—9=720, menos 9). 711 es otro resultado." },
       ],
       80: [
-        { mistake: "Pensar que 80×7=550 (en lugar de 560)", solution: "80×7=560, no 550. 8×7=56, agrega un 0: 560. O 10×7=70, ×8=560." },
-        { mistake: "Olvidar el cero", solution: "Todos los múltiplos de 80 deben terminar en 0: 80, 160, 240, 320, 400, 480, 560... ¡80×9=720, no 72!" },
+        { mistake: "Pensar que 80Ã—7=550 (en lugar de 560)", solution: "80Ã—7=560, no 550. 8Ã—7=56, agrega un 0: 560. O 10Ã—7=70, Ã—8=560." },
+        { mistake: "Olvidar el cero", solution: "Todos los mÃºltiplos de 80 deben terminar en 0: 80, 160, 240, 320, 400, 480, 560... Â¡80Ã—9=720, no 72!" },
       ],
       81: [
-        { mistake: "Calcular 81 como 8×10+1 en lugar de 9×9", solution: "81=9×9. Ejemplo: 81×7 = (9×7)×9 = 63×9 = 567. ¡Usa la relación cuadrada!" },
-        { mistake: "Error de suma en estrategia 80+1", solution: "81×7 = (80×7)+(1×7) = 560+7 = 567. ¡Calcula ambas partes cuidadosamente!" },
+        { mistake: "Calcular 81 como 8Ã—10+1 en lugar de 9Ã—9", solution: "81=9Ã—9. Ejemplo: 81Ã—7 = (9Ã—7)Ã—9 = 63Ã—9 = 567. Â¡Usa la relaciÃ³n cuadrada!" },
+        { mistake: "Error de suma en estrategia 80+1", solution: "81Ã—7 = (80Ã—7)+(1Ã—7) = 560+7 = 567. Â¡Calcula ambas partes cuidadosamente!" },
       ],
       82: [
-        { mistake: "Complicar 82×4", solution: "82×4 = (80×4)+(2×4) = 320+8 = 328. ¡Descompone y suma!" },
-        { mistake: "Pensar que 82 es impar", solution: "82=2×41, siempre par. Todos sus múltiplos son números pares: 82, 164, 246..." },
+        { mistake: "Complicar 82Ã—4", solution: "82Ã—4 = (80Ã—4)+(2Ã—4) = 320+8 = 328. Â¡Descompone y suma!" },
+        { mistake: "Pensar que 82 es impar", solution: "82=2Ã—41, siempre par. Todos sus mÃºltiplos son nÃºmeros pares: 82, 164, 246..." },
       ],
       83: [
-        { mistake: "Calcular incorrectamente 83×5", solution: "83×5 = (80×5)+(3×5) = 400+15 = 415. ¡Descompone y suma!" },
+        { mistake: "Calcular incorrectamente 83Ã—5", solution: "83Ã—5 = (80Ã—5)+(3Ã—5) = 400+15 = 415. Â¡Descompone y suma!" },
         { mistake: "Pensar que 83 es par", solution: "83 es primo, solo divisible por 1 y 83. Es impar y no divisible por 2." },
       ],
       84: [
-        { mistake: "Complicar 84×5", solution: "84×5 = 420 (7×12×5=7×60). O (80×5)+(4×5)=400+20=420." },
-        { mistake: "Olvidar los factores de 84", solution: "84=7×12=6×14=4×21=3×28. ¡Se puede calcular de múltiples maneras!" },
+        { mistake: "Complicar 84Ã—5", solution: "84Ã—5 = 420 (7Ã—12Ã—5=7Ã—60). O (80Ã—5)+(4Ã—5)=400+20=420." },
+        { mistake: "Olvidar los factores de 84", solution: "84=7Ã—12=6Ã—14=4Ã—21=3Ã—28. Â¡Se puede calcular de mÃºltiples maneras!" },
       ],
       85: [
-        { mistake: "Calcular incorrectamente 85×4", solution: "85×4 = (80×4)+(5×4) = 320+20 = 340. O 85×4=17×20=340." },
-        { mistake: "Olvidar el último dígito", solution: "Los múltiplos de 85 siempre terminan en 5 o 0: 85, 170, 255, 340, 425, 510..." },
+        { mistake: "Calcular incorrectamente 85Ã—4", solution: "85Ã—4 = (80Ã—4)+(5Ã—4) = 320+20 = 340. O 85Ã—4=17Ã—20=340." },
+        { mistake: "Olvidar el Ãºltimo dÃ­gito", solution: "Los mÃºltiplos de 85 siempre terminan en 5 o 0: 85, 170, 255, 340, 425, 510..." },
       ],
       86: [
-        { mistake: "Complicar 86×5", solution: "86×5 = (80×5)+(6×5) = 400+30 = 430. ¡Descompone y suma!" },
-        { mistake: "Pensar que 86 es impar", solution: "86=2×43, siempre par. Todos sus múltiplos son números pares: 86, 172, 258..." },
+        { mistake: "Complicar 86Ã—5", solution: "86Ã—5 = (80Ã—5)+(6Ã—5) = 400+30 = 430. Â¡Descompone y suma!" },
+        { mistake: "Pensar que 86 es impar", solution: "86=2Ã—43, siempre par. Todos sus mÃºltiplos son nÃºmeros pares: 86, 172, 258..." },
       ],
       87: [
-        { mistake: "Calcular incorrectamente 87×5", solution: "87×5 = (90×5)-(3×5) = 450-15 = 435. ¡Restar desde 90 es más fácil!" },
-        { mistake: "Pensar que 87 es primo", solution: "87=3×29, no es primo! Es divisible por 3 (8+7=15, divisible exactamente por 3)." },
+        { mistake: "Calcular incorrectamente 87Ã—5", solution: "87Ã—5 = (90Ã—5)-(3Ã—5) = 450-15 = 435. Â¡Restar desde 90 es mÃ¡s fÃ¡cil!" },
+        { mistake: "Pensar que 87 es primo", solution: "87=3Ã—29, no es primo! Es divisible por 3 (8+7=15, divisible exactamente por 3)." },
       ],
       88: [
-        { mistake: "Complicar 88×5", solution: "88×5 = (80×5)+(8×5) = 400+40 = 440. O 88×5=11×40=440." },
-        { mistake: "Calcular incorrectamente 88×11", solution: "88×11 = 88×10 + 88 = 880+88 = 968. ¡Usa la regla de multiplicar por 11!" },
+        { mistake: "Complicar 88Ã—5", solution: "88Ã—5 = (80Ã—5)+(8Ã—5) = 400+40 = 440. O 88Ã—5=11Ã—40=440." },
+        { mistake: "Calcular incorrectamente 88Ã—11", solution: "88Ã—11 = 88Ã—10 + 88 = 880+88 = 968. Â¡Usa la regla de multiplicar por 11!" },
       ],
       89: [
-        { mistake: "Calcular 89 sin redondear", solution: "89=90-1. Ejemplo: 89×7 = (90×7)-7 = 630-7 = 623. ¡MUY FÁCIL!" },
-        { mistake: "Calcular 89 como 88+1", solution: "¡La estrategia 90-1 es mucho más fácil! 89×7: 90×7=630, luego resta 7: 623." },
+        { mistake: "Calcular 89 sin redondear", solution: "89=90-1. Ejemplo: 89Ã—7 = (90Ã—7)-7 = 630-7 = 623. Â¡MUY FÃCIL!" },
+        { mistake: "Calcular 89 como 88+1", solution: "Â¡La estrategia 90-1 es mucho mÃ¡s fÃ¡cil! 89Ã—7: 90Ã—7=630, luego resta 7: 623." },
       ],
       90: [
-        { mistake: "Complicar 90×5", solution: "90×5 = 450 (9×50). ¡Solo 9×5=45, agrega un 0!" },
-        { mistake: "Olvidar el cero", solution: "90=9×10. Siempre agrega 0 al final: 90, 180, 270, 360, 450..." },
+        { mistake: "Complicar 90Ã—5", solution: "90Ã—5 = 450 (9Ã—50). Â¡Solo 9Ã—5=45, agrega un 0!" },
+        { mistake: "Olvidar el cero", solution: "90=9Ã—10. Siempre agrega 0 al final: 90, 180, 270, 360, 450..." },
       ],
       91: [
-        { mistake: "Calcular incorrectamente 91×5", solution: "91×5 = (90×5)+(1×5) = 450+5 = 455. ¡Descompone y suma!" },
-        { mistake: "Pensar que 91 es primo", solution: "91=7×13, no es primo! Es divisible por 7 y 13." },
+        { mistake: "Calcular incorrectamente 91Ã—5", solution: "91Ã—5 = (90Ã—5)+(1Ã—5) = 450+5 = 455. Â¡Descompone y suma!" },
+        { mistake: "Pensar que 91 es primo", solution: "91=7Ã—13, no es primo! Es divisible por 7 y 13." },
       ],
       92: [
-        { mistake: "Complicar 92×5", solution: "92×5 = (90×5)+(2×5) = 450+10 = 460. ¡Descompone y suma!" },
-        { mistake: "Pensar que 92 es impar", solution: "92=2×46, siempre par. Todos sus múltiplos son números pares: 92, 184, 276..." },
+        { mistake: "Complicar 92Ã—5", solution: "92Ã—5 = (90Ã—5)+(2Ã—5) = 450+10 = 460. Â¡Descompone y suma!" },
+        { mistake: "Pensar que 92 es impar", solution: "92=2Ã—46, siempre par. Todos sus mÃºltiplos son nÃºmeros pares: 92, 184, 276..." },
       ],
       93: [
-        { mistake: "Calcular incorrectamente 93×5", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. ¡Descompone y suma!" },
-        { mistake: "Pensar que 93 es primo", solution: "93=3×31, no es primo! Es divisible por 3 (9+3=12, divisible exactamente por 3)." },
+        { mistake: "Calcular incorrectamente 93Ã—5", solution: "93Ã—5 = (90Ã—5)+(3Ã—5) = 450+15 = 465. Â¡Descompone y suma!" },
+        { mistake: "Pensar que 93 es primo", solution: "93=3Ã—31, no es primo! Es divisible por 3 (9+3=12, divisible exactamente por 3)." },
       ],
       94: [
-        { mistake: "Complicar 94×5", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. ¡Restar desde 100 es más fácil!" },
-        { mistake: "Pensar que 94 es impar", solution: "94=2×47, siempre par. Todos sus múltiplos son números pares: 94, 188, 282..." },
+        { mistake: "Complicar 94Ã—5", solution: "94Ã—5 = (100Ã—5)-(6Ã—5) = 500-30 = 470. Â¡Restar desde 100 es mÃ¡s fÃ¡cil!" },
+        { mistake: "Pensar que 94 es impar", solution: "94=2Ã—47, siempre par. Todos sus mÃºltiplos son nÃºmeros pares: 94, 188, 282..." },
       ],
       95: [
-        { mistake: "Calcular incorrectamente 95×4", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. O 95×4=19×20=380." },
-        { mistake: "Olvidar el último dígito", solution: "Los múltiplos de 95 siempre terminan en 5 o 0: 95, 190, 285, 380, 475, 570..." },
+        { mistake: "Calcular incorrectamente 95Ã—4", solution: "95Ã—4 = (100Ã—4)-(5Ã—4) = 400-20 = 380. O 95Ã—4=19Ã—20=380." },
+        { mistake: "Olvidar el Ãºltimo dÃ­gito", solution: "Los mÃºltiplos de 95 siempre terminan en 5 o 0: 95, 190, 285, 380, 475, 570..." },
       ],
       96: [
-        { mistake: "Complicar 96×5", solution: "96×5 = (100×5)-(4×5) = 500-20 = 480. O 96×5=12×40=480." },
-        { mistake: "Olvidar los factores de 96", solution: "96=8×12=6×16=4×24=3×32. ¡Se puede calcular de múltiples maneras!" },
+        { mistake: "Complicar 96Ã—5", solution: "96Ã—5 = (100Ã—5)-(4Ã—5) = 500-20 = 480. O 96Ã—5=12Ã—40=480." },
+        { mistake: "Olvidar los factores de 96", solution: "96=8Ã—12=6Ã—16=4Ã—24=3Ã—32. Â¡Se puede calcular de mÃºltiples maneras!" },
       ],
       97: [
-        { mistake: "Calcular 97 sin redondear", solution: "97=100-3. Ejemplo: 97×7 = (100×7)-21 = 700-21 = 679. ¡MUY FÁCIL!" },
-        { mistake: "Calcular 97 como 96+1", solution: "¡La estrategia 100-3 es mucho más fácil! 97×7: 100×7=700, luego resta 21: 679." },
+        { mistake: "Calcular 97 sin redondear", solution: "97=100-3. Ejemplo: 97Ã—7 = (100Ã—7)-21 = 700-21 = 679. Â¡MUY FÃCIL!" },
+        { mistake: "Calcular 97 como 96+1", solution: "Â¡La estrategia 100-3 es mucho mÃ¡s fÃ¡cil! 97Ã—7: 100Ã—7=700, luego resta 21: 679." },
       ],
       98: [
-        { mistake: "Complicar 98×5", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. ¡Restar desde 100 es SÚPER FÁCIL!" },
-        { mistake: "Pensar que 98 es impar", solution: "98=2×49, siempre par. Todos sus múltiplos son números pares: 98, 196, 294..." },
+        { mistake: "Complicar 98Ã—5", solution: "98Ã—5 = (100Ã—5)-(2Ã—5) = 500-10 = 490. Â¡Restar desde 100 es SÃšPER FÃCIL!" },
+        { mistake: "Pensar que 98 es impar", solution: "98=2Ã—49, siempre par. Todos sus mÃºltiplos son nÃºmeros pares: 98, 196, 294..." },
       ],
       99: [
-        { mistake: "Calcular 99 sin redondear", solution: "99=100-1. Ejemplo: 99×7 = (100×7)-7 = 700-7 = 693. ¡PERFECTA!" },
-        { mistake: "Calcular 99 como 98+1", solution: "¡La estrategia 100-1 es mucho más fácil! 99×8: 100×8=800, luego resta 8: 792." },
+        { mistake: "Calcular 99 sin redondear", solution: "99=100-1. Ejemplo: 99Ã—7 = (100Ã—7)-7 = 700-7 = 693. Â¡PERFECTA!" },
+        { mistake: "Calcular 99 como 98+1", solution: "Â¡La estrategia 100-1 es mucho mÃ¡s fÃ¡cil! 99Ã—8: 100Ã—8=800, luego resta 8: 792." },
       ],
       100: [
-        { mistake: "Complicar 100×5", solution: "100×5 = 500! Solo agrega dos ceros al final: 5 ? 500, 7 ? 700!" },
-        { mistake: "Olvidar los ceros", solution: "Multiplicar por 100: agrega DOS ceros al final. 100×9=900, ¡no 90!" },
+        { mistake: "Complicar 100Ã—5", solution: "100Ã—5 = 500! Solo agrega dos ceros al final: 5 â†’ 500, 7 â†’ 700!" },
+        { mistake: "Olvidar los ceros", solution: "Multiplicar por 100: agrega DOS ceros al final. 100Ã—9=900, Â¡no 90!" },
       ],
     }
     return mistakes[number] || []
@@ -1298,706 +1298,706 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   const getPracticeStrategies = () => {
     const strategies: { [key: number]: string[] } = {
       1: [
-        "Di cada multiplicación en voz alta: '1 por 1 es 1, 1 por 2 es 2...'",
-        "Pratiquez escribir la tabla una vez al día durante una semana",
-        "Busca el patrón: la respuesta siempre es el mismo número que el segundo número",
-        "Usa tarjetas didácticas, aunque esta tabla generalmente se Apprenez muy rápido",
+        "Di cada multiplicaciÃ³n en voz alta: '1 por 1 es 1, 1 por 2 es 2...'",
+        "Practica escribir la tabla una vez al dÃ­a durante una semana",
+        "Busca el patrÃ³n: la respuesta siempre es el mismo nÃºmero que el segundo nÃºmero",
+        "Usa tarjetas didÃ¡cticas, aunque esta tabla generalmente se aprende muy rÃ¡pido",
       ],
       2: [
         "Cuenta de dos en dos mientras caminas o subes escaleras: 2, 4, 6, 8...",
-        "Usa tus dedos: sostén dedos en pares y cuenta de dos en dos",
-        "Pratiquez duplicar números en tu cabeza durante el día",
-        "Dílo en voz alta: '2 por 5 es 5 más 5, lo que hace 10'",
+        "Usa tus dedos: sostÃ©n dedos en pares y cuenta de dos en dos",
+        "Practica duplicar nÃºmeros en tu cabeza durante el dÃ­a",
+        "DÃ­lo en voz alta: '2 por 5 es 5 mÃ¡s 5, lo que hace 10'",
       ],
       3: [
-        "Cuenta rítmicamente de tres en tres: 3, 6, 9, 12, 15...",
-        "Usa el truco de los dedos: sostén dedos en grupos de 3",
-        "Busca el patrón de suma de dígitos para verificar tus respuestas (repite 3-6-9)",
-        "Pratiquez 5-10 minutos diarios en lugar de una sesión larga",
+        "Cuenta rÃ­tmicamente de tres en tres: 3, 6, 9, 12, 15...",
+        "Usa el truco de los dedos: sostÃ©n dedos en grupos de 3",
+        "Busca el patrÃ³n de suma de dÃ­gitos para verificar tus respuestas (repite 3-6-9)",
+        "Practica 5-10 minutos diarios en lugar de una sesiÃ³n larga",
       ],
       4: [
-        "Apprenez primero la tabla del 2, luego duplica cada respuesta para obtener los 4s",
+        "Aprende primero la tabla del 2, luego duplica cada respuesta para obtener los 4s",
         "Cuenta de cuatro en cuatro: 4, 8, 12, 16, 20...",
         "Usa objetos en grupos de 4 para visualizar (patas de silla, ruedas de auto)",
-        "Pratiquez por separado los más difíciles (4×6, 4×7, 4×8, 4×9)",
+        "Practica por separado los mÃ¡s difÃ­ciles (4Ã—6, 4Ã—7, 4Ã—8, 4Ã—9)",
       ],
       5: [
-        "Usa tus dedos para contar de cinco en cinco—cada dedo representa 5",
+        "Usa tus dedos para contar de cinco en cincoâ€”cada dedo representa 5",
         "Mira un reloj y cuenta en intervalos de 5 minutos",
-        "Pratiquez con dinero: cuenta monedas de 5 centavos",
+        "Practica con dinero: cuenta monedas de 5 centavos",
         "Recuerda: multiplicadores pares terminan en 0, impares en 5",
       ],
       6: [
         "Memoriza la tabla del 3, luego duplica cada respuesta para encontrar los 6s",
         "Estrategia de la caja de huevos: cuenta de seis en seis (6, 12, 18, 24...)",
-        "Enfócate en los pares difíciles: estudia 6×7=42, 6×8=48, 6×9=54 por separado",
-        "Memoriza el patrón de unidades: 6, 2, 8, 4, 0 y repite",
-        "Verifica usando ambas tablas del 2 y 3, ya que 6 es múltiplo de ambos",
+        "EnfÃ³cate en los pares difÃ­ciles: estudia 6Ã—7=42, 6Ã—8=48, 6Ã—9=54 por separado",
+        "Memoriza el patrÃ³n de unidades: 6, 2, 8, 4, 0 y repite",
+        "Verifica usando ambas tablas del 2 y 3, ya que 6 es mÃºltiplo de ambos",
       ],
       7: [
-        "Memoriza el par más difícil: 7×8=56 (rima 'cinco seis, siete ocho')",
-        "Conéctalo con los días de la semana: 7 días, 14 días (2 semanas), 21 días (3 semanas)",
-        "Memoriza especialmente 7×7=49 (7²=49), calcula otros desde ahí",
+        "Memoriza el par mÃ¡s difÃ­cil: 7Ã—8=56 (rima 'cinco seis, siete ocho')",
+        "ConÃ©ctalo con los dÃ­as de la semana: 7 dÃ­as, 14 dÃ­as (2 semanas), 21 dÃ­as (3 semanas)",
+        "Memoriza especialmente 7Ã—7=49 (7Â²=49), calcula otros desde ahÃ­",
         "Truco de dedos: Cuenta 7 dedos desde la izquierda, los restantes son unidades, los contados son decenas",
-        "¡Solo Pratiquez 3-4 hechos reales al día. El 7 requiere paciencia!",
+        "Â¡Solo practica 3-4 hechos reales al dÃ­a. El 7 requiere paciencia!",
       ],
       8: [
         "Memoriza la tabla del 4, luego duplica cada respuesta para encontrar los 8s",
-        "Memoriza especialmente 8×8=64 ('ocho ocho sesenta y cuatro')",
+        "Memoriza especialmente 8Ã—8=64 ('ocho ocho sesenta y cuatro')",
         "Cuenta de ocho en ocho: 8, 16, 24, 32, 40, 48, 56, 64, 72, 80",
-        "Cadena de duplicación: Duplica el número (×2), luego otra vez (×4), luego otra vez (×8)",
+        "Cadena de duplicaciÃ³n: Duplica el nÃºmero (Ã—2), luego otra vez (Ã—4), luego otra vez (Ã—8)",
         "Las unidades son siempre pares y descienden: 8, 6, 4, 2, 0 y repite",
       ],
       9: [
-        "Apprenez el truco de los dedos: usa tus 10 dedos para mostrar la tabla del 9",
-        "Usa la regla de suma de dígitos: suma los dígitos de la respuesta, siempre da 9",
-        "Resta desde 10: 9×6 = 60-6 = 54, 9×8 = 80-8 = 72",
-        "Memoriza especialmente 9×9=81 (9²=81)",
-        "Patrón de decenas: En 9×n, el dígito de las decenas siempre es n-1",
+        "Aprende el truco de los dedos: usa tus 10 dedos para mostrar la tabla del 9",
+        "Usa la regla de suma de dÃ­gitos: suma los dÃ­gitos de la respuesta, siempre da 9",
+        "Resta desde 10: 9Ã—6 = 60-6 = 54, 9Ã—8 = 80-8 = 72",
+        "Memoriza especialmente 9Ã—9=81 (9Â²=81)",
+        "PatrÃ³n de decenas: En 9Ã—n, el dÃ­gito de las decenas siempre es n-1",
       ],
       10: [
-        "¡La regla más fácil: Solo agrega un cero al final!",
+        "Â¡La regla mÃ¡s fÃ¡cil: Solo agrega un cero al final!",
         "Cuenta de diez en diez: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100",
-        "Entiende la relación de valor posicional: multiplicar por 10 desplaza un dígito a la izquierda",
-        "Pratiquez con números grandes: 23×10=230, 47×10=470",
-        "Usa esta tabla para verificar otras tablas (ej: 9×6 = 60-6)",
+        "Entiende la relaciÃ³n de valor posicional: multiplicar por 10 desplaza un dÃ­gito a la izquierda",
+        "Practica con nÃºmeros grandes: 23Ã—10=230, 47Ã—10=470",
+        "Usa esta tabla para verificar otras tablas (ej: 9Ã—6 = 60-6)",
       ],
       11: [
-        "Memoriza el patrón de dígitos dobles: 11, 22, 33, 44, 55, 66, 77, 88, 99",
-        "Pratiquez el truco de suma de dígitos: 23×11 = 253 (2_[2+3]_3)",
-        "Memoriza especialmente 11×11=121 y 11×12=132",
-        "Crea canción o rima: 'Once por cinco, cincuenta y cinco' (11×5=55)",
-        "Encuentra un múltiplo de 11 en la vida real cada día (11 años, 11 horas, etc.)",
+        "Memoriza el patrÃ³n de dÃ­gitos dobles: 11, 22, 33, 44, 55, 66, 77, 88, 99",
+        "Practica el truco de suma de dÃ­gitos: 23Ã—11 = 253 (2_[2+3]_3)",
+        "Memoriza especialmente 11Ã—11=121 y 11Ã—12=132",
+        "Crea canciÃ³n o rima: 'Once por cinco, cincuenta y cinco' (11Ã—5=55)",
+        "Encuentra un mÃºltiplo de 11 en la vida real cada dÃ­a (11 aÃ±os, 11 horas, etc.)",
       ],
       12: [
-        "Pratiquez contando docenas: cuenta cajas de huevos (12, 24, 36...)",
-        "Calcula 12 usando tabla del 3 o 4: 12=3×4, entonces 12×5 = 3×5×4 = 15×4 = 60",
-        "Usa el reloj: 12×5=60 minutos (1 hora)",
-        "Enfócate en los múltiplos más difíciles de 12: 12×7=84, 12×8=96, 12×9=108",
+        "Practica contando docenas: cuenta cajas de huevos (12, 24, 36...)",
+        "Calcula 12 usando tabla del 3 o 4: 12=3Ã—4, entonces 12Ã—5 = 3Ã—5Ã—4 = 15Ã—4 = 60",
+        "Usa el reloj: 12Ã—5=60 minutos (1 hora)",
+        "EnfÃ³cate en los mÃºltiplos mÃ¡s difÃ­ciles de 12: 12Ã—7=84, 12Ã—8=96, 12Ã—9=108",
         "Usa 12 en vida diaria: meses, horas, docenas",
       ],
       13: [
-        "Usa siempre la estrategia 10+3: 13×6 = 60+18 = 78",
-        "Convierte la tabla del 13 en canción o encuentra un ritmo",
-        "Enfócate en los pares más difíciles: 13×7=91, 13×8=104, 13×9=117",
-        "Pratiquez 2-3 múltiplos diferentes de 13 cada día, no todos a la vez",
-        "Trabaja hacia atrás: 130, 117, 104, 91, 78... (resta 13 desde 130)",
+        "Usa siempre la estrategia 10+3: 13Ã—6 = 60+18 = 78",
+        "Convierte la tabla del 13 en canciÃ³n o encuentra un ritmo",
+        "EnfÃ³cate en los pares mÃ¡s difÃ­ciles: 13Ã—7=91, 13Ã—8=104, 13Ã—9=117",
+        "Practica 2-3 mÃºltiplos diferentes de 13 cada dÃ­a, no todos a la vez",
+        "Trabaja hacia atrÃ¡s: 130, 117, 104, 91, 78... (resta 13 desde 130)",
       ],
       14: [
         "Memoriza la tabla del 7, luego duplica cada respuesta",
-        "Usa un calendario bisemanal: períodos de 14 días",
-        "Memoriza especialmente 14×7=98 y 14×8=112",
-        "Usa 14 para verificar la tabla del 7: 14×6=84, entonces 7×6=42",
+        "Usa un calendario bisemanal: perÃ­odos de 14 dÃ­as",
+        "Memoriza especialmente 14Ã—7=98 y 14Ã—8=112",
+        "Usa 14 para verificar la tabla del 7: 14Ã—6=84, entonces 7Ã—6=42",
         "Cuenta de catorce en catorce: 14, 28, 42, 56, 70, 84, 98, 112, 126, 140",
       ],
       15: [
-        "Estrategia del reloj: 15 minutos = cuarto de hora. 15×4=60 minutos = 1 hora",
-        "Usa tabla del 3 o 5: 15=3×5, entonces 15×4 = 3×4×5 = 12×5 = 60",
-        "Sigue el patrón que termina en 0 o 5: 15, 30, 45, 60, 75, 90...",
-        "Pratiquez cálculo de propinas: cómo calcular 15% de propina (10%+5%)",
-        "Memoriza los múltiplos más útiles de 15: 15×4=60, 15×6=90, 15×8=120",
+        "Estrategia del reloj: 15 minutos = cuarto de hora. 15Ã—4=60 minutos = 1 hora",
+        "Usa tabla del 3 o 5: 15=3Ã—5, entonces 15Ã—4 = 3Ã—4Ã—5 = 12Ã—5 = 60",
+        "Sigue el patrÃ³n que termina en 0 o 5: 15, 30, 45, 60, 75, 90...",
+        "Practica cÃ¡lculo de propinas: cÃ³mo calcular 15% de propina (10%+5%)",
+        "Memoriza los mÃºltiplos mÃ¡s Ãºtiles de 15: 15Ã—4=60, 15Ã—6=90, 15Ã—8=120",
       ],
       16: [
-        "Cadena de duplicación: Duplica el número (×2), otra vez (×4), otra vez (×8), otra vez (×16)",
-        "Si conoces la tabla del 8, duplica cada resultado: 8×7=56, entonces 16×7=112",
-        "Memoriza especialmente 16×16=256 (28=256)",
-        "Relaciónalo con términos informáticos: 16 bits, sistema hexadecimal",
-        "Cuenta de dieciséis en dieciséis: 16, 32, 48, 64, 80, 96, 112, 128, 144, 160",
+        "Cadena de duplicaciÃ³n: Duplica el nÃºmero (Ã—2), otra vez (Ã—4), otra vez (Ã—8), otra vez (Ã—16)",
+        "Si conoces la tabla del 8, duplica cada resultado: 8Ã—7=56, entonces 16Ã—7=112",
+        "Memoriza especialmente 16Ã—16=256 (2â¸=256)",
+        "RelaciÃ³nalo con tÃ©rminos informÃ¡ticos: 16 bits, sistema hexadecimal",
+        "Cuenta de diecisÃ©is en diecisÃ©is: 16, 32, 48, 64, 80, 96, 112, 128, 144, 160",
       ],
       17: [
-        "Perfecciona la estrategia 20-3: 17×n = 20n - 3n",
-        "Descomposición 10+7: 17×6 = 60+42 = 102",
-        "Pratiquez diariamente los pares más difíciles: 17×7=119, 17×8=136, 17×9=153",
-        "Relaciónalo con 17 años de edad: qué pasa a los 17, qué pasa a los 34 (17×2)",
-        "¡Ten paciencia! 17 es primo, requiere práctica",
+        "Perfecciona la estrategia 20-3: 17Ã—n = 20n - 3n",
+        "DescomposiciÃ³n 10+7: 17Ã—6 = 60+42 = 102",
+        "Practica diariamente los pares mÃ¡s difÃ­ciles: 17Ã—7=119, 17Ã—8=136, 17Ã—9=153",
+        "RelaciÃ³nalo con 17 aÃ±os de edad: quÃ© pasa a los 17, quÃ© pasa a los 34 (17Ã—2)",
+        "Â¡Ten paciencia! 17 es primo, requiere prÃ¡ctica",
       ],
       18: [
-        "Usa tabla del 9 o 6: 18=2×9 o 18=3×6",
-        "Duplica la tabla del 9: 9×4=36, entonces 18×4=72",
-        "Triplica la tabla del 6: 6×5=30, entonces 18×5=90",
-        "Relaciónalo con mayoría de edad: 18, 36 (18×2), 54 (18×3)",
+        "Usa tabla del 9 o 6: 18=2Ã—9 o 18=3Ã—6",
+        "Duplica la tabla del 9: 9Ã—4=36, entonces 18Ã—4=72",
+        "Triplica la tabla del 6: 6Ã—5=30, entonces 18Ã—5=90",
+        "RelaciÃ³nalo con mayorÃ­a de edad: 18, 36 (18Ã—2), 54 (18Ã—3)",
         "Cuenta de dieciocho en dieciocho: 18, 36, 54, 72, 90, 108, 126, 144, 162, 180",
       ],
       19: [
-        "Usa siempre la estrategia 20-1: 19×n = 20n - n",
-        "Ejemplo: 19×7 = 140-7 = 133. ¡Muy simple y efectivo!",
-        "Descomposición 10+9: 19×4 = 40+36 = 76",
-        "Pratiquez los múltiplos más difíciles: 19×7=133, 19×8=152, 19×9=171",
-        "Apprenez la tabla del 19 hacia atrás: 190, 171, 152, 133... para flexibilidad mental",
+        "Usa siempre la estrategia 20-1: 19Ã—n = 20n - n",
+        "Ejemplo: 19Ã—7 = 140-7 = 133. Â¡Muy simple y efectivo!",
+        "DescomposiciÃ³n 10+9: 19Ã—4 = 40+36 = 76",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 19Ã—7=133, 19Ã—8=152, 19Ã—9=171",
+        "Aprende la tabla del 19 hacia atrÃ¡s: 190, 171, 152, 133... para flexibilidad mental",
       ],
       20: [
-        "Lo más fácil: Multiplica por 10, luego duplica",
-        "O: Agrega un cero al final, luego duplica (MÉTODO CORRECTO! 7×20: 70 luego ×2=140)",
-        "Método correcto: 7×10=70, 70×2=140 o 7×2=14, agrega un 0: 140",
-        "Cuenta rápidamente de veinte en veinte: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
-        "Pratiquez con dinero: cuenta billetes de 20",
+        "Lo mÃ¡s fÃ¡cil: Multiplica por 10, luego duplica",
+        "O: Agrega un cero al final, luego duplica (MÃ‰TODO CORRECTO! 7Ã—20: 70 luego Ã—2=140)",
+        "MÃ©todo correcto: 7Ã—10=70, 70Ã—2=140 o 7Ã—2=14, agrega un 0: 140",
+        "Cuenta rÃ¡pidamente de veinte en veinte: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
+        "Practica con dinero: cuenta billetes de 20",
       ],
       21: [
-        "Usa la estrategia 20+1: 21×n = 20n + n",
-        "Usa la relación 3×7: ¿Conoces la tabla del 3? 3×6=18, 7×6=42, entonces 21×6=126",
-        "Pratiquez los múltiplos más difíciles: 21×7=147, 21×8=168, 21×9=189",
-        "Relaciónalo con la mayoría de edad legal: ¿qué cambia a los 21 años?",
+        "Usa la estrategia 20+1: 21Ã—n = 20n + n",
+        "Usa la relaciÃ³n 3Ã—7: Â¿Conoces la tabla del 3? 3Ã—6=18, 7Ã—6=42, entonces 21Ã—6=126",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 21Ã—7=147, 21Ã—8=168, 21Ã—9=189",
+        "RelaciÃ³nalo con la mayorÃ­a de edad legal: Â¿quÃ© cambia a los 21 aÃ±os?",
         "Cuenta de veintiuno en veintiuno: 21, 42, 63, 84, 105, 126, 147, 168, 189, 210",
       ],
       22: [
         "Memoriza la tabla del 11, luego duplica cada resultado",
-        "Relaciónalo con equipos de fútbol: 2 equipos = 22 jugadores",
-        "Los múltiplos más fáciles primero: 22×5=110, 22×10=220",
-        "Cuenta de veintidós en veintidós: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
-        "Observa el patrón de dígitos dobles en los primeros 4 resultados: 22, 44, 66, 88",
+        "RelaciÃ³nalo con equipos de fÃºtbol: 2 equipos = 22 jugadores",
+        "Los mÃºltiplos mÃ¡s fÃ¡ciles primero: 22Ã—5=110, 22Ã—10=220",
+        "Cuenta de veintidÃ³s en veintidÃ³s: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
+        "Observa el patrÃ³n de dÃ­gitos dobles en los primeros 4 resultados: 22, 44, 66, 88",
       ],
       23: [
-        "Usa siempre la estrategia 20+3: 23×6 = 120+18 = 138",
-        "O estrategia 25-2: 23×4 = 100-8 = 92",
-        "Relaciónalo con cromosomas: Los humanos tienen 23 pares de cromosomas",
-        "Pratiquez diariamente los múltiplos más difíciles: 23×7=161, 23×8=184, 23×9=207",
-        "23 es primo, así que ten paciencia y Pratiquez mucho",
+        "Usa siempre la estrategia 20+3: 23Ã—6 = 120+18 = 138",
+        "O estrategia 25-2: 23Ã—4 = 100-8 = 92",
+        "RelaciÃ³nalo con cromosomas: Los humanos tienen 23 pares de cromosomas",
+        "Practica diariamente los mÃºltiplos mÃ¡s difÃ­ciles: 23Ã—7=161, 23Ã—8=184, 23Ã—9=207",
+        "23 es primo, asÃ­ que ten paciencia y practica mucho",
       ],
       24: [
-        "Usa la relación de horas: 24 horas×3 días = 72 horas",
-        "Prueba múltiples métodos: 24=2×12, 3×8, 4×6. ¿Cuál es más fácil?",
-        "Si conoces la tabla del 12, duplica: 12×7=84, entonces 24×7=168",
-        "Cuenta por docenas: 24 = 2 docenas. 24×5 = 10 docenas = 120",
+        "Usa la relaciÃ³n de horas: 24 horasÃ—3 dÃ­as = 72 horas",
+        "Prueba mÃºltiples mÃ©todos: 24=2Ã—12, 3Ã—8, 4Ã—6. Â¿CuÃ¡l es mÃ¡s fÃ¡cil?",
+        "Si conoces la tabla del 12, duplica: 12Ã—7=84, entonces 24Ã—7=168",
+        "Cuenta por docenas: 24 = 2 docenas. 24Ã—5 = 10 docenas = 120",
         "Cuenta de veinticuatro en veinticuatro: 24, 48, 72, 96, 120, 144, 168, 192, 216, 240",
       ],
       25: [
-        "Sistema de cuartos: 25 = 100÷4. Entonces 25×4=100, 25×8=200",
-        "Memoriza el patrón de los últimos dos dígitos: 25, 50, 75, 00 se repite",
-        "Pratiquez con dinero: cuenta monedas de 25 centavos",
-        "Recuerda que es el cuadrado de 5: 25=5×5",
-        "Cálculo de porcentajes: 25% = 1/4. Usa esta relación",
+        "Sistema de cuartos: 25 = 100Ã·4. Entonces 25Ã—4=100, 25Ã—8=200",
+        "Memoriza el patrÃ³n de los Ãºltimos dos dÃ­gitos: 25, 50, 75, 00 se repite",
+        "Practica con dinero: cuenta monedas de 25 centavos",
+        "Recuerda que es el cuadrado de 5: 25=5Ã—5",
+        "CÃ¡lculo de porcentajes: 25% = 1/4. Usa esta relaciÃ³n",
       ],
       26: [
-        "Si conoces la tabla del 13, duplica: 13×8=104, entonces 26×8=208",
-        "Estrategia 25+1: 26×4 = 100+4 = 104",
-        "Relaciónalo con el alfabeto: hay 26 letras",
-        "Cuenta de veintiséis en veintiséis: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
-        "Pratiquez los múltiplos más difíciles: 26×7=182, 26×9=234",
+        "Si conoces la tabla del 13, duplica: 13Ã—8=104, entonces 26Ã—8=208",
+        "Estrategia 25+1: 26Ã—4 = 100+4 = 104",
+        "RelaciÃ³nalo con el alfabeto: hay 26 letras",
+        "Cuenta de veintisÃ©is en veintisÃ©is: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 26Ã—7=182, 26Ã—9=234",
       ],
       27: [
-        "Usa la estrategia 30-3: 27×n = 30n - 3n",
-        "Si conoces la tabla del 9, triplícala: 9×6=54, así que 27×6=162",
-        "Recuerda que es el cubo de 3: 27=3×3×3",
+        "Usa la estrategia 30-3: 27Ã—n = 30n - 3n",
+        "Si conoces la tabla del 9, triplÃ­cala: 9Ã—6=54, asÃ­ que 27Ã—6=162",
+        "Recuerda que es el cubo de 3: 27=3Ã—3Ã—3",
         "Cuenta de 27 en 27: 27, 54, 81, 108, 135, 162, 189, 216, 243, 270",
-        "Pratiquez los múltiplos más difíciles: 27×7=189, 27×8=216, 27×9=243",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 27Ã—7=189, 27Ã—8=216, 27Ã—9=243",
       ],
       28: [
-        "Usa la relación 4×7: multiplica la tabla del 4 por 7",
-        "O duplica 14: 14×5=70, entonces 28×5=140",
-        "Relaciónalo con febrero: 28 días (año normal)",
+        "Usa la relaciÃ³n 4Ã—7: multiplica la tabla del 4 por 7",
+        "O duplica 14: 14Ã—5=70, entonces 28Ã—5=140",
+        "RelaciÃ³nalo con febrero: 28 dÃ­as (aÃ±o normal)",
         "Cuenta de veintiocho en veintiocho: 28, 56, 84, 112, 140, 168, 196, 224, 252, 280",
-        "Memoriza los múltiplos más útiles: 28×5=140, 28×7=196, 28×10=280",
+        "Memoriza los mÃºltiplos mÃ¡s Ãºtiles: 28Ã—5=140, 28Ã—7=196, 28Ã—10=280",
       ],
       29: [
-        "Usa la estrategia 30-1: 29×n = 30n - n",
-        "Ejemplo: 29×8 = 240-8 = 232. ¡Muy fácil!",
-        "Relaciónalo con año bisiesto: 29 días en febrero",
+        "Usa la estrategia 30-1: 29Ã—n = 30n - n",
+        "Ejemplo: 29Ã—8 = 240-8 = 232. Â¡Muy fÃ¡cil!",
+        "RelaciÃ³nalo con aÃ±o bisiesto: 29 dÃ­as en febrero",
         "Cuenta de veintinueve en veintinueve: 29, 58, 87, 116, 145, 174, 203, 232, 261, 290",
-        "Pratiquez los múltiplos más difíciles: 29×7=203, 29×9=261",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 29Ã—7=203, 29Ã—9=261",
       ],
       30: [
-        "Estrategia 3×10: multiplica por 10, luego por 3",
-        "Ejemplo: 7×30 = 70×3 = 210 o 7×3=21, agrega un 0: 210",
-        "Relaciónalo con media hora: 30 minutos",
-        "Días del mes: Muchos meses tienen 30 días (abril, junio, septiembre, noviembre)",
+        "Estrategia 3Ã—10: multiplica por 10, luego por 3",
+        "Ejemplo: 7Ã—30 = 70Ã—3 = 210 o 7Ã—3=21, agrega un 0: 210",
+        "RelaciÃ³nalo con media hora: 30 minutos",
+        "DÃ­as del mes: Muchos meses tienen 30 dÃ­as (abril, junio, septiembre, noviembre)",
         "Cuenta de treinta en treinta: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300",
       ],
       31: [
-        "Usa la estrategia 30+1: 31×n = 30n + n",
-        "Ejemplo: 31×8 = 240 + 8 = 248. ¡Muy simple y efectivo!",
-        "Relaciónalo con el calendario: 31 días es la longitud máxima del mes",
+        "Usa la estrategia 30+1: 31Ã—n = 30n + n",
+        "Ejemplo: 31Ã—8 = 240 + 8 = 248. Â¡Muy simple y efectivo!",
+        "RelaciÃ³nalo con el calendario: 31 dÃ­as es la longitud mÃ¡xima del mes",
         "Cuenta de treinta y uno en treinta y uno: 31, 62, 93, 124, 155, 186, 217, 248, 279, 310",
-        "Pratiquez los múltiplos más difíciles: 31×7=217, 31×9=279",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 31Ã—7=217, 31Ã—9=279",
       ],
       32: [
-        "Usa la cadena de duplicación: duplica 16",
-        "Ejemplo: 16×5=80, entonces 32×5=160",
-        "Recuerda que es potencia de 2: 32=2×2×2×2×2",
+        "Usa la cadena de duplicaciÃ³n: duplica 16",
+        "Ejemplo: 16Ã—5=80, entonces 32Ã—5=160",
+        "Recuerda que es potencia de 2: 32=2Ã—2Ã—2Ã—2Ã—2",
         "Cuenta de treinta y dos en treinta y dos: 32, 64, 96, 128, 160, 192, 224, 256, 288, 320",
-        "Relaciónalo con términos informáticos: sistema de 32 bits",
+        "RelaciÃ³nalo con tÃ©rminos informÃ¡ticos: sistema de 32 bits",
       ],
       33: [
-        "Usa la estrategia 3×11: triplica la tabla del 11",
-        "O multiplica la tabla del 3 por 11: 3×7=21, 21×11=231, entonces 33×7=231",
-        "Observa el patrón de repetición: 33, 66, 99 (primeros tres resultados)",
+        "Usa la estrategia 3Ã—11: triplica la tabla del 11",
+        "O multiplica la tabla del 3 por 11: 3Ã—7=21, 21Ã—11=231, entonces 33Ã—7=231",
+        "Observa el patrÃ³n de repeticiÃ³n: 33, 66, 99 (primeros tres resultados)",
         "Cuenta de treinta y tres en treinta y tres: 33, 66, 99, 132, 165, 198, 231, 264, 297, 330",
-        "Pratiquez los múltiplos más difíciles: 33×7=231, 33×8=264, 33×9=297",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 33Ã—7=231, 33Ã—8=264, 33Ã—9=297",
       ],
       34: [
-        "Si conoces la tabla del 17, duplícala: 17×6=102, entonces 34×6=204",
-        "Estrategia 35-1: 34×4 = 140-4 = 136",
-        "O usa 30+4: 34×5 = 150+20 = 170",
+        "Si conoces la tabla del 17, duplÃ­cala: 17Ã—6=102, entonces 34Ã—6=204",
+        "Estrategia 35-1: 34Ã—4 = 140-4 = 136",
+        "O usa 30+4: 34Ã—5 = 150+20 = 170",
         "Cuenta de treinta y cuatro en treinta y cuatro: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340",
-        "Memoriza los múltiplos más útiles: 34×5=170, 34×10=340",
+        "Memoriza los mÃºltiplos mÃ¡s Ãºtiles: 34Ã—5=170, 34Ã—10=340",
       ],
       35: [
-        "Estrategia 5×7: multiplica la tabla del 5 por 7 o viceversa",
-        "Ejemplo: 35×4 = 5×4×7 = 20×7 = 140",
-        "Usa el patrón del último dígito: siempre termina en 5 o 0",
+        "Estrategia 5Ã—7: multiplica la tabla del 5 por 7 o viceversa",
+        "Ejemplo: 35Ã—4 = 5Ã—4Ã—7 = 20Ã—7 = 140",
+        "Usa el patrÃ³n del Ãºltimo dÃ­gito: siempre termina en 5 o 0",
         "Cuenta de treinta y cinco en treinta y cinco: 35, 70, 105, 140, 175, 210, 245, 280, 315, 350",
-        "Cálculo de tiempo: 35 minutos = media hora + 5 minutos",
+        "CÃ¡lculo de tiempo: 35 minutos = media hora + 5 minutos",
       ],
       36: [
-        "Recuerda que es el cuadrado de 6: 36=6×6",
-        "Múltiples métodos: 36=4×9, 3×12, 2×18. ¿Cuál es más fácil?",
-        "Si conoces la tabla del 9, multíplica por 4: 9×7=63, 63×4=252, entonces 36×7=252",
+        "Recuerda que es el cuadrado de 6: 36=6Ã—6",
+        "MÃºltiples mÃ©todos: 36=4Ã—9, 3Ã—12, 2Ã—18. Â¿CuÃ¡l es mÃ¡s fÃ¡cil?",
+        "Si conoces la tabla del 9, multÃ­plica por 4: 9Ã—7=63, 63Ã—4=252, entonces 36Ã—7=252",
         "Cuenta de treinta y seis en treinta y seis: 36, 72, 108, 144, 180, 216, 252, 288, 324, 360",
-        "Medición de ángulos: 360° es una vuelta completa, 36° es la décima parte",
+        "MediciÃ³n de Ã¡ngulos: 360Â° es una vuelta completa, 36Â° es la dÃ©cima parte",
       ],
       37: [
-        "Usa la estrategia 40-3: 37×n = 40n - 3n",
-        "Memoriza la relación mágica con 111: 37×3=111, 37×6=222, 37×9=333!",
-        "Ejemplo: 37×8 = 320 - 24 = 296",
+        "Usa la estrategia 40-3: 37Ã—n = 40n - 3n",
+        "Memoriza la relaciÃ³n mÃ¡gica con 111: 37Ã—3=111, 37Ã—6=222, 37Ã—9=333!",
+        "Ejemplo: 37Ã—8 = 320 - 24 = 296",
         "Cuenta de treinta y siete en treinta y siete: 37, 74, 111, 148, 185, 222, 259, 296, 333, 370",
-        "Descubre el patrón de repetición: resultados interesantes en cada múltiplo de 3",
+        "Descubre el patrÃ³n de repeticiÃ³n: resultados interesantes en cada mÃºltiplo de 3",
       ],
       38: [
-        "Si conoces la tabla del 19, duplícala: 19×7=133, entonces 38×7=266",
-        "Estrategia 40-2: 38×6 = 240 - 12 = 228",
+        "Si conoces la tabla del 19, duplÃ­cala: 19Ã—7=133, entonces 38Ã—7=266",
+        "Estrategia 40-2: 38Ã—6 = 240 - 12 = 228",
         "Cuenta de treinta y ocho en treinta y ocho: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380",
-        "Pratiquez los múltiplos más difíciles: 38×7=266, 38×9=342",
-        "Relaciónalo con la temperatura corporal: 38°C es fiebre leve",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 38Ã—7=266, 38Ã—9=342",
+        "RelaciÃ³nalo con la temperatura corporal: 38Â°C es fiebre leve",
       ],
       39: [
-        "Estrategia 40-1 es PERFECTA: 39×n = 40n - n",
-        "Ejemplo: 39×7 = 280 - 7 = 273. ¡Muy fácil!",
-        "O usa 3×13: triplica la tabla del 13",
+        "Estrategia 40-1 es PERFECTA: 39Ã—n = 40n - n",
+        "Ejemplo: 39Ã—7 = 280 - 7 = 273. Â¡Muy fÃ¡cil!",
+        "O usa 3Ã—13: triplica la tabla del 13",
         "Cuenta de treinta y nueve en treinta y nueve: 39, 78, 117, 156, 195, 234, 273, 312, 351, 390",
-        "Pratiquez los múltiplos más difíciles: 39×7=273, 39×8=312",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 39Ã—7=273, 39Ã—8=312",
       ],
       40: [
-        "Estrategia 4×10: multiplica por 10, luego por 4",
-        "Ejemplo: 7×40 = 70×4 = 280 o 7×4=28, agrega un 0: 280",
-        "Semana laboral: 40 horas estándar de trabajo",
+        "Estrategia 4Ã—10: multiplica por 10, luego por 4",
+        "Ejemplo: 7Ã—40 = 70Ã—4 = 280 o 7Ã—4=28, agrega un 0: 280",
+        "Semana laboral: 40 horas estÃ¡ndar de trabajo",
         "Cuenta de cuarenta en cuarenta: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400",
-        "Cálculo porcentual: 40% = 2/5",
+        "CÃ¡lculo porcentual: 40% = 2/5",
       ],
       41: [
-        "Estrategia 40+1 es PERFECTA: 41×n = 40n + n",
-        "Ejemplo: 41×7 = 280 + 7 = 287. ¡Muy fácil!",
+        "Estrategia 40+1 es PERFECTA: 41Ã—n = 40n + n",
+        "Ejemplo: 41Ã—7 = 280 + 7 = 287. Â¡Muy fÃ¡cil!",
         "Cuenta de cuarenta y uno en cuarenta y uno: 41, 82, 123, 164, 205, 246, 287, 328, 369, 410",
-        "Pratiquez los múltiplos más difíciles: 41×7=287, 41×8=328",
-        "Número primo: solo divisible por 1 y 41",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 41Ã—7=287, 41Ã—8=328",
+        "NÃºmero primo: solo divisible por 1 y 41",
       ],
       42: [
-        "Usa la relación 6×7: refuerza ambas tablas",
+        "Usa la relaciÃ³n 6Ã—7: refuerza ambas tablas",
         "Cuenta de cuarenta y dos en cuarenta y dos: 42, 84, 126, 168, 210, 252, 294, 336, 378, 420",
-        "Múltiples métodos: 42=6×7=2×21=3×14. ¿Cuál es más fácil?",
-        "Referencia a la Guía del Autoestopista: ¡42 es famoso en la cultura popular!",
-        "Pratiquez los múltiplos más difíciles: 42×7=294, 42×8=336",
+        "MÃºltiples mÃ©todos: 42=6Ã—7=2Ã—21=3Ã—14. Â¿CuÃ¡l es mÃ¡s fÃ¡cil?",
+        "Referencia a la GuÃ­a del Autoestopista: Â¡42 es famoso en la cultura popular!",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 42Ã—7=294, 42Ã—8=336",
       ],
       43: [
         "Prueba las estrategias 40+3 o 45-2",
-        "Ejemplo: 43×6 = 240+18 = 258 o 270-12 = 258",
+        "Ejemplo: 43Ã—6 = 240+18 = 258 o 270-12 = 258",
         "Cuenta de cuarenta y tres en cuarenta y tres: 43, 86, 129, 172, 215, 258, 301, 344, 387, 430",
-        "Pratiquez los múltiplos más difíciles: 43×7=301, 43×8=344",
-        "Número primo: un número especial que requiere estrategias creativas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 43Ã—7=301, 43Ã—8=344",
+        "NÃºmero primo: un nÃºmero especial que requiere estrategias creativas",
       ],
       44: [
         "Cuatro veces 11: cuadruplica la tabla del 11",
-        "Ejemplo: 11×7=77, ×4=308, entonces 44×7=308",
+        "Ejemplo: 11Ã—7=77, Ã—4=308, entonces 44Ã—7=308",
         "Cuenta de cuarenta y cuatro en cuarenta y cuatro: 44, 88, 132, 176, 220, 264, 308, 352, 396, 440",
-        "Patrón de repetición: 44, 88 muestran patrón de dígitos dobles",
-        "Pratiquez los múltiplos más difíciles: 44×7=308, 44×9=396",
+        "PatrÃ³n de repeticiÃ³n: 44, 88 muestran patrÃ³n de dÃ­gitos dobles",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 44Ã—7=308, 44Ã—9=396",
       ],
       45: [
-        "Relación 5×9: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 45×7 = 9×7×5 = 63×5 = 315",
+        "RelaciÃ³n 5Ã—9: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 45Ã—7 = 9Ã—7Ã—5 = 63Ã—5 = 315",
         "Cuenta de cuarenta y cinco en cuarenta y cinco: 45, 90, 135, 180, 225, 270, 315, 360, 405, 450",
-        "Ángulo: 45° es medio ángulo recto, importante en geometría",
+        "Ãngulo: 45Â° es medio Ã¡ngulo recto, importante en geometrÃ­a",
         "Tiempo: 45 minutos = tres cuartos de hora (3/4 de hora)",
       ],
       46: [
         "El doble de 23: duplica la tabla del 23",
-        "Ejemplo: 23×7=161, ×2=322, entonces 46×7=322",
-        "Estrategias 45+1 o 50-4: 46×5 = 225+5 = 230",
+        "Ejemplo: 23Ã—7=161, Ã—2=322, entonces 46Ã—7=322",
+        "Estrategias 45+1 o 50-4: 46Ã—5 = 225+5 = 230",
         "Cuenta de cuarenta y seis en cuarenta y seis: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460",
-        "Biología: 46 cromosomas (23 pares) en el ADN humano",
+        "BiologÃ­a: 46 cromosomas (23 pares) en el ADN humano",
       ],
       47: [
-        "Estrategia 50-3 es PERFECTA: 47×n = 50n - 3n",
-        "Ejemplo: 47×7 = 350 - 21 = 329. ¡Muy fácil!",
+        "Estrategia 50-3 es PERFECTA: 47Ã—n = 50n - 3n",
+        "Ejemplo: 47Ã—7 = 350 - 21 = 329. Â¡Muy fÃ¡cil!",
         "Cuenta de cuarenta y siete en cuarenta y siete: 47, 94, 141, 188, 235, 282, 329, 376, 423, 470",
-        "Pratiquez los múltiplos más difíciles: 47×7=329, 47×8=376",
-        "Número primo: requiere estrategias mentales especiales",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 47Ã—7=329, 47Ã—8=376",
+        "NÃºmero primo: requiere estrategias mentales especiales",
       ],
       48: [
-        "Múltiples métodos: 48=6×8=4×12=3×16=2×24",
-        "Ejemplo: 48×5 = 12×20 = 240",
+        "MÃºltiples mÃ©todos: 48=6Ã—8=4Ã—12=3Ã—16=2Ã—24",
+        "Ejemplo: 48Ã—5 = 12Ã—20 = 240",
         "Cuenta de cuarenta y ocho en cuarenta y ocho: 48, 96, 144, 192, 240, 288, 336, 384, 432, 480",
-        "Tiempo: 48 horas = 2 días. 72 horas = 3 días",
-        "Pratiquez los múltiplos más difíciles: 48×7=336, 48×9=432",
+        "Tiempo: 48 horas = 2 dÃ­as. 72 horas = 3 dÃ­as",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 48Ã—7=336, 48Ã—9=432",
       ],
       49: [
-        "Cuadrado de 7: 49=7×7. Refuerza la tabla del 7",
-        "Estrategia 50-1 MUY FÁCIL: 49×n = 50n - n",
-        "Ejemplo: 49×7 = 350 - 7 = 343. ¡Simple!",
+        "Cuadrado de 7: 49=7Ã—7. Refuerza la tabla del 7",
+        "Estrategia 50-1 MUY FÃCIL: 49Ã—n = 50n - n",
+        "Ejemplo: 49Ã—7 = 350 - 7 = 343. Â¡Simple!",
         "Cuenta de cuarenta y nueve en cuarenta y nueve: 49, 98, 147, 196, 245, 294, 343, 392, 441, 490",
-        "Número cuadrado: 49=7² para cálculos de área en geometría",
+        "NÃºmero cuadrado: 49=7Â² para cÃ¡lculos de Ã¡rea en geometrÃ­a",
       ],
       50: [
-        "Estrategia 5×10: multiplica por 5, agrega un 0",
-        "Ejemplo: 8×50: 8×5=40, agrega un 0: 400",
-        "La mitad de 100: 50×7 = 350 (700÷2)",
+        "Estrategia 5Ã—10: multiplica por 5, agrega un 0",
+        "Ejemplo: 8Ã—50: 8Ã—5=40, agrega un 0: 400",
+        "La mitad de 100: 50Ã—7 = 350 (700Ã·2)",
         "Cuenta de cincuenta en cincuenta: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500",
-        "Porcentaje: 50% = 1/2, la relación porcentual más importante",
+        "Porcentaje: 50% = 1/2, la relaciÃ³n porcentual mÃ¡s importante",
       ],
       51: [
-        "Estrategia 50+1 es PERFECTA: 51×n = 50n + n",
-        "Ejemplo: 51×7 = 350 + 7 = 357. ¡Muy fácil!",
+        "Estrategia 50+1 es PERFECTA: 51Ã—n = 50n + n",
+        "Ejemplo: 51Ã—7 = 350 + 7 = 357. Â¡Muy fÃ¡cil!",
         "Cuenta de cincuenta y uno en cincuenta y uno: 51, 102, 153, 204, 255, 306, 357, 408, 459, 510",
-        "Relación 3×17: triplica la tabla del 17",
-        "Pratiquez los múltiplos más difíciles: 51×7=357, 51×8=408",
+        "RelaciÃ³n 3Ã—17: triplica la tabla del 17",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 51Ã—7=357, 51Ã—8=408",
       ],
       52: [
-        "Relación 4×13: cuadruplica la tabla del 13",
-        "Ejemplo: 13×7=91, ×4=364, entonces 52×7=364",
+        "RelaciÃ³n 4Ã—13: cuadruplica la tabla del 13",
+        "Ejemplo: 13Ã—7=91, Ã—4=364, entonces 52Ã—7=364",
         "Cuenta de cincuenta y dos en cincuenta y dos: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
-        "Calendario: 52 semanas = 1 año. Para cálculos anuales",
+        "Calendario: 52 semanas = 1 aÃ±o. Para cÃ¡lculos anuales",
         "Cartas: 52 cartas para juegos y problemas de probabilidad",
       ],
       53: [
-        "Estrategia 50+3: 53×n = 50n + 3n",
-        "Ejemplo: 53×6 = 300 + 18 = 318",
+        "Estrategia 50+3: 53Ã—n = 50n + 3n",
+        "Ejemplo: 53Ã—6 = 300 + 18 = 318",
         "Cuenta de cincuenta y tres en cincuenta y tres: 53, 106, 159, 212, 265, 318, 371, 424, 477, 530",
-        "Pratiquez los múltiplos más difíciles: 53×7=371, 53×8=424",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 53Ã—7=371, 53Ã—8=424",
+        "NÃºmero primo: requiere estrategias de cÃ¡lculo creativas",
       ],
       54: [
-        "Relación 6×9: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 54×5 = 9×5×6 = 45×6 = 270",
+        "RelaciÃ³n 6Ã—9: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 54Ã—5 = 9Ã—5Ã—6 = 45Ã—6 = 270",
         "Cuenta de cincuenta y cuatro en cincuenta y cuatro: 54, 108, 162, 216, 270, 324, 378, 432, 486, 540",
-        "Múltiples métodos: 54=6×9=2×27=3×18",
-        "Pratiquez los múltiplos más difíciles: 54×7=378, 54×8=432",
+        "MÃºltiples mÃ©todos: 54=6Ã—9=2Ã—27=3Ã—18",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 54Ã—7=378, 54Ã—8=432",
       ],
       55: [
-        "Relación 5×11: refuerza ambas tablas",
-        "Ejemplo: 55×4 = 11×4×5 = 44×5 = 220",
+        "RelaciÃ³n 5Ã—11: refuerza ambas tablas",
+        "Ejemplo: 55Ã—4 = 11Ã—4Ã—5 = 44Ã—5 = 220",
         "Cuenta de cincuenta y cinco en cincuenta y cinco: 55, 110, 165, 220, 275, 330, 385, 440, 495, 550",
-        "Número triangular: 55 = 1+2+3+...+10, propiedad matemática especial",
-        "Pratiquez los múltiplos más difíciles: 55×7=385, 55×9=495",
+        "NÃºmero triangular: 55 = 1+2+3+...+10, propiedad matemÃ¡tica especial",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 55Ã—7=385, 55Ã—9=495",
       ],
       56: [
-        "Relación 7×8: ¡La multiplicación MÁS DIFÍCIL! Refuerza ambas",
-        "Ejemplo: 56×5 = 7×5×8 = 35×8 = 280",
+        "RelaciÃ³n 7Ã—8: Â¡La multiplicaciÃ³n MÃS DIFÃCIL! Refuerza ambas",
+        "Ejemplo: 56Ã—5 = 7Ã—5Ã—8 = 35Ã—8 = 280",
         "Cuenta de cincuenta y seis en cincuenta y seis: 56, 112, 168, 224, 280, 336, 392, 448, 504, 560",
-        "Alternativa: 56=4×14=2×28. Elige la forma más fácil",
-        "Pratiquez los múltiplos más difíciles: 56×7=392, 56×9=504",
+        "Alternativa: 56=4Ã—14=2Ã—28. Elige la forma mÃ¡s fÃ¡cil",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 56Ã—7=392, 56Ã—9=504",
       ],
       57: [
-        "Estrategia 60-3 es PERFECTA: 57×n = 60n - 3n",
-        "Ejemplo: 57×7 = 420 - 21 = 399. ¡Muy fácil!",
+        "Estrategia 60-3 es PERFECTA: 57Ã—n = 60n - 3n",
+        "Ejemplo: 57Ã—7 = 420 - 21 = 399. Â¡Muy fÃ¡cil!",
         "Cuenta de cincuenta y siete en cincuenta y siete: 57, 114, 171, 228, 285, 342, 399, 456, 513, 570",
-        "Relación 3×19: triplica la tabla del 19",
-        "Pratiquez los múltiplos más difíciles: 57×7=399, 57×8=456",
+        "RelaciÃ³n 3Ã—19: triplica la tabla del 19",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 57Ã—7=399, 57Ã—8=456",
       ],
       58: [
-        "Estrategia 60-2: 58×n = 60n - 2n",
-        "Ejemplo: 58×6 = 360 - 12 = 348",
+        "Estrategia 60-2: 58Ã—n = 60n - 2n",
+        "Ejemplo: 58Ã—6 = 360 - 12 = 348",
         "Cuenta de cincuenta y ocho en cincuenta y ocho: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580",
         "El doble de 29: duplica la tabla del 29",
-        "Pratiquez los múltiplos más difíciles: 58×7=406, 58×9=522",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 58Ã—7=406, 58Ã—9=522",
       ],
       59: [
-        "Estrategia 60-1 SÚPER FÁCIL: 59×n = 60n - n",
-        "Ejemplo: 59×7 = 420 - 7 = 413. ¡PERFECTO!",
+        "Estrategia 60-1 SÃšPER FÃCIL: 59Ã—n = 60n - n",
+        "Ejemplo: 59Ã—7 = 420 - 7 = 413. Â¡PERFECTO!",
         "Cuenta de cincuenta y nueve en cincuenta y nueve: 59, 118, 177, 236, 295, 354, 413, 472, 531, 590",
         "Tiempo: 59 minutos, 59 segundos - 1 menos que 60",
-        "Pratiquez los múltiplos más difíciles: 59×7=413, 59×8=472",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 59Ã—7=413, 59Ã—8=472",
       ],
       60: [
-        "Estrategia 6×10: multiplica por 6, agrega un 0",
-        "Ejemplo: 7×60: 7×6=42, agrega un 0: 420",
+        "Estrategia 6Ã—10: multiplica por 6, agrega un 0",
+        "Ejemplo: 7Ã—60: 7Ã—6=42, agrega un 0: 420",
         "Cuenta de sesenta en sesenta: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600",
         "Tiempo: 60 minutos=1 hora, 60 segundos=1 minuto",
-        "Múltiples métodos: 60=6×10=5×12=4×15=3×20=2×30",
+        "MÃºltiples mÃ©todos: 60=6Ã—10=5Ã—12=4Ã—15=3Ã—20=2Ã—30",
       ],
       61: [
-        "Estrategia 60+1 es PERFECTA: 61×n = 60n + n",
-        "Ejemplo: 61×7 = 420 + 7 = 427. ¡Muy fácil!",
+        "Estrategia 60+1 es PERFECTA: 61Ã—n = 60n + n",
+        "Ejemplo: 61Ã—7 = 420 + 7 = 427. Â¡Muy fÃ¡cil!",
         "Cuenta de sesenta y uno en sesenta y uno: 61, 122, 183, 244, 305, 366, 427, 488, 549, 610",
-        "Pratiquez los múltiplos más difíciles: 61×7=427, 61×8=488",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 61Ã—7=427, 61Ã—8=488",
+        "NÃºmero primo: requiere estrategias de cÃ¡lculo creativas",
       ],
       62: [
-        "Estrategia 60+2: 62×n = 60n + 2n",
-        "Ejemplo: 62×6 = 360 + 12 = 372",
+        "Estrategia 60+2: 62Ã—n = 60n + 2n",
+        "Ejemplo: 62Ã—6 = 360 + 12 = 372",
         "Cuenta de sesenta y dos en sesenta y dos: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620",
         "El doble de 31: duplica la tabla del 31",
-        "Pratiquez los múltiplos más difíciles: 62×7=434, 62×9=558",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 62Ã—7=434, 62Ã—9=558",
       ],
       63: [
-        "Relación 7×9: refuerza ambas tablas",
-        "Ejemplo: 63×5 = 9×5×7 = 45×7 = 315",
+        "RelaciÃ³n 7Ã—9: refuerza ambas tablas",
+        "Ejemplo: 63Ã—5 = 9Ã—5Ã—7 = 45Ã—7 = 315",
         "Cuenta de sesenta y tres en sesenta y tres: 63, 126, 189, 252, 315, 378, 441, 504, 567, 630",
-        "Alternativa: 63=3×21. Triplica la tabla del 21",
-        "Pratiquez los múltiplos más difíciles: 63×7=441, 63×8=504",
+        "Alternativa: 63=3Ã—21. Triplica la tabla del 21",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 63Ã—7=441, 63Ã—8=504",
       ],
       64: [
-        "Cuadrado de 8: 64=8×8=8². También 26",
-        "Ejemplo: 64×5 = 8×5×8 = 40×8 = 320",
+        "Cuadrado de 8: 64=8Ã—8=8Â². TambiÃ©n 2â¶",
+        "Ejemplo: 64Ã—5 = 8Ã—5Ã—8 = 40Ã—8 = 320",
         "Cuenta de sesenta y cuatro en sesenta y cuatro: 64, 128, 192, 256, 320, 384, 448, 512, 576, 640",
-        "Ajedrez: 8×8=64 casillas, aplicación geométrica",
-        "Computación: arquitectura de 64 bits, contexto tecnológico",
+        "Ajedrez: 8Ã—8=64 casillas, aplicaciÃ³n geomÃ©trica",
+        "ComputaciÃ³n: arquitectura de 64 bits, contexto tecnolÃ³gico",
       ],
       65: [
-        "Relación 5×13: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 65×4 = 13×4×5 = 52×5 = 260",
+        "RelaciÃ³n 5Ã—13: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 65Ã—4 = 13Ã—4Ã—5 = 52Ã—5 = 260",
         "Cuenta de sesenta y cinco en sesenta y cinco: 65, 130, 195, 260, 325, 390, 455, 520, 585, 650",
         "Puedes usar las estrategias 60+5 o 70-5",
-        "Pratiquez los múltiplos más difíciles: 65×7=455, 65×9=585",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 65Ã—7=455, 65Ã—9=585",
       ],
       66: [
-        "Relación 6×11: refuerza ambas tablas",
-        "Ejemplo: 66×5 = 11×5×6 = 55×6 = 330",
+        "RelaciÃ³n 6Ã—11: refuerza ambas tablas",
+        "Ejemplo: 66Ã—5 = 11Ã—5Ã—6 = 55Ã—6 = 330",
         "Cuenta de sesenta y seis en sesenta y seis: 66, 132, 198, 264, 330, 396, 462, 528, 594, 660",
-        "Patrón de repetición: 66 (6×11), patrón de la tabla del 11",
-        "Pratiquez los múltiplos más difíciles: 66×7=462, 66×9=594",
+        "PatrÃ³n de repeticiÃ³n: 66 (6Ã—11), patrÃ³n de la tabla del 11",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 66Ã—7=462, 66Ã—9=594",
       ],
       67: [
-        "Estrategia 70-3 es PERFECTA: 67×n = 70n - 3n",
-        "Ejemplo: 67×7 = 490 - 21 = 469. ¡Muy fácil!",
+        "Estrategia 70-3 es PERFECTA: 67Ã—n = 70n - 3n",
+        "Ejemplo: 67Ã—7 = 490 - 21 = 469. Â¡Muy fÃ¡cil!",
         "Cuenta de sesenta y siete en sesenta y siete: 67, 134, 201, 268, 335, 402, 469, 536, 603, 670",
-        "Pratiquez los múltiplos más difíciles: 67×7=469, 67×8=536",
-        "Número primo: requiere estrategias mentales especiales",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 67Ã—7=469, 67Ã—8=536",
+        "NÃºmero primo: requiere estrategias mentales especiales",
       ],
       68: [
-        "Estrategia 70-2: 68×n = 70n - 2n",
-        "Ejemplo: 68×6 = 420 - 12 = 408",
+        "Estrategia 70-2: 68Ã—n = 70n - 2n",
+        "Ejemplo: 68Ã—6 = 420 - 12 = 408",
         "Cuenta de sesenta y ocho en sesenta y ocho: 68, 136, 204, 272, 340, 408, 476, 544, 612, 680",
-        "Relación 4×17: cuadruplica la tabla del 17",
-        "Pratiquez los múltiplos más difíciles: 68×7=476, 68×9=612",
+        "RelaciÃ³n 4Ã—17: cuadruplica la tabla del 17",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 68Ã—7=476, 68Ã—9=612",
       ],
       69: [
-        "Estrategia 70-1 SÚPER FÁCIL: 69×n = 70n - n",
-        "Ejemplo: 69×7 = 490 - 7 = 483. ¡PERFECTO!",
+        "Estrategia 70-1 SÃšPER FÃCIL: 69Ã—n = 70n - n",
+        "Ejemplo: 69Ã—7 = 490 - 7 = 483. Â¡PERFECTO!",
         "Cuenta de sesenta y nueve en sesenta y nueve: 69, 138, 207, 276, 345, 414, 483, 552, 621, 690",
-        "Relación 3×23: triplica la tabla del 23",
-        "Pratiquez los múltiplos más difíciles: 69×7=483, 69×8=552",
+        "RelaciÃ³n 3Ã—23: triplica la tabla del 23",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 69Ã—7=483, 69Ã—8=552",
       ],
       70: [
-        "Estrategia 7×10: multiplica por 7, agrega un 0",
-        "Ejemplo: 8×70: 8×7=56, agrega un 0: 560",
+        "Estrategia 7Ã—10: multiplica por 7, agrega un 0",
+        "Ejemplo: 8Ã—70: 8Ã—7=56, agrega un 0: 560",
         "Cuenta de setenta en setenta: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700",
         "Refuerza la tabla del 7: cada resultado es 10 veces 7",
-        "Múltiples métodos: 70=7×10=5×14=2×35",
+        "MÃºltiples mÃ©todos: 70=7Ã—10=5Ã—14=2Ã—35",
       ],
       71: [
-        "Estrategia 70+1 es PERFECTA: 71×n = 70n + n",
-        "Ejemplo: 71×7 = 490 + 7 = 497. ¡Muy fácil!",
+        "Estrategia 70+1 es PERFECTA: 71Ã—n = 70n + n",
+        "Ejemplo: 71Ã—7 = 490 + 7 = 497. Â¡Muy fÃ¡cil!",
         "Cuenta de setenta y uno en setenta y uno: 71, 142, 213, 284, 355, 426, 497, 568, 639, 710",
-        "Pratiquez los múltiplos más difíciles: 71×7=497, 71×8=568",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 71Ã—7=497, 71Ã—8=568",
+        "NÃºmero primo: requiere estrategias de cÃ¡lculo creativas",
       ],
       72: [
-        "Relación 8×9: refuerza ambas tablas",
-        "Ejemplo: 72×5 = 9×5×8 = 45×8 = 360",
+        "RelaciÃ³n 8Ã—9: refuerza ambas tablas",
+        "Ejemplo: 72Ã—5 = 9Ã—5Ã—8 = 45Ã—8 = 360",
         "Cuenta de setenta y dos en setenta y dos: 72, 144, 216, 288, 360, 432, 504, 576, 648, 720",
-        "Múltiples métodos: 72=8×9=6×12=4×18=3×24",
-        "Tiempo: 72 horas = 3 días. Aplicación práctica",
+        "MÃºltiples mÃ©todos: 72=8Ã—9=6Ã—12=4Ã—18=3Ã—24",
+        "Tiempo: 72 horas = 3 dÃ­as. AplicaciÃ³n prÃ¡ctica",
       ],
       73: [
-        "Estrategia 70+3: 73×n = 70n + 3n",
-        "Ejemplo: 73×5 = 350 + 15 = 365 (¡días del año!)",
+        "Estrategia 70+3: 73Ã—n = 70n + 3n",
+        "Ejemplo: 73Ã—5 = 350 + 15 = 365 (Â¡dÃ­as del aÃ±o!)",
         "Cuenta de setenta y tres en setenta y tres: 73, 146, 219, 292, 365, 438, 511, 584, 657, 730",
-        "Pratiquez los múltiplos más difíciles: 73×7=511, 73×8=584",
-        "Número primo: el 21º número primo, curiosidad matemática",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 73Ã—7=511, 73Ã—8=584",
+        "NÃºmero primo: el 21Âº nÃºmero primo, curiosidad matemÃ¡tica",
       ],
       74: [
-        "Estrategia 75-1: 74×n = 75n - n",
-        "Ejemplo: 74×5 = 375 - 5 = 370",
+        "Estrategia 75-1: 74Ã—n = 75n - n",
+        "Ejemplo: 74Ã—5 = 375 - 5 = 370",
         "Cuenta de setenta y cuatro en setenta y cuatro: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740",
-        "Relación 2×37: duplica la tabla del 37",
-        "Pratiquez los múltiplos más difíciles: 74×7=518, 74×9=666",
+        "RelaciÃ³n 2Ã—37: duplica la tabla del 37",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 74Ã—7=518, 74Ã—9=666",
       ],
       75: [
-        "Relaciones 3×25 o 5×15: múltiples métodos",
-        "Ejemplo: 75×4 = 25×12 = 300",
+        "Relaciones 3Ã—25 o 5Ã—15: mÃºltiples mÃ©todos",
+        "Ejemplo: 75Ã—4 = 25Ã—12 = 300",
         "Cuenta de setenta y cinco en setenta y cinco: 75, 150, 225, 300, 375, 450, 525, 600, 675, 750",
-        "Porcentaje: 75% = 3/4, relación fraccionaria importante",
-        "Pratiquez los múltiplos más difíciles: 75×7=525, 75×9=675",
+        "Porcentaje: 75% = 3/4, relaciÃ³n fraccionaria importante",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 75Ã—7=525, 75Ã—9=675",
       ],
       76: [
-        "Estrategia 80-4: 76×n = 80n - 4n",
-        "Ejemplo: 76×6 = 480 - 24 = 456",
+        "Estrategia 80-4: 76Ã—n = 80n - 4n",
+        "Ejemplo: 76Ã—6 = 480 - 24 = 456",
         "Cuenta de setenta y seis en setenta y seis: 76, 152, 228, 304, 380, 456, 532, 608, 684, 760",
-        "Relación 4×19: cuadruplica la tabla del 19",
-        "Pratiquez los múltiplos más difíciles: 76×7=532, 76×9=684",
+        "RelaciÃ³n 4Ã—19: cuadruplica la tabla del 19",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 76Ã—7=532, 76Ã—9=684",
       ],
       77: [
-        "Relación 7×11: refuerza ambas tablas",
-        "Ejemplo: 77×5 = 11×5×7 = 55×7 = 385",
+        "RelaciÃ³n 7Ã—11: refuerza ambas tablas",
+        "Ejemplo: 77Ã—5 = 11Ã—5Ã—7 = 55Ã—7 = 385",
         "Cuenta de setenta y siete en setenta y siete: 77, 154, 231, 308, 385, 462, 539, 616, 693, 770",
-        "Patrón de repetición: 77 (7×11), patrón especial",
-        "Pratiquez los múltiplos más difíciles: 77×7=539, 77×9=693",
+        "PatrÃ³n de repeticiÃ³n: 77 (7Ã—11), patrÃ³n especial",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 77Ã—7=539, 77Ã—9=693",
       ],
       78: [
-        "Estrategia 80-2: 78×n = 80n - 2n",
-        "Ejemplo: 78×7 = 560 - 14 = 546",
+        "Estrategia 80-2: 78Ã—n = 80n - 2n",
+        "Ejemplo: 78Ã—7 = 560 - 14 = 546",
         "Cuenta de setenta y ocho en setenta y ocho: 78, 156, 234, 312, 390, 468, 546, 624, 702, 780",
-        "Relación 6×13: puedes usar cualquiera de las dos tablas",
-        "Pratiquez los múltiplos más difíciles: 78×7=546, 78×9=702",
+        "RelaciÃ³n 6Ã—13: puedes usar cualquiera de las dos tablas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 78Ã—7=546, 78Ã—9=702",
       ],
       79: [
-        "Estrategia 80-1 SÚPER FÁCIL: 79×n = 80n - n",
-        "Ejemplo: 79×7 = 560 - 7 = 553. ¡PERFECTO!",
+        "Estrategia 80-1 SÃšPER FÃCIL: 79Ã—n = 80n - n",
+        "Ejemplo: 79Ã—7 = 560 - 7 = 553. Â¡PERFECTO!",
         "Cuenta de setenta y nueve en setenta y nueve: 79, 158, 237, 316, 395, 474, 553, 632, 711, 790",
-        "Pratiquez los múltiplos más difíciles: 79×7=553, 79×8=632",
-        "Número primo: 1 menos que 80, cálculo fácil",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 79Ã—7=553, 79Ã—8=632",
+        "NÃºmero primo: 1 menos que 80, cÃ¡lculo fÃ¡cil",
       ],
       80: [
-        "Estrategia 8×10: multiplica por 8, agrega un 0",
-        "Ejemplo: 7×80: 7×8=56, agrega un 0: 560",
+        "Estrategia 8Ã—10: multiplica por 8, agrega un 0",
+        "Ejemplo: 7Ã—80: 7Ã—8=56, agrega un 0: 560",
         "Cuenta de ochenta en ochenta: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800",
         "Refuerza la tabla del 8: cada resultado es 10 veces 8",
-        "Múltiples métodos: 80=8×10=4×20=5×16=2×40",
+        "MÃºltiples mÃ©todos: 80=8Ã—10=4Ã—20=5Ã—16=2Ã—40",
       ],
       81: [
-        "Usa que es el cuadrado de 9: 81=9×9",
-        "Ejemplo: 81×5 = (9×5)×9 = 45×9 = 405",
-        "Estrategia 80+1: 81×n = 80n + n. Ejemplo: 81×7 = 560+7 = 567",
+        "Usa que es el cuadrado de 9: 81=9Ã—9",
+        "Ejemplo: 81Ã—5 = (9Ã—5)Ã—9 = 45Ã—9 = 405",
+        "Estrategia 80+1: 81Ã—n = 80n + n. Ejemplo: 81Ã—7 = 560+7 = 567",
         "Cuenta de ochenta y uno en ochenta y uno: 81, 162, 243, 324, 405, 486, 567, 648, 729, 810",
-        "Pratiquez los múltiplos más difíciles: 81×7=567, 81×8=648, 81×9=729",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 81Ã—7=567, 81Ã—8=648, 81Ã—9=729",
       ],
       82: [
-        "Estrategia 80+2: 82×n = 80n + 2n",
-        "Ejemplo: 82×6 = 480 + 12 = 492",
+        "Estrategia 80+2: 82Ã—n = 80n + 2n",
+        "Ejemplo: 82Ã—6 = 480 + 12 = 492",
         "Cuenta de ochenta y dos en ochenta y dos: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820",
-        "Relación 2×41: duplica la tabla del 41",
-        "Pratiquez los múltiplos más difíciles: 82×7=574, 82×9=738",
+        "RelaciÃ³n 2Ã—41: duplica la tabla del 41",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 82Ã—7=574, 82Ã—9=738",
       ],
       83: [
         "Usa la estrategia 85-2 o 80+3",
-        "Ejemplo: 83×6 = 510-12 = 498 o 480+18 = 498",
+        "Ejemplo: 83Ã—6 = 510-12 = 498 o 480+18 = 498",
         "Cuenta de ochenta y tres en ochenta y tres: 83, 166, 249, 332, 415, 498, 581, 664, 747, 830",
-        "Número primo: requiere estrategias de cálculo creativas",
-        "Pratiquez los múltiplos más difíciles: 83×7=581, 83×8=664, 83×9=747",
+        "NÃºmero primo: requiere estrategias de cÃ¡lculo creativas",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 83Ã—7=581, 83Ã—8=664, 83Ã—9=747",
       ],
       84: [
-        "Relación 7×12: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 84×5 = 12×5×7 = 60×7 = 420",
+        "RelaciÃ³n 7Ã—12: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 84Ã—5 = 12Ã—5Ã—7 = 60Ã—7 = 420",
         "Cuenta de ochenta y cuatro en ochenta y cuatro: 84, 168, 252, 336, 420, 504, 588, 672, 756, 840",
-        "Múltiples métodos: 84=7×12=6×14=4×21=3×28",
-        "Pratiquez los múltiplos más difíciles: 84×7=588, 84×9=756",
+        "MÃºltiples mÃ©todos: 84=7Ã—12=6Ã—14=4Ã—21=3Ã—28",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 84Ã—7=588, 84Ã—9=756",
       ],
       85: [
-        "Relación 5×17: puedes usar ambas tablas, la del 5 y la del 17",
-        "Ejemplo: 85×4 = 17×4×5 = 68×5 = 340",
+        "RelaciÃ³n 5Ã—17: puedes usar ambas tablas, la del 5 y la del 17",
+        "Ejemplo: 85Ã—4 = 17Ã—4Ã—5 = 68Ã—5 = 340",
         "Cuenta de ochenta y cinco en ochenta y cinco: 85, 170, 255, 340, 425, 510, 595, 680, 765, 850",
-        "Último dígito: siempre termina en 5 o 0",
-        "Estrategias 90-5 o 80+5: 85×6 = 540-30 = 510",
+        "Ãšltimo dÃ­gito: siempre termina en 5 o 0",
+        "Estrategias 90-5 o 80+5: 85Ã—6 = 540-30 = 510",
       ],
       86: [
-        "Estrategia 90-4: 86×n = 90n - 4n",
-        "Ejemplo: 86×6 = 540 - 24 = 516",
+        "Estrategia 90-4: 86Ã—n = 90n - 4n",
+        "Ejemplo: 86Ã—6 = 540 - 24 = 516",
         "Cuenta de ochenta y seis en ochenta y seis: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860",
-        "Relación 2×43: duplica la tabla del 43",
-        "Pratiquez los múltiplos más difíciles: 86×7=602, 86×9=774",
+        "RelaciÃ³n 2Ã—43: duplica la tabla del 43",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 86Ã—7=602, 86Ã—9=774",
       ],
       87: [
-        "Estrategia 90-3 es PERFECTA: 87×n = 90n - 3n",
-        "Ejemplo: 87×7 = 630 - 21 = 609. ¡Muy fácil!",
+        "Estrategia 90-3 es PERFECTA: 87Ã—n = 90n - 3n",
+        "Ejemplo: 87Ã—7 = 630 - 21 = 609. Â¡Muy fÃ¡cil!",
         "Cuenta de ochenta y siete en ochenta y siete: 87, 174, 261, 348, 435, 522, 609, 696, 783, 870",
-        "Relación 3×29: triplica la tabla del 29",
-        "Pratiquez los múltiplos más difíciles: 87×7=609, 87×8=696, 87×9=783",
+        "RelaciÃ³n 3Ã—29: triplica la tabla del 29",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 87Ã—7=609, 87Ã—8=696, 87Ã—9=783",
       ],
       88: [
-        "Relación 8×11: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 88×5 = 11×5×8 = 55×8 = 440",
+        "RelaciÃ³n 8Ã—11: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 88Ã—5 = 11Ã—5Ã—8 = 55Ã—8 = 440",
         "Cuenta de ochenta y ocho en ochenta y ocho: 88, 176, 264, 352, 440, 528, 616, 704, 792, 880",
-        "Propiedad de repetición: facilidad de reconocimiento visual (88)",
-        "Múltiples métodos: 88=8×11=4×22=2×44",
+        "Propiedad de repeticiÃ³n: facilidad de reconocimiento visual (88)",
+        "MÃºltiples mÃ©todos: 88=8Ã—11=4Ã—22=2Ã—44",
       ],
       89: [
-        "Estrategia 90-1 SÚPER FÁCIL: 89×n = 90n - n",
-        "Ejemplo: 89×7 = 630 - 7 = 623. ¡PERFECTO!",
+        "Estrategia 90-1 SÃšPER FÃCIL: 89Ã—n = 90n - n",
+        "Ejemplo: 89Ã—7 = 630 - 7 = 623. Â¡PERFECTO!",
         "Cuenta de ochenta y nueve en ochenta y nueve: 89, 178, 267, 356, 445, 534, 623, 712, 801, 890",
-        "Pratiquez los múltiplos más difíciles: 89×7=623, 89×8=712, 89×9=801",
-        "Número primo: la estrategia 90-1 es el método más práctico",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 89Ã—7=623, 89Ã—8=712, 89Ã—9=801",
+        "NÃºmero primo: la estrategia 90-1 es el mÃ©todo mÃ¡s prÃ¡ctico",
       ],
       90: [
-        "Estrategia 9×10: multiplica por 9, agrega un 0",
-        "Ejemplo: 7×90: 7×9=63, agrega un 0: 630",
+        "Estrategia 9Ã—10: multiplica por 9, agrega un 0",
+        "Ejemplo: 7Ã—90: 7Ã—9=63, agrega un 0: 630",
         "Cuenta de noventa en noventa: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900",
         "Refuerza la tabla del 9: cada resultado es 10 veces 9",
-        "Múltiples métodos: 90=9×10=3×30=5×18=6×15",
+        "MÃºltiples mÃ©todos: 90=9Ã—10=3Ã—30=5Ã—18=6Ã—15",
       ],
       91: [
-        "Relación 7×13: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 91×5 = 13×5×7 = 65×7 = 455",
-        "Estrategia 90+1: 91×n = 90n + n. Ejemplo: 91×7 = 630+7 = 637",
+        "RelaciÃ³n 7Ã—13: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 91Ã—5 = 13Ã—5Ã—7 = 65Ã—7 = 455",
+        "Estrategia 90+1: 91Ã—n = 90n + n. Ejemplo: 91Ã—7 = 630+7 = 637",
         "Cuenta de noventa y uno en noventa y uno: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
-        "Pratiquez los múltiplos más difíciles: 91×7=637, 91×8=728, 91×9=819",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 91Ã—7=637, 91Ã—8=728, 91Ã—9=819",
       ],
       92: [
         "Usa la estrategia 90+2 o 100-8",
-        "Ejemplo: 92×6 = 480+12 = 492 o 600-48 = 552",
+        "Ejemplo: 92Ã—6 = 480+12 = 492 o 600-48 = 552",
         "Cuenta de noventa y dos en noventa y dos: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
-        "Relación 4×23: cuadruplica la tabla del 23",
-        "Pratiquez los múltiplos más difíciles: 92×7=644, 92×9=828",
+        "RelaciÃ³n 4Ã—23: cuadruplica la tabla del 23",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 92Ã—7=644, 92Ã—9=828",
       ],
       93: [
-        "Estrategia 90+3: 93×n = 90n + 3n",
-        "Ejemplo: 93×7 = 630 + 21 = 651",
+        "Estrategia 90+3: 93Ã—n = 90n + 3n",
+        "Ejemplo: 93Ã—7 = 630 + 21 = 651",
         "Cuenta de noventa y tres en noventa y tres: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
-        "Relación 3×31: triplica la tabla del 31",
-        "Pratiquez los múltiplos más difíciles: 93×7=651, 93×8=744, 93×9=837",
+        "RelaciÃ³n 3Ã—31: triplica la tabla del 31",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 93Ã—7=651, 93Ã—8=744, 93Ã—9=837",
       ],
       94: [
-        "Estrategia 100-6 es PERFECTA: 94×n = 100n - 6n",
-        "Ejemplo: 94×7 = 700 - 42 = 658. ¡Muy fácil!",
+        "Estrategia 100-6 es PERFECTA: 94Ã—n = 100n - 6n",
+        "Ejemplo: 94Ã—7 = 700 - 42 = 658. Â¡Muy fÃ¡cil!",
         "Cuenta de noventa y cuatro en noventa y cuatro: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
-        "Relación 2×47: duplica la tabla del 47",
-        "Pratiquez los múltiplos más difíciles: 94×7=658, 94×8=752, 94×9=846",
+        "RelaciÃ³n 2Ã—47: duplica la tabla del 47",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 94Ã—7=658, 94Ã—8=752, 94Ã—9=846",
       ],
       95: [
-        "Relación 5×19: puedes usar ambas tablas, la del 5 y la del 19",
-        "Ejemplo: 95×4 = 19×4×5 = 76×5 = 380",
+        "RelaciÃ³n 5Ã—19: puedes usar ambas tablas, la del 5 y la del 19",
+        "Ejemplo: 95Ã—4 = 19Ã—4Ã—5 = 76Ã—5 = 380",
         "Cuenta de noventa y cinco en noventa y cinco: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
-        "Último dígito: siempre termina en 5 o 0",
-        "Estrategia 100-5: 95×6 = 600-30 = 570. ¡Muy práctico!",
+        "Ãšltimo dÃ­gito: siempre termina en 5 o 0",
+        "Estrategia 100-5: 95Ã—6 = 600-30 = 570. Â¡Muy prÃ¡ctico!",
       ],
       96: [
-        "Relación 8×12: puedes usar cualquiera de las dos tablas",
-        "Ejemplo: 96×5 = 12×5×8 = 60×8 = 480",
+        "RelaciÃ³n 8Ã—12: puedes usar cualquiera de las dos tablas",
+        "Ejemplo: 96Ã—5 = 12Ã—5Ã—8 = 60Ã—8 = 480",
         "Cuenta de noventa y seis en noventa y seis: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
-        "Múltiples métodos: 96=8×12=6×16=4×24=3×32",
-        "Pratiquez los múltiplos más difíciles: 96×7=672, 96×9=864",
+        "MÃºltiples mÃ©todos: 96=8Ã—12=6Ã—16=4Ã—24=3Ã—32",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 96Ã—7=672, 96Ã—9=864",
       ],
       97: [
-        "Estrategia 100-3 SÚPER FÁCIL: 97×n = 100n - 3n",
-        "Ejemplo: 97×7 = 700 - 21 = 679. ¡PERFECTO!",
+        "Estrategia 100-3 SÃšPER FÃCIL: 97Ã—n = 100n - 3n",
+        "Ejemplo: 97Ã—7 = 700 - 21 = 679. Â¡PERFECTO!",
         "Cuenta de noventa y siete en noventa y siete: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
-        "Pratiquez los múltiplos más difíciles: 97×7=679, 97×8=776, 97×9=873",
-        "Número primo: la estrategia 100-3 es el método más práctico",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 97Ã—7=679, 97Ã—8=776, 97Ã—9=873",
+        "NÃºmero primo: la estrategia 100-3 es el mÃ©todo mÃ¡s prÃ¡ctico",
       ],
       98: [
-        "Estrategia 100-2 MUY FÁCIL: 98×n = 100n - 2n",
-        "Ejemplo: 98×7 = 700 - 14 = 686. ¡Perfecto!",
+        "Estrategia 100-2 MUY FÃCIL: 98Ã—n = 100n - 2n",
+        "Ejemplo: 98Ã—7 = 700 - 14 = 686. Â¡Perfecto!",
         "Cuenta de noventa y ocho en noventa y ocho: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
-        "Relación 2×49: duplica la tabla del 49",
-        "Pratiquez los múltiplos más difíciles: 98×7=686, 98×8=784, 98×9=882",
+        "RelaciÃ³n 2Ã—49: duplica la tabla del 49",
+        "Practica los mÃºltiplos mÃ¡s difÃ­ciles: 98Ã—7=686, 98Ã—8=784, 98Ã—9=882",
       ],
       99: [
-        "Estrategia 100-1 LA MÁS FÁCIL: 99×n = 100n - n",
-        "Ejemplo: 99×7 = 700 - 7 = 693. ¡PERFECTO!",
+        "Estrategia 100-1 LA MÃS FÃCIL: 99Ã—n = 100n - n",
+        "Ejemplo: 99Ã—7 = 700 - 7 = 693. Â¡PERFECTO!",
         "Cuenta de noventa y nueve en noventa y nueve: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
-        "Relación 9×11: puedes usar cualquiera de las dos tablas",
-        "Patrón de repetición: 99 proporciona facilidad de reconocimiento visual",
+        "RelaciÃ³n 9Ã—11: puedes usar cualquiera de las dos tablas",
+        "PatrÃ³n de repeticiÃ³n: 99 proporciona facilidad de reconocimiento visual",
       ],
       100: [
-        "¡LA TABLA MÁS FÁCIL! Agrega dos ceros al final",
-        "Ejemplo: 7×100 = 700. ¡Solo agrega 00 después del 7!",
+        "Â¡LA TABLA MÃS FÃCIL! Agrega dos ceros al final",
+        "Ejemplo: 7Ã—100 = 700. Â¡Solo agrega 00 despuÃ©s del 7!",
         "Cuenta de cien en cien: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
-        "Relación 10×10: 10 veces la tabla del 10",
-        "Es la base para cálculos porcentuales: 100%=completo, ¡es la base de todo!",
+        "RelaciÃ³n 10Ã—10: 10 veces la tabla del 10",
+        "Es la base para cÃ¡lculos porcentuales: 100%=completo, Â¡es la base de todo!",
       ],
     }
     return strategies[number] || [
-      `Pratiquez contar de ${number} en ${number} en voz alta`,
-      "Escribe la tabla todos los días durante una semana",
+      `Practica contar de ${number} en ${number} en voz alta`,
+      "Escribe la tabla todos los dÃ­as durante una semana",
       "Usa tarjetas de memoria para probarte de forma aleatoria",
-      "Pratiquez 5-10 minutos diarios en lugar de estudiar mucho tiempo de una vez",
+      "Practica 5-10 minutos diarios en lugar de estudiar mucho tiempo de una vez",
     ]
   }
 
@@ -2033,43 +2033,43 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           {/* Number Badge with Fun Icons */}
           <div className="flex justify-center mb-4 sm:mb-6">
             <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm rounded-full shadow-lg border-2 border-white/50">
-              <span className="text-2xl sm:text-3xl">??</span>
+              <span className="text-2xl sm:text-3xl">ğŸ”¢</span>
               <span className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
                 {number}
               </span>
-              <span className="text-2xl sm:text-3xl">??</span>
+              <span className="text-2xl sm:text-3xl">âœ–ï¸</span>
             </div>
           </div>
           
           {/* Main Heading with Fun Elements */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-4">
-              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce">??</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce">ğŸ¯</span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-slate-900">{number}</span>
                 <br className="sm:hidden" />
                 <span className="sm:inline"> </span>
-                <span className="text-slate-900">Table de multiplication</span>
+                <span className="text-slate-900">Tabla de Multiplicar</span>
               </h1>
-              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce" style={{ animationDelay: '0.2s' }}>??</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl animate-bounce" style={{ animationDelay: '0.2s' }}>ğŸ¨</span>
             </div>
             
             {/* Fun Stats Cards */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3 max-w-2xl mx-auto mt-6 sm:mt-8 mb-4 sm:mb-6">
               <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-blue-100">
-                <div className="text-2xl sm:text-3xl mb-1">??</div>
+                <div className="text-2xl sm:text-3xl mb-1">ğŸ“Š</div>
                 <div className="text-xl sm:text-2xl font-bold text-blue-600">10</div>
                 <div className="text-xs text-slate-600">Operaciones</div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-indigo-100">
-                <div className="text-2xl sm:text-3xl mb-1">??</div>
+                <div className="text-2xl sm:text-3xl mb-1">ğŸ®</div>
                 <div className="text-xl sm:text-2xl font-bold text-indigo-600">3</div>
                 <div className="text-xs text-slate-600">Juegos</div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-md border-2 border-purple-100">
-                <div className="text-2xl sm:text-3xl mb-1">??</div>
-                <div className="text-xl sm:text-2xl font-bold text-purple-600">8</div>
-                <div className="text-xs text-slate-600">Práctica</div>
+                <div className="text-2xl sm:text-3xl mb-1">ğŸ“</div>
+                <div className="text-xl sm:text-2xl font-bold text-purple-600">âˆ</div>
+                <div className="text-xs text-slate-600">PrÃ¡ctica</div>
               </div>
             </div>
           </div>
@@ -2077,10 +2077,10 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           {/* Description with Better Typography */}
           <div className="max-w-3xl mx-auto space-y-4 text-center px-4">
             <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
-              Esta página te ayudará a Apprenezr y entender <span className="font-semibold text-yellow-200">la Table de multiplication del {number}</span>. 
-              Descubrirás cómo se comporta el {number} en la multiplicación, 
-              <span className="font-semibold text-yellow-200"> verás sus patrones</span> y 
-              Apprenezrás <span className="font-semibold text-yellow-200">formas prácticas</span> para dominarla.
+              Esta pÃ¡gina te ayudarÃ¡ a aprender y entender <span className="font-semibold text-yellow-200">la tabla de multiplicar del {number}</span>. 
+              DescubrirÃ¡s cÃ³mo se comporta el {number} en la multiplicaciÃ³n, 
+              <span className="font-semibold text-yellow-200"> verÃ¡s sus patrones</span> y 
+              aprenderÃ¡s <span className="font-semibold text-yellow-200">formas prÃ¡cticas</span> para dominarla.
             </p>
             
             {/* Quick Action Buttons */}
@@ -2089,8 +2089,8 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 href="#practice"
                 className="group inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white text-indigo-600 font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 text-sm sm:text-base"
               >
-                <span className="text-lg sm:text-xl">??</span>
-                <span>Pratiquezr</span>
+                <span className="text-lg sm:text-xl">ğŸ¯</span>
+                <span>Practicar</span>
                 <svg className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -2099,16 +2099,16 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 href="#games"
                 className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-purple-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-white/50 text-sm sm:text-base"
               >
-                <span className="text-lg sm:text-xl">??</span>
+                <span className="text-lg sm:text-xl">ğŸ®</span>
                 <span>Explorar Juegos</span>
               </a>
               <a 
                 href="#worksheets"
                 className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 bg-white/90 backdrop-blur-sm text-green-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-white/50 text-sm sm:text-base"
               >
-                <span className="text-lg sm:text-xl">??</span>
-                <span className="hidden sm:inline">Télécharger Exercices</span>
-                <span className="sm:hidden">Télécharger</span>
+                <span className="text-lg sm:text-xl">ğŸ“</span>
+                <span className="hidden sm:inline">Descargar Ejercicios</span>
+                <span className="sm:hidden">Descargar</span>
               </a>
             </div>
           </div>
@@ -2120,22 +2120,22 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
-              <span className="text-2xl sm:text-3xl">??</span>
-              ¿Qué Cubre la Tabla del {number}?
+              <span className="text-2xl sm:text-3xl">ğŸ“–</span>
+              Â¿QuÃ© Cubre la Tabla del {number}?
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
           <p className="text-sm sm:text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
-            La Table de multiplication del {number} couvre le produit du nombre {number} avec tous les nombres de 1 à 10. 
-            Esto te enseña <span className="font-bold text-indigo-600">10 operaciones fundamentales</span> que te ayudarán mucho en la vida diaria y en temas matemáticos avanzados.
+            La tabla de multiplicar del {number} cubre el producto del nÃºmero {number} con todos los nÃºmeros del 1 al 10. 
+            Esto te enseÃ±a <span className="font-bold text-indigo-600">10 operaciones fundamentales</span> que te ayudarÃ¡n mucho en la vida diaria y en temas matemÃ¡ticos avanzados.
           </p>
           
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 sm:p-6 border-2 border-blue-100 shadow-md">
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 sm:gap-3 mb-4">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((multiplier, index) => (
                 <div key={multiplier} className="flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm rounded-xl p-2 sm:p-3 shadow-sm hover:shadow-md transition-shadow group">
-                  <span className="text-xs sm:text-sm text-slate-600 mb-1">{number} × {multiplier}</span>
+                  <span className="text-xs sm:text-sm text-slate-600 mb-1">{number} Ã— {multiplier}</span>
                   <span className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-bold text-base sm:text-xl shadow-md group-hover:scale-110 transition-transform">
                     {number * multiplier}
                   </span>
@@ -2144,10 +2144,10 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             </div>
             
             <div className="bg-white/60 rounded-xl p-3 sm:p-4 flex items-start gap-2 sm:gap-3">
-              <span className="text-2xl sm:text-3xl">??</span>
+              <span className="text-2xl sm:text-3xl">ğŸ’¡</span>
               <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                La tabla del {number} tiene <span className="font-bold text-indigo-600">10 opérations de multiplication</span>. 
-                ¡Al entender los patrones de esta tabla, puedes memorizar fácilmente estas operaciones y calcularlas rápidamente!
+                La tabla del {number} tiene <span className="font-bold text-indigo-600">10 operaciones de multiplicaciÃ³n</span>. 
+                Â¡Al entender los patrones de esta tabla, puedes memorizar fÃ¡cilmente estas operaciones y calcularlas rÃ¡pidamente!
               </p>
             </div>
           </div>
@@ -2162,7 +2162,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             <div className="space-y-5 sm:space-y-6">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
-                  ¿Qué Significa el Número {number} en la Multiplicación?
+                  Â¿QuÃ© Significa el NÃºmero {number} en la MultiplicaciÃ³n?
                 </h2>
                 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 sm:mb-6">
@@ -2171,12 +2171,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-5 border-2 border-blue-100">
                   <div className="flex items-start gap-2 sm:gap-3">
-                    <span className="text-2xl sm:text-3xl">??</span>
+                    <span className="text-2xl sm:text-3xl">ğŸ’¡</span>
                     <div>
-                      <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-1 sm:mb-2">Explicación Simple</h3>
+                      <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-1 sm:mb-2">ExplicaciÃ³n Simple</h3>
                       <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        Cuando ves {number} × 4, piensa: "Tengo 4 grupos y cada grupo tiene {number} elementos." 
-                        Entonces {number} × 4 = {number} + {number} + {number} + {number} = {number * 4}.
+                        Cuando ves {number} Ã— 4, piensa: "Tengo 4 grupos y cada grupo tiene {number} elementos." 
+                        Entonces {number} Ã— 4 = {number} + {number} + {number} + {number} = {number * 4}.
                       </p>
                     </div>
                   </div>
@@ -2185,7 +2185,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
 
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
-                  Por Qué Es Importante Apprenezr la Tabla del {number}
+                  Por QuÃ© Es Importante Aprender la Tabla del {number}
                 </h2>
                 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
@@ -2217,12 +2217,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                   <button
                     onClick={handleDownload}
                     className="group flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg"
-                    title="Télécharger"
+                    title="Descargar"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
-                    <span className="hidden sm:inline">Télécharger</span>
+                    <span className="hidden sm:inline">Descargar</span>
                   </button>
                 </div>
               </div>
@@ -2231,7 +2231,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
                 <div className="space-y-1.5 sm:space-y-2">
                   {[...Array(10)].map((_, i) => (
                     <div key={i} className="flex justify-between items-center bg-white/20 backdrop-blur-sm rounded-lg px-3 sm:px-5 py-2 sm:py-2.5 hover:bg-white/30 transition-colors">
-                      <span className="font-medium text-sm sm:text-base">{number} × {i + 1}</span>
+                      <span className="font-medium text-sm sm:text-base">{number} Ã— {i + 1}</span>
                       <span className="font-bold text-base sm:text-lg">= {number * (i + 1)}</span>
                     </div>
                   ))}
@@ -2250,7 +2250,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           </h2>
           
           <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 leading-relaxed">
-            Entender los patrones hace que el aprendizaje sea más fácil y divertido. La tabla del {number} tiene 
+            Entender los patrones hace que el aprendizaje sea mÃ¡s fÃ¡cil y divertido. La tabla del {number} tiene 
             hermosos patrones que pueden ayudarte a recordarla sin memorizar de memoria.
           </p>
           
@@ -2258,7 +2258,7 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             {getPatterns().map((pattern, index) => (
               <div key={index} className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-3 sm:p-4 border-2 border-amber-100">
                 <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-1.5 sm:mb-2 flex items-center gap-2">
-                  <span className="text-lg sm:text-xl">{index === 0 ? '??' : index === 1 ? '??' : '?'}</span>
+                  <span className="text-lg sm:text-xl">{index === 0 ? 'ğŸ”„' : index === 1 ? 'ğŸ“Š' : 'âœ¨'}</span>
                   {pattern.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
@@ -2289,12 +2289,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
-            Cómo Pratiquezr la Tabla del {number}
+            CÃ³mo Practicar la Tabla del {number}
           </h2>
           
           <p className="text-base sm:text-lg text-slate-700 mb-6 sm:mb-8 leading-relaxed">
-            Apprenezr las tables de multiplication requiere práctica consistente con las estrategias correctas. 
-            Aquí hay métodos comprobados para dominar específicamente la tabla del {number}:
+            Aprender las tablas de multiplicar requiere prÃ¡ctica consistente con las estrategias correctas. 
+            AquÃ­ hay mÃ©todos comprobados para dominar especÃ­ficamente la tabla del {number}:
           </p>
           
           <div className="grid gap-3 sm:gap-4">
@@ -2316,25 +2316,25 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
-            Errores Comunes al Apprenezr la Tabla del {number}
+            Errores Comunes al Aprender la Tabla del {number}
           </h2>
           
           <p className="text-base sm:text-lg text-slate-700 mb-6 sm:mb-8 leading-relaxed">
-            Muchos estudiantes cometen errores similares al Apprenezr esta tabla. Ser consciente de estos errores comunes 
-            te ayudará a evitarlos y Apprenezr de manera más efectiva.
+            Muchos estudiantes cometen errores similares al aprender esta tabla. Ser consciente de estos errores comunes 
+            te ayudarÃ¡ a evitarlos y aprender de manera mÃ¡s efectiva.
           </p>
           
           <div className="space-y-4 sm:space-y-6">
             {getCommonMistakes().map((item, index) => (
               <div key={index} className="bg-white rounded-xl p-4 sm:p-6 border-l-4 border-red-500 shadow-md">
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <span className="text-2xl sm:text-3xl">??</span>
+                  <span className="text-2xl sm:text-3xl">âš ï¸</span>
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-1.5 sm:mb-2">
                       {item.mistake}
                     </h3>
                     <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
-                      <span className="font-semibold text-green-600">Solución:</span> {item.solution}
+                      <span className="font-semibold text-green-600">SoluciÃ³n:</span> {item.solution}
                     </p>
                   </div>
                 </div>
@@ -2348,23 +2348,23 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
-            tables de multiplication Relacionadas
+            Tablas de Multiplicar Relacionadas
           </h2>
           
           <p className="text-base sm:text-lg text-slate-700 mb-6 sm:mb-8 leading-relaxed">
-            La tabla del {number} es parte de un sistema de aprendizaje más amplio. 
-            Puedes explorar otras tablas en el mismo rango o pasar al Suivant número lógico.
+            La tabla del {number} es parte de un sistema de aprendizaje mÃ¡s amplio. 
+            Puedes explorar otras tablas en el mismo rango o pasar al siguiente nÃºmero lÃ³gico.
           </p>
           
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {number > 1 && (
               <Link
-                href={`/fr/table-de-multiplication/${number - 1}`}
+                href={`/es/tablas-de-multiplicar/${number - 1}`}
                 className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6 border-2 border-blue-200 hover:border-blue-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-xs sm:text-sm text-slate-600 mb-1">? Número Précédent</div>
+                    <div className="text-xs sm:text-sm text-slate-600 mb-1">â† NÃºmero Anterior</div>
                     <div className="text-lg sm:text-2xl font-bold text-slate-900">
                       Tabla del {number - 1}
                     </div>
@@ -2378,12 +2378,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             
             {number < 100 && (
               <Link
-                href={`/fr/table-de-multiplication/${number + 1}`}
+                href={`/es/tablas-de-multiplicar/${number + 1}`}
                 className="block bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 sm:p-6 border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-xs sm:text-sm text-slate-600 mb-1">Suivant Número ?</div>
+                    <div className="text-xs sm:text-sm text-slate-600 mb-1">Siguiente NÃºmero â†’</div>
                     <div className="text-lg sm:text-2xl font-bold text-slate-900">
                       Tabla del {number + 1}
                     </div>
@@ -2396,17 +2396,17 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             )}
             
             <Link
-              href={`/fr/table-de-multiplication/${rangeStart}-${rangeEnd}`}
+              href={`/es/tablas-de-multiplicar/${rangeStart}-${rangeEnd}`}
               className="block bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-4 sm:p-6 border-2 border-green-200 hover:border-green-400 hover:shadow-lg transition-all group sm:col-span-2"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-xs sm:text-sm text-slate-600 mb-1">? Rango Superior</div>
+                  <div className="text-xs sm:text-sm text-slate-600 mb-1">â†‘ Rango Superior</div>
                   <div className="text-lg sm:text-2xl font-bold text-slate-900">
                     Tablas del {rangeStart} al {rangeEnd}
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 sm:mt-2">
-                    Explora todas las tables de multiplication en este rango con herramientas de práctica y juegos
+                    Explora todas las tablas de multiplicar en este rango con herramientas de prÃ¡ctica y juegos
                   </p>
                 </div>
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2422,6 +2422,3 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
     </main>
   )
 }
-
-
-
