@@ -569,6 +569,86 @@ const rangeMetadataFi: Record<string, {
   },
 }
 
+// French Range Metadata
+const rangeMetadataFr: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Tables de Multiplication 1-10 | Niveau Débutant',
+    description: 'Apprenez les tables de multiplication 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Explications faciles pour débutants, exemples visuels et exercices pratiques.',
+    keywords: 'table de multiplication 1-10, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Tables de Multiplication 11-20 | Nombres à Deux Chiffres',
+    description: 'Apprenez les tables de multiplication 11-20. Étape importante pour comprendre la multiplication des nombres à deux chiffres.',
+    keywords: 'table de multiplication 11-20, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Tables de Multiplication 21-30 | Niveau Intermédiaire',
+    description: 'Apprenez les tables de multiplication 21-30. Niveau intermédiaire et modèles de multiplication.',
+    keywords: 'table de multiplication 21-30, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Tables de Multiplication 31-40 | Multiplication Avancée',
+    description: 'Apprenez les tables de multiplication 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Compétences avancées en calcul mental.',
+    keywords: 'table de multiplication 31-40, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Tables de Multiplication 41-50 | Niveau Intermédiaire-Avancé',
+    description: 'Apprenez les tables de multiplication 41-50. Exercices interactifs pour maîtriser la multiplication de grands nombres.',
+    keywords: 'table de multiplication 41-50, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Tables de Multiplication 51-60 | Niveau Avancé',
+    description: 'Apprenez les tables de multiplication 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Matériels d\'étude détaillés pour les élèves de niveau avancé.',
+    keywords: 'table de multiplication 51-60, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Tables de Multiplication 61-70 | Grands Nombres',
+    description: 'Apprenez les tables de multiplication 61-70. Ressources éducatives complètes pour la multiplication de grands nombres.',
+    keywords: 'table de multiplication 61-70, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Tables de Multiplication 71-80 | Multiplication Niveau Avancé',
+    description: 'Apprenez les tables de multiplication 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Développez des compétences mathématiques de niveau avancé.',
+    keywords: 'table de multiplication 71-80, table de multiplication, multiplication, apprendre les mathématiques',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Tables de Multiplication 81-90 | Niveau Expert',
+    description: 'Apprenez les tables de multiplication 81-90. Opérations de multiplication difficiles et stratégies pour les élèves de niveau expert.',
+    keywords: 'table de multiplication 81-90, table de multiplication, multiplication, apprendre les mathématiques',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Tables de Multiplication 91-100 | Niveau le Plus Élevé',
+    description: 'Apprenez les tables de multiplication 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Éducation complète pour les compétences en multiplication de niveau le plus élevé.',
+    keywords: 'table de multiplication 91-100, table de multiplication, multiplication, apprentissage des mathématiques',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -684,6 +764,29 @@ const guideMetadataFi: Record<string, {
   },
 }
 
+// French Guide Metadata
+const guideMetadataFr: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'pour-les-eleves': {
+    title: 'Guide des Tables de Multiplication pour Élèves | Apprendre Étape par Étape',
+    description: 'Guide étape par étape pour apprendre les tables de multiplication facilement. Matériaux visuels, activités pratiques et jeux amusants pour apprendre à votre rythme.',
+    keywords: 'apprendre les tables de multiplication, mathématiques pour élèves, guide des tables, multiplication étape par étape',
+  },
+  'pour-les-enseignants': {
+    title: 'Guide des Tables de Multiplication pour Enseignants | Stratégies Pédagogiques',
+    description: 'Ressources complètes pour les enseignants sur l\'enseignement efficace des tables de multiplication. Comprend des stratégies pédagogiques, activités en classe, enseignement différencié et méthodes d\'évaluation.',
+    keywords: 'enseigner les tables de multiplication, stratégies pédagogiques, activités mathématiques, enseignement différencié, ressources pour enseignants',
+  },
+  'pour-les-parents': {
+    title: 'Guide des Tables de Multiplication pour Parents | Soutenir l\'Apprentissage à la Maison',
+    description: 'Comment aider votre enfant à apprendre les tables de multiplication à la maison. Conseils pratiques, jeux éducatifs et stratégies de motivation.',
+    keywords: 'aider les enfants avec les tables, mathématiques à la maison, éducation des parents, activités d\'apprentissage',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -703,6 +806,9 @@ const guideComponents: Record<string, any> = {
   'oppilaille': ForStudentsFi,
   'opettajille': ForTeachersFi,
   'vanhemmille': ForParentsFi,
+  'pour-les-eleves': ForStudentsFr,
+  'pour-les-enseignants': ForTeachersFr,
+  'pour-les-parents': ForParentsFr,
 }
 
 // Determine slug type
@@ -713,6 +819,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
   if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
   if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
+  if (locale === 'fr' && slug in guideMetadataFr) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -1158,7 +1265,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -2218,6 +2325,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageFi number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // French version
+  if (locale === 'fr') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataFr[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#webpage`,
+            "url": `${baseUrl}/fr/table-de-multiplication/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#learningresource`
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#learningresource`,
+            "name": `Ressource d'Apprentissage Table de Multiplication ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Compétences pour comprendre et utiliser la table de multiplication ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "fr-FR",
+            "educationalUse": ["practice", "self-study", "homework"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Table de Multiplication ${start + i}`,
+              "url": `${baseUrl}/fr/table-de-multiplication/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageFr
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/fr/table-de-multiplication/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/fr/table-de-multiplication/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesFr[num] || `Multiplication par ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#webpage`,
+            "url": `${baseUrl}/fr/table-de-multiplication/${num}`,
+            "name": `Table de Multiplication ${num} - ${specialProp}`,
+            "description": numberDescriptionsFr[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/fr/table-de-multiplication/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/fr/table-de-multiplication/${num}#breadcrumb`
+            },
+            "inLanguage": "fr-FR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Accueil"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/fr/table-de-multiplication/${range}`,
+                  "name": `Table de Multiplication ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/fr/table-de-multiplication/${num}`,
+                  "name": `Table de Multiplication ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#learningresource`,
+            "name": `Ressource d'Apprentissage Table de Multiplication ${num}`,
+            "description": numberDescriptionsFr[num],
+            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
+            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "teaches": `Table de multiplication ${num}, ${specialProp.toLowerCase()}, concepts de base de la multiplication`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "fr-FR",
+            "educationalUse": ["practice", "self-study"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/fr/table-de-multiplication/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageFr number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

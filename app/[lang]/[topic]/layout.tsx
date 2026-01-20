@@ -4,6 +4,7 @@ import HeaderDe from '@/app/components/de/Header'
 import HeaderCs from '@/app/components/cs/Header'
 import HeaderUk from '@/app/components/uk/Header'
 import HeaderFi from '@/app/components/fi/Header'
+import HeaderFr from '@/app/components/fr/Header'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -23,6 +24,7 @@ export default async function TopicLayout({ children, params }: LayoutProps) {
       {lang === 'cs' && <HeaderCs />}
       {lang === 'uk' && <HeaderUk />}
       {lang === 'fi' && <HeaderFi />}
+      {lang === 'fr' && <HeaderFr />}
       {children}
     </>
   )

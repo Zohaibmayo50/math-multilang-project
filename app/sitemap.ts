@@ -49,11 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       })
     })
 
-    // Guide pages
+    // Guide pages (at root level, not under topic)
     const localeGuides = guides[locale]
     Object.values(localeGuides).forEach(guideSlug => {
       sitemap.push({
-        url: `${topicBase}/${guideSlug}`,
+        url: `${baseUrl}/${guideSlug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: locale === 'tr' ? 0.9 : 0.4,
