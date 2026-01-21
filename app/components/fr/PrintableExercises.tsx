@@ -47,10 +47,10 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
     
     if (printWindow) {
       const title = exerciseType === 'single' 
-        ? `Exercice de la Tabla del ${selectedTable}`
+        ? `Exercice de la Table de ${selectedTable}`
         : exerciseType === 'mixed'
-        ? 'Exercice de Tablas de Multiplicar Mixtas'
-        : `Exercice de Tablas de Multiplicar ${rangeStart}-${rangeEnd}`
+        ? 'Exercice de Tables de Multiplication Mixtes'
+        : `Exercice de Tables de Multiplication ${rangeStart}-${rangeEnd}`
 
       printWindow.document.write(`
         <!DOCTYPE html>
@@ -142,16 +142,16 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </style>
           </head>
           <body>
-            <button onclick="window.print()" class="print-button no-print">🖨️ Imprimir</button>
+            <button onclick="window.print()" class="print-button no-print">🖨️ Imprimer</button>
             <h1>${title}</h1>
             <div class="info">
-              <p>Fecha: ${new Date().toLocaleDateString('es-ES')}</p>
-              <p>Total de Preguntas: ${questionCount}</p>
+              <p>Date : ${new Date().toLocaleDateString('es-ES')}</p>
+              <p>Total de Questions : ${questionCount}</p>
             </div>
             <div class="questions">
               ${questions.map((q, i) => `
                 <div class="question">
-                  <div class="question-number">Pregunta ${i + 1}</div>
+                  <div class="question-number">Question ${i + 1}</div>
                   <div class="equation">${q.num1} × ${q.num2} = </div>
                   <div class="answer-line"></div>
                 </div>
@@ -159,7 +159,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </div>
             ${includeAnswers ? `
               <div class="answer-key">
-                <h2>Clave de Respuestas</h2>
+                <h2>CorrigÃ©</h2>
                 <div class="answers">
                   ${questions.map((q, i) => `
                     <div class="answer-item">
@@ -191,7 +191,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
           Créez des exercices de tables de multiplication personnalisés pour vos élèves ou enfants. 
-          Imprime o guarda como PDF.
+          Imprimez ou enregistrez au format PDF.
         </p>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
@@ -200,7 +200,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Tipo de Exercice
+                  Type d'Exercice
                 </label>
                 <div className="space-y-2">
                   <label className="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
@@ -213,7 +213,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     />
                     <div>
                       <div className="font-medium text-slate-900">Tabla Única</div>
-                      <div className="text-sm text-slate-600">Una tabla de multiplicar específica</div>
+                      <div className="text-sm text-slate-600">Una Table de Multiplication específica</div>
                     </div>
                   </label>
                   
@@ -226,8 +226,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Rango</div>
-                      <div className="text-sm text-slate-600">Tablas en un rango específico</div>
+                      <div className="font-medium text-slate-900">Plage</div>
+                      <div className="text-sm text-slate-600">Tables en un Plage específico</div>
                     </div>
                   </label>
                   
@@ -240,8 +240,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Mixto</div>
-                      <div className="text-sm text-slate-600">Aleatorio de todas las tablas</div>
+                      <div className="font-medium text-slate-900">Mixte</div>
+                      <div className="text-sm text-slate-600">AlÃ©atoire de toutes les tables</div>
                     </div>
                   </label>
                 </div>
@@ -250,7 +250,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               {exerciseType === 'single' && (
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Tabla de Multiplicar
+                    Table de Multiplication
                   </label>
                   <select
                     value={selectedTable}
@@ -259,7 +259,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   >
                     {[...Array(11)].map((_, i) => (
                       <option key={i + 2} value={i + 2}>
-                        Tabla del {i + 2}
+                        Table de {i + 2}
                       </option>
                     ))}
                   </select>
@@ -270,7 +270,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Inicio
+                      DÃ©but
                     </label>
                     <select
                       value={rangeStart}
@@ -303,7 +303,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Número de Preguntas: {questionCount}
+                  Número de Questions: {questionCount}
                 </label>
                 <input
                   type="range"
@@ -330,8 +330,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     className="mr-3 w-5 h-5"
                   />
                   <div>
-                    <div className="font-medium text-slate-900">Incluir Clave de Respuestas</div>
-                    <div className="text-sm text-slate-600">Añade las respuestas al final de la página</div>
+                    <div className="font-medium text-slate-900">Incluir CorrigÃ©</div>
+                    <div className="text-sm text-slate-600">Añade las respuestas al Final de la página</div>
                   </div>
                 </label>
               </div>
@@ -348,18 +348,18 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   <span className="text-sm text-slate-600">Tipo:</span>
                   <span className="font-semibold text-slate-900">
                     {exerciseType === 'single' 
-                      ? `Tabla del ${selectedTable}`
+                      ? `Table de ${selectedTable}`
                       : exerciseType === 'range'
-                      ? `Tablas ${rangeStart}-${rangeEnd}`
-                      : 'Mixto'}
+                      ? `Tables ${rangeStart}-${rangeEnd}`
+                      : 'Mixte'}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Número de Preguntas:</span>
+                  <span className="text-sm text-slate-600">Número de Questions:</span>
                   <span className="font-semibold text-slate-900">{questionCount}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Clave de Respuestas:</span>
+                  <span className="text-sm text-slate-600">CorrigÃ©:</span>
                   <span className={`font-semibold ${includeAnswers ? 'text-green-600' : 'text-slate-400'}`}>
                     {includeAnswers ? 'Sí ✓' : 'No ✗'}
                   </span>
@@ -367,7 +367,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               </div>
 
               <div className="bg-white rounded-lg p-4 space-y-2">
-                <div className="text-sm font-semibold text-slate-700 mb-2">Preguntas de Ejemplo:</div>
+                <div className="text-sm font-semibold text-slate-700 mb-2">Questions de Ejemplo:</div>
                 {[...Array(3)].map((_, i) => {
                   const num1 = exerciseType === 'single' 
                     ? selectedTable 
@@ -386,7 +386,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div className="mt-4 p-3 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-sm text-blue-900">
-                  💡 <strong>Consejo:</strong> Puedes guardar como PDF usando la función de impresión de tu navegador.
+                  💡 <strong>Conseil :</strong> Puedes guardar como PDF usando la función de impresión de tu navegador.
                 </p>
               </div>
             </div>
@@ -399,7 +399,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
             >
               <span className="text-xl">🖨️</span>
-              Imprimir
+              Imprimer
             </button>
             <button
               onClick={handleDownloadPDF}
@@ -417,19 +417,19 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             <div className="text-3xl mb-3">🎯</div>
             <h4 className="font-bold text-slate-900 mb-2">Personalizable</h4>
             <p className="text-sm text-slate-600">
-              Ajusta el número de preguntas, tablas y Niveau de dificultad como desees.
+              Ajusta el número de Questions, Tables y Niveau de dificultad como desees.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">📱</div>
             <h4 className="font-bold text-slate-900 mb-2">Compatible con Móviles</h4>
             <p className="text-sm text-slate-600">
-              Puedes imprimir Facilemente desde teléfono, tableta o computadora.
+              Puedes Imprimer Facilemente desde teléfono, tableta o computadora.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">💾</div>
-            <h4 className="font-bold text-slate-900 mb-2">Guardar y Compartir</h4>
+            <h4 className="font-bold text-slate-900 mb-2">Enregistrer et Partager</h4>
             <p className="text-sm text-slate-600">
               Guarda como PDF y compártelo Facilemente con tus estudiantes.
             </p>

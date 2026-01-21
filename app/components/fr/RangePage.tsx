@@ -170,14 +170,14 @@ export default function RangePage({
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
               <span className="text-3xl">📖</span>
-              ¿Qué Cubre la Table de {rangeStart} al {rangeEnd}?
+              Que Couvre la Table de {rangeStart} à {rangeEnd}?
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
           <p className="text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
-            Cette plage comprend la Table de Multiplication de cada número entre {rangeStart} y {rangeEnd}. 
-            Cada uno de estos Nombres se multiplica por los Nombres de 1 Ã  10 para aprenderlos.
+            Cette plage comprend la table de multiplication de chaque nombre entre {rangeStart} et {rangeEnd}. 
+            Chacun de ces nombres est multiplié par les nombres de 1 à 10 pour les apprendre.
           </p>
           
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-100 shadow-md">
@@ -195,9 +195,9 @@ export default function RangePage({
             <div className="bg-white/60 rounded-xl p-4 flex items-center gap-3">
               <span className="text-3xl">💡</span>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Les Ã©tudiants apprennent un total de <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} Opérations de multiplicación</span> en este rango. 
-                Gracias a la <span className="font-bold text-purple-600">propriÃ©tÃ© commutative</span>, en realidad necesitan memorizar menos Opérations 
-                (por ejemplo <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
+                Les étudiants apprennent un total de <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} opérations de multiplication</span> dans cette plage. 
+                Grâce à la <span className="font-bold text-purple-600">propriété commutative</span>, ils ont en réalité besoin de mémoriser moins d'opérations 
+                (par exemple <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
               </p>
             </div>
           </div>
@@ -425,7 +425,7 @@ export default function RangePage({
                   📈 Preparación para el Siguiente Paso
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Los estudiantes que aprenden bien este rango están listos para pasar al siguiente. 
+                  Los estudiantes que aprenden bidans cette plage están listos para pasar al siguiente. 
                   Cada rango refuerza aún más la lógica de la multiplicación y desarrolla el pensamiento matemático.
                 </p>
               </div>
@@ -442,7 +442,7 @@ export default function RangePage({
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            En lugar de intentar memorizar la Table de Multiplication, entender los patrones que contiene 
+            PlutÃ´t que d'essayer de mÃ©moriser la table de multiplication, comprendre les modÃ¨les qu'elle contient 
             acelera el proceso de aprendizaje y lo hace más duradero.
           </p>
           
@@ -454,7 +454,7 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 mb-3">
                 En la multiplicación, el orden se puede cambiar: {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
-                Esta propiedad facilita el aprendizaje.
+                Cette propriÃ©tÃ© facilite l'apprentissage.
               </p>
               <p className="text-sm text-slate-600 italic">
                 Ejemplo: Si conoces un número, también conoces su inverso.
@@ -482,8 +482,8 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeNumbers.filter(n => n % 2 === 0).length > 0 ? 
-                  `Los Nombres pares en este rango (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) siempre dan resultados pares.` :
-                  'Las Tables de Multiplication de los Nombres en este rango muestran patrones específicos.'
+                  `Los Nombres pares dans cette plage (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) donnent toujours des rÃ©sultats pairs.` :
+                  'Las Tables de Multiplication de los Nombres dans cette plage muestran patrones específicos.'
                 }
               </p>
               <p className="text-sm text-slate-600 italic">
@@ -501,7 +501,7 @@ export default function RangePage({
                 Notar este patrón es útil para la verificación.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Por ejemplo: Los Nombres que terminan en 5 siempre terminan en 0 o 5.
+                par exemple: Les nombres se terminant par 5 se terminent toujours par 0 ou 5.
               </p>
             </div>
           </div>
@@ -521,13 +521,13 @@ export default function RangePage({
                 1. Enfoque Sistemático
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                En lugar de intentar aprender todos los Nombres de este rango a la vez, concéntrate en 1-2 Nombres 
+                Au lieu d'essayer d'apprendre tous les nombres de cette plage en une fois, concéntrate en 1-2 Nombres 
                 cada día. Después de aprender bien un número, pasa al siguiente.
               </p>
               <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600">
                 <p className="text-slate-700">
                   <strong>Recomendación:</strong> Después de repasar cada número durante 3-4 días consecutivos, 
-                  comienza a resolver problemas mezclados.
+                  commencez Ã  rÃ©soudre des problÃ¨mes mÃ©langÃ©s.
                 </p>
               </div>
             </div>
@@ -537,28 +537,28 @@ export default function RangePage({
                 2. Técnicas de Visualización
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                Imaginar los Nombres visualmente facilita recordarlos:
+                Imaginer les nombres visuellement facilite leur mÃ©morisation:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
                     <strong>Piensa en grupos:</strong> Imagina {rangeStart} × 4 como {rangeStart} personas 
-                    formando 4 grupos.
+                    formant 4 groupes.
                   </div>
                 </li>
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
                     <strong>Crea historias:</strong> Crear una historia corta para cada número hace 
-                    que recordar sea divertido.
+                    la mÃ©morisation amusante.
                   </div>
                 </li>
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
                     <strong>Usa tarjetas de colores:</strong> Asignar un color diferente a cada número fortalece 
-                    la memoria visual.
+                    la mÃ©moire visuelle.
                   </div>
                 </li>
               </ul>
@@ -581,13 +581,13 @@ export default function RangePage({
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Tests Ã‰crits</p>
                   <p className="text-slate-700 text-sm">
-                    Haz una prueba escrita una vez a la semana y analiza tus errores.
+                    Faites un test Ã©crit une fois par semaine et analysez vos erreurs.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Jeux</p>
                   <p className="text-slate-700 text-sm">
-                    Jugar Jeux de Tables de Multiplication permite aprender mientras te diviertes.
+                    Jouer Ã  des jeux de tables de multiplication vous permet d'apprendre tout en vous amusant.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">

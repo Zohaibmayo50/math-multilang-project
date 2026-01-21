@@ -216,7 +216,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                 🏆
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Héroe de las Tablas</h3>
-              <p className="text-slate-600 mb-4">Avanza por los Niveaues y alcanza el campeonato</p>
+              <p className="text-slate-600 mb-4">Avancez Ã  travers les niveaux et atteignez le championnat</p>
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-purple-700 transition-all">
                 Jouer
               </button>
@@ -226,8 +226,8 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎮
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Juego de Memoria</h3>
-              <p className="text-slate-600 mb-4">Empareja las cartas y multiplica</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Jeu de MÃ©moire</h3>
+              <p className="text-slate-600 mb-4">Associez les cartes et multipliez</p>
               <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-pink-600 hover:to-pink-700 transition-all">
                 Jouer
               </button>
@@ -237,8 +237,8 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🚀
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Aventura Espacial</h3>
-              <p className="text-slate-600 mb-4">Eleva tu cohete con respuestas correctas</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Aventure Spatiale</h3>
+              <p className="text-slate-600 mb-4">Ã‰levez votre fusÃ©e avec des rÃ©ponses correctes</p>
               <button className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-indigo-700 transition-all">
                 Jouer
               </button>
@@ -261,7 +261,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                   <div className="text-3xl font-bold text-blue-600">{speedTimer}s</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Puntos</div>
+                  <div className="text-sm text-slate-600 mb-1">Points</div>
                   <div className="text-3xl font-bold text-green-600">{speedScore}</div>
                 </div>
               </div>
@@ -296,7 +296,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
                   <h4 className="text-2xl font-bold text-slate-900 mb-2">¡Juego Terminado!</h4>
-                  <p className="text-xl text-slate-600 mb-6">Puntos Totales: <span className="font-bold text-green-600">{speedScore}</span></p>
+                  <p className="text-xl text-slate-600 mb-6">Points Totales: <span className="font-bold text-green-600">{speedScore}</span></p>
                   <button onClick={startSpeedGame} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700">
                     Jouer de Nuevo
                   </button>
@@ -349,7 +349,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                     disabled={!heroAnswer}
                     className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-all disabled:opacity-50"
                   >
-                    Enviar
+                    Envoyer
                   </button>
                 </div>
               </div>
@@ -362,10 +362,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-pink-600">🎮 Juego de Memoria</h3>
+                <h3 className="text-2xl font-bold text-pink-600">🎮 Jeu de MÃ©moire</h3>
                 <div className="flex items-center gap-4">
                   <div className="bg-pink-50 rounded-lg px-4 py-2">
-                    <span className="text-sm text-slate-600">Parejas: </span>
+                    <span className="text-sm text-slate-600">Paires : </span>
                     <span className="font-bold text-pink-600">{memoryMatches}/6</span>
                   </div>
                   <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
@@ -378,7 +378,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                   <h4 className="text-2xl font-bold text-slate-900 mb-2">¡Felicidades!</h4>
                   <p className="text-xl text-slate-600 mb-6">¡Has emparejado todas las cartas!</p>
                   <button onClick={startMemoryGame} className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-pink-700 hover:to-purple-700">
-                    Nuevo Juego
+                    Nouveau Jeu
                   </button>
                 </div>
               ) : (
@@ -407,17 +407,17 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-indigo-600">🚀 Aventura Espacial</h3>
+                <h3 className="text-2xl font-bold text-indigo-600">🚀 Aventure Spatiale</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-indigo-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Altura</div>
+                  <div className="text-sm text-slate-600 mb-1">Altitude</div>
                   <div className="text-3xl font-bold text-indigo-600">{rocketHeight}m</div>
                 </div>
                 <div className="bg-orange-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Racha</div>
+                  <div className="text-sm text-slate-600 mb-1">SÃ©rie</div>
                   <div className="text-3xl font-bold text-orange-600">{spaceStreak} 🔥</div>
                 </div>
               </div>
@@ -474,7 +474,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <p className="text-slate-700">
                 Cada juego utiliza una técnica de aprendizaje diferente. Respuesta Rápida 
                 aumenta tu velocidad, Héroe de las Tablas te ayuda a superar Niveaues de dificultad, 
-                Juego de Memoria desarrolla el aprendizaje visual y Aventura Espacial aumenta tu motivación.
+                Jeu de MÃ©moire desarrolla el aprendizaje visual y Aventure Spatiale aumenta tu motivación.
               </p>
             </div>
           </div>
