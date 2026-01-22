@@ -1,0 +1,243 @@
+# Comprehensive French translation for NumberPage.tsx
+$ErrorActionPreference = "Stop"
+$targetFile = "app\components\fr\NumberPage.tsx"
+
+Write-Host "Starting comprehensive French translation of NumberPage.tsx..." -ForegroundColor Cyan
+Write-Host "Reading file..." -ForegroundColor Yellow
+
+$content = Get-Content $targetFile -Raw -Encoding UTF8
+
+Write-Host "Applying translations..." -ForegroundColor Yellow
+
+# Fix import first
+$content = $content -replace "import NumberGames from '\.\./NumberGames'","import NumberGames from './NumberGames'"
+
+# UI Elements
+$content = $content -replace 'Tabla de Multiplicar','Table de Multiplication'
+$content = $content -replace 'tabla-de-multiplicar','table-de-multiplication'
+$content = $content -replace 'Multiplicar por','Multiplier par'
+$content = $content -replace 'Imprimir','Imprimer'
+$content = $content -replace 'Descargar','Télécharger'
+$content = $content -replace 'Ejercicios','Exercices'
+$content = $content -replace 'Juegos','Jeux'
+$content = $content -replace 'Volver a','Retour à'
+$content = $content -replace 'Rango','Plage'
+
+# Core math terms
+$content = $content -replace '\bnúmero\b','nombre'
+$content = $content -replace '\bnúmeros\b','nombres'
+$content = $content -replace '\bresultado\b','résultat'
+$content = $content -replace '\bresultados\b','résultats'
+$content = $content -replace '\bpatrón\b','modèle'
+$content = $content -replace '\bpatrones\b','modèles'
+$content = $content -replace '\bgrupos\b','groupes'
+$content = $content -replace '\bgrupo\b','groupe'
+$content = $content -replace '\bveces\b','fois'
+$content = $content -replace '\bmultiplicación\b','multiplication'
+$content = $content -replace '\bdivisión\b','division'
+$content = $content -replace '\bsuma\b','addition'
+$content = $content -replace '\bresta\b','soustraction'
+$content = $content -replace '\bpropiedad\b','propriété'
+$content = $content -replace '\bpropiedades\b','propriétés'
+$content = $content -replace '\bidentidad\b','identité'
+
+# Number properties
+$content = $content -replace '\bprimo\b','premier'
+$content = $content -replace '\bprimos\b','premiers'
+$content = $content -replace '\bpar\b','pair'
+$content = $content -replace '\bpares\b','pairs'
+$content = $content -replace '\bimpar\b','impair'
+$content = $content -replace '\bimpares\b','impairs'
+$content = $content -replace '\bcuadrado\b','carré'
+$content = $content -replace '\bpotencia\b','puissance'
+$content = $content -replace '\bmúltiplo\b','multiple'
+$content = $content -replace '\bmúltiplos\b','multiples'
+$content = $content -replace '\bdivisor\b','diviseur'
+$content = $content -replace '\bdivisores\b','diviseurs'
+
+# Common verbs - Spanish to French
+$content = $content -replace '\bsignifica\b','signifie'
+$content = $content -replace '\bmultiplicas\b','multipliez'
+$content = $content -replace '\bmultiplicar\b','multiplier'
+$content = $content -replace '\bmultiplica\b','multiplie'
+$content = $content -replace '\bduplicar\b','doubler'
+$content = $content -replace '\bduplica\b','double'
+$content = $content -replace '\btriplicar\b','tripler'
+$content = $content -replace '\bayuda\b','aide'
+$content = $content -replace '\bdesarrolla\b','développe'
+$content = $content -replace '\brequiere\b','requiert'
+$content = $content -replace '\bfacilita\b','facilite'
+$content = $content -replace '\bcrea\b','crée'
+$content = $content -replace '\bmuestra\b','montre'
+$content = $content -replace '\bfortalece\b','renforce'
+$content = $content -replace '\bforma\b','forme'
+$content = $content -replace '\baporta\b','apporte'
+$content = $content -replace '\bhace que\b','rend'
+$content = $content -replace '\bestás\b','vous êtes'
+$content = $content -replace '\btengo\b','j''ai'
+$content = $content -replace '\btienes\b','vous avez'
+$content = $content -replace '\btiene\b','a'
+$content = $content -replace '\btienen\b','ont'
+$content = $content -replace '\busa\b','utilise'
+$content = $content -replace '\busar\b','utiliser'
+$content = $content -replace '\baprende\b','apprend'
+$content = $content -replace '\baprender\b','apprendre'
+$content = $content -replace '\benseña\b','enseigne'
+$content = $content -replace '\benseñar\b','enseigner'
+$content = $content -replace '\bpermite\b','permet'
+$content = $content -replace '\baumenta\b','augmente'
+$content = $content -replace '\bmejora\b','améliore'
+
+# Common phrases
+$content = $content -replace 'es un caso especial en matemáticas','est un cas spécial en mathématiques'
+$content = $content -replace 'Cuando multiplicas','Lorsque vous multipliez'
+$content = $content -replace 'el resultado siempre es','le résultat est toujours'
+$content = $content -replace 'Esto se llama','Cela s''appelle'
+$content = $content -replace 'Piénsalo como','Pensez-y comme'
+$content = $content -replace 'en la vida real','dans la vie réelle'
+$content = $content -replace 'en matemáticas','en mathématiques'
+$content = $content -replace 'es importante','est important'
+$content = $content -replace 'por ejemplo','par exemple'
+$content = $content -replace 'debido a','en raison de'
+$content = $content -replace 'con frecuencia','fréquemment'
+$content = $content -replace 'la tabla del','la table de'
+$content = $content -replace 'de un dígito','d''un chiffre'
+$content = $content -replace 'de dos dígitos','de deux chiffres'
+$content = $content -replace 'al final','à la fin'
+$content = $content -replace 'agregando','ajoutant'
+$content = $content -replace 'agregar','ajouter'
+$content = $content -replace 'agrega','ajoute'
+$content = $content -replace 'dividir','diviser'
+$content = $content -replace 'operaciones','opérations'
+$content = $content -replace 'operación','opération'
+
+# Questions and common expressions
+$content = $content -replace '¿cuántos grupos','combien de groupes'
+$content = $content -replace '¿Cuántos','Combien de'
+$content = $content -replace 'solo tienes','vous avez seulement'
+$content = $content -replace 'exactamente lo que empezaste','exactement ce que vous avez commencé'
+$content = $content -replace 'a sí mismo','à lui-même'
+$content = $content -replace 'tres veces','trois fois'
+$content = $content -replace 'dos veces','deux fois'
+$content = $content -replace 'una vez','une fois'
+$content = $content -replace 'el mismo número','le même nombre'
+$content = $content -replace 'cada resultado','chaque résultat'
+$content = $content -replace 'todo lo que','tout ce qui'
+$content = $content -replace 'viene en grupos de','vient en groupes de'
+
+# Comparatives
+$content = $content -replace '\bmás fácil\b','plus facile'
+$content = $content -replace '\bmás difícil\b','plus difficile'
+$content = $content -replace '\bmás prácticas\b','plus pratiques'
+$content = $content -replace '\bmás práctica\b','plus pratique'
+$content = $content -replace '\bmás hermosos\b','plus beaux'
+$content = $content -replace '\bmás importantes\b','plus importants'
+
+# Time related
+$content = $content -replace '\bdías\b','jours'
+$content = $content -replace '\bdía\b','jour'
+$content = $content -replace '\bhora\b','heure'
+$content = $content -replace '\bhoras\b','heures'
+$content = $content -replace '\bminutos\b','minutes'
+$content = $content -replace '\bsemana\b','semaine'
+$content = $content -replace '\bsemanas\b','semaines'
+$content = $content -replace '\bmes\b','mois'
+$content = $content -replace '\bmeses\b','mois'
+$content = $content -replace '\baño\b','année'
+$content = $content -replace '\baños\b','années'
+
+# Objects and everyday items
+$content = $content -replace '\bzapatos\b','chaussures'
+$content = $content -replace '\bruedas de bicicleta\b','roues de vélo'
+$content = $content -replace '\bpersonas\b','personnes'
+$content = $content -replace '\bpersona\b','personne'
+$content = $content -replace '\bestudi antes\b','étudiants'
+$content = $content -replace '\bestudiante\b','étudiant'
+$content = $content -replace '\bdinero\b','argent'
+$content = $content -replace '\bmonedas\b','pièces'
+$content = $content -replace '\bbilletes\b','billets'
+$content = $content -replace '\bhuevos\b','œufs'
+$content = $content -replace '\bdados\b','dés'
+
+# Geometry
+$content = $content -replace '\btriángulos\b','triangles'
+$content = $content -replace '\btriángulo\b','triangle'
+$content = $content -replace '\bcuadrados\b','carrés'
+$content = $content -replace '\bcuadrado\b','carré'
+$content = $content -replace '\blados\b','côtés'
+$content = $content -replace '\blado\b','côté'
+$content = $content -replace '\boctógonos\b','octogones'
+$content = $content -replace '\boctógono\b','octogone'
+$content = $content -replace '\bcontinentes\b','continents'
+
+# Learning/Educational
+$content = $content -replace '\bdificultades\b','difficultés'
+$content = $content -replace '\bpráctica\b','pratique'
+$content = $content -replace '\bpracticar\b','pratiquer'
+$content = $content -replace '\baprendizaje\b','apprentissage'
+$content = $content -replace '\bhabilidades\b','compétences'
+$content = $content -replace '\bestrategias\b','stratégies'
+$content = $content -replace '\btruco\b','astuce'
+$content = $content -replace '\btrucos\b','astuces'
+
+# Special verbs requiring replacement with context
+$content = $content -replace '\bes\s','est '
+$content = $content -replace '\bson\s','sont '
+$content = $content -replace '\bestá\s','est '
+$content = $content -replace '\bestán\s','sont '
+$content = $content -replace '\bhay\s','il y a '
+$content = $content -replace '\bpuedes\s','vous pouvez '
+$content = $content -replace '\bpuede\s','peut '
+$content = $content -replace '\bpueden\s','peuvent '
+$content = $content -replace '\bdebe\b','doit'
+$content = $content -replace '\bdeben\b','doivent'
+$content = $content -replace '\bhacen\b','font'
+$content = $content -replace '\bcontinentes del mundo\b','continents du monde'
+$content = $content -replace '\bcaras de\b','faces de'
+$content = $content -replace '\breferencias culturales\b','références culturelles'
+
+# Long specific phrases
+$content = $content -replace 'Es extremadamente útil para contar','C''est extrêmement utile pour compter'
+$content = $content -replace 'y decir la hora','et dire l''heure'
+$content = $content -replace 'intervalos de 5 minutos','intervalles de 5 minutes'
+$content = $content -replace 'una de las tablas con las que los estudiantes tienen más','l''une des tables avec laquelle les étudiants ont le plus de'
+$content = $content -replace 'generalmente una de las tablas','généralement l''une des tables'
+$content = $content -replace 'porque el 7 es un número primo','parce que 7 est un nombre premier'
+$content = $content -replace 'hay patrones hermosos','il y a de beaux modèles'
+$content = $content -replace 'se puede aprender con','peut être appris avec'
+$content = $content -replace 'es un número importante','est un nombre important'
+$content = $content -replace 'de la semana','de la semaine'
+$content = $content -replace 'una de las tablas de multiplicar más fáciles','l''une des tables de multiplication les plus faciles'
+$content = $content -replace 'simplemente agregas un cero','ajoutez simplement un zéro'
+$content = $content -replace 'forma la base de nuestro sistema decimal','forme la base de notre système décimal'
+$content = $content -replace 'es divisible por muchos números','est divisible par de nombreux nombres'
+$content = $content -replace 'una docena','une douzaine'
+$content = $content -replace 'un reloj','une horloge'
+
+# More specific translations
+$content = $content -replace 'puntos de referencia','points de référence'
+$content = $content -replace 'entender todas las demás','comprendre toutes les autres'
+$content = $content -replace 'tablas de multiplicar','tables de multiplication'
+$content = $content -replace 'Completa','Complète'
+$content = $content -replace 'matemático','mathématique'
+$content = $content -replace 'problemas','problèmes'
+$content = $content -replace 'solución','solution'
+$content = $content -replace 'cálculo mental','calcul mental'
+$content = $content -replace 'planificación semanal','planification hebdomadaire'
+$content = $content -replace 'cálculos de tiempo','calculs de temps'
+$content = $content -replace 'sistema decimal','système décimal'
+$content = $content -replace 'valor posicional','valeur positionnelle'
+$content = $content -replace 'trabajar con números grandes','travailler avec de grands nombres'
+$content = $content -replace 'reconocimiento de patrones','reconnaissance de modèles'
+$content = $content -replace 'resolución de problemas','résolution de problèmes'
+$content = $content -replace 'cadenas de duplicación','chaînes de doublement'
+$content = $content -replace 'cálculos monetarios','calculs monétaires'
+$content = $content -replace 'edad de mayoría','âge de majorité'
+$content = $content -replace 'edad legal','âge légal'
+$content = $content -replace 'equitativamente entre','équitablement entre'
+
+# Save file
+$content | Set-Content $targetFile -Encoding UTF8 -NoNewline
+
+Write-Host "`nTranslation complete!" -ForegroundColor Green
+Write-Host "NumberPage.tsx has been translated to French." -ForegroundColor Green
