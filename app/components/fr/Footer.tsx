@@ -143,10 +143,10 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} tables de multiplication. Todos los derechos reservados.
+              © {currentYear} tables de multiplication. Tous droits réservés.
             </p>
             <div className="flex items-center gap-4 text-sm text-slate-400">
-              <span>Hacemos que las Matemáticas sean Divertidas para Todos 🎓</span>
+              <span>Nous rendons les Mathématiques Amusantes pour Tous 🎓</span>
             </div>
           </div>
         </div>

@@ -242,7 +242,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
             🎮 Jeux de la Table de {number}
           </h2>
           <p className="text-lg text-slate-700">
-            ¡Refuerza la tabla del {number} con juegos animados y divertidos!
+            Renforcez la table de {number} avec des jeux animés et amusants !
           </p>
         </div>
 
@@ -295,9 +295,9 @@ export default function NumberGames({ number }: NumberGamesProps) {
             {!bpGameActive ? (
               <div className="flex flex-col items-center justify-center h-[350px] sm:h-[500px]">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-bounce">🎈</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Jeu de Explotar Globos</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Jeu d'Éclatement de Ballons</h3>
                 <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 text-center max-w-md px-4">
-                  ¡Explota los globos que contienen la respuesta correcta! ¡No toques globos incorrectos ni dejes escapar los correctos!
+                  Éclatez les ballons qui contiennent la bonne réponse ! Ne touchez pas les ballons incorrects et ne laissez pas échapper les corrects !
                 </p>
                 <button
                   onClick={startBalloonGame}
@@ -361,8 +361,8 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'race' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Jeu de Carreras</h3>
-              <p className="text-slate-600">¡Gana la carrera dando respuestas correctas!</p>
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Jeu de Course</h3>
+              <p className="text-slate-600">Gagnez la course en donnant des réponses correctes !</p>
             </div>
 
             {!raceGameActive || raceCar.position >= 90 ? (
@@ -370,13 +370,13 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🏁</div>
                 {raceCar.position >= 90 ? (
                   <>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 ¡Felicitaciones! ¡Ganaste!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 Félicitations ! Vous avez gagné !</h3>
                     <div className="text-xl sm:text-2xl mb-4 sm:mb-6">
-                      Puntuación Total: <span className="font-bold text-blue-600">{raceScore}</span>
+                      Score Total : <span className="font-bold text-blue-600">{raceScore}</span>
                     </div>
                   </>
                 ) : (
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">¿Listo para la Carrera?</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Prêt pour la Course ?</h3>
                 )}
                 <button
                   onClick={startRaceGame}
@@ -447,15 +447,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'memory' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Jeu de Memoria</h3>
-              <p className="text-slate-600">¡Encuentra las tarjetas que coinciden!</p>
+              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Jeu de Mémoire</h3>
+              <p className="text-slate-600">Trouvez les cartes qui correspondent !</p>
             </div>
 
             {cards.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🃏</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Emparejar Tarjetas</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">¡Empareja las multiplicaciones con sus rÃ©sultats!</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Apparier les Cartes</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Associez les multiplications avec leurs résultats !</p>
                 <button
                   onClick={initMemoryGame}
                   className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
@@ -499,9 +499,9 @@ export default function NumberGames({ number }: NumberGamesProps) {
 
                 {memoryScore === 6 && (
                   <div className="text-center mt-6 sm:mt-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 ¡Felicitaciones!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 Félicitations !</h3>
                     <p className="text-lg sm:text-xl mb-3 sm:mb-4">
-                      ¡Completaste en {memoryMoves} movimientos!
+                      Vous avez terminé en {memoryMoves} mouvements !
                     </p>
                     <button
                       onClick={initMemoryGame}

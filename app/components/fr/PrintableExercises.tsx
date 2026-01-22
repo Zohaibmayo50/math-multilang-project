@@ -303,7 +303,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Número de Questions: {questionCount}
+                  Nombre de Questions : {questionCount}
                 </label>
                 <input
                   type="range"
@@ -330,8 +330,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     className="mr-3 w-5 h-5"
                   />
                   <div>
-                    <div className="font-medium text-slate-900">Incluir Clave de RÃ©ponses</div>
-                    <div className="text-sm text-slate-600">Añade las respuestas al final de la página</div>
+                    <div className="font-medium text-slate-900">Inclure le Corrigé</div>
+                    <div className="text-sm text-slate-600">Ajoute les réponses à la fin de la page</div>
                   </div>
                 </label>
               </div>
@@ -355,11 +355,11 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Número de Questions:</span>
+                  <span className="text-sm text-slate-600">Nombre de Questions :</span>
                   <span className="font-semibold text-slate-900">{questionCount}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Clave de RÃ©ponses:</span>
+                  <span className="text-sm text-slate-600">Corrigé :</span>
                   <span className={`font-semibold ${includeAnswers   ? 'text-green-600' : 'text-slate-400'}`}>
                     {includeAnswers   ? 'Sí ✓' : 'No ✗'}
                   </span>
@@ -415,9 +415,9 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">🎯</div>
-            <h4 className="font-bold text-slate-900 mb-2">Personalizable</h4>
+            <h4 className="font-bold text-slate-900 mb-2">Personnalisable</h4>
             <p className="text-sm text-slate-600">
-              Ajustez le número de questions, tablas y nivel de dificultad comme vous le souhaitez.
+              Ajustez le nombre de questions, les tables et le niveau de difficulté comme vous le souhaitez.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">

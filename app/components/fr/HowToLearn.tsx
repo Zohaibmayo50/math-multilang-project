@@ -3,7 +3,7 @@
     <section className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          ¿Cómo Aprender las Tablas de Multiplicar de faÃ§on Efectiva?
+          Comment Apprendre les Tables de Multiplication de Façon Efficace ?
         </h2>
         
         <div className="space-y-12">
@@ -16,30 +16,30 @@
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                En las tablas de multiplicar existen muchos patrones y órdenes. Descubrir 
-                estos patrones proporciona comprensión lógica en lugar de simple memorización:
+                Dans les tables de multiplication, il existe de nombreux modèles et ordres. Découvrir 
+                ces modèles fournit une compréhension logique au lieu d'une simple mémorisation :
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Múltiplos de 2:</strong> Siempre son números pares (2, 4, 6, 8...)
+                  <strong>Multiples de 2 :</strong> Sont toujours des nombres pairs (2, 4, 6, 8...)
                 </li>
                 <li>
                   <strong>Múltiplos de 5:</strong> Se terminent toujours par 0 ou 5 (5, 10, 15, 20...)
                 </li>
                 <li>
-                  <strong>Múltiplos de 9:</strong> La suma de sus dígitos siempre es múltiplo de 9 
+                  <strong>Multiples de 9 :</strong> La somme de leurs chiffres est toujours un multiple de 9 
                   (18: 1+8=9, 27: 2+7=9)
                 </li>
                 <li>
-                  <strong>Múltiplos de 10:</strong> Se terminent toujours par 0 (10, 20, 30...)
+                  <strong>Multiples de 10 :</strong> Se terminent toujours par 0 (10, 20, 30...)
                 </li>
                 <li>
-                  <strong>PropriÃ©tÃ© commutative :</strong> 3 × 4 = 4 × 3 (L'ordre n'affecte pas le rÃ©sultat)
+                  <strong>Propriété commutative :</strong> 3 × 4 = 4 × 3 (L'ordre n'affecte pas le résultat)
                 </li>
               </ul>
               <p>
-                Comprender estos patrones te permite captar la lógica fundamental en lugar 
-                de memorizar casi 100 valores de multiplicación.
+                Comprendre ces modèles vous permet de saisir la logique fondamentale au lieu 
+                de mémoriser près de 100 valeurs de multiplication.
               </p>
             </div>
           </article>
@@ -49,25 +49,25 @@
               <span className="flex-shrink-0 w-8 h-8 bg-educational-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 2
               </span>
-              <span>apprentissage Repetitivo y Gradual</span>
+              <span>Apprentissage Répétitif et Graduel</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                No es posible ni necesario aprender las tablas de multiplicar en un día. 
-                El enfoque más efectivo es la repetición gradual y regular:
+                Il n'est ni possible ni nécessaire d'apprendre les tables de multiplication en un jour. 
+                L'approche la plus efficace est la répétition graduelle et régulière :
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Comienza con pasos pequeños:</strong> Primero inicia con números 
-                  fáciles como 1, 2, 5 y 10
+                  <strong>Commencez par de petites étapes :</strong> Commencez d'abord par des nombres 
+                  faciles comme 1, 2, 5 et 10
                 </li>
                 <li>
                   <strong>10-15 minutes par jour :</strong> El estudio corto y regular es más 
                   efectivo que sesiones largas únicas
                 </li>
                 <li>
-                  <strong>Renforcez les connaissances antÃ©rieures :</strong> Repasa lo aprendido antes 
-                  de pasar a un nuevo número
+                  <strong>Renforcez les connaissances antérieures :</strong> Révisez ce qui a été appris avant 
+                  de passer à un nouveau nombre
                 </li>
                 <li>
                   <strong>Practica con intervalos:</strong> Aumenta la retención repasando 
@@ -112,8 +112,8 @@
                 </li>
               </ul>
               <p>
-                La información aprendida solo leyendo o escuchando sin practicar se olvida 
-                rápidamente. La aplicación activa es la clave fundamental del apprentissage.
+                Les informations apprises uniquement par la lecture ou l'écoute sans pratique sont oubliées 
+                rapidement. L'application active est la clé fondamentale de l'apprentissage.
               </p>
             </div>
           </article>

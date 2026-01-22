@@ -103,7 +103,7 @@ export default function LearningPaths() {
                 Niveau 5
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                ¡A mitad de camino! Domina hasta el 50.
+                À mi-chemin ! Maîtrisez jusqu'au 50.
               </p>
               <div className="text-rose-600 font-medium text-xs group-hover:text-rose-700 flex items-center">
                 Apprendre
@@ -163,7 +163,7 @@ export default function LearningPaths() {
                 Niveau 8
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                ¡Te estás acercando al nivel experto!
+                Vous vous approchez du niveau expert !
               </p>
               <div className="text-yellow-600 font-medium text-xs group-hover:text-yellow-700 flex items-center">
                 Apprendre
@@ -183,7 +183,7 @@ export default function LearningPaths() {
                 Niveau 9
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                ¡Casi completo! Continúa así.
+                Presque terminé ! Continuez comme ça.
               </p>
               <div className="text-lime-600 font-medium text-xs group-hover:text-lime-700 flex items-center">
                 Apprendre
@@ -203,7 +203,7 @@ export default function LearningPaths() {
                 Niveau 10
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                ¡Niveau final! Completa el 100 y conviértete en experto.
+                Niveau final ! Complétez jusqu'à 100 et devenez expert.
               </p>
               <div className="text-emerald-600 font-medium text-xs group-hover:text-emerald-700 flex items-center">
                 Apprendre
@@ -217,9 +217,9 @@ export default function LearningPaths() {
         
         <div className="mt-10 bg-white border-2 border-primary-200 rounded-lg p-6 text-center">
           <p className="text-slate-700 text-lg">
-            <strong className="text-slate-900">Ruta Recomendada:</strong> Comienza con el Niveau 1 (1-10) 
-            y luego completa todos los niveles en orden. Avanza al siguiente nivel después de sentirte 
-            cómodo en cada nivel. ¡Cuando llegues a 100, serás un experto en las tablas de multiplicar!
+            <strong className="text-slate-900">Parcours Recommandé :</strong> Commencez par le Niveau 1 (1-10) 
+            et complétez ensuite tous les niveaux dans l'ordre. Passez au niveau suivant après vous être senti 
+            à l'aise à chaque niveau. Quand vous atteindrez 100, vous serez un expert des tables de multiplication !
           </p>
         </div>
       </div>

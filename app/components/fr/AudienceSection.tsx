@@ -5,12 +5,12 @@ export default function AudienceSection() {
     <section id="audience" className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-6 text-center">
-          ¿Para Quién es Esta Plataforma?
+          Pour Qui est Cette Plateforme ?
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Nuestra plataforma de apprentissage de tablas de multiplicar está diseñada 
-          pour tous avec diffÃ©rents besoins. Ofrecemos recursos y guías especiales para cada audiencia.
+          Notre plateforme d'apprentissage des tables de multiplication est conçue 
+          pour tous avec différents besoins. Nous offrons des ressources et des guides spéciaux pour chaque public.
         </p>
         
         <div className="grid gap-8 md:grid-cols-3">
@@ -22,13 +22,13 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Para Ã©tudiants
+                Pour les Étudiants
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Contenidos diseñados especialmente para Ã©tudiants de primaria y secundaria:
+                Contenus conçus spécialement pour les étudiants du primaire et secondaire :
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -57,7 +57,7 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Cada estudiante tiene un ritmo de apprentissage diferente. ¡Avanza a tu propio ritmo!
+                Chaque étudiant a un rythme d'apprentissage différent. Avancez à votre propre rythme !
               </p>
             </div>
             <Link 
@@ -85,7 +85,7 @@ export default function AudienceSection() {
             
             <div className="space-y-4 text-slate-700">
               <p>
-                ¿Cómo puede apoyar a su hijo en el apprentissage de las tablas de multiplicar?
+                Comment pouvez-vous soutenir votre enfant dans l'apprentissage des tables de multiplication ?
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">

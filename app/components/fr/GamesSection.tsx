@@ -194,7 +194,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Aprende las tablas de multiplicar de forma divertida con juegos. Cada juego ofrece un método de aprendizaje diferente.
+          Apprenez les tables de multiplication de façon amusante avec des jeux. Chaque jeu offre une méthode d'apprentissage différente.
         </p>
 
         {/* Game Selection */}
@@ -205,7 +205,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                 🎯
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">RÃ©ponse Rápida</h3>
-              <p className="text-slate-600 mb-4">¿Cuántas preguntas puedes resolver en 60 segundos?</p>
+              <p className="text-slate-600 mb-4">Combien de questions pouvez-vous résoudre en 60 secondes ?</p>
               <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all">
                 Jugar
               </button>
@@ -295,7 +295,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               ) : (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">¡Jeu TerminÃ©!</h4>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Jeu Terminé !</h4>
                   <p className="text-xl text-slate-600 mb-6">Points Totales: <span className="font-bold text-green-600">{speedScore}</span></p>
                   <button onClick={startSpeedGame} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700">
                     Jugar de Nuevo
@@ -375,8 +375,8 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               {memoryMatches === 6 ? (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">¡FÃ©licitations!</h4>
-                  <p className="text-xl text-slate-600 mb-6">¡Has emparejado todas las cartas!</p>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Félicitations !</h4>
+                  <p className="text-xl text-slate-600 mb-6">Vous avez apparié toutes les cartes !</p>
                   <button onClick={startMemoryGame} className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-pink-700 hover:to-purple-700">
                     Nuevo Jeu
                   </button>
@@ -453,7 +453,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                     disabled={!spaceAnswer}
                     className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-all disabled:opacity-50"
                   >
-                    ¡Despegar! 🚀
+                    Décoller ! 🚀
                   </button>
                 </div>
               </div>
@@ -472,9 +472,9 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                 🎯 Consejos de Jeu
               </h4>
               <p className="text-slate-700">
-                Cada juego utiliza una técnica de aprendizaje diferente. RÃ©ponse Rápida 
-                aumenta tu velocidad, Héroe de las Tables te ayuda a superar niveles de dificultad, 
-                Jeu de Memoria desarrolla el aprendizaje visual y Aventura Espacial aumenta tu motivación.
+                Chaque jeu utilise une technique d'apprentissage différente. Réponse Rapide 
+                augmente votre vitesse, Héros des Tables vous aide à surmonter les niveaux de difficulté, 
+                Jeu de Mémoire développe l'apprentissage visuel et Aventure Spatiale augmente votre motivation.
               </p>
             </div>
           </div>

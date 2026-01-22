@@ -218,19 +218,19 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   <div className={`mt-6 text-center text-xl font-semibold ${
                     feedback === 'correct'   ? 'text-green-600' : 'text-red-600'
                   }`}>
-                    {feedback === 'correct'   ? (
+                    {feedback === 'correct' ? (
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-3xl">✓</span>
-                        <span>¡Excellent  ! ¡RÃ©ponse correcte  !</span>
+                        <span>Excellent ! Réponse correcte !</span>
                       </div>
                     ) : (
                       <div>
                         <div className="flex items-center justify-center gap-2 mb-2">
                           <span className="text-3xl">✗</span>
-                          <span>¡Inténtalo de nuevo  !</span>
+                          <span>Réessayez !</span>
                         </div>
                         <div className="text-base text-slate-600">
-                          RÃ©ponse correcte: {question.num1 * question.num2}
+                          Réponse correcte : {question.num1 * question.num2}
                         </div>
                       </div>
                     )}
@@ -336,7 +336,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 <div className="text-6xl mb-4">
                   {(exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) >= 0.8   ? '🎉' : '👍'}
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900 mb-4">¡Exercice Completado  !</h3>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">Exercice Terminé !</h3>
                 
                 <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-8">
                   <div className="bg-green-50 rounded-lg p-4">

@@ -3,7 +3,7 @@
     <section className="section-container bg-gradient-to-br from-educational-50 to-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          ¿Por Qué es Importante Aprender las Tablas de Multiplicar?
+          Pourquoi est-il Important d'Apprendre les Tables de Multiplication ?
         </h2>
         
         <div className="grid gap-8 md:grid-cols-2">
@@ -19,10 +19,10 @@
               </h3>
             </div>
             <p className="text-slate-700">
-              Los Ã©tudiants que dominan las tablas de multiplicar pueden realizar 
-              cálculos mentalmente en la vida diaria y en matemáticas escolares sin 
-              necesidad de papel y lápiz. Esta habilidad aumenta la velocidad y confianza 
-              al resolver problemas.
+              Les étudiants qui maîtrisent les tables de multiplication peuvent effectuer 
+              des calculs mentalement dans la vie quotidienne et en mathématiques scolaires sans 
+              avoir besoin de papier et crayon. Cette compétence augmente la vitesse et la confiance 
+              lors de la résolution de problèmes.
             </p>
           </article>
           
@@ -52,13 +52,13 @@
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Base para Matemáticas Avanzadas
+                Base pour les Mathématiques Avancées
               </h3>
             </div>
             <p className="text-slate-700">
-              Todas las operaciones de división, fracciones, expresiones algebraicas y 
-              conceptos matemáticos más complejos se basan en el conocimiento de las 
-              tablas de multiplicar. Una base sólida garantiza el éxito en niveles avanzados.
+              Toutes les opérations de division, fractions, expressions algébriques et 
+              concepts mathématiques plus complexes sont basés sur la connaissance des 
+              tables de multiplication. Une base solide garantit le succès aux niveaux avancés.
             </p>
           </article>
           
@@ -70,13 +70,13 @@
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Confianza y Motivación en Matemáticas
+                Confiance et Motivation en Mathématiques
               </h3>
             </div>
             <p className="text-slate-700">
-              Los Ã©tudiants que conocen las tablas de multiplicar desarrollan una 
-              actitud positiva hacia las matemáticas. Esta confianza afecta directamente 
-              el éxito general en las clases de matemáticas y el deseo de aprender.
+              Les étudiants qui connaissent les tables de multiplication développent une 
+              attitude positive envers les mathématiques. Cette confiance affecte directement 
+              le succès général dans les cours de mathématiques et le désir d'apprendre.
             </p>
           </article>
         </div>
