@@ -1259,6 +1259,71 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // French metadata
+  if (locale === 'fr') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataFr[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesFr[num]
+      const description = numberDescriptionsFr[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataFr[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
