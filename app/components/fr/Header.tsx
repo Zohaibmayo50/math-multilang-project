@@ -80,15 +80,15 @@ export default function Header() {
             {/* Rehberler Dropdown */}
             <div className="relative group">
               <button className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium flex items-center gap-1">
-                Guías
+                Guides
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/fr/table-de-multiplication/para-Ã©tudiants" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    👨‍🎓 Pour les Ã‰tudiants
+                  <Link href="/fr/table-de-multiplication/pour-les-eleves" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    👨‍🎓 Pour les Élèves
                   </Link>
                   <Link href="/fr/table-de-multiplication/pour-les-parents" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍👩‍👧‍👦 Pour les Parents
@@ -101,19 +101,19 @@ export default function Header() {
             </div>
 
             <Link 
-              href="/es/tablas-de-multiplicar#pdf-exercises" 
+              href="/fr/table-de-multiplication#pdf-exercises" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
-              Ejercicios PDF
+              Exercices PDF
             </Link>
             <Link 
-              href="/es/tablas-de-multiplicar#games" 
+              href="/fr/table-de-multiplication#games" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
-              Juegos Interactivos
+              Jeux Interactifs
             </Link>
             <Link 
-              href="/es/tablas-de-multiplicar#learning-paths" 
+              href="/fr/table-de-multiplication#learning-paths" 
               className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               Commencer Maintenant 🚀
@@ -185,14 +185,14 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Rehberler Section */}
+          {/* Guides Section */}
           <div className="py-2 border-t border-slate-200">
             <h3 className="px-4 py-2 text-sm font-semibold text-slate-900">
-              📖 Guías
+              📖 Guides
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/fr/table-de-multiplication/para-Ã©tudiants" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
-                👨‍🎓 Pour les Ã‰tudiants
+              <Link href="/fr/table-de-multiplication/pour-les-eleves" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                👨‍🎓 Pour les Élèves
               </Link>
               <Link href="/fr/table-de-multiplication/pour-les-parents" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍👩‍👧‍👦 Pour les Parents
@@ -206,21 +206,21 @@ export default function Header() {
           {/* Other Links */}
           <div className="py-2 border-t border-slate-200">
             <Link 
-              href="/es/tablas-de-multiplicar#pdf-exercises" 
+              href="/fr/table-de-multiplication#pdf-exercises" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all font-medium"
             >
-              📄 Ejercicios PDF
+              📄 Exercices PDF
             </Link>
             <Link 
-              href="/es/tablas-de-multiplicar#games" 
+              href="/fr/table-de-multiplication#games" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all font-medium"
             >
-              🎮 Juegos Interactivos
+              🎮 Jeux Interactifs
             </Link>
             <Link 
-              href="/es/tablas-de-multiplicar#learning-paths" 
+              href="/fr/table-de-multiplication#learning-paths" 
               onClick={closeMobileMenu}
               className="block px-4 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg text-center hover:shadow-lg transition-all"
             >

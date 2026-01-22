@@ -84,13 +84,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Guías Section */}
+          {/* Guides Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guías</h3>
+            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guides</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication/para-Ã©tudiants" className="text-slate-400 hover:text-white transition-colors">
-                  Pour les Ã‰tudiants
+                <Link href="/fr/table-de-multiplication/pour-les-eleves" className="text-slate-400 hover:text-white transition-colors">
+                  Pour les Élèves
                 </Link>
               </li>
               <li>
@@ -106,13 +106,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Práctica Section */}
+          {/* Pratique Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Pratique et Jeux</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fr/table-de-multiplication#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
-                  📄 Ejercicios PDF
+                  📄 Exercices PDF
                 </Link>
               </li>
               <li>
