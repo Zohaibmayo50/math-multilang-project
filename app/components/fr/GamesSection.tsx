@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect } from 'react'
 
@@ -215,8 +215,8 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🏆
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Héroe de las Tables</h3>
-              <p className="text-slate-600 mb-4">Avanza por los niveles y alcanza el campeonato</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Héros des Tables</h3>
+              <p className="text-slate-600 mb-4">Progressez à travers les niveaux et atteignez le championnat</p>
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-purple-700 transition-all">
                 Jugar
               </button>
@@ -227,7 +227,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                 🎮
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">Jeu de Memoria</h3>
-              <p className="text-slate-600 mb-4">Empareja las cartas y multiplica</p>
+              <p className="text-slate-600 mb-4">Associez les cartes et multipliez</p>
               <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-pink-600 hover:to-pink-700 transition-all">
                 Jugar
               </button>
@@ -311,7 +311,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-purple-600">🏆 Héroe de las Tables</h3>
+                <h3 className="text-2xl font-bold text-purple-600">🏆 Héros des Tables</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               

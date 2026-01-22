@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -133,12 +133,12 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     <section id="practice" className="section-container bg-gradient-to-br from-slate-50 to-blue-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          Practica las Tables de Multiplicar
+          Practica les tables de Multiplicar
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Pratiquer es muy importante pour renforcer las tables de multiplication que has aprendido. 
-          Puedes practicar de maniÃ¨re ludique con las siguientes herramientas.
+          Pratiquer est très important pour renforcer les tables de multiplication que vous avez apprises. 
+          Vous pouvez pratiquer de manière ludique avec les outils suivants.
         </p>
 
         {/* Tab Navigation */}
@@ -410,10 +410,10 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 💡 Consejos al Pratiquer
               </h4>
               <p className="text-slate-700">
-                Pratiquer no es solo para ganar velocidad. Piensa cuidadosamente en Chaque questiona, 
+                Pratiquer n'est pas seulement pour gagner de la vitesse. Réfléchissez bien à chaque question, 
                 analiza tus respuestas incorrectas e identifica qué tables de multiplication 
-                te resultan difíciles. La práctica regular de 10-15 minutos al día es el 
-                método más efectivo para el aprendizaje a largo plazo.
+                vous trouvez difficiles. La pratique régulière de 10-15 minutes par jour est le 
+                méthode la plus efficace pour l'apprentissage à long terme.
               </p>
             </div>
           </div>

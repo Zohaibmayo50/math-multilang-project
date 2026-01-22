@@ -1,4 +1,4 @@
-﻿export default function WhyItMatters() {
+export default function WhyItMatters() {
   return (
     <section className="section-container bg-gradient-to-br from-educational-50 to-white">
       <div className="max-w-4xl mx-auto">
@@ -38,7 +38,7 @@
               </h3>
             </div>
             <p className="text-slate-700">
-              Comprender las tablas de multiplicar en lugar de solo memorizarlas permite 
+              Comprendre les tables de multiplication au lieu de simplement les mémoriser permet 
               realizar operaciones tanto rápida como correctamente. Esta habilidad es 
               críticamente importante especialmente en exámenes y situaciones con límite de tiempo.
             </p>

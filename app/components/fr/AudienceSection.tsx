@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 
 export default function AudienceSection() {
   return (
@@ -61,10 +61,10 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/es/tablas-de-multiplicar/para-Ã©tudiants"
+              href="/fr/table-de-multiplication/pour-les-eleves"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
-              Guía para Ã©tudiants
+              Guide pour élèves
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -79,7 +79,7 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Para Padres
+                Pour les Parents
               </h3>
             </div>
             
@@ -110,14 +110,14 @@ export default function AudienceSection() {
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Métodos de seguimiento del progreso</span>
+                  <span>Méthodes de suivi des progrès</span>
                 </li>
               </ul>
               <Link 
-                href="/es/tablas-de-multiplicar/para-padres" 
+                href="/fr/table-de-multiplication/pour-les-parents" 
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium pt-2"
               >
-                Guía para padres
+                Guide pour parents
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -135,13 +135,13 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Para Profesores
+                Pour les Enseignants
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Recursos profesionales para enseñar las tablas de multiplicar en tu aula:
+                Ressources professionnelles pour enseigner les tables de multiplication dans votre classe :
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -170,10 +170,10 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <Link 
-                href="/es/tablas-de-multiplicar/para-profesores" 
+                href="/fr/table-de-multiplication/pour-les-enseignants" 
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium pt-2"
               >
-                Guía para profesores
+                Guide pour enseignants
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -187,10 +187,10 @@ export default function AudienceSection() {
             Apprenons Ensemble
           </h3>
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Esta plataforma está diseñada para ayudar a los Ã©tudiants a comprender 
-            las tablas de multiplicar, a los padres a apoyar a sus hijos y a los 
-            profesores a enseñar de maniÃ¨re efectiva. Todos nos enfocamos en el mismo 
-            objetivo: apprentissage permanente y significativo.
+            Cette plateforme est conçue pour aider les élèves à comprendre 
+            les tables de multiplication, les parents à soutenir leurs enfants et les 
+            enseignants à enseigner de manière efficace. Nous nous concentrons tous sur le même 
+            objectif : apprentissage permanent et significatif.
           </p>
         </div>
       </div>

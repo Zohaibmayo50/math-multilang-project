@@ -1,4 +1,4 @@
-﻿export default function HowToLearn() {
+export default function HowToLearn() {
   return (
     <section className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
@@ -62,7 +62,7 @@
                   faciles comme 1, 2, 5 et 10
                 </li>
                 <li>
-                  <strong>10-15 minutes par jour :</strong> El estudio corto y regular es más 
+                  <strong>10-15 minutes par jour :</strong> L'étude courte et régulière est plus 
                   efectivo que sesiones largas únicas
                 </li>
                 <li>
@@ -76,7 +76,7 @@
               </ul>
               <p>
                 La repetición regular facilita el paso de la información de la memoria a 
-                corto plazo a la memoria a largo plazo y apoya el apprentissage permanente.
+                court terme à la mémoire à long terme y apoya el apprentissage permanente.
               </p>
             </div>
           </article>
@@ -90,25 +90,25 @@
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Comprender la teoría es importante, pero sin práctica no ocurre un 
+                Comprendre la théorie est important, mais sans pratique il n'y a pas de 
                 apprentissage permanente. Beneficios de practicar:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
                   <strong>Recuperación activa:</strong> Intentar recordar activamente en lugar 
-                  de leer pasivamente fortalece el cerebro
+                  que de lire passivement renforce le cerveau
                 </li>
                 <li>
                   <strong>Análisis de errores:</strong> Identifica tus puntos débiles examinando 
-                  las operaciones que hiciste incorrectamente
+                  les opérations que vous avez faites incorrectement
                 </li>
                 <li>
-                  <strong>Desarrollo de velocidad:</strong> Con práctica regular ganas tanto 
-                  precisión como velocidad
+                  <strong>Développement de la vitesse :</strong> Avec une pratique régulière, tu gagnes à la fois 
+                  précision et vitesse
                 </li>
                 <li>
                   <strong>Aplicación en diferentes contextos:</strong> Úsalas en diferentes 
-                  entornos como preguntas, juegos, problemas de la vida diaria
+                  contextes comme des questions, juegos, problemas de la vida diaria
                 </li>
               </ul>
               <p>
@@ -124,9 +124,9 @@
             Recordatorio Importante
           </h4>
           <p className="text-slate-700">
-            Cada niño tiene una velocidad de apprentissage diferente. Tandis que certains apprennent 
-            en una semana, otros pueden tardar varios meses. Lo importante es la continuidad, 
-            la paciencia y avanzar con los métodos correctos. Adopta un enfoque de apoyo en 
+            Cada niño a une vitesse d'apprentissage différente. Tandis que certains apprennent 
+            en une semaine, d'autres peuvent prendre plusieurs mois. L'important est la continuité, 
+            la patience et avancer avec les bonnes méthodes. Adoptez une approche de soutien dans 
             lugar de presionar.
           </p>
         </div>

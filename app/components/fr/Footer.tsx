@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -26,27 +26,27 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fr/table-de-multiplication/1-10" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 1-10
+                  Tables 1-10
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/11-20" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 11-20
+                  Tables 11-20
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/21-30" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 21-30
+                  Tables 21-30
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/31-40" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 31-40
+                  Tables 31-40
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/41-50" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 41-50
+                  Tables 41-50
                 </Link>
               </li>
             </ul>
@@ -58,27 +58,27 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fr/table-de-multiplication/51-60" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 51-60
+                  Tables 51-60
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/61-70" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 61-70
+                  Tables 61-70
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/71-80" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 71-80
+                  Tables 71-80
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/81-90" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 81-90
+                  Tables 81-90
                 </Link>
               </li>
               <li>
                 <Link href="/fr/table-de-multiplication/91-100" className="text-slate-400 hover:text-white transition-colors">
-                  Tablas 91-100
+                  Tables 91-100
                 </Link>
               </li>
             </ul>
@@ -94,13 +94,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/para-padres" className="text-slate-400 hover:text-white transition-colors">
-                  Para Padres
+                <Link href="/fr/table-de-multiplication/pour-les-parents" className="text-slate-400 hover:text-white transition-colors">
+                  Pour les Parents
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/para-profesores" className="text-slate-400 hover:text-white transition-colors">
-                  Para Profesores
+                <Link href="/fr/table-de-multiplication/pour-les-enseignants" className="text-slate-400 hover:text-white transition-colors">
+                  Pour les Enseignants
                 </Link>
               </li>
             </ul>
@@ -111,28 +111,28 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/es/tablas-de-multiplicar#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/fr/table-de-multiplication#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
                   📄 Ejercicios PDF
                 </Link>
               </li>
               <li>
-                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
-                  ⚡ Juego de Velocidad
+                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
+                  ⚡ Jeu de Vitesse
                 </Link>
               </li>
               <li>
-                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
-                  🦸 Juego del Héroe
+                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
+                  🦸 Jeu du Héros
                 </Link>
               </li>
               <li>
-                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
-                  🧠 Juego de Memoria
+                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
+                  🧠 Jeu de Mémoire
                 </Link>
               </li>
               <li>
-                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
-                  🚀 Juego Espacial
+                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
+                  🚀 Jeu Spatial
                 </Link>
               </li>
             </ul>

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useRef } from 'react'
 
@@ -241,7 +241,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     />
                     <div>
                       <div className="font-medium text-slate-900">Mixto</div>
-                      <div className="text-sm text-slate-600">Aleatorio de todas las tablas</div>
+                      <div className="text-sm text-slate-600">Aléatoire de toutes les tables</div>
                     </div>
                   </label>
                 </div>
@@ -386,7 +386,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div className="mt-4 p-3 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-sm text-blue-900">
-                  💡 <strong>Consejo:</strong> Puedes guardar como PDF usando la función de impresión de tu navegador.
+                  💡 <strong>Conseil :</strong> Vous pouvez enregistrer au format PDF en utilisant la fonction d'impression de votre navigateur.
                 </p>
               </div>
             </div>
@@ -424,7 +424,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             <div className="text-3xl mb-3">📱</div>
             <h4 className="font-bold text-slate-900 mb-2">Compatible con Móviles</h4>
             <p className="text-sm text-slate-600">
-              Puedes imprimir fácilmente desde teléfono, tableta o computadora.
+              Vous pouvez imprimer facilement depuis téléphone, tablette ou ordinateur.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
