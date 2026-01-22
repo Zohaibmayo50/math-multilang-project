@@ -5,16 +5,16 @@ export default function LearningPaths() {
     <section id="learning-paths" className="section-container bg-gradient-to-br from-primary-50 via-white to-educational-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-slate-900 mb-6 text-center">
-          Comienza a Aprender las Tables de Multiplicar
+          Commencez à Apprendre les Tables de Multiplication
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Ruta de aprendizaje completa de tablas de multiplicar dividida en 10 niveles. 
-          Cada nivel incluye explicaciones detalladas, modÃ¨les y estrategias de aprendizaje.
+          Parcours d'apprentissage complet de tablas de multiplicar divisé en 10 niveaux. 
+          Chaque niveau inclut explications détaillées, modÃ¨les y stratégies d'apprentissage.
         </p>
         
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          <Link href="/es/tablas-de-multiplicar/1-10" className="link-card group">
+          <Link href="/fr/table-de-multiplication/1-10" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">1-10</span>
@@ -23,10 +23,10 @@ export default function LearningPaths() {
                 Niveau 1
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Tables básicas. Punto de partida para todos los estudiantes.
+                Tables de base. Point de départ pour tous les étudiants.
               </p>
               <div className="text-blue-600 font-medium text-xs group-hover:text-blue-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -34,7 +34,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/11-20" className="link-card group">
+          <Link href="/fr/table-de-multiplication/11-20" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">11-20</span>
@@ -43,10 +43,10 @@ export default function LearningPaths() {
                 Niveau 2
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Desarrolla habilidad con números de dos dígitos.
+                Développe la compétence avec nombres à deux chiffres.
               </p>
               <div className="text-indigo-600 font-medium text-xs group-hover:text-indigo-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -54,7 +54,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/21-30" className="link-card group">
+          <Link href="/fr/table-de-multiplication/21-30" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">21-30</span>
@@ -63,10 +63,10 @@ export default function LearningPaths() {
                 Niveau 3
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Niveau intermedio y modÃ¨les de multiplicación.
+                Niveau intermédiaire y modÃ¨les de multiplication.
               </p>
               <div className="text-purple-600 font-medium text-xs group-hover:text-purple-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -74,7 +74,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/31-40" className="link-card group">
+          <Link href="/fr/table-de-multiplication/31-40" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">31-40</span>
@@ -86,7 +86,7 @@ export default function LearningPaths() {
                 Habilidades avanzadas de cálculo mental.
               </p>
               <div className="text-pink-600 font-medium text-xs group-hover:text-pink-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -94,7 +94,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/41-50" className="link-card group">
+          <Link href="/fr/table-de-multiplication/41-50" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-rose-500 to-rose-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">41-50</span>
@@ -106,7 +106,7 @@ export default function LearningPaths() {
                 ¡A mitad de camino! Domina hasta el 50.
               </p>
               <div className="text-rose-600 font-medium text-xs group-hover:text-rose-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -114,7 +114,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/51-60" className="link-card group">
+          <Link href="/fr/table-de-multiplication/51-60" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">51-60</span>
@@ -123,10 +123,10 @@ export default function LearningPaths() {
                 Niveau 6
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Niveau avanzado. Trabajo con números grandes.
+                Niveau avancé. Travail avec de grands nombres.
               </p>
               <div className="text-orange-600 font-medium text-xs group-hover:text-orange-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -134,7 +134,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/61-70" className="link-card group">
+          <Link href="/fr/table-de-multiplication/61-70" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">61-70</span>
@@ -143,10 +143,10 @@ export default function LearningPaths() {
                 Niveau 7
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Desarrolla estrategias avanzadas de multiplicación.
+                Développe des stratégies avancées de multiplication.
               </p>
               <div className="text-amber-600 font-medium text-xs group-hover:text-amber-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -154,7 +154,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/71-80" className="link-card group">
+          <Link href="/fr/table-de-multiplication/71-80" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">71-80</span>
@@ -166,7 +166,7 @@ export default function LearningPaths() {
                 ¡Te estás acercando al nivel experto!
               </p>
               <div className="text-yellow-600 font-medium text-xs group-hover:text-yellow-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -174,7 +174,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/81-90" className="link-card group">
+          <Link href="/fr/table-de-multiplication/81-90" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-lime-500 to-lime-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-lg font-bold text-white">81-90</span>
@@ -186,7 +186,7 @@ export default function LearningPaths() {
                 ¡Casi completo! Continúa así.
               </p>
               <div className="text-lime-600 font-medium text-xs group-hover:text-lime-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -194,7 +194,7 @@ export default function LearningPaths() {
             </div>
           </Link>
           
-          <Link href="/es/tablas-de-multiplicar/91-100" className="link-card group">
+          <Link href="/fr/table-de-multiplication/91-100" className="link-card group">
             <div className="flex flex-col h-full">
               <div className="w-20 h-10 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
                 <span className="text-base font-bold text-white">91-100</span>
@@ -206,7 +206,7 @@ export default function LearningPaths() {
                 ¡Niveau final! Completa el 100 y conviértete en experto.
               </p>
               <div className="text-emerald-600 font-medium text-xs group-hover:text-emerald-700 flex items-center">
-                Aprender
+                Apprendre
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>

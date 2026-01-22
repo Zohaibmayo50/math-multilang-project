@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -19,7 +19,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/es/tablas-de-multiplicar" className="flex items-center gap-3 group">
+          <Link href="/fr/table-de-multiplication" className="flex items-center gap-3 group">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-lg">
               <span className="text-xl md:text-2xl font-bold text-white">×</span>
             </div>
@@ -27,7 +27,7 @@ export default function Header() {
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 Tablas de Multiplicar
               </span>
-              <span className="text-xs text-slate-500 hidden sm:block">Aprende, Comprende, Practica</span>
+              <span className="text-xs text-slate-500 hidden sm:block">Apprenez, Comprenez, Pratiquez</span>
             </div>
           </Link>
 
@@ -43,34 +43,34 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/es/tablas-de-multiplicar/1-10" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/1-10" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 1-10
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/11-20" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/11-20" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 11-20
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/21-30" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/21-30" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 21-30
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/31-40" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/31-40" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 31-40
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/41-50" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/41-50" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 41-50
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/51-60" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/51-60" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 51-60
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/61-70" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/61-70" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 61-70
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/71-80" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/71-80" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 71-80
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/81-90" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/81-90" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 81-90
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/91-100" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/91-100" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     Tablas 91-100
                   </Link>
                 </div>
@@ -87,13 +87,13 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/es/tablas-de-multiplicar/para-estudiantes" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/para-estudiantes" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍🎓 Para Estudiantes
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/para-padres" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/para-padres" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍👩‍👧‍👦 Para Padres
                   </Link>
-                  <Link href="/es/tablas-de-multiplicar/para-profesores" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/fr/table-de-multiplication/para-profesores" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👩‍🏫 Para Profesores
                   </Link>
                 </div>
@@ -152,34 +152,34 @@ export default function Header() {
               📚 Tablas de Multiplicar
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/es/tablas-de-multiplicar/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 1-10
               </Link>
-              <Link href="/es/tablas-de-multiplicar/11-20" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/11-20" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 11-20
               </Link>
-              <Link href="/es/tablas-de-multiplicar/21-30" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/21-30" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 21-30
               </Link>
-              <Link href="/es/tablas-de-multiplicar/31-40" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/31-40" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 31-40
               </Link>
-              <Link href="/es/tablas-de-multiplicar/41-50" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/41-50" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 41-50
               </Link>
-              <Link href="/es/tablas-de-multiplicar/51-60" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/51-60" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 51-60
               </Link>
-              <Link href="/es/tablas-de-multiplicar/61-70" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/61-70" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 61-70
               </Link>
-              <Link href="/es/tablas-de-multiplicar/71-80" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/71-80" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 71-80
               </Link>
-              <Link href="/es/tablas-de-multiplicar/81-90" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/81-90" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 81-90
               </Link>
-              <Link href="/es/tablas-de-multiplicar/91-100" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/91-100" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Tablas 91-100
               </Link>
             </div>
@@ -191,13 +191,13 @@ export default function Header() {
               📖 Guías
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/es/tablas-de-multiplicar/para-estudiantes" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/para-estudiantes" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍🎓 Para Estudiantes
               </Link>
-              <Link href="/es/tablas-de-multiplicar/para-padres" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/para-padres" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍👩‍👧‍👦 Para Padres
               </Link>
-              <Link href="/es/tablas-de-multiplicar/para-profesores" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/fr/table-de-multiplication/para-profesores" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👩‍🏫 Para Profesores
               </Link>
             </div>

@@ -1,4 +1,4 @@
-export default function WhyItMatters() {
+﻿export default function WhyItMatters() {
   return (
     <section className="section-container bg-gradient-to-br from-educational-50 to-white">
       <div className="max-w-4xl mx-auto">
@@ -19,7 +19,7 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Los estudiantes que dominan las tablas de multiplicar pueden realizar 
+              Los Ã©tudiants que dominan las tablas de multiplicar pueden realizar 
               cálculos mentalmente en la vida diaria y en matemáticas escolares sin 
               necesidad de papel y lápiz. Esta habilidad aumenta la velocidad y confianza 
               al resolver problemas.
@@ -74,7 +74,7 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Los estudiantes que conocen las tablas de multiplicar desarrollan una 
+              Los Ã©tudiants que conocen las tablas de multiplicar desarrollan una 
               actitud positiva hacia las matemáticas. Esta confianza afecta directamente 
               el éxito general en las clases de matemáticas y el deseo de aprender.
             </p>

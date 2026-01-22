@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export default function AudienceSection() {
   return (
@@ -9,8 +9,8 @@ export default function AudienceSection() {
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Nuestra plataforma de aprendizaje de tablas de multiplicar está diseñada 
-          para todos con diferentes necesidades. Ofrecemos recursos y guías especiales para cada audiencia.
+          Nuestra plataforma de apprentissage de tablas de multiplicar está diseñada 
+          pour tous avec diffÃ©rents besoins. Ofrecemos recursos y guías especiales para cada audiencia.
         </p>
         
         <div className="grid gap-8 md:grid-cols-3">
@@ -22,13 +22,13 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Para Estudiantes
+                Para Ã©tudiants
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Contenidos diseñados especialmente para estudiantes de primaria y secundaria:
+                Contenidos diseñados especialmente para Ã©tudiants de primaria y secundaria:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
@@ -41,13 +41,13 @@ export default function AudienceSection() {
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Camino de aprendizaje paso a paso</span>
+                  <span>Camino de apprentissage paso a paso</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Materiales de aprendizaje visual</span>
+                  <span>Materiales de apprentissage visual</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -57,14 +57,14 @@ export default function AudienceSection() {
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Cada estudiante tiene un ritmo de aprendizaje diferente. ¡Avanza a tu propio ritmo!
+                Cada estudiante tiene un ritmo de apprentissage diferente. ¡Avanza a tu propio ritmo!
               </p>
             </div>
             <Link 
-              href="/es/tablas-de-multiplicar/para-estudiantes"
+              href="/es/tablas-de-multiplicar/para-Ã©tudiants"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
-              Guía para estudiantes
+              Guía para Ã©tudiants
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -85,14 +85,14 @@ export default function AudienceSection() {
             
             <div className="space-y-4 text-slate-700">
               <p>
-                ¿Cómo puede apoyar a su hijo en el aprendizaje de las tablas de multiplicar?
+                ¿Cómo puede apoyar a su hijo en el apprentissage de las tablas de multiplicar?
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Estrategias de aprendizaje efectivas</span>
+                  <span>Estrategias de apprentissage efectivas</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
@@ -184,13 +184,13 @@ export default function AudienceSection() {
         
         <div className="mt-12 bg-white rounded-lg shadow-md p-8 text-center">
           <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-            Aprendemos Juntos
+            Apprenons Ensemble
           </h3>
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Esta plataforma está diseñada para ayudar a los estudiantes a comprender 
+            Esta plataforma está diseñada para ayudar a los Ã©tudiants a comprender 
             las tablas de multiplicar, a los padres a apoyar a sus hijos y a los 
-            profesores a enseñar de manera efectiva. Todos nos enfocamos en el mismo 
-            objetivo: aprendizaje permanente y significativo.
+            profesores a enseñar de maniÃ¨re efectiva. Todos nos enfocamos en el mismo 
+            objetivo: apprentissage permanente y significativo.
           </p>
         </div>
       </div>

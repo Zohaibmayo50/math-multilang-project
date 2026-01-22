@@ -3,38 +3,38 @@ export default function DefinitionSection() {
     <section id="definition" className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-8 text-center">
-          ¿Qué son las Tablas de Multiplicar?
+          Que sont les Tables de Multiplication ?
         </h2>
         
         <div className="space-y-6 text-slate-700">
           <p>
-            Las tablas de multiplicar son una herramienta matemática que muestra de forma 
-            ordenada los resultados de multiplicar dos números entre sí. Generalmente incluyen 
-            las multiplicaciones de los números del 1 al 10, aunque en el aprendizaje avanzado 
-            pueden extenderse hasta el 100.
+            Les tables de multiplication sont un outil mathématique qui montre de manière 
+            organisée les résultats de la multiplication de deux nombres entre eux. Généralement elles incluent 
+            les multiplications des nombres de 1 à 10, bien que dans l'apprentissage avancé 
+            elles puissent s'étendre jusqu'à 100.
           </p>
           
           <p>
-            Por ejemplo, 3 × 4 = 12 es parte de las tablas de multiplicar. 
-            Esta expresión significa "el número 3 sumado 4 veces" o "el número 4 sumado 3 veces". 
-            Las tablas de multiplicar nos permiten realizar este tipo de operaciones de manera 
-            rápida y práctica.
+            Par exemple, 3 × 4 = 12 fait partie des tables de multiplication. 
+            Cette expression signifie "le nombre 3 additionné 4 fois" ou "le nombre 4 additionné 3 fois". 
+            Les tables de multiplication nous permettent de réaliser ce type d'opérations de manière 
+            rapide et pratique.
           </p>
           
           <p>
-            Las tablas de multiplicar no son solo una herramienta de cálculo, sino también un 
-            sistema de aprendizaje que nos ayuda a comprender los patrones y relaciones entre 
-            los números. Cada número tiene un orden y una lógica específica en su tabla de multiplicar.
+            Les tables de multiplication ne sont pas seulement un outil de calcul, mais aussi un 
+            système d'apprentissage qui nous aide à comprendre les modèles et les relations entre 
+            les nombres. Chaque nombre a un ordre et une logique spécifique dans sa table de multiplication.
           </p>
           
           <div className="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg mt-8">
             <p className="font-medium text-slate-900">
-              Definición Fundamental:
+              Définition Fondamentale :
             </p>
             <p className="mt-2">
-              Las tablas de multiplicar son una herramienta educativa fundamental que muestra 
-              sistemáticamente los resultados de las operaciones de multiplicación, desarrolla 
-              las habilidades de matemática mental de los estudiantes y apoya el pensamiento matemático.
+              Les tables de multiplication sont un outil éducatif fondamental qui montre 
+              systématiquement les résultats des opérations de multiplication, développe 
+              les compétences en calcul mental des étudiants et soutient la pensée mathématique.
             </p>
           </div>
         </div>

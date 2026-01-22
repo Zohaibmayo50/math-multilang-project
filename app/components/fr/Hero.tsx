@@ -22,7 +22,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-sm border border-blue-100 mb-6">
             <span className="text-2xl">🎓</span>
-            <span className="text-sm font-medium text-blue-700">Del 1 al 100 - Aprendizaje Divertido</span>
+            <span className="text-sm font-medium text-blue-700">De 1 à 100 - Apprentissage Amusant</span>
           </div>
 
           {/* H1 - Main Heading */}
@@ -31,15 +31,15 @@ export default function Hero() {
               Tablas de Multiplicar
             </span>
             <br />
-            <span className="text-slate-800">Aprende, Comprende y Practica</span>
+            <span className="text-slate-800">Apprenez, Comprenez et Pratiquez</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Las tablas de multiplicar son uno de los pilares fundamentales de las matemáticas. 
-            En esta plataforma, no solo <span className="font-semibold text-blue-600">memorizarás las tablas</span>, 
-            sino que también las <span className="font-semibold text-indigo-600">comprenderás completamente</span> 
-            y las aprenderás de forma permanente con práctica regular.
+            Les tables de multiplication sont l'un des piliers fondamentaux des mathématiques. 
+            Sur cette plateforme, vous ne <span className="font-semibold text-blue-600">mémoriserez pas seulement les tables</span>, 
+            mais vous les <span className="font-semibold text-indigo-600">comprendrez complètement</span> 
+            et les apprendrez de façon permanente avec une pratique régulière.
           </p>
 
           {/* CTA Buttons */}
@@ -48,7 +48,7 @@ export default function Hero() {
               href="#learning-paths" 
               className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2"
             >
-              <span>Comenzar a Aprender</span>
+              <span>Commencer à Apprendre</span>
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -57,7 +57,7 @@ export default function Hero() {
               href="#definition" 
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-2xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border border-blue-100"
             >
-              ¿Cómo Funciona?
+Comment ça Fonctionne ?
             </a>
           </div>
 

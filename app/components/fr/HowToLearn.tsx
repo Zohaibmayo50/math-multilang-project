@@ -1,9 +1,9 @@
-export default function HowToLearn() {
+﻿export default function HowToLearn() {
   return (
     <section className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          ¿Cómo Aprender las Tablas de Multiplicar de Forma Efectiva?
+          ¿Cómo Aprender las Tablas de Multiplicar de faÃ§on Efectiva?
         </h2>
         
         <div className="space-y-12">
@@ -12,7 +12,7 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 1
               </span>
-              <span>Aprender Comprendiendo los Patrones</span>
+              <span>Apprendre en Comprenant les ModÃ¨les</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
@@ -24,17 +24,17 @@ export default function HowToLearn() {
                   <strong>Múltiplos de 2:</strong> Siempre son números pares (2, 4, 6, 8...)
                 </li>
                 <li>
-                  <strong>Múltiplos de 5:</strong> Siempre terminan en 0 o 5 (5, 10, 15, 20...)
+                  <strong>Múltiplos de 5:</strong> Se terminent toujours par 0 ou 5 (5, 10, 15, 20...)
                 </li>
                 <li>
                   <strong>Múltiplos de 9:</strong> La suma de sus dígitos siempre es múltiplo de 9 
                   (18: 1+8=9, 27: 2+7=9)
                 </li>
                 <li>
-                  <strong>Múltiplos de 10:</strong> Siempre terminan en 0 (10, 20, 30...)
+                  <strong>Múltiplos de 10:</strong> Se terminent toujours par 0 (10, 20, 30...)
                 </li>
                 <li>
-                  <strong>Propiedad conmutativa:</strong> 3 × 4 = 4 × 3 (El orden no afecta el resultado)
+                  <strong>PropriÃ©tÃ© commutative :</strong> 3 × 4 = 4 × 3 (L'ordre n'affecte pas le rÃ©sultat)
                 </li>
               </ul>
               <p>
@@ -49,7 +49,7 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-educational-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 2
               </span>
-              <span>Aprendizaje Repetitivo y Gradual</span>
+              <span>apprentissage Repetitivo y Gradual</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
@@ -62,11 +62,11 @@ export default function HowToLearn() {
                   fáciles como 1, 2, 5 y 10
                 </li>
                 <li>
-                  <strong>10-15 minutos diarios:</strong> El estudio corto y regular es más 
+                  <strong>10-15 minutes par jour :</strong> El estudio corto y regular es más 
                   efectivo que sesiones largas únicas
                 </li>
                 <li>
-                  <strong>Refuerza conocimientos previos:</strong> Repasa lo aprendido antes 
+                  <strong>Renforcez les connaissances antÃ©rieures :</strong> Repasa lo aprendido antes 
                   de pasar a un nuevo número
                 </li>
                 <li>
@@ -76,7 +76,7 @@ export default function HowToLearn() {
               </ul>
               <p>
                 La repetición regular facilita el paso de la información de la memoria a 
-                corto plazo a la memoria a largo plazo y apoya el aprendizaje permanente.
+                corto plazo a la memoria a largo plazo y apoya el apprentissage permanente.
               </p>
             </div>
           </article>
@@ -86,12 +86,12 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 3
               </span>
-              <span>Aprender Practicando</span>
+              <span>Apprendre en Pratiquant</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
                 Comprender la teoría es importante, pero sin práctica no ocurre un 
-                aprendizaje permanente. Beneficios de practicar:
+                apprentissage permanente. Beneficios de practicar:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
@@ -113,7 +113,7 @@ export default function HowToLearn() {
               </ul>
               <p>
                 La información aprendida solo leyendo o escuchando sin practicar se olvida 
-                rápidamente. La aplicación activa es la clave fundamental del aprendizaje.
+                rápidamente. La aplicación activa es la clave fundamental del apprentissage.
               </p>
             </div>
           </article>
@@ -124,7 +124,7 @@ export default function HowToLearn() {
             Recordatorio Importante
           </h4>
           <p className="text-slate-700">
-            Cada niño tiene una velocidad de aprendizaje diferente. Mientras algunos aprenden 
+            Cada niño tiene una velocidad de apprentissage diferente. Tandis que certains apprennent 
             en una semana, otros pueden tardar varios meses. Lo importante es la continuidad, 
             la paciencia y avanzar con los métodos correctos. Adopta un enfoque de apoyo en 
             lugar de presionar.

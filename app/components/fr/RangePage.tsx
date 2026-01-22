@@ -157,7 +157,7 @@ export default function RangePage({
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm text-indigo-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-indigo-100"
               >
                 <span className="text-xl">🎮</span>
-                <span>Aprender Jugando</span>
+                <span>Apprendre en Jouant</span>
               </a>
             </div>
           </div>
