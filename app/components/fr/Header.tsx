@@ -7,7 +7,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
+    setMobileMenuOpen(  !mobileMenuOpen)
   }
 
   const closeMobileMenu = () => {
@@ -25,7 +25,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Tablas de Multiplicar
+                tables de multiplication
               </span>
               <span className="text-xs text-slate-500 hidden sm:block">Apprenez, Comprenez, Pratiquez</span>
             </div>
@@ -36,7 +36,7 @@ export default function Header() {
             {/* Multiplication Tables Dropdown */}
             <div className="relative group">
               <button className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium flex items-center gap-1">
-                Tablas de Multiplicar
+                tables de multiplication
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -87,8 +87,8 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/fr/table-de-multiplication/para-estudiantes" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    👨‍🎓 Para Estudiantes
+                  <Link href="/fr/table-de-multiplication/para-Ã©tudiants" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    👨‍🎓 Pour les Ã‰tudiants
                   </Link>
                   <Link href="/fr/table-de-multiplication/para-padres" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍👩‍👧‍👦 Para Padres
@@ -116,7 +116,7 @@ export default function Header() {
               href="/es/tablas-de-multiplicar#learning-paths" 
               className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
-              Comenzar Ahora 🚀
+              Commencer Maintenant 🚀
             </Link>
           </div>
 
@@ -126,7 +126,7 @@ export default function Header() {
             className="md:hidden p-2 text-slate-700 hover:bg-blue-50 rounded-lg transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? (
+            {mobileMenuOpen   ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -142,14 +142,14 @@ export default function Header() {
       {/* Mobile Menu */}
       <div 
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          mobileMenuOpen   ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-2 bg-white border-t border-blue-100">
           {/* Multiplication Tables Section */}
           <div className="py-2">
             <h3 className="px-4 py-2 text-sm font-semibold text-slate-900 border-b border-slate-200">
-              📚 Tablas de Multiplicar
+              📚 tables de multiplication
             </h3>
             <div className="mt-2 space-y-1">
               <Link href="/fr/table-de-multiplication/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
@@ -191,8 +191,8 @@ export default function Header() {
               📖 Guías
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/fr/table-de-multiplication/para-estudiantes" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
-                👨‍🎓 Para Estudiantes
+              <Link href="/fr/table-de-multiplication/para-Ã©tudiants" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                👨‍🎓 Pour les Ã‰tudiants
               </Link>
               <Link href="/fr/table-de-multiplication/para-padres" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍👩‍👧‍👦 Para Padres
@@ -224,7 +224,7 @@ export default function Header() {
               onClick={closeMobileMenu}
               className="block px-4 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg text-center hover:shadow-lg transition-all"
             >
-              Comenzar Ahora 🚀
+              Commencer Maintenant 🚀
             </Link>
           </div>
         </div>

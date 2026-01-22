@@ -6,8 +6,8 @@ import Link from 'next/link'
 type ExerciseType = 'easy' | 'medium' | 'hard' | 'expert' | null
 
 interface PracticePreviewProps {
-  rangeStart?: number
-  rangeEnd?: number
+  rangeStart  ?: number
+  rangeEnd  ?: number
 }
 
 export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: PracticePreviewProps) {
@@ -39,9 +39,9 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     const correctAnswer = question.num1 * question.num2
     const isCorrect = parseInt(userAnswer) === correctAnswer
     
-    setFeedback(isCorrect ? 'correct' : 'wrong')
+    setFeedback(isCorrect   ? 'correct' : 'wrong')
     setScore(prev => ({
-      correct: prev.correct + (isCorrect ? 1 : 0),
+      correct: prev.correct + (isCorrect   ? 1 : 0),
       total: prev.total + 1
     }))
 
@@ -105,25 +105,25 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
   const exercises = [
     {
       level: 'Fácil',
-      range: rangeStart === rangeEnd ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${Math.min(rangeStart + 4, rangeEnd)}`,
+      range: rangeStart === rangeEnd   ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${Math.min(rangeStart + 4, rangeEnd)}`,
       questions: '20 Questions',
       color: 'bg-green-100 text-green-700 border-green-300'
     },
     {
       level: 'Moyen',
-      range: rangeStart === rangeEnd ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${Math.min(rangeStart + 7, rangeEnd)}`,
+      range: rangeStart === rangeEnd   ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${Math.min(rangeStart + 7, rangeEnd)}`,
       questions: '30 Questions',
       color: 'bg-yellow-100 text-yellow-700 border-yellow-300'
     },
     {
       level: 'Difícil',
-      range: rangeStart === rangeEnd ? `Table de ${rangeStart}` : `Tables ${Math.max(rangeStart, rangeEnd - 5)}-${rangeEnd}`,
+      range: rangeStart === rangeEnd   ? `Table de ${rangeStart}` : `Tables ${Math.max(rangeStart, rangeEnd - 5)}-${rangeEnd}`,
       questions: '40 Questions',
       color: 'bg-orange-100 text-orange-700 border-orange-300'
     },
     {
       level: 'Expert',
-      range: rangeStart === rangeEnd ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${rangeEnd}`,
+      range: rangeStart === rangeEnd   ? `Table de ${rangeStart}` : `Tables ${rangeStart}-${rangeEnd}`,
       questions: '50 Questions',
       color: 'bg-red-100 text-red-700 border-red-300'
     }
@@ -137,7 +137,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Pratiquer es muy importante pour renforcer las tablas de multiplicar que has aprendido. 
+          Pratiquer es muy importante pour renforcer las tables de multiplication que has aprendido. 
           Puedes practicar de maniÃ¨re ludique con las siguientes herramientas.
         </p>
 
@@ -148,7 +148,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
               onClick={() => setActiveTab('quick')}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 activeTab === 'quick'
-                  ? 'bg-blue-600 text-white shadow-md'
+                    ? 'bg-blue-600 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -158,7 +158,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
               onClick={() => setActiveTab('exercises')}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 activeTab === 'exercises'
-                  ? 'bg-blue-600 text-white shadow-md'
+                    ? 'bg-blue-600 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -183,7 +183,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 <div className="text-center">
                   <div className="text-sm text-slate-600 mb-1">Éxito</div>
                   <div className="text-2xl font-bold text-purple-600">
-                    {score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0}%
+                    {score.total > 0   ? Math.round((score.correct / score.total) * 100) : 0}%
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-12 mb-6">
                 <div className="text-center mb-8">
                   <div className="text-6xl font-bold text-slate-800 mb-4">
-                    {question.num1} × {question.num2} = ?
+                    {question.num1} × {question.num2} =   ?
                   </div>
                 </div>
 
@@ -201,13 +201,13 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={userAnswer}
                     onChange={(e) => setUserAnswer(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Tu respuesta"
+                    placeholder="Tu rÃ©ponse"
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     disabled={feedback === 'correct'}
                   />
                   <button
                     onClick={checkAnswer}
-                    disabled={!userAnswer || feedback === 'correct'}
+                    disabled={  !userAnswer || feedback === 'correct'}
                     className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                   >
                     Verificar
@@ -216,21 +216,21 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
 
                 {feedback && (
                   <div className={`mt-6 text-center text-xl font-semibold ${
-                    feedback === 'correct' ? 'text-green-600' : 'text-red-600'
+                    feedback === 'correct'   ? 'text-green-600' : 'text-red-600'
                   }`}>
-                    {feedback === 'correct' ? (
+                    {feedback === 'correct'   ? (
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-3xl">✓</span>
-                        <span>¡Excellent! ¡RÃ©ponse correcta!</span>
+                        <span>¡Excellent  ! ¡RÃ©ponse correcte  !</span>
                       </div>
                     ) : (
                       <div>
                         <div className="flex items-center justify-center gap-2 mb-2">
                           <span className="text-3xl">✗</span>
-                          <span>¡Inténtalo de nuevo!</span>
+                          <span>¡Inténtalo de nuevo  !</span>
                         </div>
                         <div className="text-base text-slate-600">
-                          RÃ©ponse correcta: {question.num1 * question.num2}
+                          RÃ©ponse correcte: {question.num1 * question.num2}
                         </div>
                       </div>
                     )}
@@ -249,7 +249,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
         )}
 
         {/* Exercises Tab */}
-        {activeTab === 'exercises' && !activeExercise && (
+        {activeTab === 'exercises' &&   !activeExercise && (
           <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
             {exercises.map((exercise, index) => (
               <div 
@@ -276,7 +276,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
         )}
 
         {/* Active Exercise */}
-        {activeExercise && !exerciseCompleted && (
+        {activeExercise &&   !exerciseCompleted && (
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
@@ -303,7 +303,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
 
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-12 mb-6">
                 <div className="text-6xl font-bold text-center text-slate-800 mb-8">
-                  {exerciseQuestions[currentQuestionIndex].num1} × {exerciseQuestions[currentQuestionIndex].num2} = ?
+                  {exerciseQuestions[currentQuestionIndex].num1} × {exerciseQuestions[currentQuestionIndex].num2} =   ?
                 </div>
                 <div className="flex gap-4 items-center justify-center">
                   <input
@@ -311,16 +311,16 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={exerciseQuestions[currentQuestionIndex].userAnswer}
                     onChange={(e) => updateExerciseAnswer(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && exerciseQuestions[currentQuestionIndex].userAnswer && submitExerciseAnswer()}
-                    placeholder="Tu respuesta"
+                    placeholder="Tu rÃ©ponse"
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     autoFocus
                   />
                   <button
                     onClick={submitExerciseAnswer}
-                    disabled={!exerciseQuestions[currentQuestionIndex].userAnswer}
+                    disabled={  !exerciseQuestions[currentQuestionIndex].userAnswer}
                     className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50"
                   >
-                    {currentQuestionIndex < exerciseQuestions.length - 1 ? 'Siguiente' : 'Finalizar'}
+                    {currentQuestionIndex < exerciseQuestions.length - 1   ? 'Siguiente' : 'Finalizar'}
                   </button>
                 </div>
               </div>
@@ -334,9 +334,9 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="text-center py-8">
                 <div className="text-6xl mb-4">
-                  {(exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) >= 0.8 ? '🎉' : '👍'}
+                  {(exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) >= 0.8   ? '🎉' : '👍'}
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900 mb-4">¡Exercice Completado!</h3>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">¡Exercice Completado  !</h3>
                 
                 <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-8">
                   <div className="bg-green-50 rounded-lg p-4">
@@ -410,8 +410,8 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 💡 Consejos al Pratiquer
               </h4>
               <p className="text-slate-700">
-                Pratiquer no es solo para ganar velocidad. Piensa cuidadosamente en cada pregunta, 
-                analiza tus respuestas incorrectas e identifica qué tablas de multiplicar 
+                Pratiquer no es solo para ganar velocidad. Piensa cuidadosamente en Chaque questiona, 
+                analiza tus respuestas incorrectas e identifica qué tables de multiplication 
                 te resultan difíciles. La práctica regular de 10-15 minutos al día es el 
                 método más efectivo para el aprendizaje a largo plazo.
               </p>

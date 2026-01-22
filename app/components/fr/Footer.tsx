@@ -13,16 +13,16 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
                 <span className="text-xl font-bold text-white">×</span>
               </div>
-              <span className="text-xl font-bold">Tablas de Multiplicar</span>
+              <span className="text-xl font-bold">tables de multiplication</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
               Apprenez les tables de multiplication de 1 à 100 de façon amusante et interactive.
             </p>
           </div>
 
-          {/* Tablas de Multiplicar Section */}
+          {/* tables de multiplication Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tablas de Multiplicar</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">tables de multiplication</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fr/table-de-multiplication/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -89,8 +89,8 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 text-purple-400">Guías</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication/para-estudiantes" className="text-slate-400 hover:text-white transition-colors">
-                  Para Estudiantes
+                <Link href="/fr/table-de-multiplication/para-Ã©tudiants" className="text-slate-400 hover:text-white transition-colors">
+                  Pour les Ã‰tudiants
                 </Link>
               </li>
               <li>
@@ -143,7 +143,7 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} Tablas de Multiplicar. Todos los derechos reservados.
+              © {currentYear} tables de multiplication. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 text-sm text-slate-400">
               <span>Hacemos que las Matemáticas sean Divertidas para Todos 🎓</span>
