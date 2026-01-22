@@ -2437,12 +2437,12 @@ export default async function SlugPage({ params }: PageProps) {
             "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#learningresource`,
             "name": `Ressource d'Apprentissage Table de Multiplication ${slug}`,
             "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "educationalLevel": meta.level === 'beginner' ? 'Débutant' : meta.level === 'intermediate' ? 'Intermédiaire' : 'Avancé',
+            "learningResourceType": ["Ressource Interactive", "Matériel de Pratique", "Jeu Éducatif"],
             "teaches": `Compétences pour comprendre et utiliser la table de multiplication ${start}, ${start + 1}, ... ${end}`,
             "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
             "inLanguage": "fr-FR",
-            "educationalUse": ["practice", "self-study", "homework"],
+            "educationalUse": ["pratique", "auto-apprentissage", "devoirs"],
             "audience": {
               "@type": "EducationalAudience",
               "educationalRole": ["student"]
@@ -2543,12 +2543,12 @@ export default async function SlugPage({ params }: PageProps) {
             "@id": `${baseUrl}/fr/table-de-multiplication/${num}#learningresource`,
             "name": `Ressource d'Apprentissage Table de Multiplication ${num}`,
             "description": numberDescriptionsFr[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
+            "educationalLevel": rangeStart <= 10 ? "Débutant" : rangeStart <= 50 ? "Intermédiaire" : "Avancé",
+            "learningResourceType": ["Ressource Interactive", "Matériel de Pratique", "Jeu Éducatif"],
             "teaches": `Table de multiplication ${num}, ${specialProp.toLowerCase()}, concepts de base de la multiplication`,
             "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
             "inLanguage": "fr-FR",
-            "educationalUse": ["practice", "self-study"],
+            "educationalUse": ["pratique", "auto-apprentissage"],
             "audience": {
               "@type": "EducationalAudience",
               "educationalRole": ["student"]
