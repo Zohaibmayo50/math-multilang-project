@@ -13,7 +13,7 @@ interface NumberPageProps {
   rangeEnd: number
 }
 
-expart default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageProps) {
+export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageProps) {
   const tableRef = useRef<HTMLDivElement>(null)
   
   const colors = [
