@@ -9,8 +9,8 @@ export default function LearningPaths() {
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Parcours d'apprentissage complet de tablas de multiplicar divisé en 10 niveaux. 
-          Chaque niveau inclut explications détaillées, modÃ¨les y stratégies d'apprentissage.
+          Parcours d'apprentissage complet des tables de multiplication divisé en 10 niveaux. 
+          Chaque niveau inclut explications détaillées, modèles et stratégies d'apprentissage.
         </p>
         
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

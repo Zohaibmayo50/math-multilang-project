@@ -28,7 +28,7 @@ export default function Hero() {
           {/* H1 - Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Tablas de Multiplicar
+              Tables de Multiplication
             </span>
             <br />
             <span className="text-slate-800">Apprenez, Comprenez et Pratiquez</span>
@@ -65,15 +65,15 @@ Comment ça Fonctionne ?
           <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-blue-100/50">
               <div className="text-3xl font-bold text-blue-600 mb-1">100</div>
-              <div className="text-sm text-slate-600">Tablas</div>
+              <div className="text-sm text-slate-600">Tables</div>
             </div>
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-indigo-100/50">
               <div className="text-3xl font-bold text-indigo-600 mb-1">10</div>
-              <div className="text-sm text-slate-600">Niveles</div>
+              <div className="text-sm text-slate-600">Niveaux</div>
             </div>
             <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-purple-100/50">
               <div className="text-3xl font-bold text-purple-600 mb-1">∞</div>
-              <div className="text-sm text-slate-600">Ejercicios</div>
+              <div className="text-sm text-slate-600">Exercices</div>
             </div>
           </div>
         </div>
