@@ -3,7 +3,7 @@ export default function HowToLearn() {
     <section className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          Comment Apprendre Efficacement la Table de Multiplication ?
+          ¿Cómo Aprender las Tablas de Multiplicar de Forma Efectiva?
         </h2>
         
         <div className="space-y-12">
@@ -12,34 +12,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 1
               </span>
-              <span>Apprendre en Comprenant les Motifs</span>
+              <span>Aprender Comprendiendo los Patrones</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                La table de multiplication contient de nombreux motifs et régularités. 
-                Découvrir ces motifs permet une compréhension logique plutôt qu'une simple mémorisation :
+                En las tablas de multiplicar existen muchos patrones y órdenes. Descubrir 
+                estos patrones proporciona comprensión lógica en lugar de simple memorización:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Multiples de 2 :</strong> Toujours un nombre pair (2, 4, 6, 8...)
+                  <strong>Múltiplos de 2:</strong> Siempre son números pares (2, 4, 6, 8...)
                 </li>
                 <li>
-                  <strong>Multiples de 5 :</strong> Se terminent toujours par 0 ou 5 (5, 10, 15, 20...)
+                  <strong>Múltiplos de 5:</strong> Siempre terminan en 0 o 5 (5, 10, 15, 20...)
                 </li>
                 <li>
-                  <strong>Multiples de 9 :</strong> La somme des chiffres est toujours un multiple de 9 
+                  <strong>Múltiplos de 9:</strong> La suma de sus dígitos siempre es múltiplo de 9 
                   (18: 1+8=9, 27: 2+7=9)
                 </li>
                 <li>
-                  <strong>Multiples de 10 :</strong> Se terminent toujours par 0 (10, 20, 30...)
+                  <strong>Múltiplos de 10:</strong> Siempre terminan en 0 (10, 20, 30...)
                 </li>
                 <li>
-                  <strong>Propriété de commutativité :</strong> 3 × 4 = 4 × 3 (Le résultat reste le même même si l'ordre change)
+                  <strong>Propiedad conmutativa:</strong> 3 × 4 = 4 × 3 (El orden no afecta el resultado)
                 </li>
               </ul>
               <p>
-                Comprendre ces motifs vous permet de saisir la logique de base plutôt que 
-                de mémoriser près de 100 valeurs de multiplication.
+                Comprender estos patrones te permite captar la lógica fundamental en lugar 
+                de memorizar casi 100 valores de multiplicación.
               </p>
             </div>
           </article>
@@ -49,34 +49,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-educational-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 2
               </span>
-              <span>Apprentissage Répété et Progressif</span>
+              <span>Aprendizaje Repetitivo y Gradual</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Il n'est ni possible ni nécessaire d'apprendre la table de multiplication en une journée. 
-                L'approche la plus efficace est la répétition progressive et régulière :
+                No es posible ni necesario aprender las tablas de multiplicar en un día. 
+                El enfoque más efectivo es la repetición gradual y regular:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Commencez par de petites étapes :</strong> Commencez d'abord par des 
-                  nombres faciles comme 1, 2, 5 et 10
+                  <strong>Comienza con pasos pequeños:</strong> Primero inicia con números 
+                  fáciles como 1, 2, 5 y 10
                 </li>
                 <li>
-                  <strong>10-15 minutes chaque jour :</strong> Des sessions courtes et régulières 
-                  sont plus efficaces que de longues sessions uniques
+                  <strong>10-15 minutos diarios:</strong> El estudio corto y regular es más 
+                  efectivo que sesiones largas únicas
                 </li>
                 <li>
-                  <strong>Consolidez les connaissances précédentes :</strong> Révisez ce que vous 
-                  avez appris avant de passer à un nouveau nombre
+                  <strong>Refuerza conocimientos previos:</strong> Repasa lo aprendido antes 
+                  de pasar a un nuevo número
                 </li>
                 <li>
-                  <strong>Faites des révisions espacées :</strong> Révisez après une semaine, puis 
-                  après un mois pour augmenter la rétention
+                  <strong>Practica con intervalos:</strong> Aumenta la retención repasando 
+                  después de una semana, un mes
                 </li>
               </ul>
               <p>
-                La répétition régulière permet à l'information de passer de la mémoire à court terme 
-                à la mémoire à long terme et soutient un apprentissage durable.
+                La repetición regular facilita el paso de la información de la memoria a 
+                corto plazo a la memoria a largo plazo y apoya el aprendizaje permanente.
               </p>
             </div>
           </article>
@@ -86,34 +86,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 3
               </span>
-              <span>Apprendre par la Pratique</span>
+              <span>Aprender Practicando</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Comprendre la théorie est important, mais l'apprentissage durable ne se 
-                produit pas sans pratique. Les avantages de la pratique :
+                Comprender la teoría es importante, pero sin práctica no ocurre un 
+                aprendizaje permanente. Beneficios de practicar:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Rappel actif :</strong> Essayer de se rappeler activement l'information 
-                  plutôt que de la lire passivement renforce le cerveau
+                  <strong>Recuperación activa:</strong> Intentar recordar activamente en lugar 
+                  de leer pasivamente fortalece el cerebro
                 </li>
                 <li>
-                  <strong>Analyse des erreurs :</strong> Identifiez vos points faibles en examinant 
-                  les opérations que vous faites incorrectement
+                  <strong>Análisis de errores:</strong> Identifica tus puntos débiles examinando 
+                  las operaciones que hiciste incorrectamente
                 </li>
                 <li>
-                  <strong>Développement de la vitesse :</strong> Avec une pratique régulière, vous 
-                  gagnez à la fois en précision et en vitesse
+                  <strong>Desarrollo de velocidad:</strong> Con práctica regular ganas tanto 
+                  precisión como velocidad
                 </li>
                 <li>
-                  <strong>Application dans différents contextes :</strong> Utilisez-la dans différents 
-                  environnements comme les questions, les jeux, les problèmes de la vie quotidienne
+                  <strong>Aplicación en diferentes contextos:</strong> Úsalas en diferentes 
+                  entornos como preguntas, juegos, problemas de la vida diaria
                 </li>
               </ul>
               <p>
-                Les connaissances apprises uniquement par la lecture ou l'écoute sans pratique 
-                sont rapidement oubliées. L'application active est la clé fondamentale de l'apprentissage.
+                La información aprendida solo leyendo o escuchando sin practicar se olvida 
+                rápidamente. La aplicación activa es la clave fundamental del aprendizaje.
               </p>
             </div>
           </article>
@@ -121,13 +121,13 @@ export default function HowToLearn() {
         
         <div className="mt-12 bg-gradient-to-r from-primary-50 to-educational-50 border border-primary-200 rounded-lg p-8">
           <h4 className="text-xl font-semibold text-slate-900 mb-4">
-            Rappel Important
+            Recordatorio Importante
           </h4>
           <p className="text-slate-700">
-            Chaque enfant a un rythme d'apprentissage différent. Alors que l'un peut apprendre 
-            en une semaine, un autre peut prendre plusieurs mois. L'important est la continuité, 
-            la patience et de progresser avec les bonnes méthodes. Adoptez une approche 
-            encourageante plutôt que de mettre la pression.
+            Cada niño tiene una velocidad de aprendizaje diferente. Mientras algunos aprenden 
+            en una semana, otros pueden tardar varios meses. Lo importante es la continuidad, 
+            la paciencia y avanzar con los métodos correctos. Adopta un enfoque de apoyo en 
+            lugar de presionar.
           </p>
         </div>
       </div>

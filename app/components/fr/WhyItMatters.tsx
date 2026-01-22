@@ -3,7 +3,7 @@ export default function WhyItMatters() {
     <section className="section-container bg-gradient-to-br from-educational-50 to-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          Pourquoi Apprendre la Table de Multiplication est-il Important ?
+          ¿Por Qué es Importante Aprender las Tablas de Multiplicar?
         </h2>
         
         <div className="grid gap-8 md:grid-cols-2">
@@ -15,14 +15,14 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Compétence en Calcul Mental
+                Habilidad de Cálculo Mental
               </h3>
             </div>
             <p className="text-slate-700">
-              Les élèves qui maîtrisent bien la table de multiplication peuvent effectuer 
-              des calculs mentalement sans utiliser de papier ou de crayon, tant dans la vie 
-              quotidienne que dans les mathématiques scolaires. Cette compétence augmente la 
-              vitesse et la confiance en résolution de problèmes.
+              Los estudiantes que dominan las tablas de multiplicar pueden realizar 
+              cálculos mentalmente en la vida diaria y en matemáticas escolares sin 
+              necesidad de papel y lápiz. Esta habilidad aumenta la velocidad y confianza 
+              al resolver problemas.
             </p>
           </article>
           
@@ -34,14 +34,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Rapidité et Précision
+                Rapidez y Precisión
               </h3>
             </div>
             <p className="text-slate-700">
-              Comprendre la table de multiplication plutôt que de simplement la mémoriser 
-              permet d'effectuer les opérations rapidement et avec précision. Cette compétence 
-              est d'une importance cruciale, surtout lors d'examens et dans des situations où 
-              le temps est limité.
+              Comprender las tablas de multiplicar en lugar de solo memorizarlas permite 
+              realizar operaciones tanto rápida como correctamente. Esta habilidad es 
+              críticamente importante especialmente en exámenes y situaciones con límite de tiempo.
             </p>
           </article>
           
@@ -53,14 +52,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Base pour les Mathématiques Avancées
+                Base para Matemáticas Avanzadas
               </h3>
             </div>
             <p className="text-slate-700">
-              Les opérations de division, les fractions, les expressions algébriques et 
-              tous les concepts mathématiques plus complexes reposent sur la connaissance 
-              de la table de multiplication. Une base solide garantit le succès aux niveaux 
-              avancés.
+              Todas las operaciones de división, fracciones, expresiones algebraicas y 
+              conceptos matemáticos más complejos se basan en el conocimiento de las 
+              tablas de multiplicar. Una base sólida garantiza el éxito en niveles avanzados.
             </p>
           </article>
           
@@ -72,13 +70,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Confiance et Motivation en Mathématiques
+                Confianza y Motivación en Matemáticas
               </h3>
             </div>
             <p className="text-slate-700">
-              Les élèves qui connaissent la table de multiplication développent une 
-              attitude positive envers les mathématiques. Cette confiance affecte directement 
-              la réussite globale dans les cours de mathématiques et le désir d'apprendre.
+              Los estudiantes que conocen las tablas de multiplicar desarrollan una 
+              actitud positiva hacia las matemáticas. Esta confianza afecta directamente 
+              el éxito general en las clases de matemáticas y el deseo de aprender.
             </p>
           </article>
         </div>

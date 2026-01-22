@@ -13,126 +13,126 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
                 <span className="text-xl font-bold text-white">×</span>
               </div>
-              <span className="text-xl font-bold">Table de Multiplication</span>
+              <span className="text-xl font-bold">Tablas de Multiplicar</span>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Apprenez les tables de multiplication de 1 à 100 de manière ludique et interactive.
+              Aprende las tablas de multiplicar del 1 al 100 de forma divertida e interactiva.
             </p>
           </div>
 
-          {/* Çarpım Tablosu Section */}
+          {/* Tablas de Multiplicar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tables de Multiplication</h3>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tablas de Multiplicar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication/1-10" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 1-10
+                <Link href="/es/tablas-de-multiplicar/1-10" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 1-10
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/11-20" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 11-20
+                <Link href="/es/tablas-de-multiplicar/11-20" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 11-20
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/21-30" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 21-30
+                <Link href="/es/tablas-de-multiplicar/21-30" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 21-30
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/31-40" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 31-40
+                <Link href="/es/tablas-de-multiplicar/31-40" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 31-40
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/41-50" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 41-50
+                <Link href="/es/tablas-de-multiplicar/41-50" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 41-50
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Devam Section */}
+          {/* Continuar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Suite</h3>
+            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Continuar</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication/51-60" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 51-60
+                <Link href="/es/tablas-de-multiplicar/51-60" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 51-60
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/61-70" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 61-70
+                <Link href="/es/tablas-de-multiplicar/61-70" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 61-70
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/71-80" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 71-80
+                <Link href="/es/tablas-de-multiplicar/71-80" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 71-80
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/81-90" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 81-90
+                <Link href="/es/tablas-de-multiplicar/81-90" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 81-90
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/91-100" className="text-slate-400 hover:text-white transition-colors">
-                  Tables 91-100
+                <Link href="/es/tablas-de-multiplicar/91-100" className="text-slate-400 hover:text-white transition-colors">
+                  Tablas 91-100
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Rehberler Section */}
+          {/* Guías Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guides</h3>
+            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guías</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication/pour-les-eleves" className="text-slate-400 hover:text-white transition-colors">
-                  Pour les Élèves
+                <Link href="/es/tablas-de-multiplicar/para-estudiantes" className="text-slate-400 hover:text-white transition-colors">
+                  Para Estudiantes
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/pour-les-parents" className="text-slate-400 hover:text-white transition-colors">
-                  Pour les Parents
+                <Link href="/es/tablas-de-multiplicar/para-padres" className="text-slate-400 hover:text-white transition-colors">
+                  Para Padres
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication/pour-les-enseignants" className="text-slate-400 hover:text-white transition-colors">
-                  Pour les Enseignants
+                <Link href="/es/tablas-de-multiplicar/para-profesores" className="text-slate-400 hover:text-white transition-colors">
+                  Para Profesores
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Pratik Section */}
+          {/* Práctica Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Pratique & Jeux</h3>
+            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/fr/table-de-multiplication#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
-                  📄 Exercices PDF
+                <Link href="/es/tablas-de-multiplicar#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
+                  📄 Ejercicios PDF
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
-                  ⚡ Jeu de Vitesse
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
+                  ⚡ Juego de Velocidad
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
-                  🦸 Jeu de Héros
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
+                  🦸 Juego del Héroe
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
-                  🧠 Jeu de Mémoire
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
+                  🧠 Juego de Memoria
                 </Link>
               </li>
               <li>
-                <Link href="/fr/table-de-multiplication#games" className="text-slate-400 hover:text-white transition-colors">
-                  🚀 Jeu de l'Espace
+                <Link href="/es/tablas-de-multiplicar#games" className="text-slate-400 hover:text-white transition-colors">
+                  🚀 Juego Espacial
                 </Link>
               </li>
             </ul>
@@ -143,10 +143,10 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} Table de Multiplication. Tous droits réservés.
+              © {currentYear} Tablas de Multiplicar. Todos los derechos reservados.
             </p>
             <div className="flex items-center gap-4 text-sm text-slate-400">
-              <span>Rendre les mathématiques amusantes pour tous 🎓</span>
+              <span>Hacemos que las Matemáticas sean Divertidas para Todos 🎓</span>
             </div>
           </div>
         </div>

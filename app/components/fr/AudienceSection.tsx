@@ -5,13 +5,12 @@ export default function AudienceSection() {
     <section id="audience" className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-6 text-center">
-          Pour Qui Est Cette Plateforme ?
+          ¿Para Quién es Esta Plataforma?
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Notre plateforme d'apprentissage de la table de multiplication est conçue pour 
-          tous ceux qui ont des besoins différents. Nous offrons des ressources et des guides 
-          spécifiques pour chaque public.
+          Nuestra plataforma de aprendizaje de tablas de multiplicar está diseñada 
+          para todos con diferentes necesidades. Ofrecemos recursos y guías especiales para cada audiencia.
         </p>
         
         <div className="grid gap-8 md:grid-cols-3">
@@ -23,49 +22,49 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Pour les Élèves
+                Para Estudiantes
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Contenus spécialement conçus pour les élèves du primaire et du secondaire :
+                Contenidos diseñados especialmente para estudiantes de primaria y secundaria:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Explications simples et claires</span>
+                  <span>Explicaciones simples y claras</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Parcours d'apprentissage étape par étape</span>
+                  <span>Camino de aprendizaje paso a paso</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Matériels d'apprentissage visuels</span>
+                  <span>Materiales de aprendizaje visual</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Possibilité de progresser à votre propre rythme</span>
+                  <span>Oportunidad de avanzar a tu propio ritmo</span>
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Chaque élève a un rythme d'apprentissage différent. Avancez à votre propre tempo !
+                Cada estudiante tiene un ritmo de aprendizaje diferente. ¡Avanza a tu propio ritmo!
               </p>
             </div>
             <Link 
-              href="/fr/table-de-multiplication/pour-les-eleves"
+              href="/es/tablas-de-multiplicar/para-estudiantes"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
-              Guide pour les élèves
+              Guía para estudiantes
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -80,45 +79,45 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Pour les Parents
+                Para Padres
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Comment pouvez-vous soutenir votre enfant dans l'apprentissage de la table de multiplication ?
+                ¿Cómo puede apoyar a su hijo en el aprendizaje de las tablas de multiplicar?
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Stratégies d'apprentissage efficaces</span>
+                  <span>Estrategias de aprendizaje efectivas</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Techniques de motivation</span>
+                  <span>Técnicas de motivación</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Activités pratiques à la maison</span>
+                  <span>Actividades prácticas en casa</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Méthodes de suivi des progrès</span>
+                  <span>Métodos de seguimiento del progreso</span>
                 </li>
               </ul>
               <Link 
-                href="/fr/table-de-multiplication/pour-les-parents" 
+                href="/es/tablas-de-multiplicar/para-padres" 
                 className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium pt-2"
               >
-                Guide pour les parents
+                Guía para padres
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -136,45 +135,45 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                Pour les Enseignants
+                Para Profesores
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Ressources professionnelles pour l'enseignement de la table de multiplication en classe :
+                Recursos profesionales para enseñar las tablas de multiplicar en tu aula:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Méthodes d'enseignement pédagogiques</span>
+                  <span>Métodos de enseñanza pedagógica</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Suggestions d'activités en classe</span>
+                  <span>Sugerencias de actividades en el aula</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Outils de mesure et d'évaluation</span>
+                  <span>Herramientas de evaluación y medición</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Matériels d'enseignement différenciés</span>
+                  <span>Materiales de enseñanza diferenciada</span>
                 </li>
               </ul>
               <Link 
-                href="/fr/table-de-multiplication/pour-les-enseignants" 
+                href="/es/tablas-de-multiplicar/para-profesores" 
                 className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium pt-2"
               >
-                Guide pour les enseignants
+                Guía para profesores
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -185,13 +184,13 @@ export default function AudienceSection() {
         
         <div className="mt-12 bg-white rounded-lg shadow-md p-8 text-center">
           <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-            Apprenons Ensemble
+            Aprendemos Juntos
           </h3>
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Cette plateforme est conçue pour aider les élèves à comprendre la table de 
-            multiplication, les parents à soutenir leurs enfants et les enseignants à 
-            enseigner efficacement. Nous nous concentrons tous sur le même objectif : 
-            un apprentissage durable et significatif.
+            Esta plataforma está diseñada para ayudar a los estudiantes a comprender 
+            las tablas de multiplicar, a los padres a apoyar a sus hijos y a los 
+            profesores a enseñar de manera efectiva. Todos nos enfocamos en el mismo 
+            objetivo: aprendizaje permanente y significativo.
           </p>
         </div>
       </div>
