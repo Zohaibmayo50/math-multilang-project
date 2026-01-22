@@ -1,11 +1,11 @@
-'use client'
+﻿'use client'
 
-impart { useRef } from 'react'
-impart Link from 'next/link'
-impart Footer from './Footer'
-impart PracticePreview from './PracticePreview'
-impart PrintableExercises from './PrintableExercises'
-impart NumberGames from './NumberGames'
+import { useRef } from 'react'
+import Link from 'next/link'
+import Footer from './Footer'
+import PracticePreview from './PracticePreview'
+import PrintableExercises from './PrintableExercises'
+import NumberGames from './NumberGames'
 
 interface NumberPageProps {
   number: number
