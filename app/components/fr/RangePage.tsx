@@ -29,9 +29,9 @@ export default function RangePage({
   )
   
   const difficultyLabels = {
-    beginner: 'Niveau Principiante',
-    intermediate: 'Niveau Intermedio',
-    advanced: 'Niveau Avanzado'
+    beginner: 'Niveau Débutant',
+    intermediate: 'Niveau Intermédiaire',
+    advanced: 'Niveau Avancé'
   }
   
   const difficultyDescriptions = {
@@ -218,7 +218,7 @@ export default function RangePage({
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-3xl font-bold text-slate-900">
-              Table de Multiplication del {rangeStart} al {rangeEnd} - Lista Completa
+              Tables de Multiplication de {rangeStart} à {rangeEnd} - Liste Complète
             </h2>
             <button
               onClick={() => {
@@ -228,7 +228,7 @@ export default function RangePage({
                     <!DOCTYPE html>
                     <html>
                     <head>
-                      <title>Table de Multiplication del ${rangeStart} al ${rangeEnd}</title>
+                      <title>Tables de Multiplication de ${rangeStart} à ${rangeEnd}</title>
                       <style>
                         @media print {
                           @page { margin: 1cm; }
@@ -283,7 +283,7 @@ export default function RangePage({
                       </style>
                     </head>
                     <body>
-                      <h1>Table de Multiplication del ${rangeStart} al ${rangeEnd} - Lista Completa</h1>
+                      <h1>Tables de Multiplication de ${rangeStart} à ${rangeEnd} - Liste Complète</h1>
                       <div class="grid">
                         ${rangeNumbers.map(num => `
                           <div class="table-box">
@@ -316,8 +316,8 @@ export default function RangePage({
           </div>
           
           <p className="text-center text-slate-700 mb-8 max-w-3xl mx-auto">
-            A continuación puedes ver todas las tablas de multiplicar del {rangeStart} al {rangeEnd} juntas. 
-            Cada número tiene su propia casilla de color.
+            Vous pouvez voir ci-dessous toutes les tables de multiplication de {rangeStart} à {rangeEnd} ensemble. 
+            Chaque nombre a sa propre case de couleur.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -350,25 +350,25 @@ export default function RangePage({
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Si deseas aprender la tabla de multiplicar de cada número en detalle, puedes acceder a la 
-            página correspondiente a través de los siguientes enlaces. Cada página contiene modÃ¨les, 
-            consejos y herramientas de práctica específicas para ese número.
+            Si vous souhaitez apprendre la table de multiplication de chaque nombre en détail, vous pouvez accéder à la 
+            page correspondante via les liens suivants. Chaque page contient des modèles, 
+            des conseils et des outils de pratique spécifiques pour ce nombre.
           </p>
           
           <div className="grid md:grid-cols-2 gap-4">
             {rangeNumbers.map((num) => (
               <Link
                 key={num}
-                href={`/es/tablas-de-multiplicar/${num}`}
+                href={`/fr/table-de-multiplication/${num}`}
                 className="block bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-slate-900 mb-1">
-                      Table de Multiplication del {num}
+                      Table de Multiplication de {num}
                     </div>
                     <p className="text-slate-600">
-                      Explicación detallada y ejemplos del número {num}
+                      Explication détaillée et exemples du nombre {num}
                     </p>
                   </div>
                   <svg 
@@ -404,29 +404,29 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 leading-relaxed">
                 {difficultyDescriptions[difficultyLevel]} {rangeStart === 1 ? 
-                  'Como los números son pequeños, los estudiantes pueden entender y verificar los rÃ©sultats más fácilmente.' :
-                  'Este rango se construye sobre el conocimiento adquirido en el rango anterior.'}
+                  'Comme les nombres sont petits, les étudiants peuvent comprendre et vérifier les résultats plus facilement.' :
+                  'Cette plage s\'appuie sur les connaissances acquises dans la plage précédente.'}
               </p>
             </div>
             
             <div className="bg-white rounded-xl p-6 border-l-4 border-blue-500">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                🧠 Desarrollo Cognitivo
+                🧠 Développement Cognitif
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                Este rango ayuda a los estudiantes a desarrollar sus habilidades de cálculo mental. 
-                Con la práctica regular, comienzan a recordar automáticamente las multiplicaciones de estos números.
+                Cette plage aide les étudiants à développer leurs compétences en calcul mental. 
+                Avec une pratique régulière, ils commencent à se souvenir automatiquement des multiplications de ces nombres.
               </p>
             </div>
             
             {nextRangeUrl && (
               <div className="bg-white rounded-xl p-6 border-l-4 border-purple-500">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  📈 Preparación para el Siguiente Paso
+                  📈 Préparation pour l'Étape Suivante
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Los estudiantes que aprenden bien este rango están listos para pasar al siguiente. 
-                  Cada rango refuerza aún más la lógica de la multiplicación y desarrolla el pensamiento matemático.
+                  Les étudiants qui apprennent bien cette plage sont prêts à passer à la suivante. 
+                  Chaque plage renforce encore la logique de la multiplication et développe la pensée mathématique.
                 </p>
               </div>
             )}
@@ -438,70 +438,70 @@ export default function RangePage({
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Patrones en la Table de Multiplication del {rangeStart} al {rangeEnd}
+            Modèles dans les Tables de Multiplication de {rangeStart} à {rangeEnd}
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            En lugar de intentar memorizar la tabla de multiplicar, entender los modÃ¨les que contiene 
-            acelera el proceso de aprendizaje y lo hace más duradero.
+            Au lieu d'essayer de mémoriser la table de multiplication, comprendre les modèles qu'elle contient 
+            accélère le processus d'apprentissage et le rend plus durable.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🔄</span>
-                Simetría (Propiedad Conmutativa)
+                Symétrie (Propriété Commutative)
               </h3>
               <p className="text-slate-700 mb-3">
-                En la multiplicación, el orden se puede cambiar: {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
-                Esta propriÃ©tÃ© facilita el aprendizaje.
+                Dans la multiplication, l'ordre peut être changé : {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
+                Cette propriété facilite l'apprentissage.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Ejemplo: Si conoces un número, también conoces su inverso.
+                Exemple : Si vous connaissez un nombre, vous connaissez aussi son inverse.
               </p>
             </div>
             
             <div className="bg-green-50 rounded-xl p-6 border border-green-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">➕</span>
-                Suma Repetida
+                Addition Répétée
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeStart} × 3 = {rangeStart} + {rangeStart} + {rangeStart} = {rangeStart * 3}. 
-                La multiplicación es la addition repetida del mismo número.
+                La multiplication est l'addition répétée du même nombre.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Esta lógica es importante para comprender el significado fundamental de la multiplicación.
+                Cette logique est importante pour comprendre le sens fondamental de la multiplication.
               </p>
             </div>
             
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">✖️</span>
-                Patrones de Números Pares
+                Modèles de Nombres Pairs
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeNumbers.filter(n => n % 2 === 0).length > 0 ? 
-                  `Los números pares dans cette plage (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) siempre dan rÃ©sultats pares.` :
-                  'Las tablas de multiplicar de los números dans cette plage muestran modÃ¨les específicos.'
+                  `Les nombres pairs dans cette plage (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) donnent toujours des résultats pairs.` :
+                  'Les tables de multiplication des nombres dans cette plage montrent des modèles spécifiques.'
                 }
               </p>
               <p className="text-sm text-slate-600 italic">
-                Comprender la lógica de los números pares e impares reduce los errores.
+                Comprendre la logique des nombres pairs et impairs réduit les erreurs.
               </p>
             </div>
             
             <div className="bg-purple-50 rounded-xl p-6 border border-purple-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🔢</span>
-                Patrones del Último Dígito
+                Modèles du Dernier Chiffre
               </h3>
               <p className="text-slate-700 mb-3">
-                En la tabla de multiplicar de cada número, los últimos dígitos se repiten en un orden específico. 
-                Notar este patrón es útil para la verificación.
+                Dans la table de multiplication de chaque nombre, les derniers chiffres se répètent dans un ordre spécifique. 
+                Remarquer ce modèle est utile pour la vérification.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Por ejemplo: Los números que terminan en 5 siempre terminan en 0 o 5.
+                Par exemple : Les nombres qui se terminent par 5 se terminent toujours par 0 ou 5.
               </p>
             </div>
           </div>
