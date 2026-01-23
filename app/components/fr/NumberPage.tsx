@@ -907,17 +907,17 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
       6: [
         { mistake: "Confundir 6×7=42 con 6×8=48", solution: "¡Esta es una pareja difícil! Recuerda: 6×7=42 (rima 'siete seis'), luego agrega 6: 48." },
-        { mistake: "Confundir 6×9=54 con 6×8=48", solution: "Usa la table de 6: 6×8=48, luego +6=54. O calcula 6×9 como 60-6=54." },
-        { mistake: "Confundir con la table de 3", solution: "la table de 6 es siempre el doble de la table de 3. 3×4=12, entonces 6×4=24." },
+        { mistake: "Confondre 6×9=54 avec 6×8=48", solution: "Utilisez la table de 6 : 6×8=48, puis +6=54. Ou calculez 6×9 comme 60-6=54." },
+        { mistake: "Confondre avec la table de 3", solution: "La table de 6 est toujours le double de la table de 3. 3×4=12, donc 6×4=24." },
       ],
       7: [
-        { mistake: "Confundir 7×8=56 con 7×6=42", solution: "¡Estos son los más difíciles! Truco de memoria: '5-6-7-8' (56=7×8). O desde 7×7=49, luego +7=56." },
-        { mistake: "Confundir 7×9=63 con 7×8=56", solution: "Patrón: 7×8=56, luego +7=63. O addition de dígitos: 63 (6+3=9), 56 (5+6=11)." },
-        { mistake: "Saltarse completamente la table de 7", solution: "Aunque el 7 parezca difícil, peut s'apprendre con práctica. Empieza con pasos pequeños: memoriza los fáciles 7×1, 7×2, 7×5, 7×10." },
+        { mistake: "Confondre 7×8=56 avec 7×6=42", solution: "Ce sont les plus difficiles ! Astuce mémoire : '5-6-7-8' (56=7×8). Ou depuis 7×7=49, puis +7=56." },
+        { mistake: "Confondre 7×9=63 avec 7×8=56", solution: "Modèle : 7×8=56, puis +7=63. Ou addition de chiffres : 63 (6+3=9), 56 (5+6=11)." },
+        { mistake: "Sauter complètement la table de 7", solution: "Bien que le 7 semble difficile, il peut s'apprendre avec de la pratique. Commencez par petites étapes : mémorisez les faciles 7×1, 7×2, 7×5, 7×10." },
       ],
       8: [
-        { mistake: "Confundir 8×7=56 con 8×8=64", solution: "Forma fácil de memorizar 8×8=64: 'ocho ocho 64' o '8²=64'." },
-        { mistake: "Confundir 8×9=72 con 8×8=64", solution: "Comienza desde 8×8=64, luego +8=72. O 80-8=72 (10×8 menos 8)." },
+        { mistake: "Confondre 8×7=56 avec 8×8=64", solution: "Façon facile de mémoriser 8×8=64 : 'huit huit 64' ou '8²=64'." },
+        { mistake: "Confondre 8×9=72 avec 8×8=64", solution: "Commencez depuis 8×8=64, puis +8=72. Ou 80-8=72 (10×8 moins 8)." },
         { mistake: "Confundir con la table de 4", solution: "El 8 es siempre el doble del 4. 4×6=24, entonces 8×6=48. Verifica duplicando." },
       ],
       9: [
@@ -1994,10 +1994,10 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
       ],
     }
     return strategies[number] || [
-      `Practica contar de ${number} en ${number} en voz alta`,
-      "Escribe la tabla todos los días durante una semana",
-      "Usa tarjetas de memoria para probarte de forma aleatoria",
-      "Practica 5-10 minutos diarios en lugar de estudiar mucho tiempo de una vez",
+      `Pratiquez compter de ${number} en ${number} à voix haute`,
+      "Écrivez la table tous les jours pendant une semaine",
+      "Utilisez des cartes mémoire pour vous tester de manière aléatoire",
+      "Pratiquez 5-10 minutes par jour plutôt que d'étudier longtemps en une fois",
     ]
   }
 
@@ -2250,8 +2250,8 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           </h2>
           
           <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 leading-relaxed">
-            Entender los modÃ¨les hace que el aprendizaje sea plus facile y divertido. la table de {number} tiene 
-            hermosos modÃ¨les que pueden ayudarte a recordarla sin memorizar de memoria.
+            Comprendre les modèles rend l'apprentissage plus facile et amusant. La table de {number} a 
+            de beaux modèles qui peuvent vous aider à la retenir sans mémorisation par cœur.
           </p>
           
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
@@ -2352,19 +2352,19 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
           </h2>
           
           <p className="text-base sm:text-lg text-slate-700 mb-6 sm:mb-8 leading-relaxed">
-            la table de {number} es parte de un sistema de aprendizaje más amplio. 
-            Puedes explorar otras tables en el mismo rango o pasar al siguiente número lógico.
+            la table de {number} fait partie d'un système d'apprentissage plus large. 
+            Vous pouvez explorer d'autres tables dans la même plage ou passer au nombre logique suivant.
           </p>
           
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
             {number > 1 && (
               <Link
-                href={`/es/tables-de-multiplicar/${number - 1}`}
+                href={`/fr/table-de-multiplication/${number - 1}`}
                 className="block bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-4 sm:p-6 border-2 border-blue-200 hover:border-blue-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-xs sm:text-sm text-slate-600 mb-1">← Número Anterior</div>
+                    <div className="text-xs sm:text-sm text-slate-600 mb-1">← Nombre Précédent</div>
                     <div className="text-lg sm:text-2xl font-bold text-slate-900">
                       Table de {number - 1}
                     </div>
@@ -2378,12 +2378,12 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             
             {number < 100 && (
               <Link
-                href={`/es/tables-de-multiplicar/${number + 1}`}
+                href={`/fr/table-de-multiplication/${number + 1}`}
                 className="block bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-4 sm:p-6 border-2 border-purple-200 hover:border-purple-400 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-xs sm:text-sm text-slate-600 mb-1">Siguiente Número →</div>
+                    <div className="text-xs sm:text-sm text-slate-600 mb-1">Nombre Suivant →</div>
                     <div className="text-lg sm:text-2xl font-bold text-slate-900">
                       Table de {number + 1}
                     </div>
@@ -2396,17 +2396,17 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
             )}
             
             <Link
-              href={`/es/tables-de-multiplicar/${rangeStart}-${rangeEnd}`}
+              href={`/fr/table-de-multiplication/${rangeStart}-${rangeEnd}`}
               className="block bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-4 sm:p-6 border-2 border-green-200 hover:border-green-400 hover:shadow-lg transition-all group sm:col-span-2"
             >
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-xs sm:text-sm text-slate-600 mb-1">↑ Plage Superior</div>
+                  <div className="text-xs sm:text-sm text-slate-600 mb-1">↑ Plage Supérieure</div>
                   <div className="text-lg sm:text-2xl font-bold text-slate-900">
-                    Tables del {rangeStart} al {rangeEnd}
+                    Tables de {rangeStart} à {rangeEnd}
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 sm:mt-2">
-                    Explora todas las tables de multiplicar dans cette plage con herramientas de práctica y juegos
+                    Explorez toutes les tables de multiplication dans cette plage avec des outils de pratique et des jeux
                   </p>
                 </div>
                 <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -204,10 +204,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎯
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">RÃ©ponse Rápida</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Réponse Rapide</h3>
               <p className="text-slate-600 mb-4">Combien de questions pouvez-vous résoudre en 60 secondes ?</p>
               <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all">
-                Jugar
+                Jouer
               </button>
             </div>
             
@@ -218,7 +218,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <h3 className="text-xl font-bold text-slate-900 mb-2">Héros des Tables</h3>
               <p className="text-slate-600 mb-4">Progressez à travers les niveaux et atteignez le championnat</p>
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-purple-700 transition-all">
-                Jugar
+                Jouer
               </button>
             </div>
             
@@ -226,10 +226,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎮
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Jeu de Memoria</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Jeu de Mémoire</h3>
               <p className="text-slate-600 mb-4">Associez les cartes et multipliez</p>
               <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-pink-600 hover:to-pink-700 transition-all">
-                Jugar
+                Jouer
               </button>
             </div>
             
@@ -237,10 +237,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🚀
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Aventura Espacial</h3>
-              <p className="text-slate-600 mb-4">Eleva tu cohete avec des rÃ©ponses correctes</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Aventure Spatiale</h3>
+              <p className="text-slate-600 mb-4">Élevez votre fusée avec des réponses correctes</p>
               <button className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-indigo-700 transition-all">
-                Jugar
+                Jouer
               </button>
             </div>
           </div>
@@ -251,7 +251,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-blue-600">🎯 RÃ©ponse Rápida</h3>
+                <h3 className="text-2xl font-bold text-blue-600">🎯 Réponse Rapide</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               
@@ -298,7 +298,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                   <h4 className="text-2xl font-bold text-slate-900 mb-2">Jeu Terminé !</h4>
                   <p className="text-xl text-slate-600 mb-6">Points Totales: <span className="font-bold text-green-600">{speedScore}</span></p>
                   <button onClick={startSpeedGame} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700">
-                    Jugar de Nuevo
+                    Jouer à Nouveau
                   </button>
                 </div>
               )}
@@ -362,7 +362,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-pink-600">🎮 Jeu de Memoria</h3>
+                <h3 className="text-2xl font-bold text-pink-600">🎮 Jeu de Mémoire</h3>
                 <div className="flex items-center gap-4">
                   <div className="bg-pink-50 rounded-lg px-4 py-2">
                     <span className="text-sm text-slate-600">Parejas: </span>
@@ -407,7 +407,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-indigo-600">🚀 Aventura Espacial</h3>
+                <h3 className="text-2xl font-bold text-indigo-600">🚀 Aventure Spatiale</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               

@@ -63,7 +63,7 @@ export default function LearningPaths() {
                 Niveau 3
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Niveau intermédiaire y modÃ¨les de multiplication.
+                Niveau intermédiaire et modèles de multiplication.
               </p>
               <div className="text-purple-600 font-medium text-xs group-hover:text-purple-700 flex items-center">
                 Apprendre

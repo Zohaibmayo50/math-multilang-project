@@ -12,7 +12,7 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 1
               </span>
-              <span>Apprendre en Comprenant les ModÃ¨les</span>
+              <span>Apprendre en Comprenant les Modèles</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
@@ -24,7 +24,7 @@ export default function HowToLearn() {
                   <strong>Multiples de 2 :</strong> Sont toujours des nombres pairs (2, 4, 6, 8...)
                 </li>
                 <li>
-                  <strong>Múltiplos de 5:</strong> Se terminent toujours par 0 ou 5 (5, 10, 15, 20...)
+                  <strong>Multiples de 5 :</strong> Se terminent toujours par 0 ou 5 (5, 10, 15, 20...)
                 </li>
                 <li>
                   <strong>Multiples de 9 :</strong> La somme de leurs chiffres est toujours un multiple de 9 
@@ -70,13 +70,13 @@ export default function HowToLearn() {
                   de passer à un nouveau nombre
                 </li>
                 <li>
-                  <strong>Practica con intervalos:</strong> Aumenta la retención repasando 
-                  después de una semana, un mes
+                  <strong>Pratiquer à intervalles :</strong> Augmente la rétention en révisant 
+                  après une semaine, un mois
                 </li>
               </ul>
               <p>
-                La repetición regular facilita el paso de la información de la memoria a 
-                court terme à la mémoire à long terme y apoya el apprentissage permanente.
+                La répétition régulière facilite le passage de l'information de la mémoire à 
+                court terme à la mémoire à long terme et soutient l'apprentissage permanent.
               </p>
             </div>
           </article>
@@ -107,8 +107,8 @@ export default function HowToLearn() {
                   précision et vitesse
                 </li>
                 <li>
-                  <strong>Aplicación en diferentes contextos:</strong> Úsalas en diferentes 
-                  contextes comme des questions, juegos, problemas de la vida diaria
+                  <strong>Application dans différents contextes :</strong> Utilisez-les dans différents 
+                  contextes comme des questions, jeux, problèmes de la vie quotidienne
                 </li>
               </ul>
               <p>

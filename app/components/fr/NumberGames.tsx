@@ -276,7 +276,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🧠 <span className="hidden sm:inline">Jeu de Memoria</span><span className="sm:hidden">Memoria</span>
+            🧠 <span className="hidden sm:inline">Jeu de Mémoire</span><span className="sm:hidden">Mémoire</span>
           </button>
         </div>
 
@@ -382,7 +382,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                   onClick={startRaceGame}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  {raceCar.position >= 90 ? 'Jugar de Nuevo' : 'Iniciar Carrera'} 🏎️
+                  {raceCar.position >= 90 ? 'Jouer à Nouveau' : 'Démarrer la Course'} 🏎️
                 </button>
               </div>
             ) : (
@@ -507,7 +507,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                       onClick={initMemoryGame}
                       className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                     >
-                      Jugar de Nuevo
+                      Jouer à Nouveau
                     </button>
                   </div>
                 )}

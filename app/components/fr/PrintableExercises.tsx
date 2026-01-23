@@ -212,8 +212,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Tabla Única</div>
-                      <div className="text-sm text-slate-600">Una tabla de multiplicar específica</div>
+                      <div className="font-medium text-slate-900">Table Unique</div>
+                      <div className="text-sm text-slate-600">Une table de multiplication spécifique</div>
                     </div>
                   </label>
                   

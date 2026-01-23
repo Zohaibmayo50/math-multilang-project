@@ -320,7 +320,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     disabled={  !exerciseQuestions[currentQuestionIndex].userAnswer}
                     className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50"
                   >
-                    {currentQuestionIndex < exerciseQuestions.length - 1   ? 'Siguiente' : 'Finalizar'}
+                    {currentQuestionIndex < exerciseQuestions.length - 1   ? 'Suivant' : 'Terminer'}
                   </button>
                 </div>
               </div>
