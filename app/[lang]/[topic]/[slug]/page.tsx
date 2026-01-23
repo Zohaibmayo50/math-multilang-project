@@ -14,6 +14,8 @@ import RangePageFi from '@/app/components/fi/RangePage'
 import NumberPageFi from '@/app/components/fi/NumberPage'
 import RangePageFr from '@/app/components/fr/RangePage'
 import NumberPageFr from '@/app/components/fr/NumberPage'
+import RangePageSv from '@/app/components/sv/RangePage'
+import NumberPageSv from '@/app/components/sv/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -23,6 +25,7 @@ import { numberTitlesCs, numberDescriptionsCs, numberSpecialPropertiesCs } from 
 import { numberTitlesUk, numberDescriptionsUk, numberSpecialPropertiesUk } from '@/lib/number-metadata-uk'
 import { numberTitlesFi, numberDescriptionsFi, numberSpecialPropertiesFi } from '@/lib/number-metadata-fi'
 import { numberTitlesFr, numberDescriptionsFr, numberSpecialPropertiesFr } from '@/lib/number-metadata-fr'
+import { numberTitlesSv, numberDescriptionsSv, numberSpecialPropertiesSv } from '@/lib/number-metadata-sv'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -58,6 +61,11 @@ import ForParentsFi from '@/app/vanhemmille/page'
 import ForStudentsFr from '@/app/pour-les-eleves/page'
 import ForTeachersFr from '@/app/pour-les-enseignants/page'
 import ForParentsFr from '@/app/pour-les-parents/page'
+
+// Import Swedish guide page components
+import ForStudentsSv from '@/app/for-elever/page'
+import ForTeachersSv from '@/app/for-larare/page'
+import ForParentsSv from '@/app/for-foraldrar/page'
 
 interface PageProps {
   params: {
@@ -649,6 +657,86 @@ const rangeMetadataFr: Record<string, {
   },
 }
 
+// Swedish Range Metadata
+const rangeMetadataSv: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Multiplikationstabeller 1-10 | Nybörjarnivå',
+    description: 'Lär dig multiplikationstabellerna 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Enkla förklaringar för nybörjare, visuella exempel och praktiska övningar.',
+    keywords: 'multiplikationstabell 1-10, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Multiplikationstabeller 11-20 | Tvåsiffriga Tal',
+    description: 'Lär dig multiplikationstabellerna 11-20. Viktigt steg för att förstå tvåsiffrig multiplikation.',
+    keywords: 'multiplikationstabell 11-20, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Multiplikationstabeller 21-30 | Mellanliggande Nivå',
+    description: 'Lär dig multiplikationstabellerna 21-30. Mellanliggande nivå och multiplikationsmönster.',
+    keywords: 'multiplikationstabell 21-30, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Multiplikationstabeller 31-40 | Avancerad Multiplikation',
+    description: 'Lär dig multiplikationstabellerna 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Avancerade färdigheter i mental matematik.',
+    keywords: 'multiplikationstabell 31-40, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Multiplikationstabeller 41-50 | Mellanliggande-Avancerad Nivå',
+    description: 'Lär dig multiplikationstabellerna 41-50. Interaktiva övningar för att bemästra multiplikation av stora tal.',
+    keywords: 'multiplikationstabell 41-50, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Multiplikationstabeller 51-60 | Avancerad Nivå',
+    description: 'Lär dig multiplikationstabellerna 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Detaljerat studiematerial för elever på avancerad nivå.',
+    keywords: 'multiplikationstabell 51-60, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Multiplikationstabeller 61-70 | Stora Tal',
+    description: 'Lär dig multiplikationstabellerna 61-70. Omfattande pedagogiska resurser för multiplikation av stora tal.',
+    keywords: 'multiplikationstabell 61-70, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Multiplikationstabeller 71-80 | Avancerad Multiplikation',
+    description: 'Lär dig multiplikationstabellerna 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Utveckla matematiska färdigheter på avancerad nivå.',
+    keywords: 'multiplikationstabell 71-80, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Multiplikationstabeller 81-90 | Expertnivå',
+    description: 'Lär dig multiplikationstabellerna 81-90. Utmanande multiplikationsoperationer och strategier för elever på expertnivå.',
+    keywords: 'multiplikationstabell 81-90, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Multiplikationstabeller 91-100 | Högsta Nivån',
+    description: 'Lär dig multiplikationstabellerna 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Komplett utbildning för multiplikationsfärdigheter på högsta nivå.',
+    keywords: 'multiplikationstabell 91-100, multiplikationstabell, multiplikation, matematiklärande',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -787,6 +875,29 @@ const guideMetadataFr: Record<string, {
   },
 }
 
+// Swedish Guide Metadata
+const guideMetadataSv: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'for-elever': {
+    title: 'Multiplikationstabellguide för Elever | Lär Steg för Steg',
+    description: 'Steg-för-steg-guide för att lära dig multiplikationstabeller enkelt. Visuellt material, praktiska övningar och roliga spel för att lära i din egen takt.',
+    keywords: 'lära multiplikationstabeller, matematik för elever, tabellguide, multiplikation steg för steg',
+  },
+  'for-larare': {
+    title: 'Multiplikationstabellguide för Lärare | Undervisningsstrategier',
+    description: 'Omfattande resurser för lärare om effektiv undervisning av multiplikationstabeller. Inkluderar pedagogiska strategier, klassrumsaktiviteter, differentierad undervisning och utvärderingsmetoder.',
+    keywords: 'undervisa multiplikationstabeller, pedagogiska strategier, matematikaktiviteter, differentierad undervisning, lärarresurser',
+  },
+  'for-foraldrar': {
+    title: 'Multiplikationstabellguide för Föräldrar | Stöd Lärande Hemma',
+    description: 'Hur du hjälper ditt barn att lära sig multiplikationstabeller hemma. Praktiska tips, pedagogiska spel och motivationsstrategier.',
+    keywords: 'hjälpa barn med tabeller, matematik hemma, föräldrarutbildning, lärandeaktiviteter',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -809,6 +920,9 @@ const guideComponents: Record<string, any> = {
   'pour-les-eleves': ForStudentsFr,
   'pour-les-enseignants': ForTeachersFr,
   'pour-les-parents': ForParentsFr,
+  'for-elever': ForStudentsSv,
+  'for-larare': ForTeachersSv,
+  'for-foraldrar': ForParentsSv,
 }
 
 // Determine slug type
@@ -820,6 +934,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
   if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
   if (locale === 'fr' && slug in guideMetadataFr) return 'guide'
+  if (locale === 'sv' && slug in guideMetadataSv) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -837,6 +952,7 @@ export async function generateStaticParams() {
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
     { lang: 'fi', topic: 'kertotaulut' },
     { lang: 'fr', topic: 'table-de-multiplication' },
+    { lang: 'sv', topic: 'multiplikationstabeller' },
   ]
 
   langs.forEach(({ lang, topic }) => {
@@ -865,7 +981,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -1324,13 +1440,78 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Swedish metadata
+  if (locale === 'sv') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataSv[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesSv[num]
+      const description = numberDescriptionsSv[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataSv[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -2567,6 +2748,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageFr number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Swedish version
+  if (locale === 'sv') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataSv[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#webpage`,
+            "url": `${baseUrl}/sv/multiplikationstabeller/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#learningresource`
+            },
+            "inLanguage": "sv-SE"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#learningresource`,
+            "name": `Multiplikationstabeller ${slug} Läranderesurs`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Nybörjare' : meta.level === 'intermediate' ? 'Mellanliggande' : 'Avancerad',
+            "learningResourceType": ["Interaktiv Resurs", "Övningsmaterial", "Pedagogiskt Spel"],
+            "teaches": `Färdigheter för att förstå och använda multiplikationstabeller ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "sv-SE",
+            "educationalUse": ["övning", "självstudier", "läxor"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Multiplikationstabell ${start + i}`,
+              "url": `${baseUrl}/sv/multiplikationstabeller/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageSv
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/sv/multiplikationstabeller/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/sv/multiplikationstabeller/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesSv[num] || `Multiplikation med ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#webpage`,
+            "url": `${baseUrl}/sv/multiplikationstabeller/${num}`,
+            "name": `Multiplikationstabell ${num} - ${specialProp}`,
+            "description": numberDescriptionsSv[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#breadcrumb`
+            },
+            "inLanguage": "sv-SE"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Hem"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/sv/multiplikationstabeller/${range}`,
+                  "name": `Multiplikationstabeller ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/sv/multiplikationstabeller/${num}`,
+                  "name": `Multiplikationstabell ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#learningresource`,
+            "name": `Multiplikationstabell ${num} Läranderesurs`,
+            "description": numberDescriptionsSv[num],
+            "educationalLevel": rangeStart <= 10 ? "Nybörjare" : rangeStart <= 50 ? "Mellanliggande" : "Avancerad",
+            "learningResourceType": ["Interaktiv Resurs", "Övningsmaterial", "Pedagogiskt Spel"],
+            "teaches": `Multiplikationstabell ${num}, ${specialProp.toLowerCase()}, grundläggande multiplikationskoncept`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "sv-SE",
+            "educationalUse": ["övning", "självstudier"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/sv/multiplikationstabeller/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageSv number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }
