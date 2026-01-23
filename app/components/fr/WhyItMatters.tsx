@@ -39,8 +39,8 @@ export default function WhyItMatters() {
             </div>
             <p className="text-slate-700">
               Comprendre les tables de multiplication au lieu de simplement les mémoriser permet 
-              realizar operaciones tanto rápida como correctamente. Esta habilidad es 
-              críticamente importante especialmente en exámenes y situaciones con límite de tiempo.
+              d'effectuer des opérations à la fois rapidement et correctement. Cette compétence est 
+              particulièrement importante lors des examens et des situations avec limite de temps.
             </p>
           </article>
           
