@@ -133,7 +133,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     <section id="practice" className="section-container bg-gradient-to-br from-slate-50 to-blue-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          Practica les tables de Multiplicar
+          Pratiquez les Tables de Multiplication
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
@@ -152,7 +152,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              ⚡ Práctica Rápida
+              ⚡ Pratique Rapide
             </button>
             <button
               onClick={() => setActiveTab('exercises')}
@@ -181,7 +181,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   <div className="text-2xl font-bold text-blue-600">{score.total}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Éxito</div>
+                  <div className="text-sm text-slate-600 mb-1">Succès</div>
                   <div className="text-2xl font-bold text-purple-600">
                     {score.total > 0   ? Math.round((score.correct / score.total) * 100) : 0}%
                   </div>
@@ -352,7 +352,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     </div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Éxito</div>
+                    <div className="text-sm text-slate-600 mb-1">Succès</div>
                     <div className="text-3xl font-bold text-blue-600">
                       {Math.round((exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) * 100)}%
                     </div>
