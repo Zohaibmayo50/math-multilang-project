@@ -70,6 +70,13 @@ import GamesSectionFr from '@/app/components/fr/GamesSection'
 import PrintableExercisesFr from '@/app/components/fr/PrintableExercises'
 import AudienceSectionFr from '@/app/components/fr/AudienceSection'
 import FooterFr from '@/app/components/fr/Footer'
+import WhyItMattersSv from '@/app/components/sv/WhyItMatters'
+import HowToLearnSv from '@/app/components/sv/HowToLearn'
+import LearningPathsSv from '@/app/components/sv/LearningPaths'
+import PracticePreviewSv from '@/app/components/sv/PracticePreview'
+import GamesSectionSv from '@/app/components/sv/GamesSection'
+import PrintableExercisesSv from '@/app/components/sv/PrintableExercises'
+import AudienceSectionSv from '@/app/components/sv/AudienceSection'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -89,6 +96,7 @@ export async function generateStaticParams() {
     { lang: 'uk', topic: 'tablycya-mnozhennya' },
     { lang: 'fi', topic: 'kertotaulut' },
     { lang: 'fr', topic: 'table-de-multiplication' },
+    { lang: 'sv', topic: 'multiplikationstabeller' },
   ]
 }
 
@@ -96,7 +104,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -371,6 +379,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Swedish metadata (production)
+  if (locale === 'sv') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Multiplikationstabeller 1-100 | PDF Övningar och Interaktiva Spel',
+      description: 'Lär dig multiplikationstabeller från 1 till 100 gratis. Interaktiva övningar, pedagogiska spel och utskrivbara arbetsblad för barn.',
+      keywords: 'multiplikationstabeller, multiplikationstabell, multiplikation, matematik, lärande, övning, utbildning, pdf övningar',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Multiplikationstabeller – Lär, Förstå och Öva',
+        description: 'Lär dig multiplikationstabeller steg för steg.',
+        type: 'website',
+        locale: 'sv_SE',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Multiplikationstabeller – Lär, Förstå och Öva',
+        description: 'Lär dig multiplikationstabeller steg för steg.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -378,7 +424,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1116,6 +1162,109 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnFr />
           <AudienceSectionFr />
           <FooterFr />
+        </main>
+      </>
+    )
+  }
+
+  // Swedish version (production-ready)
+  if (locale === 'sv') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.sv.domain}/#website`,
+          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
+          "name": "Multiplikationstabeller",
+          "description": "Interaktiv utbildningsplattform för att lära sig multiplikationstabeller från 1 till 100. Visuella inlärningsverktyg för barn, praktiska övningar och pedagogiska spel.",
+          "inLanguage": "sv-SE",
+          "publisher": {
+            "@id": `${siteConfig.sv.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#webpage`,
+          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
+          "name": "Multiplikationstabeller - Alla Tabeller från 1 till 100",
+          "description": "Interaktiv inlärningsplattform för multiplikationstabeller för barn. Lär dig alla multiplikationstabeller från 1 till 100 genom övning.",
+          "isPartOf": {
+            "@id": `${siteConfig.sv.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#learningresource`
+          },
+          "inLanguage": "sv-SE"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.sv.domain}/#organization`,
+          "name": "Multiplikationstabeller",
+          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
+          "description": "Utbildningsplattform som undervisar grundskoleelever i multiplikationstabeller",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["sv", "tr", "es", "de", "cs", "uk", "fi", "fr"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#learningresource`,
+          "name": "Inlärningsplattform för Multiplikationstabeller",
+          "description": "Omfattande utbildningsresurs för att lära sig multiplikationstabeller från 1 till 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "sv-SE",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "multiplikationstabeller",
+            "matematiklärande",
+            "grundskolematematik",
+            "multiplikation",
+            "lära sig tabeller",
+            "matematikövningar",
+            "multiplikationsspel"
+          ],
+          "teaches": "Färdigheter för att förstå, tillämpa och memorera multiplikation och multiplikationstabeller",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <main className="min-h-screen">
+          <Hero />
+          <LearningPathsSv />
+          <PracticePreviewSv />
+          <GamesSectionSv />
+          <PrintableExercisesSv />
+          <DefinitionSection />
+          <WhyItMattersSv />
+          <HowToLearnSv />
+          <AudienceSectionSv />
+          <Footer />
         </main>
       </>
     )
