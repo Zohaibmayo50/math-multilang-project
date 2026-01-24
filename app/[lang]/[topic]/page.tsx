@@ -70,6 +70,7 @@ import GamesSectionFr from '@/app/components/fr/GamesSection'
 import PrintableExercisesFr from '@/app/components/fr/PrintableExercises'
 import AudienceSectionFr from '@/app/components/fr/AudienceSection'
 import FooterFr from '@/app/components/fr/Footer'
+import HeaderSv from '@/app/components/sv/Header'
 import HeroSv from '@/app/components/sv/Hero'
 import DefinitionSectionSv from '@/app/components/sv/DefinitionSection'
 import WhyItMattersSv from '@/app/components/sv/WhyItMatters'
@@ -1257,6 +1258,7 @@ export default async function TopicHomePage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
+        <HeaderSv />
         <main className="min-h-screen">
           <HeroSv />
           <LearningPathsSv />
