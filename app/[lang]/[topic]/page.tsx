@@ -70,6 +70,8 @@ import GamesSectionFr from '@/app/components/fr/GamesSection'
 import PrintableExercisesFr from '@/app/components/fr/PrintableExercises'
 import AudienceSectionFr from '@/app/components/fr/AudienceSection'
 import FooterFr from '@/app/components/fr/Footer'
+import HeroSv from '@/app/components/sv/Hero'
+import DefinitionSectionSv from '@/app/components/sv/DefinitionSection'
 import WhyItMattersSv from '@/app/components/sv/WhyItMatters'
 import HowToLearnSv from '@/app/components/sv/HowToLearn'
 import LearningPathsSv from '@/app/components/sv/LearningPaths'
@@ -77,6 +79,7 @@ import PracticePreviewSv from '@/app/components/sv/PracticePreview'
 import GamesSectionSv from '@/app/components/sv/GamesSection'
 import PrintableExercisesSv from '@/app/components/sv/PrintableExercises'
 import AudienceSectionSv from '@/app/components/sv/AudienceSection'
+import FooterSv from '@/app/components/sv/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -1255,16 +1258,16 @@ export default async function TopicHomePage({ params }: PageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
         <main className="min-h-screen">
-          <Hero />
+          <HeroSv />
           <LearningPathsSv />
           <PracticePreviewSv />
           <GamesSectionSv />
           <PrintableExercisesSv />
-          <DefinitionSection />
+          <DefinitionSectionSv />
           <WhyItMattersSv />
           <HowToLearnSv />
           <AudienceSectionSv />
-          <Footer />
+          <FooterSv />
         </main>
       </>
     )
