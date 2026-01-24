@@ -89,17 +89,17 @@ export default function FooterSv() {
             <h3 className="text-lg font-semibold mb-4 text-purple-400">Guider</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/sv/multiplikationstabeller/elever" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/sv/multiplikationstabeller/for-elever" className="text-slate-400 hover:text-white transition-colors">
                   För Elever
                 </Link>
               </li>
               <li>
-                <Link href="/sv/multiplikationstabeller/foraldrar" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/sv/multiplikationstabeller/for-foraldrar" className="text-slate-400 hover:text-white transition-colors">
                   För Föräldrar
                 </Link>
               </li>
               <li>
-                <Link href="/sv/multiplikationstabeller/larare" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/sv/multiplikationstabeller/for-larare" className="text-slate-400 hover:text-white transition-colors">
                   För Lärare
                 </Link>
               </li>

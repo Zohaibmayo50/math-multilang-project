@@ -61,7 +61,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/sv/multiplikationstabeller/elever"
+              href="/sv/multiplikationstabeller/for-elever"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
               Guide för elever
@@ -118,7 +118,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/sv/multiplikationstabeller/foraldrar"
+              href="/sv/multiplikationstabeller/for-foraldrar"
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors mt-4"
             >
               Guide för föräldrar
@@ -175,7 +175,7 @@ export default function AudienceSection() {
               </p>
             </div>
             <Link 
-              href="/sv/multiplikationstabeller/larare"
+              href="/sv/multiplikationstabeller/for-larare"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors mt-4"
             >
               Guide för lärare

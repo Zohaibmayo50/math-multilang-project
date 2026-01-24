@@ -87,13 +87,13 @@ export default function HeaderSv() {
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link href="/sv/multiplikationstabeller/elever" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/sv/multiplikationstabeller/for-elever" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👨‍🎓 För Elever
                   </Link>
-                  <Link href="/sv/multiplikationstabeller/foraldrar" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                    👨‍👩‍👧‍👦 För Föräldrar
+                  <Link href="/sv/multiplikationstabeller/for-foraldrar" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                    👪 För Föräldrar
                   </Link>
-                  <Link href="/sv/multiplikationstabeller/larare" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
+                  <Link href="/sv/multiplikationstabeller/for-larare" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
                     👩‍🏫 För Lärare
                   </Link>
                 </div>
@@ -191,13 +191,13 @@ export default function HeaderSv() {
               📖 Guider
             </h3>
             <div className="mt-2 space-y-1">
-              <Link href="/sv/multiplikationstabeller/elever" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/sv/multiplikationstabeller/for-elever" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍🎓 För Elever
               </Link>
-              <Link href="/sv/multiplikationstabeller/foraldrar" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
-                👨‍👩‍👧‍👦 För Föräldrar
+              <Link href="/sv/multiplikationstabeller/for-foraldrar" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+                👪 För Föräldrar
               </Link>
-              <Link href="/sv/multiplikationstabeller/larare" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/sv/multiplikationstabeller/for-larare" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👩‍🏫 För Lärare
               </Link>
             </div>
