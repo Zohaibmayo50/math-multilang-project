@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
+import Header from '@/app/components/sv/Header'
+import Footer from '@/app/components/sv/Footer'
 
 export const metadata = {
   title: 'För Elever: Multiplikationstabell Guide | Steg för Steg Lärande',
@@ -13,6 +14,7 @@ export const metadata = {
 export default function ForStudents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
