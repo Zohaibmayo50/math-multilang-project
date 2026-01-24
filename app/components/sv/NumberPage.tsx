@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import Link from 'next/link'
 import Header from './Header'
-import Footer from '../Footer'
+import Footer from './Footer'
 import PracticePreview from './PracticePreview'
 import PrintableExercises from './PrintableExercises'
 import NumberGames from './NumberGames'

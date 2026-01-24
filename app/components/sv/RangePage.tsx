@@ -5,7 +5,7 @@ import Header from './Header'
 import PracticePreview from './PracticePreview'
 import GamesSection from './GamesSection'
 import PrintableExercises from './PrintableExercises'
-import Footer from '../Footer'
+import Footer from './Footer'
 
 interface RangePageProps {
   rangeStart: number
