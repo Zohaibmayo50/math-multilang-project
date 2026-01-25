@@ -537,7 +537,7 @@ export default function ForParents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 
-                href="/1-10"
+                href="/sv/multiplikationstabeller/1-10"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
                 Börja med Tabellerna
@@ -546,7 +546,7 @@ export default function ForParents() {
                 </svg>
               </Link>
               <Link 
-                href="/"
+                href="/sv/multiplikationstabeller"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Tillbaka till Startsidan

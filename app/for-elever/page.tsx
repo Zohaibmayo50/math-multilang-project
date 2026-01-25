@@ -116,7 +116,7 @@ export default function ForStudents() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <Link href="/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                      <Link href="/sv/multiplikationstabeller/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
                         Gå till 1-10 Tabeller →
                       </Link>
                     </div>
@@ -280,7 +280,7 @@ export default function ForStudents() {
                 <p className="text-slate-700 mb-3">
                   Öva med de roliga spelen på denna webbplats. Att lära sig genom att spela är mycket roligare!
                 </p>
-                <Link href="/" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
+                <Link href="/sv/multiplikationstabeller" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
                   Upptäck Spelen →
                 </Link>
               </div>
@@ -456,7 +456,7 @@ export default function ForStudents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/1-10"
+                href="/sv/multiplikationstabeller/1-10"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -466,7 +466,7 @@ export default function ForStudents() {
                 </svg>
               </Link>
               <Link 
-                href="/"
+                href="/sv/multiplikationstabeller"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
                 Tillbaka till Startsidan
