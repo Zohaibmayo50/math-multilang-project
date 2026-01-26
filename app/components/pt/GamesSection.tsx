@@ -478,12 +478,12 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
             </svg>
             <div>
               <h4 className="font-semibold text-slate-900 mb-2">
-                🎯 Speltips
+                🎯 Dicas de Jogos
               </h4>
               <p className="text-slate-700">
-                Varje spel använder en annan inlärningsteknik. Snabbt Svar ökar din hastighet, 
-                Multiplikationshjälte hjälper dig klara svårighetsnivåer, Minnesspel utvecklar 
-                visuellt lärande och Rymdäventyr ökar din motivation.
+                Cada jogo usa uma técnica de aprendizado diferente. Resposta Rápida aumenta sua velocidade, 
+                Herói da Multiplicação ajuda você a superar níveis de dificuldade, Jogo da Memória desenvolve 
+                aprendizagem visual e Aventura Espacial aumenta sua motivação.
               </p>
             </div>
           </div>

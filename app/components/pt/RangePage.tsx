@@ -231,7 +231,7 @@ export default function RangePage({
                     <!DOCTYPE html>
                     <html>
                     <head>
-                      <title>Tabuada från ${rangeStart} till ${rangeEnd}</title>
+                      <title>Tabuada de ${rangeStart} até ${rangeEnd}</title>
                       <style>
                         @media print {
                           @page { margin: 1cm; }
@@ -286,11 +286,11 @@ export default function RangePage({
                       </style>
                     </head>
                     <body>
-                      <h1>Tabuada från ${rangeStart} till ${rangeEnd} - Komplett Lista</h1>
+                      <h1>Tabuada de ${rangeStart} até ${rangeEnd} - Lista Completa</h1>
                       <div class="grid">
                         ${rangeNumbers.map(num => `
                           <div class="table-box">
-                            <div class="table-title">${num} Gångertabuada</div>
+                            <div class="table-title">Tabuada do ${num}</div>
                             ${[...Array(10)].map((_, i) => `
                               <div class="equation">
                                 <span class="equation-left">${num} × ${i + 1}</span>
@@ -480,30 +480,30 @@ export default function RangePage({
             <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">✖️</span>
-                Jämna Tal-Mönster
+                Padrão de Números Pares
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeNumbers.filter(n => n % 2 === 0).length > 0 ? 
-                  `Jämna tal i este intervalo (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) ger alltid jämna resultat.` :
-                  'Tabuadasna för tal i este intervalo visar specifika mönster.'
+                  `Números pares neste intervalo (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) sempre dão resultados pares.` :
+                  'As tabuadas para números neste intervalo mostram padrões específicos.'
                 }
               </p>
               <p className="text-sm text-slate-600 italic">
-                entender logiken med jämna och udda tal minskar fel.
+                Entender a lógica de números pares e ímpares reduz erros.
               </p>
             </div>
             
             <div className="bg-purple-50 rounded-xl p-6 border border-purple-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🔢</span>
-                Sista Siffrans Mönster
+                Padrão do Último Dígito
               </h3>
               <p className="text-slate-700 mb-3">
-                I varje tals Tabuada upprepas de sista siffrorna i ett visst mönster. 
+                Na tabuada de cada número, os últimos dígitos se repetem em um padrão específico. 
                 Perceber este padrão é útil para verificação.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Till exempel: Tal som slutar på 5 slutar alltid på 0 eller 5.
+                Por exemplo: Números que terminam em 5 sempre terminam em 0 ou 5.
               </p>
             </div>
           </div>
@@ -560,7 +560,7 @@ export default function RangePage({
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
                     <strong>Use cartões coloridos:</strong> Atribuir cores diferentes a cada número 
-                    stärker det visuella minnet.
+                    fortalece a memória visual.
                   </div>
                 </li>
               </ul>
@@ -568,32 +568,32 @@ export default function RangePage({
             
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                3. Övningsuppgifter
+                3. Exercícios de Prática
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
                 Prática regular garante que o conhecimento aprendido se torne permanente:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
-                  <p className="font-semibold text-slate-900 mb-2">Snabba Frågor-Svar</p>
+                  <p className="font-semibold text-slate-900 mb-2">Perguntas Rápidas e Respostas</p>
                   <p className="text-slate-700 text-sm">
-                    Lös minst 10 slumpmässiga problem om dagen och mät din tid.
+                    Resolva pelo menos 10 problemas aleatórios por dia e mea seu tempo.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
-                  <p className="font-semibold text-slate-900 mb-2">Skriftliga Prov</p>
+                  <p className="font-semibold text-slate-900 mb-2">Provas Escritas</p>
                   <p className="text-slate-700 text-sm">
-                    Gör ett skriftligt prov en gång i veckan och analysera dina misstag.
+                    Faça uma prova escrita uma vez por semana e analise seus erros.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
-                  <p className="font-semibold text-slate-900 mb-2">Spel</p>
+                  <p className="font-semibold text-slate-900 mb-2">Jogos</p>
                   <p className="text-slate-700 text-sm">
                     Jogar jogos de multiplicação faz com que se aprenda se divertindo.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
-                  <p className="font-semibold text-slate-900 mb-2">Tävla med Vänner</p>
+                  <p className="font-semibold text-slate-900 mb-2">Compita com Amigos</p>
                   <p className="text-slate-700 text-sm">
                     Você pode aumentar sua motivação competindo com seus amigos.
                   </p>
@@ -608,13 +608,13 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">
-            {nextRangeUrl ? 'Fortsätt Din Inlärningsresa' : 'Grattis!'}
+            {nextRangeUrl ? 'Continue Sua Jornada de Aprendizado' : 'Parabéns!'}
           </h2>
           
           {nextRangeUrl ? (
             <>
               <p className="text-xl mb-8 leading-relaxed opacity-95 text-center">
-                Se você pode usar a Tabuada do från {rangeStart} till {rangeEnd} confortavelmente, 
+                Se você pode usar a tabuada de {rangeStart} até {rangeEnd} confortavelmente, 
                 você está pronto para avançar para o próximo passo!
               </p>
               
@@ -627,7 +627,7 @@ export default function RangePage({
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
                     </svg>
-                    Föregående Intervall
+                    Intervalo Anterior
                   </Link>
                 )}
                 
@@ -635,7 +635,7 @@ export default function RangePage({
                   href={nextRangeUrl}
                   className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl"
                 >
-                  Gå till Nästa Intervall
+                  Ir para o Próximo Intervalo
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -644,12 +644,12 @@ export default function RangePage({
             </>
           ) : (
             <p className="text-xl leading-relaxed opacity-95 text-center">
-              Du har slutfört alla Tabuadas! Nu känner du till alla multiplikationer från 1 till 100.
+              Você completou todas as tabuadas! Agora você conhece todas as multiplicações de 1 a 100.
             </p>
           )}
           
           <p className="mt-6 text-sm opacity-80 text-center">
-            Seja paciente e consistente para lära dig alla Tabuadas. Cada intervalo se baseia no anterior.
+            Seja paciente e consistente para aprender todas as tabuadas. Cada intervalo se baseia no anterior.
           </p>
         </div>
       </section>
