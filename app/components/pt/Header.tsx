@@ -102,7 +102,7 @@ export default function HeaderPt() {
 
             {/* PDF Exercises Link */}
             <Link 
-              href="/pt/tabuada/1-10" 
+              href="/pt/tabuada#pdf-exercises" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
               📄 Exercícios PDF
@@ -110,7 +110,7 @@ export default function HeaderPt() {
 
             {/* Interactive Games Link */}
             <Link 
-              href="/pt/tabuada/1-10" 
+              href="/pt/tabuada#games" 
               className="px-4 py-2 text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
             >
               🎮 Jogos Interativos
@@ -118,7 +118,7 @@ export default function HeaderPt() {
 
             {/* CTA Button */}
             <Link
-              href="/pt/tabuada/1-10"
+              href="/pt/tabuada#learning-paths"
               className="ml-2 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-semibold shadow-md hover:shadow-lg flex items-center gap-2"
             >
               Comece Agora 🚀
@@ -199,10 +199,10 @@ export default function HeaderPt() {
 
             {/* Links Section */}
             <div className="space-y-2 pt-2 border-t border-slate-200">
-              <Link href="/pt/tabuada/1-10" onClick={closeMobileMenu} className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/pt/tabuada#pdf-exercises" onClick={closeMobileMenu} className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 📄 Exercícios PDF
               </Link>
-              <Link href="/pt/tabuada/1-10" onClick={closeMobileMenu} className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
+              <Link href="/pt/tabuada#games" onClick={closeMobileMenu} className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 🎮 Jogos Interativos
               </Link>
             </div>
@@ -210,7 +210,7 @@ export default function HeaderPt() {
             {/* CTA Button */}
             <div className="pt-2">
               <Link
-                href="/pt/tabuada/1-10"
+                href="/pt/tabuada#learning-paths"
                 onClick={closeMobileMenu}
                 className="block w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 font-semibold text-center shadow-md"
               >
