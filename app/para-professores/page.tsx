@@ -1,634 +1,762 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Header from '@/app/components/pt/Header'
 import Footer from '@/app/components/pt/Footer'
 
 export const metadata = {
-  title: 'För Lärare: Multiplikationstabell Guide | Klassrumsundervisning Material',
-  description: 'Professionella resurser för undervisning i multiplikationstabeller i klassrummet, pedagogiska strategier, aktivitetsförslag och bedömningsverktyg.',
-  keywords: 'multiplikationstabell undervisning, klassrumsaktiviteter, pedagogiska metoder, matematik undervisning',
+  title: 'Para Professores: Guia de Tabuada | Material de Ensino em Sala de Aula',
+  description: 'Recursos profissionais para ensinar tabuada em sala de aula, estratégias pedagógicas, sugestões de atividades e ferramentas de avaliação.',
+  keywords: 'ensinar tabuada, atividades em sala de aula, métodos pedagógicos, ensino de matemática',
   alternates: {
-    canonical: '/for-larare',
+    canonical: '/para-professores',
   },
-}
+};
 
-export default function ForTeachers() {
+export default function ParaProfessoresPage() {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
-      <main className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-                För Lärare: Multiplikationstabell Guide
-              </h1>
-              <p className="text-lg sm:text-xl text-emerald-100 mb-6 md:mb-8">
-                Professionella resurser, pedagogiska strategier och aktivitetsförslag för undervisning i multiplikationstabeller i klassrummet.
+      
+      {/* Hero Section */}
+      <section className="pt-24 pb-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Guia de Tabuada Para Professores
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Estratégias eficazes, atividades em sala de aula e recursos para ensinar 
+              tabuada de forma que todos os alunos possam dominá-la.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Teaching Strategies Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Estrategias de Enseñanza Efectivas
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Strategy 1 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">👁️</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Visualización</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Use representaciones visuales para ayudar a los estudiantes a comprender 
+                la multiplicación como grupos repetidos.
               </p>
-              <div className="flex items-center gap-4">
-                <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
-                </svg>
-                <span className="text-emerald-100">Professionellt stöd för effektiv undervisning</span>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Arreglos rectangulares (ej: 3×4 como 3 filas de 4 objetos)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Modelos de área usando papel cuadriculado</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Diagramas de saltos en la recta numérica</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-500 mr-2">•</span>
+                  <span>Manipulativos concretos (bloques, fichas, cubos)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Strategy 2 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🧩</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Descomposición</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Enseñe a los estudiantes a descomponer multiplicaciones difíciles 
+                en operaciones más simples.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">•</span>
+                  <span>7×6 = (5×6) + (2×6) = 30 + 12 = 42</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">•</span>
+                  <span>9×8 = (10×8) - (1×8) = 80 - 8 = 72</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">•</span>
+                  <span>Usar duplicación: 6×4 = 2×(3×4)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-2">•</span>
+                  <span>Propiedad distributiva en acción</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Strategy 3 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🔢</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Patrones</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Ayude a los estudiantes a descubrir y usar patrones para facilitar 
+                el aprendizaje y la memorización.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span>Tabla del 2: todos los números pares</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span>Tabla del 5: terminan en 0 o 5</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span>Tabla del 9: suma de dígitos = 9, patrón descendente</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-500 mr-2">•</span>
+                  <span>Propiedad conmutativa: 3×7 = 7×3</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Strategy 4 */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🌍</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Aplicaciones Reales</h3>
+              </div>
+              <p className="text-gray-700 mb-4">
+                Conecte la multiplicación con situaciones cotidianas para dar 
+                significado y contexto al aprendizaje.
+              </p>
+              <ul className="space-y-2 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
+                  <span>Problemas de compras y dinero</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
+                  <span>Organización de objetos en filas y columnas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
+                  <span>Recetas de cocina y medidas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">•</span>
+                  <span>Deportes, juegos y actividades grupales</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Classroom Activities Section */}
+      <section className="py-12 px-4 bg-white/50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Actividades para el Aula
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Activity 1 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🎯</span>
+                Bingo de Multiplicación
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Los estudiantes crean tarjetas de bingo con productos. 
+                Llame multiplicaciones y los estudiantes marcan las respuestas.
+              </p>
+              <div className="bg-blue-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Principiante a Intermedio<br/>
+                <strong>Tiempo:</strong> 15-20 minutos
+              </div>
+            </div>
+
+            {/* Activity 2 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🏃</span>
+                Carreras de Multiplicación
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Equipos compiten respondiendo problemas de multiplicación 
+                en un formato de relevos en el pizarrón.
+              </p>
+              <div className="bg-green-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Todos los niveles<br/>
+                <strong>Tiempo:</strong> 10-15 minutos
+              </div>
+            </div>
+
+            {/* Activity 3 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🎲</span>
+                Dominó de Multiplicación
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Fichas de dominó modificadas donde los estudiantes emparejan 
+                multiplicaciones con sus productos.
+              </p>
+              <div className="bg-purple-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Intermedio<br/>
+                <strong>Tiempo:</strong> 20-30 minutos
+              </div>
+            </div>
+
+            {/* Activity 4 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🎨</span>
+                Arte con Arreglos
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Los estudiantes crean diseños artísticos usando arreglos 
+                rectangulares y etiquetan las multiplicaciones correspondientes.
+              </p>
+              <div className="bg-pink-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Principiante<br/>
+                <strong>Tiempo:</strong> 30-40 minutos
+              </div>
+            </div>
+
+            {/* Activity 5 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">🎪</span>
+                Estaciones de Práctica
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Configure estaciones rotativas con diferentes actividades: 
+                tarjetas didácticas, juegos digitales, problemas escritos, manipulativos.
+              </p>
+              <div className="bg-orange-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Todos los niveles<br/>
+                <strong>Tiempo:</strong> 40-50 minutos
+              </div>
+            </div>
+
+            {/* Activity 6 */}
+            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                <span className="text-2xl mr-2">📖</span>
+                Historias de Multiplicación
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Los estudiantes escriben e ilustran problemas de multiplicación 
+                basados en situaciones reales o imaginarias.
+              </p>
+              <div className="bg-yellow-50 rounded-lg p-3 text-sm text-gray-700">
+                <strong>Nivel:</strong> Intermedio a Avanzado<br/>
+                <strong>Tiempo:</strong> 30-45 minutos
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Main Content */}
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          {/* Pedagogical Approach */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Pedagogisk Metod
-            </h2>
-            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                Undervisning i multiplikationstabeller bör byggas på konceptuell förståelse, inte bara utantillinlärning. 
-                Det är viktigt att eleverna förstår innebörden av multiplikation och utvecklar olika strategier.
-              </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <div className="bg-emerald-50 p-6 rounded-lg border-l-4 border-emerald-500">
-                  <h3 className="text-lg font-semibold text-emerald-900 mb-3">Från Konkret till Abstrakt</h3>
-                  <p className="text-slate-700">Börja med fysiska material, gå via visuella representationer till abstrakta numeriska operationer.</p>
-                </div>
-                <div className="bg-teal-50 p-6 rounded-lg border-l-4 border-teal-500">
-                  <h3 className="text-lg font-semibold text-teal-900 mb-3">Strategiutveckling</h3>
-                  <p className="text-slate-700">Utveckla flexibelt tänkande genom att visa eleverna flera lösningsvägar.</p>
-                </div>
-                <div className="bg-cyan-50 p-6 rounded-lg border-l-4 border-cyan-500">
-                  <h3 className="text-lg font-semibold text-cyan-900 mb-3">Meningsfullt Lärande</h3>
-                  <p className="text-slate-700">Relatera multiplikationstabeller till verkliga problem och skapa sammanhang.</p>
-                </div>
-              </div>
+      {/* Differentiated Instruction Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Instrucción Diferenciada
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Beginning Learners */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="text-3xl mr-2">🌱</span>
+                Estudiantes Principiantes
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Comenzar con tablas del 1, 2, 5 y 10</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Usar muchos manipulativos concretos</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Enfatizar suma repetida inicialmente</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Proporcionar tablas de referencia</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Práctica diaria breve (5-10 minutos)</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-2">✓</span>
+                  <span>Celebrar pequeños logros</span>
+                </li>
+              </ul>
             </div>
-          </section>
 
-          {/* Teaching Methods */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Undervisningsmetoder
-            </h2>
-            <div className="space-y-4 md:space-y-6">
-              {/* Method 1 */}
-              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-                <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📦</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Matriser och Grupperingar</h3>
-                    <p className="text-slate-700 mb-4">
-                      Gruppera objekt i matriser för att visa att multiplikation är upprepad addition.
-                    </p>
-                    <div className="bg-emerald-50 p-4 rounded-lg mb-4">
-                      <h4 className="font-semibold text-emerald-900 mb-2">Tillämpning:</h4>
-                      <ul className="space-y-2 text-slate-700">
-                        <li className="flex items-start">
-                          <span className="text-emerald-600 mr-2">•</span>
-                          <span>Be eleverna sitta i 4 rader × 6 elever</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-emerald-600 mr-2">•</span>
-                          <span>Arrangera block eller räknare i matriser</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-emerald-600 mr-2">•</span>
-                          <span>Rita punktmatriser på tavlan för visualisering</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Method 2 */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔢</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Areamodell (Area Model)</h3>
-                    <p className="text-slate-700 mb-4">
-                      Visualisera multiplikation med rektangulära ytor.
-                    </p>
-                    <div className="bg-teal-50 p-4 rounded-lg mb-4">
-                      <h4 className="font-semibold text-teal-900 mb-2">Exempel:</h4>
-                      <p className="text-slate-700 mb-3">För 5 × 3:</p>
-                      <div className="bg-white p-4 rounded border-2 border-teal-200 inline-block">
-                        <div className="grid grid-cols-5 gap-1">
-                          {[...Array(15)].map((_, i) => (
-                            <div key={i} className="w-8 h-8 bg-teal-200 border border-teal-400"></div>
-                          ))}
-                        </div>
-                        <p className="text-center mt-2 text-sm text-slate-600">5 kolumner × 3 rader = 15 enhetsrutor</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Method 3 */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">➗</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Uppdelningsstrategi</h3>
-                    <p className="text-slate-700 mb-4">
-                      Lös komplexa multiplikationer genom att dela upp dem i enklare delar.
-                    </p>
-                    <div className="bg-cyan-50 p-4 rounded-lg">
-                      <h4 className="font-semibold text-cyan-900 mb-2">Exempel: 7 × 8</h4>
-                      <div className="space-y-2 text-slate-700">
-                        <p>• Metod 1: (5 × 8) + (2 × 8) = 40 + 16 = 56</p>
-                        <p>• Metod 2: (7 × 5) + (7 × 3) = 35 + 21 = 56</p>
-                        <p>• Metod 3: (7 × 10) - (7 × 2) = 70 - 14 = 56</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Method 4 */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔄</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-3">Kommutativa Lagen (Commutative Property)</h3>
-                    <p className="text-slate-700 mb-4">
-                      Visa eleverna att 3 × 4 och 4 × 3 är samma sak och halvera inlärningsbördan.
-                    </p>
-                    <div className="bg-indigo-50 p-4 rounded-lg">
-                      <p className="text-slate-700">
-                        <strong>Tips:</strong> Vänd ett fysiskt material (t.ex. kortmatris) 90 grader för att 
-                        visuellt demonstrera den kommutativa lagen.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Intermediate Learners */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="text-3xl mr-2">📚</span>
+                Estudiantes Intermedios
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Introducir tablas del 3, 4, 6 y 7</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Enseñar estrategias de descomposición</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Practicar propiedad conmutativa</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Juegos de velocidad moderada</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Problemas de aplicación en contexto</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-2">✓</span>
+                  <span>Trabajo en parejas y grupos pequeños</span>
+                </li>
+              </ul>
             </div>
-          </section>
 
-          {/* Classroom Activities */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Klassrumsaktivitetsförslag
-            </h2>
-            <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-              {/* Activity 1 */}
-              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    1
-                  </div>
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-900">Multiplikationstabell Bingo</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  Ge varje elev ett 4×4 eller 5×5 bingokort. Läs upp multiplikationsfrågor, 
-                  eleverna markerar svaret på sina kort.
-                </p>
-                <div className="bg-emerald-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-emerald-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Snabb återkallning, uppmärksamhet, rolig repetition</p>
-                </div>
-              </div>
-
-              {/* Activity 2 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    2
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Multiplikationshörn</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  Tilldela olika tal (t.ex. 6, 7, 8, 9) till klassrummets fyra hörn. 
-                  Säg en faktor, eleverna springer till hörnet med rätt svar.
-                </p>
-                <div className="bg-teal-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-teal-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Kinetiskt lärande, snabbtänkande, energiutsläpp</p>
-                </div>
-              </div>
-
-              {/* Activity 3 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    3
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Multiplikationsdomino</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  Varje kort har en multiplikationsfråga på ena sidan och svaret på en annan fråga på andra sidan. 
-                  Eleverna matchar som domino och skapar en kedja.
-                </p>
-                <div className="bg-cyan-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-cyan-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Problemlösning, samarbete, logiskt tänkande</p>
-                </div>
-              </div>
-
-              {/* Activity 4 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    4
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Verkliga Problem</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  Be eleverna skapa multiplikationsproblem från sina egna liv 
-                  (t.ex: 6 rader i klassrummet, 4 böcker i varje rad).
-                </p>
-                <div className="bg-blue-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-blue-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Kontextskapande, kreativitet, meningsfullt lärande</p>
-                </div>
-              </div>
-
-              {/* Activity 5 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    5
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Multiplikationskonst</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  Rita rektanglar på rutat papper för att visualisera multiplikationsresultat. 
-                  Förvandla till mönster med olika färger.
-                </p>
-                <div className="bg-indigo-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-indigo-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Visuell-rumslig intelligens, integration med konst</p>
-                </div>
-              </div>
-
-              {/* Activity 6 */}
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                    6
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-900">Multiplikationskedjetävling</h3>
-                </div>
-                <p className="text-slate-700 mb-3">
-                  I grupper löser varje elev en multiplikationsfråga och skickar resultatet till nästa 
-                  kompis. Snabbaste gruppen vinner.
-                </p>
-                <div className="bg-purple-50 p-3 rounded-lg text-sm">
-                  <p className="font-semibold text-purple-900 mb-1">Mål:</p>
-                  <p className="text-slate-700">Teamwork, hastighet, motivation</p>
-                </div>
-              </div>
+            {/* Advanced Learners */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                <span className="text-3xl mr-2">🚀</span>
+                Estudiantes Avanzados
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Tablas del 8, 9, 11 y 12</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Problemas de múltiples pasos</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Conexión con división y fracciones</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Desafíos de lógica matemática</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Crear sus propios problemas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-2">✓</span>
+                  <span>Tutorear a compañeros</span>
+                </li>
+              </ul>
             </div>
-          </section>
-
-          {/* Differentiated Instruction */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Differentierad Undervisning
-            </h2>
-            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                Varje elevs inlärningshastighet och stil är olika. Utveckla strategier som passar 
-                elever på olika nivåer i klassrummet.
-              </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                {/* Struggling Students */}
-                <div className="bg-red-50 p-6 rounded-lg border-t-4 border-red-400">
-                  <h3 className="text-lg font-semibold text-red-900 mb-4">Kämpande elever</h3>
-                  <ul className="space-y-2 text-slate-700 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span>Använd mer konkret material</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span>Undervisa i mindre grupper (2-5)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span>Tillhandahåll multiplikationstabelldiagram</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span>Gör upprepad övning och förstärkning</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-red-500 mr-2">•</span>
-                      <span>Ge individuellt eller smågruppsstöd</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* On-Level Students */}
-                <div className="bg-yellow-50 p-6 rounded-lg border-t-4 border-yellow-400">
-                  <h3 className="text-lg font-semibold text-yellow-900 mb-4">Elever på rätt nivå</h3>
-                  <ul className="space-y-2 text-slate-700 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-yellow-600 mr-2">•</span>
-                      <span>Balanserad användning av konkret och abstrakt material</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-600 mr-2">•</span>
-                      <span>Samarbetsaktiviteter</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-600 mr-2">•</span>
-                      <span>Spel och tävlingar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-600 mr-2">•</span>
-                      <span>Undervisning i olika strategier</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-600 mr-2">•</span>
-                      <span>Regelbunden utvärdering och återkoppling</span>
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Advanced Students */}
-                <div className="bg-green-50 p-6 rounded-lg border-t-4 border-green-400">
-                  <h3 className="text-lg font-semibold text-green-900 mb-4">Avancerade elever</h3>
-                  <ul className="space-y-2 text-slate-700 text-sm">
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">•</span>
-                      <span>Komplexa problem och utvidgningar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">•</span>
-                      <span>Multiplikation med tal större än 10 (11-20)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">•</span>
-                      <span>Upptäcka matematiska mönster</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">•</span>
-                      <span>Ledarroller (kamratundervisning)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">•</span>
-                      <span>Projektbaserat lärande</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Assessment Tools */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Bedömnings- och Utvärderingsverktyg
-            </h2>
-            <div className="space-y-4 md:space-y-6">
-              {/* Formative Assessment */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">Formativ Bedömning</h3>
-                <p className="text-slate-700 mb-4">
-                  För att följa elevers framsteg under inlärningsprocessen och justera undervisningen:
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-emerald-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-emerald-900 mb-2">Exitkort</h4>
-                    <p className="text-sm text-slate-700">
-                      Kort med 3-5 multiplikationsfrågor i slutet av lektionen. Ger omedelbar förståelsekontroll.
-                    </p>
-                  </div>
-                  <div className="bg-emerald-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-emerald-900 mb-2">Whiteboardsvar</h4>
-                    <p className="text-sm text-slate-700">
-                      Alla elever visar sina svar på mini-whiteboards samtidigt. Övervakning av hela klassen.
-                    </p>
-                  </div>
-                  <div className="bg-emerald-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-emerald-900 mb-2">Observationsanteckningar</h4>
-                    <p className="text-sm text-slate-700">
-                      Registrera elevers strategier och svårigheter under aktiviteter.
-                    </p>
-                  </div>
-                  <div className="bg-emerald-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-emerald-900 mb-2">Kamratbedömning</h4>
-                    <p className="text-sm text-slate-700">
-                      Elever kontrollerar varandras arbete, förstärker inlärningen.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Summative Assessment */}
-              <div className="bg-white rounded-lg shadow-md p-8">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">Summativ Bedömning</h3>
-                <p className="text-slate-700 mb-4">
-                  För att utvärdera läranderesultat vid specifika perioder:
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3 bg-teal-50 p-4 rounded-lg">
-                    <svg className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
-                    </svg>
-                    <div>
-                      <h4 className="font-semibold text-teal-900 mb-1">Veckotest</h4>
-                      <p className="text-sm text-slate-700">Korta test med 20 frågor varje vecka som täcker inlärda tabeller.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 bg-teal-50 p-4 rounded-lg">
-                    <svg className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                      <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                    <div>
-                      <h4 className="font-semibold text-teal-900 mb-1">Tidstester</h4>
-                      <p className="text-sm text-slate-700">Snabba återkallningstest som ska slutföras inom 1-2 minuter.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 bg-teal-50 p-4 rounded-lg">
-                    <svg className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
-                    </svg>
-                    <div>
-                      <h4 className="font-semibold text-teal-900 mb-1">Problemlösningsuppgifter</h4>
-                      <p className="text-sm text-slate-700">Mät förmågan att tillämpa multiplikationstabeller i verkliga problem.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Progress Tracking */}
-              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-8 border-2 border-purple-200">
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">Framstegsuppföljning</h3>
-                <p className="text-slate-700 mb-4">
-                  Håll individuella framstegsgraf för varje elev:
-                </p>
-                <ul className="space-y-2 text-slate-700">
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Vilka tabeller de behärskar, vilka de kämpar med</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Utvecklingstrend över tid (noggrannhet och hastighet)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>Strategier de använder och föredragna metoder</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Common Misconceptions */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Vanliga Missuppfattningar och Lösningar
-            </h2>
-            <div className="space-y-4">
-              <details className="bg-white rounded-lg shadow-md p-6 cursor-pointer group">
-                <summary className="text-lg font-semibold text-slate-900 flex items-center justify-between">
-                  <span>"Multiplikation gör alltid större"</span>
-                  <svg className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-slate-700">
-                  <p className="mb-2"><strong>Missuppfattning:</strong> Elever tror att resultatet av multiplikation alltid är större än faktorerna.</p>
-                  <p className="mb-2"><strong>Verklighet:</strong> Multiplikation med 1 ändrar inte resultatet, multiplikation med 0 ger noll.</p>
-                  <p className="bg-amber-50 p-3 rounded"><strong>Lösning:</strong> Visa tydligt dessa specialfall med exempel som 0×5=0 och 1×7=7.</p>
-                </div>
-              </details>
-
-              <details className="bg-white rounded-lg shadow-md p-6 cursor-pointer group">
-                <summary className="text-lg font-semibold text-slate-900 flex items-center justify-between">
-                  <span>"Ordningen av faktorer spelar roll"</span>
-                  <svg className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-slate-700">
-                  <p className="mb-2"><strong>Missuppfattning:</strong> Att tro att 3×4 och 4×3 är olika.</p>
-                  <p className="mb-2"><strong>Verklighet:</strong> Enligt kommutativa lagen ger båda samma resultat.</p>
-                  <p className="bg-amber-50 p-3 rounded"><strong>Lösning:</strong> Vänd fysiskt matrismodeller för att ge visuellt bevis.</p>
-                </div>
-              </details>
-
-              <details className="bg-white rounded-lg shadow-md p-6 cursor-pointer group">
-                <summary className="text-lg font-semibold text-slate-900 flex items-center justify-between">
-                  <span>"Multiplikation är bara utantillärning"</span>
-                  <svg className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </summary>
-                <div className="mt-4 text-slate-700">
-                  <p className="mb-2"><strong>Missuppfattning:</strong> Uppfattningen att multiplikationstabeller bara är en lista att memorera.</p>
-                  <p className="mb-2"><strong>Verklighet:</strong> Multiplikation innehåller mönster, relationer och strategier.</p>
-                  <p className="bg-amber-50 p-3 rounded"><strong>Lösning:</strong> Utveckla flexibelt tänkande genom att lära ut strategier som uppdelning och kommutativa lagen.</p>
-                </div>
-              </details>
-            </div>
-          </section>
-
-          {/* Resources */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Ytterligare Resurser och Material
-            </h2>
-            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Utskrivbart Material</h3>
-                  <ul className="space-y-2 text-slate-700">
-                    <li className="flex items-start">
-                      <span className="text-emerald-500 mr-2">📄</span>
-                      <span>Multiplikationstabelldiagram (1-10, 1-12)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-emerald-500 mr-2">📄</span>
-                      <span>Tomma multiplikationstabellmallar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-emerald-500 mr-2">📄</span>
-                      <span>Flashkortsset</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-emerald-500 mr-2">📄</span>
-                      <span>Arbetsblad (olika nivåer)</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Digitala Verktyg</h3>
-                  <ul className="space-y-2 text-slate-700">
-                    <li className="flex items-start">
-                      <span className="text-teal-500 mr-2">💻</span>
-                      <span>Interaktiva spel på denna webbplats</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-teal-500 mr-2">💻</span>
-                      <span>Online övningsplattformar</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-teal-500 mr-2">💻</span>
-                      <span>Pedagogiska matematikspel</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-teal-500 mr-2">💻</span>
-                      <span>Framstegsuppföljningsappar</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Call to Action */}
-          <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-              Börja Använda i Ditt Klassrum!
-            </h2>
-            <p className="text-base sm:text-lg text-emerald-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Ge dina elever en effektiv, rolig och meningsfull inlärningsupplevelse av 
-              multiplikationstabeller genom att använda denna plattform i klassrummet.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link 
-                href="/pt/tabuada/1-10"
-                className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center"
-              >
-                Utforska Tabellerna
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-              <Link 
-                href="/sv/multiplikationstabeller"
-                className="bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-800 transition-colors inline-flex items-center justify-center"
-              >
-                Tillbaka till Startsidan
-              </Link>
-            </div>
-          </section>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Assessment Strategies Section */}
+      <section className="py-12 px-4 bg-white/50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Estrategias de Evaluación
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Formative Assessment */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="text-3xl mr-3">📊</span>
+                Evaluación Formativa
+              </h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-blue-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Observación Diaria</h4>
+                  <p className="text-gray-700">
+                    Observe a los estudiantes durante la práctica, tome notas sobre 
+                    estrategias usadas y errores comunes.
+                  </p>
+                </div>
+                <div className="border-l-4 border-green-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Mini Pruebas Rápidas</h4>
+                  <p className="text-gray-700">
+                    1-2 minutos al inicio de la clase: 10 problemas para evaluar 
+                    fluidez y retención.
+                  </p>
+                </div>
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Pizarras Individuales</h4>
+                  <p className="text-gray-700">
+                    Los estudiantes muestran respuestas simultáneamente, permitiendo 
+                    verificación rápida de toda la clase.
+                  </p>
+                </div>
+                <div className="border-l-4 border-orange-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Entrevistas Matemáticas</h4>
+                  <p className="text-gray-700">
+                    Conversaciones breves uno-a-uno para entender el razonamiento 
+                    y estrategias del estudiante.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Summative Assessment */}
+            <div className="bg-white rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="text-3xl mr-3">📝</span>
+                Evaluación Sumativa
+              </h3>
+              <div className="space-y-4">
+                <div className="border-l-4 border-red-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Pruebas de Fluidez</h4>
+                  <p className="text-gray-700">
+                    Evaluaciones cronometradas para medir velocidad y precisión 
+                    en rangos específicos de tablas.
+                  </p>
+                </div>
+                <div className="border-l-4 border-yellow-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Proyectos Aplicados</h4>
+                  <p className="text-gray-700">
+                    Los estudiantes resuelven problemas del mundo real que requieren 
+                    multiplicación en varios contextos.
+                  </p>
+                </div>
+                <div className="border-l-4 border-pink-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Portafolios</h4>
+                  <p className="text-gray-700">
+                    Colección de trabajo a lo largo del tiempo mostrando progreso 
+                    y dominio creciente.
+                  </p>
+                </div>
+                <div className="border-l-4 border-indigo-500 pl-4">
+                  <h4 className="font-bold text-gray-900 mb-2">Autoevaluación</h4>
+                  <p className="text-gray-700">
+                    Los estudiantes rastrean su propio progreso, identifican tablas 
+                    dominadas y establecen metas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Progress Tracking */}
+          <div className="mt-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl shadow-xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="text-3xl mr-3">📈</span>
+              Seguimiento del Progreso
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white/20 rounded-lg p-4">
+                <h4 className="font-bold mb-2">Gráficas de Dominio</h4>
+                <p className="text-sm">
+                  Los estudiantes colorean tablas dominadas en una cuadrícula visual 
+                  de 12×12 para ver su progreso.
+                </p>
+              </div>
+              <div className="bg-white/20 rounded-lg p-4">
+                <h4 className="font-bold mb-2">Registro de Tiempo</h4>
+                <p className="text-sm">
+                  Rastrear mejoras en velocidad con gráficas que muestran 
+                  tiempos decrecientes.
+                </p>
+              </div>
+              <div className="bg-white/20 rounded-lg p-4">
+                <h4 className="font-bold mb-2">Insignias de Logro</h4>
+                <p className="text-sm">
+                  Sistema de recompensas por dominar cada tabla, motivando 
+                  el progreso continuo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Common Misconceptions Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Errores Conceptuales Comunes
+          </h2>
+          
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <p className="text-gray-700 mb-6 text-lg">
+              Reconozca y aborde estos malentendidos frecuentes para asegurar 
+              una comprensión sólida de la multiplicación:
+            </p>
+
+            <div className="space-y-6">
+              {/* Misconception 1 */}
+              <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                  <span className="text-2xl mr-2">❌</span>
+                  "La multiplicación siempre hace los números más grandes"
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Por qué es problemático:</strong> Los estudiantes se confunden 
+                  al multiplicar por fracciones o decimales.
+                </p>
+                <p className="text-gray-700">
+                  <strong className="text-green-700">Cómo corregirlo:</strong> Mostrar 
+                  ejemplos como 5 × 0.5 = 2.5 o 3 × 0 = 0. Explicar que multiplicar 
+                  por números menores que 1 reduce el resultado.
+                </p>
+              </div>
+
+              {/* Misconception 2 */}
+              <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                  <span className="text-2xl mr-2">❌</span>
+                  "El orden no importa en los problemas verbales"
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Por qué es problemático:</strong> Aunque 3×4 = 4×3, el significado 
+                  contextual puede ser diferente (3 grupos de 4 vs. 4 grupos de 3).
+                </p>
+                <p className="text-gray-700">
+                  <strong className="text-green-700">Cómo corregirlo:</strong> Discutir 
+                  la propiedad conmutativa pero enfatizar la importancia de entender 
+                  el contexto del problema.
+                </p>
+              </div>
+
+              {/* Misconception 3 */}
+              <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                  <span className="text-2xl mr-2">❌</span>
+                  "Multiplicar es solo memorización"
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Por qué es problemático:</strong> Los estudiantes pueden 
+                  memorizar sin entender, dificultando la aplicación y retención.
+                </p>
+                <p className="text-gray-700">
+                  <strong className="text-green-700">Cómo corregirlo:</strong> Siempre 
+                  enseñar conceptos antes de la memorización. Usar modelos visuales 
+                  y estrategias de comprensión.
+                </p>
+              </div>
+
+              {/* Misconception 4 */}
+              <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                  <span className="text-2xl mr-2">❌</span>
+                  "Los patrones siempre funcionan sin entenderlos"
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Por qué es problemático:</strong> Los estudiantes aplican 
+                  patrones mecánicamente sin comprender el "por qué" matemático.
+                </p>
+                <p className="text-gray-700">
+                  <strong className="text-green-700">Cómo corregirlo:</strong> Al enseñar 
+                  patrones (ej: tabla del 9), siempre explicar por qué funcionan 
+                  usando propiedades matemáticas.
+                </p>
+              </div>
+
+              {/* Misconception 5 */}
+              <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
+                  <span className="text-2xl mr-2">❌</span>
+                  "Solo hay una manera correcta de resolver"
+                </h3>
+                <p className="text-gray-700 mb-2">
+                  <strong>Por qué es problemático:</strong> Limita el pensamiento 
+                  creativo y la flexibilidad numérica.
+                </p>
+                <p className="text-gray-700">
+                  <strong className="text-green-700">Cómo corregirlo:</strong> Celebrar 
+                  múltiples estrategias. Pedir a los estudiantes que compartan diferentes 
+                  métodos y discutir cuándo cada uno es más útil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips and Best Practices Section */}
+      <section className="py-12 px-4 bg-white/50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Consejos y Mejores Prácticas
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="text-3xl mr-3">💡</span>
+                Consejos para el Éxito
+              </h3>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Práctica corta y diaria es mejor que sesiones largas esporádicas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Celebre el progreso, no solo la perfección</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Varíe los métodos de práctica para mantener el interés</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Conecte con otras áreas: arte, música, educación física</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Involucre a las familias con actividades para el hogar</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2 text-xl">✦</span>
+                  <span>Use tecnología como complemento, no reemplazo</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <span className="text-3xl mr-3">🎯</span>
+                Secuencia Sugerida
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">1</span>
+                  <span className="text-gray-700">Tablas del 1, 2, 10, 5</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">2</span>
+                  <span className="text-gray-700">Propiedad conmutativa (reduce la carga)</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">3</span>
+                  <span className="text-gray-700">Tablas del 4 (duplicar el 2)</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">4</span>
+                  <span className="text-gray-700">Tabla del 9 (patrones especiales)</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">5</span>
+                  <span className="text-gray-700">Tablas del 3 y 6 (relación triple)</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">6</span>
+                  <span className="text-gray-700">Tablas del 7, 8 (más desafiantes)</span>
+                </div>
+                <div className="flex items-center bg-white rounded-lg p-3 shadow">
+                  <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">7</span>
+                  <span className="text-gray-700">Tablas del 11, 12 (patrones avanzados)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Recursos Adicionales
+          </h2>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            <Link 
+              href="/pt/tabuada/1-10" 
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
+            >
+              <div className="text-4xl mb-3">📘</div>
+              <h3 className="font-bold text-gray-900 mb-2">Tablas 1-10</h3>
+              <p className="text-sm text-gray-600">Recursos básicos</p>
+            </Link>
+
+            <Link 
+              href="/pt/tabuada/11-20" 
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
+            >
+              <div className="text-4xl mb-3">📗</div>
+              <h3 className="font-bold text-gray-900 mb-2">Tablas 11-20</h3>
+              <p className="text-sm text-gray-600">Nivel intermedio</p>
+            </Link>
+
+            <Link 
+              href="/para-estudantes" 
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
+            >
+              <div className="text-4xl mb-3">👨‍🎓</div>
+              <h3 className="font-bold text-gray-900 mb-2">Para Estudantes</h3>
+              <p className="text-sm text-gray-600">Guía de aprendizaje</p>
+            </Link>
+
+            <Link 
+              href="/para-pais" 
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
+            >
+              <div className="text-4xl mb-3">👨‍👩‍👧</div>
+              <h3 className="font-bold text-gray-900 mb-2">Para Pais</h3>
+              <p className="text-sm text-gray-600">Apoyo en casa</p>
+            </Link>
+          </div>
+
+          <div className="mt-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl shadow-xl p-8 text-white text-center">
+            <h3 className="text-2xl font-bold mb-4">
+              ¿Necesita Más Ayuda?
+            </h3>
+            <p className="text-lg mb-6">
+              Explore nuestras tablas individuales para recursos específicos, 
+              ejercicios descargables y actividades interactivas.
+            </p>
+            <Link 
+              href="/pt/tabuada"
+              className="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+            >
+              Ver Todas a tabuada
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 

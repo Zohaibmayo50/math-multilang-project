@@ -1,30 +1,29 @@
 ﻿import Link from 'next/link'
-import Header from '@/app/components/pt/Header'
-import Footer from '@/app/components/pt/Footer'
+import Header from '@/app/components/pt/Header'`nimport Footer from '@/app/components/pt/Footer'
 
 export const metadata = {
-  title: 'Para Estudantes: Guia de Tabuada | Aprendizado Passo a Passo',
-  description: 'Guia passo a passo para aprender tabuada facilmente. Aprenda no seu prÃ³prio ritmo com materiais visuais, atividades prÃ¡ticas e jogos divertidos!',
-  keywords: 'aprender tabuada, matemÃ¡tica para estudantes, guia de tabuada, multiplicaÃ§Ã£o passo a passo',
+  title: 'Guía de Tablas de Multiplicar para Estudiantes | Aprende Paso a Paso',
+  description: 'Guía paso a paso para aprender tablas de multiplicar fácilmente. Materiales visuales, actividades prácticas y juegos divertidos para aprender a tu ritmo.',
+  keywords: 'aprender tablas de multiplicar, matemáticas para estudiantes, guía de tablas, multiplicación paso a paso',
   alternates: {
-    canonical: '/para-estudantes',
+    canonical: '/para-estudiantes',
   },
 }
 
 export default function ForStudents() {
   return (
-    <><Header />`n      <Header />`n      
+    <><Header />`n      
 <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-                ¡Aprender a tabuada de Multiplicar es Muy Fácil! 🎯
+                ¡Aprender las Tablas de Multiplicar es Muy Fácil! 🎯
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8">
-                ¡Avanza a tu propio ritmo, aprenda enquanto se diverte y conviértete en un héroe de las matemáticas! 
-                Esta guía te ayudará a aprender a tabuada de multiplicar passo a passo.
+                ¡Avanza a tu propio ritmo, aprende mientras te diviertes y conviértete en un héroe de las matemáticas! 
+                Esta guía te ayudará a aprender las tablas de multiplicar paso a paso.
               </p>
               <div className="flex items-center gap-4">
                 <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
@@ -41,11 +40,11 @@ export default function ForStudents() {
           {/* Why Learn */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              ¿Por Qué Debo Aprender a tabuada de Multiplicar? 🤔
+              ¿Por Qué Debo Aprender las Tablas de Multiplicar? 🤔
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                ¡a tabuada de multiplicar son el súper poder del mundo matemático! Esto es lo que te darán:
+                ¡Las tablas de multiplicar son el súper poder del mundo matemático! Esto es lo que te darán:
               </p>
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="flex items-start gap-4">
@@ -62,8 +61,8 @@ export default function ForStudents() {
                     🎮
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Uso no Dia a Dia</h3>
-                    <p className="text-slate-700">¡Te será útil ao fazer compras, em jogos, en todas partes!</p>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Uso en la Vida Diaria</h3>
+                    <p className="text-slate-700">¡Te será útil al hacer compras, en juegos, en todas partes!</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -91,7 +90,7 @@ export default function ForStudents() {
           {/* Learning Path */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Camino de Aprendizaje passo a passo 🚀
+              Camino de Aprendizaje Paso a Paso 🚀
             </h2>
             <div className="space-y-4">
               {/* Step 1 */}
@@ -101,9 +100,9 @@ export default function ForStudents() {
                     1
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Comienza con a tabuada Fáciles (1, 2, 5, 10)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Comienza con las Tablas Fáciles (1, 2, 5, 10)</h3>
                     <p className="text-slate-700 mb-3">
-                      ¡Comenzar con a tabuada más fáciles te dará confianza! Son muy simples y las aprenderás rápido.
+                      ¡Comenzar con las tablas más fáciles te dará confianza! Son muy simples y las aprenderás rápido.
                     </p>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <p className="font-semibold text-green-900 mb-2">¿Por qué estas tablas son fáciles?</p>
@@ -115,8 +114,8 @@ export default function ForStudents() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <Link href="/pt/tabuada/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
-                        Ir a a tabuada 1-10 →
+                      <Link href="/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                        Ir a las Tablas 1-10 →
                       </Link>
                     </div>
                   </div>
@@ -139,7 +138,7 @@ export default function ForStudents() {
                       <ul className="space-y-1 text-slate-700 text-sm">
                         <li>• <strong>Tabla del 3:</strong> Suma el número 3 veces (3×4 = 4+4+4 = 12)</li>
                         <li>• <strong>Tabla del 4:</strong> Multiplica por 2, luego duplica (4×5 = 2×5×2 = 20)</li>
-                        <li>• <strong>Tabla del 6:</strong> Usa a tabuada del 5 y agrega 1 más (6×4 = 5×4 + 4 = 24)</li>
+                        <li>• <strong>Tabla del 6:</strong> Usa la tabla del 5 y agrega 1 más (6×4 = 5×4 + 4 = 24)</li>
                       </ul>
                     </div>
                   </div>
@@ -153,7 +152,7 @@ export default function ForStudents() {
                     3
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Desafíate con a tabuada Difíciles (7, 8, 9)</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Desafíate con las Tablas Difíciles (7, 8, 9)</h3>
                     <p className="text-slate-700 mb-3">
                       Estas tablas son un poco más difíciles, ¡pero has aprendido mucho hasta ahora! Con técnicas especiales también dominarás estas.
                     </p>
@@ -162,7 +161,7 @@ export default function ForStudents() {
                       <ul className="space-y-2 text-slate-700 text-sm">
                         <li>• <strong>Tabla del 9 - Truco de los Dedos:</strong> Abre tus manos, baja el dedo del número que vas a multiplicar. Dedos abiertos a la izquierda = decenas, dedos a la derecha = unidades!</li>
                         <li>• <strong>Tabla del 8:</strong> Multiplica por 10, luego resta 2 veces (8×7 = 10×7 - 2×7 = 70-14 = 56)</li>
-                        <li>• <strong>Tabla del 7:</strong> Para las difíciles usa a tabuada del 5 (7×6 = 5×6 + 2×6 = 30+12 = 42)</li>
+                        <li>• <strong>Tabla del 7:</strong> Para las difíciles usa la tabla del 5 (7×6 = 5×6 + 2×6 = 30+12 = 42)</li>
                       </ul>
                     </div>
                   </div>
@@ -243,14 +242,14 @@ export default function ForStudents() {
                   <p className="text-slate-700 mb-3 text-sm">Cuenta de 5 en 5: 5, 10, 15, 20, 25...</p>
                   <div className="bg-white p-3 rounded text-center">
                     <p className="text-purple-700 font-bold text-lg">5 - 10 - 15 - 20 - 25</p>
-                    <p className="text-xs text-slate-600 mt-2">¡Si memorizas estos números, a tabuada del 5 es muy fácil!</p>
+                    <p className="text-xs text-slate-600 mt-2">¡Si memorizas estos números, la tabla del 5 es muy fácil!</p>
                   </div>
                 </div>
 
                 {/* Patterns */}
                 <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-slate-900 mb-3">Nota los Patrones</h3>
-                  <p className="text-slate-700 mb-3 text-sm">El secreto de a tabuada del 9:</p>
+                  <p className="text-slate-700 mb-3 text-sm">El secreto de la tabla del 9:</p>
                   <div className="bg-white p-3 rounded">
                     <ul className="text-sm text-slate-700 space-y-1">
                       <li>9×1=<strong className="text-pink-600">09</strong> (0+9=9)</li>
@@ -279,7 +278,7 @@ export default function ForStudents() {
                 <p className="text-slate-700 mb-3">
                   Practica con los juegos divertidos de este sitio. ¡Aprender mientras juegas es mucho más divertido!
                 </p>
-                <Link href="/pt/tabuada" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
+                <Link href="/" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
                   Descubre los Juegos →
                 </Link>
               </div>
@@ -300,7 +299,7 @@ export default function ForStudents() {
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-3">Canciones y Ritmos</h3>
                 <p className="text-slate-700 mb-3">
-                  ¡Convierte a tabuada de multiplicar en canciones! Es más fácil memorizar con música.
+                  ¡Convierte las tablas de multiplicar en canciones! Es más fácil memorizar con música.
                 </p>
               </div>
 
@@ -329,8 +328,8 @@ export default function ForStudents() {
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
                   <h3 className="text-lg font-semibold text-green-900 mb-2">✅ Lista de Verificación de Tablas</h3>
                   <p className="text-slate-700 text-sm">
-                    Escribe en un papel a tabuada del 1 al 10. ¡Cada vez que aprendas una, ponle una gran palomita! 
-                    ¡Cuando todas las palomitas estén completas, serás un héroe de a tabuada de multiplicar! 🌟
+                    Escribe en un papel las tablas del 1 al 10. ¡Cada vez que aprendas una, ponle una gran palomita! 
+                    ¡Cuando todas las palomitas estén completas, serás un héroe de las tablas de multiplicar! 🌟
                   </p>
                 </div>
 
@@ -455,7 +454,7 @@ export default function ForStudents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/pt/tabuada/1-10"
+                href="/1-10"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -465,7 +464,7 @@ export default function ForStudents() {
                 </svg>
               </Link>
               <Link 
-                href="/pt/tabuada"
+                href="/"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
                 Volver a Inicio
