@@ -1,16 +1,16 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export default function AudienceSection() {
   return (
     <section id="audience" className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-6 text-center">
-          För alla lärande
+          Para Todos os Aprendizes
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Vår Tabuadasinlärningsplattform är utformad för alla med olika behov. 
-          Vi erbjuder specialresurser och Guias för varje målgrupp.
+          Nossa plataforma de aprendizado de tabuada é projetada para todos com diferentes necessidades. 
+          Oferecemos recursos especiais e guias para cada público.
         </p>
         
         <div className="grid gap-8 md:grid-cols-3">
@@ -22,49 +22,49 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                För Elever
+                Para Estudantes
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Innehållet är särskilt utformat för grundskole- och högstadieelever:
+                O conteúdo é especialmente projetado para alunos do ensino fundamental e médio:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Enkla och tydliga förklaringar</span>
+                  <span>Explicações simples e claras</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Inlärningsväg steg för steg</span>
+                  <span>Caminho de aprendizagem passo a passo</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Visuella läromedel</span>
+                  <span>Recursos visuais de aprendizado</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Lär dig i din egen takt</span>
+                  <span>Aprenda no seu próprio ritmo</span>
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Varje elev har sin egen inlärningstakt. Framskrida i din egen takt!
+                Cada aluno tem seu próprio ritmo de aprendizado. Progrida no seu próprio ritmo!
               </p>
             </div>
             <Link 
               href="/pt/tabuada/para-estudantes"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors mt-4"
             >
-              Guide för elever
+              Guia para Estudantes
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -79,49 +79,49 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                För Föräldrar
+                Para Pais
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Hur kan du stödja ditt barns inlärning av Tabuadaer?
+                Como você pode apoiar o aprendizado de tabuada do seu filho?
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Effektiva inlärningsstrategier</span>
+                  <span>Estratégias de aprendizado eficazes</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Hemövningsplaner</span>
+                  <span>Planos de estudo em casa</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Motivations- och uppmuntranstips</span>
+                  <span>Dicas de motivação e incentivo</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Framstegsövervakning</span>
+                  <span>Acompanhamento de progresso</span>
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Föräldrastöd är mycket viktigt i inlärningsprocessen.
+                O apoio dos pais é muito importante no processo de aprendizagem.
               </p>
             </div>
             <Link 
               href="/pt/tabuada/para-pais"
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium transition-colors mt-4"
             >
-              Guide för föräldrar
+              Guia para Pais
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -136,49 +136,49 @@ export default function AudienceSection() {
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-3">
-                För Lärare
+                Para Professores
               </h3>
             </div>
             
             <div className="space-y-4 text-slate-700">
               <p>
-                Professionella resurser för klassrumsundervisning:
+                Recursos profissionais para ensino em sala de aula:
               </p>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Färdiga lektionsplaner</span>
+                  <span>Planos de aula prontos</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Utskrivbara övningar</span>
+                  <span>Exercícios imprimíveis</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Bedömningsverktyg</span>
+                  <span>Ferramentas de avaliação</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span>Interaktiva klassrumsaktiviteter</span>
+                  <span>Atividades interativas para sala de aula</span>
                 </li>
               </ul>
               <p className="text-sm italic pt-2">
-                Förbättra din Tabuadasundervisning med dessa professionella resurser.
+                Melhore seu ensino de tabuada com estes recursos profissionais.
               </p>
             </div>
             <Link 
               href="/pt/tabuada/para-professores"
               className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors mt-4"
             >
-              Guide för lärare
+              Guia para Professores
               <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

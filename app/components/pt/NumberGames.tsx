@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 
@@ -240,10 +240,10 @@ export default function NumberGames({ number }: NumberGamesProps) {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            🎮 {number} Gångertabellsspel
+            🎮 Jogos da Tabuada {number}
           </h2>
           <p className="text-lg text-slate-700">
-            Öva {number}-gångertabellen med roliga animerade spel!
+            Pratique a tabuada do {number} com jogos animados divertidos!
           </p>
         </div>
 
@@ -257,7 +257,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🎈 <span className="hidden sm:inline">Sprängballonger</span><span className="sm:hidden">Ballonger</span>
+            🎈 <span className="hidden sm:inline">Estoure Balões</span><span className="sm:hidden">Balões</span>
           </button>
           <button
             onClick={() => setActiveGame('race')}
@@ -267,7 +267,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🏎️ <span className="hidden sm:inline">Tävlingsspel</span><span className="sm:hidden">Tävling</span>
+            🏎️ <span className="hidden sm:inline">Jogo de Corrida</span><span className="sm:hidden">Corrida</span>
           </button>
           <button
             onClick={() => setActiveGame('memory')}
@@ -277,7 +277,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🧠 <span className="hidden sm:inline">Minnesspel</span><span className="sm:hidden">Minne</span>
+            🧠 <span className="hidden sm:inline">Jogo da Memória</span><span className="sm:hidden">Memória</span>
           </button>
         </div>
 
@@ -286,29 +286,29 @@ export default function NumberGames({ number }: NumberGamesProps) {
           <div className="bg-gradient-to-b from-sky-100 to-sky-300 rounded-2xl p-4 sm:p-8 shadow-xl min-h-[400px] sm:min-h-[600px] relative overflow-hidden">
             <div className="absolute top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 flex justify-between items-center z-10">
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Poäng: <span className="text-pink-600">{bpScore}</span>
+                Pontuação: <span className="text-pink-600">{bpScore}</span>
               </div>
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Missade: <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
+                Perdidos: <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
               </div>
             </div>
 
             {!bpGameActive ? (
               <div className="flex flex-col items-center justify-center h-[350px] sm:h-[500px]">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-bounce">🎈</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Sprängballongsspel</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Jogo de Estoure de Balões</h3>
                 <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 text-center max-w-md px-4">
-                  Spräng ballongerna med rätt svar! Undvik felaktiga ballonger och missa inte de rätta!
+                  Estoure os balões com a resposta correta! Evite balões incorretos e não perca os corretos!
                 </p>
                 <button
                   onClick={startBalloonGame}
                   className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform shadow-lg"
                 >
-                  Starta Spelet 🎈
+                  Iniciar Jogo 🎈
                 </button>
                 {bpScore > 0 && (
                   <div className="mt-4 sm:mt-6 text-base sm:text-lg">
-                    Senaste Poäng: <span className="font-bold text-pink-600">{bpScore}</span>
+                    Última Pontuação: <span className="font-bold text-pink-600">{bpScore}</span>
                   </div>
                 )}
               </div>
@@ -362,8 +362,8 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'race' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Tävlingsspel</h3>
-              <p className="text-slate-600">Svara rätt för att vinna tävlingen!</p>
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Jogo de Corrida</h3>
+              <p className="text-slate-600">Responda corretamente para vencer a corrida!</p>
             </div>
 
             {!raceGameActive || raceCar.position >= 90 ? (
@@ -371,19 +371,19 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🏁</div>
                 {raceCar.position >= 90 ? (
                   <>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 Grattis! Du vann!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 Parabéns! Você venceu!</h3>
                     <div className="text-xl sm:text-2xl mb-4 sm:mb-6">
-                      Totalt Poäng: <span className="font-bold text-blue-600">{raceScore}</span>
+                      Pontuação Total: <span className="font-bold text-blue-600">{raceScore}</span>
                     </div>
                   </>
                 ) : (
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Redo för tävlingen?</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Pronto para a corrida?</h3>
                 )}
                 <button
                   onClick={startRaceGame}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  {raceCar.position >= 90 ? 'Spela Igen' : 'Starta Tävlingen'} 🏎️
+                  {raceCar.position >= 90 ? 'Jogar Novamente' : 'Iniciar Corrida'} 🏎️
                 </button>
               </div>
             ) : (
@@ -437,7 +437,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 </div>
 
                 <div className="text-center text-base sm:text-lg font-semibold">
-                  Poäng: <span className="text-blue-600">{raceScore}</span>
+                  Pontuação: <span className="text-blue-600">{raceScore}</span>
                 </div>
               </div>
             )}
@@ -448,30 +448,30 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'memory' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Minnesspel</h3>
-              <p className="text-slate-600">Hitta matchande par!</p>
+              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Jogo da Memória</h3>
+              <p className="text-slate-600">Encontre os pares correspondentes!</p>
             </div>
 
             {cards.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🃏</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Para ihop Korten</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Matcha multiplikationer med deras resultat!</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Combine as Cartas</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Combine multiplicações com seus resultados!</p>
                 <button
                   onClick={initMemoryGame}
                   className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  Starta Spelet 🧠
+                  Iniciar Jogo 🧠
                 </button>
               </div>
             ) : (
               <div>
                 <div className="flex justify-center gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div className="text-base sm:text-lg font-semibold">
-                    Matchade: <span className="text-green-600">{memoryScore}/6</span>
+                    Combinados: <span className="text-green-600">{memoryScore}/6</span>
                   </div>
                   <div className="text-base sm:text-lg font-semibold">
-                    Drag: <span className="text-purple-600">{memoryMoves}</span>
+                    Jogadas: <span className="text-purple-600">{memoryMoves}</span>
                   </div>
                 </div>
 
@@ -500,15 +500,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
 
                 {memoryScore === 6 && (
                   <div className="text-center mt-6 sm:mt-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 Grattis!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 Parabéns!</h3>
                     <p className="text-lg sm:text-xl mb-3 sm:mb-4">
-                      Du klarade det på {memoryMoves} drag!
+                      Você completou em {memoryMoves} jogadas!
                     </p>
                     <button
                       onClick={initMemoryGame}
                       className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                     >
-                      Spela Igen
+                      Jogar Novamente
                     </button>
                   </div>
                 )}

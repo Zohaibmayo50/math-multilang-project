@@ -1,15 +1,15 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export default function LearningPaths() {
   return (
     <section id="learning-paths" className="section-container bg-gradient-to-br from-primary-50 via-white to-educational-50">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-slate-900 mb-6 text-center">
-          Välj din inlärningsväg
+          Escolha Seu Caminho de Aprendizagem
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Börja på en lämplig nivå och framskrida i din egen takt
+          Comece em um nível apropriado e progrida no seu próprio ritmo
         </p>
         
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -19,13 +19,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">1-10</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Nybörjare
+                Iniciante
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Grundläggande tabeller. Startpunkten för alla lärande.
+                Tabelas básicas. Ponto de partida para todos os aprendizes.
               </p>
               <div className="text-blue-600 font-medium text-xs group-hover:text-blue-700 flex items-center">
-                Börja tabeller 1-10
+                Comece tabelas 1-10
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -39,13 +39,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">11-20</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Nybörjare
+                Iniciante
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Utveckla färdigheter med tvåsiffriga nummer.
+                Desenvolva habilidades com números de dois dígitos.
               </p>
               <div className="text-indigo-600 font-medium text-xs group-hover:text-indigo-700 flex items-center">
-                Börja tabeller 11-20
+                Comece tabelas 11-20
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -59,13 +59,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">21-30</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Mellannivå
+                Intermediário
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Mellannivå och multiplikationsformler.
+                Nível intermediário e fórmulas de multiplicação.
               </p>
               <div className="text-purple-600 font-medium text-xs group-hover:text-purple-700 flex items-center">
-                Börja tabeller 21-30
+                Comece tabelas 21-30
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -79,13 +79,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">31-40</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Mellannivå
+                Intermediário
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Fördjupade memoreringsförmågor.
+                Habilidades de memorização avançadas.
               </p>
               <div className="text-pink-600 font-medium text-xs group-hover:text-pink-700 flex items-center">
-                Börja tabeller 31-40
+                Comece tabelas 31-40
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -99,13 +99,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">41-50</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Mellannivå
+                Intermediário
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Halvvägs! Bemästra upp till 50.
+                Metade do caminho! Domine até 50.
               </p>
               <div className="text-rose-600 font-medium text-xs group-hover:text-rose-700 flex items-center">
-                Börja tabeller 41-50
+                Comece tabelas 41-50
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -119,13 +119,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">51-60</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Avancerad
+                Avançado
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Avancerad nivå. Arbeta med större nummer.
+                Nível avançado. Trabalhe com números maiores.
               </p>
               <div className="text-orange-600 font-medium text-xs group-hover:text-orange-700 flex items-center">
-                Börja tabeller 51-60
+                Comece tabelas 51-60
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -139,13 +139,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">61-70</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Avancerad
+                Avançado
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Utveckla fördjupade multiplikationsstrategier.
+                Desenvolva estratégias avançadas de multiplicação.
               </p>
               <div className="text-amber-600 font-medium text-xs group-hover:text-amber-700 flex items-center">
-                Börja tabeller 61-70
+                Comece tabelas 61-70
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -159,13 +159,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">71-80</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Avancerad
+                Avançado
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Närmar dig expertnivån!
+                Aproximando-se do nível expert!
               </p>
               <div className="text-yellow-600 font-medium text-xs group-hover:text-yellow-700 flex items-center">
-                Börja tabeller 71-80
+                Comece tabelas 71-80
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -179,13 +179,13 @@ export default function LearningPaths() {
                 <span className="text-lg font-bold text-white">81-90</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Avancerad
+                Avançado
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Nästan klar! Fortsätt det goda arbetet.
+                Quase lá! Continue o bom trabalho.
               </p>
               <div className="text-lime-600 font-medium text-xs group-hover:text-lime-700 flex items-center">
-                Börja tabeller 81-90
+                Comece tabelas 81-90
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -199,13 +199,13 @@ export default function LearningPaths() {
                 <span className="text-base font-bold text-white">91-100</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Avancerad
+                Avançado
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
-                Sista nivån! Slutför 100 och bli expert.
+                Último nível! Complete 100 e torne-se expert.
               </p>
               <div className="text-emerald-600 font-medium text-xs group-hover:text-emerald-700 flex items-center">
-                Börja tabeller 91-100
+                Comece tabelas 91-100
                 <svg className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -216,9 +216,9 @@ export default function LearningPaths() {
         
         <div className="mt-10 bg-white border-2 border-primary-200 rounded-lg p-6 text-center">
           <p className="text-slate-700 text-lg">
-            <strong className="text-slate-900">Rekommenderad väg:</strong> Börja på nivå 1 (1-10) 
-            och slutför gradvis alla nivåer. Gå vidare till nästa nivå när du 
-            känner dig säker på varje nivå. När du når 100 är du expert på Tabuadaer!
+            <strong className="text-slate-900">Caminho recomendado:</strong> Comece no nível 1 (1-10) 
+            e complete gradualmente todos os níveis. Avance para o próximo nível quando 
+            se sentir confiante em cada nível. Quando você atingir 100, você será expert em Tabuada!
           </p>
         </div>
       </div>

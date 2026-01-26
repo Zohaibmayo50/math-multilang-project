@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useRef } from 'react'
 
@@ -47,10 +47,10 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
     
     if (printWindow) {
       const title = exerciseType === 'single' 
-        ? `${selectedTable} Gångertabellsövning`
+        ? `Exercícios da Tabuada do ${selectedTable}`
         : exerciseType === 'mixed'
-        ? 'Blandad Gångertabellsövning'
-        : `${rangeStart}-${rangeEnd} Gångertabellsövning`
+        ? 'Exercícios Mistos de Tabuada'
+        : `Exercícios de Tabuada ${rangeStart}-${rangeEnd}`
 
       printWindow.document.write(`
         <!DOCTYPE html>
@@ -142,16 +142,16 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </style>
           </head>
           <body>
-            <button onclick="window.print()" class="print-button no-print">🖨️ Skriv ut</button>
+            <button onclick="window.print()" class="print-button no-print">🖨️ Imprimir</button>
             <h1>${title}</h1>
             <div class="info">
-              <p>Datum: ${new Date().toLocaleDateString('sv-SE')}</p>
-              <p>Totalt Frågor: ${questionCount}</p>
+              <p>Data: ${new Date().toLocaleDateString('pt-BR')}</p>
+              <p>Total de Questões: ${questionCount}</p>
             </div>
             <div class="questions">
               ${questions.map((q, i) => `
                 <div class="question">
-                  <div class="question-number">Fråga ${i + 1}</div>
+                  <div class="question-number">Questão ${i + 1}</div>
                   <div class="equation">${q.num1} × ${q.num2} = </div>
                   <div class="answer-line"></div>
                 </div>
@@ -159,7 +159,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </div>
             ${includeAnswers ? `
               <div class="answer-key">
-                <h2>Svarsnyckel</h2>
+                <h2>Gabarito</h2>
                 <div class="answers">
                   ${questions.map((q, i) => `
                     <div class="answer-item">
@@ -186,12 +186,12 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
     <section id="pdf-exercises" className="section-container bg-gradient-to-br from-purple-50 to-pink-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          📄 Utskrivbara Övningar
+          📄 Exercícios Imprimíveis
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Skapa anpassade gångertabellsövningar för dina elever eller barn. 
-          Skriv ut eller spara som PDF.
+          Crie exercícios personalizados de tabuada para seus alunos ou filhos. 
+          Imprima ou salve como PDF.
         </p>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
@@ -200,7 +200,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Övningstyp
+                  Tipo de Exercício
                 </label>
                 <div className="space-y-2">
                   <label className="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
@@ -212,8 +212,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Enskild Tabell</div>
-                      <div className="text-sm text-slate-600">En specifik gångertabell</div>
+                      <div className="font-medium text-slate-900">Tabuada Única</div>
+                      <div className="text-sm text-slate-600">Uma tabuada específica</div>
                     </div>
                   </label>
                   
@@ -226,8 +226,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Intervall</div>
-                      <div className="text-sm text-slate-600">Tabeller inom ett intervall</div>
+                      <div className="font-medium text-slate-900">Intervalo</div>
+                      <div className="text-sm text-slate-600">Tabuadas dentro de um intervalo</div>
                     </div>
                   </label>
                   
@@ -240,8 +240,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Blandad</div>
-                      <div className="text-sm text-slate-600">Slumpmässigt från alla tabeller</div>
+                      <div className="font-medium text-slate-900">Misto</div>
+                      <div className="text-sm text-slate-600">Aleatório de todas as tabuadas</div>
                     </div>
                   </label>
                 </div>
@@ -250,7 +250,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               {exerciseType === 'single' && (
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Gångertabell
+                    Tabuada
                   </label>
                   <select
                     value={selectedTable}
@@ -259,7 +259,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   >
                     {[...Array(11)].map((_, i) => (
                       <option key={i + 2} value={i + 2}>
-                        {i + 2} Gångertabell
+                        Tabuada do {i + 2}
                       </option>
                     ))}
                   </select>
@@ -270,7 +270,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Start
+                      Início
                     </label>
                     <select
                       value={rangeStart}
@@ -284,7 +284,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Slut
+                      Fim
                     </label>
                     <select
                       value={rangeEnd}
@@ -303,7 +303,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Antal Frågor: {questionCount}
+                  Número de Questões: {questionCount}
                 </label>
                 <input
                   type="range"
@@ -330,8 +330,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     className="mr-3 w-5 h-5"
                   />
                   <div>
-                    <div className="font-medium text-slate-900">Inkludera Svarsnyckel</div>
-                    <div className="text-sm text-slate-600">Lägger till svar i slutet av sidan</div>
+                    <div className="font-medium text-slate-900">Incluir Gabarito</div>
+                    <div className="text-sm text-slate-600">Adiciona as respostas no final da página</div>
                   </div>
                 </label>
               </div>
@@ -340,34 +340,34 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             {/* Right Column - Preview */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200">
               <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <span>👁️</span> Förhandsgranskning
+                <span>👁️</span> Pré-visualização
               </h3>
               
               <div className="bg-white rounded-lg p-4 mb-4 space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Typ:</span>
+                  <span className="text-sm text-slate-600">Tipo:</span>
                   <span className="font-semibold text-slate-900">
                     {exerciseType === 'single' 
-                      ? `${selectedTable}-tabell`
+                      ? `Tabuada do ${selectedTable}`
                       : exerciseType === 'range'
-                      ? `${rangeStart}-${rangeEnd} Tabeller`
-                      : 'Blandad'}
+                      ? `Tabuadas ${rangeStart}-${rangeEnd}`
+                      : 'Misto'}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Antal Frågor:</span>
+                  <span className="text-sm text-slate-600">Número de Questões:</span>
                   <span className="font-semibold text-slate-900">{questionCount}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Svarsnyckel:</span>
+                  <span className="text-sm text-slate-600">Gabarito:</span>
                   <span className={`font-semibold ${includeAnswers ? 'text-green-600' : 'text-slate-400'}`}>
-                    {includeAnswers ? 'Ja ✓' : 'Nej ✗'}
+                    {includeAnswers ? 'Sim ✓' : 'Não ✗'}
                   </span>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg p-4 space-y-2">
-                <div className="text-sm font-semibold text-slate-700 mb-2">Exempelfrågor:</div>
+                <div className="text-sm font-semibold text-slate-700 mb-2">Exemplos de Questões:</div>
                 {[...Array(3)].map((_, i) => {
                   const num1 = exerciseType === 'single' 
                     ? selectedTable 
@@ -386,7 +386,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div className="mt-4 p-3 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-sm text-blue-900">
-                  💡 <strong>Tips:</strong> Du kan spara som PDF med din webbläsares utskriftsfunktion.
+                  💡 <strong>Dica:</strong> Você pode salvar como PDF usando a função de impressão do seu navegador.
                 </p>
               </div>
             </div>
@@ -399,14 +399,14 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
             >
               <span className="text-xl">🖨️</span>
-              Skriv ut
+              Imprimir
             </button>
             <button
               onClick={handleDownloadPDF}
               className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg"
             >
               <span className="text-xl">📥</span>
-              Ladda ner PDF
+              Baixar PDF
             </button>
           </div>
         </div>
@@ -415,23 +415,23 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">🎯</div>
-            <h4 className="font-bold text-slate-900 mb-2">Anpassningsbar</h4>
+            <h4 className="font-bold text-slate-900 mb-2">Personalizável</h4>
             <p className="text-sm text-slate-600">
-              Anpassa antal frågor, tabeller och svårighetsgrad efter dina behov.
+              Personalize o número de questões, tabuadas e nível de dificuldade conforme suas necessidades.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">📱</div>
-            <h4 className="font-bold text-slate-900 mb-2">Mobilvänlig</h4>
+            <h4 className="font-bold text-slate-900 mb-2">Compatível com Mobile</h4>
             <p className="text-sm text-slate-600">
-              Skriv ut enkelt från telefon, surfplatta eller dator.
+              Imprima facilmente de telefone, tablet ou computador.
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">💾</div>
-            <h4 className="font-bold text-slate-900 mb-2">Spara & Dela</h4>
+            <h4 className="font-bold text-slate-900 mb-2">Salvar e Compartilhar</h4>
             <p className="text-sm text-slate-600">
-              Spara som PDF och dela enkelt med dina elever.
+              Salve como PDF e compartilhe facilmente com seus alunos.
             </p>
           </div>
         </div>

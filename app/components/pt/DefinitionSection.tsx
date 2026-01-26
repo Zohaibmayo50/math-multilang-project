@@ -1,4 +1,4 @@
-export default function DefinitionSectionPt() {
+﻿export default function DefinitionSectionPt() {
   return (
     <section id="definition" className="section-container bg-white">
       <div className="max-w-4xl mx-auto">

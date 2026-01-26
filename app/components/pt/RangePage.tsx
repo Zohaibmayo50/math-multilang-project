@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import Link from 'next/link'
 import Header from './Header'
@@ -30,15 +30,15 @@ export default function RangePage({
   )
   
   const difficultyLabels = {
-    beginner: 'Nybörjarnivå',
-    intermediate: 'Mellannivå',
-    advanced: 'Avancerad Nivå'
+    beginner: 'Nível Iniciante',
+    intermediate: 'Nível Intermediário',
+    advanced: 'Nível Avançado'
   }
   
   const difficultyDescriptions = {
-    beginner: 'este intervalo är idealiskt för elever som är nya på multiplikation.',
-    intermediate: 'este intervalo är för elever som känner till grundläggande Tabuadaer och vill utveckla sina färdigheter.',
-    advanced: 'este intervalo är för avancerade elever som vill öva multiplikation med större tal.'
+    beginner: 'Este intervalo é ideal para alunos que estão começando com multiplicação.',
+    intermediate: 'Este intervalo é para alunos que conhecem as tabuadas básicas e querem desenvolver suas habilidades.',
+    advanced: 'Este intervalo é para alunos avançados que querem praticar multiplicação com números maiores.'
   }
   
   const colors = [
@@ -119,17 +119,17 @@ export default function RangePage({
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border-2 border-blue-100">
                 <div className="text-3xl mb-1">📚</div>
                 <div className="text-2xl font-bold text-blue-600">{rangeNumbers.length}</div>
-                <div className="text-xs text-slate-600">Tal</div>
+                <div className="text-xs text-slate-600">Números</div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border-2 border-indigo-100">
                 <div className="text-3xl mb-1">✖️</div>
                 <div className="text-2xl font-bold text-indigo-600">{rangeNumbers.length * 10}</div>
-                <div className="text-xs text-slate-600">Operationer</div>
+                <div className="text-xs text-slate-600">Operações</div>
               </div>
               <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-md border-2 border-purple-100 col-span-2 md:col-span-1">
                 <div className="text-3xl mb-1">🎮</div>
-                <div className="text-2xl font-bold text-purple-600">Obegränsat</div>
-                <div className="text-xs text-slate-600">Övning</div>
+                <div className="text-2xl font-bold text-purple-600">Ilimitado</div>
+                <div className="text-xs text-slate-600">Prática</div>
               </div>
             </div>
           </div>
@@ -137,10 +137,10 @@ export default function RangePage({
           {/* Description with Better Typography */}
           <div className="max-w-3xl mx-auto space-y-4 text-center">
             <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-              <span className="font-semibold text-blue-600">Lär dig Tabuadaen från {rangeStart} till {rangeEnd}</span> med 
-              <span className="font-semibold text-indigo-600"> roliga spel</span>, 
-              <span className="font-semibold text-purple-600"> interaktiva övningar</span> och 
-              <span className="font-semibold text-pink-600"> utskrivbara arbetsblad</span>!
+              <span className="font-semibold text-blue-600">Aprenda a Tabuada de {rangeStart} até {rangeEnd}</span> com 
+              <span className="font-semibold text-indigo-600"> jogos divertidos</span>, 
+              <span className="font-semibold text-purple-600"> exercícios interativos</span> e 
+              <span className="font-semibold text-pink-600"> folhas de exercícios imprimíveis</span>!
             </p>
             
             {/* Quick Action Buttons */}
@@ -150,7 +150,7 @@ export default function RangePage({
                 className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
               >
                 <span className="text-xl">🎯</span>
-                <span>Öva Nu</span>
+                <span>Pratique Agora</span>
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -160,7 +160,7 @@ export default function RangePage({
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm text-indigo-600 font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200 border-2 border-indigo-100"
               >
                 <span className="text-xl">🎮</span>
-                <span>Lär dig med Spel</span>
+                <span>Aprenda com Jogos</span>
               </a>
             </div>
           </div>
@@ -173,14 +173,14 @@ export default function RangePage({
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
               <span className="text-3xl">📖</span>
-              Vad Täcker Tabuadaen från {rangeStart} till {rangeEnd}?
+              O Que Cobre a Tabuada de {rangeStart} até {rangeEnd}?
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-indigo-400 mx-auto rounded-full"></div>
           </div>
           
           <p className="text-base text-slate-700 mb-6 leading-relaxed text-center max-w-2xl mx-auto">
-            este intervalo innehåller Tabuadaen för varje tal mellan {rangeStart} och {rangeEnd}. 
-            Vart och ett av dessa tal multipliceras med tal från 1 till 10.
+            Este intervalo contém a Tabuada de cada número entre {rangeStart} e {rangeEnd}. 
+            Cada um desses números é multiplicado por números de 1 a 10.
           </p>
           
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border-2 border-blue-100 shadow-md">
@@ -198,9 +198,9 @@ export default function RangePage({
             <div className="bg-white/60 rounded-xl p-4 flex items-center gap-3">
               <span className="text-3xl">💡</span>
               <p className="text-sm text-slate-700 leading-relaxed">
-                Elever lär sig totalt <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} multiplikationer</span> i este intervalo. 
-                Tack vare <span className="font-bold text-purple-600">den kommutativa egenskapen</span> är antalet operationer som faktiskt behöver memoreras färre 
-                (till exempel <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
+                Os alunos aprendem um total de <span className="font-bold text-indigo-600">{rangeNumbers.length * 10} multiplicações</span> neste intervalo. 
+                Graças à <span className="font-bold text-purple-600">propriedade comutativa</span>, o número de operações que realmente precisam ser memorizadas é menor 
+                (por exemplo, <span className="font-mono bg-blue-50 px-2 py-0.5 rounded text-xs">{rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}</span>).
               </p>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function RangePage({
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-3xl font-bold text-slate-900">
-              Tabuada från {rangeStart} till {rangeEnd} - Komplett Lista
+              Tabuada de {rangeStart} até {rangeEnd} - Lista Completa
             </h2>
             <button
               onClick={() => {
@@ -290,7 +290,7 @@ export default function RangePage({
                       <div class="grid">
                         ${rangeNumbers.map(num => `
                           <div class="table-box">
-                            <div class="table-title">${num} Gångertabell</div>
+                            <div class="table-title">${num} Gångertabuada</div>
                             ${[...Array(10)].map((_, i) => `
                               <div class="equation">
                                 <span class="equation-left">${num} × ${i + 1}</span>
@@ -314,13 +314,13 @@ export default function RangePage({
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              Ladda Ner / Skriv Ut Tabell
+              Baixar / Imprimir Tabela
             </button>
           </div>
           
           <p className="text-center text-slate-700 mb-8 max-w-3xl mx-auto">
-            Nedan kan du se alla Tabuadaer från {rangeStart} till {rangeEnd} tillsammans. 
-            Varje tal har sin egen färgglada ruta.
+            Abaixo você pode ver todas as Tabuadas de {rangeStart} até {rangeEnd} juntas. 
+            Cada número tem sua própria caixa colorida.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -329,7 +329,7 @@ export default function RangePage({
               
               return (
                 <div key={num} className={`bg-gradient-to-br ${colors[colorIndex]} rounded-xl p-4 text-white`}>
-                  <div className="font-bold text-lg mb-3 text-center">{num} Gångertabell</div>
+                  <div className="font-bold text-lg mb-3 text-center">Tabuada do {num}</div>
                   <div className="space-y-1 text-sm">
                     {[...Array(10)].map((_, i) => (
                       <div key={i} className="flex justify-between items-center bg-white/20 rounded px-2 py-1">
@@ -349,12 +349,12 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Individuella Tabuadaer i este intervalo
+            Tabuadas Individuais neste Intervalo
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Om du vill lära dig varje tals Tabuada i detalj kan du gå till den relevanta sidan 
-            via länkarna nedan. Varje sida innehåller mönster, tips och övningsverktyg som är specifika för det talet.
+            Se você quiser aprender a Tabuada de cada número em detalhes, pode ir para a página relevante 
+            através dos links abaixo. Cada página contém padrões, dicas e ferramentas de prática específicas para esse número.
           </p>
           
           <div className="grid md:grid-cols-2 gap-4">
@@ -367,10 +367,10 @@ export default function RangePage({
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-2xl font-bold text-slate-900 mb-1">
-                      {num} Gångertabell
+                      Tabuada do {num}
                     </div>
                     <p className="text-slate-600">
-                      Detaljerad förklaring och exempel för talet {num}
+                      Explicação detalhada e exemplos para o número {num}
                     </p>
                   </div>
                   <svg 
@@ -392,7 +392,7 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Varför Är este intervalo Viktigt?
+            Por Que Este Intervalo É Importante?
           </h2>
           
           <div className="space-y-6">
@@ -406,29 +406,29 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 leading-relaxed">
                 {difficultyDescriptions[difficultyLevel]} {rangeStart === 1 ? 
-                  'Eftersom talen är små kan eleverna lättare förstå och verifiera resultaten.' :
-                  'este intervalo bygger på kunskapen från föregående intervall.'}
+                  'Como os números são pequenos, os alunos podem entender e verificar os resultados mais facilmente.' :
+                  'Este intervalo se baseia no conhecimento dos intervalos anteriores.'}
               </p>
             </div>
             
             <div className="bg-white rounded-xl p-6 border-l-4 border-blue-500">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                🧠 Kognitiv Utveckling
+                🧠 Desenvolvimento Cognitivo
               </h3>
               <p className="text-slate-700 leading-relaxed">
-                este intervalo hjälper elever att utveckla sina mentala beräkningsfärdigheter. 
-                Med regelbunden övning börjar de automatiskt komma ihåg produkterna av dessa tal.
+                Este intervalo ajuda os alunos a desenvolver suas habilidades de cálculo mental. 
+                Com prática regular, eles começam a lembrar automaticamente dos produtos desses números.
               </p>
             </div>
             
             {nextRangeUrl && (
               <div className="bg-white rounded-xl p-6 border-l-4 border-purple-500">
                 <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  📈 Förberedelse för Nästa Steg
+                  📈 Preparação para o Próximo Passo
                 </h3>
                 <p className="text-slate-700 leading-relaxed">
-                  Elever som lär sig este intervalo väl är redo att gå vidare till nästa intervall. 
-                  Varje intervall stärker förståelsen för multiplikation ytterligare och utvecklar matematiskt tänkande.
+                  Alunos que aprendem este intervalo bem estão prontos para avançar para o próximo intervalo. 
+                  Cada intervalo fortalece ainda mais a compreensão da multiplicação e desenvolve o pensamento matemático.
                 </p>
               </div>
             )}
@@ -440,40 +440,40 @@ export default function RangePage({
       <section className="section-container bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Mönster i Tabuadaen från {rangeStart} till {rangeEnd}
+            Padrões na Tabuada de {rangeStart} até {rangeEnd}
           </h2>
           
           <p className="text-lg text-slate-700 mb-8 leading-relaxed">
-            Att förstå mönster i Tabuadaen istället för att försöka memorera den 
-            gör både inlärningsprocessen snabbare och mer bestående.
+            Compreender os padrões na Tabuada em vez de tentar memorizá-la 
+            torna o processo de aprendizagem mais rápido e duradouro.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-amber-50 rounded-xl p-6 border border-amber-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🔄</span>
-                Symmetri (Kommutativ Egenskap)
+                Simetria (Propriedade Comutativa)
               </h3>
               <p className="text-slate-700 mb-3">
-                Ordningen i multiplikation kan ändras: {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
-                Denna egenskap gör inlärningen enklare.
+                A ordem na multiplicação pode ser alterada: {rangeStart} × {rangeEnd} = {rangeEnd} × {rangeStart}. 
+                Esta propriedade facilita o aprendizado.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Exempel: Om du känner till ett tal, känner du också till dess motsats.
+                Exemplo: Se você conhece um número, também conhece seu oposto.
               </p>
             </div>
             
             <div className="bg-green-50 rounded-xl p-6 border border-green-200">
               <h3 className="text-lg font-semibold text-slate-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">➕</span>
-                Upprepad Addition
+                Adição Repetida
               </h3>
               <p className="text-slate-700 mb-3">
                 {rangeStart} × 3 = {rangeStart} + {rangeStart} + {rangeStart} = {rangeStart * 3}. 
-                Multiplikation är upprepad addition av samma tal.
+                Multiplicação é adição repetida do mesmo número.
               </p>
               <p className="text-sm text-slate-600 italic">
-                Denna logik är viktig för att förstå den grundläggande innebörden av multiplikation.
+                Esta lógica é importante para entender o significado básico da multiplicação.
               </p>
             </div>
             
@@ -485,11 +485,11 @@ export default function RangePage({
               <p className="text-slate-700 mb-3">
                 {rangeNumbers.filter(n => n % 2 === 0).length > 0 ? 
                   `Jämna tal i este intervalo (${rangeNumbers.filter(n => n % 2 === 0).join(', ')}) ger alltid jämna resultat.` :
-                  'Tabuadaerna för tal i este intervalo visar specifika mönster.'
+                  'Tabuadasna för tal i este intervalo visar specifika mönster.'
                 }
               </p>
               <p className="text-sm text-slate-600 italic">
-                Att förstå logiken med jämna och udda tal minskar fel.
+                entender logiken med jämna och udda tal minskar fel.
               </p>
             </div>
             
@@ -500,7 +500,7 @@ export default function RangePage({
               </h3>
               <p className="text-slate-700 mb-3">
                 I varje tals Tabuada upprepas de sista siffrorna i ett visst mönster. 
-                Att märka detta mönster är användbart för verifiering.
+                Perceber este padrão é útil para verificação.
               </p>
               <p className="text-sm text-slate-600 italic">
                 Till exempel: Tal som slutar på 5 slutar alltid på 0 eller 5.
@@ -514,52 +514,52 @@ export default function RangePage({
       <section className="section-container bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">
-            Hur Lär Man Sig Tabuadaen från {rangeStart} till {rangeEnd}?
+            Como Aprender a Tabuada de {rangeStart} até {rangeEnd}?
           </h2>
           
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                1. Systematisk Metod
+                1. Método Sistemático
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                Istället för att försöka lära dig alla tal i este intervalo på en gång, fokusera på 1-2 tal varje dag. 
-                Gå vidare till nästa efter att du har lärt dig ett tal ordentligt.
+                Em vez de tentar aprender todos os números neste intervalo de uma vez, concentre-se em 1-2 números por dia. 
+                Avançe para o próximo depois de ter aprendido bem um número.
               </p>
               <div className="bg-white rounded-lg p-4 border-l-4 border-blue-600">
                 <p className="text-slate-700">
-                  <strong>Rekommendation:</strong> Efter att ha repeterat varje tal i 3-4 dagar i rad, 
-                  börja lösa blandade problem.
+                  <strong>Recomendação:</strong> Depois de repetir cada número por 3-4 dias seguidos, 
+                  comece a resolver problemas mistos.
                 </p>
               </div>
             </div>
             
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 mb-4">
-                2. Visualiseringstekniker
+                2. Técnicas de Visualização
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                Att visualisera tal gör dem lättare att komma ihåg:
+                Visualizar números os torna mais fáceis de lembrar:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
-                    <strong>Tänk i grupper:</strong> Föreställ dig {rangeStart} × 4 som {rangeStart} personer 
-                    som bildar 4 grupper.
+                    <strong>Pense em grupos:</strong> Imagine {rangeStart} × 4 como {rangeStart} pessoas 
+                    formando 4 grupos.
                   </div>
                 </li>
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
-                    <strong>Skapa berättelser:</strong> Att skapa en kort historia för varje tal 
-                    gör det roligt att komma ihåg.
+                    <strong>Criar histórias:</strong> Criar uma história curta para cada número 
+                    torna divertido lembrar.
                   </div>
                 </li>
                 <li className="flex items-start text-slate-700">
                   <span className="text-blue-600 font-bold mr-3 mt-1">•</span>
                   <div>
-                    <strong>Använd färgglada kort:</strong> Att tilldela olika färger till varje tal 
+                    <strong>Use cartões coloridos:</strong> Atribuir cores diferentes a cada número 
                     stärker det visuella minnet.
                   </div>
                 </li>
@@ -571,7 +571,7 @@ export default function RangePage({
                 3. Övningsuppgifter
               </h3>
               <p className="text-lg text-slate-700 mb-4 leading-relaxed">
-                Regelbunden övning säkerställer att den inlärda kunskapen blir bestående:
+                Prática regular garante que o conhecimento aprendido se torne permanente:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
@@ -589,13 +589,13 @@ export default function RangePage({
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Spel</p>
                   <p className="text-slate-700 text-sm">
-                    Att spela multiplikationsspel gör att man lär sig genom att ha kul.
+                    Jogar jogos de multiplicação faz com que se aprenda se divertindo.
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 border border-gray-200">
                   <p className="font-semibold text-slate-900 mb-2">Tävla med Vänner</p>
                   <p className="text-slate-700 text-sm">
-                    Du kan öka din motivation genom att tävla med dina vänner.
+                    Você pode aumentar sua motivação competindo com seus amigos.
                   </p>
                 </div>
               </div>
@@ -614,8 +614,8 @@ export default function RangePage({
           {nextRangeUrl ? (
             <>
               <p className="text-xl mb-8 leading-relaxed opacity-95 text-center">
-                Om du kan använda Tabuadaen från {rangeStart} till {rangeEnd} bekvämt, 
-                är du redo att gå vidare till nästa steg!
+                Se você pode usar a Tabuada do från {rangeStart} till {rangeEnd} confortavelmente, 
+                você está pronto para avançar para o próximo passo!
               </p>
               
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
@@ -644,12 +644,12 @@ export default function RangePage({
             </>
           ) : (
             <p className="text-xl leading-relaxed opacity-95 text-center">
-              Du har slutfört alla Tabuadaer! Nu känner du till alla multiplikationer från 1 till 100.
+              Du har slutfört alla Tabuadas! Nu känner du till alla multiplikationer från 1 till 100.
             </p>
           )}
           
           <p className="mt-6 text-sm opacity-80 text-center">
-            Var tålmodig och regelbunden för att lära dig alla Tabuadaer. Varje intervall bygger på det föregående.
+            Seja paciente e consistente para lära dig alla Tabuadas. Cada intervalo se baseia no anterior.
           </p>
         </div>
       </section>

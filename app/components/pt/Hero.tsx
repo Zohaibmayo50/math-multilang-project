@@ -1,4 +1,4 @@
-export default function HeroPt() {
+﻿export default function HeroPt() {
   return (
     <header className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100 pt-24 pb-12 md:pt-28 md:pb-20">
       {/* Decorative Background Elements */}

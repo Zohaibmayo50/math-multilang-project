@@ -1,9 +1,9 @@
-export default function HowToLearn() {
+﻿export default function HowToLearn() {
   return (
     <section className="section-container bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          Hur lär man sig Tabuadaer effektivt?
+          Como Aprender Tabuada de Forma Eficaz?
         </h2>
         
         <div className="space-y-12">
@@ -12,34 +12,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 1
               </span>
-              <span>Lär dig genom mönsterförståelse</span>
+              <span>Aprenda através da compreensão de padrões</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Tabuadaen har många mönster och ordningar. Att hitta dessa mönster 
-                ger en logisk förståelse istället för bara utantillinlärning:
+                A tabuada tem muitos padrões e sequências. Encontrar esses padrões 
+                proporciona uma compreensão lógica em vez de apenas memorização:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Multiplar av 2:</strong> Alltid jämna tal (2, 4, 6, 8...)
+                  <strong>Múltiplos de 2:</strong> Sempre números pares (2, 4, 6, 8...)
                 </li>
                 <li>
-                  <strong>Multiplar av 5:</strong> Slutar alltid med 0 eller 5 (5, 10, 15, 20...)
+                  <strong>Múltiplos de 5:</strong> Sempre terminam com 0 ou 5 (5, 10, 15, 20...)
                 </li>
                 <li>
-                  <strong>Multiplar av 9:</strong> Siffersumman är alltid delbar med 9 
+                  <strong>Múltiplos de 9:</strong> A soma dos dígitos é sempre divisível por 9 
                   (18: 1+8=9, 27: 2+7=9)
                 </li>
                 <li>
-                  <strong>Multiplar av 10:</strong> Slutar alltid med 0 (10, 20, 30...)
+                  <strong>Múltiplos de 10:</strong> Sempre terminam com 0 (10, 20, 30...)
                 </li>
                 <li>
-                  <strong>Kommutativa lagen:</strong> 3 × 4 = 4 × 3 (Ordningen påverkar inte resultatet)
+                  <strong>Propriedade comutativa:</strong> 3 × 4 = 4 × 3 (A ordem não afeta o resultado)
                 </li>
               </ul>
               <p>
-                Att förstå dessa mönster gör det möjligt att lära sig grundlogiken, 
-                istället för att memorera nästan 100 multiplikationsresultat.
+                Entender esses padrões permite aprender a lógica fundamental, 
+                em vez de memorizar quase 100 resultados de multiplicação.
               </p>
             </div>
           </article>
@@ -49,34 +49,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-educational-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 2
               </span>
-              <span>Gradvis och upprepad inlärning</span>
+              <span>Aprendizado gradual e repetido</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Tabuadaen kan inte och behöver inte läras på en dag. 
-                Den mest effektiva metoden är gradvis och regelbunden övning:
+                A tabuada não pode e não precisa ser aprendida em um dia. 
+                O método mais eficaz é a prática gradual e regular:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Börja med små steg:</strong> Börja först med enkla 
-                  tal som 1, 2, 5 och 10
+                  <strong>Comece com pequenos passos:</strong> Comece primeiro com números 
+                  simples como 1, 2, 5 e 10
                 </li>
                 <li>
-                  <strong>Dagligen 10-15 minuter:</strong> Korta och regelbundna Tabuadasövningar är 
-                  mer effektiva än långa enstaka sessioner
+                  <strong>10-15 minutos diários:</strong> Exercícios curtos e regulares de tabuada são 
+                  mais eficazes do que sessões longas e isoladas
                 </li>
                 <li>
-                  <strong>Stärk tidigare inlärning:</strong> Repetera det inlärda innan du går vidare till ett nytt 
-                  tal
+                  <strong>Reforce o aprendizado anterior:</strong> Repita o que foi aprendido antes de avançar para um novo 
+                  número
                 </li>
                 <li>
-                  <strong>Öva med mellanrum:</strong> Öka minnesförmågan genom att upprepa 
-                  med en veckas, månads mellanrum
+                  <strong>Pratique com intervalos:</strong> Aumente a capacidade de memória repetindo 
+                  com intervalos de uma semana, um mês
                 </li>
               </ul>
               <p>
-                Regelbunden repetition underlättar överföringen av information från 
-                korttidsminne till långtidsminne och främjar bestående inlärning.
+                A repetição regular facilita a transferência de informações da 
+                memória de curto prazo para a memória de longo prazo e promove o aprendizado duradouro.
               </p>
             </div>
           </article>
@@ -86,34 +86,34 @@ export default function HowToLearn() {
               <span className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
                 3
               </span>
-              <span>Lär dig genom praktik</span>
+              <span>Aprenda através da prática</span>
             </h3>
             <div className="ml-11 space-y-4 text-slate-700">
               <p>
-                Att förstå teorin är viktigt, men utan övning sker ingen 
-                bestående inlärning. Fördelarna med övning:
+                Entender a teoria é importante, mas sem prática não há 
+                aprendizado duradouro. As vantagens da prática:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Aktivt minne:</strong> Aktivt arbete för att komma ihåg, istället för passiv 
-                  läsning, stärker hjärnan
+                  <strong>Memória ativa:</strong> Trabalho ativo para lembrar, em vez de leitura passiva, 
+                  fortalece o cérebro
                 </li>
                 <li>
-                  <strong>Felanalys:</strong> Identifiera dina svagheter genom att undersöka 
-                  felaktigt lösta uppgifter
+                  <strong>Análise de erros:</strong> Identifique suas fraquezas examinando 
+                  questões resolvidas incorretamente
                 </li>
                 <li>
-                  <strong>Hastighetsutveckling:</strong> Med regelbunden övning får du både 
-                  noggrannhet och hastighet
+                  <strong>Desenvolvimento de velocidade:</strong> Com prática regular você obtém tanto 
+                  precisão quanto velocidade
                 </li>
                 <li>
-                  <strong>Tillämpning i olika sammanhang:</strong> Använd dem i olika 
-                  miljöer, som frågor, spel, vardagsproblem
+                  <strong>Aplicação em diferentes contextos:</strong> Use-as em diferentes 
+                  ambientes, como questões, jogos, problemas cotidianos
                 </li>
               </ul>
               <p>
-                Information som endast lärs genom läsning eller lyssning utan övning 
-                glöms snabbt. Aktiv tillämpning är inlärningens huvudnyckel.
+                Informações que são apenas aprendidas por leitura ou escuta sem prática 
+                são rapidamente esquecidas. A aplicação ativa é a chave principal do aprendizado.
               </p>
             </div>
           </article>
@@ -121,13 +121,13 @@ export default function HowToLearn() {
         
         <div className="mt-12 bg-gradient-to-r from-primary-50 to-educational-50 border border-primary-200 rounded-lg p-8">
           <h4 className="text-xl font-semibold text-slate-900 mb-4">
-            Viktig påminnelse
+            Lembrete Importante
           </h4>
           <p className="text-slate-700">
-            Varje barn har sin egen inlärningstakt. När vissa lär sig detta på en vecka, 
-            kan det ta flera månader för andra. Det viktiga är kontinuitet, 
-            tålamod och framsteg med rätta metoder. Följ en stödjande 
-            metod istället för press.
+            Cada criança tem seu próprio ritmo de aprendizado. Enquanto alguns aprendem isso em uma semana, 
+            pode levar vários meses para outros. O importante é continuidade, 
+            paciência e progresso com os métodos corretos. Siga uma 
+            abordagem de apoio em vez de pressão.
           </p>
         </div>
       </div>

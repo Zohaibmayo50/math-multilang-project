@@ -1,9 +1,9 @@
-export default function WhyItMatters() {
+﻿export default function WhyItMatters() {
   return (
     <section className="section-container bg-gradient-to-br from-educational-50 to-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-slate-900 mb-12 text-center">
-          Varför lära sig Tabuadaer?
+          Por Que Aprender Tabuada?
         </h2>
         
         <div className="grid gap-8 md:grid-cols-2">
@@ -15,13 +15,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Huvudräkningsfärdighet
+                Habilidade de Cálculo Mental
               </h3>
             </div>
             <p className="text-slate-700">
-              Elever som behärskar Tabuadaen kan i vardagen och 
-              skolmatematiken utföra beräkningar i huvudet utan papper och penna. 
-              Denna färdighet ökar problemlösningens hastighet och självförtroende.
+              Alunos que dominam a tabuada podem no dia a dia e 
+              na matemática escolar realizar cálculos mentalmente sem papel e caneta. 
+              Essa habilidade aumenta a velocidade de resolução de problemas e a autoconfiança.
             </p>
           </article>
           
@@ -33,13 +33,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Snabbhet och noggrannhet
+                Velocidade e Precisão
               </h3>
             </div>
             <p className="text-slate-700">
-              Att förstå Tabuadaen istället för bara memorering möjliggör 
-              att utföra beräkningar både snabbt och korrekt. Denna färdighet är 
-              särskilt viktig i prov och tidskritiska situationer.
+              Entender a tabuada em vez de apenas memorizar possibilita 
+              realizar cálculos de forma rápida e correta. Essa habilidade é 
+              especialmente importante em provas e situações de tempo crítico.
             </p>
           </article>
           
@@ -51,13 +51,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Grund för högre matematik
+                Base para Matemática Avançada
               </h3>
             </div>
             <p className="text-slate-700">
-              All division, bråk, algebraiska uttryck och 
-              mer komplexa matematiska begrepp är baserade på behärskning av Tabuadaen. 
-              En stark grund garanterar framgång på mer avancerade nivåer.
+              Toda divisão, frações, expressões algébricas e 
+              conceitos matemáticos mais complexos são baseados no domínio da tabuada. 
+              Uma base sólida garante sucesso em níveis mais avançados.
             </p>
           </article>
           
@@ -69,13 +69,13 @@ export default function WhyItMatters() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Självförtroende och motivation i matematik
+                Autoconfiança e Motivação em Matemática
               </h3>
             </div>
             <p className="text-slate-700">
-              Elever som behärskar Tabuadaen utvecklar 
-              en positiv attityd till matematik. Detta självförtroende påverkar 
-              direkt den allmänna matematikframgången och inlärningsviljan.
+              Alunos que dominam a tabuada desenvolvem 
+              uma atitude positiva em relação à matemática. Essa autoconfiança afeta 
+              diretamente o sucesso geral em matemática e a vontade de aprender.
             </p>
           </article>
         </div>

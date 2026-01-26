@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
 
@@ -199,11 +199,11 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
     <section id="games" className="section-container bg-gradient-to-br from-indigo-50 to-purple-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          🎮 Pedagogiska Spel
+          🎮 Jogos Educacionais
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Lär dig Tabuadaen på ett roligt sätt med spel. Varje spel erbjuder en annan inlärningsmetod.
+          Aprenda a tabuada de forma divertida com jogos. Cada jogo oferece um método de aprendizado diferente.
         </p>
 
         {/* Game Selection */}
@@ -213,10 +213,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎯
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Snabbt Svar</h3>
-              <p className="text-slate-600 mb-4">Hur många frågor kan du lösa på 60 sekunder?</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Resposta Rápida</h3>
+              <p className="text-slate-600 mb-4">Quantas perguntas você pode resolver em 60 segundos?</p>
               <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all">
-                Spela
+                Jogar
               </button>
             </div>
             
@@ -224,10 +224,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🏆
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Multiplikationshjälte</h3>
-              <p className="text-slate-600 mb-4">Klara nivåerna och nå mästerskapet</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Herói da Multiplicação</h3>
+              <p className="text-slate-600 mb-4">Complete os níveis e alcance a maestria</p>
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-purple-700 transition-all">
-                Spela
+                Jogar
               </button>
             </div>
             
@@ -235,10 +235,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎮
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Minnesspel</h3>
-              <p className="text-slate-600 mb-4">Para ihop korten och multiplicera</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Jogo da Memória</h3>
+              <p className="text-slate-600 mb-4">Combine os cartões e multiplique</p>
               <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-pink-600 hover:to-pink-700 transition-all">
-                Spela
+                Jogar
               </button>
             </div>
             
@@ -246,10 +246,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🚀
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Rymdäventyr</h3>
-              <p className="text-slate-600 mb-4">Lyft din raket med rätta svar</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Aventura Espacial</h3>
+              <p className="text-slate-600 mb-4">Levante seu foguete com respostas corretas</p>
               <button className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-indigo-700 transition-all">
-                Spela
+                Jogar
               </button>
             </div>
           </div>
@@ -260,17 +260,17 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-blue-600">🎯 Snabbt Svar</h3>
+                <h3 className="text-2xl font-bold text-blue-600">🎯 Resposta Rápida</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Tid</div>
+                  <div className="text-sm text-slate-600 mb-1">Tempo</div>
                   <div className="text-3xl font-bold text-blue-600">{speedTimer}s</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Poäng</div>
+                  <div className="text-sm text-slate-600 mb-1">Pontuação</div>
                   <div className="text-3xl font-bold text-green-600">{speedScore}</div>
                 </div>
               </div>
@@ -304,10 +304,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               ) : (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Spelet är slut!</h4>
-                  <p className="text-xl text-slate-600 mb-6">Totala poäng: <span className="font-bold text-green-600">{speedScore}</span></p>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Jogo Terminado!</h4>
+                  <p className="text-xl text-slate-600 mb-6">Pontuação total: <span className="font-bold text-green-600">{speedScore}</span></p>
                   <button onClick={startSpeedGame} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700">
-                    Spela Igen
+                    Jogar Novamente
                   </button>
                 </div>
               )}
@@ -320,21 +320,21 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-purple-600">🏆 Multiplikationshjälte</h3>
+                <h3 className="text-2xl font-bold text-purple-600">🏆 Herói da Multiplicação</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
               
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-purple-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Nivå</div>
+                  <div className="text-sm text-slate-600 mb-1">Nível</div>
                   <div className="text-3xl font-bold text-purple-600">{heroLevel}</div>
                 </div>
                 <div className="bg-red-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Liv</div>
+                  <div className="text-sm text-slate-600 mb-1">Vidas</div>
                   <div className="text-3xl font-bold text-red-600">{'❤️'.repeat(heroLives)}</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Framsteg</div>
+                  <div className="text-sm text-slate-600 mb-1">Progresso</div>
                   <div className="text-2xl font-bold text-blue-600">{heroQuestionsCleared}/{heroLevel * 5}</div>
                 </div>
               </div>
@@ -358,7 +358,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                     disabled={!heroAnswer}
                     className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-all disabled:opacity-50"
                   >
-                    Skicka
+                    Enviar
                   </button>
                 </div>
               </div>
@@ -371,10 +371,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-pink-600">🎮 Minnesspel</h3>
+                <h3 className="text-2xl font-bold text-pink-600">🎮 Jogo da Memória</h3>
                 <div className="flex items-center gap-4">
                   <div className="bg-pink-50 rounded-lg px-4 py-2">
-                    <span className="text-sm text-slate-600">Matchningar: </span>
+                    <span className="text-sm text-slate-600">Combinações: </span>
                     <span className="font-bold text-pink-600">{memoryMatches}/6</span>
                   </div>
                   <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
@@ -384,10 +384,10 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
               {memoryMatches === 6 ? (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Grattis!</h4>
-                  <p className="text-xl text-slate-600 mb-6">Du matchade alla kort!</p>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Parabéns!</h4>
+                  <p className="text-xl text-slate-600 mb-6">Você combinou todos os cartões!</p>
                   <button onClick={startMemoryGame} className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-pink-700 hover:to-purple-700">
-                    Nytt Spel
+                    Novo Jogo
                   </button>
                 </div>
               ) : (
@@ -462,7 +462,7 @@ export default function GamesSection({ rangeStart = 1, rangeEnd = 10 }: GamesSec
                     disabled={!spaceAnswer}
                     className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-all disabled:opacity-50"
                   >
-                    Avfyra! 🚀
+                    Lançar! 🚀
                   </button>
                 </div>
               </div>

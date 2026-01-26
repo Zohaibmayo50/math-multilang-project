@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -104,27 +104,27 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
 
   const exercises = [
     {
-      level: 'Lätt',
-      range: rangeStart === rangeEnd ? `Tabell ${rangeStart}` : `Tabeller ${rangeStart}-${Math.min(rangeStart + 4, rangeEnd)}`,
-      questions: '20 Frågor',
+      level: 'Fácil',
+      range: rangeStart === rangeEnd ? `Tabela ${rangeStart}` : `Tabelas ${rangeStart}-${Math.min(rangeStart + 4, rangeEnd)}`,
+      questions: '20 Perguntas',
       color: 'bg-green-100 text-green-700 border-green-300'
     },
     {
-      level: 'Mellan',
-      range: rangeStart === rangeEnd ? `Tabell ${rangeStart}` : `Tabeller ${rangeStart}-${Math.min(rangeStart + 7, rangeEnd)}`,
-      questions: '30 Frågor',
+      level: 'Médio',
+      range: rangeStart === rangeEnd ? `Tabela ${rangeStart}` : `Tabelas ${rangeStart}-${Math.min(rangeStart + 7, rangeEnd)}`,
+      questions: '30 Perguntas',
       color: 'bg-yellow-100 text-yellow-700 border-yellow-300'
     },
     {
-      level: 'Svår',
-      range: rangeStart === rangeEnd ? `Tabell ${rangeStart}` : `Tabeller ${Math.max(rangeStart, rangeEnd - 5)}-${rangeEnd}`,
-      questions: '40 Frågor',
+      level: 'Difícil',
+      range: rangeStart === rangeEnd ? `Tabela ${rangeStart}` : `Tabelas ${Math.max(rangeStart, rangeEnd - 5)}-${rangeEnd}`,
+      questions: '40 Perguntas',
       color: 'bg-orange-100 text-orange-700 border-orange-300'
     },
     {
       level: 'Expert',
-      range: rangeStart === rangeEnd ? `Tabell ${rangeStart}` : `Tabeller ${rangeStart}-${rangeEnd}`,
-      questions: '50 Frågor',
+      range: rangeStart === rangeEnd ? `Tabela ${rangeStart}` : `Tabelas ${rangeStart}-${rangeEnd}`,
+      questions: '50 Perguntas',
       color: 'bg-red-100 text-red-700 border-red-300'
     }
   ]
@@ -133,11 +133,11 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     <section id="practice" className="section-container bg-gradient-to-br from-slate-50 to-blue-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          Öva Interaktivt
+          Pratique Interativamente
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Testa dina färdigheter med omedelbar feedback
+          Teste suas habilidades com feedback instantâneo
         </p>
 
         {/* Tab Navigation */}
@@ -151,7 +151,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              ⚡ Snabb Övning
+              ⚡ Prática Rápida
             </button>
             <button
               onClick={() => setActiveTab('exercises')}
@@ -161,7 +161,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              📝 Övningar
+              📝 Exercícios
             </button>
           </div>
         </div>
@@ -172,15 +172,15 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-8">
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Rätt</div>
+                  <div className="text-sm text-slate-600 mb-1">Corretas</div>
                   <div className="text-2xl font-bold text-green-600">{score.correct}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Totalt</div>
+                  <div className="text-sm text-slate-600 mb-1">Total</div>
                   <div className="text-2xl font-bold text-blue-600">{score.total}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Framgång</div>
+                  <div className="text-sm text-slate-600 mb-1">Taxa de acerto</div>
                   <div className="text-2xl font-bold text-purple-600">
                     {score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0}%
                   </div>
@@ -200,7 +200,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={userAnswer}
                     onChange={(e) => setUserAnswer(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Ditt svar"
+                    placeholder="Sua resposta"
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     disabled={feedback === 'correct'}
                   />
@@ -209,7 +209,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     disabled={!userAnswer || feedback === 'correct'}
                     className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                   >
-                    Kontrollera svar
+                    Verificar resposta
                   </button>
                 </div>
 
@@ -220,16 +220,16 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     {feedback === 'correct' ? (
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-3xl">✓</span>
-                        <span>Rätt! Bra jobbat! 🎉</span>
+                        <span>Correto! Bom trabalho! 🎉</span>
                       </div>
                     ) : (
                       <div>
                         <div className="flex items-center justify-center gap-2 mb-2">
                           <span className="text-3xl">✗</span>
-                          <span>Försök igen! 💪</span>
+                          <span>Tente novamente! 💪</span>
                         </div>
                         <div className="text-base text-slate-600">
-                          Rätt svar: {question.num1 * question.num2}
+                          Resposta correta: {question.num1 * question.num2}
                         </div>
                       </div>
                     )}
@@ -241,7 +241,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 onClick={generateQuestion}
                 className="w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-3 rounded-xl font-semibold hover:from-slate-700 hover:to-slate-800 transition-all"
               >
-                🔄 Ny Fråga
+                🔄 Nova Pergunta
               </button>
             </div>
           </div>
@@ -267,7 +267,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   <div className="text-3xl group-hover:scale-110 transition-transform">📋</div>
                 </div>
                 <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all mt-4">
-                  Starta
+                  Iniciar
                 </button>
               </div>
             ))}
@@ -279,17 +279,17 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-blue-600">📝 Övningar</h3>
+                <h3 className="text-2xl font-bold text-blue-600">📝 Exercícios</h3>
                 <button onClick={() => setActiveExercise(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
 
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-slate-600">
-                    Fråga {currentQuestionIndex + 1} / {exerciseQuestions.length}
+                    Pergunta {currentQuestionIndex + 1} / {exerciseQuestions.length}
                   </span>
                   <span className="text-sm font-medium text-slate-600">
-                    Poäng: {exerciseQuestions.filter(q => q.correct === true).length}
+                    Pontuação: {exerciseQuestions.filter(q => q.correct === true).length}
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -310,7 +310,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={exerciseQuestions[currentQuestionIndex].userAnswer}
                     onChange={(e) => updateExerciseAnswer(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && exerciseQuestions[currentQuestionIndex].userAnswer && submitExerciseAnswer()}
-                    placeholder="Ditt svar"
+                    placeholder="Sua resposta"
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     autoFocus
                   />
@@ -319,7 +319,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     disabled={!exerciseQuestions[currentQuestionIndex].userAnswer}
                     className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50"
                   >
-                    {currentQuestionIndex < exerciseQuestions.length - 1 ? 'Nästa' : 'Klar'}
+                    {currentQuestionIndex < exerciseQuestions.length - 1 ? 'Próxima' : 'Concluir'}
                   </button>
                 </div>
               </div>
@@ -335,23 +335,23 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 <div className="text-6xl mb-4">
                   {(exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) >= 0.8 ? '🎉' : '👍'}
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900 mb-4">Övning Klar!</h3>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">Exercício Completo!</h3>
                 
                 <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-8">
                   <div className="bg-green-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Rätt</div>
+                    <div className="text-sm text-slate-600 mb-1">Corretas</div>
                     <div className="text-3xl font-bold text-green-600">
                       {exerciseQuestions.filter(q => q.correct === true).length}
                     </div>
                   </div>
                   <div className="bg-red-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Fel</div>
+                    <div className="text-sm text-slate-600 mb-1">Erradas</div>
                     <div className="text-3xl font-bold text-red-600">
                       {exerciseQuestions.filter(q => q.correct === false).length}
                     </div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Framgång</div>
+                    <div className="text-sm text-slate-600 mb-1">Taxa de acerto</div>
                     <div className="text-3xl font-bold text-blue-600">
                       {Math.round((exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) * 100)}%
                     </div>
@@ -363,20 +363,20 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     onClick={() => setActiveExercise(null)}
                     className="bg-gradient-to-r from-slate-600 to-slate-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-slate-700 hover:to-slate-800"
                   >
-                    Tillbaka
+                    Voltar
                   </button>
                   <button 
                     onClick={() => startExercise(activeExercise)}
                     className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700"
                   >
-                    Försök Igen
+                    Tentar Novamente
                   </button>
                 </div>
 
                 {/* Wrong answers review */}
                 {exerciseQuestions.filter(q => q.correct === false).length > 0 && (
                   <div className="mt-8 text-left max-w-xl mx-auto">
-                    <h4 className="font-semibold text-slate-900 mb-4">Felaktiga Svar:</h4>
+                    <h4 className="font-semibold text-slate-900 mb-4">Respostas Incorretas:</h4>
                     <div className="space-y-2">
                       {exerciseQuestions.map((q, idx) => 
                         q.correct === false && (
@@ -385,7 +385,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                               {q.num1} × {q.num2} = {q.num1 * q.num2}
                             </span>
                             <span className="text-red-600 font-medium">
-                              Ditt svar: {q.userAnswer}
+                              Sua resposta: {q.userAnswer}
                             </span>
                           </div>
                         )
@@ -406,13 +406,13 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
             </svg>
             <div>
               <h4 className="font-semibold text-slate-900 mb-2">
-                💡 Övningstips
+                💡 Dicas de Prática
               </h4>
               <p className="text-slate-700">
-                Övning handlar inte bara om hastighet. Tänk noga på varje fråga, 
-                analysera dina felaktiga svar och identifiera vilka Tabuadaer 
-                som orsakar dig svårigheter. Regelbunden 10-15 minuters 
-                daglig övning är den mest effektiva metoden för långsiktigt lärande.
+                A prática não é apenas sobre velocidade. Pense cuidadosamente em cada pergunta, 
+                analise suas respostas incorretas e identifique quais tabuadas 
+                estão causando dificuldades. Prática regular de 10-15 minutos 
+                diários é o método mais eficaz para aprendizado de longo prazo.
               </p>
             </div>
           </div>
