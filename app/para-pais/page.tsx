@@ -13,7 +13,8 @@ export const metadata = {
 
 export default function ForParents() {
   return (
-    <><Header />`n      <Header />`n      
+    <><Header />`n      
+<Header />`n      
 <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n       <Header />`n      <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
