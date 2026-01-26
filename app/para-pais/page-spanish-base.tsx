@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import Header from '@/app/components/pt/Header'
-import Footer from '@/app/components/pt/Footer'
+import Footer from '@/app/components/Footer'
 
 export const metadata = {
   title: 'Guía de Tablas de Multiplicar para Padres | Apoya el Aprendizaje en Casa',
@@ -11,10 +10,9 @@ export const metadata = {
   },
 }
 
-export default function ParaPais() {
+export default function ForParents() {
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
@@ -323,7 +321,7 @@ export default function ParaPais() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/pt/tabuada/1-10"
+                href="/1-10"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -333,7 +331,7 @@ export default function ParaPais() {
                 </svg>
               </Link>
               <Link 
-                href="/para-estudantes"
+                href="/para-estudiantes"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Ver Guía para Estudiantes

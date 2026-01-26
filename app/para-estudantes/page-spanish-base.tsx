@@ -1,20 +1,18 @@
 import Link from 'next/link'
-import Header from '@/app/components/pt/Header'
-import Footer from '@/app/components/pt/Footer'
+import Footer from '@/app/components/Footer'
 
 export const metadata = {
-  title: 'Para Estudantes: Guia de Tabuada | Aprendizado Passo a Passo',
-  description: 'Guia passo a passo para aprender tabuada facilmente. Aprenda no seu próprio ritmo com materiais visuais, atividades práticas e jogos divertidos!',
-  keywords: 'aprender tabuada, matemática para estudantes, guia de tabuada, multiplicação passo a passo',
+  title: 'Guía de Tablas de Multiplicar para Estudiantes | Aprende Paso a Paso',
+  description: 'Guía paso a paso para aprender tablas de multiplicar fácilmente. Materiales visuales, actividades prácticas y juegos divertidos para aprender a tu ritmo.',
+  keywords: 'aprender tablas de multiplicar, matemáticas para estudiantes, guía de tablas, multiplicación paso a paso',
   alternates: {
-    canonical: '/para-estudantes',
+    canonical: '/para-estudiantes',
   },
 }
 
-export default function ForStudantes() {
+export default function ForStudents() {
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
@@ -116,7 +114,7 @@ export default function ForStudantes() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <Link href="/pt/tabuada/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                      <Link href="/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
                         Ir a las Tablas 1-10 →
                       </Link>
                     </div>
@@ -280,7 +278,7 @@ export default function ForStudantes() {
                 <p className="text-slate-700 mb-3">
                   Practica con los juegos divertidos de este sitio. ¡Aprender mientras juegas es mucho más divertido!
                 </p>
-                <Link href="/pt/tabuada" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
+                <Link href="/" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
                   Descubre los Juegos →
                 </Link>
               </div>
@@ -456,7 +454,7 @@ export default function ForStudantes() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/pt/tabuada/1-10"
+                href="/1-10"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -466,7 +464,7 @@ export default function ForStudantes() {
                 </svg>
               </Link>
               <Link 
-                href="/pt/tabuada"
+                href="/"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
                 Volver a Inicio

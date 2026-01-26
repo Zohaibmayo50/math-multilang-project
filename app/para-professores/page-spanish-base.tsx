@@ -1,17 +1,30 @@
-import Link from 'next/link'
-import Header from '@/app/components/pt/Header'
-import Footer from '@/app/components/pt/Footer'
+import type { Metadata } from 'next';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Link from 'next/link';
 
-export const metadata = {
-  title: 'Para Professores: Guia de Tabuada | Material de Ensino em Sala de Aula',
-  description: 'Recursos profissionais para ensinar tabuada em sala de aula, estratégias pedagógicas, sugestões de atividades e ferramentas de avaliação.',
-  keywords: 'ensinar tabuada, atividades em sala de aula, métodos pedagógicos, ensino de matemática',
+export const metadata: Metadata = {
+  title: 'Guía de Tablas de Multiplicar para Profesores | Estrategias de Enseñanza',
+  description: 'Recursos completos para profesores sobre cómo enseñar tablas de multiplicar de manera efectiva. Incluye estrategias pedagógicas, actividades de aula, instrucción diferenciada y métodos de evaluación.',
+  keywords: 'enseñar tablas de multiplicar, estrategias pedagógicas, actividades de matemáticas, instrucción diferenciada, recursos para profesores',
   alternates: {
-    canonical: '/para-professores',
+    canonical: 'https://tablas-de-multiplicar.com/para-profesores',
+    languages: {
+      'es-MX': 'https://tablas-de-multiplicar.com/para-profesores',
+      'es': 'https://tablas-de-multiplicar.com/para-profesores',
+    },
   },
-}
+  openGraph: {
+    title: 'Guía de Tablas de Multiplicar para Profesores',
+    description: 'Recursos completos para profesores sobre cómo enseñar tablas de multiplicar de manera efectiva.',
+    url: 'https://tablas-de-multiplicar.com/para-profesores',
+    siteName: 'Tablas de Multiplicar',
+    locale: 'es_MX',
+    type: 'website',
+  },
+};
 
-export default function ParaProfessores() {
+export default function ParaProfesoresPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
       <Header />
@@ -701,7 +714,7 @@ export default function ParaProfessores() {
           
           <div className="grid md:grid-cols-4 gap-6">
             <Link 
-              href="/pt/tabuada/1-10" 
+              href="/1-10" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📘</div>
@@ -710,7 +723,7 @@ export default function ParaProfessores() {
             </Link>
 
             <Link 
-              href="/pt/tabuada/11-20" 
+              href="/11-20" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📗</div>
@@ -719,7 +732,7 @@ export default function ParaProfessores() {
             </Link>
 
             <Link 
-              href="/para-estudantes" 
+              href="/para-estudiantes" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -728,7 +741,7 @@ export default function ParaProfessores() {
             </Link>
 
             <Link 
-              href="/para-pais" 
+              href="/para-padres" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>
@@ -746,7 +759,7 @@ export default function ParaProfessores() {
               ejercicios descargables y actividades interactivas.
             </p>
             <Link 
-              href="/pt/tabuada"
+              href="/"
               className="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
             >
               Ver Todas las Tablas
