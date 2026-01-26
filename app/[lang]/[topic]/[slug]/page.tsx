@@ -16,6 +16,8 @@ import RangePageFr from '@/app/components/fr/RangePage'
 import NumberPageFr from '@/app/components/fr/NumberPage'
 import RangePageSv from '@/app/components/sv/RangePage'
 import NumberPageSv from '@/app/components/sv/NumberPage'
+import RangePagePt from '@/app/components/pt/RangePage'
+import NumberPagePt from '@/app/components/pt/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -26,6 +28,7 @@ import { numberTitlesUk, numberDescriptionsUk, numberSpecialPropertiesUk } from 
 import { numberTitlesFi, numberDescriptionsFi, numberSpecialPropertiesFi } from '@/lib/number-metadata-fi'
 import { numberTitlesFr, numberDescriptionsFr, numberSpecialPropertiesFr } from '@/lib/number-metadata-fr'
 import { numberTitlesSv, numberDescriptionsSv, numberSpecialPropertiesSv } from '@/lib/number-metadata-sv'
+import { numberTitlesPt, numberDescriptionsPt, numberSpecialPropertiesPt } from '@/lib/number-metadata-pt'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -66,6 +69,11 @@ import ForParentsFr from '@/app/pour-les-parents/page'
 import ForStudentsSv from '@/app/for-elever/page'
 import ForTeachersSv from '@/app/for-larare/page'
 import ForParentsSv from '@/app/for-foraldrar/page'
+
+// Import Portuguese guide page components
+import ForStudentsPt from '@/app/para-estudantes/page'
+import ForTeachersPt from '@/app/para-professores/page'
+import ForParentsPt from '@/app/para-pais/page'
 
 interface PageProps {
   params: {
@@ -737,6 +745,86 @@ const rangeMetadataSv: Record<string, {
   },
 }
 
+// Portuguese Range Metadata
+const rangeMetadataPt: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Tabuada de 1 a 10 | Nível Iniciante',
+    description: 'Aprenda a tabuada de 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Explicações simples para iniciantes, exemplos visuais e exercícios práticos.',
+    keywords: 'tabuada 1-10, tabuada, multiplicação, aprendizado de matemática',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Tabuada de 11 a 20 | Números de Dois Dígitos',
+    description: 'Aprenda a tabuada de 11-20. Passo importante para entender a multiplicação de números de dois dígitos.',
+    keywords: 'tabuada 11-20, tabuada, multiplicação, aprendizado de matemática',
+    level: 'beginner',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Tabuada de 21 a 30 | Nível Intermediário',
+    description: 'Aprenda a tabuada de 21-30. Nível intermediário e padrões de multiplicação.',
+    keywords: 'tabuada 21-30, tabuada, multiplicação, aprendizado de matemática',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Tabuada de 31 a 40 | Multiplicação Avançada',
+    description: 'Aprenda a tabuada de 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Habilidades avançadas de cálculo mental.',
+    keywords: 'tabuada 31-40, tabuada, multiplicação, aprendizado de matemática',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Tabuada de 41 a 50 | Nível Intermediário-Avançado',
+    description: 'Aprenda a tabuada de 41-50. Exercícios interativos para dominar a multiplicação de números grandes.',
+    keywords: 'tabuada 41-50, tabuada, multiplicação, aprendizado de matemática',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Tabuada de 51 a 60 | Nível Avançado',
+    description: 'Aprenda a tabuada de 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Material de estudo detalhado para alunos de nível avançado.',
+    keywords: 'tabuada 51-60, tabuada, multiplicação, aprendizado de matemática',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Tabuada de 61 a 70 | Números Grandes',
+    description: 'Aprenda a tabuada de 61-70. Recursos educacionais abrangentes para multiplicação de números grandes.',
+    keywords: 'tabuada 61-70, tabuada, multiplicação, aprendizado de matemática',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Tabuada de 71 a 80 | Multiplicação Avançada',
+    description: 'Aprenda a tabuada de 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Desenvolva habilidades matemáticas de nível avançado.',
+    keywords: 'tabuada 71-80, tabuada, multiplicação, aprendizado de matemática',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Tabuada de 81 a 90 | Nível Expert',
+    description: 'Aprenda a tabuada de 81-90. Operações de multiplicação desafiadoras e estratégias para alunos de nível expert.',
+    keywords: 'tabuada 81-90, tabuada, multiplicação, aprendizado de matemática',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Tabuada de 91 a 100 | Nível Mais Alto',
+    description: 'Aprenda a tabuada de 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Educação completa para habilidades de multiplicação de nível mais alto.',
+    keywords: 'tabuada 91-100, tabuada, multiplicação, aprendizado de matemática',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -898,6 +986,29 @@ const guideMetadataSv: Record<string, {
   },
 }
 
+// Portuguese Guide Metadata
+const guideMetadataPt: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'para-estudantes': {
+    title: 'Guia de Tabuada para Estudantes | Aprendizado Passo a Passo',
+    description: 'Guia passo a passo para aprender a tabuada facilmente. Aprenda no seu próprio ritmo com materiais visuais, atividades práticas e jogos divertidos!',
+    keywords: 'aprender tabuada, matemática para estudantes, guia de tabuada, multiplicação passo a passo',
+  },
+  'para-professores': {
+    title: 'Guia de Tabuada para Professores | Estratégias de Ensino',
+    description: 'Recursos abrangentes para professores sobre como ensinar a tabuada de forma eficaz. Inclui estratégias pedagógicas, atividades em sala de aula, ensino diferenciado e métodos de avaliação.',
+    keywords: 'ensinar tabuada, estratégias pedagógicas, atividades de matemática, ensino diferenciado, recursos para professores',
+  },
+  'para-pais': {
+    title: 'Guia de Tabuada para Pais | Como Ajudar Seu Filho',
+    description: 'Como apoiar o aprendizado da tabuada do seu filho em casa. Dicas práticas, jogos educativos e estratégias de motivação.',
+    keywords: 'ajudar crianças com tabuada, matemática em casa, educação dos pais, atividades de aprendizado',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
@@ -923,6 +1034,9 @@ const guideComponents: Record<string, any> = {
   'for-elever': ForStudentsSv,
   'for-larare': ForTeachersSv,
   'for-foraldrar': ForParentsSv,
+  'para-estudantes': ForStudentsPt,
+  'para-professores': ForTeachersPt,
+  'para-pais': ForParentsPt,
 }
 
 // Determine slug type
@@ -935,6 +1049,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
   if (locale === 'fr' && slug in guideMetadataFr) return 'guide'
   if (locale === 'sv' && slug in guideMetadataSv) return 'guide'
+  if (locale === 'pt' && slug in guideMetadataPt) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -953,6 +1068,7 @@ export async function generateStaticParams() {
     { lang: 'fi', topic: 'kertotaulut' },
     { lang: 'fr', topic: 'table-de-multiplication' },
     { lang: 'sv', topic: 'multiplikationstabeller' },
+    { lang: 'pt', topic: 'tabuada' },
   ]
 
   langs.forEach(({ lang, topic }) => {
@@ -981,7 +1097,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -1505,13 +1621,78 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Portuguese metadata
+  if (locale === 'pt') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataPt[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesPt[num]
+      const description = numberDescriptionsPt[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataPt[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
   return {}
 }
 
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -2925,6 +3106,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPageSv number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Portuguese version
+  if (locale === 'pt') {
+    const baseUrl = siteConfig.pt.domain
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataPt[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/pt/tabuada/${slug}#webpage`,
+            "url": `${baseUrl}/pt/tabuada/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/pt/tabuada/${slug}#learningresource`
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/pt/tabuada/${slug}#learningresource`,
+            "name": `Tabuada ${slug} Recurso de Aprendizagem`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Iniciante' : meta.level === 'intermediate' ? 'Intermediário' : 'Avançado',
+            "learningResourceType": ["Recurso Interativo", "Material de Prática", "Jogo Educacional"],
+            "teaches": `Habilidades para entender e aplicar tabuadas ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "pt-BR",
+            "educationalUse": ["prática", "auto-estudo", "lição de casa"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Tabuada do ${start + i}`,
+              "url": `${baseUrl}/pt/tabuada/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePagePt
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/pt/tabuada/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/pt/tabuada/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesPt[num] || `Multiplicação por ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/pt/tabuada/${num}#webpage`,
+            "url": `${baseUrl}/pt/tabuada/${num}`,
+            "name": `Tabuada do ${num} - ${specialProp}`,
+            "description": numberDescriptionsPt[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/pt/tabuada/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/pt/tabuada/${num}#breadcrumb`
+            },
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/pt/tabuada/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Início"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/pt/tabuada/${range}`,
+                  "name": `Tabuada ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/pt/tabuada/${num}`,
+                  "name": `Tabuada do ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/pt/tabuada/${num}#learningresource`,
+            "name": `Tabuada do ${num} Recurso de Aprendizagem`,
+            "description": numberDescriptionsPt[num],
+            "educationalLevel": rangeStart <= 10 ? "Iniciante" : rangeStart <= 50 ? "Intermediário" : "Avançado",
+            "learningResourceType": ["Recurso Interativo", "Material de Prática", "Jogo Educacional"],
+            "teaches": `Tabuada do ${num}, ${specialProp.toLowerCase()}, conceitos básicos de multiplicação`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "pt-BR",
+            "educationalUse": ["prática", "auto-estudo"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/pt/tabuada/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPagePt number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

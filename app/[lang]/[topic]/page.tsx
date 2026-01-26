@@ -81,6 +81,17 @@ import GamesSectionSv from '@/app/components/sv/GamesSection'
 import PrintableExercisesSv from '@/app/components/sv/PrintableExercises'
 import AudienceSectionSv from '@/app/components/sv/AudienceSection'
 import FooterSv from '@/app/components/sv/Footer'
+import HeaderPt from '@/app/components/pt/Header'
+import HeroPt from '@/app/components/pt/Hero'
+import DefinitionSectionPt from '@/app/components/pt/DefinitionSection'
+import WhyItMattersPt from '@/app/components/pt/WhyItMatters'
+import HowToLearnPt from '@/app/components/pt/HowToLearn'
+import LearningPathsPt from '@/app/components/pt/LearningPaths'
+import PracticePreviewPt from '@/app/components/pt/PracticePreview'
+import GamesSectionPt from '@/app/components/pt/GamesSection'
+import PrintableExercisesPt from '@/app/components/pt/PrintableExercises'
+import AudienceSectionPt from '@/app/components/pt/AudienceSection'
+import FooterPt from '@/app/components/pt/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -101,6 +112,7 @@ export async function generateStaticParams() {
     { lang: 'fi', topic: 'kertotaulut' },
     { lang: 'fr', topic: 'table-de-multiplication' },
     { lang: 'sv', topic: 'multiplikationstabeller' },
+    { lang: 'pt', topic: 'tabuada' },
   ]
 }
 
@@ -108,7 +120,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -421,6 +433,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Portuguese metadata (production)
+  if (locale === 'pt') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Tabuada 1-100 | Exercícios PDF e Jogos Interativos',
+      description: 'Aprenda a tabuada de 1 a 100 gratuitamente. Exercícios interativos, jogos educacionais e folhas de trabalho em PDF para crianças.',
+      keywords: 'tabuada, tabuada de multiplicação, multiplicação, matemática, aprendizado, prática, educação, exercícios pdf',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Tabuada – Aprenda, Entenda e Pratique',
+        description: 'Aprenda a tabuada passo a passo.',
+        type: 'website',
+        locale: 'pt_BR',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Tabuada – Aprenda, Entenda e Pratique',
+        description: 'Aprenda a tabuada passo a passo.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -428,7 +478,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1270,6 +1320,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnSv />
           <AudienceSectionSv />
           <FooterSv />
+        </main>
+      </>
+    )
+  }
+
+  // Portuguese version
+  if (locale === 'pt') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.pt.domain}/#website`,
+          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
+          "name": "Tabuada",
+          "description": "Plataforma educacional interativa para aprender a tabuada de 1 a 100. Ferramentas de aprendizado visual para crianças, exercícios práticos e jogos educacionais.",
+          "inLanguage": "pt-BR",
+          "publisher": {
+            "@id": `${siteConfig.pt.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.pt.domain}/pt/tabuada/#webpage`,
+          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
+          "name": "Tabuada - Todas as Tabuadas de 1 a 100",
+          "description": "Plataforma de aprendizado interativo de tabuada para crianças. Aprenda todas as tabuadas de 1 a 100 através de prática.",
+          "isPartOf": {
+            "@id": `${siteConfig.pt.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.pt.domain}/pt/tabuada/#learningresource`
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.pt.domain}/#organization`,
+          "name": "Tabuada",
+          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
+          "description": "Plataforma educacional que ensina tabuada para alunos do ensino fundamental",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["pt", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.pt.domain}/pt/tabuada/#learningresource`,
+          "name": "Plataforma de Aprendizado de Tabuada",
+          "description": "Recurso educacional abrangente para aprender a tabuada de 1 a 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "pt-BR",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "tabuada",
+            "aprendizado de matemática",
+            "matemática do ensino fundamental",
+            "multiplicação",
+            "aprender tabuada",
+            "exercícios de matemática",
+            "jogos de multiplicação"
+          ],
+          "teaches": "Habilidades para entender, aplicar e memorizar multiplicação e tabuadas",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <HeaderPt />
+        <main className="min-h-screen">
+          <HeroPt />
+          <LearningPathsPt />
+          <PracticePreviewPt />
+          <GamesSectionPt />
+          <PrintableExercisesPt />
+          <DefinitionSectionPt />
+          <WhyItMattersPt />
+          <HowToLearnPt />
+          <AudienceSectionPt />
+          <FooterPt />
         </main>
       </>
     )

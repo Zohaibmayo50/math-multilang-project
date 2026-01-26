@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: 'tr',
-  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv'],
+  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'],
 } as const
 
 export type Locale = (typeof i18n)['locales'][number]
@@ -14,6 +14,7 @@ export const languageNames: Record<Locale, string> = {
   fi: 'Suomi',
   fr: 'Français',
   sv: 'Svenska',
+  pt: 'Português',
 }
 
 export const topicSlugs: Record<Locale, string> = {
@@ -25,6 +26,7 @@ export const topicSlugs: Record<Locale, string> = {
   fi: 'kertotaulut',
   fr: 'table-de-multiplication',
   sv: 'multiplikationstabeller',
+  pt: 'tabuada',
 }
 
 export const siteConfig: Record<Locale, {
@@ -72,6 +74,11 @@ export const siteConfig: Record<Locale, {
     name: 'Multiplikationstabeller',
     description: 'Interaktiv utbildningsplattform för att lära sig multiplikationstabeller från 1 till 100.',
   },
+  pt: {
+    domain: 'https://multilang-math.com',
+    name: 'Tabuada',
+    description: 'Plataforma educacional interativa para aprender a tabuada de 1 a 100.',
+  },
 }
 
 export const guides: Record<Locale, {
@@ -118,5 +125,10 @@ export const guides: Record<Locale, {
     students: 'for-elever',
     teachers: 'for-larare',
     parents: 'for-foraldrar',
+  },
+  pt: {
+    students: 'para-estudantes',
+    teachers: 'para-professores',
+    parents: 'para-pais',
   },
 }
