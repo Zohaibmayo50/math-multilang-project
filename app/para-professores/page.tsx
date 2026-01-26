@@ -45,28 +45,28 @@ export default function ParaProfessores() {
                 <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-2xl">👁️</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Visualización</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Visualização</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Use representaciones visuales para ayudar a los estudiantes a comprender 
-                la multiplicación como grupos repetidos.
+                Use representações visuais para ajudar os alunos a compreender 
+                a multiplicação como grupos repetidos.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Arreglos rectangulares (ej: 3×4 como 3 filas de 4 objetos)</span>
+                  <span>Arranjos retangulares (ex: 3×4 como 3 linhas de 4 objetos)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Modelos de área usando papel cuadriculado</span>
+                  <span>Modelos de área usando papel quadriculado</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Diagramas de saltos en la recta numérica</span>
+                  <span>Diagramas de saltos na reta numérica</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">•</span>
-                  <span>Manipulativos concretos (bloques, fichas, cubos)</span>
+                  <span>Manipulativos concretos (blocos, fichas, cubos)</span>
                 </li>
               </ul>
             </div>
@@ -77,11 +77,11 @@ export default function ParaProfessores() {
                 <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-2xl">🧩</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Descomposición</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Decomposição</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Enseñe a los estudiantes a descomponer multiplicaciones difíciles 
-                en operaciones más simples.
+                Ensine os alunos a decompor multiplicações difíceis 
+                em operações mais simples.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -94,11 +94,11 @@ export default function ParaProfessores() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
-                  <span>Usar duplicación: 6×4 = 2×(3×4)</span>
+                  <span>Usar duplicação: 6×4 = 2×(3×4)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">•</span>
-                  <span>Propiedad distributiva en acción</span>
+                  <span>Propriedade distributiva em ação</span>
                 </li>
               </ul>
             </div>
@@ -109,28 +109,28 @@ export default function ParaProfessores() {
                 <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-2xl">🔢</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Patrones</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Padrões</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Ayude a los estudiantes a descubrir y usar patrones para facilitar 
-                el aprendizaje y la memorización.
+                Ajude os alunos a descobrir e usar padrões para facilitar 
+                o aprendizado e a memorização.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-purple-500 mr-2">•</span>
-                  <span>Tabla del 2: todos los números pares</span>
+                  <span>Tabuada do 2: todos os números pares</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-500 mr-2">•</span>
-                  <span>Tabla del 5: terminan en 0 o 5</span>
+                  <span>Tabuada do 5: terminam em 0 ou 5</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-500 mr-2">•</span>
-                  <span>Tabla del 9: suma de dígitos = 9, patrón descendente</span>
+                  <span>Tabuada do 9: soma de dígitos = 9, padrão descendente</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-500 mr-2">•</span>
-                  <span>Propiedad conmutativa: 3×7 = 7×3</span>
+                  <span>Propriedade comutativa: 3×7 = 7×3</span>
                 </li>
               </ul>
             </div>
@@ -141,11 +141,11 @@ export default function ParaProfessores() {
                 <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
                   <span className="text-2xl">🌍</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900">Aplicaciones Reales</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Aplicações Reais</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Conecte la multiplicación con situaciones cotidianas para dar 
-                significado y contexto al aprendizaje.
+                Conecte a multiplicação com situações cotidianas para dar 
+                significado e contexto ao aprendizado.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
@@ -182,15 +182,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🎯</span>
-                Bingo de Multiplicación
+                Bingo de Multiplicação
               </h3>
               <p className="text-gray-700 mb-3">
-                Los estudiantes crean tarjetas de bingo con productos. 
-                Llame multiplicaciones y los estudiantes marcan las respuestas.
+                Os alunos criam cartões de bingo com produtos. 
+                Chame multiplicações e os alunos marcam as respostas.
               </p>
               <div className="bg-blue-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Principiante a Intermedio<br/>
-                <strong>Tiempo:</strong> 15-20 minutos
+                <strong>Nível:</strong> Iniciante a Intermediário<br/>
+                <strong>Tempo:</strong> 15-20 minutos
               </div>
             </div>
 
@@ -198,15 +198,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🏃</span>
-                Carreras de Multiplicación
+                Corridas de Multiplicação
               </h3>
               <p className="text-gray-700 mb-3">
-                Equipos compiten respondiendo problemas de multiplicación 
-                en un formato de relevos en el pizarrón.
+                Equipes competem respondendo problemas de multiplicação 
+                em um formato de revezamento no quadro.
               </p>
               <div className="bg-green-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Todos los niveles<br/>
-                <strong>Tiempo:</strong> 10-15 minutos
+                <strong>Nível:</strong> Todos os níveis<br/>
+                <strong>Tempo:</strong> 10-15 minutos
               </div>
             </div>
 
@@ -214,15 +214,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🎲</span>
-                Dominó de Multiplicación
+                Dominó de Multiplicação
               </h3>
               <p className="text-gray-700 mb-3">
-                Fichas de dominó modificadas donde los estudiantes emparejan 
-                multiplicaciones con sus productos.
+                Fichas de dominó modificadas onde os alunos emparelham 
+                multiplicações com seus produtos.
               </p>
               <div className="bg-purple-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Intermedio<br/>
-                <strong>Tiempo:</strong> 20-30 minutos
+                <strong>Nível:</strong> Intermediário<br/>
+                <strong>Tempo:</strong> 20-30 minutos
               </div>
             </div>
 
@@ -230,15 +230,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🎨</span>
-                Arte con Arreglos
+                Arte com Arranjos
               </h3>
               <p className="text-gray-700 mb-3">
-                Los estudiantes crean diseños artísticos usando arreglos 
-                rectangulares y etiquetan las multiplicaciones correspondientes.
+                Os alunos criam desenhos artísticos usando arranjos 
+                retangulares e rotulam as multiplicações correspondentes.
               </p>
               <div className="bg-pink-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Principiante<br/>
-                <strong>Tiempo:</strong> 30-40 minutos
+                <strong>Nível:</strong> Iniciante<br/>
+                <strong>Tempo:</strong> 30-40 minutos
               </div>
             </div>
 
@@ -246,15 +246,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">🎪</span>
-                Estaciones de Práctica
+                Estações de Prática
               </h3>
               <p className="text-gray-700 mb-3">
-                Configure estaciones rotativas con diferentes actividades: 
-                tarjetas didácticas, juegos digitales, problemas escritos, manipulativos.
+                Configure estações rotativas com diferentes atividades: 
+                cartões didáticos, jogos digitais, problemas escritos, manipulativos.
               </p>
               <div className="bg-orange-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Todos los niveles<br/>
-                <strong>Tiempo:</strong> 40-50 minutos
+                <strong>Nível:</strong> Todos os níveis<br/>
+                <strong>Tempo:</strong> 40-50 minutos
               </div>
             </div>
 
@@ -262,15 +262,15 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
                 <span className="text-2xl mr-2">📖</span>
-                Historias de Multiplicación
+                Histórias de Multiplicação
               </h3>
               <p className="text-gray-700 mb-3">
-                Los estudiantes escriben e ilustran problemas de multiplicación 
-                basados en situaciones reales o imaginarias.
+                Os alunos escrevem e ilustram problemas de multiplicação 
+                baseados em situações reais ou imaginárias.
               </p>
               <div className="bg-yellow-50 rounded-lg p-3 text-sm text-gray-700">
-                <strong>Nivel:</strong> Intermedio a Avanzado<br/>
-                <strong>Tiempo:</strong> 30-45 minutos
+                <strong>Nível:</strong> Intermediário a Avançado<br/>
+                <strong>Tempo:</strong> 30-45 minutos
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Instrucción Diferenciada
+            Instrução Diferenciada
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -289,32 +289,32 @@ export default function ParaProfessores() {
             <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="text-3xl mr-2">🌱</span>
-                Estudiantes Principiantes
+                Alunos Iniciantes
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Comenzar con tablas del 1, 2, 5 y 10</span>
+                  <span>Começar com tabuadas do 1, 2, 5 e 10</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Usar muchos manipulativos concretos</span>
+                  <span>Usar muitos manipulativos concretos</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Enfatizar suma repetida inicialmente</span>
+                  <span>Enfatizar soma repetida inicialmente</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Proporcionar tablas de referencia</span>
+                  <span>Fornecer tabelas de referência</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Práctica diaria breve (5-10 minutos)</span>
+                  <span>Prática diária breve (5-10 minutos)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 mr-2">✓</span>
-                  <span>Celebrar pequeños logros</span>
+                  <span>Celebrar pequenas conquistas</span>
                 </li>
               </ul>
             </div>
@@ -323,28 +323,28 @@ export default function ParaProfessores() {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="text-3xl mr-2">📚</span>
-                Estudiantes Intermedios
+                Alunos Intermediários
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Introducir tablas del 3, 4, 6 y 7</span>
+                  <span>Introduzir tabuadas do 3, 4, 6 e 7</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Enseñar estrategias de descomposición</span>
+                  <span>Ensinar estratégias de decomposição</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Practicar propiedad conmutativa</span>
+                  <span>Praticar propriedade comutativa</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Juegos de velocidad moderada</span>
+                  <span>Jogos de velocidade moderada</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Problemas de aplicación en contexto</span>
+                  <span>Problemas de aplicação em contexto</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
@@ -517,8 +517,8 @@ export default function ParaProfessores() {
           
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <p className="text-gray-700 mb-6 text-lg">
-              Reconozca y aborde estos malentendidos frecuentes para asegurar 
-              una comprensión sólida de la multiplicación:
+              Reconheça e aborde estes mal-entendidos frequentes para assegurar 
+              uma compreensão sólida da multiplicação:
             </p>
 
             <div className="space-y-6">
@@ -526,16 +526,16 @@ export default function ParaProfessores() {
               <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                   <span className="text-2xl mr-2">❌</span>
-                  "La multiplicación siempre hace los números más grandes"
+                  "A multiplicação sempre torna os números maiores"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Los estudiantes se confunden 
-                  al multiplicar por fracciones o decimales.
+                  <strong>Por que é problemático:</strong> Os alunos ficam confusos 
+                  ao multiplicar por frações ou decimais.
                 </p>
                 <p className="text-gray-700">
-                  <strong className="text-green-700">Cómo corregirlo:</strong> Mostrar 
-                  ejemplos como 5 × 0.5 = 2.5 o 3 × 0 = 0. Explicar que multiplicar 
-                  por números menores que 1 reduce el resultado.
+                  <strong className="text-green-700">Como corrigir:</strong> Mostrar 
+                  exemplos como 5 × 0,5 = 2,5 ou 3 × 0 = 0. Explicar que multiplicar 
+                  por números menores que 1 reduz o resultado.
                 </p>
               </div>
 
@@ -543,16 +543,16 @@ export default function ParaProfessores() {
               <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                   <span className="text-2xl mr-2">❌</span>
-                  "El orden no importa en los problemas verbales"
+                  "A ordem não importa nos problemas verbais"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Aunque 3×4 = 4×3, el significado 
-                  contextual puede ser diferente (3 grupos de 4 vs. 4 grupos de 3).
+                  <strong>Por que é problemático:</strong> Embora 3×4 = 4×3, o significado 
+                  contextual pode ser diferente (3 grupos de 4 vs. 4 grupos de 3).
                 </p>
                 <p className="text-gray-700">
-                  <strong className="text-green-700">Cómo corregirlo:</strong> Discutir 
-                  la propiedad conmutativa pero enfatizar la importancia de entender 
-                  el contexto del problema.
+                  <strong className="text-green-700">Como corrigir:</strong> Discutir 
+                  a propriedade comutativa mas enfatizar a importância de entender 
+                  o contexto do problema.
                 </p>
               </div>
 
@@ -560,16 +560,16 @@ export default function ParaProfessores() {
               <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                   <span className="text-2xl mr-2">❌</span>
-                  "Multiplicar es solo memorización"
+                  "Multiplicar é apenas memorização"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Los estudiantes pueden 
-                  memorizar sin entender, dificultando la aplicación y retención.
+                  <strong>Por que é problemático:</strong> Os alunos podem 
+                  memorizar sem entender, dificultando a aplicação e retenção.
                 </p>
                 <p className="text-gray-700">
-                  <strong className="text-green-700">Cómo corregirlo:</strong> Siempre 
-                  enseñar conceptos antes de la memorización. Usar modelos visuales 
-                  y estrategias de comprensión.
+                  <strong className="text-green-700">Como corrigir:</strong> Sempre 
+                  ensinar conceitos antes da memorização. Usar modelos visuais 
+                  e estratégias de compreensão.
                 </p>
               </div>
 
@@ -577,16 +577,16 @@ export default function ParaProfessores() {
               <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                   <span className="text-2xl mr-2">❌</span>
-                  "Los patrones siempre funcionan sin entenderlos"
+                  "Os padrões sempre funcionam sem entendê-los"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Los estudiantes aplican 
-                  patrones mecánicamente sin comprender el "por qué" matemático.
+                  <strong>Por que é problemático:</strong> Os alunos aplicam 
+                  padrões mecanicamente sem compreender o "porquê" matemático.
                 </p>
                 <p className="text-gray-700">
-                  <strong className="text-green-700">Cómo corregirlo:</strong> Al enseñar 
-                  patrones (ej: tabla del 9), siempre explicar por qué funcionan 
-                  usando propiedades matemáticas.
+                  <strong className="text-green-700">Como corrigir:</strong> Ao ensinar 
+                  padrões (ex: tabuada do 9), sempre explicar por que funcionam 
+                  usando propriedades matemáticas.
                 </p>
               </div>
 
@@ -594,16 +594,16 @@ export default function ParaProfessores() {
               <div className="border-l-4 border-red-500 bg-red-50 rounded-r-lg p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2 flex items-center">
                   <span className="text-2xl mr-2">❌</span>
-                  "Solo hay una manera correcta de resolver"
+                  "Só há uma maneira correta de resolver"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Limita el pensamiento 
-                  creativo y la flexibilidad numérica.
+                  <strong>Por que é problemático:</strong> Limita o pensamento 
+                  criativo e a flexibilidade numérica.
                 </p>
                 <p className="text-gray-700">
-                  <strong className="text-green-700">Cómo corregirlo:</strong> Celebrar 
-                  múltiples estrategias. Pedir a los estudiantes que compartan diferentes 
-                  métodos y discutir cuándo cada uno es más útil.
+                  <strong className="text-green-700">Como corrigir:</strong> Celebrar 
+                  múltiplas estratégias. Pedir aos alunos que compartilhem diferentes 
+                  métodos e discutir quando cada um é mais útil.
                 </p>
               </div>
             </div>
@@ -615,7 +615,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4 bg-white/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Consejos y Mejores Prácticas
+            Conselhos e Melhores Práticas
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
