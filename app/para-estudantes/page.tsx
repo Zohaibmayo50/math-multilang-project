@@ -21,17 +21,17 @@ export default function ForStudantes() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-                ¡Aprender las Tablas de Multiplicar es Muy Fácil! 🎯
+                Aprender Tabuada é Muito Fácil! 🎯
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8">
-                ¡Avanza a tu propio ritmo, aprende mientras te diviertes y conviértete en un héroe de las matemáticas! 
-                Esta guía te ayudará a aprender las tablas de multiplicar paso a paso.
+                Avance no seu próprio ritmo, aprenda enquanto se diverte e torne-se um herói da matemática! 
+                Este guia vai ajudá-lo a aprender tabuada passo a passo.
               </p>
               <div className="flex items-center gap-4">
                 <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-blue-100">¡Tú también puedes hacerlo!</span>
+                <span className="text-blue-100">Você também pode fazer isso!</span>
               </div>
             </div>
           </div>
@@ -42,11 +42,11 @@ export default function ForStudantes() {
           {/* Why Learn */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              ¿Por Qué Debo Aprender las Tablas de Multiplicar? 🤔
+              Por Que Devo Aprender Tabuada? 🤔
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                ¡Las tablas de multiplicar son el súper poder del mundo matemático! Esto es lo que te darán:
+                A tabuada é o super poder do mundo matemático! Isto é o que ela lhe dará:
               </p>
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="flex items-start gap-4">

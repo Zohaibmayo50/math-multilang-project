@@ -21,11 +21,11 @@ export default function ParaPais() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-                Guía de Tablas de Multiplicar para Padres
+                Guia de Tabuada Para Pais
               </h1>
               <p className="text-lg sm:text-xl text-purple-100 mb-6 md:mb-8">
-                ¿Cómo apoyar a tu hijo en el aprendizaje de las tablas de multiplicar? 
-                Esta guía contiene estrategias efectivas y consejos prácticos.
+                Como apoiar seu filho no aprendizado de tabuada? 
+                Este guia contém estratégias eficazes e conselhos práticos.
               </p>
               <div className="flex items-center gap-4">
                 <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">

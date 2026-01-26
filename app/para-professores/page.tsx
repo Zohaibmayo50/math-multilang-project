@@ -21,11 +21,11 @@ export default function ParaProfessores() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Guía de Tablas de Multiplicar para Profesores
+              Guia de Tabuada para Professores
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Estrategias efectivas, actividades de aula y recursos para enseñar 
-              las tablas de multiplicar de manera que todos los estudiantes puedan dominarlas.
+              Estratégias eficazes, atividades em sala de aula e recursos para ensinar 
+              tabuada de forma que todos os alunos possam dominá-la.
             </p>
           </div>
         </div>
