@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Multiplication Tables - Learn in Your Language',
   description: 'Learn multiplication tables in your language. Interactive lessons and practice for Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, and Portuguese.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://math-multilang-project.vercel.app',
   },
   robots: {
     index: true,
