@@ -357,32 +357,32 @@ export default function ParaProfessores() {
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                 <span className="text-3xl mr-2">🚀</span>
-                Estudiantes Avanzados
+                Alunos Avançados
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Tablas del 8, 9, 11 y 12</span>
+                  <span>Tabuadas do 8, 9, 11 e 12</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Problemas de múltiples pasos</span>
+                  <span>Problemas de múltiplas etapas</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Conexión con división y fracciones</span>
+                  <span>Conexão com divisão e frações</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Desafíos de lógica matemática</span>
+                  <span>Desafios de lógica matemática</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Crear sus propios problemas</span>
+                  <span>Criar seus próprios problemas</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-purple-600 mr-2">✓</span>
-                  <span>Tutorear a compañeros</span>
+                  <span>Tutorear colegas</span>
                 </li>
               </ul>
             </div>
@@ -394,7 +394,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4 bg-white/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Estrategias de Evaluación
+            Estratégias de Avaliação
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -402,35 +402,35 @@ export default function ParaProfessores() {
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="text-3xl mr-3">📊</span>
-                Evaluación Formativa
+                Avaliação Formativa
               </h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Observación Diaria</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Observação Diária</h4>
                   <p className="text-gray-700">
-                    Observe a los estudiantes durante la práctica, tome notas sobre 
-                    estrategias usadas y errores comunes.
+                    Observe os alunos durante a prática, faça anotações sobre 
+                    estratégias usadas e erros comuns.
                   </p>
                 </div>
                 <div className="border-l-4 border-green-500 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Mini Pruebas Rápidas</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Mini Testes Rápidos</h4>
                   <p className="text-gray-700">
-                    1-2 minutos al inicio de la clase: 10 problemas para evaluar 
-                    fluidez y retención.
+                    1-2 minutos no início da aula: 10 problemas para avaliar 
+                    fluência e retenção.
                   </p>
                 </div>
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-bold text-gray-900 mb-2">Pizarras Individuales</h4>
+                  <h4 className="font-bold text-gray-900 mb-2">Lousas Individuais</h4>
                   <p className="text-gray-700">
-                    Los estudiantes muestran respuestas simultáneamente, permitiendo 
-                    verificación rápida de toda la clase.
+                    Os alunos mostram respostas simultaneamente, permitindo 
+                    verificação rápida de toda a turma.
                   </p>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4">
                   <h4 className="font-bold text-gray-900 mb-2">Entrevistas Matemáticas</h4>
                   <p className="text-gray-700">
-                    Conversaciones breves uno-a-uno para entender el razonamiento 
-                    y estrategias del estudiante.
+                    Conversas breves um-a-um para entender o raciocínio 
+                    e estratégias do aluno.
                   </p>
                 </div>
               </div>
@@ -453,8 +453,8 @@ export default function ParaProfessores() {
                 <div className="border-l-4 border-yellow-500 pl-4">
                   <h4 className="font-bold text-gray-900 mb-2">Proyectos Aplicados</h4>
                   <p className="text-gray-700">
-                    Los estudiantes resuelven problemas del mundo real que requieren 
-                    multiplicación en varios contextos.
+                    Os alunos resolvem problemas do mundo real que requerem 
+                    multiplicação em vários contextos.
                   </p>
                 </div>
                 <div className="border-l-4 border-pink-500 pl-4">
@@ -467,8 +467,8 @@ export default function ParaProfessores() {
                 <div className="border-l-4 border-indigo-500 pl-4">
                   <h4 className="font-bold text-gray-900 mb-2">Autoevaluación</h4>
                   <p className="text-gray-700">
-                    Los estudiantes rastrean su propio progreso, identifican tablas 
-                    dominadas y establecen metas.
+                    Os alunos acompanham seu próprio progresso, identificam tabuadas 
+                    dominadas e estabelecem metas.
                   </p>
                 </div>
               </div>
@@ -485,8 +485,8 @@ export default function ParaProfessores() {
               <div className="bg-white/20 rounded-lg p-4">
                 <h4 className="font-bold mb-2">Gráficas de Dominio</h4>
                 <p className="text-sm">
-                  Los estudiantes colorean tablas dominadas en una cuadrícula visual 
-                  de 12×12 para ver su progreso.
+                  Os alunos colorem tabuadas dominadas em uma grade visual 
+                  de 12×12 para ver seu progresso.
                 </p>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
@@ -622,32 +622,32 @@ export default function ParaProfessores() {
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="text-3xl mr-3">💡</span>
-                Consejos para el Éxito
+                Dicas para o Sucesso
               </h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Práctica corta y diaria es mejor que sesiones largas esporádicas</span>
+                  <span>Prática curta e diária é melhor que sessões longas esporádicas</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Celebre el progreso, no solo la perfección</span>
+                  <span>Celebre o progresso, não apenas a perfeição</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Varíe los métodos de práctica para mantener el interés</span>
+                  <span>Varie os métodos de prática para manter o interesse</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Conecte con otras áreas: arte, música, educación física</span>
+                  <span>Conecte com outras áreas: arte, música, educação física</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Involucre a las familias con actividades para el hogar</span>
+                  <span>Envolva as famílias com atividades para casa</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-orange-500 mr-2 text-xl">✦</span>
-                  <span>Use tecnología como complemento, no reemplazo</span>
+                  <span>Use tecnologia como complemento, não substituição</span>
                 </li>
               </ul>
             </div>
@@ -655,36 +655,36 @@ export default function ParaProfessores() {
             <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl shadow-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
                 <span className="text-3xl mr-3">🎯</span>
-                Secuencia Sugerida
+                Sequência Sugerida
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">1</span>
-                  <span className="text-gray-700">Tablas del 1, 2, 10, 5</span>
+                  <span className="text-gray-700">Tabuadas do 1, 2, 10, 5</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">2</span>
-                  <span className="text-gray-700">Propiedad conmutativa (reduce la carga)</span>
+                  <span className="text-gray-700">Propriedade comutativa (reduz a carga)</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">3</span>
-                  <span className="text-gray-700">Tablas del 4 (duplicar el 2)</span>
+                  <span className="text-gray-700">Tabuadas do 4 (duplicar o 2)</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">4</span>
-                  <span className="text-gray-700">Tabla del 9 (patrones especiales)</span>
+                  <span className="text-gray-700">Tabuada do 9 (padrões especiais)</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">5</span>
-                  <span className="text-gray-700">Tablas del 3 y 6 (relación triple)</span>
+                  <span className="text-gray-700">Tabuadas do 3 e 6 (relação tripla)</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">6</span>
-                  <span className="text-gray-700">Tablas del 7, 8 (más desafiantes)</span>
+                  <span className="text-gray-700">Tabuadas do 7, 8 (mais desafiadoras)</span>
                 </div>
                 <div className="flex items-center bg-white rounded-lg p-3 shadow">
                   <span className="bg-teal-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">7</span>
-                  <span className="text-gray-700">Tablas del 11, 12 (patrones avanzados)</span>
+                  <span className="text-gray-700">Tabuadas do 11, 12 (padrões avançados)</span>
                 </div>
               </div>
             </div>
@@ -705,7 +705,7 @@ export default function ParaProfessores() {
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📘</div>
-              <h3 className="font-bold text-gray-900 mb-2">Tablas 1-10</h3>
+              <h3 className="font-bold text-gray-900 mb-2">Tabuadas 1-10</h3>
               <p className="text-sm text-gray-600">Recursos básicos</p>
             </Link>
 
@@ -714,8 +714,8 @@ export default function ParaProfessores() {
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📗</div>
-              <h3 className="font-bold text-gray-900 mb-2">Tablas 11-20</h3>
-              <p className="text-sm text-gray-600">Nivel intermedio</p>
+              <h3 className="font-bold text-gray-900 mb-2">Tabuadas 11-20</h3>
+              <p className="text-sm text-gray-600">Nível intermediário</p>
             </Link>
 
             <Link 
@@ -723,8 +723,8 @@ export default function ParaProfessores() {
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
-              <h3 className="font-bold text-gray-900 mb-2">Para Estudiantes</h3>
-              <p className="text-sm text-gray-600">Guía de aprendizaje</p>
+              <h3 className="font-bold text-gray-900 mb-2">Para Estudantes</h3>
+              <p className="text-sm text-gray-600">Guia de aprendizagem</p>
             </Link>
 
             <Link 
@@ -732,24 +732,24 @@ export default function ParaProfessores() {
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>
-              <h3 className="font-bold text-gray-900 mb-2">Para Padres</h3>
-              <p className="text-sm text-gray-600">Apoyo en casa</p>
+              <h3 className="font-bold text-gray-900 mb-2">Para Pais</h3>
+              <p className="text-sm text-gray-600">Apoio em casa</p>
             </Link>
           </div>
 
           <div className="mt-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl shadow-xl p-8 text-white text-center">
             <h3 className="text-2xl font-bold mb-4">
-              ¿Necesita Más Ayuda?
+              Precisa de Mais Ajuda?
             </h3>
             <p className="text-lg mb-6">
-              Explore nuestras tablas individuales para recursos específicos, 
-              ejercicios descargables y actividades interactivas.
+              Explore nossas tabuadas individuais para recursos específicos, 
+              exercícios para download e atividades interativas.
             </p>
             <Link 
               href="/pt/tabuada"
               className="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
             >
-              Ver Todas las Tablas
+              Ver Todas as Tabuadas
             </Link>
           </div>
         </div>

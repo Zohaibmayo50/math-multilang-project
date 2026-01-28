@@ -73,7 +73,7 @@ export default function ForStudantes() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">Aumento de Confianza</h3>
-                    <p className="text-slate-700">¡Tu confianza en matemáticas aumentará y tendrás más éxito!</p>
+                    <p className="text-slate-700">Sua confiança em matemática aumentará e você terá mais sucesso!</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -82,7 +82,7 @@ export default function ForStudantes() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">Poder Cerebral</h3>
-                    <p className="text-slate-700">¡Tu memoria se fortalecerá y aprenderás a pensar más rápido!</p>
+                    <p className="text-slate-700">Sua memória ficará mais forte e você aprenderá a pensar mais rápido!</p>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function ForStudantes() {
           {/* Learning Path */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Camino de Aprendizaje Paso a Paso 🚀
+              Caminho de Aprendizado Passo a Passo 🚀
             </h2>
             <div className="space-y-4">
               {/* Step 1 */}
@@ -102,22 +102,22 @@ export default function ForStudantes() {
                     1
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Comienza con las Tablas Fáciles (1, 2, 5, 10)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Comece com as Tabuadas Fáceis (1, 2, 5, 10)</h3>
                     <p className="text-slate-700 mb-3">
-                      ¡Comenzar con las tablas más fáciles te dará confianza! Son muy simples y las aprenderás rápido.
+                      Começar com as tabuadas mais fáceis vai te dar confiança! São muito simples e você as aprenderá rápido.
                     </p>
                     <div className="bg-green-50 p-4 rounded-lg">
-                      <p className="font-semibold text-green-900 mb-2">¿Por qué estas tablas son fáciles?</p>
+                      <p className="font-semibold text-green-900 mb-2">Por que essas tabuadas são fáceis?</p>
                       <ul className="space-y-1 text-slate-700 text-sm">
-                        <li>• <strong>Tabla del 1:</strong> ¡Cada número se queda igual! (1×5=5)</li>
-                        <li>• <strong>Tabla del 2:</strong> ¡Suma el número dos veces! (2×4 = 4+4 = 8)</li>
-                        <li>• <strong>Tabla del 5:</strong> ¡Siempre termina en 5 o 0!</li>
-                        <li>• <strong>Tabla del 10:</strong> ¡Agrega un cero al final! (10×3 = 30)</li>
+                        <li>• <strong>Tabuada do 1:</strong> Cada número fica igual! (1×5=5)</li>
+                        <li>• <strong>Tabuada do 2:</strong> Some o número duas vezes! (2×4 = 4+4 = 8)</li>
+                        <li>• <strong>Tabuada do 5:</strong> Sempre termina em 5 ou 0!</li>
+                        <li>• <strong>Tabuada do 10:</strong> Adicione um zero no final! (10×3 = 30)</li>
                       </ul>
                     </div>
                     <div className="mt-3">
                       <Link href="/pt/tabuada/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
-                        Ir a las Tablas 1-10 →
+                        Ir para Tabuadas 1-10 →
                       </Link>
                     </div>
                   </div>
@@ -131,16 +131,16 @@ export default function ForStudantes() {
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Avanza a Tablas de Nivel Medio (3, 4, 6)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Avance para Tabuadas de Nível Médio (3, 4, 6)</h3>
                     <p className="text-slate-700 mb-3">
-                      ¡Ahora estás listo para tablas un poco más desafiantes! No te preocupes, también hay trucos para estas.
+                      Agora você está pronto para tabuadas um pouco mais desafiadoras! Não se preocupe, também há truques para essas.
                     </p>
                     <div className="bg-blue-50 p-4 rounded-lg">
-                      <p className="font-semibold text-blue-900 mb-2">Trucos:</p>
+                      <p className="font-semibold text-blue-900 mb-2">Truques:</p>
                       <ul className="space-y-1 text-slate-700 text-sm">
-                        <li>• <strong>Tabla del 3:</strong> Suma el número 3 veces (3×4 = 4+4+4 = 12)</li>
-                        <li>• <strong>Tabla del 4:</strong> Multiplica por 2, luego duplica (4×5 = 2×5×2 = 20)</li>
-                        <li>• <strong>Tabla del 6:</strong> Usa la tabla del 5 y agrega 1 más (6×4 = 5×4 + 4 = 24)</li>
+                        <li>• <strong>Tabuada do 3:</strong> Some o número 3 vezes (3×4 = 4+4+4 = 12)</li>
+                        <li>• <strong>Tabuada do 4:</strong> Multiplique por 2, depois duplique (4×5 = 2×5×2 = 20)</li>
+                        <li>• <strong>Tabuada do 6:</strong> Use a tabuada do 5 e adicione 1 mais (6×4 = 5×4 + 4 = 24)</li>
                       </ul>
                     </div>
                   </div>
@@ -154,16 +154,16 @@ export default function ForStudantes() {
                     3
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Desafíate con las Tablas Difíciles (7, 8, 9)</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Desafie-se com as Tabuadas Difíceis (7, 8, 9)</h3>
                     <p className="text-slate-700 mb-3">
-                      Estas tablas son un poco más difíciles, ¡pero has aprendido mucho hasta ahora! Con técnicas especiales también dominarás estas.
+                      Essas tabuadas são um pouco mais difíceis, mas você já aprendeu muito até agora! Com técnicas especiais você também dominará essas.
                     </p>
                     <div className="bg-yellow-50 p-4 rounded-lg">
-                      <p className="font-semibold text-yellow-900 mb-2">Técnicas Especiales:</p>
+                      <p className="font-semibold text-yellow-900 mb-2">Técnicas Especiais:</p>
                       <ul className="space-y-2 text-slate-700 text-sm">
-                        <li>• <strong>Tabla del 9 - Truco de los Dedos:</strong> Abre tus manos, baja el dedo del número que vas a multiplicar. Dedos abiertos a la izquierda = decenas, dedos a la derecha = unidades!</li>
-                        <li>• <strong>Tabla del 8:</strong> Multiplica por 10, luego resta 2 veces (8×7 = 10×7 - 2×7 = 70-14 = 56)</li>
-                        <li>• <strong>Tabla del 7:</strong> Para las difíciles usa la tabla del 5 (7×6 = 5×6 + 2×6 = 30+12 = 42)</li>
+                        <li>• <strong>Tabuada do 9 - Truque dos Dedos:</strong> Abra suas mãos, abaixe o dedo do número que você vai multiplicar. Dedos abertos à esquerda = dezenas, dedos à direita = unidades!</li>
+                        <li>• <strong>Tabuada do 8:</strong> Multiplique por 10, depois subtraia 2 vezes (8×7 = 10×7 - 2×7 = 70-14 = 56)</li>
+                        <li>• <strong>Tabuada do 7:</strong> Para as difíceis use a tabuada do 5 (7×6 = 5×6 + 2×6 = 30+12 = 42)</li>
                       </ul>
                     </div>
                   </div>
@@ -269,19 +269,19 @@ export default function ForStudantes() {
           {/* Practice Tips */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Consejos para Practicar 🎯
+              Dicas para Praticar 🎯
             </h2>
             <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                   🎮
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Juega</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Jogue</h3>
                 <p className="text-slate-700 mb-3">
-                  Practica con los juegos divertidos de este sitio. ¡Aprender mientras juegas es mucho más divertido!
+                  Pratique com os jogos divertidos deste site. Aprender enquanto joga é muito mais divertido!
                 </p>
                 <Link href="/pt/tabuada" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
-                  Descubre los Juegos →
+                  Descubra os Jogos →
                 </Link>
               </div>
 
@@ -289,9 +289,9 @@ export default function ForStudantes() {
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                   📝
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Hazte Pruebas</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Faça Testes</h3>
                 <p className="text-slate-700 mb-3">
-                  Usa tarjetas o pide a alguien que te haga preguntas. ¡Hacerte pruebas acelera tu aprendizaje!
+                  Use cartões ou peça a alguém para fazer perguntas. Fazer testes acelera seu aprendizado!
                 </p>
               </div>
 
@@ -299,9 +299,9 @@ export default function ForStudantes() {
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                   🎵
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Canciones y Ritmos</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Canções e Ritmos</h3>
                 <p className="text-slate-700 mb-3">
-                  ¡Convierte las tablas de multiplicar en canciones! Es más fácil memorizar con música.
+                  Transforme a tabuada em canções! É mais fácil memorizar com música.
                 </p>
               </div>
 
@@ -309,9 +309,9 @@ export default function ForStudantes() {
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-2xl">
                   🏆
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Prémiate</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Recompense-se</h3>
                 <p className="text-slate-700 mb-3">
-                  ¡Cuando aprendas una tabla, prémiate! Colecciona calcomanías o haz algo pequeño.
+                  Quando aprender uma tabuada, recompense-se! Colecione adesivos ou faça algo pequeno.
                 </p>
               </div>
             </div>
@@ -320,33 +320,33 @@ export default function ForStudantes() {
           {/* Progress Tracking */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Rastrea tu Progreso 📊
+              Acompanhe seu Progresso 📊
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                ¡Ver cuánto has progresado te motiva! Aquí hay métodos de seguimiento:
+                Ver quanto você progrediu te motiva! Aqui estão métodos de acompanhamento:
               </p>
               <div className="space-y-4">
                 <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <h3 className="text-lg font-semibold text-green-900 mb-2">✅ Lista de Verificación de Tablas</h3>
+                  <h3 className="text-lg font-semibold text-green-900 mb-2">✅ Lista de Verificação de Tabuadas</h3>
                   <p className="text-slate-700 text-sm">
-                    Escribe en un papel las tablas del 1 al 10. ¡Cada vez que aprendas una, ponle una gran palomita! 
-                    ¡Cuando todas las palomitas estén completas, serás un héroe de las tablas de multiplicar! 🌟
+                    Escreva em um papel as tabuadas de 1 a 10. Cada vez que aprender uma, coloque um grande check! 
+                    Quando todos os checks estiverem completos, você será um herói da tabuada! 🌟
                   </p>
                 </div>
 
                 <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">📈 Gráfica de Progreso</h3>
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">📈 Gráfico de Progresso</h3>
                   <p className="text-slate-700 text-sm">
-                    Registra cuántas preguntas respondiste correctamente cada semana. Dibuja una gráfica y ve tu progreso. 
-                    ¡Cada semana vas mejorando!
+                    Registre quantas perguntas você respondeu corretamente a cada semana. Desenhe um gráfico e veja seu progresso. 
+                    Cada semana você está melhorando!
                   </p>
                 </div>
 
                 <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-lg font-semibold text-purple-900 mb-2">⭐ Sistema de Estrellas</h3>
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">⭐ Sistema de Estrelas</h3>
                   <p className="text-slate-700 text-sm">
-                    Por cada respuesta correcta, dibuja una estrella. ¡Cuando llegues a 100 estrellas, date un premio especial!
+                    Para cada resposta correta, desenhe uma estrela. Quando chegar a 100 estrelas, dê a si mesmo um prêmio especial!
                   </p>
                 </div>
               </div>
@@ -356,7 +356,7 @@ export default function ForStudantes() {
           {/* Motivation */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Secretos de Motivación y Éxito 💫
+              Segredos de Motivação e Sucesso 💫
             </h2>
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
@@ -364,22 +364,22 @@ export default function ForStudantes() {
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🌟</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Sé Paciente</h3>
-                      <p className="text-slate-700 text-sm">Todo toma tiempo. ¡Tú puedes hacerlo, solo practica!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Seja Paciente</h3>
+                      <p className="text-slate-700 text-sm">Tudo leva tempo. Você consegue, apenas pratique!</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">💪</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Los Errores son Normales</h3>
-                      <p className="text-slate-700 text-sm">No te sientas mal cuando te equivoques, ¡es parte del aprendizaje!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Erros são Normais</h3>
+                      <p className="text-slate-700 text-sm">Não se sinta mal quando errar, faz parte do aprendizado!</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🎯</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Establece Metas Pequeñas</h3>
-                      <p className="text-slate-700 text-sm">Una tabla al día es suficiente, ¡no te apresures!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Estabeleça Metas Pequenas</h3>
+                      <p className="text-slate-700 text-sm">Uma tabuada por dia é suficiente, não se apresse!</p>
                     </div>
                   </div>
                 </div>
@@ -387,22 +387,22 @@ export default function ForStudantes() {
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🤝</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Pide Ayuda</h3>
-                      <p className="text-slate-700 text-sm">Si hay algo que no entiendes, ¡pregunta a tu familia o maestro!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Peça Ajuda</h3>
+                      <p className="text-slate-700 text-sm">Se há algo que você não entende, pergunte à sua família ou professor!</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🎉</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Celebra tus Logros</h3>
-                      <p className="text-slate-700 text-sm">Cada pequeño logro es importante, ¡valórate a ti mismo!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Celebre suas Conquistas</h3>
+                      <p className="text-slate-700 text-sm">Cada pequena conquista é importante, valorize a si mesmo!</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">😊</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">¡Diviértete!</h3>
-                      <p className="text-slate-700 text-sm">Aprender debe ser divertido, ¡prueba los juegos!</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">Divirta-se!</h3>
+                      <p className="text-slate-700 text-sm">Aprender deve ser divertido, experimente os jogos!</p>
                     </div>
                   </div>
                 </div>
@@ -413,33 +413,33 @@ export default function ForStudantes() {
           {/* Quick Reference */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Guía Rápida de Trucos 🔑
+              Guia Rápido de Truques 🔑
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-bold text-blue-900 mb-2">Multiplicar por 0</h4>
-                  <p className="text-sm text-slate-700">¡Todo es cero! 0×1000=0</p>
+                  <p className="text-sm text-slate-700">Tudo é zero! 0×1000=0</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h4 className="font-bold text-green-900 mb-2">Multiplicar por 1</h4>
-                  <p className="text-sm text-slate-700">¡El número se queda igual! 1×7=7</p>
+                  <p className="text-sm text-slate-700">O número fica igual! 1×7=7</p>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <h4 className="font-bold text-purple-900 mb-2">Multiplicar por 2</h4>
-                  <p className="text-sm text-slate-700">¡Duplica el número! 2×6=12</p>
+                  <p className="text-sm text-slate-700">Duplique o número! 2×6=12</p>
                 </div>
                 <div className="bg-pink-50 p-4 rounded-lg">
                   <h4 className="font-bold text-pink-900 mb-2">Multiplicar por 5</h4>
-                  <p className="text-sm text-slate-700">¡El resultado termina en 0 o 5!</p>
+                  <p className="text-sm text-slate-700">O resultado termina em 0 ou 5!</p>
                 </div>
                 <div className="bg-yellow-50 p-4 rounded-lg">
                   <h4 className="font-bold text-yellow-900 mb-2">Multiplicar por 9</h4>
-                  <p className="text-sm text-slate-700">¡Los dígitos suman 9! ¡Truco de dedos!</p>
+                  <p className="text-sm text-slate-700">Os dígitos somam 9! Truque dos dedos!</p>
                 </div>
                 <div className="bg-indigo-50 p-4 rounded-lg">
                   <h4 className="font-bold text-indigo-900 mb-2">Multiplicar por 10</h4>
-                  <p className="text-sm text-slate-700">¡Agrega un 0! 10×8=80</p>
+                  <p className="text-sm text-slate-700">Adicione um 0! 10×8=80</p>
                 </div>
               </div>
             </div>
@@ -448,11 +448,11 @@ export default function ForStudantes() {
           {/* Call to Action */}
           <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-              ¡Es Hora de Empezar! 🚀
+              É Hora de Começar! 🚀
             </h2>
             <p className="text-base sm:text-lg text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              ¡Ahora estás listo! Recuerda, cada gran héroe de las matemáticas comenzó con pequeños pasos. 
-              ¡Tú también puedes hacerlo! 💪✨
+              Agora você está pronto! Lembre-se, cada grande herói da matemática começou com pequenos passos. 
+              Você também consegue! 💪✨
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -460,7 +460,7 @@ export default function ForStudantes() {
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
-                Empezar Ahora
+                Começar Agora
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -469,12 +469,12 @@ export default function ForStudantes() {
                 href="/pt/tabuada"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
-                Volver a Inicio
+                Voltar ao Início
               </Link>
             </div>
             <div className="mt-8 pt-8 border-t border-blue-400">
               <p className="text-blue-100 text-sm">
-                💡 <strong>Consejo:</strong> ¡Estudiar 10-15 minutos al día es mucho más efectivo que estudiar 1 hora aburrido!
+                💡 <strong>Dica:</strong> Estudar 10-15 minutos por dia é muito mais eficaz do que estudar 1 hora entediante!
               </p>
             </div>
           </section>
