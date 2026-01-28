@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
-  title: 'Multiplication Tables | Çarpım Tablosu | Tablas de Multiplicar | Einmaleins | Násobilka | Таблиця множення | Kertotaulut | Table de Multiplication | Multiplikationstabeller | Tabuada',
-  description: 'Learn multiplication tables in your language. Choose Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, or Portuguese.',
+  title: 'Multiplication Tables - Learn in Your Language',
+  description: 'Learn multiplication tables in your language. Interactive lessons and practice for Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, and Portuguese.',
   alternates: {
     canonical: '/',
   },
