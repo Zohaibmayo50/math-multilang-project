@@ -1,204 +1,120 @@
-# Comprehensive Portuguese Translation Fix Script
-# Replaces ALL remaining Swedish text in Portuguese components
+# Comprehensive Portuguese translation script - Fix ALL Spanish text
 
 $files = @(
-    "app\components\pt\NumberPage.tsx",
-    "app\components\pt\RangePage.tsx",
-    "app\components\pt\NumberGames.tsx"
+    ".\app\para-estudantes\page.tsx",
+    ".\app\para-pais\page.tsx",
+    ".\app\para-professores\page.tsx"
 )
 
-$translations = @{
-    # Common Swedish phrases
-    "Att multiplicera med" = "Multiplicar por"
-    "Att lära sig" = "Aprender"
-    "Att märka" = "Perceber"
-    "Att skapa" = "Criar"
-    "Att spela" = "Jogar"
-    "När du multiplicerar" = "Quando você multiplica"
-    "vilket tal som helst" = "qualquer número"
-    "är resultatet alltid" = "o resultado é sempre"
-    "Detta kallas" = "Isso é chamado de"
-    "Tänk på det så här" = "Pense assim"
-    "Hur många grupper" = "Quantos grupos"
-    "betyder att ta" = "significa pegar"
-    "Du kan tänka" = "Você pode pensar"
-    "att lägga till" = "adicionar"
-    "samma tal" = "o mesmo número"
-    "Denna tabell" = "Esta tabuada"
-    "är viktig för" = "é importante para"
-    "att förstå" = "entender"
-    "förekommer ofta" = "ocorre frequentemente"
-    "i vardagen" = "no dia a dia"
-    "i naturen" = "na natureza"
-    "är vanligtvis" = "é geralmente"
-    "en av de" = "uma das"
-    "svåraste tabellerna" = "tabuadas mais difíceis"
-    "enklaste tabellerna" = "tabuadas mais fáceis"
-    "eftersom" = "porque"
-    "är ett primtal" = "é um número primo"
-    "inte lätt" = "não é fácil"
-    "kan härledas" = "pode ser derivado"
-    "från andra tabeller" = "de outras tabuadas"
-    "Men alla" = "Mas todos"
-    "multiplar av" = "múltiplos de"
-    "har vackra mönster" = "têm belos padrões"
-    "kan läras genom" = "podem ser aprendidos através de"
-    "är ett viktigt tal för" = "é um número importante para"
-    "veckodagar" = "dias da semana"
-    "kontinenter" = "continentes"
-    "många kulturella" = "muitas culturais"
-    "referenser" = "referências"
-    "lägger du bara till" = "você apenas adiciona"
-    "en nolla i slutet" = "um zero no final"
-    "utgör grunden för" = "forma a base para"
-    "vårt decimalsystem" = "nosso sistema decimal"
-    "lär eleverna" = "ensina os alunos"
-    "begreppet platsvärde" = "o conceito de valor posicional"
-    "hur man arbetar med" = "como trabalhar com"
-    "stora tal" = "números grandes"
-    "är jämförelsepunkten" = "é o ponto de referência"
-    "är grunden för alla" = "é a base de todas"
-    "multiplikationsoperationer" = "operações de multiplicação"
-    "De lär" = "Eles ensinam"
-    "har en identitet" = "têm uma identidade"
-    "när de multipliceras" = "quando multiplicados"
-    "förblir de oförändrade" = "permanecem inalterados"
-    "Detta koncept" = "Este conceito"
-    "för att förstå senare" = "para entender mais tarde"
-    "algebraiska egenskaper" = "propriedades algébricas"
-    "Även om det verkar" = "Embora pareça"
-    "bygger inlärning" = "aprender constrói"
-    "självförtroende" = "autoconfiança"
-    "etablerar mönstret" = "estabelece o padrão"
-    "är ordnad och" = "é ordenada e"
-    "förutsägbar" = "previsível"
-    "den första riktiga" = "a primeira verdadeira"
-    "det finns en god anledning" = "há uma boa razão"
-    "Dubblering" = "Dobrar"
-    "är ett naturligt koncept" = "é um conceito natural"
-    "som barn möter" = "que as crianças encontram"
-    "dagligen" = "diariamente"
-    "gör mental aritmetik" = "torna a aritmética mental"
-    "mycket snabbare" = "muito mais rápida"
-    "förbereder eleverna för" = "prepara os alunos para"
-    "jämna tal" = "números pares"
-    "bråk" = "frações"
-    "halvor" = "metades"
-    "grundläggande division" = "divisão básica"
-    "Många elever tycker" = "Muitos alunos acham"
-    "den enklaste tabellen" = "a tabuada mais fácil"
-    "vilket bygger" = "o que constrói"
-    "för mer komplexa" = "para tabuadas mais complexas"
-    "fyller gapet mellan" = "preenche a lacuna entre"
-    "enkla och komplexa" = "simples e complexas"
-    "Den kräver att" = "Ela exige que"
-    "går bortom enkel" = "vão além da simples"
-    "känner igen nya" = "reconheçam novos"
-    "förekommer ständigt" = "ocorre constantemente"
-    "verkliga sammanhang" = "contextos reais"
-    "att räkna i grupper" = "contar em grupos"
-    "triangelformer" = "formas triangulares"
-    "arbeta med tid" = "trabalhar com tempo"
-    "tre tidsperioder per dag" = "três períodos por dia"
-    "Elever som lär sig" = "Alunos que aprendem"
-    "visar behärskning av" = "demonstram domínio de"
-    "abstrakt räkning" = "contagem abstrata"
-    "hjälper elever att utveckla" = "ajuda os alunos a desenvolver"
-    "flyt med" = "fluência com"
-    "detta viktiga tal" = "este número importante"
-    "Det förekommer ofta i" = "Ocorre frequentemente em"
-    "matematik och vardagsliv" = "matemática e vida cotidiana"
-    "är avgörande för" = "é crucial para"
-    "att bygga en solid" = "construir uma sólida"
-    "räknefärdighet" = "habilidade de cálculo"
+# Spanish to Portuguese translations (order matters - do specific phrases before general words)
+$translations = @(
+    # Spanish punctuation
+    @{old='¡'; new=''},
+    @{old='¿'; new=''},
     
-    # Specific phrases
-    "Grunden för Alla Tabeller" = "Base para Todas as Tabuadas"
-    "Varje Tabuada börjar med" = "Cada tabuada começa com"
-    "så detta mönster" = "então este padrão"
-    "förekommer i alla tabeller" = "ocorre em todas as tabuadas"
-    "Räkna med två" = "Conte de dois em dois"
-    "medan du går" = "enquanto caminha"
-    "eller går upp för trappor" = "ou sobe escadas"
-    "Använd flashkort för" = "Use cartões de memória para"
-    "slumpmässig testning" = "teste aleatório"
-    "Öva 5-10 minuter dagligen" = "Pratique 5-10 minutos diariamente"
-    "istället för långt studerande" = "em vez de longas sessões de estudo"
-    "på en gång" = "de uma vez"
-    "Övningar" = "Exercícios"
-    "lär dig praktiska sätt" = "aprenda maneiras práticas"
-    "att bemästra den" = "de dominar"
-    "Börja Öva" = "Começar a Praticar"
-    "Ladda ner Övningar" = "Baixar Exercícios"
-    "Detta lär dig" = "Isso ensina"
-    "grundläggande operationer" = "operações básicas"
-    "som hjälper dig mycket" = "que ajudam muito"
-    "och avancerade matematikämnen" = "e tópicos avançados de matemática"
-    "Varför Är Det Viktigt Att Lära Sig" = "Por Que É Importante Aprender"
-    "Tabuadaen" = "a Tabuada do"
-    "kräver konsekvent övning" = "requer prática consistente"
-    "med rätta strategier" = "com as estratégias corretas"
-    "Här är beprövade metoder" = "Aqui estão métodos comprovados"
-    "för att specifikt bemästra" = "para dominar especificamente"
-    "Vanliga Misstag När Man Lär Sig" = "Erros Comuns ao Aprender"
-    "gör liknande misstag" = "cometem erros semelhantes"
-    "när de lär sig" = "ao aprender"
-    "Att vara medveten om" = "Estar ciente de"
-    "dessa vanliga misstag" = "esses erros comuns"
-    "Utforska alla Tabuadaer" = "Explore todas as Tabuadas"
-    "i detta intervall med" = "neste intervalo com"
-    "övningsverktyg och spel" = "ferramentas de prática e jogos"
-    "för tal i este intervalo" = "para números neste intervalo"
-    "visar specifika mönster" = "mostram padrões específicos"
-    "detta mönster är användbart" = "este padrão é útil"
-    "för verifiering" = "para verificação"
-    "Skapa berättelser" = "Criar histórias"
-    "Att skapa en kort historia" = "Criar uma história curta"
-    "för varje tal" = "para cada número"
-    "Övningsuppgifter" = "Tarefas de Prática"
-    "Regelbunden övning" = "Prática regular"
-    "säkerställer att" = "garante que"
-    "den inlärda kunskapen" = "o conhecimento aprendido"
-    "blir bestående" = "se torne permanente"
-    "Att spela multiplikationsspel" = "Jogar jogos de multiplicação"
-    "gör att man lär sig" = "faz com que se aprenda"
-    "genom att ha kul" = "se divertindo"
-    "Var tålmodig och regelbunden" = "Seja paciente e consistente"
-    "för att lära dig alla" = "para aprender todas"
-    "Varje intervall bygger på" = "Cada intervalo se baseia"
-    "det föregående" = "no anterior"
+    # Long specific phrases first
+    @{old='Aprender a tabuada de Multiplicar es Muy Fácil'; new='Aprender Tabuada é Muito Fácil'},
+    @{old='Avanza a tu propio ritmo, aprenda enquanto se diverte y conviértete en un héroe de las matemáticas'; new='Avance no seu próprio ritmo, aprenda enquanto se diverte e torne-se um herói da matemática'},
+    @{old='Esta guía te ayudará a aprender a tabuada de multiplicar passo a passo'; new='Este guia vai ajudá-lo a aprender tabuada passo a passo'},
+    @{old='Tú también puedes hacerlo'; new='Você também pode fazer isso'},
+    @{old='Por Qué Debo Aprender a tabuada de Multiplicar'; new='Por Que Devo Aprender Tabuada'},
+    @{old='a tabuada de multiplicar son el súper poder del mundo matemático'; new='A tabuada é o super poder do mundo matemático'},
+    @{old='Esto es lo que te darán'; new='Isto é o que ela lhe dará'},
+    @{old='Podrás resolver problemas matemáticos mucho más rápido'; new='Você poderá resolver problemas matemáticos muito mais rápido'},
+    @{old='Te será útil ao fazer compras, em jogos, en todas partes'; new='Será útil ao fazer compras, em jogos, em todos os lugares'},
+    @{old='Tu confianza en matemáticas aumentará y tendrás más éxito'; new='Sua confiança em matemática aumentará e você terá mais sucesso'},
+    @{old='Tu memoria se fortalecerá y aprenderás a pensar más rápido'; new='Sua memória ficará mais forte e você aprenderá a pensar mais rápido'},
+    @{old='Camino de Aprendizaje passo a passo'; new='Caminho de Aprendizagem Passo a Passo'},
     
-    # Swedish words to Portuguese
-    "Tabuadaerna" = "As Tabuadas"
-    "tabellerna" = "tabuadas"
-    "tabeller" = "tabuadas"
-    "tabell" = "tabuada"
-}
+    # Parents page
+    @{old='Guía de tabuada Para Pais'; new='Guia de Tabuada Para Pais'},
+    @{old='Cómo apoyar a tu hijo en el aprendizaje de a tabuada de multiplicar'; new='Como apoiar seu filho no aprendizado de tabuada'},
+    @{old='Cómo apoyar a tu hijo en el aprendizaje de las tablas de multiplicar'; new='Como apoiar seu filho no aprendizado de tabuada'},
+    @{old='Esta guía contiene estrategias efectivas y consejos prácticos'; new='Este guia contém estratégias eficazes e conselhos práticos'},
+    @{old='Tu guía para el éxito de tu hijo'; new='Seu guia para o sucesso do seu filho'},
+    @{old='Por Qué es Importante'; new='Por Que é Importante'},
+    @{old='a tabuada de multiplicar son uno de los pasos más importantes en el viaje matemático de tu hijo'; new='A tabuada é um dos passos mais importantes na jornada matemática do seu filho'},
+    @{old='No solo para matemáticas, sino que también tienen una importancia crítica para el desarrollo de la resolución de problemas, el pensamiento lógico y la confianza en sí mismo'; new='Não apenas para matemática, mas também tem importância crítica para o desenvolvimento da resolução de problemas, pensamento lógico e autoconfiança'},
+    @{old='División, fracciones, álgebra - todos dependen de a tabuada de multiplicar'; new='Divisão, frações, álgebra - todos dependem da tabuada'},
+    @{old='El éxito en a tabuada de multiplicar aumenta la confianza general en la escuela'; new='O sucesso na tabuada aumenta a confiança geral na escola'},
+    @{old='Cálculos rápidos son útiles ao fazer compras, cocinar y en la vida diaria'; new='Cálculos rápidos são úteis ao fazer compras, cozinhar e no dia a dia'},
+    @{old='Estrategias de Apoyo en Casa'; new='Estratégias de Apoio em Casa'},
+    @{old='Hazlo Concreto'; new='Torne Concreto'},
+    @{old='Enseña a tabuada de multiplicar con situaciones de la vida real en lugar de números abstractos'; new='Ensine tabuada com situações da vida real em vez de números abstratos'},
+    @{old='Si tienes 3 cajas y 4 manzanas en cada caja'; new='Se você tem 3 caixas e 4 maçãs em cada caixa'},
+    @{old='cuántas manzanas en total'; new='quantas maçãs no total'},
+    @{old='Una caja de huevos tiene 6 huevos'; new='Uma caixa de ovos tem 6 ovos'},
+    @{old='Cuántos huevos en 4 cajas'; new='Quantos ovos em 4 caixas'},
+    @{old='Usa objetos físicos (botones, dulces, juguetes) para visualizar'; new='Use objetos físicos (botões, doces, brinquedos) para visualizar'},
+    
+    # Teachers page
+    @{old='Estrategias de Enseñanza Efectivas'; new='Estratégias de Ensino Eficazes'},
+    @{old='Visualización'; new='Visualização'},
+    @{old='Use representaciones visuales para ayudar a los estudiantes a comprender la multiplicación como grupos repetidos'; new='Use representações visuais para ajudar os alunos a compreender a multiplicação como grupos repetidos'},
+    @{old='Arreglos rectangulares'; new='Arranjos retangulares'},
+    @{old='filas de'; new='linhas de'},
+    @{old='Modelos de área usando papel cuadriculado'; new='Modelos de área usando papel quadriculado'},
+    @{old='Diagramas de saltos en la recta numérica'; new='Diagramas de saltos na reta numérica'},
+    @{old='Manipulativos concretos (bloques, fichas, cubos)'; new='Manipulativos concretos (blocos, fichas, cubos)'},
+    @{old='Descomposición'; new='Decomposição'},
+    @{old='Enseñe a los estudiantes a descomponer multiplicaciones difíciles en operaciones más simples'; new='Ensine os alunos a decompor multiplicações difíceis em operações mais simples'},
+    @{old='Usar duplicación'; new='Usar duplicação'},
+    @{old='Por qué es problemático'; new='Por que é problemático'},
+    @{old='Los estudiantes se confunden'; new='Os alunos ficam confusos'},
+    @{old='Los estudiantes pueden'; new='Os alunos podem'},
+    @{old='Los estudiantes aplican'; new='Os alunos aplicam'},
+    @{old='Cómo corregirlo'; new='Como corrigir'},
+    @{old='patrones mecánicamente sin comprender el "por qué" matemático'; new='padrões mecanicamente sem compreender o "porquê" matemático'},
+    @{old='siempre explicar por qué funcionan'; new='sempre explicar por que funcionam'},
+    @{old='Limita el pensamiento'; new='Limita o pensamento'},
+    @{old='Necesita Más Ayuda'; new='Precisa de Mais Ajuda'},
+    
+    # General translations
+    @{old='Guía de Tablas de Multiplicar para Profesores'; new='Guia de Tabuada para Professores'},
+    @{old='Estrategias de Enseñanza'; new='Estratégias de Ensino'},
+    @{old='Recursos completos para profesores sobre cómo enseñar tablas de multiplicar de manera efectiva'; new='Recursos completos para professores sobre como ensinar tabuada de forma eficaz'},
+    @{old='Incluye estrategias pedagógicas, actividades de aula, instrucción diferenciada y métodos de evaluación'; new='Inclui estratégias pedagógicas, atividades de sala de aula, instrução diferenciada e métodos de avaliação'},
+    @{old='las tablas de multiplicar'; new='a tabuada'},
+    @{old='Tablas de Multiplicar'; new='Tabuada'},
+    @{old='tablas de multiplicar'; new='tabuada'},
+    @{old='tabla del'; new='tabuada do'},
+    @{old='Guía'; new='Guia'},
+    @{old='guía'; new='guia'},
+    @{old='Cómo'; new='Como'},
+    @{old='cómo'; new='como'},
+    @{old='Profesores'; new='Professores'},
+    @{old='profesores'; new='professores'},
+    @{old='enseñar'; new='ensinar'},
+    @{old='hijo'; new='filho'},
+    @{old='estudiantes'; new='alunos'},
+    @{old='ej:'; new='ex:'},
+    @{old='Mostrar'; new='Mostrar'},
+    @{old='Discutir'; new='Discutir'},
+    @{old='Siempre'; new='Sempre'},
+    @{old='Al enseñar'; new='Ao ensinar'},
+    @{old='Celebrar'; new='Celebrar'}
+)
 
 foreach ($file in $files) {
-    $filePath = Join-Path $PSScriptRoot $file
-    if (Test-Path $filePath) {
-        Write-Host "Processing: $file" -ForegroundColor Cyan
-        $content = Get-Content $filePath -Raw -Encoding UTF8
+    Write-Host "Processing $file..." -ForegroundColor Cyan
+    
+    if (Test-Path $file) {
+        $content = Get-Content $file -Raw -Encoding UTF8
         
-        $changeCount = 0
-        foreach ($swedish in $translations.Keys) {
-            $portuguese = $translations[$swedish]
-            if ($content -match [regex]::Escape($swedish)) {
-                $content = $content -replace [regex]::Escape($swedish), $portuguese
-                $changeCount++
-            }
+        # Fix corrupted Header imports
+        $content = $content -replace '<Header />`n\s*', ''
+        
+        # Apply all translations in order
+        foreach ($trans in $translations) {
+            $content = $content -replace [regex]::Escape($trans.old), $trans.new
         }
         
-        if ($changeCount -gt 0) {
-            $content | Set-Content $filePath -Encoding UTF8 -NoNewline
-            Write-Host "  ✓ Made $changeCount translations" -ForegroundColor Green
-        } else {
-            Write-Host "  - No Swedish text found" -ForegroundColor Yellow
-        }
+        # Save with UTF8 encoding
+        $content | Set-Content $file -Encoding UTF8 -NoNewline
+        Write-Host "✓ Fixed $file" -ForegroundColor Green
     } else {
-        Write-Host "File not found: $file" -ForegroundColor Red
+        Write-Host "✗ File not found: $file" -ForegroundColor Red
     }
 }
 
-Write-Host "`n✅ Translation fix complete!" -ForegroundColor Green
+Write-Host "`nTranslation complete! Running manual checks..." -ForegroundColor Green
