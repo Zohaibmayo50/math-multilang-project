@@ -4,7 +4,7 @@ import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
   title: 'Multiplication Tables - Learn in Your Language',
-  description: 'Learn multiplication tables in your language. Interactive lessons and practice for English, Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, and Portuguese.',
+  description: 'Learn multiplication tables in your language. Interactive lessons and practice for English, Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, Portuguese, and Polish.',
   alternates: {
     canonical: 'https://math-multilang-project.vercel.app',
   },
@@ -85,6 +85,13 @@ export default function LanguageSelector() {
       flag: '🇧🇷',
       topic: 'Tabuada',
       description: 'Aprenda a tabuada de 1 a 100',
+    },
+    {
+      code: 'pl',
+      name: languageNames.pl,
+      flag: '🇵🇱',
+      topic: 'Tabliczki Mnożenia',
+      description: 'Ucz się tabliczki mnożenia od 1 do 100',
     },
   ]
 

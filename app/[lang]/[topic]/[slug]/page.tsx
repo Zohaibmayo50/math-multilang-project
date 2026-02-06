@@ -20,6 +20,8 @@ import RangePagePt from '@/app/components/pt/RangePage'
 import NumberPagePt from '@/app/components/pt/NumberPage'
 import RangePageEn from '@/app/components/en/RangePage'
 import NumberPageEn from '@/app/components/en/NumberPage'
+import RangePagePl from '@/app/components/pl/RangePage'
+import NumberPagePl from '@/app/components/pl/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -32,6 +34,7 @@ import { numberTitlesFr, numberDescriptionsFr, numberSpecialPropertiesFr } from 
 import { numberTitlesSv, numberDescriptionsSv, numberSpecialPropertiesSv } from '@/lib/number-metadata-sv'
 import { numberTitlesPt, numberDescriptionsPt, numberSpecialPropertiesPt } from '@/lib/number-metadata-pt'
 import { numberTitles as numberTitlesEn, numberDescriptions as numberDescriptionsEn, numberSpecialProperties as numberSpecialPropertiesEn } from '@/lib/number-metadata-en'
+import { numberTitlesPl, numberDescriptionsPl, numberSpecialPropertiesPl } from '@/lib/number-metadata-pl'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -82,6 +85,11 @@ import ForParentsPt from '@/app/para-pais/page'
 import ForStudentsEn from '@/app/for-students/page'
 import ForTeachersEn from '@/app/for-teachers/page'
 import ForParentsEn from '@/app/for-parents/page'
+
+// Import Polish guide page components
+import DlaUczniwPl from '@/app/dla-uczniow/page'
+import DlaNauczycieliPl from '@/app/dla-nauczycieli/page'
+import DlaRodzicwPl from '@/app/dla-rodzicow/page'
 
 interface PageProps {
   params: {
@@ -268,6 +276,86 @@ const rangeMetadataEn: Record<string, {
     title: 'Times Tables 91-100 | Highest Level',
     description: 'Learn times tables from 91 to 100. Complete education for highest level skills.',
     keywords: 'times tables 91-100, multiplication tables',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
+// Polish Range Metadata
+const rangeMetadataPl: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Tabliczki 1-10 | Poziom Początkujący',
+    description: 'Naucz się tabliczki mnożenia dla 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Łatwe wyjaśnienia dla początkujących, przykłady wizualne i ćwiczenia praktyczne.',
+    keywords: 'tabliczka mnożenia 1-10, tabliczki mnożenia, mnożenie, nauka matematyki',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Tabliczki 11-20 | Liczby Dwucyfrowe',
+    description: 'Naucz się tabliczek mnożenia 11-20. Opanuj operacje mnożenia z liczbami dwucyfrowymi.',
+    keywords: 'tabliczka mnożenia 11-20, tabliczki mnożenia, mnożenie, nauka matematyki',
+    level: 'intermediate',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Tabliczki 21-30 | Poziom Średniozaawansowany',
+    description: 'Naucz się tabliczek mnożenia od 21 do 30. Szczegółowe wyjaśnienia i ćwiczenia praktyczne.',
+    keywords: 'tabliczka mnożenia 21-30, tabliczki mnożenia',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Tabliczki 31-40 | Zaawansowane Mnożenie',
+    description: 'Naucz się tabliczek mnożenia od 31 do 40. Kompletne materiały edukacyjne dla zaawansowanych umiejętności.',
+    keywords: 'tabliczka mnożenia 31-40, tabliczki mnożenia',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Tabliczki 41-50 | Poziom Średnio-Zaawansowany',
+    description: 'Naucz się tabliczek mnożenia od 41 do 50. Interaktywne ćwiczenia do opanowania mnożenia.',
+    keywords: 'tabliczka mnożenia 41-50, tabliczki mnożenia',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Tabliczki 51-60 | Poziom Zaawansowany',
+    description: 'Naucz się tabliczek mnożenia od 51 do 60. Szczegółowe materiały do nauki dla zaawansowanych uczniów.',
+    keywords: 'tabliczka mnożenia 51-60, tabliczki mnożenia',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Tabliczki 61-70 | Duże Liczby',
+    description: 'Naucz się tabliczek mnożenia od 61 do 70. Kompletne zasoby edukacyjne.',
+    keywords: 'tabliczka mnożenia 61-70, tabliczki mnożenia',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Tabliczki 71-80 | Zaawansowany Poziom',
+    description: 'Naucz się tabliczek mnożenia od 71 do 80. Rozwijaj zaawansowane umiejętności matematyczne.',
+    keywords: 'tabliczka mnożenia 71-80, tabliczki mnożenia',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Tabliczki 81-90 | Poziom Ekspercki',
+    description: 'Naucz się tabliczek mnożenia od 81 do 90. Wymagające operacje mnożenia.',
+    keywords: 'tabliczka mnożenia 81-90, tabliczki mnożenia',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Tabliczki 91-100 | Najwyższy Poziom',
+    description: 'Naucz się tabliczek mnożenia od 91 do 100. Kompletna edukacja dla najwyższego poziomu umiejętności.',
+    keywords: 'tabliczka mnożenia 91-100, tabliczki mnożenia',
     level: 'advanced',
     color: 'from-emerald-50 to-teal-50',
   },
@@ -936,6 +1024,29 @@ const guideMetadataEn: Record<string, {
   },
 }
 
+// Polish Guide Metadata
+const guideMetadataPl: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'dla-uczniow': {
+    title: 'Przewodnik po Tabliczce Mnożenia dla Uczniów | Nauka Krok po Kroku',
+    description: 'Przewodnik krok po kroku do łatwej nauki tabliczki mnożenia. Ucz się we własnym tempie dzięki materiałom wizualnym, praktycznym ćwiczeniom i zabawnym grom!',
+    keywords: 'nauka tabliczki mnożenia, matematyka dla uczniów, przewodnik tabliczki, mnożenie krok po kroku',
+  },
+  'dla-nauczycieli': {
+    title: 'Przewodnik po Tabliczce Mnożenia dla Nauczycieli | Strategie Nauczania',
+    description: 'Kompleksowe zasoby dla nauczycieli dotyczące efektywnego nauczania tabliczki mnożenia. Zawiera strategie pedagogiczne, zajęcia klasowe, nauczanie zróżnicowane i metody oceny.',
+    keywords: 'nauczanie tabliczki mnożenia, strategie pedagogiczne, zajęcia matematyczne, nauczanie zróżnicowane, zasoby dla nauczycieli',
+  },
+  'dla-rodzicow': {
+    title: 'Przewodnik po Tabliczce Mnożenia dla Rodziców | Wsparcie Nauki w Domu',
+    description: 'Jak pomóc dziecku nauczyć się tabliczki mnożenia w domu. Praktyczne wskazówki, gry edukacyjne i strategie motywacyjne.',
+    keywords: 'pomoc dzieciom z tabliczką mnożenia, matematyka w domu, edukacja rodziców, zajęcia edukacyjne',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -1151,6 +1262,9 @@ const guideComponents: Record<string, any> = {
   'para-estudantes': ForStudentsPt,
   'para-professores': ForTeachersPt,
   'para-pais': ForParentsPt,
+  'dla-uczniow': DlaUczniwPl,
+  'dla-nauczycieli': DlaNauczycieliPl,
+  'dla-rodzicow': DlaRodzicwPl,
 }
 
 // Determine slug type
@@ -1165,6 +1279,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (locale === 'fr' && slug in guideMetadataFr) return 'guide'
   if (locale === 'sv' && slug in guideMetadataSv) return 'guide'
   if (locale === 'pt' && slug in guideMetadataPt) return 'guide'
+  if (locale === 'pl' && slug in guideMetadataPl) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -1175,6 +1290,7 @@ export async function generateStaticParams() {
   const params: Array<{ lang: string; topic: string; slug: string }> = []
   
   const langs = [
+    { lang: 'pl', topic: 'tabliczki-mnozenia' },
     { lang: 'en', topic: 'multiplication-tables' },
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
@@ -1213,7 +1329,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['pl', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -1226,6 +1342,71 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const hreflang = generateHreflangMetadata(slug)
+
+  // Polish metadata
+  if (locale === 'pl') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataPl[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesPl[num]
+      const description = numberDescriptionsPl[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataPl[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
 
   // English metadata (production)
   if (locale === 'en') {
@@ -1868,7 +2049,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['pl', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -3499,6 +3680,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPagePt number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Polish version
+  if (locale === 'pl') {
+    const baseUrl = getAbsoluteUrl(locale)
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataPl[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#webpage`,
+            "url": `${baseUrl}/pl/tabliczki-mnozenia/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#learningresource`
+            },
+            "inLanguage": "pl-PL"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#learningresource`,
+            "name": `Zasób Edukacyjny Tabliczki Mnożenia ${slug}`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Początkujący' : meta.level === 'intermediate' ? 'Średniozaawansowany' : 'Zaawansowany',
+            "learningResourceType": ["Zasób Interaktywny", "Materiały do Ćwiczeń", "Gra Edukacyjna"],
+            "teaches": `Umiejętności rozumienia i stosowania tabliczek mnożenia ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "pl-PL",
+            "educationalUse": ["ćwiczenia", "samodzielna nauka", "praca domowa"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Tabliczka Mnożenia ${start + i}`,
+              "url": `${baseUrl}/pl/tabliczki-mnozenia/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePagePl
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/pl/tabliczki-mnozenia/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/pl/tabliczki-mnozenia/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesPl[num] || `Mnożenie przez ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#webpage`,
+            "url": `${baseUrl}/pl/tabliczki-mnozenia/${num}`,
+            "name": `Tabliczka Mnożenia ${num} - ${specialProp}`,
+            "description": numberDescriptionsPl[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#breadcrumb`
+            },
+            "inLanguage": "pl-PL"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Strona Główna"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/pl/tabliczki-mnozenia/${range}`,
+                  "name": `Tabliczka Mnożenia ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}`,
+                  "name": `Tabliczka Mnożenia ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#learningresource`,
+            "name": `Zasób Edukacyjny Tabliczka Mnożenia ${num}`,
+            "description": numberDescriptionsPl[num],
+            "educationalLevel": rangeStart <= 10 ? "Początkujący" : rangeStart <= 50 ? "Średniozaawansowany" : "Zaawansowany",
+            "learningResourceType": ["Zasób Interaktywny", "Materiały do Ćwiczeń", "Gra Edukacyjna"],
+            "teaches": `Tabliczka mnożenia ${num}, ${specialProp.toLowerCase()}, podstawowe pojęcia mnożenia`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "pl-PL",
+            "educationalUse": ["ćwiczenia", "samodzielna nauka"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPagePl number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

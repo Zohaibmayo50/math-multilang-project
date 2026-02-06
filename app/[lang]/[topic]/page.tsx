@@ -103,6 +103,17 @@ import GamesSectionEn from '@/app/components/en/GamesSection'
 import PrintableExercisesEn from '@/app/components/en/PrintableExercises'
 import AudienceSectionEn from '@/app/components/en/AudienceSection'
 import FooterEn from '@/app/components/en/Footer'
+import HeaderPl from '@/app/components/pl/Header'
+import HeroPl from '@/app/components/pl/Hero'
+import DefinitionSectionPl from '@/app/components/pl/DefinitionSection'
+import WhyItMattersPl from '@/app/components/pl/WhyItMatters'
+import HowToLearnPl from '@/app/components/pl/HowToLearn'
+import LearningPathsPl from '@/app/components/pl/LearningPaths'
+import PracticePreviewPl from '@/app/components/pl/PracticePreview'
+import GamesSectionPl from '@/app/components/pl/GamesSection'
+import PrintableExercisesPl from '@/app/components/pl/PrintableExercises'
+import AudienceSectionPl from '@/app/components/pl/AudienceSection'
+import FooterPl from '@/app/components/pl/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -125,6 +136,7 @@ export async function generateStaticParams() {
     { lang: 'fr', topic: 'table-de-multiplication' },
     { lang: 'sv', topic: 'multiplikationstabeller' },
     { lang: 'pt', topic: 'tabuada' },
+    { lang: 'pl', topic: 'tabliczki-mnozenia' },
   ]
 }
 
@@ -132,7 +144,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -521,6 +533,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Polish metadata (production)
+  if (locale === 'pl') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Tabliczki Mnożenia 1-100 | Ćwiczenia PDF i Interaktywne Gry',
+      description: 'Ucz się tabliczki mnożenia od 1 do 100 za darmo. Interaktywne ćwiczenia, gry edukacyjne i karty pracy PDF - idealna platforma matematyczna dla dzieci.',
+      keywords: 'tabliczka mnożenia, multiplication table, matematyka, nauka, ćwiczenie, edukacja, pdf ćwiczenia',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Tabliczki Mnożenia – Ucz się, Rozumiej i Ćwicz',
+        description: 'Naucz się tabliczki mnożenia krok po kroku.',
+        type: 'website',
+        locale: 'pl_PL',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Tabliczki Mnożenia – Ucz się, Rozumiej i Ćwicz',
+        description: 'Naucz się tabliczki mnożenia krok po kroku.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -528,7 +578,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1587,6 +1637,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnPt />
           <AudienceSectionPt />
           <FooterPt />
+        </main>
+      </>
+    )
+  }
+
+  // Polish version (production-ready)
+  if (locale === 'pl') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.pl.domain}/#website`,
+          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
+          "name": "Tabliczki Mnożenia",
+          "description": "Interaktywna platforma edukacyjna do nauki tabliczki mnożenia od 1 do 100. Narzędzia do nauki wizualnej dla dzieci, ćwiczenia praktyczne i gry edukacyjne.",
+          "inLanguage": "pl-PL",
+          "publisher": {
+            "@id": `${siteConfig.pl.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#webpage`,
+          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
+          "name": "Tabliczki Mnożenia - Wszystkie Tabliczki od 1 do 100",
+          "description": "Interaktywna platforma do nauki tabliczki mnożenia dla dzieci. Naucz się wszystkich tabliczek mnożenia od 1 do 100 poprzez ćwiczenia.",
+          "isPartOf": {
+            "@id": `${siteConfig.pl.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#learningresource`
+          },
+          "inLanguage": "pl-PL"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.pl.domain}/#organization`,
+          "name": "Tabliczki Mnożenia",
+          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
+          "description": "Platforma edukacyjna ucząca tabliczki mnożenia uczniów szkół podstawowych",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["pl", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#learningresource`,
+          "name": "Platforma Nauki Tabliczki Mnożenia",
+          "description": "Kompleksowy zasób edukacyjny do nauki tabliczki mnożenia od 1 do 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "pl-PL",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "tabliczka mnożenia",
+            "nauka matematyki",
+            "matematyka szkoły podstawowej",
+            "mnożenie",
+            "nauka tabliczki",
+            "ćwiczenia matematyczne",
+            "gry matematyczne"
+          ],
+          "teaches": "Umiejętności rozumienia, stosowania i zapamiętywania mnożenia i tabliczki mnożenia",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <HeaderPl />
+        <main className="min-h-screen">
+          <HeroPl />
+          <LearningPathsPl />
+          <PracticePreviewPl />
+          <GamesSectionPl />
+          <PrintableExercisesPl />
+          <DefinitionSectionPl />
+          <WhyItMattersPl />
+          <HowToLearnPl />
+          <AudienceSectionPl />
+          <FooterPl />
         </main>
       </>
     )

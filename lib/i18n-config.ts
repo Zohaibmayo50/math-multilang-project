@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: 'tr',
-  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'en'],
+  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'en', 'pl'],
 } as const
 
 export type Locale = (typeof i18n)['locales'][number]
@@ -16,6 +16,7 @@ export const languageNames: Record<Locale, string> = {
   sv: 'Svenska',
   pt: 'Português',
   en: 'English',
+  pl: 'Polski',
 }
 
 export const topicSlugs: Record<Locale, string> = {
@@ -29,6 +30,7 @@ export const topicSlugs: Record<Locale, string> = {
   sv: 'multiplikationstabeller',
   pt: 'tabuada',
   en: 'multiplication-tables',
+  pl: 'tabliczki-mnozenia',
 }
 
 export const siteConfig: Record<Locale, {
@@ -86,6 +88,11 @@ export const siteConfig: Record<Locale, {
     name: 'Multiplication Tables',
     description: 'Interactive learning platform for mastering multiplication tables from 1 to 100.',
   },
+  pl: {
+    domain: 'https://multilang-math.com',
+    name: 'Tabliczki Mnożenia',
+    description: 'Interaktywna platforma edukacyjna do nauki tabliczki mnożenia od 1 do 100.',
+  },
 }
 
 export const guides: Record<Locale, {
@@ -142,5 +149,10 @@ export const guides: Record<Locale, {
     students: 'for-students',
     teachers: 'for-teachers',
     parents: 'for-parents',
+  },
+  pl: {
+    students: 'dla-uczniow',
+    teachers: 'dla-nauczycieli',
+    parents: 'dla-rodzicow',
   },
 }
