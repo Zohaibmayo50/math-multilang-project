@@ -20,7 +20,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">1-10</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 1
+                Tingkat 1
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Tabel perkalian dasar. Titik awal untuk semua siswa.
@@ -43,7 +43,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">11-20</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 2
+                Tingkat 2
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Dapatkan keterampilan perkalian dengan bilangan dua digit.
@@ -66,7 +66,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">21-30</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 3
+                Tingkat 3
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Tabel perkalian tingkat menengah dan pola.
@@ -89,7 +89,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">31-40</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 4
+                Tingkat 4
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Keterampilan perhitungan mental tingkat lanjut.
@@ -112,7 +112,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">41-50</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 5
+                Tingkat 5
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Menguasai tabel perkalian hingga angka 50.
@@ -135,7 +135,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">51-60</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 6
+                Tingkat 6
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Perkalian bilangan besar dan teknik canggih.
@@ -158,7 +158,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">61-70</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 7
+                Tingkat 7
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Keterampilan perkalian menengah lanjutan.
@@ -181,7 +181,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">71-80</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 8
+                Tingkat 8
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Tantangan perkalian untuk siswa mahir.
@@ -204,7 +204,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">81-90</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 9
+                Tingkat 9
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Perkalian tingkat mahir untuk siswa berprestasi.
@@ -227,7 +227,7 @@ export default function LearningPathsId() {
                 <span className="text-lg font-bold text-white">91-100</span>
               </div>
               <h3 className="text-base font-semibold text-slate-900 mb-2">
-                Level 10
+                Tingkat 10
               </h3>
               <p className="text-slate-700 text-sm mb-3 flex-grow">
                 Penguasaan lengkap tabel perkalian hingga 100.
