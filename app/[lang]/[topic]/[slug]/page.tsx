@@ -22,6 +22,8 @@ import RangePageEn from '@/app/components/en/RangePage'
 import NumberPageEn from '@/app/components/en/NumberPage'
 import RangePagePl from '@/app/components/pl/RangePage'
 import NumberPagePl from '@/app/components/pl/NumberPage'
+import RangePageId from '@/app/components/id/RangePageId'
+import NumberPageId from '@/app/components/id/NumberPageId'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -35,6 +37,7 @@ import { numberTitlesSv, numberDescriptionsSv, numberSpecialPropertiesSv } from 
 import { numberTitlesPt, numberDescriptionsPt, numberSpecialPropertiesPt } from '@/lib/number-metadata-pt'
 import { numberTitles as numberTitlesEn, numberDescriptions as numberDescriptionsEn, numberSpecialProperties as numberSpecialPropertiesEn } from '@/lib/number-metadata-en'
 import { numberTitlesPl, numberDescriptionsPl, numberSpecialPropertiesPl } from '@/lib/number-metadata-pl'
+import { numberTitlesId, numberDescriptionsId, numberSpecialPropertiesId } from '@/lib/number-metadata-id'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -90,6 +93,11 @@ import ForParentsEn from '@/app/for-parents/page'
 import DlaUczniwPl from '@/app/dla-uczniow/page'
 import DlaNauczycieliPl from '@/app/dla-nauczycieli/page'
 import DlaRodzicwPl from '@/app/dla-rodzicow/page'
+
+// Import Indonesian guide page components
+import UntukSiswa from '@/app/untuk-siswa/page'
+import UntukGuru from '@/app/untuk-guru/page'
+import UntukOrangTua from '@/app/untuk-orang-tua/page'
 
 interface PageProps {
   params: {
@@ -356,6 +364,86 @@ const rangeMetadataPl: Record<string, {
     title: 'Tabliczki 91-100 | Najwyższy Poziom',
     description: 'Naucz się tabliczek mnożenia od 91 do 100. Kompletna edukacja dla najwyższego poziomu umiejętności.',
     keywords: 'tabliczka mnożenia 91-100, tabliczki mnożenia',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
+  },
+}
+
+// Indonesian Range Metadata
+const rangeMetadataId: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Tabel 1-10 | Tingkat Pemula',
+    description: 'Pelajari tabel perkalian 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Penjelasan mudah untuk pemula, contoh visual, dan latihan praktis.',
+    keywords: 'tabel perkalian 1-10, tabel perkalian, perkalian, belajar matematika',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Tabel 11-20 | Angka Dua Digit',
+    description: 'Pelajari tabel perkalian 11-20. Kuasai operasi perkalian dengan angka dua digit.',
+    keywords: 'tabel perkalian 11-20, tabel perkalian, perkalian, belajar matematika',
+    level: 'intermediate',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Tabel 21-30 | Tingkat Menengah',
+    description: 'Pelajari tabel perkalian 21-30. Penjelasan detail dan latihan praktis untuk siswa tingkat menengah.',
+    keywords: 'tabel perkalian 21-30, tabel perkalian, perkalian, belajar matematika',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Tabel 31-40 | Perkalian Lanjutan',
+    description: 'Pelajari tabel perkalian 31, 32, 33, 34, 35, 36, 37, 38, 39, 40. Materi pendidikan lengkap untuk keterampilan perkalian lanjutan.',
+    keywords: 'tabel perkalian 31-40, tabel perkalian, perkalian, belajar matematika',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Tabel 41-50 | Tingkat Menengah-Lanjutan',
+    description: 'Pelajari tabel perkalian 41-50. Latihan interaktif untuk menguasai perkalian dengan angka besar.',
+    keywords: 'tabel perkalian 41-50, tabel perkalian, perkalian, belajar matematika',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Tabel 51-60 | Tingkat Lanjutan',
+    description: 'Pelajari tabel perkalian 51, 52, 53, 54, 55, 56, 57, 58, 59, 60. Materi studi detail untuk siswa tingkat lanjutan.',
+    keywords: 'tabel perkalian 51-60, tabel perkalian, perkalian, belajar matematika',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Tabel 61-70 | Angka Besar',
+    description: 'Pelajari tabel perkalian 61-70. Sumber daya pendidikan komprehensif untuk perkalian angka besar.',
+    keywords: 'tabel perkalian 61-70, tabel perkalian, perkalian, belajar matematika',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Tabel 71-80 | Perkalian Tingkat Lanjutan',
+    description: 'Pelajari tabel perkalian 71, 72, 73, 74, 75, 76, 77, 78, 79, 80. Kembangkan keterampilan matematika tingkat lanjutan.',
+    keywords: 'tabel perkalian 71-80, tabel perkalian, perkalian, belajar matematika',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Tabel 81-90 | Tingkat Ahli',
+    description: 'Pelajari tabel perkalian 81-90. Operasi perkalian menantang dan strategi untuk siswa tingkat ahli.',
+    keywords: 'tabel perkalian 81-90, tabel perkalian, perkalian, belajar matematika',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Tabel 91-100 | Tingkat Tertinggi',
+    description: 'Pelajari tabel perkalian 91, 92, 93, 94, 95, 96, 97, 98, 99, 100. Pendidikan lengkap untuk keterampilan perkalian tingkat tertinggi.',
+    keywords: 'tabel perkalian 91-100, tabel perkalian, perkalian, belajar matematika',
     level: 'advanced',
     color: 'from-emerald-50 to-teal-50',
   },
@@ -1231,6 +1319,29 @@ const guideMetadataPt: Record<string, {
   },
 }
 
+// Indonesian Guide Metadata
+const guideMetadataId: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'untuk-siswa': {
+    title: 'Panduan Tabel Perkalian untuk Siswa | Pembelajaran Langkah demi Langkah',
+    description: 'Panduan lengkap untuk belajar tabel perkalian dengan mudah. Belajar sesuai kecepatan Anda dengan materi visual, latihan praktis, dan permainan yang menyenangkan!',
+    keywords: 'belajar tabel perkalian, matematika untuk siswa, panduan perkalian, perkalian langkah demi langkah',
+  },
+  'untuk-guru': {
+    title: 'Panduan Tabel Perkalian untuk Guru | Strategi Mengajar',
+    description: 'Sumber daya lengkap untuk guru tentang cara mengajar tabel perkalian secara efektif. Termasuk strategi pedagogis, aktivitas kelas, instruksi diferensial, dan metode penilaian.',
+    keywords: 'mengajar tabel perkalian, strategi pedagogis, aktivitas matematika, instruksi diferensial, sumber daya guru',
+  },
+  'untuk-orang-tua': {
+    title: 'Panduan Tabel Perkalian untuk Orang Tua | Mendukung Pembelajaran di Rumah',
+    description: 'Cara mendukung anak Anda belajar tabel perkalian di rumah. Tips praktis, permainan edukatif, dan strategi motivasi.',
+    keywords: 'membantu anak dengan tabel perkalian, matematika di rumah, pendidikan orang tua, aktivitas pembelajaran',
+  },
+}
+
 const guideComponents: Record<string, any> = {
   'for-students': ForStudentsEn,
   'for-teachers': ForTeachersEn,
@@ -1265,6 +1376,9 @@ const guideComponents: Record<string, any> = {
   'dla-uczniow': DlaUczniwPl,
   'dla-nauczycieli': DlaNauczycieliPl,
   'dla-rodzicow': DlaRodzicwPl,
+  'untuk-siswa': UntukSiswa,
+  'untuk-guru': UntukGuru,
+  'untuk-orang-tua': UntukOrangTua,
 }
 
 // Determine slug type
@@ -1280,6 +1394,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (locale === 'sv' && slug in guideMetadataSv) return 'guide'
   if (locale === 'pt' && slug in guideMetadataPt) return 'guide'
   if (locale === 'pl' && slug in guideMetadataPl) return 'guide'
+  if (locale === 'id' && slug in guideMetadataId) return 'guide'
   if (locale === 'tr' && slug in guideMetadata) return 'guide'
   if (locale === 'es' && slug in guideMetadataEs) return 'guide'
   if (locale === 'de' && slug in guideMetadataDe) return 'guide'
@@ -1291,6 +1406,7 @@ export async function generateStaticParams() {
   
   const langs = [
     { lang: 'pl', topic: 'tabliczki-mnozenia' },
+    { lang: 'id', topic: 'tabel-perkalian' },
     { lang: 'en', topic: 'multiplication-tables' },
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
@@ -1329,7 +1445,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['pl', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['pl', 'id', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -1389,6 +1505,71 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     
     if (slugType === 'guide') {
       const meta = guideMetadataPl[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
+
+  // Indonesian metadata
+  if (locale === 'id') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataId[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) return {}
+      
+      const title = numberTitlesId[num]
+      const description = numberDescriptionsId[num]
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title,
+        description,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataId[slug]
       if (!meta) return {}
       
       return {
@@ -3857,6 +4038,183 @@ export default async function SlugPage({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
           />
           <NumberPagePl number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        </>
+      )
+    }
+    
+    // GUIDE PAGE
+    if (slugType === 'guide') {
+      const Component = guideComponents[slug]
+      if (!Component) notFound()
+      
+      return <Component />
+    }
+  }
+
+  // Indonesian version
+  if (locale === 'id') {
+    const baseUrl = siteConfig.id.domain
+    
+    // RANGE PAGE
+    if (slugType === 'range') {
+      const meta = rangeMetadataId[slug]
+      if (!meta) notFound()
+      
+      const [start, end] = slug.split('-').map(Number)
+      if (isNaN(start) || isNaN(end)) notFound()
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/id/tabel-perkalian/${slug}#webpage`,
+            "url": `${baseUrl}/id/tabel-perkalian/${slug}`,
+            "name": meta.title,
+            "description": meta.description,
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/id/tabel-perkalian/${slug}#learningresource`
+            },
+            "inLanguage": "id-ID"
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/id/tabel-perkalian/${slug}#learningresource`,
+            "name": `Tabel Perkalian ${slug} Sumber Pembelajaran`,
+            "description": meta.description,
+            "educationalLevel": meta.level === 'beginner' ? 'Pemula' : meta.level === 'intermediate' ? 'Menengah' : 'Mahir',
+            "learningResourceType": ["Sumber Interaktif", "Materi Latihan", "Permainan Edukatif"],
+            "teaches": `Keterampilan untuk memahami dan menerapkan tabel perkalian ${start}, ${start + 1}, ... ${end}`,
+            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
+            "inLanguage": "id-ID",
+            "educationalUse": ["latihan", "belajar mandiri", "pekerjaan rumah"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
+              "@type": "LearningResource",
+              "name": `Tabel Perkalian ${start + i}`,
+              "url": `${baseUrl}/id/tabel-perkalian/${start + i}`
+            }))
+          }
+        ]
+      }
+
+      const allRanges = getAllRanges()
+      const currentIndex = allRanges.indexOf(slug)
+      const nextRange = currentIndex < allRanges.length - 1 ? allRanges[currentIndex + 1] : undefined
+      const prevRange = currentIndex > 0 ? allRanges[currentIndex - 1] : undefined
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <RangePageId
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/id/tabel-perkalian/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/id/tabel-perkalian/${prevRange}` : undefined}
+            difficultyLevel={meta.level}
+            difficultyColor={meta.color}
+          />
+        </>
+      )
+    }
+    
+    // NUMBER PAGE
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      if (isNaN(num) || num < 1 || num > 100) notFound()
+      
+      const range = getRangeFromNumber(num)
+      const [rangeStart, rangeEnd] = range.split('-').map(Number)
+      const specialProp = numberSpecialPropertiesId[num] || `Perkalian dengan ${num}`
+
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": `${baseUrl}/id/tabel-perkalian/${num}#webpage`,
+            "url": `${baseUrl}/id/tabel-perkalian/${num}`,
+            "name": `Tabel Perkalian ${num} - ${specialProp}`,
+            "description": numberDescriptionsId[num],
+            "isPartOf": {
+              "@id": `${baseUrl}/#website`
+            },
+            "about": {
+              "@id": `${baseUrl}/id/tabel-perkalian/${num}#learningresource`
+            },
+            "breadcrumb": {
+              "@id": `${baseUrl}/id/tabel-perkalian/${num}#breadcrumb`
+            },
+            "inLanguage": "id-ID"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": `${baseUrl}/id/tabel-perkalian/${num}#breadcrumb`,
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": `${baseUrl}/`,
+                  "name": "Beranda"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": `${baseUrl}/id/tabel-perkalian/${range}`,
+                  "name": `Tabel Perkalian ${range}`
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@id": `${baseUrl}/id/tabel-perkalian/${num}`,
+                  "name": `Tabel Perkalian ${num}`
+                }
+              }
+            ]
+          },
+          {
+            "@type": "LearningResource",
+            "@id": `${baseUrl}/id/tabel-perkalian/${num}#learningresource`,
+            "name": `Sumber Pembelajaran Tabel Perkalian ${num}`,
+            "description": numberDescriptionsId[num],
+            "educationalLevel": rangeStart <= 10 ? "Pemula" : rangeStart <= 50 ? "Menengah" : "Mahir",
+            "learningResourceType": ["Sumber Interaktif", "Materi Latihan", "Permainan Edukatif"],
+            "teaches": `Tabel perkalian ${num}, ${specialProp.toLowerCase()}, konsep dasar perkalian`,
+            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
+            "inLanguage": "id-ID",
+            "educationalUse": ["latihan", "belajar mandiri"],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": ["student"]
+            },
+            "isPartOf": {
+              "@id": `${baseUrl}/id/tabel-perkalian/${range}#learningresource`
+            }
+          }
+        ]
+      }
+
+      return (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+          <NumberPageId number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
     }

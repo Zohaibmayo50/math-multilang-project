@@ -114,6 +114,17 @@ import GamesSectionPl from '@/app/components/pl/GamesSection'
 import PrintableExercisesPl from '@/app/components/pl/PrintableExercises'
 import AudienceSectionPl from '@/app/components/pl/AudienceSection'
 import FooterPl from '@/app/components/pl/Footer'
+import HeaderId from '@/app/components/id/HeaderId'
+import HeroId from '@/app/components/id/HeroId'
+import LearningPathsId from '@/app/components/id/LearningPathsId'
+import PracticePreviewId from '@/app/components/id/PracticePreviewId'
+import GamesSectionId from '@/app/components/id/GamesSectionId'
+import PrintableExercisesId from '@/app/components/id/PrintableExercisesId'
+import DefinitionSectionId from '@/app/components/id/DefinitionSectionId'
+import WhyItMattersId from '@/app/components/id/WhyItMattersId'
+import HowToLearnId from '@/app/components/id/HowToLearnId'
+import AudienceSectionId from '@/app/components/id/AudienceSectionId'
+import FooterId from '@/app/components/id/FooterId'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -137,6 +148,7 @@ export async function generateStaticParams() {
     { lang: 'sv', topic: 'multiplikationstabeller' },
     { lang: 'pt', topic: 'tabuada' },
     { lang: 'pl', topic: 'tabliczki-mnozenia' },
+    { lang: 'id', topic: 'tabel-perkalian' },
   ]
 }
 
@@ -144,7 +156,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl', 'id'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -571,6 +583,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
+  // Indonesian metadata (production)
+  if (locale === 'id') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Tabel Perkalian 1-100 | Latihan PDF dan Permainan Interaktif',
+      description: 'Pelajari tabel perkalian dari 1 hingga 100 secara gratis. Latihan interaktif, permainan edukatif, dan lembar kerja PDF untuk anak-anak.',
+      keywords: 'tabel perkalian, belajar perkalian, matematika, latihan, pendidikan, latihan pdf',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Tabel Perkalian – Belajar, Pahami, dan Praktikkan',
+        description: 'Pelajari tabel perkalian langkah demi langkah.',
+        type: 'website',
+        locale: 'id_ID',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Tabel Perkalian – Belajar, Pahami, dan Praktikkan',
+        description: 'Pelajari tabel perkalian langkah demi langkah.',
+      },
+    }
+  }
+
   return {}
 }
 
@@ -578,7 +628,7 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl', 'id'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -1741,6 +1791,110 @@ export default async function TopicHomePage({ params }: PageProps) {
           <HowToLearnPl />
           <AudienceSectionPl />
           <FooterPl />
+        </main>
+      </>
+    )
+  }
+
+  // Indonesian version (production-ready)
+  if (locale === 'id') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.id.domain}/#website`,
+          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
+          "name": "Tabel Perkalian",
+          "description": "Platform pendidikan interaktif untuk mempelajari tabel perkalian dari 1 hingga 100. Alat pembelajaran visual untuk anak-anak, latihan praktis, dan permainan edukatif.",
+          "inLanguage": "id-ID",
+          "publisher": {
+            "@id": `${siteConfig.id.domain}/#organization`
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#webpage`,
+          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
+          "name": "Tabel Perkalian - Semua Tabel dari 1 hingga 100",
+          "description": "Platform pembelajaran tabel perkalian interaktif untuk anak-anak. Pelajari semua tabel perkalian dari 1-100 melalui latihan.",
+          "isPartOf": {
+            "@id": `${siteConfig.id.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#learningresource`
+          },
+          "inLanguage": "id-ID"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.id.domain}/#organization`,
+          "name": "Tabel Perkalian",
+          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
+          "description": "Platform pendidikan yang mengajarkan tabel perkalian kepada siswa sekolah dasar",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["id", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt", "pl"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#learningresource`,
+          "name": "Platform Pembelajaran Tabel Perkalian",
+          "description": "Sumber pendidikan komprehensif untuk mempelajari tabel perkalian dari 1 hingga 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "id-ID",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "tabel perkalian",
+            "belajar matematika",
+            "matematika sekolah dasar",
+            "perkalian",
+            "belajar tabel",
+            "latihan matematika",
+            "permainan matematika"
+          ],
+          "teaches": "Keterampilan untuk memahami, menerapkan, dan menghafal perkalian dan tabel perkalian",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <HeaderId />
+        <main className="min-h-screen">
+          <HeroId />
+          <LearningPathsId />
+          <PracticePreviewId />
+          <GamesSectionId />
+          <PrintableExercisesId />
+          <DefinitionSectionId />
+          <WhyItMattersId />
+          <HowToLearnId />
+          <AudienceSectionId />
+          <FooterId />
         </main>
       </>
     )

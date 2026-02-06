@@ -1,6 +1,6 @@
 export const i18n = {
   defaultLocale: 'tr',
-  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'en', 'pl'],
+  locales: ['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'en', 'pl', 'id'],
 } as const
 
 export type Locale = (typeof i18n)['locales'][number]
@@ -17,6 +17,7 @@ export const languageNames: Record<Locale, string> = {
   pt: 'Português',
   en: 'English',
   pl: 'Polski',
+  id: 'Bahasa Indonesia',
 }
 
 export const topicSlugs: Record<Locale, string> = {
@@ -31,6 +32,7 @@ export const topicSlugs: Record<Locale, string> = {
   pt: 'tabuada',
   en: 'multiplication-tables',
   pl: 'tabliczki-mnozenia',
+  id: 'tabel-perkalian',
 }
 
 export const siteConfig: Record<Locale, {
@@ -93,6 +95,11 @@ export const siteConfig: Record<Locale, {
     name: 'Tabliczki Mnożenia',
     description: 'Interaktywna platforma edukacyjna do nauki tabliczki mnożenia od 1 do 100.',
   },
+  id: {
+    domain: 'https://multilang-math.com',
+    name: 'Tabel Perkalian',
+    description: 'Platform pembelajaran interaktif untuk menguasai tabel perkalian dari 1 hingga 100.',
+  },
 }
 
 export const guides: Record<Locale, {
@@ -154,5 +161,10 @@ export const guides: Record<Locale, {
     students: 'dla-uczniow',
     teachers: 'dla-nauczycieli',
     parents: 'dla-rodzicow',
+  },
+  id: {
+    students: 'untuk-siswa',
+    teachers: 'untuk-guru',
+    parents: 'untuk-orang-tua',
   },
 }
