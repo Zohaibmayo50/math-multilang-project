@@ -10,7 +10,7 @@ export default function AudienceSectionPl() {
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
           Nasza platforma do nauki tabliczek mnożenia jest zaprojektowana dla wszystkich o różnych potrzebach. 
-          Oferujemy specjalne zasoby i przewodniki dla każdej grupy odbior ców.
+          Oferujemy specjalne zasoby i przewodniki dla każdej grupy odbiorców.
         </p>
         
         <div className="grid gap-8 md:grid-cols-3">

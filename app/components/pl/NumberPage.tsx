@@ -420,7 +420,7 @@ export default function NumberPagePl({ number, rangeStart, rangeEnd }: NumberPag
 
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
-                  DlaczegoWażne Jest Nauczenie Się Tabliczki Mnożenia przez {number}
+                  Dlaczego Ważne Jest Nauczenie Się Tabliczki Mnożenia przez {number}
                 </h2>
                 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed">

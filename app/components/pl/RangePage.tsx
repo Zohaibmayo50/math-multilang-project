@@ -417,7 +417,7 @@ export default function RangePagePl({
               </h3>
               <p className="text-slate-700 leading-relaxed">
                 Ten zakres pomaga uczniom rozwijać umiejętności obliczeń mentalnych. 
-                Przy regularnej praktyce zaczynają automatycznie pamiętać iloczynyych liczb.
+                Przy regularnej praktyce zaczynają automatycznie pamiętać iloczynów liczb.
               </p>
             </div>
             
