@@ -114,22 +114,22 @@ export default function LanguageSelector() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {languages.map((lang) => (
             <Link
               key={lang.code}
               href={`/${lang.code}/${topicSlugs[lang.code as keyof typeof topicSlugs]}`}
-              className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 hover:scale-105 border-2 border-transparent hover:border-blue-500"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-4 hover:scale-105 border-2 border-transparent hover:border-blue-500 flex items-center gap-4"
             >
-              <div className="text-center">
-                <div className="text-6xl mb-4">{lang.flag}</div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+              <div className="text-5xl flex-shrink-0">{lang.flag}</div>
+              <div className="flex-1 min-w-0">
+                <h2 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors truncate">
                   {lang.name}
                 </h2>
-                <p className="text-lg font-semibold text-slate-700 mb-3">
+                <p className="text-sm font-semibold text-slate-700 mb-1 truncate">
                   {lang.topic}
                 </p>
-                <p className="text-sm text-slate-600">
+                <p className="text-xs text-slate-600 line-clamp-2">
                   {lang.description}
                 </p>
               </div>
