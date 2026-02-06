@@ -18,6 +18,8 @@ import RangePageSv from '@/app/components/sv/RangePage'
 import NumberPageSv from '@/app/components/sv/NumberPage'
 import RangePagePt from '@/app/components/pt/RangePage'
 import NumberPagePt from '@/app/components/pt/NumberPage'
+import RangePageEn from '@/app/components/en/RangePage'
+import NumberPageEn from '@/app/components/en/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -29,6 +31,7 @@ import { numberTitlesFi, numberDescriptionsFi, numberSpecialPropertiesFi } from 
 import { numberTitlesFr, numberDescriptionsFr, numberSpecialPropertiesFr } from '@/lib/number-metadata-fr'
 import { numberTitlesSv, numberDescriptionsSv, numberSpecialPropertiesSv } from '@/lib/number-metadata-sv'
 import { numberTitlesPt, numberDescriptionsPt, numberSpecialPropertiesPt } from '@/lib/number-metadata-pt'
+import { numberTitles as numberTitlesEn, numberDescriptions as numberDescriptionsEn, numberSpecialProperties as numberSpecialPropertiesEn } from '@/lib/number-metadata-en'
 
 // Import Turkish guide page components
 import ForStudents from '@/app/ogrenciler-icin/page'
@@ -74,6 +77,11 @@ import ForParentsSv from '@/app/for-foraldrar/page'
 import ForStudentsPt from '@/app/para-estudantes/page'
 import ForTeachersPt from '@/app/para-professores/page'
 import ForParentsPt from '@/app/para-pais/page'
+
+// Import English guide page components
+import ForStudentsEn from '@/app/for-students/page'
+import ForTeachersEn from '@/app/for-teachers/page'
+import ForParentsEn from '@/app/for-parents/page'
 
 interface PageProps {
   params: {
@@ -182,6 +190,86 @@ const guideMetadata: Record<string, {
     title: 'Veliler İçin Çarpım Tablosu Rehberi | Evde Destekleme',
     description: 'Çocuğunuzun çarpım tablosunu öğrenmesine nasıl destek olabilirsiniz? Pratik ipuçları, aktiviteler ve evde öğrenme stratejileri.',
     keywords: 'çarpım tablosu öğretme, ev ödevi yardımı, çocuk eğitimi, veli rehberi',
+  },
+}
+
+// English Range Metadata
+const rangeMetadataEn: Record<string, {
+  title: string
+  description: string
+  keywords: string
+  level: 'beginner' | 'intermediate' | 'advanced'
+  color: string
+}> = {
+  '1-10': {
+    title: 'Times Tables 1-10 | Beginner Level',
+    description: 'Learn multiplication tables for 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Easy explanations for beginners, visual examples and practice exercises.',
+    keywords: 'times tables 1-10, multiplication tables, multiplication, math learning',
+    level: 'beginner',
+    color: 'from-blue-50 to-indigo-50',
+  },
+  '11-20': {
+    title: 'Times Tables 11-20 | Two-Digit Numbers',
+    description: 'Learn times tables for 11-20. Master multiplication operations with two-digit numbers.',
+    keywords: 'times tables 11-20, multiplication tables, multiplication, math learning',
+    level: 'intermediate',
+    color: 'from-indigo-50 to-purple-50',
+  },
+  '21-30': {
+    title: 'Times Tables 21-30 | Intermediate Level',
+    description: 'Learn times tables from 21 to 30. Detailed explanations and practice exercises.',
+    keywords: 'times tables 21-30, multiplication tables',
+    level: 'intermediate',
+    color: 'from-purple-50 to-pink-50',
+  },
+  '31-40': {
+    title: 'Times Tables 31-40 | Advanced Multiplication',
+    description: 'Learn times tables from 31 to 40. Complete educational materials for advanced skills.',
+    keywords: 'times tables 31-40, multiplication tables',
+    level: 'intermediate',
+    color: 'from-pink-50 to-rose-50',
+  },
+  '41-50': {
+    title: 'Times Tables 41-50 | Intermediate-Advanced Level',
+    description: 'Learn times tables from 41 to 50. Interactive exercises to master multiplication.',
+    keywords: 'times tables 41-50, multiplication tables',
+    level: 'intermediate',
+    color: 'from-rose-50 to-orange-50',
+  },
+  '51-60': {
+    title: 'Times Tables 51-60 | Advanced Level',
+    description: 'Learn times tables from 51 to 60. Detailed study materials for advanced students.',
+    keywords: 'times tables 51-60, multiplication tables',
+    level: 'advanced',
+    color: 'from-orange-50 to-amber-50',
+  },
+  '61-70': {
+    title: 'Times Tables 61-70 | High Numbers',
+    description: 'Learn times tables from 61 to 70. Complete educational resources.',
+    keywords: 'times tables 61-70, multiplication tables',
+    level: 'advanced',
+    color: 'from-amber-50 to-yellow-50',
+  },
+  '71-80': {
+    title: 'Times Tables 71-80 | Advanced Level',
+    description: 'Learn times tables from 71 to 80. Develop advanced math skills.',
+    keywords: 'times tables 71-80, multiplication tables',
+    level: 'advanced',
+    color: 'from-yellow-50 to-lime-50',
+  },
+  '81-90': {
+    title: 'Times Tables 81-90 | Expert Level',
+    description: 'Learn times tables from 81 to 90. Challenging multiplication operations.',
+    keywords: 'times tables 81-90, multiplication tables',
+    level: 'advanced',
+    color: 'from-lime-50 to-emerald-50',
+  },
+  '91-100': {
+    title: 'Times Tables 91-100 | Highest Level',
+    description: 'Learn times tables from 91 to 100. Complete education for highest level skills.',
+    keywords: 'times tables 91-100, multiplication tables',
+    level: 'advanced',
+    color: 'from-emerald-50 to-teal-50',
   },
 }
 
@@ -825,6 +913,29 @@ const rangeMetadataPt: Record<string, {
   },
 }
 
+// English Guide Metadata
+const guideMetadataEn: Record<string, {
+  title: string
+  description: string
+  keywords: string
+}> = {
+  'for-students': {
+    title: 'For Students: Times Tables Guide | Step-by-Step Learning',
+    description: 'Step-by-step guide to learn times tables easily. Learn at your own pace with visual materials, practical activities and fun games!',
+    keywords: 'learn times tables, math for students, times tables guide, step by step multiplication',
+  },
+  'for-parents': {
+    title: 'For Parents: Supporting Times Tables Learning | Effective Methods',
+    description: 'Effective methods and strategies to support your child learning times tables. Tools to make learning fun and effective at home.',
+    keywords: 'times tables for parents, supporting math learning, effective education methods, home practice',
+  },
+  'for-teachers': {
+    title: 'For Teachers: Times Tables Teaching Guide | Classroom Resources',
+    description: 'Comprehensive teaching guide for times tables. Classroom activities, assessment tools and differentiation strategies.',
+    keywords: 'teaching times tables, classroom math, teacher resources, multiplication teaching',
+  },
+}
+
 // Spanish Guide Metadata
 const guideMetadataEs: Record<string, {
   title: string
@@ -1010,6 +1121,9 @@ const guideMetadataPt: Record<string, {
 }
 
 const guideComponents: Record<string, any> = {
+  'for-students': ForStudentsEn,
+  'for-teachers': ForTeachersEn,
+  'for-parents': ForParentsEn,
   'ogrenciler-icin': ForStudents,
   'ogretmenler-icin': ForTeachers,
   'veliler-icin': ForParents,
@@ -1044,6 +1158,7 @@ function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide'
   if (/^\d+-\d+$/.test(slug)) return 'range'
   if (/^\d+$/.test(slug)) return 'number'
   // Check against locale-specific guide metadata
+  if (locale === 'en' && slug in guideMetadataEn) return 'guide'
   if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
   if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
   if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
@@ -1060,6 +1175,7 @@ export async function generateStaticParams() {
   const params: Array<{ lang: string; topic: string; slug: string }> = []
   
   const langs = [
+    { lang: 'en', topic: 'multiplication-tables' },
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
     { lang: 'cs', topic: 'nasobilka' },
@@ -1097,7 +1213,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -1110,6 +1226,66 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const hreflang = generateHreflangMetadata(slug)
+
+  // English metadata (production)
+  if (locale === 'en') {
+    if (slugType === 'range') {
+      const meta = rangeMetadataEn[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      return {
+        metadataBase: new URL(config.domain),
+        title: numberTitlesEn[num] || `${num} Times Table`,
+        description: numberDescriptionsEn[num] || `Learn the ${num} times table.`,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+    
+    if (slugType === 'guide') {
+      const meta = guideMetadataEn[slug]
+      if (!meta) return {}
+      
+      return {
+        metadataBase: new URL(config.domain),
+        title: meta.title,
+        description: meta.description,
+        keywords: meta.keywords,
+        alternates: {
+          canonical: `/${lang}/${topic}/${slug}`,
+          ...hreflang,
+        },
+        robots: {
+          index: true,
+          follow: true,
+        },
+      }
+    }
+  }
 
   // Turkish metadata (production)
   if (locale === 'tr') {
@@ -1692,7 +1868,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
@@ -3116,6 +3292,46 @@ export default async function SlugPage({ params }: PageProps) {
       if (!Component) notFound()
       
       return <Component />
+    }
+  }
+
+  // English version
+  if (locale === 'en') {
+    if (slugType === 'range') {
+      const [start, end] = slug.split('-').map(Number)
+      const nextRange = getRangeFromNumber(end + 1)
+      const prevRange = start > 1 ? getRangeFromNumber(start - 1) : undefined
+      const meta = rangeMetadataEn[slug]
+      
+      return (
+        <RangePageEn
+          rangeStart={start}
+          rangeEnd={end}
+          nextRangeUrl={nextRange ? `/en/multiplication-tables/${nextRange}` : undefined}
+          prevRangeUrl={prevRange ? `/en/multiplication-tables/${prevRange}` : undefined}
+          difficultyLevel={meta?.level || 'beginner'}
+          difficultyColor={meta?.color || 'from-blue-50 to-indigo-50'}
+        />
+      )
+    }
+    
+    if (slugType === 'number') {
+      const num = parseInt(slug, 10)
+      const [rangeStart, rangeEnd] = getRangeFromNumber(num).split('-').map(Number)
+      
+      return (
+        <NumberPageEn
+          number={num}
+          rangeStart={rangeStart}
+          rangeEnd={rangeEnd}
+        />
+      )
+    }
+    
+    if (slugType === 'guide') {
+      if (slug === 'for-students') return <ForStudentsEn />
+      if (slug === 'for-teachers') return <ForTeachersEn />
+      if (slug === 'for-parents') return <ForParentsEn />
     }
   }
 

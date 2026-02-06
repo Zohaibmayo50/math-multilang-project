@@ -92,6 +92,17 @@ import GamesSectionPt from '@/app/components/pt/GamesSection'
 import PrintableExercisesPt from '@/app/components/pt/PrintableExercises'
 import AudienceSectionPt from '@/app/components/pt/AudienceSection'
 import FooterPt from '@/app/components/pt/Footer'
+import HeaderEn from '@/app/components/en/Header'
+import HeroEn from '@/app/components/en/Hero'
+import DefinitionSectionEn from '@/app/components/en/DefinitionSection'
+import WhyItMattersEn from '@/app/components/en/WhyItMatters'
+import HowToLearnEn from '@/app/components/en/HowToLearn'
+import LearningPathsEn from '@/app/components/en/LearningPaths'
+import PracticePreviewEn from '@/app/components/en/PracticePreview'
+import GamesSectionEn from '@/app/components/en/GamesSection'
+import PrintableExercisesEn from '@/app/components/en/PrintableExercises'
+import AudienceSectionEn from '@/app/components/en/AudienceSection'
+import FooterEn from '@/app/components/en/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
 
@@ -104,6 +115,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
   return [
+    { lang: 'en', topic: 'multiplication-tables' },
     { lang: 'tr', topic: 'carpim-tablosu' },
     { lang: 'es', topic: 'tablas-de-multiplicar' },
     { lang: 'de', topic: 'einmaleins' },
@@ -120,7 +132,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, topic } = await params
   
   // Validate params
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     return {}
   }
 
@@ -128,6 +140,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const config = siteConfig[locale]
   const baseUrl = getAbsoluteUrl(locale)
   const hreflang = generateHreflangMetadata()
+
+  // English metadata (production)
+  if (locale === 'en') {
+    return {
+      metadataBase: new URL(config.domain),
+      title: 'Multiplication Tables 1-100 | PDF Exercises and Interactive Games',
+      description: 'Learn multiplication tables from 1 to 100 for free. Interactive exercises, educational games and PDF worksheets - ideal math platform for children.',
+      keywords: 'multiplication tables, times tables, math, learning, practice, education, pdf exercises',
+      alternates: {
+        canonical: `/${lang}/${topic}`,
+        ...hreflang,
+      },
+      robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          'max-video-preview': -1,
+          'max-image-preview': 'large',
+          'max-snippet': -1,
+        },
+      },
+      openGraph: {
+        title: 'Multiplication Tables – Learn, Understand, and Practice',
+        description: 'Learn multiplication tables step by step.',
+        type: 'website',
+        locale: 'en_US',
+        url: baseUrl,
+        siteName: config.name,
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Multiplication Tables – Learn, Understand, and Practice',
+        description: 'Learn multiplication tables step by step.',
+      },
+    }
+  }
 
   // Turkish metadata (production)
   if (locale === 'tr') {
@@ -478,11 +528,124 @@ export default async function TopicHomePage({ params }: PageProps) {
   const { lang, topic } = await params
 
   // Validate language and topic match
-  if (!['tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
   const locale = lang as Locale
+
+  // English version (production-ready)
+  if (locale === 'en') {
+    const schemaData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.en.domain}/#website`,
+          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
+          "name": "Multiplication Tables",
+          "description": "Interactive educational platform to learn multiplication tables from 1 to 100. Visual learning tools for children, practical exercises and educational games.",
+          "inLanguage": "en-US",
+          "publisher": {
+            "@id": `${siteConfig.en.domain}/#organization`
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": `${siteConfig.en.domain}/en/multiplication-tables/{search_term_string}`
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${siteConfig.en.domain}/en/multiplication-tables/#webpage`,
+          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
+          "name": "Multiplication Tables - All Tables from 1 to 100",
+          "description": "Interactive multiplication tables learning platform for children. Learn all multiplication tables from 1-100 through practice.",
+          "isPartOf": {
+            "@id": `${siteConfig.en.domain}/#website`
+          },
+          "about": {
+            "@id": `${siteConfig.en.domain}/en/multiplication-tables/#learningresource`
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": `${siteConfig.en.domain}/#organization`,
+          "name": "Multiplication Tables",
+          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
+          "description": "Educational platform that teaches multiplication tables to elementary school students",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["en", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt"]
+        },
+        {
+          "@type": "LearningResource",
+          "@id": `${siteConfig.en.domain}/en/multiplication-tables/#learningresource`,
+          "name": "Multiplication Tables Learning Platform",
+          "description": "Comprehensive educational resource for learning multiplication tables from 1 to 100.",
+          "educationalLevel": "Elementary",
+          "learningResourceType": [
+            "Interactive Resource",
+            "Practice Material",
+            "Educational Game",
+            "Worksheet"
+          ],
+          "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": [
+              "student",
+              "parent",
+              "teacher"
+            ]
+          },
+          "inLanguage": "en-US",
+          "educationalUse": [
+            "practice",
+            "self-study",
+            "homework",
+            "classroom activity"
+          ],
+          "keywords": [
+            "multiplication tables",
+            "times tables",
+            "math learning",
+            "elementary math",
+            "multiplication",
+            "learn times tables",
+            "math exercises",
+            "multiplication games"
+          ],
+          "teaches": "Skills to understand, apply and memorize multiplication and times tables",
+          "typicalAgeRange": "6-12"
+        }
+      ]
+    }
+
+    return (
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+        <HeaderEn />
+        <main className="min-h-screen">
+          <HeroEn />
+          <LearningPathsEn />
+          <PracticePreviewEn />
+          <GamesSectionEn />
+          <PrintableExercisesEn />
+          <DefinitionSectionEn />
+          <WhyItMattersEn />
+          <HowToLearnEn />
+          <AudienceSectionEn />
+          <FooterEn />
+        </main>
+      </>
+    )
+  }
 
   // Turkish version (production-ready)
   if (locale === 'tr') {
