@@ -2,10 +2,10 @@
 
 import { useRef } from 'react'
 import Link from 'next/link'
-import FooterId from './FooterId'
-import PracticePreviewId from './PracticePreviewId'
-import PrintableExercisesId from './PrintableExercisesId'
-import NumberGamesId from './NumberGamesId'
+import Footer from './Footer'
+import PracticePreview from './PracticePreview'
+import PrintableExercises from './PrintableExercises'
+import NumberGames from './NumberGames'
 
 interface NumberPageIdProps {
   number: number
@@ -361,13 +361,13 @@ export default function NumberPageId({ number, rangeStart, rangeEnd }: NumberPag
       </section>
 
       {/* Practice Section */}
-      <PracticePreviewId rangeStart={number} rangeEnd={number} />
+      <PracticePreview rangeStart={number} rangeEnd={number} />
 
       {/* Games Section */}
-      <NumberGamesId number={number} />
+      <NumberGames number={number} />
 
       {/* Printable Exercises */}
-      <PrintableExercisesId rangeStart={number} rangeEnd={number} />
+      <PrintableExercises rangeStart={number} rangeEnd={number} />
 
       {/* Learning Strategies */}
       <section className="section-container bg-white">
@@ -547,7 +547,7 @@ export default function NumberPageId({ number, rangeStart, rangeEnd }: NumberPag
       </section>
 
       {/* Footer */}
-      <FooterId />
+      <Footer />
     </main>
   )
 }

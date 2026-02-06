@@ -1,10 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import PracticePreviewId from './PracticePreviewId'
-import GamesSectionId from './GamesSectionId'
-import PrintableExercisesId from './PrintableExercisesId'
-import FooterId from './FooterId'
+import PracticePreview from './PracticePreview'
+import GamesSection from './GamesSection'
+import PrintableExercises from './PrintableExercises'
+import Footer from './Footer'
 
 interface RangePageIdProps {
   rangeStart: number
@@ -205,7 +205,7 @@ export default function RangePageId({
       </section>
 
       {/* Practice Area */}
-      <PracticePreviewId rangeStart={rangeStart} rangeEnd={rangeEnd} />
+      <PracticePreview rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
       {/* Games Section */}
       <section id="games" className="section-container bg-gradient-to-br from-purple-50 to-pink-50">
@@ -249,7 +249,7 @@ export default function RangePageId({
       </section>
 
       {/* Printable Worksheets */}
-      <PrintableExercisesId rangeStart={rangeStart} rangeEnd={rangeEnd} />
+      <PrintableExercises rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
       {/* Range Table */}
       <section className="section-container bg-white">
@@ -688,7 +688,7 @@ export default function RangePageId({
       </section>
 
       {/* Footer */}
-      <FooterId />
+      <Footer />
     </main>
   )
 }

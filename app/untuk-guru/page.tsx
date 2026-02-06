@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import HeaderId from '@/app/components/id/HeaderId'
-import FooterId from '@/app/components/id/FooterId'
+import Header from '@/app/components/id/Header'
+import Footer from '@/app/components/id/Footer'
 
 export const metadata = {
   title: 'Untuk Guru: Panduan Tabel Perkalian | Materi Pengajaran Kelas',
@@ -14,7 +14,7 @@ export const metadata = {
 export default function UntukGuru() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
-      <HeaderId />
+      <Header />
       
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-4">
@@ -702,7 +702,7 @@ export default function UntukGuru() {
         </div>
       </section>
 
-      <FooterId />
+      <Footer />
     </div>
   )
 }

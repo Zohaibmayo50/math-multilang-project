@@ -65,7 +65,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
       answer,
       x: Math.random() * 80 + 10,
       y: 100,
-      speed: Math.random() * 0.5 + 0.3,
+      speed: Math.random() * 0.5 + 0.4,
       isCorrect
     }
   }
@@ -115,17 +115,17 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Balloon Pop: Click balloon
   const popBalloon = (balloon: Balloon) => {
     if (balloon.isCorrect) {
-      setBpScore(prev => prev + 1)
+      setBpScore(bpScore + 1)
       setPopAnimation({ id: balloon.id, x: balloon.x, y: balloon.y })
       setTimeout(() => setPopAnimation(null), 500)
     } else {
-      setBpMissed(prev => prev + 1)
+      setBpMissed(bpMissed + 1)
     }
-    setBalloons(prev => prev.filter(b => b.id !== balloon.id))
+    setBalloons(balloons.filter(b => b.id !== balloon.id))
   }
 
   // Racing Game: Generate question
-  const generateRaceQuestion = () => {
+  const generateRaceQuestion = (currentPosition: number = raceCar.position) => {
     const multiplier = Math.floor(Math.random() * 10) + 1
     const correctAnswer = number * multiplier
     const options = [correctAnswer]
@@ -137,11 +137,11 @@ export default function NumberGames({ number }: NumberGamesProps) {
       }
     }
     
-    setRaceCar(prev => ({
-      position: prev.position,
+    setRaceCar({
+      position: currentPosition,
       question: { multiplier, answer: correctAnswer },
       options: options.sort(() => Math.random() - 0.5)
-    }))
+    })
   }
 
   // Racing Game: Start
@@ -155,16 +155,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Racing Game: Check answer
   const checkRaceAnswer = (selected: number) => {
     if (selected === raceCar.question.answer) {
-      setRaceScore(prev => prev + 1)
-      setRaceCar(prev => {
-        const newPosition = prev.position + 10
-        if (newPosition >= 90) {
-          setTimeout(() => setRaceGameActive(false), 300)
-        } else {
-          setTimeout(() => generateRaceQuestion(), 300)
-        }
-        return { ...prev, position: newPosition }
-      })
+      setRaceScore(raceScore + 1)
+      const newPosition = raceCar.position + 10
+      
+      if (newPosition >= 100) {
+        setRaceCar(prev => ({ ...prev, position: newPosition }))
+        setRaceGameActive(false)
+      } else {
+        setTimeout(() => generateRaceQuestion(newPosition), 300)
+      }
     } else {
       setWrongAnimation(true)
       setTimeout(() => setWrongAnimation(false), 500)
@@ -240,10 +239,10 @@ export default function NumberGames({ number }: NumberGamesProps) {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            🎮 {number} Kertotaulu Pelit
+            🎮 Spiele für das {number}er Einmaleins
           </h2>
           <p className="text-lg text-slate-700">
-            Vahvista {number} kertotaulua hauskoilla animoiduilla peleillä!
+            Übe das {number}er Einmaleins mit animierten und unterhaltsamen Spielen!
           </p>
         </div>
 
@@ -257,7 +256,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🎈 <span className="hidden sm:inline">Ilmapallopeli</span><span className="sm:hidden">Ilmapallo</span>
+            🎈 <span className="hidden sm:inline">Luftballons Platzen</span><span className="sm:hidden">Ballons</span>
           </button>
           <button
             onClick={() => setActiveGame('race')}
@@ -267,7 +266,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🏎️ <span className="hidden sm:inline">Kilpailupeli</span><span className="sm:hidden">Kilpailu</span>
+            🏎️ <span className="hidden sm:inline">Rennspiel</span><span className="sm:hidden">Rennen</span>
           </button>
           <button
             onClick={() => setActiveGame('memory')}
@@ -277,7 +276,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🧠 <span className="hidden sm:inline">Muistipeli</span><span className="sm:hidden">Muisti</span>
+            🧠 <span className="hidden sm:inline">Gedächtnisspiel</span><span className="sm:hidden">Gedächtnis</span>
           </button>
         </div>
 
@@ -286,29 +285,29 @@ export default function NumberGames({ number }: NumberGamesProps) {
           <div className="bg-gradient-to-b from-sky-100 to-sky-300 rounded-2xl p-4 sm:p-8 shadow-xl min-h-[400px] sm:min-h-[600px] relative overflow-hidden">
             <div className="absolute top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 flex justify-between items-center z-10">
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Pisteet: <span className="text-pink-600">{bpScore}</span>
+                Punkte: <span className="text-pink-600">{bpScore}</span>
               </div>
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Ohitetut: <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
+                Verpasst: <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
               </div>
             </div>
 
             {!bpGameActive ? (
               <div className="flex flex-col items-center justify-center h-[350px] sm:h-[500px]">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-bounce">🎈</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Ilmapallopeli</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Luftballons Platzen</h3>
                 <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 text-center max-w-md px-4">
-                  Puhkaise ilmapallot, joissa on oikea vastaus! Älä koske vääriin ilmapalloihin äläkä anna oikeiden mennä ohi!
+                  Platze die Luftballons mit den richtigen Antworten! Berühre keine falschen Ballons und lass keine richtigen entkommen!
                 </p>
                 <button
                   onClick={startBalloonGame}
                   className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform shadow-lg"
                 >
-                  Aloita peli 🎈
+                  Spiel starten 🎈
                 </button>
                 {bpScore > 0 && (
                   <div className="mt-4 sm:mt-6 text-base sm:text-lg">
-                    Viimeisin tulos: <span className="font-bold text-pink-600">{bpScore}</span>
+                    Letzte Punktzahl: <span className="font-bold text-pink-600">{bpScore}</span>
                   </div>
                 )}
               </div>
@@ -362,8 +361,8 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'race' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Kilpailupeli</h3>
-              <p className="text-slate-600">Voita kilpailu vastaamalla oikein!</p>
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Rennspiel</h3>
+              <p className="text-slate-600">Gewinne das Rennen mit richtigen Antworten!</p>
             </div>
 
             {!raceGameActive || raceCar.position >= 90 ? (
@@ -371,19 +370,19 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🏁</div>
                 {raceCar.position >= 90 ? (
                   <>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 Onnittelut! Voitit!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 Glückwunsch! Du hast gewonnen!</h3>
                     <div className="text-xl sm:text-2xl mb-4 sm:mb-6">
-                      Kokonaispisteet: <span className="font-bold text-blue-600">{raceScore}</span>
+                      Gesamtpunktzahl: <span className="font-bold text-blue-600">{raceScore}</span>
                     </div>
                   </>
                 ) : (
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Yarışa Hazır mısınız?</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">Bereit für das Rennen?</h3>
                 )}
                 <button
                   onClick={startRaceGame}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  {raceCar.position >= 90 ? 'Tekrar Oyna' : 'Yarışı Başlat'} 🏎️
+                  {raceCar.position >= 90 ? 'Nochmal spielen' : 'Rennen starten'} 🏎️
                 </button>
               </div>
             ) : (
@@ -437,7 +436,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 </div>
 
                 <div className="text-center text-base sm:text-lg font-semibold">
-                  Skor: <span className="text-blue-600">{raceScore}</span>
+                  Punkte: <span className="text-blue-600">{raceScore}</span>
                 </div>
               </div>
             )}
@@ -448,30 +447,30 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'memory' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Hafıza Oyunu</h3>
-              <p className="text-slate-600">Eşleşen kartları bulun!</p>
+              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Gedächtnisspiel</h3>
+              <p className="text-slate-600">Finde die passenden Karten!</p>
             </div>
 
             {cards.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🃏</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Kartları Eşleştir</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Çarpma işlemlerini sonuçlarıyla eşleştirin!</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Karten zuordnen</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">Ordne die Multiplikationen ihren Ergebnissen zu!</p>
                 <button
                   onClick={initMemoryGame}
                   className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  Oyunu Başlat 🧠
+                  Spiel starten 🧠
                 </button>
               </div>
             ) : (
               <div>
                 <div className="flex justify-center gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div className="text-base sm:text-lg font-semibold">
-                    Eşleşen: <span className="text-green-600">{memoryScore}/6</span>
+                    Gefunden: <span className="text-green-600">{memoryScore}/6</span>
                   </div>
                   <div className="text-base sm:text-lg font-semibold">
-                    Hamle: <span className="text-purple-600">{memoryMoves}</span>
+                    Züge: <span className="text-purple-600">{memoryMoves}</span>
                   </div>
                 </div>
 
@@ -500,15 +499,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
 
                 {memoryScore === 6 && (
                   <div className="text-center mt-6 sm:mt-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 Onnittelut!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 Glückwunsch!</h3>
                     <p className="text-lg sm:text-xl mb-3 sm:mb-4">
-                      Suoritit pelin {memoryMoves} siirrolla!
+                      Du hast es geschafft in {memoryMoves} Zügen!
                     </p>
                     <button
                       onClick={initMemoryGame}
                       className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                     >
-                      Pelaa uudelleen
+                      Nochmal spielen
                     </button>
                   </div>
                 )}

@@ -22,8 +22,8 @@ import RangePageEn from '@/app/components/en/RangePage'
 import NumberPageEn from '@/app/components/en/NumberPage'
 import RangePagePl from '@/app/components/pl/RangePage'
 import NumberPagePl from '@/app/components/pl/NumberPage'
-import RangePageId from '@/app/components/id/RangePageId'
-import NumberPageId from '@/app/components/id/NumberPageId'
+import RangePageId from '@/app/components/id/RangePage'
+import NumberPageId from '@/app/components/id/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
@@ -2230,7 +2230,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
-  if (!['pl', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
+  if (!['pl', 'en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'id'].includes(lang) || topic !== topicSlugs[lang as Locale]) {
     notFound()
   }
 
