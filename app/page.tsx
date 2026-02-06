@@ -4,7 +4,7 @@ import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
   title: 'Multiplication Tables - Learn in Your Language',
-  description: 'Learn multiplication tables in your language. Interactive lessons and practice for Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, and Portuguese.',
+  description: 'Learn multiplication tables in your language. Interactive lessons and practice for English, Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, and Portuguese.',
   alternates: {
     canonical: 'https://math-multilang-project.vercel.app',
   },
@@ -16,6 +16,13 @@ export const metadata: Metadata = {
 
 export default function LanguageSelector() {
   const languages = [
+    {
+      code: 'en',
+      name: languageNames.en,
+      flag: '🇺🇸',
+      topic: 'Multiplication Tables',
+      description: 'Learn multiplication tables from 1 to 100',
+    },
     {
       code: 'tr',
       name: languageNames.tr,
