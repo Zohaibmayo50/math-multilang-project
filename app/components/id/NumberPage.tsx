@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import Link from 'next/link'
+import Header from './Header'
 import Footer from './Footer'
 import PracticePreview from './PracticePreview'
 import PrintableExercises from './PrintableExercises'
@@ -165,9 +166,11 @@ export default function NumberPageId({ number, rangeStart, rangeEnd }: NumberPag
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className={`relative overflow-hidden bg-gradient-to-br ${colors[colorIndex]} pt-20 pb-16`}>
+    <>
+      <Header />
+      <main className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className={`relative overflow-hidden bg-gradient-to-br ${colors[colorIndex]} pt-20 pb-16`}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-1/4 text-8xl font-bold opacity-10 animate-float">{number}</div>
           <div className="absolute top-40 left-1/4 text-9xl font-bold opacity-5 animate-float-delayed">×</div>
@@ -549,5 +552,6 @@ export default function NumberPageId({ number, rangeStart, rangeEnd }: NumberPag
       {/* Footer */}
       <Footer />
     </main>
+    </>
   )
 }
