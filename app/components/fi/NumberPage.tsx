@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import Link from 'next/link'
+import Header from './Header'
 import Footer from './Footer'
 import PracticePreview from './PracticePreview'
 import PrintableExercises from './PrintableExercises'
@@ -256,9 +257,11 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
-      {/* Hero Section */}
-      <section className={`relative overflow-hidden bg-gradient-to-br ${colors[colorIndex]} pt-16 pb-12 sm:pt-20 sm:pb-16 md:pt-24 md:pb-20`}>
+    <>
+      <Header />
+      <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
+        {/* Hero Section */}
+        <section className={`relative overflow-hidden bg-gradient-to-br ${colors[colorIndex]} pt-16 pb-12 sm:pt-20 sm:pb-16 md:pt-24 md:pb-20`}>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[1, 2, 3, 4, 5].map((multiplier, index) => (
             <div
@@ -663,5 +666,6 @@ export default function NumberPage({ number, rangeStart, rangeEnd }: NumberPageP
 
       <Footer />
     </main>
+    </>
   )
 }

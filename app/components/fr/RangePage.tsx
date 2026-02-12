@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import Link from 'next/link'
+import Header from './Header'
 import PracticePreview from './PracticePreview'
 import GamesSection from './GamesSection'
 import PrintableExercises from './PrintableExercises'
@@ -54,9 +55,11 @@ export default function RangePage({
   ]
   
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* Hero / Range Introduction */}
-      <section className={`relative overflow-hidden bg-gradient-to-br ${difficultyColor} pt-20 pb-16 md:pt-24 md:pb-20`}>
+    <>
+      <Header />
+      <main className="min-h-screen bg-gray-50">
+        {/* Hero / Range Introduction */}
+        <section className={`relative overflow-hidden bg-gradient-to-br ${difficultyColor} pt-20 pb-16 md:pt-24 md:pb-20`}>
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Floating Numbers */}
@@ -655,5 +658,6 @@ export default function RangePage({
       {/* Footer */}
       <Footer />
     </main>
+    </>
   )
 }
