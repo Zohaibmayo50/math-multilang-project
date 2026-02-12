@@ -1,34 +1,34 @@
-import NumberPage from '../../components/NumberPage'
+﻿import NumberPage from '../../components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/5#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/5",
+      "@id": "https://mathematives.com/sayi/5#webpage",
+      "url": "https://mathematives.com/sayi/5",
       "name": "5 Çarpım Tablosu - Beşerli Sayma",
       "description": "5 çarpım tablosu ile beşerli sayma öğrenin. Saat okuma ve para hesaplama için kritik öneme sahip desenleri keşfedin.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/5#learningresource"
+        "@id": "https://mathematives.com/sayi/5#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/5#breadcrumb"
+        "@id": "https://mathematives.com/sayi/5#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/5#breadcrumb",
+      "@id": "https://mathematives.com/sayi/5#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/5",
+            "@id": "https://mathematives.com/sayi/5",
             "name": "5 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/5#learningresource",
+      "@id": "https://mathematives.com/sayi/5#learningresource",
       "name": "5 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "5 ile çarpma: Beşerli sayma, 0 ve 5 ile biten desen. Saat okuma ve para hesaplama için temel beceriler.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

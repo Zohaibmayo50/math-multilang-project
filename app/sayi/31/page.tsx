@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/31#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/31",
+      "@id": "https://mathematives.com/sayi/31#webpage",
+      "url": "https://mathematives.com/sayi/31",
       "name": "31 Çarpım Tablosu - Ay Günleri",
       "description": "31 çarpım tablosu ile ay günleri kavramını öğrenin. Asal sayı özellikleri ve zaman hesaplama.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/31#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/31#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/31#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/31#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/31#breadcrumb",
+      "@id": "https://mathematives.com/sayi/31#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/31-40", "name": "31-40 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/31", "name": "31 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/31-40", "name": "31-40 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/31", "name": "31 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/31#learningresource",
+      "@id": "https://mathematives.com/sayi/31#learningresource",
       "name": "31 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "31 ile çarpma: Ay günleri (31 gün), asal sayı özellikleri ve ileri çarpma becerileri.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study", "real-world application"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/31-40#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/31-40#learningresource"}
     }
   ]
 }

@@ -1,34 +1,34 @@
-import NumberPage from '../../components/NumberPage'
+﻿import NumberPage from '../../components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/1#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/1",
+      "@id": "https://mathematives.com/sayi/1#webpage",
+      "url": "https://mathematives.com/sayi/1",
       "name": "1 Çarpım Tablosu - Özdeşlik Özelliği",
       "description": "1 çarpım tablosu ile çarpmanın temel kavramını öğrenin. Özdeşlik özelliği, desenler ve pratik stratejilerle 1 ile çarpma işlemini anlayın.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/1#learningresource"
+        "@id": "https://mathematives.com/sayi/1#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/1#breadcrumb"
+        "@id": "https://mathematives.com/sayi/1#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/1#breadcrumb",
+      "@id": "https://mathematives.com/sayi/1#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/1",
+            "@id": "https://mathematives.com/sayi/1",
             "name": "1 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/1#learningresource",
+      "@id": "https://mathematives.com/sayi/1#learningresource",
       "name": "1 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "1 ile çarpma özdeşlik özelliği: 1 ile çarpılan her sayı kendisine eşittir. Çarpmanın temel kurallarını öğrenin.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

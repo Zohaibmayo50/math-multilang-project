@@ -1,4 +1,4 @@
-# Deployment Guide - Multilingual Architecture
+﻿# Deployment Guide - Multilingual Architecture
 
 ## Pre-Deployment Checklist
 
@@ -85,23 +85,23 @@ vercel --prod
 ### 1. Check Main Routes
 
 Visit these URLs on your production domain:
-- `https://carpimtablosu.com.tr/`
-- `https://carpimtablosu.com.tr/tr/carpim-tablosu`
-- `https://carpimtablosu.com.tr/tr/carpim-tablosu/1-10`
-- `https://carpimtablosu.com.tr/tr/carpim-tablosu/1`
+- `https://mathematives.com/`
+- `https://mathematives.com/tr/carpim-tablosu`
+- `https://mathematives.com/tr/carpim-tablosu/1-10`
+- `https://mathematives.com/tr/carpim-tablosu/1`
 
 ### 2. Verify Hreflang Tags
 
 View page source on any Turkish page and check for:
 ```html
-<link rel="alternate" hreflang="tr" href="https://carpimtablosu.com.tr/tr/carpim-tablosu/..." />
-<link rel="alternate" hreflang="es" href="https://carpimtablosu.com.tr/es/tablas-de-multiplicar/..." />
-<link rel="alternate" hreflang="de" href="https://carpimtablosu.com.tr/de/einmaleins/..." />
-<link rel="alternate" hreflang="x-default" href="https://carpimtablosu.com.tr" />
+<link rel="alternate" hreflang="tr" href="https://mathematives.com/tr/carpim-tablosu/..." />
+<link rel="alternate" hreflang="es" href="https://mathematives.com/es/tablas-de-multiplicar/..." />
+<link rel="alternate" hreflang="de" href="https://mathematives.com/de/einmaleins/..." />
+<link rel="alternate" hreflang="x-default" href="https://mathematives.com" />
 ```
 
 ### 3. Check Sitemap
-- Visit `https://carpimtablosu.com.tr/sitemap.xml`
+- Visit `https://mathematives.com/sitemap.xml`
 - Verify it contains ~343 URLs
 - Check Turkish, Spanish, and German URLs are present
 
@@ -236,7 +236,7 @@ Fix any type errors and rebuild.
 
 ## Success Indicators
 
-✅ Deployment successful when:
+âœ… Deployment successful when:
 - Build completes without errors
 - All routes accessible
 - Hreflang tags present
@@ -247,6 +247,6 @@ Fix any type errors and rebuild.
 
 ---
 
-**Ready to Deploy!** 🚀
+**Ready to Deploy!** ðŸš€
 
 All migrations complete. Code is production-ready.

@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/27#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/27",
+      "@id": "https://mathematives.com/sayi/27#webpage",
+      "url": "https://mathematives.com/sayi/27",
       "name": "27 Çarpım Tablosu - 3 Küp Kavramı",
       "description": "27 çarpım tablosu ile 3³=27 küp kavramını öğrenin. 3×9 ilişkisi ve geometrik desenler.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/27#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/27#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/27#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/27#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/27#breadcrumb",
+      "@id": "https://mathematives.com/sayi/27#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/21-30", "name": "21-30 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/27", "name": "27 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/21-30", "name": "21-30 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/27", "name": "27 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/27#learningresource",
+      "@id": "https://mathematives.com/sayi/27#learningresource",
       "name": "27 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "27 ile çarpma: 3 küp (3³=27), 3×9 ilişkisi ve ileri seviye çarpma becerileri.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/21-30#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/21-30#learningresource"}
     }
   ]
 }

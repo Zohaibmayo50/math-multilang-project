@@ -143,7 +143,7 @@ export default function FooterSv() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              © {currentYear} Multiplikationstabeller. Alla rättigheter förbehållna.
+              © {currentYear} Mathematives. Alla rättigheter förbehållna.
             </p>
             <div className="flex items-center gap-4 text-sm text-slate-400">
               <span>Vi Gör Matematik Roligt För Alla 🎓</span>

@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/32#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/32",
+      "@id": "https://mathematives.com/sayi/32#webpage",
+      "url": "https://mathematives.com/sayi/32",
       "name": "32 Çarpım Tablosu - 2 Üssü 5",
       "description": "32 çarpım tablosu ile 2⁵=32 kavramını öğrenin. İkinin kuvvetleri ve geometrik desenler.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/32#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/32#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/32#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/32#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/32#breadcrumb",
+      "@id": "https://mathematives.com/sayi/32#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/31-40", "name": "31-40 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/32", "name": "32 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/31-40", "name": "31-40 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/32", "name": "32 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/32#learningresource",
+      "@id": "https://mathematives.com/sayi/32#learningresource",
       "name": "32 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "32 ile çarpma: 2 üssü 5 (2⁵=32), ikinin kuvvetleri ve 4×8 ilişkisi.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/31-40#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/31-40#learningresource"}
     }
   ]
 }

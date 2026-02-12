@@ -1,34 +1,34 @@
-import NumberPage from '../../components/NumberPage'
+﻿import NumberPage from '../../components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/4#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/4",
+      "@id": "https://mathematives.com/sayi/4#webpage",
+      "url": "https://mathematives.com/sayi/4",
       "name": "4 Çarpım Tablosu - Dörtlü Desenler",
       "description": "4 çarpım tablosu ile ikiye katlama tekniklerini ve dörtgen şekil ilişkilerini öğrenin. 2 tablosunu ikiye katlayarak 4 tablosunu keşfedin.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/4#learningresource"
+        "@id": "https://mathematives.com/sayi/4#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/4#breadcrumb"
+        "@id": "https://mathematives.com/sayi/4#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/4#breadcrumb",
+      "@id": "https://mathematives.com/sayi/4#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/4",
+            "@id": "https://mathematives.com/sayi/4",
             "name": "4 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/4#learningresource",
+      "@id": "https://mathematives.com/sayi/4#learningresource",
       "name": "4 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "4 ile çarpma: İkiye katlama stratejisi (2×2=4), dörtgen şekiller ve geometrik desenler ile 4 tablosunu anlayın.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

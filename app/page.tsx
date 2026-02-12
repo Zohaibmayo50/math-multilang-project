@@ -3,10 +3,10 @@ import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
-  title: 'Multiplication Tables - Learn in Your Language',
+  title: 'Mathematives - Learn Multiplication Tables in Your Language',
   description: 'Learn multiplication tables in your language. Interactive lessons and practice for English, Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, Portuguese, Polish, and Indonesian.',
   alternates: {
-    canonical: 'https://math-multilang-project.vercel.app',
+    canonical: 'https://mathematives.com',
   },
   robots: {
     index: true,
@@ -107,7 +107,7 @@ export default function LanguageSelector() {
       <div className="max-w-4xl w-full">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
-            Multiplication Tables
+            Mathematives
           </h1>
           <p className="text-xl text-slate-600">
             Choose your language to start learning
@@ -139,7 +139,7 @@ export default function LanguageSelector() {
 
         <div className="text-center mt-12">
           <p className="text-sm text-slate-500">
-            Interactive learning platform for multiplication tables 1-100
+            Mathematives - Interactive learning platform for multiplication tables 1-100
           </p>
         </div>
       </div>

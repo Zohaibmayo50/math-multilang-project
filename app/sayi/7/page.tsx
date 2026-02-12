@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/7#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/7",
+      "@id": "https://mathematives.com/sayi/7#webpage",
+      "url": "https://mathematives.com/sayi/7",
       "name": "7 Çarpım Tablosu - Yedili Sistemler",
       "description": "7 çarpım tablosu ile yedili sayma desenlerini öğrenin. Hafta günleri ve periyodik desenlerle pratik uygulamalar.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/7#learningresource"
+        "@id": "https://mathematives.com/sayi/7#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/7#breadcrumb"
+        "@id": "https://mathematives.com/sayi/7#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/7#breadcrumb",
+      "@id": "https://mathematives.com/sayi/7#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/7",
+            "@id": "https://mathematives.com/sayi/7",
             "name": "7 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/7#learningresource",
+      "@id": "https://mathematives.com/sayi/7#learningresource",
       "name": "7 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "7 ile çarpma: Yedili sayma, hafta günleri ilişkisi ve zorlayıcı ama düzenli desenleri ile 7 tablosunu keşfedin.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

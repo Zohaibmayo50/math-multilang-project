@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/15#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/15",
+      "@id": "https://mathematives.com/sayi/15#webpage",
+      "url": "https://mathematives.com/sayi/15",
       "name": "15 Çarpım Tablosu - Çeyrek Saat Kavramı",
       "description": "15 çarpım tablosu ile çeyrek saat ve zaman okumasını öğrenin. 3×5 ilişkisi ve pratik stratejilerle 15 ile çarpma.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/15#learningresource"
+        "@id": "https://mathematives.com/sayi/15#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/15#breadcrumb"
+        "@id": "https://mathematives.com/sayi/15#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/15#breadcrumb",
+      "@id": "https://mathematives.com/sayi/15#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/11-20",
+            "@id": "https://mathematives.com/11-20",
             "name": "11-20 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/15",
+            "@id": "https://mathematives.com/sayi/15",
             "name": "15 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/15#learningresource",
+      "@id": "https://mathematives.com/sayi/15#learningresource",
       "name": "15 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "15 ile çarpma: Çeyrek saat (15 dakika), 3×5 ilişkisi, 5'in son rakam deseni (5-0-5-0) ve saat okuma uygulamaları.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       }
     }
   ]

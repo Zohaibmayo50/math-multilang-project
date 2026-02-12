@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/33#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/33",
+      "@id": "https://mathematives.com/sayi/33#webpage",
+      "url": "https://mathematives.com/sayi/33",
       "name": "33 Çarpım Tablosu - 3×11 İlişkisi",
       "description": "33 çarpım tablosu ile 3×11 ilişkisini öğrenin. Basamak desenleri ve çarpma stratejileri.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/33#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/33#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/33#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/33#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/33#breadcrumb",
+      "@id": "https://mathematives.com/sayi/33#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/31-40", "name": "31-40 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/33", "name": "33 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/31-40", "name": "31-40 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/33", "name": "33 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/33#learningresource",
+      "@id": "https://mathematives.com/sayi/33#learningresource",
       "name": "33 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "33 ile çarpma: 3 ve 11 tablolarının birleşimi (3×11=33), çift basamak desenleri.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/31-40#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/31-40#learningresource"}
     }
   ]
 }

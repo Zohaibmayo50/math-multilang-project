@@ -1,25 +1,25 @@
-import RangePage from '../components/RangePage'
+﻿import RangePage from '../components/RangePage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/11-20#webpage",
-      "url": "https://carpimtablosu.com.tr/11-20",
+      "@id": "https://mathematives.com/11-20#webpage",
+      "url": "https://mathematives.com/11-20",
       "name": "11-20 Çarpım Tablosu - Orta Seviye",
       "description": "11'den 20'ye kadar çarpım tablolarını öğrenin. İki basamaklı sayıların çarpımı için interaktif alıştırmalar ve oyunlar.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/11-20#learningresource",
+      "@id": "https://mathematives.com/11-20#learningresource",
       "name": "11-20 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "İki basamaklı sayılarla çarpım: 11'den 20'ye kadar olan sayıların çarpım tablolarını pratik alıştırmalar ve interaktif oyunlar ile öğrenin.",
       "educationalLevel": "Intermediate",

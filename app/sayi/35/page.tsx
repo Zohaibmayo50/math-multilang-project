@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/35#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/35",
+      "@id": "https://mathematives.com/sayi/35#webpage",
+      "url": "https://mathematives.com/sayi/35",
       "name": "35 Çarpım Tablosu - 5×7 İlişkisi",
       "description": "35 çarpım tablosu ile 5×7 ilişkisini öğrenin. Hafta ve beşlik sistem bağlantıları.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/35#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/35#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/35#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/35#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/35#breadcrumb",
+      "@id": "https://mathematives.com/sayi/35#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/31-40", "name": "31-40 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/35", "name": "35 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/31-40", "name": "31-40 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/35", "name": "35 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/35#learningresource",
+      "@id": "https://mathematives.com/sayi/35#learningresource",
       "name": "35 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "35 ile çarpma: 5×7 ilişkisi, beşlik ve yedilik sistem bağlantıları, pratik uygulamalar.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/31-40#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/31-40#learningresource"}
     }
   ]
 }

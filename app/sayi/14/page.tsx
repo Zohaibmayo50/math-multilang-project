@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/14#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/14",
+      "@id": "https://mathematives.com/sayi/14#webpage",
+      "url": "https://mathematives.com/sayi/14",
       "name": "14 Çarpım Tablosu - İki Haftalık Döngü",
       "description": "14 çarpım tablosu ile hafta ve zaman kavramlarını öğrenin. 7×2 ilişkisi ve pratik stratejilerle 14 ile çarpma.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/14#learningresource"
+        "@id": "https://mathematives.com/sayi/14#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/14#breadcrumb"
+        "@id": "https://mathematives.com/sayi/14#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/14#breadcrumb",
+      "@id": "https://mathematives.com/sayi/14#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/11-20",
+            "@id": "https://mathematives.com/11-20",
             "name": "11-20 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/14",
+            "@id": "https://mathematives.com/sayi/14",
             "name": "14 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/14#learningresource",
+      "@id": "https://mathematives.com/sayi/14#learningresource",
       "name": "14 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "14 ile çarpma: İki hafta (14 gün), 7×2 ilişkisi, çift sayı desenleri ve günlük hayat uygulamaları.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       }
     }
   ]

@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/50#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/50",
+      "@id": "https://mathematives.com/sayi/50#webpage",
+      "url": "https://mathematives.com/sayi/50",
       "name": "50 Çarpım Tablosu - Yarım ve Yüzde Kavramı",
       "description": "50 çarpım tablosu ile yarım (1/2) kavramı ve yüzde hesaplamalarını öğrenin. 100'ün yarısı olarak pratik hesaplama yöntemleri.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/50#learningresource"
+        "@id": "https://mathematives.com/sayi/50#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/50#breadcrumb"
+        "@id": "https://mathematives.com/sayi/50#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/50#breadcrumb",
+      "@id": "https://mathematives.com/sayi/50#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/41-50",
+            "@id": "https://mathematives.com/41-50",
             "name": "41-50 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/50",
+            "@id": "https://mathematives.com/sayi/50",
             "name": "50 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/50#learningresource",
+      "@id": "https://mathematives.com/sayi/50#learningresource",
       "name": "50 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "50 ile çarpma: Yarım (1/2) kavramı, yüzde hesaplamaları (50%=1/2), 100'ün yarısı stratejisi ve 5×10 ilişkisi.",
       "educationalLevel": "Intermediate",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/41-50#learningresource"
+        "@id": "https://mathematives.com/41-50#learningresource"
       }
     }
   ]

@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/9#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/9",
+      "@id": "https://mathematives.com/sayi/9#webpage",
+      "url": "https://mathematives.com/sayi/9",
       "name": "9 Çarpım Tablosu - Dokuzlu Sihirli Desenler",
       "description": "9 çarpım tablosu ile parmak triklerini ve basamak toplama sihirli kurallarını öğrenin. En eğlenceli çarpım tablosu desenlerini keşfedin.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/9#learningresource"
+        "@id": "https://mathematives.com/sayi/9#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/9#breadcrumb"
+        "@id": "https://mathematives.com/sayi/9#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/9#breadcrumb",
+      "@id": "https://mathematives.com/sayi/9#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/9",
+            "@id": "https://mathematives.com/sayi/9",
             "name": "9 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/9#learningresource",
+      "@id": "https://mathematives.com/sayi/9#learningresource",
       "name": "9 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "9 ile çarpma: Parmak trikleri, basamak toplama kuralı (sonuçların rakamları toplamı=9), 10-1 ilişkisi ve sihirli desenler.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

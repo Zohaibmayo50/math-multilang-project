@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/13#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/13",
+      "@id": "https://mathematives.com/sayi/13#webpage",
+      "url": "https://mathematives.com/sayi/13",
       "name": "13 Çarpım Tablosu - Uğurlu Sayı Desenleri",
       "description": "13 çarpım tablosu ile matematik becerilerinizi geliştirin. Desenler ve kolay stratejilerle 13 ile çarpma işleminde ustalaşın.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/13#learningresource"
+        "@id": "https://mathematives.com/sayi/13#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/13#breadcrumb"
+        "@id": "https://mathematives.com/sayi/13#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/13#breadcrumb",
+      "@id": "https://mathematives.com/sayi/13#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/11-20",
+            "@id": "https://mathematives.com/11-20",
             "name": "11-20 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/13",
+            "@id": "https://mathematives.com/sayi/13",
             "name": "13 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/13#learningresource",
+      "@id": "https://mathematives.com/sayi/13#learningresource",
       "name": "13 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "13 ile çarpma: Asal sayı özellikleri, zihinsel matematik stratejileri, 10+3 ayrıştırma yöntemi.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       }
     }
   ]

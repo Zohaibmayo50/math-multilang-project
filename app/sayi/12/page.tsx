@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/12#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/12",
+      "@id": "https://mathematives.com/sayi/12#webpage",
+      "url": "https://mathematives.com/sayi/12",
       "name": "12 Çarpım Tablosu - Düzine Kavramı",
       "description": "12 çarpım tablosu ile düzine kavramını öğrenin. Saat sistemi ve günlük hayatta sıkça kullanılan 12 tablosunda ustalaşın.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/12#learningresource"
+        "@id": "https://mathematives.com/sayi/12#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/12#breadcrumb"
+        "@id": "https://mathematives.com/sayi/12#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/12#breadcrumb",
+      "@id": "https://mathematives.com/sayi/12#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/11-20",
+            "@id": "https://mathematives.com/11-20",
             "name": "11-20 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/12",
+            "@id": "https://mathematives.com/sayi/12",
             "name": "12 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/12#learningresource",
+      "@id": "https://mathematives.com/sayi/12#learningresource",
       "name": "12 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "12 ile çarpma: Düzine kavramı, saat sistemi (12 saat), 3×4 ilişkisi ve günlük hayat uygulamaları.",
       "educationalLevel": "Intermediate",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       }
     }
   ]

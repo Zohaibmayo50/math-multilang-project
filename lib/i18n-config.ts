@@ -41,62 +41,62 @@ export const siteConfig: Record<Locale, {
   description: string
 }> = {
   tr: {
-    domain: 'https://carpimtablosu.com.tr',
+    domain: 'https://mathematives.com',
     name: 'Çarpım Tablosu',
     description: '1\'den 100\'e kadar çarpım tablolarını öğrenmek için interaktif eğitim platformu.',
   },
   es: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Tablas de Multiplicar',
     description: 'Plataforma educativa interactiva para aprender las tablas de multiplicar del 1 al 100.',
   },
   de: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Einmaleins',
     description: 'Interaktive Lernplattform für das Einmaleins von 1 bis 100.',
   },
   cs: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Násobilka',
     description: 'Interaktivní vzdělávací platforma pro učení násobilky od 1 do 100.',
   },
   uk: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Таблиця множення',
     description: 'Інтерактивна освітня платформа для вивчення таблиці множення від 1 до 100.',
   },
   fi: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Kertotaulut',
     description: 'Interaktiivinen oppimisalusta kertotaulujen oppimiseen 1:stä 100:aan.',
   },
   fr: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Table de Multiplication',
     description: 'Plateforme éducative interactive pour apprendre les tables de multiplication de 1 à 100.',
   },
   sv: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Multiplikationstabeller',
     description: 'Interaktiv utbildningsplattform för att lära sig multiplikationstabeller från 1 till 100.',
   },
   pt: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Tabuada',
     description: 'Plataforma educacional interativa para aprender a tabuada de 1 a 100.',
   },
   en: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Multiplication Tables',
     description: 'Interactive learning platform for mastering multiplication tables from 1 to 100.',
   },
   pl: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Tabliczki Mnożenia',
     description: 'Interaktywna platforma edukacyjna do nauki tabliczki mnożenia od 1 do 100.',
   },
   id: {
-    domain: 'https://multilang-math.com',
+    domain: 'https://mathematives.com',
     name: 'Tabel Perkalian',
     description: 'Platform pembelajaran interaktif untuk menguasai tabel perkalian dari 1 hingga 100.',
   },

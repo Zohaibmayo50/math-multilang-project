@@ -1,34 +1,34 @@
-import NumberPage from '../../components/NumberPage'
+﻿import NumberPage from '../../components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/2#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/2",
+      "@id": "https://mathematives.com/sayi/2#webpage",
+      "url": "https://mathematives.com/sayi/2",
       "name": "2 Çarpım Tablosu - İkişerli Sayma",
       "description": "2 çarpım tablosu ile ikişerli sayma ve ikiye katlama becerilerini geliştirin. Çift sayı desenleri ve pratik stratejilerle öğrenin.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/2#learningresource"
+        "@id": "https://mathematives.com/sayi/2#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/2#breadcrumb"
+        "@id": "https://mathematives.com/sayi/2#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/2#breadcrumb",
+      "@id": "https://mathematives.com/sayi/2#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/2",
+            "@id": "https://mathematives.com/sayi/2",
             "name": "2 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/2#learningresource",
+      "@id": "https://mathematives.com/sayi/2#learningresource",
       "name": "2 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "2 ile çarpma: İkişerli sayma, ikiye katlama ve çift sayı desenleri ile 2 çarpım tablosunu öğrenin.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

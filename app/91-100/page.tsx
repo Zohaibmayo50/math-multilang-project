@@ -1,25 +1,25 @@
-import RangePage from '../components/RangePage'
+﻿import RangePage from '../components/RangePage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/91-100#webpage",
-      "url": "https://carpimtablosu.com.tr/91-100",
+      "@id": "https://mathematives.com/91-100#webpage",
+      "url": "https://mathematives.com/91-100",
       "name": "91-100 Çarpım Tablosu - İleri Seviye",
       "description": "91'den 100'e kadar çarpım tablolarını öğrenin. En ileri seviye çarpım tabloları için kapsamlı eğitim kaynakları.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/91-100#learningresource"
+        "@id": "https://mathematives.com/91-100#learningresource"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/91-100#learningresource",
+      "@id": "https://mathematives.com/91-100#learningresource",
       "name": "91-100 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "En ileri seviye çarpım tabloları: 91'den 100'e kadar olan sayıların çarpım tablolarını pratik alıştırmalar ile öğrenin. 100 çarpım tablosu ile çarpma becerilerini tamamlayın.",
       "educationalLevel": "Advanced",

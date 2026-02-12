@@ -1,25 +1,25 @@
-import RangePage from '../components/RangePage'
+﻿import RangePage from '../components/RangePage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/51-60#webpage",
-      "url": "https://carpimtablosu.com.tr/51-60",
+      "@id": "https://mathematives.com/51-60#webpage",
+      "url": "https://mathematives.com/51-60",
       "name": "51-60 Çarpım Tablosu - İleri Seviye",
       "description": "51'den 60'a kadar çarpım tablolarını öğrenin. İleri seviye öğrenciler için büyük sayılarla çarpma pratikleri.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/51-60#learningresource"
+        "@id": "https://mathematives.com/51-60#learningresource"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/51-60#learningresource",
+      "@id": "https://mathematives.com/51-60#learningresource",
       "name": "51-60 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "İleri seviye çarpım tabloları: 51'den 60'a kadar olan sayıların çarpım tablolarını pratik alıştırmalar ile öğrenin.",
       "educationalLevel": "Advanced",

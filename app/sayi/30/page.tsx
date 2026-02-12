@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/30#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/30",
+      "@id": "https://mathematives.com/sayi/30#webpage",
+      "url": "https://mathematives.com/sayi/30",
       "name": "30 Çarpım Tablosu - Yarım Saat Kavramı",
       "description": "30 çarpım tablosu ile yarım saat (30 dakika) ve ay kavramlarını öğrenin. 3×10, 5×6 ilişkileri.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/30#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/30#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/30#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/30#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/30#breadcrumb",
+      "@id": "https://mathematives.com/sayi/30#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/21-30", "name": "21-30 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/30", "name": "30 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/21-30", "name": "21-30 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/30", "name": "30 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/30#learningresource",
+      "@id": "https://mathematives.com/sayi/30#learningresource",
       "name": "30 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "30 ile çarpma: Yarım saat (30 dakika), ay günleri (~30 gün), 3×10 ve 5×6 çarpan ilişkileri.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study", "real-world application"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/21-30#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/21-30#learningresource"}
     }
   ]
 }

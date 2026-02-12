@@ -1,31 +1,31 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/34#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/34",
+      "@id": "https://mathematives.com/sayi/34#webpage",
+      "url": "https://mathematives.com/sayi/34",
       "name": "34 Çarpım Tablosu - 2×17 İlişkisi",
       "description": "34 çarpım tablosu ile 2×17 ilişkisini öğrenin. Çift sayı desenleri ve çarpma becerileri.",
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/#website"},
-      "about": {"@id": "https://carpimtablosu.com.tr/sayi/34#learningresource"},
-      "breadcrumb": {"@id": "https://carpimtablosu.com.tr/sayi/34#breadcrumb"},
+      "isPartOf": {"@id": "https://mathematives.com/#website"},
+      "about": {"@id": "https://mathematives.com/sayi/34#learningresource"},
+      "breadcrumb": {"@id": "https://mathematives.com/sayi/34#breadcrumb"},
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/34#breadcrumb",
+      "@id": "https://mathematives.com/sayi/34#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem", "position": 1, "item": {"@id": "https://carpimtablosu.com.tr/", "name": "Ana Sayfa"}},
-        {"@type": "ListItem", "position": 2, "item": {"@id": "https://carpimtablosu.com.tr/31-40", "name": "31-40 Çarpım Tablosu"}},
-        {"@type": "ListItem", "position": 3, "item": {"@id": "https://carpimtablosu.com.tr/sayi/34", "name": "34 Çarpım Tablosu"}}
+        {"@type": "ListItem", "position": 1, "item": {"@id": "https://mathematives.com/", "name": "Ana Sayfa"}},
+        {"@type": "ListItem", "position": 2, "item": {"@id": "https://mathematives.com/31-40", "name": "31-40 Çarpım Tablosu"}},
+        {"@type": "ListItem", "position": 3, "item": {"@id": "https://mathematives.com/sayi/34", "name": "34 Çarpım Tablosu"}}
       ]
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/34#learningresource",
+      "@id": "https://mathematives.com/sayi/34#learningresource",
       "name": "34 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "34 ile çarpma: 2×17 ilişkisi, çift sayı özellikleri ve ikiye katlama.",
       "educationalLevel": "Intermediate",
@@ -35,7 +35,7 @@ const schemaData = {
       "inLanguage": "tr-TR",
       "educationalUse": ["practice", "self-study"],
       "audience": {"@type": "EducationalAudience", "educationalRole": ["student"]},
-      "isPartOf": {"@id": "https://carpimtablosu.com.tr/31-40#learningresource"}
+      "isPartOf": {"@id": "https://mathematives.com/31-40#learningresource"}
     }
   ]
 }

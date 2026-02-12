@@ -1,25 +1,25 @@
-import RangePage from '../components/RangePage'
+﻿import RangePage from '../components/RangePage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/41-50#webpage",
-      "url": "https://carpimtablosu.com.tr/41-50",
+      "@id": "https://mathematives.com/41-50#webpage",
+      "url": "https://mathematives.com/41-50",
       "name": "41-50 Çarpım Tablosu - Orta Seviye",
       "description": "41'den 50'ye kadar çarpım tablolarını öğrenin. Orta seviye matematik becerilerini geliştirmek için kapsamlı eğitim materyalleri.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/41-50#learningresource"
+        "@id": "https://mathematives.com/41-50#learningresource"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/41-50#learningresource",
+      "@id": "https://mathematives.com/41-50#learningresource",
       "name": "41-50 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "Orta seviye çarpım tabloları: 41'den 50'ye kadar olan sayıların çarpım tablolarını pratik alıştırmalar ile öğrenin.",
       "educationalLevel": "Intermediate",

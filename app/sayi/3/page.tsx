@@ -1,34 +1,34 @@
-import NumberPage from '../../components/NumberPage'
+﻿import NumberPage from '../../components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/3#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/3",
+      "@id": "https://mathematives.com/sayi/3#webpage",
+      "url": "https://mathematives.com/sayi/3",
       "name": "3 Çarpım Tablosu - Üçerli Sayma",
       "description": "3 çarpım tablosu ile üçerli sayma ve basamak toplama desenlerini öğrenin. Ügenler ve geometrik şekillerde uygulayın.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/3#learningresource"
+        "@id": "https://mathematives.com/sayi/3#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/3#breadcrumb"
+        "@id": "https://mathematives.com/sayi/3#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/3#breadcrumb",
+      "@id": "https://mathematives.com/sayi/3#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/1-10",
+            "@id": "https://mathematives.com/1-10",
             "name": "1-10 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/3",
+            "@id": "https://mathematives.com/sayi/3",
             "name": "3 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/3#learningresource",
+      "@id": "https://mathematives.com/sayi/3#learningresource",
       "name": "3 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "3 ile çarpma: Üçerli sayma, basamak toplama desenleri ve geometrik şekil ilişkileri ile 3 tablosunu öğrenin.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/1-10#learningresource"
+        "@id": "https://mathematives.com/1-10#learningresource"
       }
     }
   ]

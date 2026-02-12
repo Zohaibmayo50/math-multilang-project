@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Header from '../components/uk/Header';
 import Footer from '@/app/components/uk/Footer';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Посібник з Таблиці Множення Для Вчителів',
     description: 'Комплексні ресурси для вчителів для ефективного викладання таблиці множення.',
-    url: 'https://multilang-math.com/dlya-vchyteliv',
+    url: 'https://mathematives.com/dlya-vchyteliv',
     siteName: 'Таблиця Множення',
     locale: 'uk_UA',
     type: 'website',

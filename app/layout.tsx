@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://carpimtablosu.com.tr'),
+  metadataBase: new URL('https://mathematives.com'),
   title: {
-    template: '%s | Multiplication Tables',
-    default: 'Multiplication Tables | Learn in Your Language'
+    template: '%s | Mathematives',
+    default: 'Mathematives | Learn Multiplication Tables in Your Language'
   },
   description: 'Learn multiplication tables in multiple languages. Interactive exercises, educational games, and printable worksheets for children.',
   keywords: 'multiplication tables, çarpım tablosu, tablas de multiplicar, einmaleins, math learning',

@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/11#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/11",
+      "@id": "https://mathematives.com/sayi/11#webpage",
+      "url": "https://mathematives.com/sayi/11",
       "name": "11 Çarpım Tablosu - İki Basamaklı Sayılara Giriş",
       "description": "11 çarpım tablosu ile iki basamaklı sayılara geçiş yapın. Kolay desen ve stratejilerle 11 ile çarpma işlemini öğrenin.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/11#learningresource"
+        "@id": "https://mathematives.com/sayi/11#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/11#breadcrumb"
+        "@id": "https://mathematives.com/sayi/11#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/11#breadcrumb",
+      "@id": "https://mathematives.com/sayi/11#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/11-20",
+            "@id": "https://mathematives.com/11-20",
             "name": "11-20 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/11",
+            "@id": "https://mathematives.com/sayi/11",
             "name": "11 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/11#learningresource",
+      "@id": "https://mathematives.com/sayi/11#learningresource",
       "name": "11 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "11 ile çarpma: İki basamaklı sayılara giriş, rakam tekrarı deseni (11×2=22, 11×3=33), kolay ezber stratejileri.",
       "educationalLevel": "Beginner",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/11-20#learningresource"
+        "@id": "https://mathematives.com/11-20#learningresource"
       }
     }
   ]

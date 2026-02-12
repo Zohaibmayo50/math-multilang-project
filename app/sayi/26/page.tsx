@@ -1,34 +1,34 @@
-import NumberPage from '@/app/components/NumberPage'
+﻿import NumberPage from '@/app/components/NumberPage'
 
 const schemaData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://carpimtablosu.com.tr/sayi/26#webpage",
-      "url": "https://carpimtablosu.com.tr/sayi/26",
+      "@id": "https://mathematives.com/sayi/26#webpage",
+      "url": "https://mathematives.com/sayi/26",
       "name": "26 Çarpım Tablosu - İki Kat 13",
       "description": "26 çarpım tablosu ile 2×13 ilişkisini ve çift sayı desenlerini öğrenin. Orta seviye çarpma becerileri.",
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/#website"
+        "@id": "https://mathematives.com/#website"
       },
       "about": {
-        "@id": "https://carpimtablosu.com.tr/sayi/26#learningresource"
+        "@id": "https://mathematives.com/sayi/26#learningresource"
       },
       "breadcrumb": {
-        "@id": "https://carpimtablosu.com.tr/sayi/26#breadcrumb"
+        "@id": "https://mathematives.com/sayi/26#breadcrumb"
       },
       "inLanguage": "tr-TR"
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://carpimtablosu.com.tr/sayi/26#breadcrumb",
+      "@id": "https://mathematives.com/sayi/26#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/",
+            "@id": "https://mathematives.com/",
             "name": "Ana Sayfa"
           }
         },
@@ -36,7 +36,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/21-30",
+            "@id": "https://mathematives.com/21-30",
             "name": "21-30 Çarpım Tablosu"
           }
         },
@@ -44,7 +44,7 @@ const schemaData = {
           "@type": "ListItem",
           "position": 3,
           "item": {
-            "@id": "https://carpimtablosu.com.tr/sayi/26",
+            "@id": "https://mathematives.com/sayi/26",
             "name": "26 Çarpım Tablosu"
           }
         }
@@ -52,7 +52,7 @@ const schemaData = {
     },
     {
       "@type": "LearningResource",
-      "@id": "https://carpimtablosu.com.tr/sayi/26#learningresource",
+      "@id": "https://mathematives.com/sayi/26#learningresource",
       "name": "26 Çarpım Tablosu Öğrenme Kaynağı",
       "description": "26 ile çarpma: 2 ve 13 tablolarının birleşimi (2×13=26), çift sayı desenleri.",
       "educationalLevel": "Intermediate",
@@ -66,7 +66,7 @@ const schemaData = {
         "educationalRole": ["student"]
       },
       "isPartOf": {
-        "@id": "https://carpimtablosu.com.tr/21-30#learningresource"
+        "@id": "https://mathematives.com/21-30#learningresource"
       }
     }
   ]

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Header from '../components/fi/Header';
 import Footer from '@/app/components/fi/Footer';
 import Link from 'next/link';
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kertotaulut Opettajille | Opetusstrategiat',
     description: 'Kattavat resurssit opettajille kertotaulujen tehokkaaseen opettamiseen.',
-    url: 'https://multilang-math.com/opettajille',
+    url: 'https://mathematives.com/opettajille',
     siteName: 'Kertotaulut',
     locale: 'fi_FI',
     type: 'website',
