@@ -167,6 +167,19 @@ const nextConfig = {
       { source: '/sayi/:slug(.*%7B.*)', destination: '/', permanent: true },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
