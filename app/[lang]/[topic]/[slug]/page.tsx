@@ -39,10 +39,6 @@ import { numberTitles as numberTitlesEn, numberDescriptions as numberDescription
 import { numberTitlesPl, numberDescriptionsPl, numberSpecialPropertiesPl } from '@/lib/number-metadata-pl'
 import { numberTitlesId, numberDescriptionsId, numberSpecialPropertiesId } from '@/lib/number-metadata-id'
 
-// TODO: Guide pages temporarilyisabled for restructuring
-// Will be re-added as proper components after routing is stable
-
-/*
 // Import Turkish guide page components
 import ForStudents from '@/app/_guide-components/ogrenciler-icin/page'
 import ForTeachers from '@/app/_guide-components/ogretmenler-icin/page'
@@ -102,7 +98,6 @@ import DlaRodzicwPl from '@/app/_guide-components/dla-rodzicow/page'
 import UntukSiswa from '@/app/_guide-components/untuk-siswa/page'
 import UntukGuru from '@/app/_guide-components/untuk-guru/page'
 import UntukOrangTua from '@/app/_guide-components/untuk-orang-tua/page'
-*/
 
 interface PageProps {
   params: {
@@ -1347,8 +1342,6 @@ const guideMetadataId: Record<string, {
   },
 }
 
-// TODO: Guide components temporarily disabled
-/*
 const guideComponents: Record<string, any> = {
   'for-students': ForStudentsEn,
   'for-teachers': ForTeachersEn,
@@ -1387,13 +1380,13 @@ const guideComponents: Record<string, any> = {
   'untuk-guru': UntukGuru,
   'untuk-orang-tua': UntukOrangTua,
 }
-*/
 
 // Determine slug type
-function getSlugType(slug: string, locale: Locale): 'range' | 'number' | null {
+function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide' | null {
   if (/^\d+-\d+$/.test(slug)) return 'range'
   if (/^\d+$/.test(slug)) return 'number'
-  // TODO: Guide pages temporarily disabled
+  const localeGuides = guides[locale]
+  if (localeGuides && Object.values(localeGuides).includes(slug)) return 'guide'
   return null
 }
 
@@ -1428,11 +1421,10 @@ export async function generateStaticParams() {
       params.push({ lang, topic, slug: number })
     })
     
-    // TODO: Guide pages temporarily disabled
-    // const localeGuides = guides[locale]
-    // Object.values(localeGuides).forEach(guide => {
-    //   params.push({ lang, topic, slug: guide })
-    // })
+    const localeGuides = guides[locale]
+    Object.values(localeGuides).forEach(guide => {
+      params.push({ lang, topic, slug: guide })
+    })
   })
 
   return params
