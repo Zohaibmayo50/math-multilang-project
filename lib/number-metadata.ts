@@ -1,20 +1,20 @@
 // Number-specific metadata for Turkish language
 export const numberTitles: Record<number, string> = {
-  1: '1 Çarpım Tablosu | 1 İle Çarpmayı Öğrenin',
-  2: '2 Çarpım Tablosu | 2 İle Çarpmayı Öğrenin',
-  3: '3 Çarpım Tablosu | 3 İle Çarpmayı Öğrenin',
-  4: '4 Çarpım Tablosu | 4 İle Çarpmayı Öğrenin',
-  5: '5 Çarpım Tablosu | 5 İle Çarpmayı Öğrenin',
-  6: '6 Çarpım Tablosu | 6 İle Çarpmayı Öğrenin',
-  7: '7 Çarpım Tablosu | 7 İle Çarpmayı Öğrenin',
-  8: '8 Çarpım Tablosu | 8 İle Çarpmayı Öğrenin',
-  9: '9 Çarpım Tablosu | 9 İle Çarpmayı Öğrenin',
-  10: '10 Çarpım Tablosu | 10 İle Çarpmayı Öğrenin',
+  1: '1 Çarpım Tablosu',
+  2: '2 Çarpım Tablosu',
+  3: '3 Çarpım Tablosu',
+  4: '4 Çarpım Tablosu',
+  5: '5 Çarpım Tablosu',
+  6: '6 Çarpım Tablosu',
+  7: '7 Çarpım Tablosu',
+  8: '8 Çarpım Tablosu',
+  9: '9 Çarpım Tablosu',
+  10: '10 Çarpım Tablosu',
 }
 
 // Generate titles for 11-100 (following the pattern)
 for (let i = 11; i <= 100; i++) {
-  numberTitles[i] = `${i} Çarpım Tablosu | ${i} İle Çarpmayı Öğrenin`
+  numberTitles[i] = `${i} Çarpım Tablosu`
 }
 
 export const numberDescriptions: Record<number, string> = {

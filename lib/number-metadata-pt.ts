@@ -1,20 +1,20 @@
 // Number-specific metadata for Portuguese language (Brazilian Portuguese primary)
 export const numberTitlesPt: Record<number, string> = {
-  1: '1 Tabuada | Aprenda a Multiplicar por 1',
-  2: '2 Tabuada | Aprenda a Multiplicar por 2',
-  3: '3 Tabuada | Aprenda a Multiplicar por 3',
-  4: '4 Tabuada | Aprenda a Multiplicar por 4',
-  5: '5 Tabuada | Aprenda a Multiplicar por 5',
-  6: '6 Tabuada | Aprenda a Multiplicar por 6',
-  7: '7 Tabuada | Aprenda a Multiplicar por 7',
-  8: '8 Tabuada | Aprenda a Multiplicar por 8',
-  9: '9 Tabuada | Aprenda a Multiplicar por 9',
-  10: '10 Tabuada | Aprenda a Multiplicar por 10',
+  1: '1 Tabuada',
+  2: '2 Tabuada',
+  3: '3 Tabuada',
+  4: '4 Tabuada',
+  5: '5 Tabuada',
+  6: '6 Tabuada',
+  7: '7 Tabuada',
+  8: '8 Tabuada',
+  9: '9 Tabuada',
+  10: '10 Tabuada',
 }
 
 // Generate titles for 11-100 (following the pattern)
 for (let i = 11; i <= 100; i++) {
-  numberTitlesPt[i] = `${i} Tabuada | Aprenda a Multiplicar por ${i}`
+  numberTitlesPt[i] = `${i} Tabuada`
 }
 
 export const numberDescriptionsPt: Record<number, string> = {
@@ -55,58 +55,58 @@ for (let i = 11; i <= 100; i++) {
 
 export const rangeMetadataPt: Record<string, { title: string; description: string }> = {
   '1-10': {
-    title: 'Tabuada de 1 a 10 | Multiplicação Básica',
+    title: 'Tabuada de 1 a 10',
     description: 'Aprenda as tabuadas de 1 a 10 com exercícios interativos, jogos e estratégias práticas. Perfeito para iniciantes que querem dominar o básico.',
   },
   '11-20': {
-    title: 'Tabuada de 11 a 20 | Multiplicação Intermediária',
+    title: 'Tabuada de 11 a 20',
     description: 'Domine as tabuadas de 11 a 20 com técnicas avançadas, padrões e exercícios práticos para estudantes de nível intermediário.',
   },
   '21-30': {
-    title: 'Tabuada de 21 a 30 | Multiplicação Intermediária-Avançada',
+    title: 'Tabuada de 21 a 30',
     description: 'Aprenda as tabuadas de 21 a 30 com estratégias práticas e exercícios desafiadores para aprimorar suas habilidades de multiplicação.',
   },
   '31-40': {
-    title: 'Tabuada de 31 a 40 | Multiplicação Avançada',
+    title: 'Tabuada de 31 a 40',
     description: 'Domine as tabuadas de 31 a 40 com técnicas avançadas e exercícios práticos para estudantes experientes.',
   },
   '41-50': {
-    title: 'Tabuada de 41 a 50 | Multiplicação Avançada',
+    title: 'Tabuada de 41 a 50',
     description: 'Aprenda as tabuadas de 41 a 50 com estratégias especializadas e exercícios desafiadores para domínio completo.',
   },
   '51-60': {
-    title: 'Tabuada de 51 a 60 | Multiplicação Avançada',
+    title: 'Tabuada de 51 a 60',
     description: 'Domine as tabuadas de 51 a 60 com técnicas avançadas e exercícios práticos para operações mais complexas.',
   },
   '61-70': {
-    title: 'Tabuada de 61 a 70 | Multiplicação Avançada',
+    title: 'Tabuada de 61 a 70',
     description: 'Aprenda as tabuadas de 61 a 70 com estratégias experientes e exercícios práticos para domínio total.',
   },
   '71-80': {
-    title: 'Tabuada de 71 a 80 | Multiplicação Avançada',
+    title: 'Tabuada de 71 a 80',
     description: 'Domine as tabuadas de 71 a 80 com técnicas especializadas e os exercícios mais desafiadores.',
   },
   '81-90': {
-    title: 'Tabuada de 81 a 90 | Multiplicação Avançada',
+    title: 'Tabuada de 81 a 90',
     description: 'Aprenda as tabuadas de 81 a 90 com estratégias avançadas para o nível máximo de dificuldade.',
   },
   '91-100': {
-    title: 'Tabuada de 91 a 100 | Nível Expert',
+    title: 'Tabuada de 91 a 100',
     description: 'Complete as tabuadas de 91 a 100 e torne-se um mestre da multiplicação!',
   },
 }
 
 export const guideMetadataPt: Record<string, { title: string; description: string }> = {
   'para-estudantes': {
-    title: 'Guia de Tabuada para Estudantes | Aprendizado Passo a Passo',
+    title: 'Guia de Tabuada para Estudantes',
     description: 'Guia passo a passo para aprender a tabuada facilmente. Aprenda no seu próprio ritmo com materiais visuais, atividades práticas e jogos divertidos!',
   },
   'para-professores': {
-    title: 'Guia de Tabuada para Professores | Estratégias de Ensino',
+    title: 'Guia de Tabuada para Professores',
     description: 'Recursos abrangentes para professores sobre como ensinar a tabuada de forma eficaz. Inclui estratégias pedagógicas, atividades em sala de aula, ensino diferenciado e métodos de avaliação.',
   },
   'para-pais': {
-    title: 'Guia de Tabuada para Pais | Como Ajudar Seu Filho',
+    title: 'Guia de Tabuada para Pais',
     description: 'Como apoiar o aprendizado da tabuada do seu filho em casa. Dicas práticas, jogos educativos e estratégias de motivação.',
   },
 }

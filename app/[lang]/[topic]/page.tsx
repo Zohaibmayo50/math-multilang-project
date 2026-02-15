@@ -169,7 +169,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'en') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Multiplication Tables 1-100 | PDF Exercises and Interactive Games',
+      title: 'Multiplication Tables 1-100',
       description: 'Learn multiplication tables from 1 to 100 for free. Interactive exercises, educational games and PDF worksheets - ideal math platform for children.',
       keywords: 'multiplication tables, times tables, math, learning, practice, education, pdf exercises',
       alternates: {
@@ -207,7 +207,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'tr') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Çarpım Tablosu 1-100 | PDF Alıştırmaları ve İnteraktif Oyunlar',
+      title: 'Çarpım Tablosu 1-100',
       description: '1\'den 100\'e kadar çarpım tablolarını ücretsiz öğrenin. İnteraktif alıştırmalar, eğitici oyunlar ve PDF çalışma sayfalarıyla çocuklar için ideal matematik platformu.',
       keywords: 'çarpım tablosu, multiplication table, matematik, öğrenme, pratik, eğitim, pdf alıştırmaları',
       alternates: {
@@ -245,7 +245,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'es') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Tablas de Multiplicar del 1 al 100 | Ejercicios PDF y Juegos Interactivos',
+      title: 'Tablas de Multiplicar 1-100',
       description: 'Aprende las tablas de multiplicar del 1 al 100 gratis. Ejercicios interactivos, juegos educativos y hojas de trabajo en PDF para niños.',
       keywords: 'tablas de multiplicar, tabla de multiplicar, matemáticas, aprendizaje, práctica, educación, ejercicios pdf',
       alternates: {
@@ -283,7 +283,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'de') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Einmaleins 1-100 | PDF-Übungen und Interaktive Spiele',
+      title: 'Einmaleins 1-100',
       description: 'Lerne das Einmaleins von 1 bis 100 kostenlos. Interaktive Übungen, Lernspiele und druckbare Arbeitsblätter für Kinder.',
       keywords: 'einmaleins, einmaleins-tabellen, multiplikation, mathematik, lernen, übung, bildung, pdf übungen',
       alternates: {
@@ -321,7 +321,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'cs') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Násobilka 1-100 | PDF Cvičení a Interaktivní Hry',
+      title: 'Násobilka 1-100',
       description: 'Naučte se násobilku od 1 do 100 zdarma. Interaktivní cvičení, vzdělávací hry a PDF pracovní listy - ideální platforma matematiky pro děti.',
       keywords: 'násobilka, multiplication table, matematika, učení, cvičení, vzdělávání, pdf cvičení',
       alternates: {
@@ -359,7 +359,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'uk') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Таблиця множення 1-100 | PDF Вправи та Інтерактивні Ігри',
+      title: 'Таблиця множення 1-100',
       description: 'Вивчіть таблицю множення від 1 до 100 безкоштовно. Інтерактивні вправи, освітні ігри та PDF робочі аркуші - ідеальна математична платформа для дітей.',
       keywords: 'таблиця множення, multiplication table, математика, навчання, практика, освіта, pdf вправи',
       alternates: {
@@ -397,7 +397,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'fi') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Kertotaulut 1-100 | PDF-harjoitukset ja Interaktiiviset Pelit',
+      title: 'Kertotaulut 1-100',
       description: 'Opi kertotaulut 1-100 ilmaiseksi. Interaktiiviset harjoitukset, opetuspelit ja PDF-työarkit lapsille.',
       keywords: 'kertotaulut, kertotaulu, matematiikka, oppiminen, harjoittelu, koulutus, pdf harjoitukset',
       alternates: {
@@ -435,7 +435,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'fr') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Table de Multiplication 1-100 | Exercices PDF et Jeux Interactifs',
+      title: 'Table de Multiplication 1-100',
       description: 'Apprenez les tables de multiplication de 1 à 100 gratuitement. Exercices interactifs, jeux éducatifs et feuilles de travail PDF pour enfants.',
       keywords: 'table de multiplication, tables de multiplication, mathématiques, apprentissage, pratique, éducation, exercices pdf',
       alternates: {
@@ -473,7 +473,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'sv') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Multiplikationstabeller 1-100 | PDF Övningar och Interaktiva Spel',
+      title: 'Multiplikationstabeller 1-100',
       description: 'Lär dig multiplikationstabeller från 1 till 100 gratis. Interaktiva övningar, pedagogiska spel och utskrivbara arbetsblad för barn.',
       keywords: 'multiplikationstabeller, multiplikationstabell, multiplikation, matematik, lärande, övning, utbildning, pdf övningar',
       alternates: {
@@ -511,7 +511,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'pt') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Tabuada 1-100 | Exercícios PDF e Jogos Interativos',
+      title: 'Tabuada 1-100',
       description: 'Aprenda a tabuada de 1 a 100 gratuitamente. Exercícios interativos, jogos educacionais e folhas de trabalho em PDF para crianças.',
       keywords: 'tabuada, tabuada de multiplicação, multiplicação, matemática, aprendizado, prática, educação, exercícios pdf',
       alternates: {
@@ -549,7 +549,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'pl') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Tabliczki Mnożenia 1-100 | Ćwiczenia PDF i Interaktywne Gry',
+      title: 'Tabliczki Mnożenia 1-100',
       description: 'Ucz się tabliczki mnożenia od 1 do 100 za darmo. Interaktywne ćwiczenia, gry edukacyjne i karty pracy PDF - idealna platforma matematyczna dla dzieci.',
       keywords: 'tabliczka mnożenia, multiplication table, matematyka, nauka, ćwiczenie, edukacja, pdf ćwiczenia',
       alternates: {
@@ -587,7 +587,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'id') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Tabel Perkalian 1-100 | Latihan PDF dan Permainan Interaktif',
+      title: 'Tabel Perkalian 1-100',
       description: 'Pelajari tabel perkalian dari 1 hingga 100 secara gratis. Latihan interaktif, permainan edukatif, dan lembar kerja PDF untuk anak-anak.',
       keywords: 'tabel perkalian, belajar perkalian, matematika, latihan, pendidikan, latihan pdf',
       alternates: {

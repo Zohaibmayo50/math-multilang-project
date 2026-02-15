@@ -1,20 +1,20 @@
 // Number-specific metadata for Swedish language
 export const numberTitlesSv: Record<number, string> = {
-  1: '1 Multiplikationstabell | Lär Dig Multiplicera med 1',
-  2: '2 Multiplikationstabell | Lär Dig Multiplicera med 2',
-  3: '3 Multiplikationstabell | Lär Dig Multiplicera med 3',
-  4: '4 Multiplikationstabell | Lär Dig Multiplicera med 4',
-  5: '5 Multiplikationstabell | Lär Dig Multiplicera med 5',
-  6: '6 Multiplikationstabell | Lär Dig Multiplicera med 6',
-  7: '7 Multiplikationstabell | Lär Dig Multiplicera med 7',
-  8: '8 Multiplikationstabell | Lär Dig Multiplicera med 8',
-  9: '9 Multiplikationstabell | Lär Dig Multiplicera med 9',
-  10: '10 Multiplikationstabell | Lär Dig Multiplicera med 10',
+  1: '1 Multiplikationstabell',
+  2: '2 Multiplikationstabell',
+  3: '3 Multiplikationstabell',
+  4: '4 Multiplikationstabell',
+  5: '5 Multiplikationstabell',
+  6: '6 Multiplikationstabell',
+  7: '7 Multiplikationstabell',
+  8: '8 Multiplikationstabell',
+  9: '9 Multiplikationstabell',
+  10: '10 Multiplikationstabell',
 }
 
 // Generate titles for 11-100 (following the pattern)
 for (let i = 11; i <= 100; i++) {
-  numberTitlesSv[i] = `${i} Multiplikationstabell | Lär Dig Multiplicera med ${i}`
+  numberTitlesSv[i] = `${i} Multiplikationstabell`
 }
 
 export const numberDescriptionsSv: Record<number, string> = {
@@ -55,58 +55,58 @@ for (let i = 11; i <= 100; i++) {
 
 export const rangeMetadataSv: Record<string, { title: string; description: string }> = {
   '1-10': {
-    title: 'Multiplikationstabeller 1-10 | Grundläggande Multiplikation',
+    title: 'Multiplikationstabeller 1-10',
     description: 'Lär dig multiplikationstabellerna från 1 till 10 med interaktiva övningar, spel och praktiska strategier. Perfekt för nybörjare som vill bemästra grunderna.',
   },
   '11-20': {
-    title: 'Multiplikationstabeller 11-20 | Mellanliggande Multiplikation',
+    title: 'Multiplikationstabeller 11-20',
     description: 'Bemästra multiplikationstabellerna från 11 till 20 med detaljerade förklaringar och praktiska övningar. Bygg på dina grundläggande färdigheter.',
   },
   '21-30': {
-    title: 'Multiplikationstabeller 21-30 | Avancerad Multiplikation',
+    title: 'Multiplikationstabeller 21-30',
     description: 'Utforska multiplikationstabellerna från 21 till 30 med avancerade tekniker och strategier. Ta din multiplikationsfärdighet till nästa nivå.',
   },
   '31-40': {
-    title: 'Multiplikationstabeller 31-40 | Expertmultiplikation',
+    title: 'Multiplikationstabeller 31-40',
     description: 'Träna multiplikationstabellerna från 31 till 40 med experttekniker. Utveckla snabbhet och noggrannhet i beräkningar.',
   },
   '41-50': {
-    title: 'Multiplikationstabeller 41-50 | Hög Multiplikation',
+    title: 'Multiplikationstabeller 41-50',
     description: 'Lär dig multiplikationstabellerna från 41 till 50 med effektiva metoder. Perfekt för studenter som vill utmana sig själva.',
   },
   '51-60': {
-    title: 'Multiplikationstabeller 51-60 | Avancerade Tekniker',
+    title: 'Multiplikationstabeller 51-60',
     description: 'Utforska multiplikationstabellerna från 51 till 60 med avancerade beräkningstekniker. Öka din matematiska kompetens.',
   },
   '61-70': {
-    title: 'Multiplikationstabeller 61-70 | Matematisk Excellens',
+    title: 'Multiplikationstabeller 61-70',
     description: 'Bemästra multiplikationstabellerna från 61 till 70. Uppnå matematisk excellens med strukturerade övningar.',
   },
   '71-80': {
-    title: 'Multiplikationstabeller 71-80 | Expertnivå',
+    title: 'Multiplikationstabeller 71-80',
     description: 'Träna multiplikationstabellerna från 71 till 80 på expertnivå. Utveckla avancerade beräkningsfärdigheter.',
   },
   '81-90': {
-    title: 'Multiplikationstabeller 81-90 | Mästarnivå',
+    title: 'Multiplikationstabeller 81-90',
     description: 'Lär dig multiplikationstabellerna från 81 till 90 på mästarnivå. Uppnå full behärskning av multiplikation.',
   },
   '91-100': {
-    title: 'Multiplikationstabeller 91-100 | Komplett Behärskning',
+    title: 'Multiplikationstabeller 91-100',
     description: 'Slutför din resa med multiplikationstabellerna från 91 till 100. Uppnå komplett behärskning av alla multiplikationstabeller.',
   },
 }
 
 export const guideMetadataSv = {
   students: {
-    title: 'Multiplikationstabeller för Elever | Interaktivt Lärande',
+    title: 'Multiplikationstabeller för Elever',
     description: 'Lär dig multiplikationstabeller med roliga spel, interaktiva övningar och effektiva strategier. Perfekt för elever i alla åldrar.',
   },
   teachers: {
-    title: 'Multiplikationstabeller för Lärare | Undervisningsresurser',
+    title: 'Multiplikationstabeller för Lärare',
     description: 'Omfattande undervisningsresurser för att lära ut multiplikationstabeller. Innehåller lektionsplaner, aktiviteter och bedömningsverktyg.',
   },
   parents: {
-    title: 'Multiplikationstabeller för Föräldrar | Hemstöd',
+    title: 'Multiplikationstabeller för Föräldrar',
     description: 'Hjälp ditt barn att lära sig multiplikationstabeller hemma. Praktiska tips, aktiviteter och strategier för föräldrar.',
   },
 }

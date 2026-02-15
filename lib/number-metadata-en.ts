@@ -1,20 +1,20 @@
 // Number-specific metadata for English language
 export const numberTitles: Record<number, string> = {
-  1: '1 Multiplication Table | Learn to Multiply by 1',
-  2: '2 Multiplication Table | Learn to Multiply by 2',
-  3: '3 Multiplication Table | Learn to Multiply by 3',
-  4: '4 Multiplication Table | Learn to Multiply by 4',
-  5: '5 Multiplication Table | Learn to Multiply by 5',
-  6: '6 Multiplication Table | Learn to Multiply by 6',
-  7: '7 Multiplication Table | Learn to Multiply by 7',
-  8: '8 Multiplication Table | Learn to Multiply by 8',
-  9: '9 Multiplication Table | Learn to Multiply by 9',
-  10: '10 Multiplication Table | Learn to Multiply by 10',
+  1: '1 Multiplication Table',
+  2: '2 Multiplication Table',
+  3: '3 Multiplication Table',
+  4: '4 Multiplication Table',
+  5: '5 Multiplication Table',
+  6: '6 Multiplication Table',
+  7: '7 Multiplication Table',
+  8: '8 Multiplication Table',
+  9: '9 Multiplication Table',
+  10: '10 Multiplication Table',
 }
 
 // Generate titles for 11-100 (following the pattern)
 for (let i = 11; i <= 100; i++) {
-  numberTitles[i] = `${i} Multiplication Table | Learn to Multiply by ${i}`
+  numberTitles[i] = `${i} Multiplication Table`
 }
 
 export const numberDescriptions: Record<number, string> = {
