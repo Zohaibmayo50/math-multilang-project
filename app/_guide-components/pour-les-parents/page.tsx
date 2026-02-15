@@ -3,35 +3,35 @@ import Header from '@/app/components/fr/Header'
 import Footer from '@/app/components/fr/Footer'
 
 export const metadata = {
-  title: 'Guide des Tables de Multiplication pour Élèves | Apprendre Étape par Étape',
-  description: 'Guide étape par étape pour apprendre les tables de multiplication facilement. Matériaux visuels, activités pratiques et jeux amusants pour apprendre à votre rythme.',
-  keywords: 'apprendre les tables de multiplication, mathématiques pour élèves, guide des tables, multiplication étape par étape',
+  title: 'Guide Parents : Accompagner l\'Apprentissage des Tables de Multiplication',
+  description: 'Guide pratique pour les parents : comment aider votre enfant à apprendre les tables de multiplication à la maison. Activités familiales, conseils et soutien.',
+  keywords: 'parents tables de multiplication, aider enfant multiplication, activités mathématiques maison, accompagner apprentissage',
   alternates: {
     canonical: '/pour-les-parents',
   },
 }
 
-export default function ForStudents() {
+export default function ForParents() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
+      <main className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
+        <div className="bg-gradient-to-r from-orange-500 to-amber-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
-                Apprendre les Tables de Multiplication, C'est Facile ! 🎯
+                Guide Parents : Accompagner les Tables de Multiplication
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8">
-                Progressez à votre propre rythme, apprenez en vous amusant et devenez un héros des mathématiques ! 
-                Ce guide vous aidera à apprendre les tables de multiplication étape par étape.
+              <p className="text-lg sm:text-xl text-orange-100 mb-6 md:mb-8">
+                Votre rôle est essentiel dans l&apos;apprentissage de votre enfant. Découvrez comment créer un environnement 
+                positif et des habitudes efficaces pour maîtriser les tables de multiplication.
               </p>
               <div className="flex items-center gap-4">
                 <svg className="w-6 h-6 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                 </svg>
-                <span className="text-blue-100">Vous pouvez le faire aussi !</span>
+                <span className="text-orange-100">Ensemble, l&apos;apprentissage devient un plaisir !</span>
               </div>
             </div>
           </div>
@@ -39,155 +39,127 @@ export default function ForStudents() {
 
         {/* Main Content */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-          {/* Why Learn */}
+          {/* Why Your Role Matters */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Pourquoi Apprendre les Tables de Multiplication ? 🤔
+              Pourquoi Votre Rôle est Essentiel
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                Les tables de multiplication sont le super pouvoir du monde mathématique ! Voici ce qu'elles vous apporteront :
+                Les recherches montrent que l&apos;implication des parents dans l&apos;apprentissage des mathématiques a un impact significatif sur la réussite de l&apos;enfant.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
-                    ⚡
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-2xl">
+                    💛
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Calcul Rapide</h3>
-                    <p className="text-slate-700">Vous pourrez résoudre les problèmes mathématiques beaucoup plus rapidement !</p>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Soutien Émotionnel</h3>
+                    <p className="text-slate-700">Votre encouragement réduit l&apos;anxiété mathématique et renforce la confiance de votre enfant.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-2xl">
-                    🎮
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-2xl">
+                    🏠
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Utilisation Quotidienne</h3>
-                    <p className="text-slate-700">Ce sera utile pour faire les courses, jouer, partout !</p>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Environnement Propice</h3>
+                    <p className="text-slate-700">Un cadre calme et positif à la maison favorise la concentration et la mémorisation.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
-                    🏆
+                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center text-2xl">
+                    📅
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Confiance Accrue</h3>
-                    <p className="text-slate-700">Votre confiance en mathématiques augmentera et vous réussirez mieux !</p>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Régularité</h3>
+                    <p className="text-slate-700">Vous pouvez instaurer des routines de pratique courtes mais régulières — la clé du succès.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center text-2xl">
-                    🧠
+                  <div className="flex-shrink-0 w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center text-2xl">
+                    🌟
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Puissance Cérébrale</h3>
-                    <p className="text-slate-700">Votre mémoire se renforcera et vous apprendrez à penser plus vite !</p>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-2">Modèle Positif</h3>
+                    <p className="text-slate-700">En montrant que les maths sont utiles au quotidien, vous motivez naturellement votre enfant.</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Learning Path */}
+          {/* Supporting at Home */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Parcours d'Apprentissage Étape par Étape 🚀
+              Accompagner Votre Enfant à la Maison
             </h2>
             <div className="space-y-4">
-              {/* Step 1 */}
-              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-green-500">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-orange-500">
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">
                     1
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Commencez avec les Tables Faciles (1, 2, 5, 10)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Créez une Routine Quotidienne</h3>
                     <p className="text-slate-700 mb-3">
-                      Commencer par les tables les plus faciles vous donnera de la confiance ! Elles sont très simples et vous les apprendrez rapidement.
+                      Consacrez 10 à 15 minutes par jour à la pratique des tables. Choisissez un moment calme, 
+                      idéalement après le goûter ou avant le coucher.
                     </p>
-                    <div className="bg-green-50 p-4 rounded-lg">
-                      <p className="font-semibold text-green-900 mb-2">Pourquoi ces tables sont-elles faciles ?</p>
+                    <div className="bg-orange-50 p-4 rounded-lg">
+                      <p className="font-semibold text-orange-900 mb-2">Conseils pratiques :</p>
                       <ul className="space-y-1 text-slate-700 text-sm">
-                        <li>• <strong>Table de 1 :</strong> Chaque nombre reste identique ! (1×5=5)</li>
-                        <li>• <strong>Table de 2 :</strong> Doublez le nombre ! (2×4 = 4+4 = 8)</li>
-                        <li>• <strong>Table de 5 :</strong> Se termine toujours par 5 ou 0 !</li>
-                        <li>• <strong>Table de 10 :</strong> Ajoutez un zéro à la fin ! (10×3 = 30)</li>
+                        <li>• Choisissez un moment fixe chaque jour</li>
+                        <li>• Commencez par 5 minutes et augmentez progressivement</li>
+                        <li>• Évitez les moments de fatigue ou de faim</li>
+                        <li>• Restez présent et disponible pendant la session</li>
                       </ul>
-                    </div>
-                    <div className="mt-3">
-                      <Link href="/fr/table-de-multiplication/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
-                        Aller aux Tables 1-10 →
-                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Step 2 */}
-              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-blue-500">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-amber-500">
                 <div className="flex items-start gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
                     2
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Passez aux Tables de Niveau Intermédiaire (3, 4, 6)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Valorisez l&apos;Effort, Pas Seulement le Résultat</h3>
                     <p className="text-slate-700 mb-3">
-                      Maintenant vous êtes prêt pour des tables un peu plus difficiles ! Ne vous inquiétez pas, il y a aussi des astuces pour celles-ci.
+                      Félicitez votre enfant pour sa persévérance et ses progrès, même petits. 
+                      Évitez de comparer avec d&apos;autres enfants.
                     </p>
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <p className="font-semibold text-blue-900 mb-2">Astuces :</p>
+                    <div className="bg-amber-50 p-4 rounded-lg">
+                      <p className="font-semibold text-amber-900 mb-2">Phrases encourageantes :</p>
                       <ul className="space-y-1 text-slate-700 text-sm">
-                        <li>• <strong>Table de 3 :</strong> Additionnez le nombre 3 fois (3×4 = 4+4+4 = 12)</li>
-                        <li>• <strong>Table de 4 :</strong> Multipliez par 2, puis doublez (4×5 = 2×5×2 = 20)</li>
-                        <li>• <strong>Table de 6 :</strong> Utilisez la table de 5 et ajoutez-en 1 de plus (6×4 = 5×4 + 4 = 24)</li>
+                        <li>• &quot;Tu as bien travaillé aujourd&apos;hui !&quot;</li>
+                        <li>• &quot;Je vois tes progrès avec la table de 7 !&quot;</li>
+                        <li>• &quot;C&apos;est normal de se tromper, essayons encore&quot;</li>
+                        <li>• &quot;Tu connais déjà 5 tables, c&apos;est formidable !&quot;</li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Step 3 */}
-              <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-yellow-500">
-                <div className="flex items-start gap-4">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 border-l-4 border-yellow-500">
+                <div className="flex items-start gap-3 sm:gap-4">
                   <div className="flex-shrink-0 w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold">
                     3
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Défiez-vous avec les Tables Difficiles (7, 8, 9)</h3>
+                    <h3 className="text-lg sm:text-xl font-semibold text-slate-900 mb-2">Utilisez les Mathématiques au Quotidien</h3>
                     <p className="text-slate-700 mb-3">
-                      Ces tables sont un peu plus difficiles, mais vous avez beaucoup appris jusqu'à présent ! Avec des techniques spéciales, vous les maîtriserez aussi.
+                      Intégrez les tables de multiplication dans la vie de tous les jours pour leur donner du sens.
                     </p>
                     <div className="bg-yellow-50 p-4 rounded-lg">
-                      <p className="font-semibold text-yellow-900 mb-2">Techniques Spéciales :</p>
-                      <ul className="space-y-2 text-slate-700 text-sm">
-                        <li>• <strong>Table de 9 - Astuce des Doigts :</strong> Ouvrez vos mains, baissez le doigt du nombre à multiplier. Doigts ouverts à gauche = dizaines, doigts à droite = unités !</li>
-                        <li>• <strong>Table de 8 :</strong> Multipliez par 10, puis soustrayez 2 fois (8×7 = 10×7 - 2×7 = 70-14 = 56)</li>
-                        <li>• <strong>Table de 7 :</strong> Pour les difficiles, utilisez la table de 5 (7×6 = 5×6 + 2×6 = 30+12 = 42)</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div className="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                    4
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">Pratiquez Constamment 💪</h3>
-                    <p className="text-slate-700 mb-3">
-                      Pour ne pas oublier tout ce que vous avez appris, pratiquez un peu chaque jour. Le mieux est de pratiquer peu mais régulièrement !
-                    </p>
-                    <div className="bg-purple-50 p-4 rounded-lg">
-                      <p className="font-semibold text-purple-900 mb-2">Conseils de Pratique Quotidienne :</p>
+                      <p className="font-semibold text-yellow-900 mb-2">Exemples concrets :</p>
                       <ul className="space-y-1 text-slate-700 text-sm">
-                        <li>• Étudiez 10-15 minutes chaque jour (pas beaucoup, mais régulièrement !)</li>
-                        <li>• Pratiquez en jouant - c'est amusant !</li>
-                        <li>• Organisez des compétitions avec votre famille</li>
-                        <li>• Quand vous voyez des multiplications dans la vie quotidienne, calculez-les (ex : "3 boîtes, 5 chocolats dans chacune, combien au total ?")</li>
+                        <li>• Au supermarché : &quot;3 paquets de 4 yaourts, ça fait combien ?&quot;</li>
+                        <li>• En cuisine : &quot;On double la recette, 2 × 3 œufs = ?&quot;</li>
+                        <li>• En voiture : &quot;Combien de roues pour 6 voitures ?&quot;</li>
+                        <li>• À table : &quot;5 personnes, 3 tranches chacune = ?&quot;</li>
                       </ul>
                     </div>
                   </div>
@@ -196,213 +168,142 @@ export default function ForStudents() {
             </div>
           </section>
 
-          {/* Visual Learning */}
+          {/* Fun Activities Together */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Apprentissage Visuel - Comprendre avec des Images 🎨
-            </h2>
-            <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                Visualiser la multiplication dans votre esprit facilite l'apprentissage ! Voici quelques techniques visuelles :
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
-                {/* Arrays */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Tableaux (Arrays)</h3>
-                  <p className="text-slate-700 mb-4 text-sm">Exemple de 4 × 3 = 12 :</p>
-                  <div className="bg-white p-4 rounded inline-block">
-                    <div className="grid grid-cols-4 gap-2">
-                      {[...Array(12)].map((_, i) => (
-                        <div key={i} className="w-8 h-8 bg-blue-400 rounded"></div>
-                      ))}
-                    </div>
-                    <p className="text-center mt-2 text-sm text-slate-600">4 colonnes × 3 rangées = 12</p>
-                  </div>
-                </div>
-
-                {/* Number Line */}
-                <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Sauts sur la Droite Numérique</h3>
-                  <p className="text-slate-700 mb-4 text-sm">3 × 4 : sauts de 4 (0→4→8→12)</p>
-                  <div className="bg-white p-4 rounded">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-green-700">0</span>
-                      <span className="text-green-500">→</span>
-                      <span className="text-sm font-bold text-green-700">4</span>
-                      <span className="text-green-500">→</span>
-                      <span className="text-sm font-bold text-green-700">8</span>
-                      <span className="text-green-500">→</span>
-                      <span className="text-sm font-bold text-green-700">12</span>
-                    </div>
-                    <p className="text-center mt-2 text-xs text-slate-600">3 étapes, chaque étape 4 unités</p>
-                  </div>
-                </div>
-
-                {/* Skip Counting */}
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Comptage par Bonds</h3>
-                  <p className="text-slate-700 mb-3 text-sm">Comptez de 5 en 5 : 5, 10, 15, 20, 25...</p>
-                  <div className="bg-white p-3 rounded text-center">
-                    <p className="text-purple-700 font-bold text-lg">5 - 10 - 15 - 20 - 25</p>
-                    <p className="text-xs text-slate-600 mt-2">Si vous mémorisez ces nombres, la table de 5 est très facile !</p>
-                  </div>
-                </div>
-
-                {/* Patterns */}
-                <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">Remarquez les Motifs</h3>
-                  <p className="text-slate-700 mb-3 text-sm">Le secret de la table de 9 :</p>
-                  <div className="bg-white p-3 rounded">
-                    <ul className="text-sm text-slate-700 space-y-1">
-                      <li>9×1=<strong className="text-pink-600">09</strong> (0+9=9)</li>
-                      <li>9×2=<strong className="text-pink-600">18</strong> (1+8=9)</li>
-                      <li>9×3=<strong className="text-pink-600">27</strong> (2+7=9)</li>
-                      <li>9×4=<strong className="text-pink-600">36</strong> (3+6=9)</li>
-                      <li className="text-xs italic">Les chiffres font toujours 9 !</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Practice Tips */}
-          <section className="mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Conseils de Pratique 🎯
+              Activités Ludiques en Famille
             </h2>
             <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                  🎮
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-2xl">
+                  🎲
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Jouez</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Jeux de Dés</h3>
                 <p className="text-slate-700 mb-3">
-                  Pratiquez avec les jeux amusants de ce site. Apprendre en jouant est beaucoup plus amusant !
+                  Lancez deux dés et multipliez les résultats. Le premier à répondre correctement gagne un point !
                 </p>
-                <Link href="/fr/table-de-multiplication/1-10" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
-                  Découvrir les Jeux →
-                </Link>
+                <div className="bg-orange-50 p-3 rounded text-sm text-slate-700">
+                  <strong>Âge :</strong> 7+ · <strong>Matériel :</strong> 2 dés
+                </div>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                  📝
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4 text-2xl">
+                  🃏
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Testez-vous</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Bataille de Cartes</h3>
                 <p className="text-slate-700 mb-3">
-                  Utilisez des cartes flash ou demandez à quelqu'un de vous poser des questions. Se tester accélère votre apprentissage !
+                  Chaque joueur retourne deux cartes et les multiplie. Le plus grand produit remporte les cartes.
                 </p>
+                <div className="bg-amber-50 p-3 rounded text-sm text-slate-700">
+                  <strong>Âge :</strong> 8+ · <strong>Matériel :</strong> Jeu de cartes
+                </div>
               </div>
 
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                  🎵
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Chansons et Rythmes</h3>
-                <p className="text-slate-700 mb-3">
-                  Transformez les tables de multiplication en chansons ! C'est plus facile de mémoriser avec de la musique.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
                 <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4 text-2xl">
-                  🏆
+                  🎯
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Récompensez-vous</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Quiz Chronométré</h3>
                 <p className="text-slate-700 mb-3">
-                  Quand vous apprenez une table, récompensez-vous ! Collectionnez des autocollants ou faites quelque chose de spécial.
+                  Posez 10 questions et chronométrez. Votre enfant essaie de battre son propre record jour après jour.
                 </p>
+                <div className="bg-yellow-50 p-3 rounded text-sm text-slate-700">
+                  <strong>Âge :</strong> 7+ · <strong>Durée :</strong> 5 min
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+                <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center mb-4 text-2xl">
+                  🖍️
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Coloriage Mathématique</h3>
+                <p className="text-slate-700 mb-3">
+                  Créez une grille de 100 et coloriez les multiples d&apos;un nombre ensemble. Les motifs émerveilleront votre enfant !
+                </p>
+                <div className="bg-rose-50 p-3 rounded text-sm text-slate-700">
+                  <strong>Âge :</strong> 6+ · <strong>Matériel :</strong> Grille + crayons
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Progress Tracking */}
+          {/* Common Challenges */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Suivez votre Progression 📊
+              Défis Courants et Solutions
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <p className="text-base sm:text-lg text-slate-700 mb-4 md:mb-6">
-                Voir votre progression vous motive ! Voici des méthodes de suivi :
+              <p className="text-base sm:text-lg text-slate-700 mb-6">
+                Votre enfant rencontre des difficultés ? C&apos;est normal. Voici les obstacles les plus fréquents et comment les surmonter.
               </p>
               <div className="space-y-4">
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <h3 className="text-lg font-semibold text-green-900 mb-2">✅ Liste de Contrôle des Tables</h3>
-                  <p className="text-slate-700 text-sm">
-                    Écrivez sur un papier les tables de 1 à 10. Chaque fois que vous en apprenez une, cochez-la ! 
-                    Quand toutes les coches sont complètes, vous serez un héros des tables de multiplication ! 🌟
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-6 rounded-lg border-l-4 border-orange-500">
+                  <h3 className="text-lg font-semibold text-orange-900 mb-2">😰 &quot;Mon enfant a peur des maths&quot;</h3>
+                  <p className="text-slate-700">
+                    <strong>Solution :</strong> Dédramatisez ! Utilisez des jeux plutôt que des exercices formels. 
+                    Partagez vos propres expériences avec les maths et montrez que les erreurs font partie de l&apos;apprentissage.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">📈 Graphique de Progression</h3>
-                  <p className="text-slate-700 text-sm">
-                    Enregistrez combien de questions vous avez répondues correctement chaque semaine. Dessinez un graphique et voyez votre progression. 
-                    Vous vous améliorez chaque semaine !
+                <div className="bg-gradient-to-r from-amber-50 to-yellow-50 p-6 rounded-lg border-l-4 border-amber-500">
+                  <h3 className="text-lg font-semibold text-amber-900 mb-2">😩 &quot;Il/elle oublie tout le lendemain&quot;</h3>
+                  <p className="text-slate-700">
+                    <strong>Solution :</strong> La répétition espacée est la clé. Révisez les tables apprises les jours précédents avant 
+                    d&apos;en apprendre de nouvelles. 5 minutes de révision valent plus qu&apos;une heure d&apos;apprentissage intensif.
                   </p>
                 </div>
-
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-lg font-semibold text-purple-900 mb-2">⭐ Système d'Étoiles</h3>
-                  <p className="text-slate-700 text-sm">
-                    Pour chaque bonne réponse, dessinez une étoile. Quand vous atteignez 100 étoiles, offrez-vous une récompense spéciale !
+                <div className="bg-gradient-to-r from-yellow-50 to-lime-50 p-6 rounded-lg border-l-4 border-yellow-500">
+                  <h3 className="text-lg font-semibold text-yellow-900 mb-2">😤 &quot;Il/elle ne veut pas pratiquer&quot;</h3>
+                  <p className="text-slate-700">
+                    <strong>Solution :</strong> Rendez la pratique ludique ! Utilisez les jeux en ligne de ce site, organisez des défis familiaux, 
+                    ou intégrez les maths dans des activités que votre enfant aime déjà.
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-lime-50 to-green-50 p-6 rounded-lg border-l-4 border-lime-500">
+                  <h3 className="text-lg font-semibold text-lime-900 mb-2">🤔 &quot;Les tables 7, 8 et 9 sont trop dures&quot;</h3>
+                  <p className="text-slate-700">
+                    <strong>Solution :</strong> Grâce à la commutativité (si 3×7=21, alors 7×3=21 aussi), votre enfant connaît déjà une 
+                    grande partie de ces tables ! Concentrez-vous sur les quelques combinaisons restantes : 7×7, 7×8, 8×8.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Motivation */}
+          {/* Creating Positive Environment */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Secrets de Motivation et de Réussite 💫
+              Créer un Environnement Positif
             </h2>
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg shadow-md p-4 sm:p-6 md:p-8">
+            <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">🌟</span>
+                    <span className="text-2xl">✅</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Soyez Patient</h3>
-                      <p className="text-slate-700 text-sm">Tout prend du temps. Vous pouvez le faire, il suffit de pratiquer !</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">💪</span>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Les Erreurs sont Normales</h3>
-                      <p className="text-slate-700 text-sm">Ne vous sentez pas mal quand vous vous trompez, c'est une partie de l'apprentissage !</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🎯</span>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Fixez de Petits Objectifs</h3>
-                      <p className="text-slate-700 text-sm">Une table par jour suffit, ne vous précipitez pas !</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">À Faire</h3>
+                      <ul className="text-slate-700 text-sm space-y-1">
+                        <li>• Féliciter les efforts et les progrès</li>
+                        <li>• Pratiquer de manière ludique</li>
+                        <li>• Rester patient et calme</li>
+                        <li>• Adapter le rythme à l&apos;enfant</li>
+                        <li>• Célébrer chaque petite victoire</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <span className="text-2xl">🤝</span>
+                    <span className="text-2xl">❌</span>
                     <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Demandez de l'Aide</h3>
-                      <p className="text-slate-700 text-sm">Si vous ne comprenez pas quelque chose, demandez à votre famille ou à votre enseignant !</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">🎉</span>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Célébrez vos Réussites</h3>
-                      <p className="text-slate-700 text-sm">Chaque petit succès est important, valorisez-vous !</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-2xl">😊</span>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 mb-1">Amusez-vous !</h3>
-                      <p className="text-slate-700 text-sm">Apprendre doit être amusant, essayez les jeux !</p>
+                      <h3 className="font-semibold text-slate-900 mb-1">À Éviter</h3>
+                      <ul className="text-slate-700 text-sm space-y-1">
+                        <li>• Comparer avec d&apos;autres enfants</li>
+                        <li>• Punir les erreurs</li>
+                        <li>• Forcer des sessions trop longues</li>
+                        <li>• Dire &quot;c&apos;est facile&quot; quand l&apos;enfant échoue</li>
+                        <li>• Montrer votre frustration</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -410,71 +311,68 @@ export default function ForStudents() {
             </div>
           </section>
 
-          {/* Quick Reference */}
+          {/* Progress Tracking for Parents */}
           <section className="mb-12 md:mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 md:mb-6">
-              Guide Rapide des Astuces 🔑
+              Suivre la Progression de Votre Enfant
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-900 mb-2">Multiplier par 0</h4>
-                  <p className="text-sm text-slate-700">Tout est zéro ! 0×1000=0</p>
+              <div className="grid sm:grid-cols-3 gap-4 md:gap-6">
+                <div className="bg-orange-50 p-5 rounded-lg border-t-4 border-orange-500">
+                  <h3 className="text-lg font-semibold text-orange-900 mb-3">📋 Tableau de Suivi</h3>
+                  <p className="text-slate-700 text-sm">
+                    Créez un tableau avec les tables de 1 à 10. Collez une étoile pour chaque table maîtrisée. 
+                    L&apos;objectif visuel motive énormément !
+                  </p>
                 </div>
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-green-900 mb-2">Multiplier par 1</h4>
-                  <p className="text-sm text-slate-700">Le nombre reste identique ! 1×7=7</p>
+                <div className="bg-amber-50 p-5 rounded-lg border-t-4 border-amber-500">
+                  <h3 className="text-lg font-semibold text-amber-900 mb-3">📊 Journal de Scores</h3>
+                  <p className="text-slate-700 text-sm">
+                    Notez le score des quiz quotidiens. Montrez le graphique de progression à votre enfant — 
+                    voir la courbe monter est très motivant.
+                  </p>
                 </div>
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-purple-900 mb-2">Multiplier par 2</h4>
-                  <p className="text-sm text-slate-700">Doublez le nombre ! 2×6=12</p>
-                </div>
-                <div className="bg-pink-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-pink-900 mb-2">Multiplier par 5</h4>
-                  <p className="text-sm text-slate-700">Le résultat se termine par 0 ou 5 !</p>
-                </div>
-                <div className="bg-yellow-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-yellow-900 mb-2">Multiplier par 9</h4>
-                  <p className="text-sm text-slate-700">Les chiffres font 9 ! Astuce des doigts !</p>
-                </div>
-                <div className="bg-indigo-50 p-4 rounded-lg">
-                  <h4 className="font-bold text-indigo-900 mb-2">Multiplier par 10</h4>
-                  <p className="text-sm text-slate-700">Ajoutez un 0 ! 10×8=80</p>
+                <div className="bg-yellow-50 p-5 rounded-lg border-t-4 border-yellow-500">
+                  <h3 className="text-lg font-semibold text-yellow-900 mb-3">🏅 Système de Récompenses</h3>
+                  <p className="text-slate-700 text-sm">
+                    Définissez des paliers : une sortie après 5 tables maîtrisées, un petit cadeau après toutes les tables. 
+                    Des récompenses simples mais significatives.
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Call to Action */}
-          <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
+          <section className="bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg shadow-lg p-6 sm:p-8 text-white text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-              C'est l'Heure de Commencer ! 🚀
+              Pratiquez Ensemble dès Aujourd&apos;hui ! 🌟
             </h2>
-            <p className="text-base sm:text-lg text-blue-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Maintenant vous êtes prêt ! Rappelez-vous, chaque grand héros des mathématiques a commencé par de petites étapes. 
-              Vous pouvez le faire aussi ! 💪✨
+            <p className="text-base sm:text-lg text-orange-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              Explorez nos exercices interactifs et jeux éducatifs avec votre enfant. 
+              L&apos;apprentissage en famille est toujours plus efficace et plus amusant !
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/fr/table-de-multiplication/1-10"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
-                Commencer Maintenant
+                Découvrir les Exercices
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </Link>
               <Link 
                 href="/fr/table-de-multiplication"
-                className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
+                className="bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-800 transition-colors inline-flex items-center justify-center"
               >
-                Retour à l'Accueil
+                Retour à l&apos;Accueil
               </Link>
             </div>
-            <div className="mt-8 pt-8 border-t border-blue-400">
-              <p className="text-blue-100 text-sm">
-                💡 <strong>Conseil :</strong> Étudier 10-15 minutes par jour est beaucoup plus efficace que d'étudier 1 heure ennuyeusement !
+            <div className="mt-8 pt-8 border-t border-orange-400">
+              <p className="text-orange-100 text-sm">
+                💡 <strong>Conseil :</strong> Pratiquez 10 minutes chaque soir en famille — c&apos;est la clé de la réussite !
               </p>
             </div>
           </section>
@@ -484,4 +382,3 @@ export default function ForStudents() {
     </>
   )
 }
-
