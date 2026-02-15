@@ -94,49 +94,57 @@ export function generateHreflangLinks(pageType: PageType, slug?: string): Hrefla
 
   switch (pageType) {
     case 'root':
-      // Root page: x-default → homepage, plus all language roots
+      // Root page (language selector): only x-default → self
+      // The root page is not a language-specific page, so it should not be
+      // in the same hreflang set as /{lang} pages. It serves as the global
+      // fallback/selector and only marks itself as x-default.
       links.push({ hreflang: 'x-default', href: BASE_URL })
-      for (const locale of ALL_LOCALES) {
-        links.push({ hreflang: locale, href: `${BASE_URL}/${locale}` })
-      }
       break
 
     case 'lang-hub':
-      // Language hub: all language hubs + x-default → homepage
+      // Language hub: all language hubs + x-default → English hub
+      // x-default must point to a page IN this hreflang set (the English hub)
+      // so reciprocity is maintained — /en has hreflang="en" pointing to itself
       for (const locale of ALL_LOCALES) {
         links.push({ hreflang: locale, href: `${BASE_URL}/${locale}` })
       }
-      links.push({ hreflang: 'x-default', href: BASE_URL })
+      links.push({ hreflang: 'x-default', href: `${BASE_URL}/en` })
       break
 
     case 'topic':
       // Topic page: each locale's translated topic path
+      // x-default → English topic page (which is in this set)
       for (const locale of ALL_LOCALES) {
         links.push({ hreflang: locale, href: getAbsoluteUrl(locale) })
       }
-      links.push({ hreflang: 'x-default', href: BASE_URL })
+      links.push({ hreflang: 'x-default', href: getAbsoluteUrl('en') })
       break
 
     case 'range':
     case 'number':
       // Range/number pages: slug is identical across languages (e.g. '1-10', '7')
+      // x-default → English version of same page
       if (!slug) break
       for (const locale of ALL_LOCALES) {
         links.push({ hreflang: locale, href: getAbsoluteUrl(locale, slug) })
       }
-      links.push({ hreflang: 'x-default', href: BASE_URL })
+      links.push({ hreflang: 'x-default', href: getAbsoluteUrl('en', slug) })
       break
 
     case 'guide':
       // Guide pages: slug is translated per language (e.g. 'for-students' → 'para-estudiantes')
+      // x-default → English version of guide
       if (!slug) break
+      const englishGuideSlug = getEquivalentGuideSlug(slug, 'en')
       for (const locale of ALL_LOCALES) {
         const equivalentSlug = getEquivalentGuideSlug(slug, locale)
         if (equivalentSlug) {
           links.push({ hreflang: locale, href: getAbsoluteUrl(locale, equivalentSlug) })
         }
       }
-      links.push({ hreflang: 'x-default', href: BASE_URL })
+      if (englishGuideSlug) {
+        links.push({ hreflang: 'x-default', href: getAbsoluteUrl('en', englishGuideSlug) })
+      }
       break
   }
 
