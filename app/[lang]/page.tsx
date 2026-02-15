@@ -292,7 +292,8 @@ const pageContent: Record<Locale, {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const lang = params.lang as Locale
+  const { lang: langParam } = await params
+  const lang = langParam as Locale
   
   if (!i18n.locales.includes(lang)) {
     return {}
@@ -334,8 +335,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function LanguageHub({ params }: PageProps) {
-  const lang = params.lang as Locale
+export default async function LanguageHub({ params }: PageProps) {
+  const { lang: langParam } = await params
+  const lang = langParam as Locale
 
   if (!i18n.locales.includes(lang)) {
     notFound()
