@@ -558,7 +558,7 @@ export default function UntukOrangTua() {
                 </svg>
               </Link>
               <Link 
-                href="/untuk-siswa"
+                href="/id/tabel-perkalian/untuk-siswa"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Lihat Panduan untuk Siswa

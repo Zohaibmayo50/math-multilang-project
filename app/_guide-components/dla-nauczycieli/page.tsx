@@ -719,7 +719,7 @@ export default function DlaNauczycieli() {
             </Link>
 
             <Link 
-              href="/dla-uczniow" 
+              href="/pl/tabliczki-mnozenia/dla-uczniow" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -728,7 +728,7 @@ export default function DlaNauczycieli() {
             </Link>
 
             <Link 
-              href="/dla-rodzicow" 
+              href="/pl/tabliczki-mnozenia/dla-rodzicow" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>

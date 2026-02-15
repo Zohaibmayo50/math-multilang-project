@@ -333,7 +333,7 @@ export default function ForParents() {
                 </svg>
               </Link>
               <Link 
-                href="/dlya-uchniv"
+                href="/uk/tablycya-mnozhennya/dlya-uchniv"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Переглянути Посібник Для Учнів

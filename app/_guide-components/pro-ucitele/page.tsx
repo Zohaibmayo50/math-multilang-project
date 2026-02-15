@@ -731,7 +731,7 @@ export default function ProUcitelePage() {
             </Link>
 
             <Link 
-              href="/pro-studenty" 
+              href="/cs/nasobilka/pro-studenty" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -740,7 +740,7 @@ export default function ProUcitelePage() {
             </Link>
 
             <Link 
-              href="/pro-rodice" 
+              href="/cs/nasobilka/pro-rodice" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>

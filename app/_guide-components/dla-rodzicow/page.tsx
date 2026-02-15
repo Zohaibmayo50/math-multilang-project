@@ -333,7 +333,7 @@ export default function DlaRodzicow() {
                 </svg>
               </Link>
               <Link 
-                href="/dla-uczniow"
+                href="/pl/tabliczki-mnozenia/dla-uczniow"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Zobacz Przewodnik dla Uczniów

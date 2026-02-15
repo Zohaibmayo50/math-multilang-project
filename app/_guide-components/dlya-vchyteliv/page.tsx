@@ -731,7 +731,7 @@ export default function DlyaVchytelivPage() {
             </Link>
 
             <Link 
-              href="/dlya-uchniv" 
+              href="/uk/tablycya-mnozhennya/dlya-uchniv" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -740,7 +740,7 @@ export default function DlyaVchytelivPage() {
             </Link>
 
             <Link 
-              href="/dlya-batkiv" 
+              href="/uk/tablycya-mnozhennya/dlya-batkiv" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>

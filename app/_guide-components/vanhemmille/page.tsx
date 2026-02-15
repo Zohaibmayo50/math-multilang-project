@@ -333,7 +333,7 @@ export default function ForParents() {
                 </svg>
               </Link>
               <Link 
-                href="/oppilaille"
+                href="/fi/kertotaulut/oppilaille"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center"
               >
                 Katso Oppaan Oppilaille

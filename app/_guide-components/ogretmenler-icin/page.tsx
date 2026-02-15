@@ -607,7 +607,7 @@ export default function ForTeachers() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 
-                href="/1-10"
+                href="/tr/carpim-tablosu/1-10"
                 className="bg-white text-emerald-600 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors inline-flex items-center justify-center"
               >
                 Tablolara Göz Atın
@@ -616,7 +616,7 @@ export default function ForTeachers() {
                 </svg>
               </Link>
               <Link 
-                href="/"
+                href="/tr/carpim-tablosu"
                 className="bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-800 transition-colors inline-flex items-center justify-center"
               >
                 Ana Sayfaya Dön

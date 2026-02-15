@@ -639,13 +639,13 @@ export default function OpettajillePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/oppilaille"
+                href="/fi/kertotaulut/oppilaille"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-colors shadow-lg"
               >
                 Oppilasresurssit
               </Link>
               <Link
-                href="/numero/1"
+                href="/fi/kertotaulut/1"
                 className="bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-400 transition-colors shadow-lg"
               >
                 Selaa Kertotauluja

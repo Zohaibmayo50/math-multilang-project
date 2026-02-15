@@ -114,7 +114,7 @@ export default function ForStudents() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <Link href="/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                      <Link href="/tr/carpim-tablosu/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
                         1-10 Tablolarına Git →
                       </Link>
                     </div>
@@ -278,7 +278,7 @@ export default function ForStudents() {
                 <p className="text-slate-700 mb-3">
                   Bu sitedeki eğlenceli oyunlarla pratik yap. Oynarken öğrenmek çok daha eğlenceli!
                 </p>
-                <Link href="/" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
+                <Link href="/tr/carpim-tablosu" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
                   Oyunları Keşfet →
                 </Link>
               </div>
@@ -454,7 +454,7 @@ export default function ForStudents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/1-10"
+                href="/tr/carpim-tablosu/1-10"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -464,7 +464,7 @@ export default function ForStudents() {
                 </svg>
               </Link>
               <Link 
-                href="/"
+                href="/tr/carpim-tablosu"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
                 Ana Sayfaya Dön

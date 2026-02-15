@@ -114,7 +114,7 @@ export default function ForStudents() {
                       </ul>
                     </div>
                     <div className="mt-3">
-                      <Link href="/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
+                      <Link href="/de/einmaleins/1-10" className="text-green-600 hover:text-green-700 font-medium inline-flex items-center">
                         Zu den Reihen 1-10 →
                       </Link>
                     </div>
@@ -278,7 +278,7 @@ export default function ForStudents() {
                 <p className="text-slate-700 mb-3">
                   Übe mit den lustigen Spielen auf dieser Seite. Lernen beim Spielen macht viel mehr Spaß!
                 </p>
-                <Link href="/" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
+                <Link href="/de/einmaleins" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center text-sm">
                   Entdecke die Spiele →
                 </Link>
               </div>
@@ -454,7 +454,7 @@ export default function ForStudents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/1-10"
+                href="/de/einmaleins/1-10"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
               >
                 <span className="mr-2">🎯</span>
@@ -464,7 +464,7 @@ export default function ForStudents() {
                 </svg>
               </Link>
               <Link 
-                href="/"
+                href="/de/einmaleins"
                 className="bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center justify-center"
               >
                 Zurück zur Startseite

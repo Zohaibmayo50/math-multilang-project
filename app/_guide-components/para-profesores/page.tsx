@@ -714,7 +714,7 @@ export default function ParaProfesoresPage() {
           
           <div className="grid md:grid-cols-4 gap-6">
             <Link 
-              href="/1-10" 
+              href="/es/tablas-de-multiplicar/1-10" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📘</div>
@@ -723,7 +723,7 @@ export default function ParaProfesoresPage() {
             </Link>
 
             <Link 
-              href="/11-20" 
+              href="/es/tablas-de-multiplicar/11-20" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📗</div>
@@ -732,7 +732,7 @@ export default function ParaProfesoresPage() {
             </Link>
 
             <Link 
-              href="/para-estudiantes" 
+              href="/es/tablas-de-multiplicar/para-estudiantes" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -741,7 +741,7 @@ export default function ParaProfesoresPage() {
             </Link>
 
             <Link 
-              href="/para-padres" 
+              href="/es/tablas-de-multiplicar/para-padres" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>
@@ -759,7 +759,7 @@ export default function ParaProfesoresPage() {
               ejercicios descargables y actividades interactivas.
             </p>
             <Link 
-              href="/"
+              href="/es/tablas-de-multiplicar"
               className="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
             >
               Ver Todas las Tablas

@@ -687,7 +687,7 @@ export default function UntukGuru() {
                 </svg>
               </Link>
               <Link 
-                href="/untuk-orang-tua"
+                href="/id/tabel-perkalian/untuk-orang-tua"
                 className="bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-800 transition-colors inline-flex items-center justify-center border-2 border-purple-400"
               >
                 Panduan untuk Orang Tua

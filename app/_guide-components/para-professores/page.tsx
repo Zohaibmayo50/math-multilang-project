@@ -719,7 +719,7 @@ export default function ParaProfessores() {
             </Link>
 
             <Link 
-              href="/para-estudantes" 
+              href="/pt/tabuada/para-estudantes" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -728,7 +728,7 @@ export default function ParaProfessores() {
             </Link>
 
             <Link 
-              href="/para-pais" 
+              href="/pt/tabuada/para-pais" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>

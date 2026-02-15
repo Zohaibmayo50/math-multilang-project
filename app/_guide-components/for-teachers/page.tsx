@@ -719,7 +719,7 @@ export default function ForTeachers() {
             </Link>
 
             <Link 
-              href="/for-students" 
+              href="/en/multiplication-tables/for-students" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -728,7 +728,7 @@ export default function ForTeachers() {
             </Link>
 
             <Link 
-              href="/for-parents" 
+              href="/en/multiplication-tables/for-parents" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>

@@ -713,7 +713,7 @@ export default function FuerLehrerPage() {
           
           <div className="grid md:grid-cols-4 gap-6">
             <Link 
-              href="/1-10" 
+              href="/de/einmaleins/1-10" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📘</div>
@@ -722,7 +722,7 @@ export default function FuerLehrerPage() {
             </Link>
 
             <Link 
-              href="/11-20" 
+              href="/de/einmaleins/11-20" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">📗</div>
@@ -731,7 +731,7 @@ export default function FuerLehrerPage() {
             </Link>
 
             <Link 
-              href="/fuer-schueler" 
+              href="/de/einmaleins/fuer-schueler" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍🎓</div>
@@ -740,7 +740,7 @@ export default function FuerLehrerPage() {
             </Link>
 
             <Link 
-              href="/fuer-eltern" 
+              href="/de/einmaleins/fuer-eltern" 
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
             >
               <div className="text-4xl mb-3">👨‍👩‍👧</div>
@@ -758,7 +758,7 @@ export default function FuerLehrerPage() {
               herunterladbare Übungen und interaktive Aktivitäten.
             </p>
             <Link 
-              href="/"
+              href="/de/einmaleins"
               className="inline-block bg-white text-indigo-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
             >
               Alle Reihen ansehen
