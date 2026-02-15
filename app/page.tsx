@@ -3,8 +3,8 @@ import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
 
 export const metadata: Metadata = {
-  title: 'Mathematives - Learn Multiplication Tables in Your Language',
-  description: 'Learn multiplication tables in your language. Interactive lessons and practice for English, Turkish, Spanish, German, Czech, Ukrainian, Finnish, French, Swedish, Portuguese, Polish, and Indonesian.',
+  title: 'Mathematives - Learn Mathematics in Your Language',
+  description: 'Interactive math learning platform available in 12 languages. Choose your language and start learning with fun exercises, games, and guides.',
   alternates: {
     canonical: 'https://mathematives.com',
   },
@@ -20,85 +20,73 @@ export default function LanguageSelector() {
       code: 'en',
       name: languageNames.en,
       flag: '🇺🇸',
-      topic: 'Multiplication Tables',
-      description: 'Learn multiplication tables from 1 to 100',
+      nativeCta: 'Start Learning',
     },
     {
       code: 'tr',
       name: languageNames.tr,
       flag: '🇹🇷',
-      topic: 'Çarpım Tablosu',
-      description: '1\'den 100\'e kadar çarpım tablolarını öğrenin',
+      nativeCta: 'Öğrenmeye Başla',
     },
     {
       code: 'es',
       name: languageNames.es,
       flag: '🇪🇸',
-      topic: 'Tablas de Multiplicar',
-      description: 'Aprende las tablas de multiplicar del 1 al 100',
+      nativeCta: 'Empieza a Aprender',
     },
     {
       code: 'de',
       name: languageNames.de,
       flag: '🇩🇪',
-      topic: 'Einmaleins',
-      description: 'Lerne das Einmaleins von 1 bis 100',
+      nativeCta: 'Jetzt Lernen',
     },
     {
       code: 'cs',
       name: languageNames.cs,
       flag: '🇨🇿',
-      topic: 'Násobilka',
-      description: 'Naučte se malou násobilku od 1 do 100',
+      nativeCta: 'Začněte se učit',
     },
     {
       code: 'uk',
       name: languageNames.uk,
       flag: '🇺🇦',
-      topic: 'Таблиця множення',
-      description: 'Вивчіть таблицю множення від 1 до 100',
+      nativeCta: 'Почати навчання',
     },
     {
       code: 'fi',
       name: languageNames.fi,
       flag: '🇫🇮',
-      topic: 'Kertotaulut',
-      description: 'Opi kertotaulut 1:stä 100:aan',
+      nativeCta: 'Aloita oppiminen',
     },
     {
       code: 'fr',
       name: languageNames.fr,
       flag: '🇫🇷',
-      topic: 'Table de Multiplication',
-      description: 'Apprenez les tables de multiplication de 1 à 100',
+      nativeCta: 'Commencer à apprendre',
     },
     {
       code: 'sv',
       name: languageNames.sv,
       flag: '🇸🇪',
-      topic: 'Multiplikationstabeller',
-      description: 'Lär dig multiplikationstabeller från 1 till 100',
+      nativeCta: 'Börja lära dig',
     },
     {
       code: 'pt',
       name: languageNames.pt,
       flag: '🇧🇷',
-      topic: 'Tabuada',
-      description: 'Aprenda a tabuada de 1 a 100',
+      nativeCta: 'Comece a aprender',
     },
     {
       code: 'pl',
       name: languageNames.pl,
       flag: '🇵🇱',
-      topic: 'Tabliczki Mnożenia',
-      description: 'Ucz się tabliczki mnożenia od 1 do 100',
+      nativeCta: 'Zacznij się uczyć',
     },
     {
       code: 'id',
       name: languageNames.id,
       flag: '🇮🇩',
-      topic: 'Tabel Perkalian',
-      description: 'Pelajari tabel perkalian dari 1 hingga 100',
+      nativeCta: 'Mulai Belajar',
     },
   ]
 
@@ -119,18 +107,15 @@ export default function LanguageSelector() {
             <Link
               key={lang.code}
               href={`/${lang.code}`}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-4 hover:scale-105 border-2 border-transparent hover:border-blue-500 flex items-center gap-4"
+              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-5 hover:scale-105 border-2 border-transparent hover:border-blue-500 flex items-center gap-4"
             >
               <div className="text-5xl flex-shrink-0">{lang.flag}</div>
               <div className="flex-1 min-w-0">
-                <h2 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors truncate">
+                <h2 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                   {lang.name}
                 </h2>
-                <p className="text-sm font-semibold text-slate-700 mb-1 truncate">
-                  {lang.topic}
-                </p>
-                <p className="text-xs text-slate-600 line-clamp-2">
-                  {lang.description}
+                <p className="text-sm text-blue-600 font-medium mt-1">
+                  {lang.nativeCta} →
                 </p>
               </div>
             </Link>
@@ -139,7 +124,7 @@ export default function LanguageSelector() {
 
         <div className="text-center mt-12">
           <p className="text-sm text-slate-500">
-            Mathematives - Interactive learning platform for multiplication tables 1-100
+            Mathematives - Interactive math learning platform available in 12 languages
           </p>
         </div>
       </div>
