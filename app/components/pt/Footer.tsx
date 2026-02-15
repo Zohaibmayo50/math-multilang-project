@@ -22,7 +22,7 @@ export default function FooterPt() {
 
           {/* Tabuadas Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tabuadas</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Tabuadas</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pt/tabuada/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function FooterPt() {
 
           {/* Continuação Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Continuação</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Continuação</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pt/tabuada/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function FooterPt() {
 
           {/* Guias Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guias</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Guias</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pt/tabuada/para-estudantes" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function FooterPt() {
 
           {/* Prática Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Prática & Jogos</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Prática & Jogos</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pt/tabuada#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

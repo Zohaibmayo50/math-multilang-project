@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Tablas de Multiplicar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tablas de Multiplicar</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Tablas de Multiplicar</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/es/tablas-de-multiplicar/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Continuar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Continuar</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Continuar</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/es/tablas-de-multiplicar/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Guías Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guías</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Guías</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/es/tablas-de-multiplicar/para-estudiantes" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Práctica Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Práctica y Juegos</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/es/tablas-de-multiplicar#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

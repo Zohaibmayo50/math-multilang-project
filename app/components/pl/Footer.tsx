@@ -22,7 +22,7 @@ export default function FooterPl() {
 
           {/* Tables Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tabliczki</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Tabliczki</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pl/tabliczki-mnozenia/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function FooterPl() {
 
           {/* More Tables Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Więcej Tabliczek</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Więcej Tabliczek</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pl/tabliczki-mnozenia/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function FooterPl() {
 
           {/* Guides Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Przewodniki</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Przewodniki</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pl/tabliczki-mnozenia/dla-uczniow" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function FooterPl() {
 
           {/* Practice Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Ćwiczenia i Gry</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Ćwiczenia i Gry</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/pl/tabliczki-mnozenia#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

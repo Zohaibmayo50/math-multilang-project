@@ -22,7 +22,7 @@ export default function FooterSv() {
 
           {/* Multiplikationstabeller Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Multiplikationstabeller</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Multiplikationstabeller</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/sv/multiplikationstabeller/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function FooterSv() {
 
           {/* Fortsättning Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Fortsättning</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Fortsättning</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/sv/multiplikationstabeller/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function FooterSv() {
 
           {/* Guider Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Guider</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Guider</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/sv/multiplikationstabeller/for-elever" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function FooterSv() {
 
           {/* Övning Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Övning & Spel</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Övning & Spel</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/sv/multiplikationstabeller#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

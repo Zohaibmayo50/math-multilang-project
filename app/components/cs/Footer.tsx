@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Násobilka Tabulky Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Násobilka Tabulky</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Násobilka Tabulky</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/cs/nasobilka/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Continuar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Pokračovat</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Pokračovat</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/cs/nasobilka/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Leitfäden Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Průvodce</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Průvodce</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/cs/nasobilka/pro-studenty" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Übung und Spiele Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Cvičení a Hry</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Cvičení a Hry</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/cs/nasobilka#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

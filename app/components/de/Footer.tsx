@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Einmaleins Tabellen Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Einmaleins Tabellen</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Einmaleins Tabellen</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/de/einmaleins/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Continuar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Weiterführen</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Weiterführen</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/de/einmaleins/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Leitfäden Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Leitfäden</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Leitfäden</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/de/einmaleins/fuer-schueler" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Übung und Spiele Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Übung und Spiele</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Übung und Spiele</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/de/einmaleins#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

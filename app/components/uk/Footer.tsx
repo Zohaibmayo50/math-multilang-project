@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Násobilka Tabulky Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Таблиці Множення</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Таблиці Множення</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/uk/tablycya-mnozhennya/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Continuar Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Продовжити</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Продовжити</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/uk/tablycya-mnozhennya/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Leitfäden Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Посібники</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Посібники</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/uk/tablycya-mnozhennya/dlya-uchniv" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Übung und Spiele Bereich */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Вправи та Ігри</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Вправи та Ігри</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/uk/tablycya-mnozhennya#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

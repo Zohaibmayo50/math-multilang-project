@@ -22,7 +22,7 @@ export default function FooterId() {
 
           {/* Tabel Perkalian Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Tabel Perkalian</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Tabel Perkalian</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/id/tabel-perkalian/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function FooterId() {
 
           {/* Lanjutan Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Lanjutan</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Lanjutan</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/id/tabel-perkalian/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function FooterId() {
 
           {/* Panduan Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Panduan</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Panduan</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/id/tabel-perkalian/untuk-siswa" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function FooterId() {
 
           {/* Latihan Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Latihan & Permainan</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Latihan & Permainan</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/id/tabel-perkalian#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

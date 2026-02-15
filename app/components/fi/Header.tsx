@@ -148,9 +148,9 @@ export default function Header() {
         <div className="px-4 pt-2 pb-4 space-y-2 bg-white border-t border-blue-100">
           {/* Násobilka Section */}
           <div className="py-2">
-            <h3 className="px-4 py-2 text-sm font-semibold text-slate-900 border-b border-slate-200">
+            <div className="px-4 py-2 text-sm font-semibold text-slate-900 border-b border-slate-200">
               📚 Kertotaulut
-            </h3>
+            </div>
             <div className="mt-2 space-y-1">
               <Link href="/fi/kertotaulut/1-10" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 Taulut 1-10
@@ -187,9 +187,9 @@ export default function Header() {
 
           {/* Průvodci Section */}
           <div className="py-2 border-t border-slate-200">
-            <h3 className="px-4 py-2 text-sm font-semibold text-slate-900">
+            <div className="px-4 py-2 text-sm font-semibold text-slate-900">
               📖 Oppaat
-            </h3>
+            </div>
             <div className="mt-2 space-y-1">
               <Link href="/fi/kertotaulut/oppilaille" onClick={closeMobileMenu} className="block px-6 py-2 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors">
                 👨‍🎓 Oppilaille

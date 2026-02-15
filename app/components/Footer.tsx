@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Çarpım Tablosu Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Çarpım Tablosu</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Çarpım Tablosu</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/tr/carpim-tablosu/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Devam Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Devam</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Devam</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/tr/carpim-tablosu/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Rehberler Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Rehberler</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Rehberler</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/tr/carpim-tablosu/ogrenciler-icin" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Pratik Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Pratik & Oyunlar</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Pratik & Oyunlar</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/tr/carpim-tablosu#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">

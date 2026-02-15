@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Nopeat Linkit - Column 1 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-blue-400">Nopeat Linkit</h3>
+            <div className="text-lg font-semibold mb-4 text-blue-400">Nopeat Linkit</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fi/kertotaulut/1-10" className="text-slate-400 hover:text-white transition-colors">
@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Continue Section - Column 2 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-indigo-400">Jatka</h3>
+            <div className="text-lg font-semibold mb-4 text-indigo-400">Jatka</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fi/kertotaulut/51-60" className="text-slate-400 hover:text-white transition-colors">
@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* Oppaat Section - Column 3 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-purple-400">Oppaat</h3>
+            <div className="text-lg font-semibold mb-4 text-purple-400">Oppaat</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fi/kertotaulut/oppilaille" className="text-slate-400 hover:text-white transition-colors">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Resurssit Section - Column 4 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-emerald-400">Resurssit</h3>
+            <div className="text-lg font-semibold mb-4 text-emerald-400">Resurssit</div>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/fi/kertotaulut#pdf-exercises" className="text-slate-400 hover:text-white transition-colors">
