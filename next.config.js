@@ -180,6 +180,10 @@ const nextConfig = {
             key: 'X-Frame-Options',
             value: 'SAMEORIGIN',
           },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
         ],
       },
     ];
