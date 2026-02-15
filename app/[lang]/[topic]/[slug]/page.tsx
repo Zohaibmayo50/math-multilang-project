@@ -261,14 +261,14 @@ const rangeMetadataEn: Record<string, {
   },
   '61-70': {
     title: 'Times Tables 61-70',
-    description: 'Learn times tables from 61 to 70. Complete educational resources.',
+    description: 'Learn times tables from 61 to 70 with interactive exercises, printable worksheets and fun games. Build advanced multiplication skills step by step.',
     keywords: 'times tables 61-70, multiplication tables',
     level: 'advanced',
     color: 'from-amber-50 to-yellow-50',
   },
   '71-80': {
     title: 'Times Tables 71-80',
-    description: 'Learn times tables from 71 to 80. Develop advanced math skills.',
+    description: 'Learn times tables from 71 to 80 with free practice drills, educational games and PDF worksheets. Master advanced multiplication at your own pace.',
     keywords: 'times tables 71-80, multiplication tables',
     level: 'advanced',
     color: 'from-yellow-50 to-lime-50',
@@ -633,7 +633,7 @@ const rangeMetadataCs: Record<string, {
   },
   '21-30': {
     title: 'Tabulky Násobilky 21 až 30',
-    description: 'Naučte se násobilky 21 až 30. Střední úroveň a vzory násobilky.',
+    description: 'Naučte se násobilky 21 až 30 s interaktivními cvičeními, hrami a pracovními listy ve formátu PDF. Procvičujte násobení svým vlastním tempem.',
     keywords: 'násobilka 21 až 30, násobilka, násobení, učení matematiky',
     level: 'intermediate',
     color: 'from-purple-50 to-pink-50',
@@ -793,7 +793,7 @@ const rangeMetadataFi: Record<string, {
   },
   '21-30': {
     title: 'Kertotaulut 21-30',
-    description: 'Opi kertotaulut 21-30. Keskitaso ja kertolaskun mallit.',
+    description: 'Opi kertotaulut 21-30 ilmaisilla harjoituksilla, peleillä ja tulostettavilla tehtävillä. Kehitä kertolaskutaitojasi askel askeleelta omaan tahtiisi.',
     keywords: 'kertotaulu 21-30, kertotaulu, kertominen, matematiikan oppiminen',
     level: 'intermediate',
     color: 'from-purple-50 to-pink-50',
