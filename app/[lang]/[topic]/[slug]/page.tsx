@@ -25,7 +25,7 @@ import NumberPagePl from '@/app/components/pl/NumberPage'
 import RangePageId from '@/app/components/id/RangePage'
 import NumberPageId from '@/app/components/id/NumberPage'
 import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
-import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, generateHreflangMetadata } from '@/lib/url-helpers'
+import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, buildAlternatesMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from '@/lib/number-metadata-es'
 import { numberTitlesDe, numberDescriptionsDe, numberSpecialPropertiesDe } from '@/lib/number-metadata-de'
@@ -1445,7 +1445,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {}
   }
 
-  const hreflang = generateHreflangMetadata(slug)
+  const hreflang = buildAlternatesMetadata(slugType, slug)
 
   // Polish metadata
   if (locale === 'pl') {

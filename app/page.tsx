@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { i18n, languageNames, topicSlugs, siteConfig } from '@/lib/i18n-config'
+import { buildAlternatesMetadata } from '@/lib/url-helpers'
 
 export const metadata: Metadata = {
   title: 'Mathematives - Learn Mathematics in Your Language',
   description: 'Interactive math learning platform available in 12 languages. Choose your language and start learning with fun exercises, games, and guides.',
   alternates: {
     canonical: 'https://mathematives.com',
+    ...buildAlternatesMetadata('root'),
   },
   robots: {
     index: true,

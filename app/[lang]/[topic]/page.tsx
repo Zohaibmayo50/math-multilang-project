@@ -126,7 +126,7 @@ import HowToLearnId from '@/app/components/id/HowToLearn'
 import AudienceSectionId from '@/app/components/id/AudienceSection'
 import FooterId from '@/app/components/id/Footer'
 import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
-import { getAbsoluteUrl, getHreflangAlternates, generateHreflangMetadata } from '@/lib/url-helpers'
+import { getAbsoluteUrl, buildAlternatesMetadata } from '@/lib/url-helpers'
 
 interface PageProps {
   params: {
@@ -163,7 +163,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const locale = lang as Locale
   const config = siteConfig[locale]
   const baseUrl = getAbsoluteUrl(locale)
-  const hreflang = generateHreflangMetadata()
+  const hreflang = buildAlternatesMetadata('topic')
 
   // English metadata (production)
   if (locale === 'en') {

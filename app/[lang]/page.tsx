@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { i18n, Locale, topicSlugs, languageNames, siteConfig } from '@/lib/i18n-config'
+import { buildAlternatesMetadata } from '@/lib/url-helpers'
 
 interface PageProps {
   params: {
@@ -307,12 +308,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${content.subheading}. ${config.description}`,
     alternates: {
       canonical: `${config.domain}/${lang}`,
-      languages: Object.fromEntries(
-        i18n.locales.map((locale) => [
-          locale,
-          `${siteConfig[locale].domain}/${locale}`
-        ])
-      )
+      ...buildAlternatesMetadata('lang-hub'),
     },
     robots: {
       index: true,
