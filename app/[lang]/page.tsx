@@ -409,7 +409,7 @@ export default async function LanguageHub({ params }: PageProps) {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
             {content.heading}
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-700 max-w-2xl mx-auto">
             {content.subheading}
           </p>
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm">
@@ -444,7 +444,7 @@ export default async function LanguageHub({ params }: PageProps) {
                     <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                       {topic.title}
                     </h3>
-                    <p className="text-sm text-slate-600 mb-3">
+                    <p className="text-base text-slate-700 mb-3">
                       {topic.description}
                     </p>
                     <div className="inline-flex items-center text-sm font-semibold text-blue-600 group-hover:text-blue-700">
@@ -476,10 +476,10 @@ export default async function LanguageHub({ params }: PageProps) {
                       <h3 className="text-xl font-bold text-slate-700 mb-2">
                         {topic.title}
                       </h3>
-                      <p className="text-sm text-slate-500 mb-3">
+                      <p className="text-base text-slate-600 mb-3">
                         {topic.description}
                       </p>
-                      <div className="inline-flex items-center text-sm font-semibold text-slate-500">
+                      <div className="inline-flex items-center text-sm font-semibold text-slate-600">
                         <span>{topic.shortDescription}</span>
                       </div>
                     </div>

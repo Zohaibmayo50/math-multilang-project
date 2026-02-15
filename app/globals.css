@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Readability: improve body text contrast in content areas */
+main .text-slate-700 {
+  color: rgb(30, 41, 59); /* slate-800 for better readability */
+}
+main .text-gray-700 {
+  color: rgb(31, 41, 55); /* gray-800 for better readability */
+}
+main .text-slate-600 {
+  color: rgb(51, 65, 85); /* slate-700 for better readability */
+}
+main .text-gray-600 {
+  color: rgb(55, 65, 81); /* gray-700 for better readability */
+}
+/* Improve small text readability in content sections */
+main section p,
+main section li {
+  line-height: 1.75;
+}
+main section .text-sm {
+  font-size: 0.9375rem; /* 15px - between text-sm (14px) and text-base (16px) */
+  line-height: 1.75;
+}
+
 :root {
   --foreground-rgb: 15, 23, 42;
   --background-rgb: 255, 255, 255;
@@ -36,7 +59,11 @@ body {
   }
   
   p {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base md:text-lg leading-7 md:leading-8;
+  }
+
+  li {
+    @apply leading-7;
   }
 }
 
