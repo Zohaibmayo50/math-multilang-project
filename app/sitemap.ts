@@ -19,12 +19,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const topicSlug = topicSlugs[locale]
     const topicBase = `${baseUrl}/${locale}/${topicSlug}`
 
+    // Language hub page
+    sitemap.push({
+      url: `${baseUrl}/${locale}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: locale === 'tr' ? 0.95 : 0.7,
+    })
+
     // Topic homepage for each language
     sitemap.push({
       url: topicBase,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: locale === 'tr' ? 0.95 : 0.5, // Higher priority for Turkish
+      priority: locale === 'tr' ? 0.9 : 0.6,
     })
 
     // Range pages
@@ -34,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${topicBase}/${range}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? (index === 0 ? 0.9 : 0.8) : 0.4,
+        priority: locale === 'tr' ? (index === 0 ? 0.8 : 0.7) : 0.5,
       })
     })
 
@@ -45,18 +53,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${topicBase}/${number}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? 0.7 : 0.3,
+        priority: locale === 'tr' ? 0.6 : 0.4,
       })
     })
 
-    // Guide pages (at root level, not under topic)
+    // Guide pages (under topic)
     const localeGuides = guides[locale]
     Object.values(localeGuides).forEach(guideSlug => {
       sitemap.push({
-        url: `${baseUrl}/${guideSlug}`,
+        url: `${topicBase}/${guideSlug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? 0.9 : 0.4,
+        priority: locale === 'tr' ? 0.8 : 0.5,
       })
     })
   })

@@ -118,7 +118,7 @@ export default function LanguageSelector() {
           {languages.map((lang) => (
             <Link
               key={lang.code}
-              href={`/${lang.code}/${topicSlugs[lang.code as keyof typeof topicSlugs]}`}
+              href={`/${lang.code}`}
               className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-4 hover:scale-105 border-2 border-transparent hover:border-blue-500 flex items-center gap-4"
             >
               <div className="text-5xl flex-shrink-0">{lang.flag}</div>

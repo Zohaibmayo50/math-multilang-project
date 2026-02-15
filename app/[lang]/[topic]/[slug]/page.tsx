@@ -39,65 +39,70 @@ import { numberTitles as numberTitlesEn, numberDescriptions as numberDescription
 import { numberTitlesPl, numberDescriptionsPl, numberSpecialPropertiesPl } from '@/lib/number-metadata-pl'
 import { numberTitlesId, numberDescriptionsId, numberSpecialPropertiesId } from '@/lib/number-metadata-id'
 
+// TODO: Guide pages temporarilyisabled for restructuring
+// Will be re-added as proper components after routing is stable
+
+/*
 // Import Turkish guide page components
-import ForStudents from '@/app/ogrenciler-icin/page'
-import ForTeachers from '@/app/ogretmenler-icin/page'
-import ForParents from '@/app/veliler-icin/page'
+import ForStudents from '@/app/_guide-components/ogrenciler-icin/page'
+import ForTeachers from '@/app/_guide-components/ogretmenler-icin/page'
+import ForParents from '@/app/_guide-components/veliler-icin/page'
 
 // Import Spanish guide page components
-import ForStudentsEs from '@/app/para-estudiantes/page'
-import ForTeachersEs from '@/app/para-profesores/page'
-import ForParentsEs from '@/app/para-padres/page'
+import ForStudentsEs from '@/app/_guide-components/para-estudiantes/page'
+import ForTeachersEs from '@/app/_guide-components/para-profesores/page'
+import ForParentsEs from '@/app/_guide-components/para-padres/page'
 
 // Import German guide page components
-import ForStudentsDe from '@/app/fuer-schueler/page'
-import ForTeachersDe from '@/app/fuer-lehrer/page'
-import ForParentsDe from '@/app/fuer-eltern/page'
+import ForStudentsDe from '@/app/_guide-components/fuer-schueler/page'
+import ForTeachersDe from '@/app/_guide-components/fuer-lehrer/page'
+import ForParentsDe from '@/app/_guide-components/fuer-eltern/page'
 
 // Import Czech guide page components
-import ForStudentsCs from '@/app/pro-studenty/page'
-import ForTeachersCs from '@/app/pro-ucitele/page'
-import ForParentsCs from '@/app/pro-rodice/page'
+import ForStudentsCs from '@/app/_guide-components/pro-studenty/page'
+import ForTeachersCs from '@/app/_guide-components/pro-ucitele/page'
+import ForParentsCs from '@/app/_guide-components/pro-rodice/page'
 
 // Import Ukrainian guide page components
-import ForStudentsUk from '@/app/dlya-uchniv/page'
-import ForTeachersUk from '@/app/dlya-vchyteliv/page'
-import ForParentsUk from '@/app/dlya-batkiv/page'
+import ForStudentsUk from '@/app/_guide-components/dlya-uchniv/page'
+import ForTeachersUk from '@/app/_guide-components/dlya-vchyteliv/page'
+import ForParentsUk from '@/app/_guide-components/dlya-batkiv/page'
 
 // Import Finnish guide page components
-import ForStudentsFi from '@/app/oppilaille/page'
-import ForTeachersFi from '@/app/opettajille/page'
-import ForParentsFi from '@/app/vanhemmille/page'
+import ForStudentsFi from '@/app/_guide-components/oppilaille/page'
+import ForTeachersFi from '@/app/_guide-components/opettajille/page'
+import ForParentsFi from '@/app/_guide-components/vanhemmille/page'
 
 // Import French guide page components
-import ForStudentsFr from '@/app/pour-les-eleves/page'
-import ForTeachersFr from '@/app/pour-les-enseignants/page'
-import ForParentsFr from '@/app/pour-les-parents/page'
+import ForStudentsFr from '@/app/_guide-components/pour-les-eleves/page'
+import ForTeachersFr from '@/app/_guide-components/pour-les-enseignants/page'
+import ForParentsFr from '@/app/_guide-components/pour-les-parents/page'
 
 // Import Swedish guide page components
-import ForStudentsSv from '@/app/for-elever/page'
-import ForTeachersSv from '@/app/for-larare/page'
-import ForParentsSv from '@/app/for-foraldrar/page'
+import ForStudentsSv from '@/app/_guide-components/for-elever/page'
+import ForTeachersSv from '@/app/_guide-components/for-larare/page'
+import ForParentsSv from '@/app/_guide-components/for-foraldrar/page'
 
 // Import Portuguese guide page components
-import ForStudentsPt from '@/app/para-estudantes/page'
-import ForTeachersPt from '@/app/para-professores/page'
-import ForParentsPt from '@/app/para-pais/page'
+import ForStudentsPt from '@/app/_guide-components/para-estudantes/page'
+import ForTeachersPt from '@/app/_guide-components/para-professores/page'
+import ForParentsPt from '@/app/_guide-components/para-pais/page'
 
 // Import English guide page components
-import ForStudentsEn from '@/app/for-students/page'
-import ForTeachersEn from '@/app/for-teachers/page'
-import ForParentsEn from '@/app/for-parents/page'
+import ForStudentsEn from '@/app/_guide-components/for-students/page'
+import ForTeachersEn from '@/app/_guide-components/for-teachers/page'
+import ForParentsEn from '@/app/_guide-components/for-parents/page'
 
 // Import Polish guide page components
-import DlaUczniwPl from '@/app/dla-uczniow/page'
-import DlaNauczycieliPl from '@/app/dla-nauczycieli/page'
-import DlaRodzicwPl from '@/app/dla-rodzicow/page'
+import DlaUczniwPl from '@/app/_guide-components/dla-uczniow/page'
+import DlaNauczycieliPl from '@/app/_guide-components/dla-nauczycieli/page'
+import DlaRodzicwPl from '@/app/_guide-components/dla-rodzicow/page'
 
 // Import Indonesian guide page components
-import UntukSiswa from '@/app/untuk-siswa/page'
-import UntukGuru from '@/app/untuk-guru/page'
-import UntukOrangTua from '@/app/untuk-orang-tua/page'
+import UntukSiswa from '@/app/_guide-components/untuk-siswa/page'
+import UntukGuru from '@/app/_guide-components/untuk-guru/page'
+import UntukOrangTua from '@/app/_guide-components/untuk-orang-tua/page'
+*/
 
 interface PageProps {
   params: {
@@ -1342,6 +1347,8 @@ const guideMetadataId: Record<string, {
   },
 }
 
+// TODO: Guide components temporarily disabled
+/*
 const guideComponents: Record<string, any> = {
   'for-students': ForStudentsEn,
   'for-teachers': ForTeachersEn,
@@ -1380,24 +1387,13 @@ const guideComponents: Record<string, any> = {
   'untuk-guru': UntukGuru,
   'untuk-orang-tua': UntukOrangTua,
 }
+*/
 
 // Determine slug type
-function getSlugType(slug: string, locale: Locale): 'range' | 'number' | 'guide' | null {
+function getSlugType(slug: string, locale: Locale): 'range' | 'number' | null {
   if (/^\d+-\d+$/.test(slug)) return 'range'
   if (/^\d+$/.test(slug)) return 'number'
-  // Check against locale-specific guide metadata
-  if (locale === 'en' && slug in guideMetadataEn) return 'guide'
-  if (locale === 'cs' && slug in guideMetadataCs) return 'guide'
-  if (locale === 'uk' && slug in guideMetadataUk) return 'guide'
-  if (locale === 'fi' && slug in guideMetadataFi) return 'guide'
-  if (locale === 'fr' && slug in guideMetadataFr) return 'guide'
-  if (locale === 'sv' && slug in guideMetadataSv) return 'guide'
-  if (locale === 'pt' && slug in guideMetadataPt) return 'guide'
-  if (locale === 'pl' && slug in guideMetadataPl) return 'guide'
-  if (locale === 'id' && slug in guideMetadataId) return 'guide'
-  if (locale === 'tr' && slug in guideMetadata) return 'guide'
-  if (locale === 'es' && slug in guideMetadataEs) return 'guide'
-  if (locale === 'de' && slug in guideMetadataDe) return 'guide'
+  // TODO: Guide pages temporarily disabled
   return null
 }
 
@@ -1432,11 +1428,11 @@ export async function generateStaticParams() {
       params.push({ lang, topic, slug: number })
     })
     
-    // Add guides for this locale
-    const localeGuides = guides[locale]
-    Object.values(localeGuides).forEach(guide => {
-      params.push({ lang, topic, slug: guide })
-    })
+    // TODO: Guide pages temporarily disabled
+    // const localeGuides = guides[locale]
+    // Object.values(localeGuides).forEach(guide => {
+    //   params.push({ lang, topic, slug: guide })
+    // })
   })
 
   return params
@@ -1503,6 +1499,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataPl[slug]
       if (!meta) return {}
@@ -1522,6 +1520,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Indonesian metadata
@@ -1568,6 +1567,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataId[slug]
       if (!meta) return {}
@@ -1587,6 +1588,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // English metadata (production)
@@ -1628,6 +1630,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataEn[slug]
       if (!meta) return {}
@@ -1647,6 +1651,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Turkish metadata (production)
@@ -1688,6 +1693,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadata[slug]
       if (!meta) return {}
@@ -1707,6 +1714,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Spanish metadata (production)
@@ -1748,6 +1756,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataEs[slug]
       if (!meta) return {}
@@ -1767,6 +1777,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // German metadata
@@ -1813,6 +1824,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataDe[slug]
       if (!meta) return {}
@@ -1832,6 +1845,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Czech metadata
@@ -1878,6 +1892,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataCs[slug]
       if (!meta) return {}
@@ -1897,6 +1913,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Ukrainian metadata
@@ -1943,6 +1960,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataUk[slug]
       if (!meta) return {}
@@ -1962,6 +1981,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Finnish metadata
@@ -2008,6 +2028,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataFi[slug]
       if (!meta) return {}
@@ -2027,6 +2049,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // French metadata
@@ -2073,6 +2096,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataFr[slug]
       if (!meta) return {}
@@ -2092,6 +2117,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Swedish metadata
@@ -2138,6 +2164,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataSv[slug]
       if (!meta) return {}
@@ -2157,6 +2185,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   // Portuguese metadata
@@ -2203,6 +2232,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const meta = guideMetadataPt[slug]
       if (!meta) return {}
@@ -2222,6 +2253,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
+    */
   }
 
   return {}
@@ -2410,12 +2442,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Spanish version (production-ready)
@@ -2587,12 +2622,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // German version
@@ -2764,12 +2802,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Czech version
@@ -2941,12 +2982,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Ukrainian version
@@ -3118,12 +3162,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Finnish version
@@ -3295,12 +3342,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // French version
@@ -3472,12 +3522,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Swedish version
@@ -3649,12 +3702,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // English version
@@ -3690,11 +3746,14 @@ export default async function SlugPage({ params }: PageProps) {
       )
     }
     
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       if (slug === 'for-students') return <ForStudentsEn />
       if (slug === 'for-teachers') return <ForTeachersEn />
       if (slug === 'for-parents') return <ForParentsEn />
     }
+    */
   }
 
   // Portuguese version
@@ -3866,12 +3925,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Polish version
@@ -4043,12 +4105,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   // Indonesian version
@@ -4220,12 +4285,15 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
+    // TODO: Guide pages temporarily disabled
+    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
+    */
   }
 
   notFound()
