@@ -1491,8 +1491,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataPl[slug]
       if (!meta) return {}
@@ -1512,7 +1510,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Indonesian metadata
@@ -1559,8 +1556,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataId[slug]
       if (!meta) return {}
@@ -1580,7 +1575,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // English metadata (production)
@@ -1622,8 +1616,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataEn[slug]
       if (!meta) return {}
@@ -1643,7 +1635,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Turkish metadata (production)
@@ -1685,8 +1676,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadata[slug]
       if (!meta) return {}
@@ -1706,7 +1695,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Spanish metadata (production)
@@ -1748,8 +1736,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataEs[slug]
       if (!meta) return {}
@@ -1769,7 +1755,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // German metadata
@@ -1816,8 +1801,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataDe[slug]
       if (!meta) return {}
@@ -1837,7 +1820,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Czech metadata
@@ -1884,8 +1866,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataCs[slug]
       if (!meta) return {}
@@ -1905,7 +1885,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Ukrainian metadata
@@ -1952,8 +1931,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataUk[slug]
       if (!meta) return {}
@@ -1973,7 +1950,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Finnish metadata
@@ -2020,8 +1996,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataFi[slug]
       if (!meta) return {}
@@ -2041,7 +2015,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // French metadata
@@ -2088,8 +2061,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataFr[slug]
       if (!meta) return {}
@@ -2109,7 +2080,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Swedish metadata
@@ -2156,8 +2126,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataSv[slug]
       if (!meta) return {}
@@ -2177,7 +2145,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   // Portuguese metadata
@@ -2224,8 +2191,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       }
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const meta = guideMetadataPt[slug]
       if (!meta) return {}
@@ -2245,7 +2210,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       }
     }
-    */
   }
 
   return {}
@@ -2434,15 +2398,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Spanish version (production-ready)
@@ -2614,15 +2575,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // German version
@@ -2794,15 +2752,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Czech version
@@ -2974,15 +2929,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Ukrainian version
@@ -3154,15 +3106,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Finnish version
@@ -3334,15 +3283,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // French version
@@ -3514,15 +3460,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Swedish version
@@ -3694,15 +3637,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // English version
@@ -3738,14 +3678,11 @@ export default async function SlugPage({ params }: PageProps) {
       )
     }
     
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       if (slug === 'for-students') return <ForStudentsEn />
       if (slug === 'for-teachers') return <ForTeachersEn />
       if (slug === 'for-parents') return <ForParentsEn />
     }
-    */
   }
 
   // Portuguese version
@@ -3917,15 +3854,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Polish version
@@ -4097,15 +4031,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   // Indonesian version
@@ -4277,15 +4208,12 @@ export default async function SlugPage({ params }: PageProps) {
     }
     
     // GUIDE PAGE
-    // TODO: Guide pages temporarily disabled
-    /*
     if (slugType === 'guide') {
       const Component = guideComponents[slug]
       if (!Component) notFound()
       
       return <Component />
     }
-    */
   }
 
   notFound()
