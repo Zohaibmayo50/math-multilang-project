@@ -212,6 +212,57 @@ const topicMetadata: Record<Locale, {
   ]
 }
 
+const hubMeta: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: 'Learn Maths Online Free',
+    description: 'Free interactive maths platform with exercises, games, and guides. Choose a topic and start learning at your own pace.',
+  },
+  tr: {
+    title: 'Ücretsiz Online Matematik Öğren',
+    description: 'Alıştırma, oyun ve rehberlerle ücretsiz interaktif matematik platformu. Kendi hızınızda öğrenmeye başlayın.',
+  },
+  es: {
+    title: 'Aprende Matemáticas Gratis Online',
+    description: 'Plataforma interactiva de matemáticas con ejercicios, juegos y guías. Elige un tema y aprende a tu ritmo.',
+  },
+  de: {
+    title: 'Kostenlos Mathe Online Lernen',
+    description: 'Kostenlose interaktive Mathe-Plattform mit Übungen, Spielen und Leitfäden. Wähle ein Thema und lerne in deinem Tempo.',
+  },
+  cs: {
+    title: 'Matematika Online Zdarma',
+    description: 'Bezplatná interaktivní matematická platforma s cvičeními, hrami a průvodci. Začněte se učit vlastním tempem.',
+  },
+  uk: {
+    title: 'Математика Онлайн Безкоштовно',
+    description: 'Безкоштовна інтерактивна математична платформа з вправами, іграми та посібниками. Почніть навчатися у своєму темпі.',
+  },
+  fi: {
+    title: 'Opi Matematiikkaa Ilmaiseksi',
+    description: 'Ilmainen interaktiivinen matematiikka-alusta harjoituksilla, peleillä ja oppailla. Aloita oppiminen omaan tahtiisi.',
+  },
+  fr: {
+    title: 'Apprendre les Maths Gratuitement',
+    description: 'Plateforme de maths interactive et gratuite avec exercices, jeux et guides. Choisissez un sujet et apprenez à votre rythme.',
+  },
+  sv: {
+    title: 'Lär dig Matte Gratis Online',
+    description: 'Gratis interaktiv matteplattform med övningar, spel och guider. Välj ett ämne och lär dig i din egen takt.',
+  },
+  pt: {
+    title: 'Aprenda Matemática Grátis Online',
+    description: 'Plataforma interativa de matemática com exercícios, jogos e guias. Escolha um tópico e aprenda no seu ritmo.',
+  },
+  pl: {
+    title: 'Ucz się Matematyki Online',
+    description: 'Bezpłatna interaktywna platforma matematyczna z ćwiczeniami, grami i poradnikami. Ucz się we własnym tempie.',
+  },
+  id: {
+    title: 'Belajar Matematika Gratis Online',
+    description: 'Platform matematika interaktif gratis dengan latihan, permainan, dan panduan. Mulai belajar sesuai kecepatan Anda.',
+  },
+}
+
 const pageContent: Record<Locale, {
   heading: string
   subheading: string
@@ -300,12 +351,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {}
   }
 
-  const content = pageContent[lang]
+  const meta = hubMeta[lang]
   const config = siteConfig[lang]
 
   return {
-    title: `${content.heading} | ${config.name} | Mathematives`,
-    description: `${content.subheading}. ${config.description}`,
+    title: meta.title,
+    description: meta.description,
     alternates: {
       canonical: `${config.domain}/${lang}`,
       ...buildAlternatesMetadata('lang-hub'),
@@ -315,8 +366,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       follow: true,
     },
     openGraph: {
-      title: `${content.heading} | Mathematives`,
-      description: config.description,
+      title: meta.title,
+      description: meta.description,
       url: `${config.domain}/${lang}`,
       siteName: 'Mathematives',
       locale: lang,
