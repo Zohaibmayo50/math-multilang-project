@@ -734,7 +734,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroEn />
           <LearningPathsEn />
-          <PracticePreviewEn />
+          <PracticePreviewEn rangeStart={1} rangeEnd={100} />
           <GamesSectionEn />
           <PrintableExercisesEn />
           <DefinitionSectionEn />
@@ -852,7 +852,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <Hero />
           <LearningPaths />
-          <PracticePreview />
+          <PracticePreview rangeStart={1} rangeEnd={100} />
           <GamesSection />
           <PrintableExercises />
           <DefinitionSection />
@@ -952,7 +952,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroEs />
           <LearningPathsEs />
-          <PracticePreviewEs />
+          <PracticePreviewEs rangeStart={1} rangeEnd={100} />
           <GamesSectionEs />
           <PrintableExercisesEs />
           <DefinitionSectionEs />
@@ -1056,7 +1056,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroDe />
           <LearningPathsDe />
-          <PracticePreviewDe />
+          <PracticePreviewDe rangeStart={1} rangeEnd={100} />
           <GamesSectionDe />
           <PrintableExercisesDe />
           <DefinitionSectionDe />
@@ -1160,7 +1160,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroCs />
           <LearningPathsCs />
-          <PracticePreviewCs />
+          <PracticePreviewCs rangeStart={1} rangeEnd={100} />
           <GamesSectionCs />
           <PrintableExercisesCs />
           <DefinitionSectionCs />
@@ -1264,7 +1264,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroUk />
           <LearningPathsUk />
-          <PracticePreviewUk />
+          <PracticePreviewUk rangeStart={1} rangeEnd={100} />
           <GamesSectionUk />
           <PrintableExercisesUk />
           <DefinitionSectionUk />
@@ -1368,7 +1368,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroFi />
           <LearningPathsFi />
-          <PracticePreviewFi />
+          <PracticePreviewFi rangeStart={1} rangeEnd={100} />
           <GamesSectionFi />
           <PrintableExercisesFi />
           <DefinitionSectionFi />
@@ -1471,7 +1471,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroFr />
           <LearningPathsFr />
-          <PracticePreviewFr />
+          <PracticePreviewFr rangeStart={1} rangeEnd={100} />
           <GamesSectionFr />
           <PrintableExercisesFr />
           <DefinitionSectionFr />
@@ -1575,7 +1575,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroSv />
           <LearningPathsSv />
-          <PracticePreviewSv />
+          <PracticePreviewSv rangeStart={1} rangeEnd={100} />
           <GamesSectionSv />
           <PrintableExercisesSv />
           <DefinitionSectionSv />
@@ -1679,7 +1679,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroPt />
           <LearningPathsPt />
-          <PracticePreviewPt />
+          <PracticePreviewPt rangeStart={1} rangeEnd={100} />
           <GamesSectionPt />
           <PrintableExercisesPt />
           <DefinitionSectionPt />
@@ -1783,7 +1783,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroPl />
           <LearningPathsPl />
-          <PracticePreviewPl />
+          <PracticePreviewPl rangeStart={1} rangeEnd={100} />
           <GamesSectionPl />
           <PrintableExercisesPl />
           <DefinitionSectionPl />
@@ -1887,7 +1887,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <main className="min-h-screen">
           <HeroId />
           <LearningPathsId />
-          <PracticePreviewId />
+          <PracticePreviewId rangeStart={1} rangeEnd={100} />
           <GamesSectionId />
           <PrintableExercisesId />
           <DefinitionSectionId />

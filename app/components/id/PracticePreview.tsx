@@ -104,7 +104,7 @@ export default function PracticePreviewId({ rangeStart = 1, rangeEnd = 10 }: Pra
     <section id="practice" className="section-container bg-gradient-to-br from-slate-50 to-blue-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          Latihan Tabel Perkalian
+          Latihan Tabel Perkalian {rangeStart} sampai {rangeEnd}
         </h2>
         
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">

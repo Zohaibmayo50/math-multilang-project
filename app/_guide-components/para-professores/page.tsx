@@ -35,7 +35,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Estrategias de Enseñanza Efectivas
+            Estratégias de Ensino Eficazes
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -174,7 +174,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4 bg-white/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Actividades para el Aula
+            Atividades para a Sala de Aula
           </h2>
           
           <div className="grid md:grid-cols-3 gap-6">
@@ -512,7 +512,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Errores Conceptuales Comunes
+            Erros Conceituais Comuns
           </h2>
           
           <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -696,7 +696,7 @@ export default function ParaProfessores() {
       <section className="py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Recursos Adicionales
+            Recursos Adicionais
           </h2>
           
           <div className="grid md:grid-cols-4 gap-6">
