@@ -1,20 +1,20 @@
 // Number-specific metadata for Portuguese language (Brazilian Portuguese primary)
 export const numberTitlesPt: Record<number, string> = {
-  1: '1 Tabuada',
-  2: '2 Tabuada',
-  3: '3 Tabuada',
-  4: '4 Tabuada',
-  5: '5 Tabuada',
-  6: '6 Tabuada',
-  7: '7 Tabuada',
-  8: '8 Tabuada',
-  9: '9 Tabuada',
-  10: '10 Tabuada',
+  1: 'Tabuada do 1 - Aprenda a Multiplicar',
+  2: 'Tabuada do 2 - Aprenda a Multiplicar',
+  3: 'Tabuada do 3 - Aprenda a Multiplicar',
+  4: 'Tabuada do 4 - Aprenda a Multiplicar',
+  5: 'Tabuada do 5 - Aprenda a Multiplicar',
+  6: 'Tabuada do 6 - Aprenda a Multiplicar',
+  7: 'Tabuada do 7 - Aprenda a Multiplicar',
+  8: 'Tabuada do 8 - Aprenda a Multiplicar',
+  9: 'Tabuada do 9 - Aprenda a Multiplicar',
+  10: 'Tabuada do 10 - Aprenda a Multiplicar',
 }
 
 // Generate titles for 11-100 (following the pattern)
 for (let i = 11; i <= 100; i++) {
-  numberTitlesPt[i] = `${i} Tabuada`
+  numberTitlesPt[i] = `Tabuada do ${i} - Aprenda a Multiplicar`
 }
 
 export const numberDescriptionsPt: Record<number, string> = {

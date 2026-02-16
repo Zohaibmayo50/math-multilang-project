@@ -511,7 +511,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === 'pt') {
     return {
       metadataBase: new URL(config.domain),
-      title: 'Tabuada 1-100',
+      title: 'Tabuada 1 a 100 - Multiplicação Grátis Online',
       description: 'Aprenda a tabuada de 1 a 100 gratuitamente. Exercícios interativos, jogos educacionais e folhas de trabalho em PDF para crianças.',
       keywords: 'tabuada, tabuada de multiplicação, multiplicação, matemática, aprendizado, prática, educação, exercícios pdf',
       alternates: {
