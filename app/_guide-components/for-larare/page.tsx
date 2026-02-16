@@ -162,7 +162,7 @@ export default function ForTeachers() {
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-slate-900 mb-3">Kommutativa Lagen (Commutative Property)</h3>
                     <p className="text-slate-700 mb-4">
-                      Visa eleverna att 3 × 4 och 4 × 3 är samma sak och halvera inlärningsbördan.
+                      Visa eleverna att 3 × 4 och 4 × 3 ger samma resultat. Det halverar inlärningsbördan.
                     </p>
                     <div className="bg-indigo-50 p-4 rounded-lg">
                       <p className="text-slate-700">
@@ -227,8 +227,8 @@ export default function ForTeachers() {
                   <h3 className="text-lg font-semibold text-slate-900">Multiplikationsdomino</h3>
                 </div>
                 <p className="text-slate-700 mb-3">
-                  Varje kort har en multiplikationsfråga på ena sidan och svaret på en annan fråga på andra sidan. 
-                  Eleverna matchar som domino och skapar en kedja.
+                  Varje kort har en fråga på ena sidan och ett svar på andra sidan. 
+                  Eleverna matchar korten som domino.
                 </p>
                 <div className="bg-cyan-50 p-3 rounded-lg text-sm">
                   <p className="font-semibold text-cyan-900 mb-1">Mål:</p>
@@ -245,8 +245,8 @@ export default function ForTeachers() {
                   <h3 className="text-lg font-semibold text-slate-900">Verkliga Problem</h3>
                 </div>
                 <p className="text-slate-700 mb-3">
-                  Be eleverna skapa multiplikationsproblem från sina egna liv 
-                  (t.ex: 6 rader i klassrummet, 4 böcker i varje rad).
+                  Be eleverna skapa egna problem från vardagen 
+                  (t.ex: 6 rader, 4 böcker per rad).
                 </p>
                 <div className="bg-blue-50 p-3 rounded-lg text-sm">
                   <p className="font-semibold text-blue-900 mb-1">Mål:</p>
@@ -604,8 +604,8 @@ export default function ForTeachers() {
               Börja Använda i Ditt Klassrum!
             </h2>
             <p className="text-base sm:text-lg text-emerald-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Ge dina elever en effektiv, rolig och meningsfull inlärningsupplevelse av 
-              multiplikationstabeller genom att använda denna plattform i klassrummet.
+              Ge dina elever en effektiv och rolig inlärning av multiplikationstabeller. 
+              Använd plattformen i ditt klassrum idag.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 

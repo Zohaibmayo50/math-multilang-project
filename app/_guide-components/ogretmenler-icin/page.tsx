@@ -602,8 +602,8 @@ export default function ForTeachers() {
               Sınıfınızda Kullanmaya Başlayın!
             </h2>
             <p className="text-base sm:text-lg text-emerald-100 mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Bu platformu sınıfınızda kullanarak öğrencilerinize etkili, eğlenceli ve 
-              anlamlı bir çarpım tablosu öğrenme deneyimi sunun.
+              Bu platformu sınıfınızda kullanın. Öğrencilerinize etkili ve eğlenceli 
+              bir çarpım tablosu deneyimi sunun.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link 

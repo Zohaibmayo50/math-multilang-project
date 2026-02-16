@@ -19,9 +19,9 @@
               </h3>
             </div>
             <p className="text-slate-700">
-              Alunos que dominam a tabuada podem no dia a dia e 
-              na matemática escolar realizar cálculos mentalmente sem papel e caneta. 
-              Essa habilidade aumenta a velocidade de resolução de problemas e a autoconfiança.
+              Alunos que sabem a tabuada calculam de cabeça no dia a dia.
+              Não precisam de papel e caneta. Isso dá mais velocidade e confiança
+              na hora de resolver problemas.
             </p>
           </article>
           

@@ -19,9 +19,8 @@ export default function WhyItMattersPl() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Uczniowie, którzy opanowali tabliczki mnożenia, mogą wykonywać obliczenia w pamięci 
-              w codziennym życiu i matematyce szkolnej bez papieru i ołówka. 
-              Ta umiejętność zwiększa szybkość rozwiązywania problemów i pewność siebie.
+              Uczniowie, którzy znają tabliczki, liczą w pamięci. Nie potrzebują
+              papieru ani ołówka. To daje im szybkość i pewność siebie.
             </p>
           </article>
           
@@ -37,9 +36,8 @@ export default function WhyItMattersPl() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Zrozumienie tabliczek mnożenia zamiast samego ich zapamiętywania umożliwia 
-              szybkie i poprawne obliczenia. Ta umiejętność jest 
-              szczególnie ważna w testach i sytuacjach wymagających czasu.
+              Lepiej zrozumieć tabliczki niż je tylko pamiętać. Wtedy liczymy
+              szybko i poprawnie. To ważne na testach i sprawdzianach.
             </p>
           </article>
           
@@ -55,9 +53,8 @@ export default function WhyItMattersPl() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Wszystkie działy, ułamki, wyrażenia algebraiczne i 
-              bardziej złożone koncepcje matematyczne opierają się na opanowaniu tabliczek mnożenia. 
-              Solidne podstawy zapewniają sukces na bardziej zaawansowanych poziomach.
+              Dzielenie, ułamki i algebra opierają się na tabliczkach mnożenia.
+              Solidne podstawy zapewniają sukces na wyższych poziomach.
             </p>
           </article>
           

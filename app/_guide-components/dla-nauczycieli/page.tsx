@@ -24,8 +24,8 @@ export default function DlaNauczycieli() {
               Przewodnik po Tabliczkach Mnożenia dla Nauczycieli
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Skuteczne strategie, zajęcia w klasie i zasoby do nauczania 
-              tabliczki mnożenia w sposób, który wszyscy uczniowie mogą opanować.
+              Skuteczne strategie i zajęcia w klasie do nauczania tabliczki mnożenia. 
+              Zasoby, dzięki którym wszyscy uczniowie ją opanują.
             </p>
           </div>
         </div>
@@ -546,8 +546,8 @@ export default function DlaNauczycieli() {
                   "Kolejność nie ma znaczenia w problemach słownych"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Dlaczego jest problematyczne:</strong> Chociaż 3×4 = 4×3, kontekstualne 
-                  znaczenie może być różne (3 grupy po 4 vs. 4 grupy po 3).
+                  <strong>Dlaczego jest problematyczne:</strong> 3×4 = 4×3 w matematyce. Ale 
+                  kontekst może być różny: 3 grupy po 4 vs. 4 grupy po 3.
                 </p>
                 <p className="text-gray-700">
                   <strong className="text-green-700">Jak to naprawić:</strong> Omów 

@@ -38,8 +38,8 @@ export default function HowToLearnPl() {
                 </li>
               </ul>
               <p>
-                Zrozumienie tych wzorców pozwala nauczyć się podstawowej logiki, 
-                zamiast zapamiętywać prawie 100 wyników mnożenia.
+                Znajomość tych wzorców ułatwia naukę. Nie musisz zapamiętywać
+                prawie 100 wyników. Wystarczy poznać logikę.
               </p>
             </div>
           </article>
@@ -75,8 +75,8 @@ export default function HowToLearnPl() {
                 </li>
               </ul>
               <p>
-                Regularne powtarzanie ułatwia przeniesienie informacji z 
-                pamięci krótkotrwałej do pamięci długotrwałej i promuje trwałą naukę.
+                Regularne powtarzanie pomaga zapamiętać na dłużej. Informacje
+                przechodzą z pamięci krótkotrwałej do długotrwałej.
               </p>
             </div>
           </article>
@@ -124,10 +124,9 @@ export default function HowToLearnPl() {
             Ważne Przypomnienie
           </h4>
           <p className="text-slate-700">
-            Każde dziecko ma własne tempo nauki. Podczas gdy jedni uczą się tego w tydzień, 
-            innym może to zająć kilka miesięcy. Liczy się ciągłość, 
-            cierpliwość i postęp przy użyciu właściwych metod. Stosuj 
-            wspierające podejście zamiast presji.
+            Każde dziecko uczy się w swoim tempie. Jedni potrzebują tygodnia,
+            inni kilku miesięcy. Ważna jest ciągłość i cierpliwość.
+            Stosuj właściwe metody i wspieraj zamiast wywierać presję.
           </p>
         </div>
       </div>

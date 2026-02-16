@@ -37,8 +37,8 @@ export default function ParaProfesoresPage() {
               Guía de Tablas de Multiplicar para Profesores
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Estrategias efectivas, actividades de aula y recursos para enseñar 
-              las tablas de multiplicar de manera que todos los estudiantes puedan dominarlas.
+              Estrategias efectivas y actividades de aula para enseñar 
+              las tablas de multiplicar. Recursos para que todos los estudiantes las dominen.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function ParaProfesoresPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Patrones</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                Ayude a los estudiantes a descubrir y usar patrones para facilitar 
+                Ayude a los estudiantes a descubrir patrones. Estos facilitan 
                 el aprendizaje y la memorización.
               </p>
               <ul className="space-y-2 text-gray-700">
@@ -559,8 +559,8 @@ export default function ParaProfesoresPage() {
                   "El orden no importa en los problemas verbales"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por qué es problemático:</strong> Aunque 3×4 = 4×3, el significado 
-                  contextual puede ser diferente (3 grupos de 4 vs. 4 grupos de 3).
+                  <strong>Por qué es problemático:</strong> 3×4 = 4×3 matemáticamente. Pero 
+                  el contexto puede variar: 3 grupos de 4 vs. 4 grupos de 3.
                 </p>
                 <p className="text-gray-700">
                   <strong className="text-green-700">Cómo corregirlo:</strong> Discutir 
@@ -615,8 +615,8 @@ export default function ParaProfesoresPage() {
                 </p>
                 <p className="text-gray-700">
                   <strong className="text-green-700">Cómo corregirlo:</strong> Celebrar 
-                  múltiples estrategias. Pedir a los estudiantes que compartan diferentes 
-                  métodos y discutir cuándo cada uno es más útil.
+                  múltiples estrategias. Pedir que compartan métodos distintos. 
+                  Discutir cuándo usar cada uno.
                 </p>
               </div>
             </div>

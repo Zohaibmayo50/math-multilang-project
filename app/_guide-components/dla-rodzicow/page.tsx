@@ -46,8 +46,8 @@ export default function DlaRodzicow() {
             </h2>
             <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 md:p-8">
               <p className="text-base sm:text-lg text-slate-700 mb-4">
-                Tabliczka mnożenia to jeden z najważniejszych kroków w matematycznej podróży dziecka. 
-                Nie tylko dla matematyki, ale mają również kluczowe znaczenie dla rozwijania umiejętności rozwiązywania problemów, logicznego myślenia i pewności siebie.
+                Tabliczka mnożenia to ważny krok w matematycznej podróży dziecka. 
+                Pomaga nie tylko w matematyce. Rozwija też umiejętności rozwiązywania problemów, logiczne myślenie i pewność siebie.
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-8">
                 <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-500">

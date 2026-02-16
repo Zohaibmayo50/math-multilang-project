@@ -75,8 +75,8 @@ export default function HowToLearn() {
                 </li>
               </ul>
               <p>
-                La repetición regular facilita el paso de la información de la memoria a 
-                corto plazo a la memoria a largo plazo y apoya el aprendizaje permanente.
+                Repasar con frecuencia ayuda a guardar lo aprendido en la memoria a largo plazo.
+                Esto hace que el conocimiento dure más tiempo.
               </p>
             </div>
           </article>

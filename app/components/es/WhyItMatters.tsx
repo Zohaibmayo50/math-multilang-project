@@ -19,9 +19,8 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Los estudiantes que dominan las tablas de multiplicar pueden realizar 
-              cálculos mentalmente en la vida diaria y en matemáticas escolares sin 
-              necesidad de papel y lápiz. Esta habilidad aumenta la velocidad y confianza 
+              Los estudiantes que dominan las tablas pueden calcular de cabeza.
+              No necesitan papel ni lápiz. Esto les da velocidad y confianza
               al resolver problemas.
             </p>
           </article>
@@ -38,9 +37,8 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Comprender las tablas de multiplicar en lugar de solo memorizarlas permite 
-              realizar operaciones tanto rápida como correctamente. Esta habilidad es 
-              críticamente importante especialmente en exámenes y situaciones con límite de tiempo.
+              Entender las tablas es mejor que solo memorizarlas. Así se puede calcular
+              rápido y sin errores. Esto es clave en exámenes y pruebas con tiempo limitado.
             </p>
           </article>
           
@@ -56,9 +54,8 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Todas las operaciones de división, fracciones, expresiones algebraicas y 
-              conceptos matemáticos más complejos se basan en el conocimiento de las 
-              tablas de multiplicar. Una base sólida garantiza el éxito en niveles avanzados.
+              La división, las fracciones y el álgebra dependen de saber multiplicar.
+              Una buena base garantiza el éxito en niveles más avanzados.
             </p>
           </article>
           
@@ -74,9 +71,8 @@ export default function WhyItMatters() {
               </h3>
             </div>
             <p className="text-slate-700">
-              Los estudiantes que conocen las tablas de multiplicar desarrollan una 
-              actitud positiva hacia las matemáticas. Esta confianza afecta directamente 
-              el éxito general en las clases de matemáticas y el deseo de aprender.
+              Saber las tablas genera una actitud positiva hacia las matemáticas.
+              Esa confianza mejora las notas y las ganas de seguir aprendiendo.
             </p>
           </article>
         </div>

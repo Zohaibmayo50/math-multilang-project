@@ -187,10 +187,9 @@ export default function AudienceSection() {
             Aprendemos Juntos
           </h3>
           <p className="text-slate-700 max-w-2xl mx-auto">
-            Esta plataforma está diseñada para ayudar a los estudiantes a comprender 
-            las tablas de multiplicar, a los padres a apoyar a sus hijos y a los 
-            profesores a enseñar de manera efectiva. Todos nos enfocamos en el mismo 
-            objetivo: aprendizaje permanente y significativo.
+            Esta plataforma ayuda a los estudiantes a aprender las tablas. También
+            ayuda a los padres a apoyar a sus hijos. Y ofrece recursos para los profesores.
+            Nuestro objetivo es un aprendizaje duradero.
           </p>
         </div>
       </div>

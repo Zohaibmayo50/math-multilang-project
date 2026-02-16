@@ -24,8 +24,8 @@ export default function ParaProfessores() {
               Guia de Tabuada para Professores
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Estratégias eficazes, atividades em sala de aula e recursos para ensinar 
-              tabuada de forma que todos os alunos possam dominá-la.
+              Estratégias eficazes e atividades em sala de aula para ensinar 
+              tabuada. Recursos para que todos os alunos a dominem.
             </p>
           </div>
         </div>
@@ -546,8 +546,8 @@ export default function ParaProfessores() {
                   "A ordem não importa nos problemas verbais"
                 </h3>
                 <p className="text-gray-700 mb-2">
-                  <strong>Por que é problemático:</strong> Embora 3×4 = 4×3, o significado 
-                  contextual pode ser diferente (3 grupos de 4 vs. 4 grupos de 3).
+                  <strong>Por que é problemático:</strong> 3×4 = 4×3 na matemática. Mas 
+                  o contexto pode variar: 3 grupos de 4 vs. 4 grupos de 3.
                 </p>
                 <p className="text-gray-700">
                   <strong className="text-green-700">Como corrigir:</strong> Discutir 

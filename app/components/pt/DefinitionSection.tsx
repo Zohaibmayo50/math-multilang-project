@@ -8,9 +8,9 @@
         
         <div className="space-y-6 text-slate-700">
           <p>
-            A tabuada é uma ferramenta matemática que mostra sistematicamente 
-            os resultados da multiplicação de dois números. Ela geralmente contém multiplicações 
-            de números de 1 a 10, mas pode ser expandida até 100 para aprendizado avançado.
+            A tabuada mostra os resultados da multiplicação de dois números.
+            Ela é organizada de forma clara. Geralmente cobre os números de 1 a 10.
+            Em níveis avançados, pode chegar até 100.
           </p>
           
           <p>
@@ -21,9 +21,8 @@
           </p>
           
           <p>
-            A tabuada não é apenas uma ferramenta de cálculo, mas também um 
-            sistema de aprendizado que nos ajuda a entender padrões e relações entre números. 
-            A tabuada de cada número possui uma certa ordem e lógica.
+            A tabuada não serve só para calcular. Ela nos ajuda a ver padrões
+            entre os números. Cada número segue uma ordem e uma lógica na sua tabuada.
           </p>
           
           <div className="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg mt-8">
@@ -31,9 +30,9 @@
               Definição Fundamental:
             </p>
             <p className="mt-2">
-              A tabuada é uma ferramenta pedagógica básica que 
-              mostra sistematicamente os resultados da multiplicação, desenvolve habilidades matemáticas mentais dos alunos 
-              e apoia o pensamento matemático.
+              A tabuada é uma ferramenta básica da matemática. Ela mostra os
+              resultados de cada multiplicação. Ajuda os alunos a calcular de
+              cabeça e a pensar com lógica.
             </p>
           </div>
         </div>

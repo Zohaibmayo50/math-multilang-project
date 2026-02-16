@@ -187,7 +187,7 @@ export default function UntukSiswa() {
                         <li>• Belajar 10-15 menit setiap hari (tidak banyak, tetapi teratur!)</li>
                         <li>• Latihan dengan bermain - sangat menyenangkan!</li>
                         <li>• Adakan kompetisi dengan keluarga Anda</li>
-                        <li>• Ketika Anda melihat perkalian dalam kehidupan sehari-hari, hitung itu (misalnya, "3 kotak, 5 cokelat di setiap kotak, berapa total?")</li>
+                        <li>• Lihat perkalian di kehidupan nyata? Hitung! (misal: "3 kotak, 5 cokelat per kotak, berapa total?")</li>
                       </ul>
                     </div>
                   </div>
