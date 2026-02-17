@@ -1430,6 +1430,50 @@ export async function generateStaticParams() {
   return params
 }
 
+// Helper function to add OpenGraph and Twitter metadata
+function enrichMetadata(
+  baseMetadata: Metadata,
+  lang: string,
+  topic: string,
+  slug: string,
+  title: string,
+  description: string
+): Metadata {
+  const config = siteConfig[lang as Locale]
+  const fullUrl = `${config.domain}/${lang}/${topic}/${slug}`
+  const localeMap: Record<string, string> = {
+    en: 'en_US',
+    tr: 'tr_TR',
+    es: 'es_MX',
+    de: 'de_DE',
+    cs: 'cs_CZ',
+    uk: 'uk_UA',
+    fi: 'fi_FI',
+    fr: 'fr_FR',
+    sv: 'sv_SE',
+    pt: 'pt_BR',
+    pl: 'pl_PL',
+    id: 'id_ID',
+  }
+
+  return {
+    ...baseMetadata,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      locale: localeMap[lang] || 'en_US',
+      url: fullUrl,
+      siteName: config.name,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+  }
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, topic, slug } = await params
   
@@ -1453,20 +1497,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataPl[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1476,39 +1527,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesPl[num]
       const description = numberDescriptionsPl[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataPl[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1518,20 +1583,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataId[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1541,39 +1613,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesId[num]
       const description = numberDescriptionsId[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataId[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1583,57 +1669,81 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataEn[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
       const num = parseInt(slug, 10)
-      return {
-        metadataBase: new URL(config.domain),
-        title: numberTitlesEn[num] || `${num} Times Table`,
-        description: numberDescriptionsEn[num] || `Learn the ${num} times table.`,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      const title = numberTitlesEn[num] || `${num} Times Table`
+      const description = numberDescriptionsEn[num] || `Learn the ${num} times table.`
+      
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        title,
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataEn[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1643,57 +1753,81 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadata[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
       const num = parseInt(slug, 10)
-      return {
-        metadataBase: new URL(config.domain),
-        title: numberTitles[num] || `${num} Çarpım Tablosu`,
-        description: numberDescriptions[num] || `${num} çarpım tablosunu öğrenin.`,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      const title = numberTitles[num] || `${num} Çarpım Tablosu`
+      const description = numberDescriptions[num] || `${num} çarpım tablosunu öğrenin.`
+      
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        title,
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadata[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1703,57 +1837,81 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataEs[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
       const num = parseInt(slug, 10)
-      return {
-        metadataBase: new URL(config.domain),
-        title: numberTitlesEs[num] || `Tabla de Multiplicar del ${num} - Ejercicios`,
-        description: numberDescriptionsEs[num] || `Aprende la tabla del ${num}.`,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      const title = numberTitlesEs[num] || `Tabla de Multiplicar del ${num} - Ejercicios`
+      const description = numberDescriptionsEs[num] || `Aprende la tabla del ${num}.`
+      
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        title,
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataEs[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1763,20 +1921,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataDe[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1786,39 +1951,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesDe[num]
       const description = numberDescriptionsDe[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataDe[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1828,20 +2007,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataCs[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1851,39 +2037,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesCs[num]
       const description = numberDescriptionsCs[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataCs[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1893,20 +2093,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataUk[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1916,39 +2123,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesUk[num]
       const description = numberDescriptionsUk[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataUk[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -1958,20 +2179,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataFi[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -1981,39 +2209,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesFi[num]
       const description = numberDescriptionsFi[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataFi[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -2023,20 +2265,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataFr[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -2046,39 +2295,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesFr[num]
       const description = numberDescriptionsFr[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataFr[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -2088,20 +2351,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataSv[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -2111,39 +2381,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesSv[num]
       const description = numberDescriptionsSv[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataSv[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 
@@ -2153,20 +2437,27 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const meta = rangeMetadataPt[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
     
     if (slugType === 'number') {
@@ -2176,39 +2467,53 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       const title = numberTitlesPt[num]
       const description = numberDescriptionsPt[num]
       
-      return {
-        metadataBase: new URL(config.domain),
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title,
+          description,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
+        },
+        lang,
+        topic,
+        slug,
         title,
-        description,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
-        },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        description
+      )
     }
     
     if (slugType === 'guide') {
       const meta = guideMetadataPt[slug]
       if (!meta) return {}
       
-      return {
-        metadataBase: new URL(config.domain),
-        title: meta.title,
-        description: meta.description,
-        keywords: meta.keywords,
-        alternates: {
-          canonical: `/${lang}/${topic}/${slug}`,
-          ...hreflang,
+      return enrichMetadata(
+        {
+          metadataBase: new URL(config.domain),
+          title: meta.title,
+          description: meta.description,
+          keywords: meta.keywords,
+          alternates: {
+            canonical: `/${lang}/${topic}/${slug}`,
+            ...hreflang,
+          },
+          robots: {
+            index: true,
+            follow: true,
+          },
         },
-        robots: {
-          index: true,
-          follow: true,
-        },
-      }
+        lang,
+        topic,
+        slug,
+        meta.title,
+        meta.description
+      )
     }
   }
 

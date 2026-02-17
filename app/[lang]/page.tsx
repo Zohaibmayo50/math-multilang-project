@@ -737,6 +737,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: 'Mathematives',
       locale: lang,
       type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
     }
   }
 }
