@@ -15,6 +15,3 @@ Disallow: /api/
 
 # Sitemap location
 Sitemap: https://mathematives.com/sitemap.xml
-
-# Crawl delay for polite crawling
-Crawl-delay: 1
