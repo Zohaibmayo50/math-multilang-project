@@ -207,6 +207,79 @@ export function getAllNumbers(): string[] {
 }
 
 // ============================================================================
+// LANGUAGE SWITCHER URL BUILDER
+// ============================================================================
+
+/**
+ * Build the equivalent URL for a different language given the current pathname.
+ * Handles all page types: homepage, lang-hub, topic, range, number, guide.
+ *
+ * @param currentPath - Current pathname (e.g. '/en/multiplication-tables/7')
+ * @param targetLocale - The language to switch to
+ * @returns The equivalent path in the target language
+ *
+ * Examples:
+ *   getAlternateUrl('/en/multiplication-tables/7', 'es') => '/es/tablas-de-multiplicar/7'
+ *   getAlternateUrl('/tr/carpim-tablosu/ogrenciler-icin', 'fr') => '/fr/table-de-multiplication/pour-les-eleves'
+ *   getAlternateUrl('/de/einmaleins', 'fi') => '/fi/kertotaulut'
+ *   getAlternateUrl('/en', 'tr') => '/tr'
+ *   getAlternateUrl('/', 'es') => '/es'
+ */
+export function getAlternateUrl(currentPath: string, targetLocale: Locale): string {
+  // Remove trailing slash
+  const path = currentPath.replace(/\/$/, '') || '/'
+
+  // Homepage: redirect to target lang hub
+  if (path === '/') {
+    return `/${targetLocale}`
+  }
+
+  const segments = path.split('/').filter(Boolean) // ['en', 'multiplication-tables', '7']
+
+  // Detect the current locale from the first segment
+  const currentLocale = segments[0] as Locale
+  if (!ALL_LOCALES.includes(currentLocale)) {
+    // Unknown locale segment — just go to target lang hub
+    return `/${targetLocale}`
+  }
+
+  // Lang-hub page: /en → /es
+  if (segments.length === 1) {
+    return `/${targetLocale}`
+  }
+
+  // Topic page: /en/multiplication-tables → /es/tablas-de-multiplicar
+  const targetTopic = topicSlugs[targetLocale]
+  if (segments.length === 2) {
+    return `/${targetLocale}/${targetTopic}`
+  }
+
+  // Slug pages: /en/multiplication-tables/[slug]
+  const slug = segments[2]
+
+  // Guide slugs need translation
+  const guideType = getGuideType(slug)
+  if (guideType) {
+    const targetGuideSlug = guides[targetLocale][guideType]
+    return `/${targetLocale}/${targetTopic}/${targetGuideSlug}`
+  }
+
+  // Range (1-10) and number (7) slugs are shared across languages
+  return `/${targetLocale}/${targetTopic}/${slug}`
+}
+
+/**
+ * Detect the current locale from a pathname.
+ * Returns null if no valid locale found.
+ */
+export function detectLocaleFromPath(pathname: string): Locale | null {
+  const segments = pathname.split('/').filter(Boolean)
+  if (segments.length === 0) return null
+  const candidate = segments[0] as Locale
+  return ALL_LOCALES.includes(candidate) ? candidate : null
+}
+
+// ============================================================================
 // LEGACY COMPATIBILITY (deprecated — use buildAlternatesMetadata instead)
 // ============================================================================
 
