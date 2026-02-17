@@ -14,7 +14,7 @@ Disallow: /wordpress/
 Disallow: /*.php$
 
 # Sitemap location
-Sitemap: https://carpimtablosu.com.tr/sitemap.xml
+Sitemap: https://mathematives.com/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1
