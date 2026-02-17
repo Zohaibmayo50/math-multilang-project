@@ -2659,6 +2659,42 @@ function generateSlugSchema(
   return { breadcrumb: breadcrumbSchema }
 }
 
+// Helper to render schema scripts
+function renderSchemas(schemas: ReturnType<typeof generateSlugSchema>) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.breadcrumb) }}
+      />
+      {schemas.webpage && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.webpage) }}
+        />
+      )}
+      {schemas.educational && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.educational) }}
+        />
+      )}
+      {schemas.itemList && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.itemList) }}
+        />
+      )}
+      {schemas.article && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas.article) }}
+        />
+      )}
+    </>
+  )
+}
+
 export default async function SlugPage({ params }: PageProps) {
   const { lang, topic, slug } = await params
 
@@ -2684,47 +2720,15 @@ export default async function SlugPage({ params }: PageProps) {
       
       const [start, end] = slug.split('-').map(Number)
       if (!start || !end || start > end) notFound()
-      
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/tr/carpim-tablosu/${slug}#webpage`,
-            "url": `${baseUrl}/tr/carpim-tablosu/${slug}`,
-            "name": `${slug} Çarpım Tablosu - ${meta.level === 'beginner' ? 'Başlangıç' : meta.level === 'intermediate' ? 'Orta' : 'İleri'} Seviyesi`,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/tr/carpim-tablosu/${slug}#learningresource`
-            },
-            "inLanguage": "tr-TR"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/tr/carpim-tablosu/${slug}#learningresource`,
-            "name": `${slug} Çarpım Tablosu Öğrenme Kaynağı`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `${start}, ${start + 1}, ... ${end} çarpım tablolarını anlama ve uygulama becerileri`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "tr-TR",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `${start + i} Çarpım Tablosu`,
-              "url": `${baseUrl}/tr/carpim-tablosu/${start + i}`
-            }))
-          }
-        ]
-      }
+
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.tr,
+        { title: `${slug} Çarpım Tablosu`, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -2733,10 +2737,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePage
             rangeStart={start}
             rangeEnd={end}
@@ -2758,84 +2759,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialProperties[num] || `${num} ile Çarpma`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/tr/carpim-tablosu/${num}#webpage`,
-            "url": `${baseUrl}/tr/carpim-tablosu/${num}`,
-            "name": `${num} Çarpım Tablosu - ${specialProp}`,
-            "description": numberDescriptions[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/tr/carpim-tablosu/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/tr/carpim-tablosu/${num}#breadcrumb`
-            },
-            "inLanguage": "tr-TR"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/tr/carpim-tablosu/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/tr/carpim-tablosu`,
-                  "name": "Ana Sayfa"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/tr/carpim-tablosu/${range}`,
-                  "name": `${range} Çarpım Tablosu`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/tr/carpim-tablosu/${num}`,
-                  "name": `${num} Çarpım Tablosu`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/tr/carpim-tablosu/${num}#learningresource`,
-            "name": `${num} Çarpım Tablosu Öğrenme Kaynağı`,
-            "description": numberDescriptions[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `${num} çarpım tablosu, ${specialProp.toLowerCase()}, çarpmanın temel kavramları`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "tr-TR",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/tr/carpim-tablosu/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.tr,
+        { title: `${num} Çarpım Tablosu - ${specialProp}`, description: numberDescriptions[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPage number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -2861,47 +2796,15 @@ export default async function SlugPage({ params }: PageProps) {
       
       const [start, end] = slug.split('-').map(Number)
       if (!start || !end || start > end) notFound()
-      
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/es/tablas-de-multiplicar/${slug}#webpage`,
-            "url": `${baseUrl}/es/tablas-de-multiplicar/${slug}`,
-            "name": `Tablas de Multiplicar del ${slug} - ${meta.level === 'beginner' ? 'Nivel Principiante' : meta.level === 'intermediate' ? 'Nivel Intermedio' : 'Nivel Avanzado'}`,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/es/tablas-de-multiplicar/${slug}#learningresource`
-            },
-            "inLanguage": "es-ES"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/es/tablas-de-multiplicar/${slug}#learningresource`,
-            "name": `Recurso de Aprendizaje Tablas de Multiplicar del ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Habilidades para comprender y aplicar tablas de multiplicar del ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "es-ES",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Tabla de Multiplicar del ${start + i}`,
-              "url": `${baseUrl}/es/tablas-de-multiplicar/${start + i}`
-            }))
-          }
-        ]
-      }
+
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.es,
+        { title: `Tablas de Multiplicar del ${slug}`, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -2910,10 +2813,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageEs
             rangeStart={start}
             rangeEnd={end}
@@ -2935,84 +2835,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesEs[num] || `Multiplicación con ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}#webpage`,
-            "url": `${baseUrl}/es/tablas-de-multiplicar/${num}`,
-            "name": `Tabla de Multiplicar del ${num} - ${specialProp}`,
-            "description": numberDescriptionsEs[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}#breadcrumb`
-            },
-            "inLanguage": "es-ES"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/es/tablas-de-multiplicar`,
-                  "name": "Inicio"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/es/tablas-de-multiplicar/${range}`,
-                  "name": `Tablas de Multiplicar del ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}`,
-                  "name": `Tabla de Multiplicar del ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/es/tablas-de-multiplicar/${num}#learningresource`,
-            "name": `Recurso de Aprendizaje Tabla de Multiplicar del ${num}`,
-            "description": numberDescriptionsEs[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Tabla de multiplicar del ${num}, ${specialProp.toLowerCase()}, conceptos básicos de multiplicación`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "es-ES",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/es/tablas-de-multiplicar/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.es,
+        { title: `Tabla de Multiplicar del ${num} - ${specialProp}`, description: numberDescriptionsEs[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageEs number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3039,46 +2873,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/de/einmaleins/${slug}#webpage`,
-            "url": `${baseUrl}/de/einmaleins/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/de/einmaleins/${slug}#learningresource`
-            },
-            "inLanguage": "de-DE"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/de/einmaleins/${slug}#learningresource`,
-            "name": `Lernressource Einmaleins-Tabellen ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Fähigkeiten zum Verstehen und Anwenden der Einmaleins-Tabellen ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "de-DE",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `${start + i}er-Einmaleins`,
-              "url": `${baseUrl}/de/einmaleins/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.de,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3087,10 +2889,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageDe
             rangeStart={start}
             rangeEnd={end}
@@ -3112,84 +2911,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesDe[num] || `Multiplikation mit ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/de/einmaleins/${num}#webpage`,
-            "url": `${baseUrl}/de/einmaleins/${num}`,
-            "name": `${num}er-Einmaleins - ${specialProp}`,
-            "description": numberDescriptionsDe[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/de/einmaleins/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/de/einmaleins/${num}#breadcrumb`
-            },
-            "inLanguage": "de-DE"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/de/einmaleins/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Startseite"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/de/einmaleins/${range}`,
-                  "name": `Einmaleins ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/de/einmaleins/${num}`,
-                  "name": `${num}er-Einmaleins`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/de/einmaleins/${num}#learningresource`,
-            "name": `Lernressource ${num}er-Einmaleins`,
-            "description": numberDescriptionsDe[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `${num}er-Einmaleins, ${specialProp.toLowerCase()}, grundlegende Multiplikationskonzepte`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "de-DE",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/de/einmaleins/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.de,
+        { title: `${num}er-Einmaleins - ${specialProp}`, description: numberDescriptionsDe[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageDe number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3216,46 +2949,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/cs/nasobilka/${slug}#webpage`,
-            "url": `${baseUrl}/cs/nasobilka/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/cs/nasobilka/${slug}#learningresource`
-            },
-            "inLanguage": "cs-CZ"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/cs/nasobilka/${slug}#learningresource`,
-            "name": `Výuková Pomůcka Násobilka ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Dovednosti pro pochopení a použití násobilky ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "cs-CZ",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Násobilka ${start + i}`,
-              "url": `${baseUrl}/cs/nasobilka/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.cs,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3264,10 +2965,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageCs
             rangeStart={start}
             rangeEnd={end}
@@ -3289,84 +2987,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesCs[num] || `Násobení s ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/cs/nasobilka/${num}#webpage`,
-            "url": `${baseUrl}/cs/nasobilka/${num}`,
-            "name": `Násobilka ${num} - ${specialProp}`,
-            "description": numberDescriptionsCs[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/cs/nasobilka/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/cs/nasobilka/${num}#breadcrumb`
-            },
-            "inLanguage": "cs-CZ"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/cs/nasobilka/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Domů"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/cs/nasobilka/${range}`,
-                  "name": `Násobilka ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/cs/nasobilka/${num}`,
-                  "name": `Násobilka ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/cs/nasobilka/${num}#learningresource`,
-            "name": `Výuková Pomůcka Násobilka ${num}`,
-            "description": numberDescriptionsCs[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Násobilka ${num}, ${specialProp.toLowerCase()}, základní koncepty násobení`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "cs-CZ",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/cs/nasobilka/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.cs,
+        { title: `Násobilka ${num} - ${specialProp}`, description: numberDescriptionsCs[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageCs number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3393,46 +3025,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#webpage`,
-            "url": `${baseUrl}/uk/tablycya-mnozhennya/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#learningresource`
-            },
-            "inLanguage": "uk-UA"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${slug}#learningresource`,
-            "name": `Навчальний Ресурс Таблиця Множення ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Навички розуміння та використання таблиці множення ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "uk-UA",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Таблиця Множення ${start + i}`,
-              "url": `${baseUrl}/uk/tablycya-mnozhennya/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.uk,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3441,10 +3041,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageUk
             rangeStart={start}
             rangeEnd={end}
@@ -3457,7 +3054,7 @@ export default async function SlugPage({ params }: PageProps) {
       )
     }
     
-    // NUMBER PAGE
+    //NUMBER PAGE
     if (slugType === 'number') {
       const num = parseInt(slug, 10)
       if (isNaN(num) || num < 1 || num > 100) notFound()
@@ -3466,84 +3063,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesUk[num] || `Множення з ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#webpage`,
-            "url": `${baseUrl}/uk/tablycya-mnozhennya/${num}`,
-            "name": `Таблиця Множення ${num} - ${specialProp}`,
-            "description": numberDescriptionsUk[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#breadcrumb`
-            },
-            "inLanguage": "uk-UA"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Головна"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/uk/tablycya-mnozhennya/${range}`,
-                  "name": `Таблиця Множення ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}`,
-                  "name": `Таблиця Множення ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/uk/tablycya-mnozhennya/${num}#learningresource`,
-            "name": `Навчальний Ресурс Таблиця Множення ${num}`,
-            "description": numberDescriptionsUk[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Таблиця множення ${num}, ${specialProp.toLowerCase()}, основні концепції множення`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "uk-UA",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/uk/tablycya-mnozhennya/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.uk,
+        { title: `Таблиця Множення ${num} - ${specialProp}`, description: numberDescriptionsUk[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageUk number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3570,46 +3101,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/fi/kertotaulut/${slug}#webpage`,
-            "url": `${baseUrl}/fi/kertotaulut/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/fi/kertotaulut/${slug}#learningresource`
-            },
-            "inLanguage": "fi-FI"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/fi/kertotaulut/${slug}#learningresource`,
-            "name": `Oppimisresurssi Kertotaulu ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Beginner' : meta.level === 'intermediate' ? 'Intermediate' : 'Advanced',
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Taidot ymmärtää ja käyttää kertotaulua ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "fi-FI",
-            "educationalUse": ["practice", "self-study", "homework"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Kertotaulu ${start + i}`,
-              "url": `${baseUrl}/fi/kertotaulut/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.fi,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3618,10 +3117,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageFi
             rangeStart={start}
             rangeEnd={end}
@@ -3643,84 +3139,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesFi[num] || `Kertominen ${num}:llä`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/fi/kertotaulut/${num}#webpage`,
-            "url": `${baseUrl}/fi/kertotaulut/${num}`,
-            "name": `Kertotaulu ${num} - ${specialProp}`,
-            "description": numberDescriptionsFi[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/fi/kertotaulut/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/fi/kertotaulut/${num}#breadcrumb`
-            },
-            "inLanguage": "fi-FI"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/fi/kertotaulut/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Etusivu"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/fi/kertotaulut/${range}`,
-                  "name": `Kertotaulu ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/fi/kertotaulut/${num}`,
-                  "name": `Kertotaulu ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/fi/kertotaulut/${num}#learningresource`,
-            "name": `Oppimisresurssi Kertotaulu ${num}`,
-            "description": numberDescriptionsFi[num],
-            "educationalLevel": rangeStart <= 10 ? "Beginner" : rangeStart <= 50 ? "Intermediate" : "Advanced",
-            "learningResourceType": ["Interactive Resource", "Practice Material", "Educational Game"],
-            "teaches": `Kertotaulu ${num}, ${specialProp.toLowerCase()}, kertolaskun peruskäsitteet`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "fi-FI",
-            "educationalUse": ["practice", "self-study"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/fi/kertotaulut/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.fi,
+        { title: `Kertotaulu ${num} - ${specialProp}`, description: numberDescriptionsFi[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageFi number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3747,46 +3177,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#webpage`,
-            "url": `${baseUrl}/fr/table-de-multiplication/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#learningresource`
-            },
-            "inLanguage": "fr-FR"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/fr/table-de-multiplication/${slug}#learningresource`,
-            "name": `Ressource d'Apprentissage Table de Multiplication ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Débutant' : meta.level === 'intermediate' ? 'Intermédiaire' : 'Avancé',
-            "learningResourceType": ["Ressource Interactive", "Matériel de Pratique", "Jeu Éducatif"],
-            "teaches": `Compétences pour comprendre et utiliser la table de multiplication ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "fr-FR",
-            "educationalUse": ["pratique", "auto-apprentissage", "devoirs"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Table de Multiplication ${start + i}`,
-              "url": `${baseUrl}/fr/table-de-multiplication/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.fr,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3795,10 +3193,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageFr
             rangeStart={start}
             rangeEnd={end}
@@ -3820,84 +3215,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesFr[num] || `Multiplication par ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#webpage`,
-            "url": `${baseUrl}/fr/table-de-multiplication/${num}`,
-            "name": `Table de Multiplication ${num} - ${specialProp}`,
-            "description": numberDescriptionsFr[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/fr/table-de-multiplication/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/fr/table-de-multiplication/${num}#breadcrumb`
-            },
-            "inLanguage": "fr-FR"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Accueil"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/fr/table-de-multiplication/${range}`,
-                  "name": `Table de Multiplication ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/fr/table-de-multiplication/${num}`,
-                  "name": `Table de Multiplication ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/fr/table-de-multiplication/${num}#learningresource`,
-            "name": `Ressource d'Apprentissage Table de Multiplication ${num}`,
-            "description": numberDescriptionsFr[num],
-            "educationalLevel": rangeStart <= 10 ? "Débutant" : rangeStart <= 50 ? "Intermédiaire" : "Avancé",
-            "learningResourceType": ["Ressource Interactive", "Matériel de Pratique", "Jeu Éducatif"],
-            "teaches": `Table de multiplication ${num}, ${specialProp.toLowerCase()}, concepts de base de la multiplication`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "fr-FR",
-            "educationalUse": ["pratique", "auto-apprentissage"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/fr/table-de-multiplication/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.fr,
+        { title: `Table de Multiplication ${num} - ${specialProp}`, description: numberDescriptionsFr[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageFr number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -3924,46 +3253,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#webpage`,
-            "url": `${baseUrl}/sv/multiplikationstabeller/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#learningresource`
-            },
-            "inLanguage": "sv-SE"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/sv/multiplikationstabeller/${slug}#learningresource`,
-            "name": `Multiplikationstabeller ${slug} Läranderesurs`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Nybörjare' : meta.level === 'intermediate' ? 'Mellanliggande' : 'Avancerad',
-            "learningResourceType": ["Interaktiv Resurs", "Övningsmaterial", "Pedagogiskt Spel"],
-            "teaches": `Färdigheter för att förstå och använda multiplikationstabeller ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "sv-SE",
-            "educationalUse": ["övning", "självstudier", "läxor"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Multiplikationstabell ${start + i}`,
-              "url": `${baseUrl}/sv/multiplikationstabeller/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.sv,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -3972,10 +3269,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageSv
             rangeStart={start}
             rangeEnd={end}
@@ -3997,84 +3291,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesSv[num] || `Multiplikation med ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#webpage`,
-            "url": `${baseUrl}/sv/multiplikationstabeller/${num}`,
-            "name": `Multiplikationstabell ${num} - ${specialProp}`,
-            "description": numberDescriptionsSv[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#breadcrumb`
-            },
-            "inLanguage": "sv-SE"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Hem"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/sv/multiplikationstabeller/${range}`,
-                  "name": `Multiplikationstabeller ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/sv/multiplikationstabeller/${num}`,
-                  "name": `Multiplikationstabell ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/sv/multiplikationstabeller/${num}#learningresource`,
-            "name": `Multiplikationstabell ${num} Läranderesurs`,
-            "description": numberDescriptionsSv[num],
-            "educationalLevel": rangeStart <= 10 ? "Nybörjare" : rangeStart <= 50 ? "Mellanliggande" : "Avancerad",
-            "learningResourceType": ["Interaktiv Resurs", "Övningsmaterial", "Pedagogiskt Spel"],
-            "teaches": `Multiplikationstabell ${num}, ${specialProp.toLowerCase()}, grundläggande multiplikationskoncept`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "sv-SE",
-            "educationalUse": ["övning", "självstudier"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/sv/multiplikationstabeller/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.sv,
+        { title: `Multiplikationstabell ${num} - ${specialProp}`, description: numberDescriptionsSv[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageSv number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -4096,29 +3324,52 @@ export default async function SlugPage({ params }: PageProps) {
       const nextRange = getRangeFromNumber(end + 1)
       const prevRange = start > 1 ? getRangeFromNumber(start - 1) : undefined
       const meta = rangeMetadataEn[slug]
+
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.en,
+        { title: meta?.title || `Multiplication Tables ${slug}`, description: meta?.description || `Learn multiplication tables ${slug}` }
+      )
       
       return (
-        <RangePageEn
-          rangeStart={start}
-          rangeEnd={end}
-          nextRangeUrl={nextRange ? `/en/multiplication-tables/${nextRange}` : undefined}
-          prevRangeUrl={prevRange ? `/en/multiplication-tables/${prevRange}` : undefined}
-          difficultyLevel={meta?.level || 'beginner'}
-          difficultyColor={meta?.color || 'from-blue-50 to-indigo-50'}
-        />
+        <>
+          {renderSchemas(schemas)}
+          <RangePageEn
+            rangeStart={start}
+            rangeEnd={end}
+            nextRangeUrl={nextRange ? `/en/multiplication-tables/${nextRange}` : undefined}
+            prevRangeUrl={prevRange ? `/en/multiplication-tables/${prevRange}` : undefined}
+            difficultyLevel={meta?.level || 'beginner'}  difficultyColor={meta?.color || 'from-blue-50 to-indigo-50'}
+          />
+        </>
       )
     }
     
     if (slugType === 'number') {
       const num = parseInt(slug, 10)
       const [rangeStart, rangeEnd] = getRangeFromNumber(num).split('-').map(Number)
+
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.en,
+        { title: `${num} Times Table`, description: `Learn the ${num} times table` }
+      )
       
       return (
-        <NumberPageEn
-          number={num}
-          rangeStart={rangeStart}
-          rangeEnd={rangeEnd}
-        />
+        <>
+          {renderSchemas(schemas)}
+          <NumberPageEn
+            number={num}
+            rangeStart={rangeStart}
+            rangeEnd={rangeEnd}
+          />
+        </>
       )
     }
     
@@ -4141,46 +3392,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/pt/tabuada/${slug}#webpage`,
-            "url": `${baseUrl}/pt/tabuada/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/pt/tabuada/${slug}#learningresource`
-            },
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/pt/tabuada/${slug}#learningresource`,
-            "name": `Tabuada ${slug} Recurso de Aprendizagem`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Iniciante' : meta.level === 'intermediate' ? 'Intermediário' : 'Avançado',
-            "learningResourceType": ["Recurso Interativo", "Material de Prática", "Jogo Educacional"],
-            "teaches": `Habilidades para entender e aplicar tabuadas ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "pt-BR",
-            "educationalUse": ["prática", "auto-estudo", "lição de casa"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Tabuada do ${start + i}`,
-              "url": `${baseUrl}/pt/tabuada/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.pt,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -4189,10 +3408,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePagePt
             rangeStart={start}
             rangeEnd={end}
@@ -4214,84 +3430,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesPt[num] || `Multiplicação por ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/pt/tabuada/${num}#webpage`,
-            "url": `${baseUrl}/pt/tabuada/${num}`,
-            "name": `Tabuada do ${num} - ${specialProp}`,
-            "description": numberDescriptionsPt[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/pt/tabuada/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/pt/tabuada/${num}#breadcrumb`
-            },
-            "inLanguage": "pt-BR"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/pt/tabuada/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Início"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/pt/tabuada/${range}`,
-                  "name": `Tabuada ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/pt/tabuada/${num}`,
-                  "name": `Tabuada do ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/pt/tabuada/${num}#learningresource`,
-            "name": `Tabuada do ${num} Recurso de Aprendizagem`,
-            "description": numberDescriptionsPt[num],
-            "educationalLevel": rangeStart <= 10 ? "Iniciante" : rangeStart <= 50 ? "Intermediário" : "Avançado",
-            "learningResourceType": ["Recurso Interativo", "Material de Prática", "Jogo Educacional"],
-            "teaches": `Tabuada do ${num}, ${specialProp.toLowerCase()}, conceitos básicos de multiplicação`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "pt-BR",
-            "educationalUse": ["prática", "auto-estudo"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/pt/tabuada/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.pt,
+        { title: `Tabuada do ${num} - ${specialProp}`, description: numberDescriptionsPt[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPagePt number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -4318,46 +3468,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#webpage`,
-            "url": `${baseUrl}/pl/tabliczki-mnozenia/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#learningresource`
-            },
-            "inLanguage": "pl-PL"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${slug}#learningresource`,
-            "name": `Zasób Edukacyjny Tabliczki Mnożenia ${slug}`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Początkujący' : meta.level === 'intermediate' ? 'Średniozaawansowany' : 'Zaawansowany',
-            "learningResourceType": ["Zasób Interaktywny", "Materiały do Ćwiczeń", "Gra Edukacyjna"],
-            "teaches": `Umiejętności rozumienia i stosowania tabliczek mnożenia ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "pl-PL",
-            "educationalUse": ["ćwiczenia", "samodzielna nauka", "praca domowa"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Tabliczka Mnożenia ${start + i}`,
-              "url": `${baseUrl}/pl/tabliczki-mnozenia/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.pl,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -4366,10 +3484,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePagePl
             rangeStart={start}
             rangeEnd={end}
@@ -4391,84 +3506,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesPl[num] || `Mnożenie przez ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#webpage`,
-            "url": `${baseUrl}/pl/tabliczki-mnozenia/${num}`,
-            "name": `Tabliczka Mnożenia ${num} - ${specialProp}`,
-            "description": numberDescriptionsPl[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#breadcrumb`
-            },
-            "inLanguage": "pl-PL"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Strona Główna"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/pl/tabliczki-mnozenia/${range}`,
-                  "name": `Tabliczka Mnożenia ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}`,
-                  "name": `Tabliczka Mnożenia ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/pl/tabliczki-mnozenia/${num}#learningresource`,
-            "name": `Zasób Edukacyjny Tabliczka Mnożenia ${num}`,
-            "description": numberDescriptionsPl[num],
-            "educationalLevel": rangeStart <= 10 ? "Początkujący" : rangeStart <= 50 ? "Średniozaawansowany" : "Zaawansowany",
-            "learningResourceType": ["Zasób Interaktywny", "Materiały do Ćwiczeń", "Gra Edukacyjna"],
-            "teaches": `Tabliczka mnożenia ${num}, ${specialProp.toLowerCase()}, podstawowe pojęcia mnożenia`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "pl-PL",
-            "educationalUse": ["ćwiczenia", "samodzielna nauka"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/pl/tabliczki-mnozenia/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.pl,
+        { title: `Tabliczka Mnożenia ${num} - ${specialProp}`, description: numberDescriptionsPl[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPagePl number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )
@@ -4495,46 +3544,14 @@ export default async function SlugPage({ params }: PageProps) {
       const [start, end] = slug.split('-').map(Number)
       if (isNaN(start) || isNaN(end)) notFound()
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/id/tabel-perkalian/${slug}#webpage`,
-            "url": `${baseUrl}/id/tabel-perkalian/${slug}`,
-            "name": meta.title,
-            "description": meta.description,
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/id/tabel-perkalian/${slug}#learningresource`
-            },
-            "inLanguage": "id-ID"
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/id/tabel-perkalian/${slug}#learningresource`,
-            "name": `Tabel Perkalian ${slug} Sumber Pembelajaran`,
-            "description": meta.description,
-            "educationalLevel": meta.level === 'beginner' ? 'Pemula' : meta.level === 'intermediate' ? 'Menengah' : 'Mahir',
-            "learningResourceType": ["Sumber Interaktif", "Materi Latihan", "Permainan Edukatif"],
-            "teaches": `Keterampilan untuk memahami dan menerapkan tabel perkalian ${start}, ${start + 1}, ... ${end}`,
-            "typicalAgeRange": meta.level === 'beginner' ? '6-8' : meta.level === 'intermediate' ? '7-10' : '9-12',
-            "inLanguage": "id-ID",
-            "educationalUse": ["latihan", "belajar mandiri", "pekerjaan rumah"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "hasPart": Array.from({ length: end - start + 1 }, (_, i) => ({
-              "@type": "LearningResource",
-              "name": `Tabel Perkalian ${start + i}`,
-              "url": `${baseUrl}/id/tabel-perkalian/${start + i}`
-            }))
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'range',
+        slug,
+        lang,
+        topic,
+        siteConfig.id,
+        { title: meta.title, description: meta.description }
+      )
 
       const allRanges = getAllRanges()
       const currentIndex = allRanges.indexOf(slug)
@@ -4543,10 +3560,7 @@ export default async function SlugPage({ params }: PageProps) {
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <RangePageId
             rangeStart={start}
             rangeEnd={end}
@@ -4568,84 +3582,18 @@ export default async function SlugPage({ params }: PageProps) {
       const [rangeStart, rangeEnd] = range.split('-').map(Number)
       const specialProp = numberSpecialPropertiesId[num] || `Perkalian dengan ${num}`
 
-      const schemaData = {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": `${baseUrl}/id/tabel-perkalian/${num}#webpage`,
-            "url": `${baseUrl}/id/tabel-perkalian/${num}`,
-            "name": `Tabel Perkalian ${num} - ${specialProp}`,
-            "description": numberDescriptionsId[num],
-            "isPartOf": {
-              "@id": `${baseUrl}/#website`
-            },
-            "about": {
-              "@id": `${baseUrl}/id/tabel-perkalian/${num}#learningresource`
-            },
-            "breadcrumb": {
-              "@id": `${baseUrl}/id/tabel-perkalian/${num}#breadcrumb`
-            },
-            "inLanguage": "id-ID"
-          },
-          {
-            "@type": "BreadcrumbList",
-            "@id": `${baseUrl}/id/tabel-perkalian/${num}#breadcrumb`,
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@id": `${baseUrl}/`,
-                  "name": "Beranda"
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@id": `${baseUrl}/id/tabel-perkalian/${range}`,
-                  "name": `Tabel Perkalian ${range}`
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@id": `${baseUrl}/id/tabel-perkalian/${num}`,
-                  "name": `Tabel Perkalian ${num}`
-                }
-              }
-            ]
-          },
-          {
-            "@type": "LearningResource",
-            "@id": `${baseUrl}/id/tabel-perkalian/${num}#learningresource`,
-            "name": `Sumber Pembelajaran Tabel Perkalian ${num}`,
-            "description": numberDescriptionsId[num],
-            "educationalLevel": rangeStart <= 10 ? "Pemula" : rangeStart <= 50 ? "Menengah" : "Mahir",
-            "learningResourceType": ["Sumber Interaktif", "Materi Latihan", "Permainan Edukatif"],
-            "teaches": `Tabel perkalian ${num}, ${specialProp.toLowerCase()}, konsep dasar perkalian`,
-            "typicalAgeRange": rangeStart <= 10 ? "6-8" : rangeStart <= 50 ? "7-10" : "9-12",
-            "inLanguage": "id-ID",
-            "educationalUse": ["latihan", "belajar mandiri"],
-            "audience": {
-              "@type": "EducationalAudience",
-              "educationalRole": ["student"]
-            },
-            "isPartOf": {
-              "@id": `${baseUrl}/id/tabel-perkalian/${range}#learningresource`
-            }
-          }
-        ]
-      }
+      const schemas = generateSlugSchema(
+        'number',
+        slug,
+        lang,
+        topic,
+        siteConfig.id,
+        { title: `Tabel Perkalian ${num} - ${specialProp}`, description: numberDescriptionsId[num] }
+      )
 
       return (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-          />
+          {renderSchemas(schemas)}
           <NumberPageId number={num} rangeStart={rangeStart} rangeEnd={rangeEnd} />
         </>
       )

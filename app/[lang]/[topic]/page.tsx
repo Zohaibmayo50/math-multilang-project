@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
+import Header from '@/app/components/Header'
 import Hero from '@/app/components/Hero'
 import DefinitionSection from '@/app/components/DefinitionSection'
 import WhyItMatters from '@/app/components/WhyItMatters'
@@ -10,6 +11,7 @@ import GamesSection from '@/app/components/GamesSection'
 import PrintableExercises from '@/app/components/PrintableExercises'
 import AudienceSection from '@/app/components/AudienceSection'
 import Footer from '@/app/components/Footer'
+import HeaderEs from '@/app/components/es/Header'
 import HeroEs from '@/app/components/es/Hero'
 import DefinitionSectionEs from '@/app/components/es/DefinitionSection'
 import WhyItMattersEs from '@/app/components/es/WhyItMatters'
@@ -20,6 +22,7 @@ import GamesSectionEs from '@/app/components/es/GamesSection'
 import PrintableExercisesEs from '@/app/components/es/PrintableExercises'
 import AudienceSectionEs from '@/app/components/es/AudienceSection'
 import FooterEs from '@/app/components/es/Footer'
+import HeaderDe from '@/app/components/de/Header'
 import HeroDe from '@/app/components/de/Hero'
 import DefinitionSectionDe from '@/app/components/de/DefinitionSection'
 import WhyItMattersDe from '@/app/components/de/WhyItMatters'
@@ -30,6 +33,7 @@ import GamesSectionDe from '@/app/components/de/GamesSection'
 import PrintableExercisesDe from '@/app/components/de/PrintableExercises'
 import AudienceSectionDe from '@/app/components/de/AudienceSection'
 import FooterDe from '@/app/components/de/Footer'
+import HeaderCs from '@/app/components/cs/Header'
 import HeroCs from '@/app/components/cs/Hero'
 import DefinitionSectionCs from '@/app/components/cs/DefinitionSection'
 import WhyItMattersCs from '@/app/components/cs/WhyItMatters'
@@ -40,6 +44,7 @@ import GamesSectionCs from '@/app/components/cs/GamesSection'
 import PrintableExercisesCs from '@/app/components/cs/PrintableExercises'
 import AudienceSectionCs from '@/app/components/cs/AudienceSection'
 import FooterCs from '@/app/components/cs/Footer'
+import HeaderUk from '@/app/components/uk/Header'
 import HeroUk from '@/app/components/uk/Hero'
 import DefinitionSectionUk from '@/app/components/uk/DefinitionSection'
 import WhyItMattersUk from '@/app/components/uk/WhyItMatters'
@@ -50,6 +55,7 @@ import GamesSectionUk from '@/app/components/uk/GamesSection'
 import PrintableExercisesUk from '@/app/components/uk/PrintableExercises'
 import AudienceSectionUk from '@/app/components/uk/AudienceSection'
 import FooterUk from '@/app/components/uk/Footer'
+import HeaderFi from '@/app/components/fi/Header'
 import HeroFi from '@/app/components/fi/Hero'
 import DefinitionSectionFi from '@/app/components/fi/DefinitionSection'
 import WhyItMattersFi from '@/app/components/fi/WhyItMatters'
@@ -60,6 +66,7 @@ import GamesSectionFi from '@/app/components/fi/GamesSection'
 import PrintableExercisesFi from '@/app/components/fi/PrintableExercises'
 import AudienceSectionFi from '@/app/components/fi/AudienceSection'
 import FooterFi from '@/app/components/fi/Footer'
+import HeaderFr from '@/app/components/fr/Header'
 import HeroFr from '@/app/components/fr/Hero'
 import DefinitionSectionFr from '@/app/components/fr/DefinitionSection'
 import WhyItMattersFr from '@/app/components/fr/WhyItMatters'
@@ -735,6 +742,7 @@ export default async function TopicHomePage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
+        <HeaderEn />
         <main className="min-h-screen">
           <HeroEn />
           <LearningPathsEn />
@@ -767,6 +775,7 @@ export default async function TopicHomePage({ params }: PageProps) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
+        <Header />
         <main className="min-h-screen">
           <Hero />
           <LearningPaths />
@@ -785,88 +794,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Spanish version (production-ready)
   if (locale === 'es') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.es.domain}/#website`,
-          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
-          "name": "Tablas de Multiplicar",
-          "description": "Plataforma de educación interactiva para aprender las tablas de multiplicar del 1 al 100. Herramientas de aprendizaje visual para niños, ejercicios prácticos y juegos educativos.",
-          "inLanguage": "es",
-          "publisher": {
-            "@id": `${siteConfig.es.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#webpage`,
-          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
-          "name": "Tablas de Multiplicar - Del 1 al 100 Todas las Tablas",
-          "description": "Plataforma interactiva de aprendizaje de tablas de multiplicar para niños. Aprende todas las tablas de multiplicar del 1 al 100 practicando.",
-          "isPartOf": {
-            "@id": `${siteConfig.es.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#learningresource`
-          },
-          "inLanguage": "es"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.es.domain}/#organization`,
-          "name": "Tablas de Multiplicar",
-          "url": `${siteConfig.es.domain}/es/tablas-de-multiplicar/`,
-          "description": "Plataforma educativa que enseña las tablas de multiplicar a estudiantes de primaria",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["es", "tr", "de"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.es.domain}/es/tablas-de-multiplicar/#learningresource`,
-          "name": "Plataforma de Aprendizaje de Tablas de Multiplicar",
-          "description": "Recurso educativo integral para aprender las tablas de multiplicar del 1 al 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "es",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "tablas de multiplicar",
-            "aprendizaje de matemáticas",
-            "matemáticas de primaria",
-            "operación de multiplicación"
-          ],
-          "teaches": "Habilidades para comprender, aplicar y memorizar la operación de multiplicación y las tablas de multiplicar",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderEs />
         <main className="min-h-screen">
           <HeroEs />
           <LearningPathsEs />
@@ -885,92 +827,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // German version (production-ready)
   if (locale === 'de') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.de.domain}/#website`,
-          "url": `${siteConfig.de.domain}/de/einmaleins/`,
-          "name": "Einmaleins",
-          "description": "Interaktive Bildungsplattform zum Lernen des Einmaleins von 1 bis 100. Visuelle Lernwerkzeuge für Kinder, praktische Übungen und Lernspiele.",
-          "inLanguage": "de-DE",
-          "publisher": {
-            "@id": `${siteConfig.de.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.de.domain}/de/einmaleins/#webpage`,
-          "url": `${siteConfig.de.domain}/de/einmaleins/`,
-          "name": "Einmaleins - Von 1 bis 100 Alle Tabellen",
-          "description": "Interaktive Lernplattform für das Einmaleins für Kinder. Lerne alle Einmaleins-Tabellen von 1 bis 100 durch Üben.",
-          "isPartOf": {
-            "@id": `${siteConfig.de.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.de.domain}/de/einmaleins/#learningresource`
-          },
-          "inLanguage": "de-DE"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.de.domain}/#organization`,
-          "name": "Einmaleins",
-          "url": `${siteConfig.de.domain}/de/einmaleins/`,
-          "description": "Bildungsplattform, die Grundschülern das Einmaleins beibringt",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["de", "tr", "es"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.de.domain}/de/einmaleins/#learningresource`,
-          "name": "Einmaleins Lernplattform",
-          "description": "Umfassende Bildungsressource zum Lernen des Einmaleins von 1 bis 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "de-DE",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "einmaleins",
-            "mathematik lernen",
-            "grundschul-mathematik",
-            "multiplikation",
-            "einmaleins lernen",
-            "mathematik üben",
-            "multiplikationsübungen",
-            "einmaleins spiele"
-          ],
-          "teaches": "Fähigkeiten zum Verstehen, Anwenden und Auswendiglernen von Multiplikation und Einmaleins-Tabellen",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderDe />
         <main className="min-h-screen">
           <HeroDe />
           <LearningPathsDe />
@@ -989,92 +860,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Czech version (production-ready)
   if (locale === 'cs') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.cs.domain}/#website`,
-          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
-          "name": "Násobilka",
-          "description": "Interaktivní vzdělávací platforma pro učení násobilky od 1 do 100. Vizuální výukové nástroje pro děti, praktická cvičení a vzdělávací hry.",
-          "inLanguage": "cs-CZ",
-          "publisher": {
-            "@id": `${siteConfig.cs.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.cs.domain}/cs/nasobilka/#webpage`,
-          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
-          "name": "Násobilka - Od 1 do 100 Všechny Tabulky",
-          "description": "Interaktivní platforma pro učení násobilky pro děti. Naučte se všechny násobilky od 1 do 100 procvičováním.",
-          "isPartOf": {
-            "@id": `${siteConfig.cs.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.cs.domain}/cs/nasobilka/#learningresource`
-          },
-          "inLanguage": "cs-CZ"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.cs.domain}/#organization`,
-          "name": "Násobilka",
-          "url": `${siteConfig.cs.domain}/cs/nasobilka/`,
-          "description": "Vzdělávací platforma, která učí žáky základních škol násobilku",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["cs", "tr", "es", "de"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.cs.domain}/cs/nasobilka/#learningresource`,
-          "name": "Platforma pro Učení Násobilky",
-          "description": "Komplexní vzdělávací zdroj pro učení násobilky od 1 do 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "cs-CZ",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "násobilka",
-            "učení matematiky",
-            "základní škola matematika",
-            "násobení",
-            "učení násobilky",
-            "procvičování matematiky",
-            "cvičení násobení",
-            "násobilka hry"
-          ],
-          "teaches": "Dovednosti porozumět, aplikovat a zapamatovat si násobení a násobilku",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderCs />
         <main className="min-h-screen">
           <HeroCs />
           <LearningPathsCs />
@@ -1093,92 +893,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Ukrainian version (production-ready)
   if (locale === 'uk') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.uk.domain}/#website`,
-          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
-          "name": "Таблиця множення",
-          "description": "Інтерактивна освітня платформа для вивчення таблиці множення від 1 до 100. Візуальні навчальні інструменти для дітей, практичні вправи та освітні ігри.",
-          "inLanguage": "uk-UA",
-          "publisher": {
-            "@id": `${siteConfig.uk.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#webpage`,
-          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
-          "name": "Таблиця множення - Від 1 до 100 Всі Таблиці",
-          "description": "Інтерактивна платформа для вивчення таблиці множення для дітей. Вивчіть всі таблиці множення від 1 до 100 через практику.",
-          "isPartOf": {
-            "@id": `${siteConfig.uk.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#learningresource`
-          },
-          "inLanguage": "uk-UA"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.uk.domain}/#organization`,
-          "name": "Таблиця множення",
-          "url": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/`,
-          "description": "Освітня платформа, яка навчає учнів початкової школи таблиці множення",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["uk", "tr", "es", "de", "cs"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.uk.domain}/uk/tablycya-mnozhennya/#learningresource`,
-          "name": "Платформа для Вивчення Таблиці Множення",
-          "description": "Комплексний освітній ресурс для вивчення таблиці множення від 1 до 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "uk-UA",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "таблиця множення",
-            "вивчення математики",
-            "математика початкової школи",
-            "множення",
-            "вивчення таблиці множення",
-            "практика математики",
-            "вправи множення",
-            "ігри з таблиці множення"
-          ],
-          "teaches": "Навички розуміння, застосування та запам'ятовування множення та таблиці множення",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderUk />
         <main className="min-h-screen">
           <HeroUk />
           <LearningPathsUk />
@@ -1197,92 +926,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Finnish version (production-ready)
   if (locale === 'fi') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.fi.domain}/#website`,
-          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
-          "name": "Kertotaulut",
-          "description": "Interaktiivinen oppimisalusta kertotaulujen oppimiseen 1-100. Visuaaliset oppimistyökalut lapsille, käytännön harjoitukset ja opetuspelit.",
-          "inLanguage": "fi-FI",
-          "publisher": {
-            "@id": `${siteConfig.fi.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#webpage`,
-          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
-          "name": "Kertotaulut - 1-100 Kaikki Taulut",
-          "description": "Interaktiivinen kertotaulujen oppimisalusta lapsille. Opi kaikki kertotaulut 1-100 harjoittelemalla.",
-          "isPartOf": {
-            "@id": `${siteConfig.fi.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#learningresource`
-          },
-          "inLanguage": "fi-FI"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.fi.domain}/#organization`,
-          "name": "Kertotaulut",
-          "url": `${siteConfig.fi.domain}/fi/kertotaulut/`,
-          "description": "Oppimisalusta, joka opettaa alakoululaisille kertotaulut",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["fi", "tr", "es", "de", "cs", "uk"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.fi.domain}/fi/kertotaulut/#learningresource`,
-          "name": "Kertotaulujen Oppimisalusta",
-          "description": "Kattava oppimisresurssi kertotaulujen oppimiseen 1-100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "fi-FI",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "kertotaulut",
-            "matematiikan oppiminen",
-            "alakoulun matematiikka",
-            "kertominen",
-            "kertotaulujen oppiminen",
-            "matematiikan harjoittelu",
-            "kertolaskuharjoitukset",
-            "kertotaulupelit"
-          ],
-          "teaches": "Taidot ymmärtää, soveltaa ja muistaa kertolaskuja ja kertotauluja",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderFi />
         <main className="min-h-screen">
           <HeroFi />
           <LearningPathsFi />
@@ -1301,91 +959,21 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // French version (production-ready)
   if (locale === 'fr') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.fr.domain}/#website`,
-          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
-          "name": "Table de Multiplication",
-          "description": "Plateforme éducative interactive pour apprendre les tables de multiplication de 1 à 100. Outils d'apprentissage visuel pour les enfants, exercices pratiques et jeux éducatifs.",
-          "inLanguage": "fr-FR",
-          "publisher": {
-            "@id": `${siteConfig.fr.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#webpage`,
-          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
-          "name": "Table de Multiplication - Toutes les Tables de 1 à 100",
-          "description": "Plateforme d'apprentissage interactive des tables de multiplication pour les enfants. Apprenez toutes les tables de multiplication de 1 à 100 par la pratique.",
-          "isPartOf": {
-            "@id": `${siteConfig.fr.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#learningresource`
-          },
-          "inLanguage": "fr-FR"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.fr.domain}/#organization`,
-          "name": "Table de Multiplication",
-          "url": `${siteConfig.fr.domain}/fr/table-de-multiplication/`,
-          "description": "Plateforme éducative qui enseigne les tables de multiplication aux élèves du primaire",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["fr", "tr", "es", "de", "cs", "uk", "fi"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.fr.domain}/fr/table-de-multiplication/#learningresource`,
-          "name": "Plateforme d'Apprentissage des Tables de Multiplication",
-          "description": "Ressource éducative complète pour apprendre les tables de multiplication de 1 à 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "fr-FR",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "table de multiplication",
-            "apprentissage des mathématiques",
-            "mathématiques primaire",
-            "multiplication",
-            "apprendre les tables",
-            "exercices de mathématiques",
-            "jeux de multiplication"
-          ],
-          "teaches": "Compétences pour comprendre, appliquer et mémoriser la multiplication et les tables de multiplication",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
+        <HeaderFr />
         <main className="min-h-screen">
           <HeroFr />
           <LearningPathsFr />
@@ -1404,90 +992,19 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Swedish version (production-ready)
   if (locale === 'sv') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.sv.domain}/#website`,
-          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
-          "name": "Multiplikationstabeller",
-          "description": "Interaktiv utbildningsplattform för att lära sig multiplikationstabeller från 1 till 100. Visuella inlärningsverktyg för barn, praktiska övningar och pedagogiska spel.",
-          "inLanguage": "sv-SE",
-          "publisher": {
-            "@id": `${siteConfig.sv.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#webpage`,
-          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
-          "name": "Multiplikationstabeller - Alla Tabeller från 1 till 100",
-          "description": "Interaktiv inlärningsplattform för multiplikationstabeller för barn. Lär dig alla multiplikationstabeller från 1 till 100 genom övning.",
-          "isPartOf": {
-            "@id": `${siteConfig.sv.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#learningresource`
-          },
-          "inLanguage": "sv-SE"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.sv.domain}/#organization`,
-          "name": "Multiplikationstabeller",
-          "url": `${siteConfig.sv.domain}/sv/multiplikationstabeller/`,
-          "description": "Utbildningsplattform som undervisar grundskoleelever i multiplikationstabeller",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["sv", "tr", "es", "de", "cs", "uk", "fi", "fr"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.sv.domain}/sv/multiplikationstabeller/#learningresource`,
-          "name": "Inlärningsplattform för Multiplikationstabeller",
-          "description": "Omfattande utbildningsresurs för att lära sig multiplikationstabeller från 1 till 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "sv-SE",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "multiplikationstabeller",
-            "matematiklärande",
-            "grundskolematematik",
-            "multiplikation",
-            "lära sig tabeller",
-            "matematikövningar",
-            "multiplikationsspel"
-          ],
-          "teaches": "Färdigheter för att förstå, tillämpa och memorera multiplikation och multiplikationstabeller",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
         <HeaderSv />
         <main className="min-h-screen">
@@ -1508,90 +1025,19 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Portuguese version
   if (locale === 'pt') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.pt.domain}/#website`,
-          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
-          "name": "Tabuada",
-          "description": "Plataforma educacional interativa para aprender a tabuada de 1 a 100. Ferramentas de aprendizado visual para crianças, exercícios práticos e jogos educacionais.",
-          "inLanguage": "pt-BR",
-          "publisher": {
-            "@id": `${siteConfig.pt.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.pt.domain}/pt/tabuada/#webpage`,
-          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
-          "name": "Tabuada - Todas as Tabuadas de 1 a 100",
-          "description": "Plataforma de aprendizado interativo de tabuada para crianças. Aprenda todas as tabuadas de 1 a 100 através de prática.",
-          "isPartOf": {
-            "@id": `${siteConfig.pt.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.pt.domain}/pt/tabuada/#learningresource`
-          },
-          "inLanguage": "pt-BR"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.pt.domain}/#organization`,
-          "name": "Tabuada",
-          "url": `${siteConfig.pt.domain}/pt/tabuada/`,
-          "description": "Plataforma educacional que ensina tabuada para alunos do ensino fundamental",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["pt", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.pt.domain}/pt/tabuada/#learningresource`,
-          "name": "Plataforma de Aprendizado de Tabuada",
-          "description": "Recurso educacional abrangente para aprender a tabuada de 1 a 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "pt-BR",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "tabuada",
-            "aprendizado de matemática",
-            "matemática do ensino fundamental",
-            "multiplicação",
-            "aprender tabuada",
-            "exercícios de matemática",
-            "jogos de multiplicação"
-          ],
-          "teaches": "Habilidades para entender, aplicar e memorizar multiplicação e tabuadas",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
         <HeaderPt />
         <main className="min-h-screen">
@@ -1612,90 +1058,19 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Polish version (production-ready)
   if (locale === 'pl') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.pl.domain}/#website`,
-          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
-          "name": "Tabliczki Mnożenia",
-          "description": "Interaktywna platforma edukacyjna do nauki tabliczki mnożenia od 1 do 100. Narzędzia do nauki wizualnej dla dzieci, ćwiczenia praktyczne i gry edukacyjne.",
-          "inLanguage": "pl-PL",
-          "publisher": {
-            "@id": `${siteConfig.pl.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#webpage`,
-          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
-          "name": "Tabliczki Mnożenia - Wszystkie Tabliczki od 1 do 100",
-          "description": "Interaktywna platforma do nauki tabliczki mnożenia dla dzieci. Naucz się wszystkich tabliczek mnożenia od 1 do 100 poprzez ćwiczenia.",
-          "isPartOf": {
-            "@id": `${siteConfig.pl.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#learningresource`
-          },
-          "inLanguage": "pl-PL"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.pl.domain}/#organization`,
-          "name": "Tabliczki Mnożenia",
-          "url": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/`,
-          "description": "Platforma edukacyjna ucząca tabliczki mnożenia uczniów szkół podstawowych",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["pl", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.pl.domain}/pl/tabliczki-mnozenia/#learningresource`,
-          "name": "Platforma Nauki Tabliczki Mnożenia",
-          "description": "Kompleksowy zasób edukacyjny do nauki tabliczki mnożenia od 1 do 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "pl-PL",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "tabliczka mnożenia",
-            "nauka matematyki",
-            "matematyka szkoły podstawowej",
-            "mnożenie",
-            "nauka tabliczki",
-            "ćwiczenia matematyczne",
-            "gry matematyczne"
-          ],
-          "teaches": "Umiejętności rozumienia, stosowania i zapamiętywania mnożenia i tabliczki mnożenia",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
         <HeaderPl />
         <main className="min-h-screen">
@@ -1716,90 +1091,19 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   // Indonesian version (production-ready)
   if (locale === 'id') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.id.domain}/#website`,
-          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
-          "name": "Tabel Perkalian",
-          "description": "Platform pendidikan interaktif untuk mempelajari tabel perkalian dari 1 hingga 100. Alat pembelajaran visual untuk anak-anak, latihan praktis, dan permainan edukatif.",
-          "inLanguage": "id-ID",
-          "publisher": {
-            "@id": `${siteConfig.id.domain}/#organization`
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#webpage`,
-          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
-          "name": "Tabel Perkalian - Semua Tabel dari 1 hingga 100",
-          "description": "Platform pembelajaran tabel perkalian interaktif untuk anak-anak. Pelajari semua tabel perkalian dari 1-100 melalui latihan.",
-          "isPartOf": {
-            "@id": `${siteConfig.id.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#learningresource`
-          },
-          "inLanguage": "id-ID"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.id.domain}/#organization`,
-          "name": "Tabel Perkalian",
-          "url": `${siteConfig.id.domain}/id/tabel-perkalian/`,
-          "description": "Platform pendidikan yang mengajarkan tabel perkalian kepada siswa sekolah dasar",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["id", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt", "pl"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.id.domain}/id/tabel-perkalian/#learningresource`,
-          "name": "Platform Pembelajaran Tabel Perkalian",
-          "description": "Sumber pendidikan komprehensif untuk mempelajari tabel perkalian dari 1 hingga 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "id-ID",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "tabel perkalian",
-            "belajar matematika",
-            "matematika sekolah dasar",
-            "perkalian",
-            "belajar tabel",
-            "latihan matematika",
-            "permainan matematika"
-          ],
-          "teaches": "Keterampilan untuk memahami, menerapkan, dan menghafal perkalian dan tabel perkalian",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
         <HeaderId />
         <main className="min-h-screen">
