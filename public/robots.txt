@@ -1,20 +1,20 @@
+# robots.txt for https://mathematives.com
+# Multilingual educational platform for learning multiplication tables
+
 # Allow all crawlers
 User-agent: *
+
+# Allow all content pages
 Allow: /
 
-# Block malformed and non-existent paths
-Disallow: /sayi/%7B
-Disallow: /sayi/{
-Disallow: /)
-Disallow: /wp-
-Disallow: /wp-content/
-Disallow: /wp-includes/
-Disallow: /wp-admin/
-Disallow: /wordpress/
-Disallow: /*.php$
+# Block Next.js system files
+Disallow: /_next/
+
+# Block API routes
+Disallow: /api/
 
 # Sitemap location
 Sitemap: https://mathematives.com/sitemap.xml
 
-# Crawl-delay for polite crawling
+# Crawl delay for polite crawling
 Crawl-delay: 1
