@@ -125,7 +125,7 @@ import WhyItMattersId from '@/app/components/id/WhyItMatters'
 import HowToLearnId from '@/app/components/id/HowToLearn'
 import AudienceSectionId from '@/app/components/id/AudienceSection'
 import FooterId from '@/app/components/id/Footer'
-import { Locale, topicSlugs, siteConfig } from '@/lib/i18n-config'
+import { Locale, topicSlugs, siteConfig, languageNames } from '@/lib/i18n-config'
 import { getAbsoluteUrl, buildAlternatesMetadata } from '@/lib/url-helpers'
 
 interface PageProps {
@@ -634,103 +634,107 @@ export default async function TopicHomePage({ params }: PageProps) {
 
   const locale = lang as Locale
 
+  const config = siteConfig[locale]
+  const ranges = ['1-10', '11-20', '21-30', '31-40', '41-50', '51-60', '61-70', '71-80', '81-90', '91-100']
+  
+  // Schema.org structured data - simplified per guidelines
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://mathematives.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: languageNames[locale],
+        item: `${config.domain}/${lang}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: locale === 'en' ? 'Multiplication Tables' : 
+              locale === 'tr' ? 'Çarpım Tablosu' :
+              locale === 'es' ? 'Tablas de Multiplicar' :
+              locale === 'de' ? 'Einmaleins' :
+              locale === 'cs' ? 'Násobilka' :
+              locale === 'uk' ? 'Таблиця множення' :
+              locale === 'fi' ? 'Kertotaulut' :
+              locale === 'fr' ? 'Table de Multiplication' :
+              locale === 'sv' ? 'Multiplikationstabeller' :
+              locale === 'pt' ? 'Tabuada' :
+              locale === 'pl' ? 'Tabliczka Mnożenia' : 'Tabel Perkalian',
+        item: `${config.domain}/${lang}/${topic}`,
+      },
+    ],
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    numberOfItems: ranges.length,
+    itemListElement: ranges.map((range, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: `${locale === 'en' ? 'Times Tables' : locale === 'tr' ? 'Çarpım Tablosu' : locale === 'es' ? 'Tabla de Multiplicar' : locale === 'de' ? 'Einmaleins' : locale === 'cs' ? 'Násobilka' : locale === 'uk' ? 'Таблиця множення' : locale === 'fi' ? 'Kertotaulu' : locale === 'fr' ? 'Table de Multiplication' : locale === 'sv' ? 'Multiplikationstabell' : locale === 'pt' ? 'Tabuada' : locale === 'pl' ? 'Tabliczka Mnożenia' : 'Tabel Perkalian'} ${range}`,
+      url: `${config.domain}/${lang}/${topic}/${range}`,
+    })),
+  }
+
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: locale === 'en' ? 'Multiplication Tables 1-100' : 
+          locale === 'tr' ? 'Çarpım Tablosu 1-100' :
+          locale === 'es' ? 'Tablas de Multiplicar 1-100' :
+          locale === 'de' ? 'Einmaleins 1-100' :
+          locale === 'cs' ? 'Násobilka 1-100' :
+          locale === 'uk' ? 'Таблиця множення 1-100' :
+          locale === 'fi' ? 'Kertotaulut 1-100' :
+          locale === 'fr' ? 'Table de Multiplication 1-100' :
+          locale === 'sv' ? 'Multiplikationstabeller 1-100' :
+          locale === 'pt' ? 'Tabuada 1-100' :
+          locale === 'pl' ? 'Tabliczka Mnożenia 1-100' : 'Tabel Perkalian 1-100',
+    description: locale === 'en' ? 'Learn multiplication tables from 1 to 100' : 
+                 locale === 'tr' ? '1\'den 100\'e kadar çarpım tablolarını öğrenin' :
+                 locale === 'es' ? 'Aprende las tablas de multiplicar del 1 al 100' :
+                 locale === 'de' ? 'Lerne das Einmaleins von 1 bis 100' :
+                 locale === 'cs' ? 'Naučte se násobilku od 1 do 100' :
+                 locale === 'uk' ? 'Вивчіть таблицю множення від 1 до 100' :
+                 locale === 'fi' ? 'Opi kertotaulut 1-100' :
+                 locale === 'fr' ? 'Apprenez la table de multiplication de 1 à 100' :
+                 locale === 'sv' ? 'Lär dig multiplikationstabeller 1-100' :
+                 locale === 'pt' ? 'Aprenda a tabuada de 1 a 100' :
+                 locale === 'pl' ? 'Naucz się tabliczki mnożenia od 1 do 100' : 'Pelajari tabel perkalian 1-100',
+    url: `${config.domain}/${lang}/${topic}`,
+    inLanguage: lang,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Mathematives',
+      url: 'https://mathematives.com',
+    },
+  }
+
   // English version (production-ready)
   if (locale === 'en') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.en.domain}/#website`,
-          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
-          "name": "Multiplication Tables",
-          "description": "Interactive educational platform to learn multiplication tables from 1 to 100. Visual learning tools for children, practical exercises and educational games.",
-          "inLanguage": "en-US",
-          "publisher": {
-            "@id": `${siteConfig.en.domain}/#organization`
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": `${siteConfig.en.domain}/en/multiplication-tables/{search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.en.domain}/en/multiplication-tables/#webpage`,
-          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
-          "name": "Multiplication Tables - All Tables from 1 to 100",
-          "description": "Interactive multiplication tables learning platform for children. Learn all multiplication tables from 1-100 through practice.",
-          "isPartOf": {
-            "@id": `${siteConfig.en.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.en.domain}/en/multiplication-tables/#learningresource`
-          },
-          "inLanguage": "en-US"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.en.domain}/#organization`,
-          "name": "Multiplication Tables",
-          "url": `${siteConfig.en.domain}/en/multiplication-tables/`,
-          "description": "Educational platform that teaches multiplication tables to elementary school students",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["en", "tr", "es", "de", "cs", "uk", "fi", "fr", "sv", "pt"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.en.domain}/en/multiplication-tables/#learningresource`,
-          "name": "Multiplication Tables Learning Platform",
-          "description": "Comprehensive educational resource for learning multiplication tables from 1 to 100.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "en-US",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "multiplication tables",
-            "times tables",
-            "math learning",
-            "elementary math",
-            "multiplication",
-            "learn times tables",
-            "math exercises",
-            "multiplication games"
-          ],
-          "teaches": "Skills to understand, apply and memorize multiplication and times tables",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
-        <HeaderEn />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        />
         <main className="min-h-screen">
           <HeroEn />
           <LearningPathsEn />
@@ -747,107 +751,21 @@ export default async function TopicHomePage({ params }: PageProps) {
     )
   }
 
-  // Turkish version (production-ready)
+  // Turkish version - Simplified Schema
   if (locale === 'tr') {
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebSite",
-          "@id": `${siteConfig.tr.domain}/#website`,
-          "url": `${siteConfig.tr.domain}/tr/carpim-tablosu/`,
-          "name": "Çarpım Tablosu",
-          "description": "1'den 100'e kadar çarpım tablolarını öğrenmek için interaktif eğitim platformu. Çocuklar için görsel öğrenme araçları, pratik alıştırmaları ve eğitici oyunlar.",
-          "inLanguage": "tr-TR",
-          "publisher": {
-            "@id": `${siteConfig.tr.domain}/#organization`
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-              "@type": "EntryPoint",
-              "urlTemplate": `${siteConfig.tr.domain}/tr/carpim-tablosu/{search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "@id": `${siteConfig.tr.domain}/tr/carpim-tablosu/#webpage`,
-          "url": `${siteConfig.tr.domain}/tr/carpim-tablosu/`,
-          "name": "Çarpım Tablosu - 1'den 100'e Kadar Tüm Tablolar",
-          "description": "Çocuklar için interaktif çarpım tablosu öğrenme platformu. 1-100 arası tüm çarpım tablolarını pratik yaparak öğrenin. Görsel alıştırmalar, oyunlar ve yazdırılabilir çalışma sayfaları.",
-          "isPartOf": {
-            "@id": `${siteConfig.tr.domain}/#website`
-          },
-          "about": {
-            "@id": `${siteConfig.tr.domain}/tr/carpim-tablosu/#learningresource`
-          },
-          "inLanguage": "tr-TR",
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": `${siteConfig.tr.domain}/og-image.jpg`,
-            "width": 1200,
-            "height": 630
-          }
-        },
-        {
-          "@type": "EducationalOrganization",
-          "@id": `${siteConfig.tr.domain}/#organization`,
-          "name": "Çarpım Tablosu",
-          "url": `${siteConfig.tr.domain}/tr/carpim-tablosu/`,
-          "description": "İlkokul öğrencilerine çarpım tablolarını öğreten eğitim platformu",
-          "areaServed": "TR",
-          "availableLanguage": ["tr", "es", "de"]
-        },
-        {
-          "@type": "LearningResource",
-          "@id": `${siteConfig.tr.domain}/tr/carpim-tablosu/#learningresource`,
-          "name": "Çarpım Tablosu Öğrenme Platformu",
-          "description": "1'den 100'e kadar çarpım tablolarını öğrenmek için kapsamlı eğitim kaynağı. Her sayı için detaylı açıklamalar, desenler, pratik stratejileri ve interaktif alıştırmalar.",
-          "educationalLevel": "Elementary",
-          "learningResourceType": [
-            "Interactive Resource",
-            "Practice Material",
-            "Educational Game",
-            "Worksheet"
-          ],
-          "audience": {
-            "@type": "EducationalAudience",
-            "educationalRole": [
-              "student",
-              "parent",
-              "teacher"
-            ]
-          },
-          "inLanguage": "tr-TR",
-          "educationalUse": [
-            "practice",
-            "self-study",
-            "homework",
-            "classroom activity"
-          ],
-          "keywords": [
-            "çarpım tablosu",
-            "matematik öğrenme",
-            "ilkokul matematik",
-            "çarpma işlemi",
-            "çarpım tablosu ezberleme",
-            "matematik pratik",
-            "çarpma alıştırmaları",
-            "çarpım tablosu oyunları"
-          ],
-          "teaches": "Çarpma işlemi ve çarpım tablolarını anlama, uygulama ve ezberleme becerileri",
-          "typicalAgeRange": "6-12"
-        }
-      ]
-    }
-
     return (
       <>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
         />
         <main className="min-h-screen">
           <Hero />

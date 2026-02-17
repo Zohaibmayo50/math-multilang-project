@@ -766,8 +766,60 @@ export default async function LanguageHub({ params }: PageProps) {
   const availableTopics = topics.filter(t => t.status === 'available')
   const comingSoonTopics = topics.filter(t => t.status === 'coming-soon')
 
+  const config = siteConfig[lang]
+  
+  // Schema.org structured data
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://mathematives.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: languageNames[lang],
+        item: `${config.domain}/${lang}`,
+      },
+    ],
+  }
+
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: content.heading,
+    description: content.subheading,
+    url: `${config.domain}/${lang}`,
+    inLanguage: lang,
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Mathematives',
+      url: 'https://mathematives.com',
+    },
+    about: {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Multiplication Tables',
+      description: 'Mathematical multiplication learning resources',
+    },
+  }
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 py-12 md:py-20">
         {/* Header */}
         <div className="text-center mb-12">
@@ -964,5 +1016,6 @@ export default async function LanguageHub({ params }: PageProps) {
         </p>
       </footer>
     </main>
+    </>
   )
 }

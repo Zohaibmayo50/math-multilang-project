@@ -92,10 +92,61 @@ export default function LanguageSelector() {
     },
   ]
 
+  // Schema.org structured data
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Mathematives',
+    url: 'https://mathematives.com',
+    description: 'Free multiplication tables learning platform in 12 languages',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://mathematives.com/{lang}/multiplication-tables/{search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+    inLanguage: ['en', 'tr', 'es', 'de', 'cs', 'uk', 'fi', 'fr', 'sv', 'pt', 'pl', 'id'],
+  }
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: 'Mathematives',
+    url: 'https://mathematives.com',
+    logo: 'https://mathematives.com/logo.png',
+    description: 'Free educational platform providing multiplication tables learning resources in 12 languages',
+    sameAs: [],
+    areaServed: 'Worldwide',
+    availableLanguage: [
+      { '@type': 'Language', name: 'English', alternateName: 'en' },
+      { '@type': 'Language', name: 'Turkish', alternateName: 'tr' },
+      { '@type': 'Language', name: 'Spanish', alternateName: 'es' },
+      { '@type': 'Language', name: 'German', alternateName: 'de' },
+      { '@type': 'Language', name: 'Czech', alternateName: 'cs' },
+      { '@type': 'Language', name: 'Ukrainian', alternateName: 'uk' },
+      { '@type': 'Language', name: 'Finnish', alternateName: 'fi' },
+      { '@type': 'Language', name: 'French', alternateName: 'fr' },
+      { '@type': 'Language', name: 'Swedish', alternateName: 'sv' },
+      { '@type': 'Language', name: 'Portuguese', alternateName: 'pt' },
+      { '@type': 'Language', name: 'Polish', alternateName: 'pl' },
+      { '@type': 'Language', name: 'Indonesian', alternateName: 'id' },
+    ],
+  }
+
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 px-4">
+    <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        {/* Hero Section */}
+        <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
             Mathematives
@@ -300,5 +351,6 @@ export default function LanguageSelector() {
         </p>
       </footer>
     </main>
+    </>
   )
 }

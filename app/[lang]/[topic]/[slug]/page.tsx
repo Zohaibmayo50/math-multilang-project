@@ -24,7 +24,7 @@ import RangePagePl from '@/app/components/pl/RangePage'
 import NumberPagePl from '@/app/components/pl/NumberPage'
 import RangePageId from '@/app/components/id/RangePage'
 import NumberPageId from '@/app/components/id/NumberPage'
-import { Locale, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
+import { Locale, topicSlugs, siteConfig, guides, languageNames } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getAllRanges, getAllNumbers, getRangeFromNumber, buildAlternatesMetadata } from '@/lib/url-helpers'
 import { numberTitles, numberDescriptions, numberSpecialProperties } from '@/lib/number-metadata'
 import { numberTitlesEs, numberDescriptionsEs, numberSpecialPropertiesEs } from '@/lib/number-metadata-es'
@@ -2518,6 +2518,145 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {}
+}
+
+// Helper function to generate schema markup per guidelines
+function generateSlugSchema(
+  slugType: 'number' | 'range' | 'guide',
+  slug: string,
+  lang: string,
+  topic: string,
+  config: any,
+  metadata: { title: string; description: string }
+) {
+  const baseUrl = config.domain
+  const fullUrl = `${baseUrl}/${lang}/${topic}/${slug}`
+  
+  // Breadcrumb schema (all pages)
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://mathematives.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: languageNames[lang as Locale],
+        item: `${baseUrl}/${lang}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: lang === 'en' ? 'Multiplication Tables' : 
+              lang === 'tr' ? 'Çarpım Tablosu' :
+              lang === 'es' ? 'Tablas de Multiplicar' :
+              lang === 'de' ? 'Einmaleins' :
+              lang === 'cs' ? 'Násobilka' :
+              lang === 'uk' ? 'Таблиця множення' :
+              lang === 'fi' ? 'Kertotaulut' :
+              lang === 'fr' ? 'Table de Multiplication' :
+              lang === 'sv' ? 'Multiplikationstabeller' :
+              lang === 'pt' ? 'Tabuada' :
+              lang === 'pl' ? 'Tabliczka Mnożenia' : 'Tabel Perkalian',
+        item: `${baseUrl}/${lang}/${topic}`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: metadata.title,
+        item: fullUrl,
+      },
+    ],
+  }
+  
+  if (slugType === 'number') {
+    // Number pages: EducationalContent + WebPage + BreadcrumbList
+    const number = parseInt(slug, 10)
+    return {
+      breadcrumb: breadcrumbSchema,
+      webpage: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: metadata.title,
+        description: metadata.description,
+        url: fullUrl,
+        inLanguage: lang,
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'Mathematives',
+          url: 'https://mathematives.com',
+        },
+      },
+      educational: {
+        '@context': 'https://schema.org',
+        '@type': 'LearningResource',
+        name: metadata.title,
+        description: metadata.description,
+        url: fullUrl,
+        inLanguage: lang,
+        educationalLevel: number <= 10 ? 'Beginner' : number <= 50 ? 'Intermediate' : 'Advanced',
+        learningResourceType: 'Interactive Resource',
+        teaches: metadata.description,
+        typicalAgeRange: '6-12',
+        educationalUse: ['practice', 'self-study',  'homework'],
+      },
+    }
+  }
+  
+  if (slugType === 'range') {
+    // Range pages: ItemList + BreadcrumbList
+    const [start, end] = slug.split('-').map(Number)
+    const numbers = Array.from({ length: end - start + 1 }, (_, i) => start + i)
+    
+    return {
+      breadcrumb: breadcrumbSchema,
+      itemList: {
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: metadata.title,
+        description: metadata.description,
+        numberOfItems: numbers.length,
+        itemListElement: numbers.map((num, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: `${lang === 'en' ? 'Times Table' : lang === 'tr' ? 'Çarpım Tablosu' : lang === 'es' ? 'Tabla de Multiplicar' : lang === 'de' ? 'Einmaleins' : lang === 'cs' ? 'Násobilka' : lang === 'uk' ? 'Таблиця множення' : lang === 'fi' ? 'Kertotaulu' : lang === 'fr' ? 'Table de Multiplication' : lang === 'sv' ? 'Multiplikationstabell' : lang === 'pt' ? 'Tabuada' : lang === 'pl' ? 'Tabliczka Mnożenia' : 'Tabel Perkalian'} ${num}`,
+          url: `${baseUrl}/${lang}/${topic}/${num}`,
+        })),
+      },
+    }
+  }
+  
+  if (slugType === 'guide') {
+    // Guide pages: Article + BreadcrumbList
+    return {
+      breadcrumb: breadcrumbSchema,
+      article: {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: metadata.title,
+        description: metadata.description,
+        url: fullUrl,
+        inLanguage: lang,
+        author: {
+          '@type': 'Organization',
+          name: 'Mathematives',
+          url: 'https://mathematives.com',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Mathematives',
+          url: 'https://mathematives.com',
+        },
+      },
+    }
+  }
+  
+  return { breadcrumb: breadcrumbSchema }
 }
 
 export default async function SlugPage({ params }: PageProps) {
