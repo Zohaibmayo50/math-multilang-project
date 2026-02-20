@@ -7,11 +7,20 @@ User-agent: *
 # Allow all content pages
 Allow: /
 
-# Block Next.js system files
+# Block Next.js system files and internals
 Disallow: /_next/
-
-# Block API routes
 Disallow: /api/
+
+# Block URLs with unresolved template placeholders (e.g. /{lang}/ or /{search_term_string})
+Disallow: /*{*
+
+# Block common bot noise / scanner paths
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+Disallow: /.env
+Disallow: /phpmyadmin/
 
 # Sitemap location
 Sitemap: https://mathematives.com/sitemap.xml

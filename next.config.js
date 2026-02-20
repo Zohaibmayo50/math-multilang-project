@@ -160,11 +160,19 @@ const nextConfig = {
       { source: '/wp-content/uploads/2025/01/11li-Carpim-Tablosu-512x1024-1.pdf', destination: '/tr/carpim-tablosu/11', permanent: true },
       { source: '/wp-content/uploads/2025/01/37-tablosu-1.pdf', destination: '/tr/carpim-tablosu/37', permanent: true },
       
+      // Redirect old /sayi/N URLs to correct Turkish number pages
+      { source: '/sayi/:num(\\d+)', destination: '/tr/carpim-tablosu/:num', permanent: true },
+      // Redirect any remaining /sayi/* (encoded or unknown) to homepage
+      { source: '/sayi/:slug*', destination: '/', permanent: true },
+
+      // Redirect missing static assets that bots / browsers always request
+      { source: '/favicon.ico', destination: '/favicon.svg', permanent: false },
+      { source: '/logo.png',    destination: '/og-image.jpg', permanent: false },
+
       // Redirect WordPress and malformed URLs to homepage
       { source: '/wp-content/:path*', destination: '/', permanent: true },
       { source: '/wp-includes/:path*', destination: '/', permanent: true },
       { source: '/wp-admin/:path*', destination: '/', permanent: true },
-      { source: '/sayi/:slug(.*%7B.*)', destination: '/', permanent: true },
     ];
   },
   async headers() {
