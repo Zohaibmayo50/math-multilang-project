@@ -31,7 +31,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    // lang attribute is intentionally omitted here: this root layout serves
+    // all 12 locales. Correct per-locale language is signalled via Content-Language
+    // HTTP headers (set in next.config.js) and hreflang / og:locale metadata.
+    <html>
       <body className="antialiased bg-gray-50">
         {children}
       </body>

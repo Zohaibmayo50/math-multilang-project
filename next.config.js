@@ -209,6 +209,25 @@ const nextConfig = {
       },
 
       // -----------------------------------------------------------------------
+      // 3a. Content-Language per locale — tells crawlers the human language of
+      //     each page at the HTTP response level. Supplements hreflang & og:locale.
+      //     Root layout cannot set <html lang> per-locale, so this header is the
+      //     reliable server-side language signal for Google and other crawlers.
+      // -----------------------------------------------------------------------
+      { source: '/tr(.*)', headers: [{ key: 'Content-Language', value: 'tr' }] },
+      { source: '/es(.*)', headers: [{ key: 'Content-Language', value: 'es' }] },
+      { source: '/de(.*)', headers: [{ key: 'Content-Language', value: 'de' }] },
+      { source: '/cs(.*)', headers: [{ key: 'Content-Language', value: 'cs' }] },
+      { source: '/uk(.*)', headers: [{ key: 'Content-Language', value: 'uk' }] },
+      { source: '/fi(.*)', headers: [{ key: 'Content-Language', value: 'fi' }] },
+      { source: '/fr(.*)', headers: [{ key: 'Content-Language', value: 'fr' }] },
+      { source: '/sv(.*)', headers: [{ key: 'Content-Language', value: 'sv' }] },
+      { source: '/pt(.*)', headers: [{ key: 'Content-Language', value: 'pt-BR' }] },
+      { source: '/en(.*)', headers: [{ key: 'Content-Language', value: 'en' }] },
+      { source: '/pl(.*)', headers: [{ key: 'Content-Language', value: 'pl' }] },
+      { source: '/id(.*)', headers: [{ key: 'Content-Language', value: 'id' }] },
+
+      // -----------------------------------------------------------------------
       // 3. Next.js bundled JS/CSS chunks — hashed filenames, safe to cache 1yr
       // -----------------------------------------------------------------------
       {
