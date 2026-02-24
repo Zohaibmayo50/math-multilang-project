@@ -177,26 +177,51 @@ const nextConfig = {
   },
   async headers() {
     return [
+      // -----------------------------------------------------------------------
+      // 1. Security headers — applied to every response
+      // -----------------------------------------------------------------------
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options',         value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy',         value: 'strict-origin-when-cross-origin' },
           {
             key: 'Content-Security-Policy',
             value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'self';",
           },
         ],
+      },
+
+      // -----------------------------------------------------------------------
+      // 2. HTML pages — must revalidate, never served stale by CDN or browser.
+      //    Targets the homepage and all 12 locale paths explicitly.
+      //    This avoids touching /_next/ or public asset paths entirely.
+      // -----------------------------------------------------------------------
+      {
+        source: '/',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
+      },
+      {
+        // Matches /tr, /en, /es … and any sub-path (topic, slug, guide pages)
+        source: '/(tr|es|de|cs|uk|fi|fr|sv|pt|en|pl|id)(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }],
+      },
+
+      // -----------------------------------------------------------------------
+      // 3. Next.js bundled JS/CSS chunks — hashed filenames, safe to cache 1yr
+      // -----------------------------------------------------------------------
+      {
+        source: '/_next/static/(.*)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+
+      // -----------------------------------------------------------------------
+      // 4. Public static assets: images, icons, fonts served from /public
+      // -----------------------------------------------------------------------
+      {
+        source: '/(.*).(ico|svg|png|jpg|jpeg|gif|webp|woff|woff2|ttf|eot|otf)',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
     ];
   },
