@@ -110,6 +110,11 @@ const nextConfig = {
       { source: '/learn-multiplication/for-parents', destination: '/tr/carpim-tablosu/veliler-icin', permanent: true },
       { source: '/learn-multiplication/for-teachers', destination: '/tr/carpim-tablosu/ogretmenler-icin', permanent: true },
       
+      // Redirect bare range slugs at root (e.g. /1-10, /11-20) — no locale/topic prefix.
+      // These appear in Google Search Console as crawled 404s from old indexed links.
+      // Sending to the canonical English range page via a single regex pattern.
+      { source: '/:range(\\d+-\\d+)', destination: '/en/multiplication-tables/:range', permanent: true },
+
       // Redirect incorrect "to" format URLs to correct "-" format
       { source: '/1-to-10/:path*', destination: '/tr/carpim-tablosu/1-10', permanent: true },
       { source: '/11-to-20/:path*', destination: '/tr/carpim-tablosu/11-20', permanent: true },
