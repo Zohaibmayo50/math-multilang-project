@@ -112,7 +112,10 @@ export default function LanguageSelector() {
     '@type': 'EducationalOrganization',
     name: 'Mathematives',
     url: 'https://mathematives.com',
-    logo: 'https://mathematives.com/logo.png',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://mathematives.com/og-image.jpg',
+    },
     description: 'Free educational platform providing multiplication tables learning resources in 12 languages',
     sameAs: [],
     areaServed: 'Worldwide',
