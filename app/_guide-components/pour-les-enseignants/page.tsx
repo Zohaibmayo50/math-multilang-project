@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/fr/Header'
 import Footer from '@/app/components/fr/Footer'
 
-export const metadata = {
-  title: 'Guide Enseignants : Enseigner les Tables de Multiplication',
-  description: 'Ressources pédagogiques pour enseigner les tables de multiplication en classe. Stratégies, activités, méthodes d\'évaluation et différenciation pédagogique.',
-  keywords: 'enseigner multiplication, pédagogie mathématiques, activités classe, tables multiplication enseignant',
-  alternates: {
-    canonical: '/pour-les-enseignants',
-  },
-}
 
 export default function ForTeachers() {
   return (

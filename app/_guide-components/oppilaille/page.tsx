@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/fi/Header'
 import Footer from '@/app/components/fi/Footer'
 
-export const metadata = {
-  title: 'Kertotaulut Oppilaille | Oppiminen Vaihe Vaiheelta',
-  description: 'Vaiheittainen opas kertotaulujen helpompaan oppimiseen. Visuaaliset materiaalit, harjoitukset ja hauskoja pelejä omassa tahdissa oppimiseen.',
-  keywords: 'kertotaulujen oppiminen, matematiikka oppilaille, kertotauluopas, kertolaskut vaihe vaiheelta',
-  alternates: {
-    canonical: '/oppilaille',
-  },
-}
 
 export default function ForStudents() {
   return (

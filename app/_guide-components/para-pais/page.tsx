@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/pt/Header'
 import Footer from '@/app/components/pt/Footer'
 
-export const metadata = {
-  title: 'Guia de Tabuada para Pais | Apoie o Aprendizado em Casa',
-  description: 'Como ajudar seu filho a aprender tabuada em casa. Dicas práticas, jogos educativos e estratégias de motivação.',
-  keywords: 'ajudar crianças com tabuada, matemática em casa, educação para pais, atividades educativas',
-  alternates: {
-    canonical: '/para-padres',
-  },
-}
 
 export default function ParaPais() {
   return (

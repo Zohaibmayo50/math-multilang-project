@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/cs/Header'
 import Footer from '@/app/components/cs/Footer'
 
-export const metadata = {
-  title: 'Průvodce Násobilkou Pro Studenty | Učit se Krok za Krokem',
-  description: 'Průvodce krok za krokem pro snadné učení násobilky. Vizuální materiály, praktické aktivity a zábavné hry pro učení vlastním tempem.',
-  keywords: 'učit se násobilku, matematika pro studenty, průvodce násobilkou, násobení krok za krokem',
-  alternates: {
-    canonical: '/pro-studenty',
-  },
-}
 
 export default function ForStudents() {
   return (

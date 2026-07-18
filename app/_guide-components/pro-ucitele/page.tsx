@@ -1,27 +1,6 @@
-﻿import type { Metadata } from 'next';
-import Header from '@/app/components/cs/Header';
+﻿import Header from '@/app/components/cs/Header';
 import Footer from '@/app/components/cs/Footer';
 import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Průvodce Násobilkou Pro Učitele | Strategie Výuky',
-  description: 'Komplexní zdroje pro učitele pro efektivní výuku násobilky. Obsahuje pedagogické strategie, aktivity ve třídě, diferencované výukové metody a metody hodnocení.',
-  keywords: 'výuka násobilky, pedagogické strategie, matematické aktivity, diferencovaná výuka, zdroje pro učitele',
-  alternates: {
-    canonical: '/pro-ucitele',
-    languages: {
-      'cs': '/pro-ucitele',
-    },
-  },
-  openGraph: {
-    title: 'Průvodce Násobilkou Pro Učitele',
-    description: 'Komplexní zdroje pro učitele pro efektivní výuku násobilky.',
-    url: 'https://mathematives.com/pro-ucitele',
-    siteName: 'Násobilka',
-    locale: 'cs_CZ',
-    type: 'website',
-  },
-};
 
 export default function ProUcitelePage() {
   return (

@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/en/Header'
 import Footer from '@/app/components/en/Footer'
 
-export const metadata = {
-  title: 'Times Tables Guide for Parents | Support Learning at Home',
-  description: 'How to help your child learn times tables at home. Practical tips, educational games, and motivation strategies.',
-  keywords: 'help children with times tables, math at home, education for parents, educational activities',
-  alternates: {
-    canonical: '/for-parents',
-  },
-}
 
 export default function ForParents() {
   return (

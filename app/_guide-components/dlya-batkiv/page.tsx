@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/uk/Header'
 import Footer from '@/app/components/uk/Footer'
 
-export const metadata = {
-  title: 'Посібник з Таблиці Множення Для Батьків | Підтримка Навчання Вдома',
-  description: 'Як допомогти своїй дитині вивчити таблицю множення вдома. Практичні поради, освітні ігри та мотиваційні стратегії.',
-  keywords: 'допомога дітям з таблицею множення, математика вдома, освіта батьків, навчальні активності',
-  alternates: {
-    canonical: '/dlya-batkiv',
-  },
-}
 
 export default function ForParents() {
   return (

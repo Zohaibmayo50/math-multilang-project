@@ -2,14 +2,6 @@ import Link from 'next/link'
 import HeaderPl from '@/app/components/pl/Header'
 import FooterPl from '@/app/components/pl/Footer'
 
-export const metadata = {
-  title: 'Dla Uczniów: Przewodnik po Tabliczkach Mnożenia | Nauka Krok po Kroku',
-  description: 'Przewodnik krok po kroku do nauki tabliczki mnożenia. Ucz się we własnym tempie z materiałami wizualnymi, praktycznymi ćwiczeniami i zabawnymi grami!',
-  keywords: 'nauka tabliczki mnożenia, matematyka dla uczniów, przewodnik po mnożeniu, mnożenie krok po kroku',
-  alternates: {
-    canonical: '/dla-uczniow',
-  },
-}
 
 export default function DlaUczniow() {
   return (

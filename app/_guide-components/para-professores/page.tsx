@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/pt/Header'
 import Footer from '@/app/components/pt/Footer'
 
-export const metadata = {
-  title: 'Para Professores: Guia de Tabuada | Material de Ensino em Sala de Aula',
-  description: 'Recursos profissionais para ensinar tabuada em sala de aula, estratégias pedagógicas, sugestões de atividades e ferramentas de avaliação.',
-  keywords: 'ensinar tabuada, atividades em sala de aula, métodos pedagógicos, ensino de matemática',
-  alternates: {
-    canonical: '/para-professores',
-  },
-}
 
 export default function ParaProfessores() {
   return (

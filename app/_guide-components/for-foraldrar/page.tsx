@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/sv/Header'
 import Footer from '@/app/components/sv/Footer'
 
-export const metadata = {
-  title: 'För Föräldrar: Multiplikationstabell Guide | Hur Du Kan Hjälpa Ditt Barn',
-  description: 'Hur kan du stödja ditt barns inlärning av multiplikationstabellen? Effektiva strategier, motivationstekniker och hemaktiviteter.',
-  keywords: 'multiplikationstabell undervisning, föräldraguide, barnmatematik, hemuppgifter',
-  alternates: {
-    canonical: '/for-foraldrar',
-  },
-}
 
 export default function ForParents() {
   return (

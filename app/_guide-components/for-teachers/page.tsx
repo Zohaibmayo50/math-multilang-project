@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/en/Header'
 import Footer from '@/app/components/en/Footer'
 
-export const metadata = {
-  title: 'For Teachers: Times Tables Guide | Classroom Teaching Materials',
-  description: 'Professional resources for teaching times tables in the classroom, pedagogical strategies, activity suggestions, and assessment tools.',
-  keywords: 'teach times tables, classroom activities, pedagogical methods, math teaching',
-  alternates: {
-    canonical: '/for-teachers',
-  },
-}
 
 export default function ForTeachers() {
   return (

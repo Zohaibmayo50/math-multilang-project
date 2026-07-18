@@ -1,18 +1,11 @@
 import Link from 'next/link'
+import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
-
-export const metadata = {
-  title: 'Öğrenciler İçin Çarpım Tablosu Rehberi | Adım Adım Öğrenme',
-  description: 'Çarpım tablosunu kolayca öğrenmek için adım adım rehber. Görsel materyaller, pratik aktiviteler ve eğlenceli oyunlarla kendi hızında öğren!',
-  keywords: 'çarpım tablosu öğrenme, matematik öğrenme, öğrenci rehberi, adım adım çarpım',
-  alternates: {
-    canonical: '/ogrenciler-icin',
-  },
-}
 
 export default function ForStudents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

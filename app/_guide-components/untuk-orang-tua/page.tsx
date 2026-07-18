@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/id/Header'
 import Footer from '@/app/components/id/Footer'
 
-export const metadata = {
-  title: 'Panduan Tabel Perkalian untuk Orang Tua | Mendukung Pembelajaran di Rumah',
-  description: 'Cara membantu anak Anda belajar tabel perkalian di rumah. Tips praktis, permainan edukatif, dan strategi motivasi.',
-  keywords: 'membantu anak dengan tabel perkalian, matematika di rumah, pendidikan untuk orang tua, aktivitas edukatif',
-  alternates: {
-    canonical: '/untuk-orang-tua',
-  },
-}
 
 export default function UntukOrangTua() {
   return (

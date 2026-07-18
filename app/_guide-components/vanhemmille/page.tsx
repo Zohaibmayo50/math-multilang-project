@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/fi/Header'
 import Footer from '@/app/components/fi/Footer'
 
-export const metadata = {
-  title: 'Kertotaulut Vanhemmille | Tue Kotona Oppimista',
-  description: 'Kuinka auttaa lastasi oppimaan kertotaulut kotona. Käytännön vinkkejä, opettavaisia pelejä ja motivointistrategioita.',
-  keywords: 'kertotaulujen opettaminen, matematiikka kotona, vanhempien opas, oppimisaktiviteetit',
-  alternates: {
-    canonical: '/vanhemmille',
-  },
-}
 
 export default function ForParents() {
   return (

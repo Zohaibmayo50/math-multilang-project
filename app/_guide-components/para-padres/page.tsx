@@ -1,18 +1,11 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
-
-export const metadata = {
-  title: 'Guía de Tablas de Multiplicar para Padres | Apoya el Aprendizaje en Casa',
-  description: 'Cómo ayudar a tu hijo a aprender tablas de multiplicar en casa. Consejos prácticos, juegos educativos y estrategias de motivación.',
-  keywords: 'ayudar a niños con tablas de multiplicar, matemáticas en casa, educación para padres, actividades educativas',
-  alternates: {
-    canonical: '/para-padres',
-  },
-}
+import Header from '@/app/components/es/Header'
+import Footer from '@/app/components/es/Footer'
 
 export default function ForParents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

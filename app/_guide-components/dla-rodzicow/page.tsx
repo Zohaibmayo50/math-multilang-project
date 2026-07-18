@@ -2,14 +2,6 @@ import Link from 'next/link'
 import HeaderPl from '@/app/components/pl/Header'
 import FooterPl from '@/app/components/pl/Footer'
 
-export const metadata = {
-  title: 'Przewodnik po Tabliczkach Mnożenia dla Rodziców | Wspieranie Nauki w Domu',
-  description: 'Jak pomóc dziecku w nauce tabliczki mnożenia w domu. Praktyczne wskazówki, gry edukacyjne i strategie motywacyjne.',
-  keywords: 'pomoc dzieciom z tabliczką mnożenia, matematyka w domu, edukacja dla rodziców, zajęcia edukacyjne',
-  alternates: {
-    canonical: '/dla-rodzicow',
-  },
-}
 
 export default function DlaRodzicow() {
   return (

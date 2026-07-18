@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/sv/Header'
 import Footer from '@/app/components/sv/Footer'
 
-export const metadata = {
-  title: 'För Lärare: Multiplikationstabell Guide | Klassrumsundervisning Material',
-  description: 'Professionella resurser för undervisning i multiplikationstabeller i klassrummet, pedagogiska strategier, aktivitetsförslag och bedömningsverktyg.',
-  keywords: 'multiplikationstabell undervisning, klassrumsaktiviteter, pedagogiska metoder, matematik undervisning',
-  alternates: {
-    canonical: '/for-larare',
-  },
-}
 
 export default function ForTeachers() {
   return (

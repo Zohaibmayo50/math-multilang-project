@@ -1,28 +1,6 @@
-import type { Metadata } from 'next';
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
+import Header from '@/app/components/es/Header';
+import Footer from '@/app/components/es/Footer';
 import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Guía de Tablas de Multiplicar para Profesores | Estrategias de Enseñanza',
-  description: 'Recursos completos para profesores sobre cómo enseñar tablas de multiplicar de manera efectiva. Incluye estrategias pedagógicas, actividades de aula, instrucción diferenciada y métodos de evaluación.',
-  keywords: 'enseñar tablas de multiplicar, estrategias pedagógicas, actividades de matemáticas, instrucción diferenciada, recursos para profesores',
-  alternates: {
-    canonical: 'https://tablas-de-multiplicar.com/para-profesores',
-    languages: {
-      'es-MX': 'https://tablas-de-multiplicar.com/para-profesores',
-      'es': 'https://tablas-de-multiplicar.com/para-profesores',
-    },
-  },
-  openGraph: {
-    title: 'Guía de Tablas de Multiplicar para Profesores',
-    description: 'Recursos completos para profesores sobre cómo enseñar tablas de multiplicar de manera efectiva.',
-    url: 'https://tablas-de-multiplicar.com/para-profesores',
-    siteName: 'Tablas de Multiplicar',
-    locale: 'es_MX',
-    type: 'website',
-  },
-};
 
 export default function ParaProfesoresPage() {
   return (

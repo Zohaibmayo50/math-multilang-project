@@ -2,14 +2,6 @@ import Link from 'next/link'
 import HeaderPl from '@/app/components/pl/Header'
 import FooterPl from '@/app/components/pl/Footer'
 
-export const metadata = {
-  title: 'Dla Nauczycieli: Przewodnik po Tabliczkach Mnożenia | Materiały Pedagogiczne',
-  description: 'Profesjonalne zasoby do nauczania tabliczki mnożenia w klasie, strategie pedagogiczne, propozycje zajęć i narzędzia oceniania.',
-  keywords: 'nauczanie tabliczki mnożenia, zajęcia w klasie, metody pedagogiczne, nauczanie matematyki',
-  alternates: {
-    canonical: '/dla-nauczycieli',
-  },
-}
 
 export default function DlaNauczycieli() {
   return (

@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/id/Header'
 import Footer from '@/app/components/id/Footer'
 
-export const metadata = {
-  title: 'Untuk Guru: Panduan Tabel Perkalian | Materi Pengajaran Kelas',
-  description: 'Sumber daya profesional untuk mengajar tabel perkalian di kelas, strategi pedagogis, saran aktivitas, dan alat penilaian.',
-  keywords: 'mengajar tabel perkalian, aktivitas kelas, metode pedagogis, pengajaran matematika',
-  alternates: {
-    canonical: '/untuk-guru',
-  },
-}
 
 export default function UntukGuru() {
   return (

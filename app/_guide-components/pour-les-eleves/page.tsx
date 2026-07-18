@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/fr/Header'
 import Footer from '@/app/components/fr/Footer'
 
-export const metadata = {
-  title: 'Guide des Tables de Multiplication pour Élèves | Apprendre Étape par Étape',
-  description: 'Guide étape par étape pour apprendre les tables de multiplication facilement. Matériaux visuels, activités pratiques et jeux amusants pour apprendre à votre rythme.',
-  keywords: 'apprendre les tables de multiplication, mathématiques pour élèves, guide des tables, multiplication étape par étape',
-  alternates: {
-    canonical: '/pour-les-eleves',
-  },
-}
 
 export default function ForStudents() {
   return (

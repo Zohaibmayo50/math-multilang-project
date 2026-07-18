@@ -2,16 +2,8 @@ import Link from 'next/link'
 import Header from '@/app/components/pt/Header'
 import Footer from '@/app/components/pt/Footer'
 
-export const metadata = {
-  title: 'Para Estudantes: Guia de Tabuada | Aprendizado Passo a Passo',
-  description: 'Guia passo a passo para aprender tabuada facilmente. Aprenda no seu próprio ritmo com materiais visuais, atividades práticas e jogos divertidos!',
-  keywords: 'aprender tabuada, matemática para estudantes, guia de tabuada, multiplicação passo a passo',
-  alternates: {
-    canonical: '/para-estudantes',
-  },
-}
 
-export default function ForStudantes() {
+export default function ForStudents() {
   return (
     <>
       <Header />

@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/fr/Header'
 import Footer from '@/app/components/fr/Footer'
 
-export const metadata = {
-  title: 'Guide Parents : Accompagner l\'Apprentissage des Tables de Multiplication',
-  description: 'Guide pratique pour les parents : comment aider votre enfant à apprendre les tables de multiplication à la maison. Activités familiales, conseils et soutien.',
-  keywords: 'parents tables de multiplication, aider enfant multiplication, activités mathématiques maison, accompagner apprentissage',
-  alternates: {
-    canonical: '/pour-les-parents',
-  },
-}
 
 export default function ForParents() {
   return (

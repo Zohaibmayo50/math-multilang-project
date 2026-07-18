@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/cs/Header'
 import Footer from '@/app/components/cs/Footer'
 
-export const metadata = {
-  title: 'Průvodce Násobilkou Pro Rodiče | Podpora Učení Doma',
-  description: 'Jak pomoci svému dítěti naučit se násobilku doma. Praktické tipy, vzdělávací hry a motivační strategie.',
-  keywords: 'pomoc dětem s násobilkou, matematika doma, vzdělávání rodičů, učební aktivity',
-  alternates: {
-    canonical: '/pro-rodice',
-  },
-}
 
 export default function ForParents() {
   return (

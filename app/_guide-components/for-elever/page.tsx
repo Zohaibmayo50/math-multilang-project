@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/sv/Header'
 import Footer from '@/app/components/sv/Footer'
 
-export const metadata = {
-  title: 'För Elever: Multiplikationstabell Guide | Steg för Steg Lärande',
-  description: 'Steg för steg guide för att enkelt lära sig multiplikationstabellen. Lär dig i din egen takt med visuellt material, praktiska aktiviteter och roliga spel!',
-  keywords: 'multiplikationstabell lärande, matematik lärande, elev guide, steg för steg multiplikation',
-  alternates: {
-    canonical: '/for-elever',
-  },
-}
 
 export default function ForStudents() {
   return (

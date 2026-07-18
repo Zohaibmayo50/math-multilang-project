@@ -1,18 +1,11 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
-
-export const metadata = {
-  title: 'Einmaleins-Leitfaden für Schüler | Schritt für Schritt Lernen',
-  description: 'Schritt-für-Schritt-Anleitung zum einfachen Lernen des Einmaleins. Visuelle Materialien, praktische Aktivitäten und lustige Spiele zum Lernen in deinem eigenen Tempo.',
-  keywords: 'Einmaleins lernen, Mathematik für Schüler, Einmaleins-Leitfaden, Multiplikation Schritt für Schritt',
-  alternates: {
-    canonical: '/fuer-schueler',
-  },
-}
+import Header from '@/app/components/de/Header'
+import Footer from '@/app/components/de/Footer'
 
 export default function ForStudents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

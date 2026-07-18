@@ -1,27 +1,6 @@
-﻿import type { Metadata } from 'next';
-import Header from '@/app/components/uk/Header';
+﻿import Header from '@/app/components/uk/Header';
 import Footer from '@/app/components/uk/Footer';
 import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Посібник з Таблиці Множення Для Вчителів | Стратегії Навчання',
-  description: 'Комплексні ресурси для вчителів для ефективного викладання таблиці множення. Включає педагогічні стратегії, активності в класі, диференційовані методи навчання та методи оцінювання.',
-  keywords: 'викладання таблиці множення, педагогічні стратегії, математичні активності, диференційоване навчання, ресурси для вчителів',
-  alternates: {
-    canonical: '/dlya-vchyteliv',
-    languages: {
-      'uk': '/dlya-vchyteliv',
-    },
-  },
-  openGraph: {
-    title: 'Посібник з Таблиці Множення Для Вчителів',
-    description: 'Комплексні ресурси для вчителів для ефективного викладання таблиці множення.',
-    url: 'https://mathematives.com/dlya-vchyteliv',
-    siteName: 'Таблиця Множення',
-    locale: 'uk_UA',
-    type: 'website',
-  },
-};
 
 export default function DlyaVchytelivPage() {
   return (

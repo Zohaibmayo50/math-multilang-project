@@ -1,18 +1,11 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
-
-export const metadata = {
-  title: 'Guía de Tablas de Multiplicar para Estudiantes | Aprende Paso a Paso',
-  description: 'Guía paso a paso para aprender tablas de multiplicar fácilmente. Materiales visuales, actividades prácticas y juegos divertidos para aprender a tu ritmo.',
-  keywords: 'aprender tablas de multiplicar, matemáticas para estudiantes, guía de tablas, multiplicación paso a paso',
-  alternates: {
-    canonical: '/para-estudiantes',
-  },
-}
+import Header from '@/app/components/es/Header'
+import Footer from '@/app/components/es/Footer'
 
 export default function ForStudents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

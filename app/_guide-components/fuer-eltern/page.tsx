@@ -1,18 +1,11 @@
 import Link from 'next/link'
-import Footer from '@/app/components/Footer'
-
-export const metadata = {
-  title: 'Einmaleins-Leitfaden für Eltern | Unterstützen Sie das Lernen zu Hause',
-  description: 'Wie Sie Ihrem Kind beim Lernen des Einmaleins zu Hause helfen können. Praktische Tipps, Lernspiele und Motivationsstrategien.',
-  keywords: 'Kindern beim Einmaleins helfen, Mathe zu Hause, Elternbildung, Lernaktivitäten',
-  alternates: {
-    canonical: '/fuer-eltern',
-  },
-}
+import Header from '@/app/components/de/Header'
+import Footer from '@/app/components/de/Footer'
 
 export default function ForParents() {
   return (
     <>
+      <Header />
       <main className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white pt-20 pb-12 md:pt-24 md:pb-16">

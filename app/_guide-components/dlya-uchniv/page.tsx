@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/uk/Header'
 import Footer from '@/app/components/uk/Footer'
 
-export const metadata = {
-  title: 'Посібник з Таблиці Множення Для Учнів | Навчання Крок за Кроком',
-  description: 'Покроковий посібник для легкого вивчення таблиці множення. Візуальні матеріали, практичні вправи та цікаві ігри для навчання у власному темпі.',
-  keywords: 'вивчення таблиці множення, математика для учнів, посібник з таблиці множення, множення крок за кроком',
-  alternates: {
-    canonical: '/dlya-uchniv',
-  },
-}
 
 export default function ForStudents() {
   return (

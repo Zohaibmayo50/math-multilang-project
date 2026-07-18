@@ -1,27 +1,6 @@
-﻿import type { Metadata } from 'next';
-import Header from '@/app/components/Header';
-import Footer from '@/app/components/Footer';
+﻿import Header from '@/app/components/de/Header';
+import Footer from '@/app/components/de/Footer';
 import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Einmaleins-Leitfaden für Lehrer | Unterrichtsstrategien',
-  description: 'Umfassende Ressourcen für Lehrer zum effektiven Unterrichten des Einmaleins. Enthält pädagogische Strategien, Klassenzimmeraktivitäten, differenzierte Unterrichtsmethoden und Bewertungsmethoden.',
-  keywords: 'Einmaleins unterrichten, pädagogische Strategien, Mathematikaktivitäten, differenzierter Unterricht, Lehrerressourcen',
-  alternates: {
-    canonical: 'https://einmaleins.online/fuer-lehrer',
-    languages: {
-      'de': 'https://einmaleins.online/fuer-lehrer',
-    },
-  },
-  openGraph: {
-    title: 'Einmaleins-Leitfaden für Lehrer',
-    description: 'Umfassende Ressourcen für Lehrer zum effektiven Unterrichten des Einmaleins.',
-    url: 'https://einmaleins.online/fuer-lehrer',
-    siteName: 'Einmaleins',
-    locale: 'de_DE',
-    type: 'website',
-  },
-};
 
 export default function FuerLehrerPage() {
   return (

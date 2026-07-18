@@ -2,14 +2,6 @@ import Link from 'next/link'
 import Header from '@/app/components/id/Header'
 import Footer from '@/app/components/id/Footer'
 
-export const metadata = {
-  title: 'Untuk Siswa: Panduan Tabel Perkalian | Pembelajaran Langkah demi Langkah',
-  description: 'Panduan langkah demi langkah untuk mempelajari tabel perkalian dengan mudah. Belajar sesuai kecepatan Anda sendiri dengan materi visual, aktivitas praktis, dan permainan yang menyenangkan!',
-  keywords: 'belajar tabel perkalian, matematika untuk siswa, panduan perkalian, perkalian langkah demi langkah',
-  alternates: {
-    canonical: '/untuk-siswa',
-  },
-}
 
 export default function UntukSiswa() {
   return (
