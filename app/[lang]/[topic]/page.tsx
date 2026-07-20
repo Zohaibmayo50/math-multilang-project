@@ -120,18 +120,7 @@ import AudienceSectionEn from '@/app/components/en/AudienceSection'
 import AudienceSectionPl from '@/app/components/pl/AudienceSection'
 import AudienceSectionId from '@/app/components/id/AudienceSection'
 
-import Footer from '@/app/components/Footer'
-import FooterEs from '@/app/components/es/Footer'
-import FooterDe from '@/app/components/de/Footer'
-import FooterCs from '@/app/components/cs/Footer'
-import FooterUk from '@/app/components/uk/Footer'
-import FooterFi from '@/app/components/fi/Footer'
-import FooterFr from '@/app/components/fr/Footer'
-import FooterSv from '@/app/components/sv/Footer'
-import FooterPt from '@/app/components/pt/Footer'
-import FooterEn from '@/app/components/en/Footer'
-import FooterPl from '@/app/components/pl/Footer'
-import FooterId from '@/app/components/id/Footer'
+import UniversalFooter from '@/app/components/shared/UniversalFooter'
 
 import { i18n, Locale, topicSlugs, siteConfig, languageNames } from '@/lib/i18n-config'
 import { getAbsoluteUrl, getLocalizedPath, buildAlternatesMetadata } from '@/lib/url-helpers'
@@ -197,11 +186,6 @@ const AudienceSectionByLocale: Record<Locale, ComponentType> = {
   tr: AudienceSection, es: AudienceSectionEs, de: AudienceSectionDe, cs: AudienceSectionCs,
   uk: AudienceSectionUk, fi: AudienceSectionFi, fr: AudienceSectionFr, sv: AudienceSectionSv,
   pt: AudienceSectionPt, en: AudienceSectionEn, pl: AudienceSectionPl, id: AudienceSectionId,
-}
-
-const FooterByLocale: Record<Locale, ComponentType> = {
-  tr: Footer, es: FooterEs, de: FooterDe, cs: FooterCs, uk: FooterUk, fi: FooterFi,
-  fr: FooterFr, sv: FooterSv, pt: FooterPt, en: FooterEn, pl: FooterPl, id: FooterId,
 }
 
 // OpenGraph locale codes aren't part of topicMetadata's fields (title/description/
@@ -379,7 +363,6 @@ export default async function TopicHomePage({ params }: PageProps) {
   const GamesSection = GamesSectionByLocale[locale]
   const PrintableExercises = PrintableExercisesByLocale[locale]
   const AudienceSection = AudienceSectionByLocale[locale]
-  const Footer = FooterByLocale[locale]
 
   return (
     <>
@@ -406,7 +389,7 @@ export default async function TopicHomePage({ params }: PageProps) {
         <WhyItMatters />
         <HowToLearn />
         <AudienceSection />
-        <Footer />
+        <UniversalFooter lang={locale} />
       </main>
     </>
   )

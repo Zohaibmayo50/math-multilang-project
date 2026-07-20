@@ -11,36 +11,9 @@ import type {
   TeachingStrategiesSplit,
 } from '../../../lib/guide-content-teachers'
 import UniversalHeader from './UniversalHeader'
+import UniversalFooter from './UniversalFooter'
 
-// Sibling page sections (not yet unified — each locale still has its own real
-// implementation of Footer). Same import block as UniversalStudentsParentsPage.tsx.
-import FooterTr from '../Footer'
-import FooterEs from '../es/Footer'
-import FooterDe from '../de/Footer'
-import FooterCs from '../cs/Footer'
-import FooterUk from '../uk/Footer'
-import FooterFi from '../fi/Footer'
-import FooterFr from '../fr/Footer'
-import FooterSv from '../sv/Footer'
-import FooterPt from '../pt/Footer'
-import FooterEn from '../en/Footer'
-import FooterPl from '../pl/Footer'
-import FooterId from '../id/Footer'
-
-const FooterByLocale: Record<Locale, React.ComponentType> = {
-  tr: FooterTr,
-  es: FooterEs,
-  de: FooterDe,
-  cs: FooterCs,
-  uk: FooterUk,
-  fi: FooterFi,
-  fr: FooterFr,
-  sv: FooterSv,
-  pt: FooterPt,
-  en: FooterEn,
-  pl: FooterPl,
-  id: FooterId,
-}
+// Footer is unified — see UniversalFooter.tsx.
 
 interface UniversalTeachersPageProps {
   lang: Locale
@@ -77,7 +50,6 @@ const assessmentItemBorder = ['border-blue-500', 'border-green-500', 'border-pur
 const misconceptionAccentColors = ['text-blue-500', 'text-green-500', 'text-purple-500', 'text-orange-500', 'text-pink-500']
 
 export default function UniversalTeachersPage({ lang }: UniversalTeachersPageProps) {
-  const Footer = FooterByLocale[lang]
   const t = teachersContent[lang]
 
   return (
@@ -460,7 +432,7 @@ export default function UniversalTeachersPage({ lang }: UniversalTeachersPagePro
           </section>
         </div>
       </main>
-      <Footer />
+      <UniversalFooter lang={lang} />
     </>
   )
 }

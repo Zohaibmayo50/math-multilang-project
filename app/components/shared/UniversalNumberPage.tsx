@@ -8,6 +8,7 @@ import { numberPageTranslations } from '../../../lib/number-page-translations'
 import { getLocalizedPath } from '../../../lib/url-helpers'
 import type { PatternItem, MistakeItem } from '../../../lib/number-content-types'
 import UniversalHeader from './UniversalHeader'
+import UniversalFooter from './UniversalFooter'
 
 // Number-specific content modules (one per locale, see lib/number-content-*.ts)
 import * as trContent from '../../../lib/number-content-tr'
@@ -24,19 +25,8 @@ import * as plContent from '../../../lib/number-content-pl'
 import * as idContent from '../../../lib/number-content-id'
 
 // Sibling page sections (not yet unified — each locale still has its own real
-// implementation of Footer / PracticePreview / PrintableExercises / NumberGames).
-import FooterTr from '../Footer'
-import FooterEs from '../es/Footer'
-import FooterDe from '../de/Footer'
-import FooterCs from '../cs/Footer'
-import FooterUk from '../uk/Footer'
-import FooterFi from '../fi/Footer'
-import FooterFr from '../fr/Footer'
-import FooterSv from '../sv/Footer'
-import FooterPt from '../pt/Footer'
-import FooterEn from '../en/Footer'
-import FooterPl from '../pl/Footer'
-import FooterId from '../id/Footer'
+// implementation of PracticePreview / PrintableExercises / NumberGames).
+// Footer is unified — see UniversalFooter.tsx.
 
 import PracticePreviewTr from '../PracticePreview'
 import PracticePreviewEs from '../es/PracticePreview'
@@ -105,21 +95,6 @@ const contentByLocale: Record<Locale, NumberContentModule> = {
   en: enContent,
   pl: plContent,
   id: idContent,
-}
-
-const FooterByLocale: Record<Locale, React.ComponentType> = {
-  tr: FooterTr,
-  es: FooterEs,
-  de: FooterDe,
-  cs: FooterCs,
-  uk: FooterUk,
-  fi: FooterFi,
-  fr: FooterFr,
-  sv: FooterSv,
-  pt: FooterPt,
-  en: FooterEn,
-  pl: FooterPl,
-  id: FooterId,
 }
 
 type RangeProps = { rangeStart?: number; rangeEnd?: number }
@@ -200,7 +175,6 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
   const content = contentByLocale[lang]
   const topic = topicSlugs[lang]
 
-  const Footer = FooterByLocale[lang]
   const PracticePreview = PracticePreviewByLocale[lang]
   const PrintableExercises = PrintableExercisesByLocale[lang]
   const NumberGames = NumberGamesByLocale[lang]
@@ -757,7 +731,7 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
           </div>
         </section>
 
-        <Footer />
+        <UniversalFooter lang={lang} />
       </main>
     </>
   )
