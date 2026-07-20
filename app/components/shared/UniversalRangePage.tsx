@@ -5,21 +5,11 @@ import type { Locale } from '../../../lib/i18n-config'
 import { rangePageTranslations } from '../../../lib/range-page-translations'
 import { getLocalizedPath } from '../../../lib/url-helpers'
 import UniversalHeader from './UniversalHeader'
+import UniversalFooter from './UniversalFooter'
 
 // Sibling page sections (not yet unified — each locale still has its own real
-// implementation of Footer / PracticePreview / GamesSection / PrintableExercises).
-import FooterTr from '../Footer'
-import FooterEs from '../es/Footer'
-import FooterDe from '../de/Footer'
-import FooterCs from '../cs/Footer'
-import FooterUk from '../uk/Footer'
-import FooterFi from '../fi/Footer'
-import FooterFr from '../fr/Footer'
-import FooterSv from '../sv/Footer'
-import FooterPt from '../pt/Footer'
-import FooterEn from '../en/Footer'
-import FooterPl from '../pl/Footer'
-import FooterId from '../id/Footer'
+// implementation of PracticePreview / GamesSection / PrintableExercises).
+// Footer is unified — see UniversalFooter.tsx.
 
 import PracticePreviewTr from '../PracticePreview'
 import PracticePreviewEs from '../es/PracticePreview'
@@ -68,21 +58,6 @@ interface UniversalRangePageProps {
   prevRangeUrl?: string
   difficultyLevel: 'beginner' | 'intermediate' | 'advanced'
   difficultyColor: string
-}
-
-const FooterByLocale: Record<Locale, React.ComponentType> = {
-  tr: FooterTr,
-  es: FooterEs,
-  de: FooterDe,
-  cs: FooterCs,
-  uk: FooterUk,
-  fi: FooterFi,
-  fr: FooterFr,
-  sv: FooterSv,
-  pt: FooterPt,
-  en: FooterEn,
-  pl: FooterPl,
-  id: FooterId,
 }
 
 type RangeProps = { rangeStart?: number; rangeEnd?: number }
@@ -164,7 +139,6 @@ export default function UniversalRangePage({
 }: UniversalRangePageProps) {
   const t = rangePageTranslations[lang]
 
-  const Footer = FooterByLocale[lang]
   const PracticePreview = PracticePreviewByLocale[lang]
   const GamesSection = GamesSectionByLocale[lang]
   const PrintableExercises = PrintableExercisesByLocale[lang]
@@ -685,7 +659,7 @@ export default function UniversalRangePage({
           </div>
         </section>
 
-        <Footer />
+        <UniversalFooter lang={lang} />
       </main>
     </>
   )
