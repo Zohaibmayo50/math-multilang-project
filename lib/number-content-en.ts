@@ -56,6 +56,36 @@ const importance: { [key: number]: string } = {
       28: "The 28 times table is built from 4 × 7, so it can be reached by quadrupling the 7 times table or doubling the 14 times table. Mathematically, 28 has a special status: it is a perfect number, meaning its proper divisors (1, 2, 4, 7, and 14) add up exactly to 28 itself — only the second such number after 6.",
       29: "The 29 times table, like other primes in this range, has no factoring shortcut. The most reliable approach is 30×n − n: multiply by 30, then subtract one group of the original number. This 'subtract from a round number' strategy is the same one that makes 19 and 9 manageable, and it's worth recognizing as a general-purpose tool for any number just below a multiple of 10.",
       30: "The 30 times table closes out this range by combining three small prime factors at once: 30 = 2 × 3 × 5. It can be reached by tripling the 10 times table, doubling the 15 times table, or multiplying the 3 and 10 times tables together. Because 30 divides evenly by so many smaller numbers, it shows up constantly in calendars, angles, and measurement — reinforcing multiplication facts a student has likely already built in earlier tables.",
+      31: "The 31 times table is the first prime number times table beyond 30, and since 31 is prime, there's no smaller table to double or triple into it. The most reliable method is to split 31 into 30 + 1: multiply by 30, then add one more group of the original number. This is the same split-and-add approach used for other primes in this range, and it stays reliable no matter how large the times table gets.",
+      32: "The 32 times table is built entirely from powers of 2, since 32 = 2⁵. This means it can be reached by doubling a number five times in a row, making it one of the more mechanical times tables to calculate even though it looks intimidating at first. Because 32 also marks the freezing point of water in Fahrenheit and the number of teeth in a full adult set, it's a number many students already encounter regularly outside of math class.",
+      33: "The 33 times table can be reached by splitting 33 into 30 + 3, or by tripling the 11 times table since 33 = 3 × 11. Both methods are equally valid, so it's worth trying each to see which feels faster. The number 33 also carries meaning outside of math — it's commonly cited as the number of vertebrae in the human spine and holds traditional significance in several cultural and religious contexts.",
+      34: "The 34 times table doubles a table students likely already know, since 34 = 2 × 17. It can also be split as 30 + 4 for a quick add-and-multiply method. Mathematically, 34 is a Fibonacci number — the sum of the two Fibonacci numbers before it, 13 and 21 — connecting the times table to a completely different, famous number sequence.",
+      35: "The 35 times table combines two tables students likely know well, since 35 = 5 × 7. It can be reached by multiplying the 5 times table by 7, multiplying the 7 times table by 5, or splitting it as 30 + 5. Outside of math, 35 is best known through 35mm film, the standard format that shaped photography and cinema for most of the 20th century.",
+      36: "The 36 times table is unusually rich in patterns because 36 is both a perfect square (6×6=36) and a triangular number (1+2+...+8=36). It can be reached by multiplying the 9 times table by 4, the 4 times table by 9, or the 6 times table by itself. Because 36 inches make a yard, it's also a number many students already encounter in everyday measurement.",
+      37: "The 37 times table has no factoring shortcut, since 37 is prime. The most efficient approach is often 40×n − 3×n: multiply by 40, then subtract triple the original number. Mathematically, 37 has an unusual property — it's a factor of every three-digit repdigit number (111, 222, 333, and so on up through 999), because 37 × 3 = 111.",
+      38: "The 38 times table can be reached by splitting 38 into 40 − 2, or by doubling the 19 times table since 38 = 2 × 19. Historically, the number 38 is tied to the 38th parallel, the line of latitude that came to define the boundary between North and South Korea. Recognizing 38 as 'just under 40' makes it one of the more approachable two-digit times tables in this range.",
+      39: "The 39 times table can be built by splitting 39 into 40 − 1, or by tripling the 13 times table since 39 = 3 × 13. Because 39 sits just one below the very approachable 40 times table, the subtraction method is usually the fastest way to calculate it in your head.",
+      40: "The 40 times table builds directly on the 10 and 4 times tables, since 40 = 4 × 10. Every 40 times fact can be found by multiplying by 10 and then by 4 (or vice versa), making it one of the more mechanical two-digit times tables to calculate. The number 40 also carries deep cultural and linguistic history — it appears repeatedly in biblical narratives, defines the standard work week in many countries, and is the root of the word 'quarantine,' which comes from the Italian for 'forty days.'",
+      41: "The 41 times table has no factoring shortcut, since 41 is prime. The most efficient method is 40×n + n: multiply by 40, then add one more group of the original number. Because 41 sits directly next to 43 with only 42 between them, the two form what mathematicians call a twin prime pair — primes that differ by exactly 2.",
+      42: "The 42 times table combines three small prime factors at once, since 42 = 2 × 3 × 7. It can be reached by tripling the 14 times table, doubling the 21 times table, or multiplying the 6 and 7 times tables together. Beyond arithmetic, 42 has become a piece of pop-culture trivia as 'the Answer to the Ultimate Question of Life, the Universe, and Everything' in Douglas Adams's novel The Hitchhiker's Guide to the Galaxy.",
+      43: "The 43 times table has no factoring shortcut, since 43 is prime. The most efficient method is 40×n + 3×n: multiply by 40, then add triple the original number. Like 41, it forms a twin prime pair — 41 and 43 are separated by exactly one even number, 42.",
+      44: "The 44 times table quadruples a table students already know well, since 44 = 4 × 11. Because 44 = 4 × 11, the 11 times table's mirror-digit pattern carries through in a modified form, and the whole table can be found by multiplying the 11 times fact by 4. Barack Obama, the 44th president of the United States, gives the number a memorable modern reference point.",
+      45: "The 45 times table can be reached by splitting 45 into 50 − 5, or by recognizing that 45 = 9 × 5. Mathematically, 45 is a triangular number (1+2+...+9=45), and 45° is exactly half of a right angle, giving the number a strong presence in geometry as well as arithmetic. Vinyl 'singles' spinning at 45 RPM also made the number a familiar cultural reference for much of the 20th century.",
+      46: "The 46 times table can be reached by splitting 46 into 50 − 4, or by doubling the 23 times table since 46 = 2 × 23. The number 46 also has direct significance in biology — it's the total number of chromosomes in a typical human cell, made up of 23 matching pairs.",
+      47: "The 47 times table has no factoring shortcut, since 47 is prime. The most efficient method is 50×n − 3×n: multiply by 50, then subtract triple the original number. The number 47 also has an odd claim to fame in pop culture — it's a running injoke among Star Trek fans and writers, who reportedly wrote it into the background of many episodes.",
+      48: "The 48 times table benefits from several shortcuts because 48 = 2⁴ × 3, making it a highly composite number for its size. It can be reached by tripling the 16 times table, quadrupling the 12 times table, or splitting it as 50 − 2. Because 48 hours make exactly two days and 48 states make up the contiguous United States, it's a number many students already recognize from everyday contexts.",
+      49: "The 49 times table centers on a single unmissable fact: 49 = 7². It can be reached by squaring the 7 times table, or by splitting 49 as 50 − 1, subtracting the original number once from the ×50 result. Because 7×7=49 is already one of the most heavily memorized facts in the entire multiplication table, students often find this a natural extension rather than a brand-new challenge.",
+      50: "The 50 times table is closely tied to the number 100, since 50 is exactly half of it. Every 50 times fact can be found by multiplying by 100 and dividing by 2, which is often faster than direct multiplication. Because there are 50 U.S. states and a 50th anniversary is traditionally called a 'golden' anniversary, 50 is a number with strong cultural associations well beyond arithmetic.",
+      51: "The 51 times table can be reached by splitting 51 into 50 + 1, or by recognizing that 51 = 3 × 17. Because 51 sits just one above the very approachable 50 times table, the addition method is usually the fastest way to calculate it mentally. Outside of math, 51 is best known as the number attached to Area 51, one of the most famous classified U.S. military installations.",
+      52: "The 52 times table can be reached by splitting 52 into 50 + 2, or by multiplying the 13 times table by 4 since 52 = 4 × 13. Because a year has 52 weeks and a standard deck of cards has 52 cards, this is one of the more instantly recognizable two-digit numbers in everyday life.",
+      53: "The 53 times table has no factoring shortcut, since 53 is prime. The most efficient method is 50×n + 3×n: multiply by 50, then add triple the original number, the same 'split near a round number' strategy used for every prime in this range.",
+      54: "The 54 times table can be reached by splitting 54 into 50 + 4, or by tripling the 18 times table since 54 = 3 × 18 (and equally, 54 = 2 × 27). Beyond arithmetic, 54 is a concrete, countable number for anyone who has picked up a Rubik's Cube — the classic 3×3 puzzle has exactly 54 colored squares.",
+      55: "The 55 times table can be reached by splitting 55 into 50 + 5, or by multiplying the 11 times table by 5 since 55 = 5 × 11. Mathematically, 55 is both a triangular number (1+2+...+10=55) and a Fibonacci number, connecting the times table to two different famous number sequences. For decades, 55 miles per hour was also the maximum speed limit on U.S. highways, a historical anchor many adults still associate with the number.",
+      56: "The 56 times table can be reached by splitting 56 into 50 + 6, or by multiplying the 7 times table by 8 since 56 = 7 × 8. Because 7×8=56 is one of the most commonly confused facts in the entire standard multiplication table, students who already have a memory trick for it (like the rhyme '5, 6, 7, 8 — 56 is 7 times 8') often find that fact easiest to recall in this whole table.",
+      57: "The 57 times table can be reached by splitting 57 into 60 − 3, or by recognizing that 57 = 3 × 19. The number 57 also carries a well-known piece of marketing history — it's permanently associated with Heinz's famous '57 Varieties' slogan, first used by the company in 1896.",
+      58: "The 58 times table can be reached by splitting 58 into 60 − 2, or by doubling the 29 times table since 58 = 2 × 29. Recognizing 58 as 'just under 60' makes it one of the more approachable two-digit times tables in this range.",
+      59: "The 59 times table has no factoring shortcut, since 59 is prime. The most efficient method is 60×n − n: multiply by 60, then subtract the original number once — the same 'one less than a round number' strategy that makes 9, 19, 29, and 39 manageable. Fittingly, 59 itself is one less than the 60 seconds that make up a minute.",
+      60: "The 60 times table closes out this range as one of the richest in shortcuts, because 60 = 2² × 3 × 5 is a highly composite number. It can be reached by tripling the 20 times table, multiplying the 6 and 10 times tables together, or doubling the 30 times table. The number 60 also has deep historical roots — ancient Babylonian mathematicians used a base-60 (sexagesimal) number system, which is why a minute has 60 seconds and an hour has 60 minutes to this day.",
     }
 
 const patterns: { [key: number]: PatternItem[] } = {
@@ -195,6 +225,127 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Double the 15 times table", description: "Since 30 = 2 × 15, every 30 times fact is also exactly double the matching 15 times fact." },
         { title: "Always ends in 0", description: "Because 30 is a multiple of 10, every result in the 30 times table ends in 0." },
       ],
+      31: [
+        { title: "31 = 30 + 1, times n", description: "Since 31×n = 30×n + n, every 31 times fact can be found by multiplying by 30 and adding one more group of the original number: 31×6 = 180 + 6 = 186." },
+        { title: "31 is a Mersenne prime", description: "31 = 2⁵ − 1 (32 minus 1), placing it in the same rare family of primes as 3, 7, and 127." },
+      ],
+      32: [
+        { title: "32 is 2 to the 5th power", description: "32 = 2×2×2×2×2, reachable by doubling a number five times in a row: 1→2→4→8→16→32." },
+        { title: "Double the 16 times table", description: "Since 32 = 2 × 16, every 32 times fact is exactly double the matching 16 times fact." },
+      ],
+      33: [
+        { title: "33 = 30 + 3, times n", description: "Since 33×n = 30×n + 3×n, every 33 times fact can be built by adding the 30 times fact and the 3 times fact together: 33×6 = 180 + 18 = 198." },
+        { title: "Triple the 11 times table", description: "Since 33 = 3 × 11, every 33 times fact is exactly triple the matching 11 times fact, carrying over the 11 times table's mirror-digit pattern for single-digit multipliers: 33×3 = triple(11×3) = triple(33) = 99." },
+      ],
+      34: [
+        { title: "Double the 17 times table", description: "Since 34 = 2 × 17, every 34 times fact is exactly double the matching 17 times fact." },
+        { title: "34 = 30 + 4, times n", description: "Since 34×n = 30×n + 4×n, every 34 times fact can also be built by adding the 30 times fact and the 4 times fact together: 34×6 = 180 + 24 = 204." },
+      ],
+      35: [
+        { title: "35 = 30 + 5, times n", description: "Since 35×n = 30×n + 5×n, every 35 times fact can be built by adding the 30 times fact and the 5 times fact together: 35×6 = 180 + 30 = 210." },
+        { title: "5 × 7 combination", description: "Since 35 = 5 × 7, the 35 times table can also be reached by multiplying the 7 times table by 5, or the 5 times table by 7." },
+        { title: "Always ends in 0 or 5", description: "Because 35 is a multiple of 5, every result in the 35 times table ends in 0 or 5." },
+      ],
+      36: [
+        { title: "36 is a perfect square", description: "36 = 6×6, a landmark fact worth memorizing directly." },
+        { title: "Quadruple the 9 times table", description: "Since 36 = 4 × 9, every 36 times fact is exactly four times the matching 9 times fact: 36×3 = 4×(9×3) = 4×27 = 108." },
+        { title: "36 is a triangular number", description: "36 = 1+2+3+4+5+6+7+8, the sum of the first eight counting numbers." },
+      ],
+      37: [
+        { title: "37 = 40 − 3, times n", description: "Since 37×n = 40×n − 3×n, every 37 times fact can be found by multiplying by 40 and subtracting triple the original number: 37×6 = 240 − 18 = 222." },
+        { title: "Factor of every three-digit repdigit", description: "37 × 3 = 111, and since every three-digit repdigit (111, 222, ..., 999) is a multiple of 111, 37 divides all of them evenly." },
+      ],
+      38: [
+        { title: "38 = 40 − 2, times n", description: "Since 38×n = 40×n − 2×n, every 38 times fact can be found by multiplying by 40 and subtracting double the original number: 38×6 = 240 − 12 = 228." },
+        { title: "Double the 19 times table", description: "Since 38 = 2 × 19, every 38 times fact is exactly double the matching 19 times fact." },
+      ],
+      39: [
+        { title: "39 = 40 − 1, times n", description: "Since 39×n = 40×n − n, every 39 times fact can be found by multiplying by 40 and subtracting the original number once: 39×6 = 240 − 6 = 234." },
+        { title: "Triple the 13 times table", description: "Since 39 = 3 × 13, every 39 times fact is exactly triple the matching 13 times fact." },
+      ],
+      40: [
+        { title: "40 = 4 × 10, times n", description: "Since 40×n = 4×(10×n), every 40 times fact can be found by multiplying by 10 and then doubling twice: 40×6 = 4×(10×6) = 4×60 = 240." },
+        { title: "Always ends in 0", description: "Since 40 is a multiple of 10, every result in the 40 times table ends in 0." },
+      ],
+      41: [
+        { title: "41 = 40 + 1, times n", description: "Since 41×n = 40×n + n, every 41 times fact can be found by multiplying by 40 and adding one more group of the original number: 41×6 = 240 + 6 = 246." },
+      ],
+      42: [
+        { title: "42 = 40 + 2, times n", description: "Since 42×n = 40×n + 2×n, every 42 times fact can be built by adding the 40 times fact and the 2 times fact together: 42×6 = 240 + 12 = 252." },
+        { title: "Triple the 14 times table", description: "Since 42 = 3 × 14, every 42 times fact is exactly triple the matching 14 times fact." },
+        { title: "Double the 21 times table", description: "Since 42 = 2 × 21, every 42 times fact is also exactly double the matching 21 times fact." },
+      ],
+      43: [
+        { title: "43 = 40 + 3, times n", description: "Since 43×n = 40×n + 3×n, every 43 times fact can be found by multiplying by 40 and adding triple the original number: 43×6 = 240 + 18 = 258." },
+      ],
+      44: [
+        { title: "Quadruple the 11 times table", description: "Since 44 = 4 × 11, every 44 times fact is exactly four times the matching 11 times fact: 44×3 = 4×(11×3) = 4×33 = 132." },
+        { title: "Double the 22 times table", description: "Since 44 = 2 × 22, every 44 times fact is also exactly double the matching 22 times fact." },
+      ],
+      45: [
+        { title: "45 = 50 − 5, times n", description: "Since 45×n = 50×n − 5×n, every 45 times fact can be found by multiplying by 50 and subtracting five times the original number: 45×6 = 300 − 30 = 270." },
+        { title: "9 × 5 combination", description: "Since 45 = 9 × 5, the 45 times table can also be reached by multiplying the 9 times table by 5, or the 5 times table by 9." },
+        { title: "45 is a triangular number", description: "45 = 1+2+3+...+9, the sum of the first nine counting numbers." },
+      ],
+      46: [
+        { title: "46 = 50 − 4, times n", description: "Since 46×n = 50×n − 4×n, every 46 times fact can be found by multiplying by 50 and subtracting four times the original number: 46×6 = 300 − 24 = 276." },
+        { title: "Double the 23 times table", description: "Since 46 = 2 × 23, every 46 times fact is exactly double the matching 23 times fact." },
+      ],
+      47: [
+        { title: "47 = 50 − 3, times n", description: "Since 47×n = 50×n − 3×n, every 47 times fact can be found by multiplying by 50 and subtracting triple the original number: 47×6 = 300 − 18 = 282." },
+      ],
+      48: [
+        { title: "48 = 50 − 2, times n", description: "Since 48×n = 50×n − 2×n, every 48 times fact can be found by multiplying by 50 and subtracting double the original number: 48×6 = 300 − 12 = 288." },
+        { title: "Quadruple the 12 times table", description: "Since 48 = 4 × 12, every 48 times fact is also exactly four times the matching 12 times fact." },
+      ],
+      49: [
+        { title: "49 = 50 − 1, times n", description: "Since 49×n = 50×n − n, every 49 times fact can be found by multiplying by 50 and subtracting the original number once: 49×6 = 300 − 6 = 294." },
+        { title: "49 is a perfect square", description: "49 = 7×7, one of the most heavily memorized facts in the entire standard multiplication table." },
+      ],
+      50: [
+        { title: "50 = 100 ÷ 2, times n", description: "Since 50×n = (100×n) ÷ 2, every 50 times fact can be found by multiplying by 100 and dividing by 2: 50×7 = 700 ÷ 2 = 350." },
+        { title: "Always ends in 0", description: "Since 50 is a multiple of 10, every result in the 50 times table ends in 0." },
+      ],
+      51: [
+        { title: "51 = 50 + 1, times n", description: "Since 51×n = 50×n + n, every 51 times fact can be found by multiplying by 50 and adding one more group of the original number: 51×6 = 300 + 6 = 306." },
+        { title: "3 × 17 combination", description: "Since 51 = 3 × 17, the 51 times table can also be reached by tripling the 17 times table." },
+      ],
+      52: [
+        { title: "52 = 50 + 2, times n", description: "Since 52×n = 50×n + 2×n, every 52 times fact can be built by adding the 50 times fact and the 2 times fact together: 52×6 = 300 + 12 = 312." },
+        { title: "Quadruple the 13 times table", description: "Since 52 = 4 × 13, every 52 times fact is also exactly four times the matching 13 times fact." },
+      ],
+      53: [
+        { title: "53 = 50 + 3, times n", description: "Since 53×n = 50×n + 3×n, every 53 times fact can be found by multiplying by 50 and adding triple the original number: 53×6 = 300 + 18 = 318." },
+      ],
+      54: [
+        { title: "54 = 50 + 4, times n", description: "Since 54×n = 50×n + 4×n, every 54 times fact can be built by adding the 50 times fact and the 4 times fact together: 54×6 = 300 + 24 = 324." },
+        { title: "Triple the 18 times table", description: "Since 54 = 3 × 18, every 54 times fact is also exactly triple the matching 18 times fact." },
+      ],
+      55: [
+        { title: "55 = 50 + 5, times n", description: "Since 55×n = 50×n + 5×n, every 55 times fact can be built by adding the 50 times fact and the 5 times fact together: 55×6 = 300 + 30 = 330." },
+        { title: "5 × 11 combination", description: "Since 55 = 5 × 11, the 55 times table can also be reached by multiplying the 11 times table by 5." },
+        { title: "Always ends in 0 or 5", description: "Because 55 is a multiple of 5, every result in the 55 times table ends in 0 or 5." },
+      ],
+      56: [
+        { title: "56 = 50 + 6, times n", description: "Since 56×n = 50×n + 6×n, every 56 times fact can be built by adding the 50 times fact and the 6 times fact together: 56×6 = 300 + 36 = 336." },
+        { title: "7 × 8 combination", description: "Since 56 = 7 × 8, the 56 times table can also be reached by multiplying the 8 times table by 7, or the 7 times table by 8." },
+      ],
+      57: [
+        { title: "57 = 60 − 3, times n", description: "Since 57×n = 60×n − 3×n, every 57 times fact can be found by multiplying by 60 and subtracting triple the original number: 57×6 = 360 − 18 = 342." },
+        { title: "3 × 19 combination", description: "Since 57 = 3 × 19, the 57 times table can also be reached by tripling the 19 times table." },
+      ],
+      58: [
+        { title: "58 = 60 − 2, times n", description: "Since 58×n = 60×n − 2×n, every 58 times fact can be found by multiplying by 60 and subtracting double the original number: 58×6 = 360 − 12 = 348." },
+        { title: "Double the 29 times table", description: "Since 58 = 2 × 29, every 58 times fact is exactly double the matching 29 times fact." },
+      ],
+      59: [
+        { title: "59 = 60 − 1, times n", description: "Since 59×n = 60×n − n, every 59 times fact can be found by multiplying by 60 and subtracting the original number once: 59×6 = 360 − 6 = 354." },
+      ],
+      60: [
+        { title: "60 = 6 × 10, times n", description: "Since 60×n = 6×(10×n), every 60 times fact can be found by multiplying by 10 and then by 6: 60×7 = 6×(10×7) = 6×70 = 420." },
+        { title: "Always ends in 0", description: "Since 60 is a multiple of 10, every result in the 60 times table ends in 0." },
+        { title: "Triple the 20 times table", description: "Since 60 = 3 × 20, every 60 times fact is also exactly triple the matching 20 times fact." },
+      ],
     }
 
 const mistakes: { [key: number]: MistakeItem[] } = {
@@ -314,6 +465,126 @@ const mistakes: { [key: number]: MistakeItem[] } = {
       30: [
         { mistake: "Mixing up the tripling and doubling shortcuts mid-calculation", solution: "30×n can be found as triple(10×n) OR double(15×n) — both are correct, but don't mix the two methods together in the same calculation." },
         { mistake: "Forgetting the result always ends in 0", solution: "Every multiple of 30 ends in 0 — if your answer doesn't, you've made an arithmetic error somewhere in the calculation." },
+      ],
+      31: [
+        { mistake: "Forgetting to add the extra group in the 30+1 trick", solution: "31×n is 30×n PLUS one more n — don't stop at the 30 times answer. 31×7 = 210 + 7 = 217, not 210." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "31 is prime, so no smaller times table can be doubled or tripled to reach it. The 30+1 split is the most reliable method." },
+      ],
+      32: [
+        { mistake: "Losing count while doubling five times in a row", solution: "Say each step out loud and track it carefully: 'double, double, double, double, double' — for 32×2: 2→4→8→16→32→64." },
+        { mistake: "Confusing 32 with 23", solution: "Digit transpositions are an easy slip at this size — always double-check which number is being multiplied before starting." },
+      ],
+      33: [
+        { mistake: "Forgetting to add both parts of the 30+3 split", solution: "33×n needs BOTH 30×n and 3×n added together. 33×5 = 150 + 15 = 165 — don't stop after just the 30×n part." },
+        { mistake: "Confusing 33×n with 3×n or 30×n alone", solution: "33 is neither 3 nor 30 — always add both parts of the split, or triple the full 11 times fact instead." },
+      ],
+      34: [
+        { mistake: "Forgetting to double after using the 17s shortcut", solution: "34×n is double the 17 times fact, not the same as it. 34×5 = double(17×5) = double(85) = 170, not 85." },
+        { mistake: "Forgetting to add both parts of the 30+4 split", solution: "34×n needs BOTH 30×n and 4×n added together. 34×6 = 180 + 24 = 204 — don't stop after just the 30×n part." },
+      ],
+      35: [
+        { mistake: "Forgetting to add both parts of the 30+5 split", solution: "35×n needs BOTH 30×n and 5×n added together. 35×6 = 180 + 30 = 210 — don't stop after just the 30×n part." },
+        { mistake: "Confusing 35×n with the standalone fact 5×7=35", solution: "35×n is a full times table, not the single fact 5×7=35 — don't stop calculating after recognizing the number 35 itself." },
+      ],
+      36: [
+        { mistake: "Forgetting to quadruple, not just double, the 9s shortcut", solution: "36×n is four times the 9 times fact, not two times. 36×3 = 4×(9×3) = 4×27 = 108, not 54." },
+        { mistake: "Confusing 36×6=216 with 6×6=36", solution: "36×6 is a different calculation than 6×6 — don't stop at recognizing the perfect square fact when the multiplier isn't also 1." },
+      ],
+      37: [
+        { mistake: "Subtracting the wrong amount in the 40−3 trick", solution: "37×n = 40×n − 3×n, not 40×n − 3. Make sure to subtract 3 times the original number. 37×5 = 200 − 15 = 185." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "37 is prime, so no smaller times table can be doubled or tripled to reach it. The 40−3 split is the most reliable method." },
+      ],
+      38: [
+        { mistake: "Subtracting the wrong amount in the 40−2 trick", solution: "38×n = 40×n − 2×n, not 40×n − 2. Make sure to subtract double the original number. 38×5 = 200 − 10 = 190." },
+        { mistake: "Forgetting to double after using the 19s shortcut", solution: "38×n is double the 19 times fact. 38×4 = double(19×4) = double(76) = 152, not 76." },
+      ],
+      39: [
+        { mistake: "Subtracting the wrong amount in the 40−1 trick", solution: "39×n = 40×n − n, not 40×n − 1. Make sure to subtract the full original number. 39×7 = 280 − 7 = 273." },
+        { mistake: "Forgetting to triple, not just add, when using the 13s shortcut", solution: "39×n is triple the 13 times fact, not the 13 times fact plus something small. 39×4 = triple(13×4) = triple(52) = 156." },
+      ],
+      40: [
+        { mistake: "Multiplying by 10 but forgetting the extra ×4", solution: "40×n is NOT the same as 10×n — it's 4 times larger. 40×6 = 4×(10×6) = 4×60 = 240, not 60." },
+        { mistake: "Confusing 40×n with 14×n", solution: "Digit transpositions are an easy slip here — 40 and 14 use the same digits but are very different numbers." },
+      ],
+      41: [
+        { mistake: "Forgetting to add the extra group in the 40+1 trick", solution: "41×n is 40×n PLUS one more n — don't stop at the 40 times answer. 41×7 = 280 + 7 = 287, not 280." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "41 is prime, so no smaller times table can be doubled or tripled to reach it. The 40+1 split is the most reliable method." },
+      ],
+      42: [
+        { mistake: "Forgetting to add both parts of the 40+2 split", solution: "42×n needs BOTH 40×n and 2×n added together. 42×6 = 240 + 12 = 252 — don't stop after just the 40×n part." },
+        { mistake: "Confusing 42×n with 24×n", solution: "Digit transpositions are an easy slip here — 42 and 24 use the same digits but are very different numbers." },
+      ],
+      43: [
+        { mistake: "Adding the wrong amount in the 40+3 trick", solution: "43×n = 40×n + 3×n, not 40×n + 3. Make sure to add triple the original number. 43×5 = 200 + 15 = 215." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "43 is prime, so no smaller times table can be doubled or tripled to reach it. The 40+3 split is the most reliable method." },
+      ],
+      44: [
+        { mistake: "Forgetting to quadruple, not just double, the 11s shortcut", solution: "44×n is four times the 11 times fact, not two times. 44×3 = 4×(11×3) = 4×33 = 132, not 66." },
+        { mistake: "Confusing 44×n with 4×n", solution: "44×n is eleven times larger than 4×n — double-check by comparing: 44×3=132 should be eleven times 4×3=12." },
+      ],
+      45: [
+        { mistake: "Subtracting the wrong amount in the 50−5 trick", solution: "45×n = 50×n − 5×n, not 50×n − 5. Make sure to subtract five times the original number. 45×6 = 300 − 30 = 270." },
+        { mistake: "Losing track of odd vs. even multipliers", solution: "Since 45 is a multiple of 5, results still end in 0 or 5 depending on whether the multiplier is even or odd — the same rule as the 5 times table applies." },
+      ],
+      46: [
+        { mistake: "Subtracting the wrong amount in the 50−4 trick", solution: "46×n = 50×n − 4×n, not 50×n − 4. Make sure to subtract four times the original number. 46×5 = 250 − 20 = 230." },
+        { mistake: "Forgetting to double after using the 23s shortcut", solution: "46×n is double the 23 times fact. 46×4 = double(23×4) = double(92) = 184, not 92." },
+      ],
+      47: [
+        { mistake: "Subtracting the wrong amount in the 50−3 trick", solution: "47×n = 50×n − 3×n, not 50×n − 3. Make sure to subtract triple the original number. 47×5 = 250 − 15 = 235." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "47 is prime, so no smaller times table can be doubled or tripled to reach it. The 50−3 split is the most reliable method." },
+      ],
+      48: [
+        { mistake: "Subtracting the wrong amount in the 50−2 trick", solution: "48×n = 50×n − 2×n, not 50×n − 2. Make sure to subtract double the original number. 48×5 = 250 − 10 = 240." },
+        { mistake: "Confusing 48×n with 84×n", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      49: [
+        { mistake: "Subtracting the wrong amount in the 50−1 trick", solution: "49×n = 50×n − n, not 50×n − 1. Make sure to subtract the full original number. 49×7 = 350 − 7 = 343." },
+        { mistake: "Confusing 49×7 with 7×7", solution: "49×7 is a different calculation than 7×7=49 — don't stop at recognizing the perfect square fact when the multiplier isn't also 7." },
+      ],
+      50: [
+        { mistake: "Forgetting to divide by 2 after multiplying by 100", solution: "50×n = (100×n) ÷ 2, not just 100×n. 50×6 = 600 ÷ 2 = 300, not 600." },
+        { mistake: "Confusing 50×n with 5×n", solution: "50×n always ends in 0 and is exactly ten times larger than 5×n. Double-check by comparing: 50×4=200 should be ten times 5×4=20." },
+      ],
+      51: [
+        { mistake: "Forgetting to add the extra group in the 50+1 trick", solution: "51×n is 50×n PLUS one more n — don't stop at the 50 times answer. 51×7 = 350 + 7 = 357, not 350." },
+        { mistake: "Confusing 51×n with 15×n", solution: "Digit transpositions are an easy slip here — 51 and 15 use the same digits but are very different numbers." },
+      ],
+      52: [
+        { mistake: "Forgetting to add both parts of the 50+2 split", solution: "52×n needs BOTH 50×n and 2×n added together. 52×6 = 300 + 12 = 312 — don't stop after just the 50×n part." },
+        { mistake: "Confusing 52×n with 25×n", solution: "Digit transpositions are an easy slip here — 52 and 25 use the same digits but are very different numbers." },
+      ],
+      53: [
+        { mistake: "Adding the wrong amount in the 50+3 trick", solution: "53×n = 50×n + 3×n, not 50×n + 3. Make sure to add triple the original number. 53×5 = 250 + 15 = 265." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "53 is prime, so no smaller times table can be doubled or tripled to reach it. The 50+3 split is the most reliable method." },
+      ],
+      54: [
+        { mistake: "Forgetting to add both parts of the 50+4 split", solution: "54×n needs BOTH 50×n and 4×n added together. 54×6 = 300 + 24 = 324 — don't stop after just the 50×n part." },
+        { mistake: "Confusing 54×n with 45×n", solution: "Digit transpositions are an easy slip here — 54 and 45 use the same digits but are very different numbers." },
+      ],
+      55: [
+        { mistake: "Forgetting to add both parts of the 50+5 split", solution: "55×n needs BOTH 50×n and 5×n added together. 55×6 = 300 + 30 = 330 — don't stop after just the 50×n part." },
+        { mistake: "Confusing 55 the number with the fact 5×5=25", solution: "55 and the fact 5×5=25 are unrelated — don't let the repeated digit '5' cause confusion between them." },
+      ],
+      56: [
+        { mistake: "Forgetting to add both parts of the 50+6 split", solution: "56×n needs BOTH 50×n and 6×n added together. 56×6 = 300 + 36 = 336 — don't stop after just the 50×n part." },
+        { mistake: "Confusing 56×n with the standalone fact 7×8=56", solution: "56×n is a full times table, not the single fact 7×8=56 — don't stop calculating once you recognize the number 56 itself." },
+      ],
+      57: [
+        { mistake: "Subtracting the wrong amount in the 60−3 trick", solution: "57×n = 60×n − 3×n, not 60×n − 3. Make sure to subtract triple the original number. 57×5 = 300 − 15 = 285." },
+        { mistake: "Confusing 57×n with 75×n", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      58: [
+        { mistake: "Subtracting the wrong amount in the 60−2 trick", solution: "58×n = 60×n − 2×n, not 60×n − 2. Make sure to subtract double the original number. 58×5 = 300 − 10 = 290." },
+        { mistake: "Forgetting to double after using the 29s shortcut", solution: "58×n is double the 29 times fact. 58×4 = double(29×4) = double(116) = 232, not 116." },
+      ],
+      59: [
+        { mistake: "Subtracting the wrong amount in the 60−1 trick", solution: "59×n = 60×n − n, not 60×n − 1. Make sure to subtract the full original number. 59×7 = 420 − 7 = 413." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "59 is prime, so no smaller times table can be doubled or tripled to reach it. The 60−1 split is the most reliable method." },
+      ],
+      60: [
+        { mistake: "Multiplying by 10 but forgetting the extra ×6", solution: "60×n is NOT the same as 10×n — it's 6 times larger. 60×5 = 6×(10×5) = 6×50 = 300, not 50." },
+        { mistake: "Confusing 60×n with 16×n", solution: "Digit transpositions are an easy slip here — 60 and 16 use similar digits but are very different numbers." },
       ],
     }
 
@@ -493,6 +764,186 @@ const strategies: { [key: number]: string[] } = {
         "Remember results always end in 0, just like the 10 times table.",
         "Connect it to the calendar rhyme: '30 days hath September, April, June, and November.'",
       ],
+      31: [
+        "Use 31×n = 30×n + n: multiply by 30, then add one more group of the original number. 31×6 = 180 + 6 = 186.",
+        "Say it aloud as a habit: 'thirty groups, plus one more.'",
+        "Connect it to the calendar: seven months of the year have 31 days, a memorable everyday anchor.",
+        "Skip count by 31s out loud: 31, 62, 93, 124, 155, 186, 217, 248, 279, 310.",
+      ],
+      32: [
+        "Double the 16 times table: 32×n = double(16×n).",
+        "Or double the number five times in a row: for 32×3, go 3→6→12→24→48→96.",
+        "Connect it to the freezing point of water: 32°F is a familiar everyday anchor for the number.",
+        "Skip count by 32s out loud: 32, 64, 96, 128, 160, 192, 224, 256, 288, 320.",
+      ],
+      33: [
+        "Split 33 into 30 + 3: multiply by 30, multiply by 3, then add the results. 33×6 = 180 + 18 = 198.",
+        "Or triple the 11 times table: 33×n = triple(11×n).",
+        "Connect it to the spine: the human spine is commonly described as having 33 vertebrae, though several fuse together by adulthood.",
+        "Skip count by 33s out loud: 33, 66, 99, 132, 165, 198, 231, 264, 297, 330.",
+      ],
+      34: [
+        "Double the 17 times table: 34×n = double(17×n).",
+        "Or split 34 into 30 + 4: multiply by 30, multiply by 4, then add the results.",
+        "Connect it to the Fibonacci sequence: 34 = 13 + 21, the two Fibonacci numbers just before it.",
+        "Skip count by 34s out loud: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340.",
+      ],
+      35: [
+        "Split 35 into 30 + 5: multiply by 30, multiply by 5, then add the results. 35×6 = 180 + 30 = 210.",
+        "Or multiply the 7 times table by 5: 35×n = 5×(7×n).",
+        "Remember results always end in 0 or 5, just like the 5 times table.",
+        "Connect it to 35mm film, a standard format in photography and cinema, for an everyday anchor.",
+      ],
+      36: [
+        "Multiply the 9 times table by 4: 36×n = 4×(9×n).",
+        "Or multiply the 4 times table by 9: 36×n = 9×(4×n).",
+        "Memorize 6×6=36 as a standalone landmark, since it's the most commonly used single fact in this table.",
+        "Connect it to measurement: 36 inches make a yard, a useful everyday anchor for the number.",
+      ],
+      37: [
+        "Use 37×n = 40×n − 3×n: multiply by 40, then subtract triple the original number. 37×6 = 240 − 18 = 222.",
+        "Say it aloud as a habit: 'forty groups, minus three groups.'",
+        "Notice that 37×3=111 — a useful landmark fact that also explains why 37 divides 222, 333, and every other three-digit repdigit.",
+        "Skip count by 37s out loud: 37, 74, 111, 148, 185, 222, 259, 296, 333, 370.",
+      ],
+      38: [
+        "Use 38×n = 40×n − 2×n: multiply by 40, then subtract double the original number. 38×6 = 240 − 12 = 228.",
+        "Or double the 19 times table: 38×n = double(19×n).",
+        "Connect it to history and geography: the 38th parallel is the line associated with the division of Korea.",
+        "Skip count by 38s out loud: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380.",
+      ],
+      39: [
+        "Use 39×n = 40×n − n: multiply by 40, then subtract the original number once. 39×6 = 240 − 6 = 234.",
+        "Or triple the 13 times table: 39×n = triple(13×n).",
+        "Say it aloud as a habit: 'forty groups, minus one group.'",
+        "Skip count by 39s out loud: 39, 78, 117, 156, 195, 234, 273, 312, 351, 390.",
+      ],
+      40: [
+        "Multiply by 10, then multiply the result by 4: for 40×6, first get 60, then multiply by 4 to get 240.",
+        "Or double the result of ×10 twice in a row: 60 → 120 → 240.",
+        "Connect it to the standard work week: 40 hours is a common weekly anchor for the number.",
+        "Skip count by 40s out loud: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400.",
+      ],
+      41: [
+        "Use 41×n = 40×n + n: multiply by 40, then add one more group of the original number. 41×6 = 240 + 6 = 246.",
+        "Say it aloud as a habit: 'forty groups, plus one more.'",
+        "Skip count by 41s out loud: 41, 82, 123, 164, 205, 246, 287, 328, 369, 410.",
+        "Notice that 41 and 43 are twin primes — recognizing this pairing can help anchor both numbers in memory together.",
+      ],
+      42: [
+        "Use 42×n = 40×n + 2×n: multiply by 40, then add double the original number. 42×6 = 240 + 12 = 252.",
+        "Or triple the 14 times table: 42×n = triple(14×n).",
+        "Remember 6×7=42 as a standalone landmark fact from the 6 and 7 times tables.",
+        "Skip count by 42s out loud: 42, 84, 126, 168, 210, 252, 294, 336, 378, 420.",
+      ],
+      43: [
+        "Use 43×n = 40×n + 3×n: multiply by 40, then add triple the original number. 43×6 = 240 + 18 = 258.",
+        "Say it aloud as a habit: 'forty groups, plus three more.'",
+        "Skip count by 43s out loud: 43, 86, 129, 172, 215, 258, 301, 344, 387, 430.",
+        "Notice that 41 and 43 are twin primes — recognizing this pairing can help anchor both numbers in memory together.",
+      ],
+      44: [
+        "Multiply the 11 times fact by 4: 44×n = 4×(11×n).",
+        "Or double the 22 times table: 44×n = double(22×n).",
+        "Connect it to U.S. history: Barack Obama was the 44th president, a memorable anchor for the number.",
+        "Skip count by 44s out loud: 44, 88, 132, 176, 220, 264, 308, 352, 396, 440.",
+      ],
+      45: [
+        "Use 45×n = 50×n − 5×n: multiply by 50, then subtract five times the original number. 45×6 = 300 − 30 = 270.",
+        "Or multiply the 9 times fact by 5: 45×n = 5×(9×n).",
+        "Connect it to vinyl records: singles traditionally spin at 45 RPM, a useful everyday anchor.",
+        "Skip count by 45s out loud: 45, 90, 135, 180, 225, 270, 315, 360, 405, 450.",
+      ],
+      46: [
+        "Use 46×n = 50×n − 4×n: multiply by 50, then subtract four times the original number. 46×6 = 300 − 24 = 276.",
+        "Or double the 23 times table: 46×n = double(23×n).",
+        "Connect it to biology: 46 chromosomes (23 pairs) is a memorable anchor for the number.",
+        "Skip count by 46s out loud: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460.",
+      ],
+      47: [
+        "Use 47×n = 50×n − 3×n: multiply by 50, then subtract triple the original number. 47×6 = 300 − 18 = 282.",
+        "Say it aloud as a habit: 'fifty groups, minus three.'",
+        "Skip count by 47s out loud: 47, 94, 141, 188, 235, 282, 329, 376, 423, 470.",
+        "Use the Star Trek trivia as a memory hook: fans have noted the number 47 appearing unusually often throughout the franchise.",
+      ],
+      48: [
+        "Use 48×n = 50×n − 2×n: multiply by 50, then subtract double the original number. 48×6 = 300 − 12 = 288.",
+        "Or multiply the 12 times fact by 4: 48×n = 4×(12×n).",
+        "Connect it to time: 48 hours make exactly two days, a familiar everyday anchor.",
+        "Skip count by 48s out loud: 48, 96, 144, 192, 240, 288, 336, 384, 432, 480.",
+      ],
+      49: [
+        "Use 49×n = 50×n − n: multiply by 50, then subtract the original number once. 49×6 = 300 − 6 = 294.",
+        "Anchor everything to 7×7=49, a fact you likely already know well.",
+        "Say it aloud as a habit: 'fifty groups, minus one.'",
+        "Skip count by 49s out loud: 49, 98, 147, 196, 245, 294, 343, 392, 441, 490.",
+      ],
+      50: [
+        "Use 50×n = (100×n) ÷ 2: multiply by 100, then divide by 2. 50×7 = 700 ÷ 2 = 350.",
+        "Or multiply by 5, then add a zero: for 50×6, first get 5×6=30, then add a 0 to get 300.",
+        "Connect it to the U.S. states: there are 50 states, a familiar everyday anchor.",
+        "Skip count by 50s out loud: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500.",
+      ],
+      51: [
+        "Use 51×n = 50×n + n: multiply by 50, then add one more group of the original number. 51×6 = 300 + 6 = 306.",
+        "Or triple the 17 times table: 51×n = triple(17×n).",
+        "Say it aloud as a habit: 'fifty groups, plus one more.'",
+        "Skip count by 51s out loud: 51, 102, 153, 204, 255, 306, 357, 408, 459, 510.",
+      ],
+      52: [
+        "Use 52×n = 50×n + 2×n: multiply by 50, then add double the original number. 52×6 = 300 + 12 = 312.",
+        "Or multiply the 13 times fact by 4: 52×n = 4×(13×n).",
+        "Connect it to the calendar: 52 weeks make a year, a familiar everyday anchor.",
+        "Skip count by 52s out loud: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520.",
+      ],
+      53: [
+        "Use 53×n = 50×n + 3×n: multiply by 50, then add triple the original number. 53×6 = 300 + 18 = 318.",
+        "Say it aloud as a habit: 'fifty groups, plus three more.'",
+        "Skip count by 53s out loud: 53, 106, 159, 212, 265, 318, 371, 424, 477, 530.",
+        "Accept that 53 has no shortcut beyond the split-and-add method, and rely on repetition to build speed.",
+      ],
+      54: [
+        "Use 54×n = 50×n + 4×n: multiply by 50, then add four times the original number. 54×6 = 300 + 24 = 324.",
+        "Or triple the 18 times table: 54×n = triple(18×n).",
+        "Connect it to a Rubik's Cube: 9 squares per face × 6 faces = 54, a hands-on everyday anchor.",
+        "Skip count by 54s out loud: 54, 108, 162, 216, 270, 324, 378, 432, 486, 540.",
+      ],
+      55: [
+        "Use 55×n = 50×n + 5×n: multiply by 50, then add five times the original number. 55×6 = 300 + 30 = 330.",
+        "Or multiply the 11 times fact by 5: 55×n = 5×(11×n).",
+        "Remember results always end in 0 or 5, just like the 5 times table.",
+        "Skip count by 55s out loud: 55, 110, 165, 220, 275, 330, 385, 440, 495, 550.",
+      ],
+      56: [
+        "Use 56×n = 50×n + 6×n: multiply by 50, then add six times the original number. 56×6 = 300 + 36 = 336.",
+        "Or multiply the 8 times fact by 7: 56×n = 7×(8×n).",
+        "Anchor 7×8=56 using the rhyme: '5, 6, 7, 8 — 56 is 7 times 8.'",
+        "Skip count by 56s out loud: 56, 112, 168, 224, 280, 336, 392, 448, 504, 560.",
+      ],
+      57: [
+        "Use 57×n = 60×n − 3×n: multiply by 60, then subtract triple the original number. 57×6 = 360 − 18 = 342.",
+        "Or triple the 19 times table: 57×n = triple(19×n).",
+        "Connect it to Heinz's famous '57 Varieties' slogan for an everyday memory anchor.",
+        "Skip count by 57s out loud: 57, 114, 171, 228, 285, 342, 399, 456, 513, 570.",
+      ],
+      58: [
+        "Use 58×n = 60×n − 2×n: multiply by 60, then subtract double the original number. 58×6 = 360 − 12 = 348.",
+        "Or double the 29 times table: 58×n = double(29×n).",
+        "Say it aloud as a habit: 'sixty groups, minus two.'",
+        "Skip count by 58s out loud: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580.",
+      ],
+      59: [
+        "Use 59×n = 60×n − n: multiply by 60, then subtract the original number once. 59×6 = 360 − 6 = 354.",
+        "Say it aloud as a habit: 'sixty groups, minus one.'",
+        "Skip count by 59s out loud: 59, 118, 177, 236, 295, 354, 413, 472, 531, 590.",
+        "Connect it to time: 59 is one less than the 60 seconds in a minute, a familiar everyday anchor.",
+      ],
+      60: [
+        "Multiply by 10, then multiply the result by 6: for 60×7, first get 70, then multiply by 6 to get 420.",
+        "Or triple the 20 times table: 60×n = triple(20×n).",
+        "Connect it to time: 60 seconds in a minute and 60 minutes in an hour are familiar everyday anchors.",
+        "Skip count by 60s out loud: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600.",
+      ],
     }
 
 const realLifeExamples: { [key: number]: RealLifeItem[] } = {
@@ -642,6 +1093,79 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
       30: [
         { context: "Months with 30 days", detail: "April, June, September, and November each have 30 days, as captured in the traditional calendar rhyme." },
       ],
+      31: [
+        { context: "Months with 31 days", detail: "January, March, May, July, August, October, and December each have 31 days — seven months in total." },
+      ],
+      32: [
+        { context: "Freezing point of water", detail: "Water freezes at 32°F on the Fahrenheit temperature scale." },
+        { context: "Teeth in a full adult set", detail: "A full set of adult human teeth, including wisdom teeth, totals 32." },
+        { context: "NFL teams", detail: "The National Football League is made up of 32 teams." },
+      ],
+      33: [
+        { context: "Vertebrae in the human spine", detail: "The human spine is commonly described as having 33 vertebrae, though several fuse together into the sacrum and coccyx by adulthood." },
+        { context: "Age of Jesus at crucifixion", detail: "According to widely held Christian tradition, Jesus was 33 years old at the time of the crucifixion." },
+      ],
+      35: [
+        { context: "35mm film", detail: "35mm has long been the standard film format in both still photography and cinema." },
+      ],
+      36: [
+        { context: "Inches in a yard", detail: "In the imperial measurement system, 1 yard equals 36 inches." },
+      ],
+      38: [
+        { context: "The 38th parallel", detail: "This line of latitude became closely associated with the division between North and South Korea." },
+      ],
+      39: [
+        { context: "The 39 Steps", detail: "'The 39 Steps' is a classic 1935 thriller film directed by Alfred Hitchcock, based on a 1915 novel of the same name." },
+      ],
+      40: [
+        { context: "'Forty days and forty nights'", detail: "The number 40 appears repeatedly throughout the Bible, including in the story of the flood in Genesis." },
+        { context: "The standard work week", detail: "A 40-hour work week is a common standard in many countries." },
+        { context: "The word 'quarantine'", detail: "'Quarantine' comes from the Italian 'quaranta giorni,' meaning 'forty days,' the isolation period historically required of ships during outbreaks of plague." },
+      ],
+      42: [
+        { context: "'The Answer to Life, the Universe, and Everything'", detail: "In Douglas Adams's novel The Hitchhiker's Guide to the Galaxy, a supercomputer calculates the answer to the ultimate question as the number 42." },
+        { context: "Dots on a pair of dice", detail: "Each standard die has 21 total pips (1+2+3+4+5+6), so a pair of dice has 42 pips combined." },
+      ],
+      44: [
+        { context: "The 44th U.S. president", detail: "Barack Obama served as the 44th president of the United States." },
+      ],
+      45: [
+        { context: "45 RPM vinyl records", detail: "Vinyl 'singles' were traditionally pressed to spin at 45 revolutions per minute." },
+      ],
+      46: [
+        { context: "Chromosomes in a human cell", detail: "A typical human cell contains 46 chromosomes, organized into 23 matching pairs." },
+      ],
+      48: [
+        { context: "48 hours", detail: "48 hours is exactly two full days." },
+        { context: "The contiguous United States", detail: "The 48 contiguous U.S. states exclude only Alaska and Hawaii, which are geographically separate." },
+      ],
+      50: [
+        { context: "U.S. states", detail: "The United States is made up of 50 states." },
+        { context: "A golden anniversary", detail: "A 50th wedding anniversary is traditionally called a 'golden' anniversary." },
+      ],
+      51: [
+        { context: "Area 51", detail: "Area 51 is a famous, long-classified U.S. Air Force facility in Nevada, widely referenced in popular culture." },
+      ],
+      52: [
+        { context: "Weeks in a year", detail: "A standard year has 52 weeks." },
+        { context: "Cards in a deck", detail: "A standard playing card deck has 52 cards, not counting jokers." },
+      ],
+      54: [
+        { context: "Squares on a Rubik's Cube", detail: "A classic 3×3 Rubik's Cube has 9 colored squares per face across 6 faces, for 54 squares total." },
+      ],
+      55: [
+        { context: "The former U.S. national speed limit", detail: "From 1974 to 1995, 55 miles per hour was the maximum speed limit on U.S. highways under federal law." },
+      ],
+      57: [
+        { context: "Heinz '57 Varieties'", detail: "The H.J. Heinz Company has used '57 Varieties' as a marketing slogan since 1896, long after actually selling more than 57 products." },
+      ],
+      59: [
+        { context: "One second short of a minute", detail: "A minute contains 60 seconds, making 59 the last second before a new minute begins." },
+      ],
+      60: [
+        { context: "Seconds in a minute", detail: "A minute is made up of 60 seconds." },
+        { context: "Minutes in an hour", detail: "An hour is made up of 60 minutes." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -779,6 +1303,107 @@ const funFacts: { [key: number]: FunFactItem[] } = {
       30: [
         { fact: "30 = 2 × 3 × 5, the product of the three smallest prime numbers." },
         { fact: "30 has an unusually large number of small factors for its size, which is part of why it divides evenly into so many everyday measurements." },
+      ],
+      31: [
+        { fact: "31 is a prime number — its only factors are 1 and itself." },
+        { fact: "31 = 2⁵ − 1, making it a Mersenne prime, the same family of primes that includes 3, 7, and 127." },
+      ],
+      32: [
+        { fact: "32 = 2⁵, the fifth power of 2." },
+        { fact: "32 is exactly double 16, which is itself double 8 — part of an unbroken doubling chain all the way back to 1." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11, so its times table is a direct tripling of the 11 times table's mirror-digit pattern." },
+      ],
+      34: [
+        { fact: "34 is a Fibonacci number — it equals the sum of the two Fibonacci numbers before it, 13 and 21." },
+        { fact: "In a 4×4 magic square, every row, column, and diagonal adds up to 34 — the smallest possible magic constant for a 4×4 grid." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7, the product of two of the smaller times tables students learn earlier." },
+      ],
+      36: [
+        { fact: "36 is both a perfect square (6×6) and a triangular number (1+2+...+8), a combination only a handful of numbers share." },
+      ],
+      37: [
+        { fact: "37 is a prime number — its only factors are 1 and itself." },
+        { fact: "37 × 3 = 111, which is why 37 evenly divides every three-digit repdigit number: 111, 222, 333, all the way through 999." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19, so its times table is a direct doubling of the 19 times table." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13, the product of two smaller times tables students likely already know." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5, combining a power of 2 with a factor of 5." },
+      ],
+      41: [
+        { fact: "41 is a prime number — its only factors are 1 and itself." },
+        { fact: "41 and 43 are twin primes, meaning they differ by exactly 2 with no prime numbers between them." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7, combining three of the smallest prime numbers used in the standard times tables." },
+      ],
+      43: [
+        { fact: "43 is a prime number — its only factors are 1 and itself." },
+        { fact: "43 is the larger of the twin prime pair (41, 43), two primes that differ by exactly 2." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11, so its times table is a direct quadrupling of the 11 times table." },
+      ],
+      45: [
+        { fact: "45° is exactly half of a 90° right angle, which is why 45-degree angles appear constantly in geometry and design." },
+        { fact: "45 is both a triangular number (1+2+...+9) and the product of two smaller times tables, 9 and 5." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23, so its times table is a direct doubling of the 23 times table." },
+      ],
+      47: [
+        { fact: "47 is a prime number — its only factors are 1 and itself." },
+        { fact: "47 is famously said to appear unusually often throughout the Star Trek franchise, a long-running injoke reportedly started by one of the show's writers." },
+      ],
+      48: [
+        { fact: "48 is a highly composite number — its divisors (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) outnumber those of any smaller positive number." },
+      ],
+      49: [
+        { fact: "49 is a perfect square: 49 = 7 × 7." },
+        { fact: "7×7=49 is one of the most frequently memorized single facts across the entire standard multiplication table." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5², combining a single factor of 2 with the square of 5." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17, the product of two smaller prime numbers." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13, so its times table is a direct quadrupling of the 13 times table." },
+      ],
+      53: [
+        { fact: "53 is a prime number — its only factors are 1 and itself." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³, combining a single factor of 2 with 3 cubed." },
+      ],
+      55: [
+        { fact: "55 is both a triangular number (1+2+...+10) and a Fibonacci number, a combination shared by only a few numbers." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7, combining a power of 2 with a factor of 7." },
+        { fact: "7×8=56 is one of the most frequently confused single facts in the entire standard multiplication table." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19, the product of two smaller prime numbers." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29, so its times table is a direct doubling of the 29 times table." },
+      ],
+      59: [
+        { fact: "59 is a prime number — its only factors are 1 and itself." },
+      ],
+      60: [
+        { fact: "60 is a highly composite number — its divisors (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) outnumber those of any smaller positive number." },
+        { fact: "The ancient Babylonians used a base-60 (sexagesimal) number system, which is why time and angles are still divided into units of 60 today." },
       ],
     }
 
