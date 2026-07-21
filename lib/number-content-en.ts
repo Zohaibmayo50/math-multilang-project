@@ -86,6 +86,46 @@ const importance: { [key: number]: string } = {
       58: "The 58 times table can be reached by splitting 58 into 60 − 2, or by doubling the 29 times table since 58 = 2 × 29. Recognizing 58 as 'just under 60' makes it one of the more approachable two-digit times tables in this range.",
       59: "The 59 times table has no factoring shortcut, since 59 is prime. The most efficient method is 60×n − n: multiply by 60, then subtract the original number once — the same 'one less than a round number' strategy that makes 9, 19, 29, and 39 manageable. Fittingly, 59 itself is one less than the 60 seconds that make up a minute.",
       60: "The 60 times table closes out this range as one of the richest in shortcuts, because 60 = 2² × 3 × 5 is a highly composite number. It can be reached by tripling the 20 times table, multiplying the 6 and 10 times tables together, or doubling the 30 times table. The number 60 also has deep historical roots — ancient Babylonian mathematicians used a base-60 (sexagesimal) number system, which is why a minute has 60 seconds and an hour has 60 minutes to this day.",
+      61: "The 61 times table has no factoring shortcut, since 61 is prime. The most efficient method is 60×n + n: multiply by 60, then add one more group of the original number — the same 'one more than a round number' strategy that makes primes like 31 and 41 manageable.",
+      62: "The 62 times table can be reached by splitting 62 into 60 + 2, or by doubling the 31 times table since 62 = 2 × 31. Recognizing 62 as 'just over 60' makes it one of the more approachable two-digit times tables in this range.",
+      63: "The 63 times table can be reached by splitting 63 into 60 + 3, or by multiplying the 7 and 9 times tables together, since 63 = 7 × 9. Mathematically, 63 sits one below 64, which is itself a power of 2 (2⁶) — a relationship worth noticing even though it isn't a calculation shortcut on its own.",
+      64: "The 64 times table is unusually rich mathematically because 64 is both a perfect square (8×8) and a perfect cube (4×4×4), and it's also 2 to the 6th power. It can be reached by doubling a number six times in a row, or by squaring the 8 times table. Because a chessboard has 64 squares and classic Crayola boxes famously contain 64 crayons, this is also one of the more culturally recognizable two-digit numbers.",
+      65: "The 65 times table can be reached by splitting 65 into 60 + 5, or by recognizing that 65 = 5 × 13. The number 65 also carries strong cultural significance as a traditional retirement age in many countries and as a widely used highway speed limit.",
+      66: "The 66 times table can be reached by splitting 66 into 60 + 6, or by multiplying the 11 times table by 6 since 66 = 6 × 11. Outside of math, 66 is inseparable from Route 66, the historic U.S. highway that became a cultural icon of American road travel.",
+      67: "The 67 times table has no factoring shortcut, since 67 is prime. The most efficient method is 70×n − 3×n: multiply by 70, then subtract triple the original number.",
+      68: "The 68 times table can be reached by splitting 68 into 70 − 2, or by multiplying the 17 times table by 4 since 68 = 4 × 17. Recognizing 68 as 'just under 70' makes it one of the more approachable two-digit times tables in this range.",
+      69: "The 69 times table can be built by splitting 69 into 70 − 1, or by recognizing that 69 = 3 × 23. Because 69 sits just one below the very approachable 70 times table, the subtraction method is usually the fastest way to calculate it mentally.",
+      70: "The 70 times table builds directly on the 7 and 10 times tables, since 70 = 7 × 10. Every 70 times fact can be found by multiplying by 10 and then by 7 (or vice versa), making it one of the more mechanical two-digit times tables to calculate. The number 70 also has cultural weight as a traditional biblical lifespan ('three score years and ten') and as the UK's standard motorway speed limit.",
+      71: "The 71 times table has no factoring shortcut, since 71 is prime. The most efficient method is 70×n + n: multiply by 70, then add one more group of the original number.",
+      72: "The 72 times table benefits from several shortcuts, since 72 = 8 × 9 = 2³ × 3². It can be reached by multiplying the 8 and 9 times tables together, tripling the 24 times table, or doubling the 36 times table. Outside of math, 72 shows up in the 'Rule of 72,' a widely used finance shortcut for estimating how many years it takes an investment to double.",
+      73: "The 73 times table has no factoring shortcut, since 73 is prime. The most efficient method is 70×n + 3×n: multiply by 70, then add triple the original number. Mathematically, 73 has a couple of unusual claims to fame — it's the 21st prime number, and written in binary (1001001), it reads the same forwards and backwards.",
+      74: "The 74 times table can be reached by splitting 74 into 70 + 4, or by doubling the 37 times table since 74 = 2 × 37.",
+      75: "The 75 times table can be reached by splitting 75 into 50 + 25, or by recognizing that 75 = 3 × 5². Because 75 is exactly three quarters of 100, it connects closely to percentage calculations and everyday fraction reasoning.",
+      76: "The 76 times table can be reached by splitting 76 into 80 − 4, or by multiplying the 19 times table by 4 since 76 = 4 × 19. The number is best known outside math through '76 Trombones,' the famous marching-band song from the musical The Music Man.",
+      77: "The 77 times table can be reached by splitting 77 into 70 + 7, or by multiplying the 11 times table by 7 since 77 = 7 × 11. As a number, 77 is a numerical palindrome — it reads the same forwards and backwards, since both digits match.",
+      78: "The 78 times table can be reached by splitting 78 into 80 − 2, or by recognizing that 78 = 2 × 3 × 13. Mathematically, 78 is a triangular number (1+2+...+12=78), and historically it's tied to 78 RPM records, the earliest standard format for gramophone discs.",
+      79: "The 79 times table has no factoring shortcut, since 79 is prime. The most efficient method is 80×n − n: multiply by 80, then subtract the original number once.",
+      80: "The 80 times table builds directly on the 8 and 10 times tables, since 80 = 8 × 10. Every 80 times fact can be found by multiplying by 10 and then by 8 (or vice versa). The number is also familiar from Jules Verne's novel Around the World in Eighty Days, and 80% is a common way of expressing four fifths of a whole.",
+      81: "The 81 times table centers on a striking fact: 81 = 9², so it can be reached by squaring the 9 times table. Because 81 is a multiple of 9, the digit-sum rule from the 9 times table carries through — the digits of any 81 times fact always add up to a multiple of 9.",
+      82: "The 82 times table can be reached by splitting 82 into 80 + 2, or by doubling the 41 times table since 82 = 2 × 41.",
+      83: "The 83 times table has no factoring shortcut, since 83 is prime. The most efficient method is 80×n + 3×n: multiply by 80, then add triple the original number.",
+      84: "The 84 times table can be reached by splitting 84 into 80 + 4, or by multiplying the 7 and 12 times tables together, since 84 = 7 × 12. Because 84 = 2² × 3 × 7, it has several valid factoring paths to choose from depending on which smaller table feels most familiar.",
+      85: "The 85 times table can be reached by splitting 85 into 90 − 5, or by multiplying the 17 times table by 5 since 85 = 5 × 17.",
+      86: "The 86 times table can be reached by splitting 86 into 90 − 4, or by doubling the 43 times table since 86 = 2 × 43. Outside of math, 'eighty-six' or '86' is well-known restaurant and bar slang for discarding an item or removing someone from a venue.",
+      87: "The 87 times table can be reached by splitting 87 into 90 − 3, or by tripling the 29 times table since 87 = 3 × 29.",
+      88: "The 88 times table can be reached by splitting 88 into 90 − 2, or by multiplying the 11 times table by 8 since 88 = 8 × 11. The number 88 is instantly recognizable to musicians as the number of keys on a standard piano, and to astronomers as the total number of officially recognized constellations.",
+      89: "The 89 times table has no factoring shortcut, since 89 is prime. The most efficient method is 90×n − n: multiply by 90, then subtract the original number once. Mathematically, 89 is also a Fibonacci number, equal to the sum of the two Fibonacci numbers before it, 34 and 55.",
+      90: "The 90 times table builds directly on the 9 and 10 times tables, since 90 = 9 × 10. Every 90 times fact can be found by multiplying by 10 and then by 9 (or vice versa). Mathematically, 90° defines a right angle, and 90 minutes is the standard playing length of a football (soccer) match, giving the number strong everyday footing beyond arithmetic.",
+      91: "The 91 times table can be reached by splitting 91 into 90 + 1, or by recognizing that 91 = 7 × 13. The number 91 has a well-known reputation in math education as a classic 'looks prime but isn't' trick question — it isn't divisible by any small prime up through 5, which leads many students to guess it's prime before discovering it factors as 7 × 13.",
+      92: "The 92 times table can be reached by splitting 92 into 90 + 2, or by multiplying the 23 times table by 4 since 92 = 4 × 23. The number 92 also has real significance in chemistry — uranium, with atomic number 92, is traditionally cited as the heaviest naturally occurring element on the periodic table.",
+      93: "The 93 times table can be reached by splitting 93 into 90 + 3, or by tripling the 31 times table since 93 = 3 × 31.",
+      94: "The 94 times table can be reached by splitting 94 into 90 + 4, or by doubling the 47 times table since 94 = 2 × 47.",
+      95: "The 95 times table can be reached by splitting 95 into 100 − 5, or by recognizing that 95 = 5 × 19. Anyone who lived through the 1990s likely also associates the number with Windows 95, the landmark operating system that reshaped personal computing.",
+      96: "The 96 times table can be reached by splitting 96 into 100 − 4, or by recognizing that 96 = 2⁵ × 3, making it built almost entirely from powers of 2.",
+      97: "The 97 times table has no factoring shortcut, since 97 is prime. The most efficient method is 100×n − 3×n: multiply by 100, then subtract triple the original number. Fittingly, 97 also holds the title of the largest two-digit prime number.",
+      98: "The 98 times table can be reached by splitting 98 into 100 − 2, or by recognizing that 98 = 2 × 7², making it closely tied to the 7 and 49 times tables.",
+      99: "The 99 times table can be reached by splitting 99 into 100 − 1, or by recognizing that 99 = 9 × 11. Because 99 is a multiple of 9, its digit-sum rule carries through, and because 99 sits just below 100, retailers have long used '.99' pricing as a psychological device to make prices feel meaningfully lower than a round number.",
+      100: "The 100 times table is the simplest of all to calculate: since 100 = 10², multiplying by 100 just means appending two zeros to the end of a whole number. As the number that anchors percentages, the metric system, and the very idea of a 'whole' being divided into equal parts, 100 is arguably the single most culturally significant number in this entire range.",
     }
 
 const patterns: { [key: number]: PatternItem[] } = {
@@ -346,6 +386,167 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Always ends in 0", description: "Since 60 is a multiple of 10, every result in the 60 times table ends in 0." },
         { title: "Triple the 20 times table", description: "Since 60 = 3 × 20, every 60 times fact is also exactly triple the matching 20 times fact." },
       ],
+      61: [
+        { title: "61 = 60 + 1, times n", description: "Since 61×n = 60×n + n, every 61 times fact can be found by multiplying by 60 and adding one more group of the original number: 61×6 = 360 + 6 = 366." },
+      ],
+      62: [
+        { title: "62 = 60 + 2, times n", description: "Since 62×n = 60×n + 2×n, every 62 times fact can be built by adding the 60 times fact and the 2 times fact together: 62×6 = 360 + 12 = 372." },
+        { title: "Double the 31 times table", description: "Since 62 = 2 × 31, every 62 times fact is exactly double the matching 31 times fact." },
+      ],
+      63: [
+        { title: "63 = 60 + 3, times n", description: "Since 63×n = 60×n + 3×n, every 63 times fact can be built by adding the 60 times fact and the 3 times fact together: 63×6 = 360 + 18 = 378." },
+        { title: "7 × 9 combination", description: "Since 63 = 7 × 9, the 63 times table can also be reached by multiplying the 9 times table by 7, or the 7 times table by 9." },
+      ],
+      64: [
+        { title: "64 is 2 to the 6th power", description: "64 = 2×2×2×2×2×2, reachable by doubling a number six times in a row." },
+        { title: "64 is both a perfect square and a perfect cube", description: "64 = 8×8 (a perfect square) and also 64 = 4×4×4 (a perfect cube) — a rare double property shared by very few numbers." },
+        { title: "Double the 32 times table", description: "Since 64 = 2 × 32, every 64 times fact is exactly double the matching 32 times fact." },
+      ],
+      65: [
+        { title: "65 = 60 + 5, times n", description: "Since 65×n = 60×n + 5×n, every 65 times fact can be built by adding the 60 times fact and the 5 times fact together: 65×6 = 360 + 30 = 390." },
+        { title: "5 × 13 combination", description: "Since 65 = 5 × 13, the 65 times table can also be reached by multiplying the 13 times table by 5." },
+        { title: "Always ends in 0 or 5", description: "Because 65 is a multiple of 5, every result in the 65 times table ends in 0 or 5." },
+      ],
+      66: [
+        { title: "66 = 60 + 6, times n", description: "Since 66×n = 60×n + 6×n, every 66 times fact can be built by adding the 60 times fact and the 6 times fact together: 66×6 = 360 + 36 = 396." },
+        { title: "6 × 11 combination", description: "Since 66 = 6 × 11, the 66 times table can also be reached by multiplying the 11 times table by 6, carrying over the 11 times table's mirror-digit pattern in modified form." },
+      ],
+      67: [
+        { title: "67 = 70 − 3, times n", description: "Since 67×n = 70×n − 3×n, every 67 times fact can be found by multiplying by 70 and subtracting triple the original number: 67×6 = 420 − 18 = 402." },
+      ],
+      68: [
+        { title: "68 = 70 − 2, times n", description: "Since 68×n = 70×n − 2×n, every 68 times fact can be found by multiplying by 70 and subtracting double the original number: 68×6 = 420 − 12 = 408." },
+        { title: "Quadruple the 17 times table", description: "Since 68 = 4 × 17, every 68 times fact is also exactly four times the matching 17 times fact." },
+      ],
+      69: [
+        { title: "69 = 70 − 1, times n", description: "Since 69×n = 70×n − n, every 69 times fact can be found by multiplying by 70 and subtracting the original number once: 69×6 = 420 − 6 = 414." },
+        { title: "3 × 23 combination", description: "Since 69 = 3 × 23, the 69 times table can also be reached by tripling the 23 times table." },
+      ],
+      70: [
+        { title: "70 = 7 × 10, times n", description: "Since 70×n = 7×(10×n), every 70 times fact can be found by multiplying by 10 and then by 7: 70×6 = 7×(10×6) = 7×60 = 420." },
+        { title: "Always ends in 0", description: "Since 70 is a multiple of 10, every result in the 70 times table ends in 0." },
+      ],
+      71: [
+        { title: "71 = 70 + 1, times n", description: "Since 71×n = 70×n + n, every 71 times fact can be found by multiplying by 70 and adding one more group of the original number: 71×6 = 420 + 6 = 426." },
+      ],
+      72: [
+        { title: "8 × 9 combination", description: "Since 72 = 8 × 9, every 72 times fact can be found by multiplying the 9 times table by 8, or the 8 times table by 9: 72×5 = 8×(9×5) = 8×45 = 360." },
+        { title: "Double the 36 times table", description: "Since 72 = 2 × 36, every 72 times fact is also exactly double the matching 36 times fact." },
+      ],
+      73: [
+        { title: "73 = 70 + 3, times n", description: "Since 73×n = 70×n + 3×n, every 73 times fact can be found by multiplying by 70 and adding triple the original number: 73×6 = 420 + 18 = 438." },
+      ],
+      74: [
+        { title: "74 = 70 + 4, times n", description: "Since 74×n = 70×n + 4×n, every 74 times fact can be built by adding the 70 times fact and the 4 times fact together: 74×6 = 420 + 24 = 444." },
+        { title: "Double the 37 times table", description: "Since 74 = 2 × 37, every 74 times fact is exactly double the matching 37 times fact." },
+      ],
+      75: [
+        { title: "75 = 50 + 25, times n", description: "Since 75×n = 50×n + 25×n, every 75 times fact can be built by adding the 50 times fact and the 25 times fact together: 75×6 = 300 + 150 = 450." },
+        { title: "Three quarters of 100", description: "Since 75 = (100×3)÷4, every 75 times fact can also be found by multiplying by 100, tripling, then dividing by 4: 75×4 = (100×4×3)÷4 = 300." },
+        { title: "Always ends in 00, 25, 50, or 75", description: "Because 75 is a multiple of 25, its multiples cycle through the same four possible last-two-digit endings as the 25 times table." },
+      ],
+      76: [
+        { title: "76 = 80 − 4, times n", description: "Since 76×n = 80×n − 4×n, every 76 times fact can be found by multiplying by 80 and subtracting four times the original number: 76×6 = 480 − 24 = 456." },
+        { title: "Quadruple the 19 times table", description: "Since 76 = 4 × 19, every 76 times fact is also exactly four times the matching 19 times fact." },
+      ],
+      77: [
+        { title: "7 × 11 combination", description: "Since 77 = 7 × 11, every 77 times fact can be found by multiplying the 11 times table by 7, or the 7 times table by 11: 77×5 = 7×(11×5) = 7×55 = 385." },
+        { title: "77 = 70 + 7, times n", description: "Since 77×n = 70×n + 7×n, every 77 times fact can also be built by adding the 70 times fact and the 7 times fact together." },
+      ],
+      78: [
+        { title: "78 = 80 − 2, times n", description: "Since 78×n = 80×n − 2×n, every 78 times fact can be found by multiplying by 80 and subtracting double the original number: 78×6 = 480 − 12 = 468." },
+        { title: "78 is a triangular number", description: "78 = 1+2+3+...+12, the sum of the first twelve counting numbers." },
+      ],
+      79: [
+        { title: "79 = 80 − 1, times n", description: "Since 79×n = 80×n − n, every 79 times fact can be found by multiplying by 80 and subtracting the original number once: 79×6 = 480 − 6 = 474." },
+      ],
+      80: [
+        { title: "80 = 8 × 10, times n", description: "Since 80×n = 8×(10×n), every 80 times fact can be found by multiplying by 10 and then by 8: 80×6 = 8×(10×6) = 8×60 = 480." },
+        { title: "Always ends in 0", description: "Since 80 is a multiple of 10, every result in the 80 times table ends in 0." },
+      ],
+      81: [
+        { title: "81 is a perfect square", description: "81 = 9×9, a landmark fact worth memorizing directly." },
+        { title: "81 = 80 + 1, times n", description: "Since 81×n = 80×n + n, every 81 times fact can also be found by multiplying by 80 and adding one more group of the original number: 81×6 = 480 + 6 = 486." },
+        { title: "Digit sums divisible by 9", description: "Because 81 is a multiple of 9, every multiple of 81 also has digits that add up to a multiple of 9." },
+      ],
+      82: [
+        { title: "82 = 80 + 2, times n", description: "Since 82×n = 80×n + 2×n, every 82 times fact can be built by adding the 80 times fact and the 2 times fact together: 82×6 = 480 + 12 = 492." },
+        { title: "Double the 41 times table", description: "Since 82 = 2 × 41, every 82 times fact is exactly double the matching 41 times fact." },
+      ],
+      83: [
+        { title: "83 = 80 + 3, times n", description: "Since 83×n = 80×n + 3×n, every 83 times fact can be found by multiplying by 80 and adding triple the original number: 83×6 = 480 + 18 = 498." },
+      ],
+      84: [
+        { title: "84 = 80 + 4, times n", description: "Since 84×n = 80×n + 4×n, every 84 times fact can be built by adding the 80 times fact and the 4 times fact together: 84×6 = 480 + 24 = 504." },
+        { title: "7 × 12 combination", description: "Since 84 = 7 × 12, every 84 times fact can also be found by multiplying the 12 times table by 7, or the 7 times table by 12." },
+      ],
+      85: [
+        { title: "85 = 90 − 5, times n", description: "Since 85×n = 90×n − 5×n, every 85 times fact can be found by multiplying by 90 and subtracting five times the original number: 85×6 = 540 − 30 = 510." },
+        { title: "5 × 17 combination", description: "Since 85 = 5 × 17, every 85 times fact can also be found by multiplying the 17 times table by 5." },
+        { title: "Always ends in 0 or 5", description: "Because 85 is a multiple of 5, every result in the 85 times table ends in 0 or 5." },
+      ],
+      86: [
+        { title: "86 = 90 − 4, times n", description: "Since 86×n = 90×n − 4×n, every 86 times fact can be found by multiplying by 90 and subtracting four times the original number: 86×6 = 540 − 24 = 516." },
+        { title: "Double the 43 times table", description: "Since 86 = 2 × 43, every 86 times fact is exactly double the matching 43 times fact." },
+      ],
+      87: [
+        { title: "87 = 90 − 3, times n", description: "Since 87×n = 90×n − 3×n, every 87 times fact can be found by multiplying by 90 and subtracting triple the original number: 87×6 = 540 − 18 = 522." },
+        { title: "Triple the 29 times table", description: "Since 87 = 3 × 29, every 87 times fact is exactly triple the matching 29 times fact." },
+      ],
+      88: [
+        { title: "8 × 11 combination", description: "Since 88 = 8 × 11, every 88 times fact can be found by multiplying the 11 times table by 8, or the 8 times table by 11: 88×5 = 8×(11×5) = 8×55 = 440." },
+        { title: "88 = 90 − 2, times n", description: "Since 88×n = 90×n − 2×n, every 88 times fact can also be found by multiplying by 90 and subtracting double the original number." },
+      ],
+      89: [
+        { title: "89 = 90 − 1, times n", description: "Since 89×n = 90×n − n, every 89 times fact can be found by multiplying by 90 and subtracting the original number once: 89×6 = 540 − 6 = 534." },
+      ],
+      90: [
+        { title: "90 = 9 × 10, times n", description: "Since 90×n = 9×(10×n), every 90 times fact can be found by multiplying by 10 and then by 9: 90×6 = 9×(10×6) = 9×60 = 540." },
+        { title: "Always ends in 0", description: "Since 90 is a multiple of 10, every result in the 90 times table ends in 0." },
+        { title: "Digit sums divisible by 9", description: "Because 90 is a multiple of 9, every multiple of 90 also has digits that add up to a multiple of 9." },
+      ],
+      91: [
+        { title: "91 = 90 + 1, times n", description: "Since 91×n = 90×n + n, every 91 times fact can be found by multiplying by 90 and adding one more group of the original number: 91×6 = 540 + 6 = 546." },
+        { title: "7 × 13 combination", description: "Since 91 = 7 × 13, every 91 times fact can also be found by multiplying the 13 times table by 7, or the 7 times table by 13." },
+      ],
+      92: [
+        { title: "92 = 90 + 2, times n", description: "Since 92×n = 90×n + 2×n, every 92 times fact can be built by adding the 90 times fact and the 2 times fact together: 92×6 = 540 + 12 = 552." },
+        { title: "Quadruple the 23 times table", description: "Since 92 = 4 × 23, every 92 times fact is also exactly four times the matching 23 times fact." },
+      ],
+      93: [
+        { title: "93 = 90 + 3, times n", description: "Since 93×n = 90×n + 3×n, every 93 times fact can be found by multiplying by 90 and adding triple the original number: 93×6 = 540 + 18 = 558." },
+        { title: "Triple the 31 times table", description: "Since 93 = 3 × 31, every 93 times fact is exactly triple the matching 31 times fact." },
+      ],
+      94: [
+        { title: "94 = 90 + 4, times n", description: "Since 94×n = 90×n + 4×n, every 94 times fact can be built by adding the 90 times fact and the 4 times fact together: 94×6 = 540 + 24 = 564." },
+        { title: "Double the 47 times table", description: "Since 94 = 2 × 47, every 94 times fact is exactly double the matching 47 times fact." },
+      ],
+      95: [
+        { title: "95 = 100 − 5, times n", description: "Since 95×n = 100×n − 5×n, every 95 times fact can be found by multiplying by 100 and subtracting five times the original number: 95×6 = 600 − 30 = 570." },
+        { title: "5 × 19 combination", description: "Since 95 = 5 × 19, every 95 times fact can also be found by multiplying the 19 times table by 5." },
+        { title: "Always ends in 0 or 5", description: "Because 95 is a multiple of 5, every result in the 95 times table ends in 0 or 5." },
+      ],
+      96: [
+        { title: "96 = 100 − 4, times n", description: "Since 96×n = 100×n − 4×n, every 96 times fact can be found by multiplying by 100 and subtracting four times the original number: 96×6 = 600 − 24 = 576." },
+        { title: "Triple the 32 times table", description: "Since 96 = 3 × 32, every 96 times fact is also exactly triple the matching 32 times fact." },
+      ],
+      97: [
+        { title: "97 = 100 − 3, times n", description: "Since 97×n = 100×n − 3×n, every 97 times fact can be found by multiplying by 100 and subtracting triple the original number: 97×6 = 600 − 18 = 582." },
+      ],
+      98: [
+        { title: "98 = 100 − 2, times n", description: "Since 98×n = 100×n − 2×n, every 98 times fact can be found by multiplying by 100 and subtracting double the original number: 98×6 = 600 − 12 = 588." },
+        { title: "Double the 49 times table", description: "Since 98 = 2 × 49, every 98 times fact is exactly double the matching 49 times fact." },
+      ],
+      99: [
+        { title: "99 = 100 − 1, times n", description: "Since 99×n = 100×n − n, every 99 times fact can be found by multiplying by 100 and subtracting the original number once: 99×6 = 600 − 6 = 594." },
+        { title: "9 × 11 combination", description: "Since 99 = 9 × 11, every 99 times fact can also be found by multiplying the 11 times table by 9, or the 9 times table by 11." },
+        { title: "Digit sums divisible by 9", description: "Because 99 is a multiple of 9, every multiple of 99 also has digits that add up to a multiple of 9." },
+      ],
+      100: [
+        { title: "Always ends in 00", description: "Every multiple of 100 ends in two zeros, with no exceptions." },
+        { title: "Just append two zeros", description: "Multiplying any whole number by 100 is the same as writing that number and adding 00 to the end: 7×100 = 700, 23×100 = 2300." },
+        { title: "The reference point for percentages", description: "Because 100 represents 'the whole' in percentage terms, every percentage times table (25%, 50%, 75%) is really just a fraction of the 100 times table." },
+      ],
     }
 
 const mistakes: { [key: number]: MistakeItem[] } = {
@@ -585,6 +786,166 @@ const mistakes: { [key: number]: MistakeItem[] } = {
       60: [
         { mistake: "Multiplying by 10 but forgetting the extra ×6", solution: "60×n is NOT the same as 10×n — it's 6 times larger. 60×5 = 6×(10×5) = 6×50 = 300, not 50." },
         { mistake: "Confusing 60×n with 16×n", solution: "Digit transpositions are an easy slip here — 60 and 16 use similar digits but are very different numbers." },
+      ],
+      61: [
+        { mistake: "Forgetting to add the extra group in the 60+1 trick", solution: "61×n is 60×n PLUS one more n — don't stop at the 60 times answer. 61×7 = 420 + 7 = 427, not 420." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "61 is prime, so no smaller times table can be doubled or tripled to reach it. The 60+1 split is the most reliable method." },
+      ],
+      62: [
+        { mistake: "Forgetting to add both parts of the 60+2 split", solution: "62×n needs BOTH 60×n and 2×n added together. 62×6 = 360 + 12 = 372 — don't stop after just the 60×n part." },
+        { mistake: "Confusing 62×n with 26×n", solution: "Digit transpositions are an easy slip here — 62 and 26 use the same digits but are very different numbers." },
+      ],
+      63: [
+        { mistake: "Forgetting to add both parts of the 60+3 split", solution: "63×n needs BOTH 60×n and 3×n added together. 63×6 = 360 + 18 = 378 — don't stop after just the 60×n part." },
+        { mistake: "Confusing 63×n with the standalone fact 7×9=63", solution: "63×n is a full times table, not the single fact 7×9=63 — don't stop calculating after recognizing the number 63 itself." },
+      ],
+      64: [
+        { mistake: "Losing count while doubling six times in a row", solution: "Say each step out loud and track it carefully — for 64×2: 2→4→8→16→32→64→128." },
+        { mistake: "Confusing 64 with 46", solution: "Digit transpositions are an easy slip at this size — always double-check which number is being multiplied before starting." },
+      ],
+      65: [
+        { mistake: "Forgetting to add both parts of the 60+5 split", solution: "65×n needs BOTH 60×n and 5×n added together. 65×6 = 360 + 30 = 390 — don't stop after just the 60×n part." },
+        { mistake: "Confusing 65 with 56", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      66: [
+        { mistake: "Forgetting to add both parts of the 60+6 split", solution: "66×n needs BOTH 60×n and 6×n added together. 66×6 = 360 + 36 = 396 — don't stop after just the 60×n part." },
+        { mistake: "Assuming 66 follows the same mirror pattern as 11", solution: "The 11 times table's mirror-digit trick doesn't carry over directly to 66 — multiply the 11 times fact by 6 instead of guessing a pattern." },
+      ],
+      67: [
+        { mistake: "Subtracting the wrong amount in the 70−3 trick", solution: "67×n = 70×n − 3×n, not 70×n − 3. Make sure to subtract triple the original number. 67×5 = 350 − 15 = 335." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "67 is prime, so no smaller times table can be doubled or tripled to reach it. The 70−3 split is the most reliable method." },
+      ],
+      68: [
+        { mistake: "Subtracting the wrong amount in the 70−2 trick", solution: "68×n = 70×n − 2×n, not 70×n − 2. Make sure to subtract double the original number. 68×5 = 350 − 10 = 340." },
+        { mistake: "Forgetting to quadruple, not just double, the 17s shortcut", solution: "68×n is four times the 17 times fact, not two times. 68×3 = 4×(17×3) = 4×51 = 204, not 102." },
+      ],
+      69: [
+        { mistake: "Subtracting the wrong amount in the 70−1 trick", solution: "69×n = 70×n − n, not 70×n − 1. Make sure to subtract the full original number. 69×7 = 490 − 7 = 483." },
+        { mistake: "Confusing 69 with 96", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      70: [
+        { mistake: "Multiplying by 10 but forgetting the extra ×7", solution: "70×n is NOT the same as 10×n — it's 7 times larger. 70×5 = 7×(10×5) = 7×50 = 350, not 50." },
+        { mistake: "Confusing 70×n with 17×n", solution: "Digit transpositions are an easy slip here — 70 and 17 use similar digits but are very different numbers." },
+      ],
+      71: [
+        { mistake: "Forgetting to add the extra group in the 70+1 trick", solution: "71×n is 70×n PLUS one more n — don't stop at the 70 times answer. 71×7 = 490 + 7 = 497, not 490." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "71 is prime, so no smaller times table can be doubled or tripled to reach it. The 70+1 split is the most reliable method." },
+      ],
+      72: [
+        { mistake: "Confusing 72×n with the standalone fact 8×9=72", solution: "72×n is a full times table, not the single fact 8×9=72 — don't stop calculating after recognizing the number 72 itself." },
+        { mistake: "Confusing 72 with 27", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      73: [
+        { mistake: "Adding the wrong amount in the 70+3 trick", solution: "73×n = 70×n + 3×n, not 70×n + 3. Make sure to add triple the original number. 73×5 = 350 + 15 = 365." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "73 is prime, so no smaller times table can be doubled or tripled to reach it. The 70+3 split is the most reliable method." },
+      ],
+      74: [
+        { mistake: "Forgetting to add both parts of the 70+4 split", solution: "74×n needs BOTH 70×n and 4×n added together. 74×6 = 420 + 24 = 444 — don't stop after just the 70×n part." },
+        { mistake: "Forgetting to double after using the 37s shortcut", solution: "74×n is double the 37 times fact. 74×4 = double(37×4) = double(148) = 296, not 148." },
+      ],
+      75: [
+        { mistake: "Forgetting to add both parts of the 50+25 split", solution: "75×n needs BOTH 50×n and 25×n added together. 75×4 = 200 + 100 = 300 — don't stop after just the 50×n part." },
+        { mistake: "Mixing up the fraction: 75% is three quarters, not two thirds", solution: "75 is three quarters (3/4) of 100, not two thirds — double-check which fraction you're using before applying the shortcut." },
+      ],
+      76: [
+        { mistake: "Subtracting the wrong amount in the 80−4 trick", solution: "76×n = 80×n − 4×n, not 80×n − 4. Make sure to subtract four times the original number. 76×5 = 400 − 20 = 380." },
+        { mistake: "Forgetting to quadruple, not just double, the 19s shortcut", solution: "76×n is four times the 19 times fact, not two times. 76×3 = 4×(19×3) = 4×57 = 228, not 114." },
+      ],
+      77: [
+        { mistake: "Confusing 77×n with the standalone fact 7×11=77", solution: "77×n is a full times table, not the single fact 7×11=77 — don't stop calculating after recognizing the number 77 itself." },
+        { mistake: "Assuming 77 follows the same mirror pattern as 11", solution: "The 11 times table's mirror-digit trick doesn't carry over directly to 77 — multiply the 11 times fact by 7 instead of guessing a pattern." },
+      ],
+      78: [
+        { mistake: "Subtracting the wrong amount in the 80−2 trick", solution: "78×n = 80×n − 2×n, not 80×n − 2. Make sure to subtract double the original number. 78×5 = 400 − 10 = 390." },
+        { mistake: "Confusing 78 with 87", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      79: [
+        { mistake: "Subtracting the wrong amount in the 80−1 trick", solution: "79×n = 80×n − n, not 80×n − 1. Make sure to subtract the full original number. 79×7 = 560 − 7 = 553." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "79 is prime, so no smaller times table can be doubled or tripled to reach it. The 80−1 split is the most reliable method." },
+      ],
+      80: [
+        { mistake: "Multiplying by 10 but forgetting the extra ×8", solution: "80×n is NOT the same as 10×n — it's 8 times larger. 80×5 = 8×(10×5) = 8×50 = 400, not 50." },
+        { mistake: "Confusing 80×n with 18×n", solution: "Digit transpositions are an easy slip here — 80 and 18 use similar digits but are very different numbers." },
+      ],
+      81: [
+        { mistake: "Forgetting to add the extra group in the 80+1 trick", solution: "81×n is 80×n PLUS one more n — don't stop at the 80 times answer. 81×7 = 560 + 7 = 567, not 560." },
+        { mistake: "Confusing 81×7 with 9×9", solution: "81×7 is a different calculation than 9×9=81 — don't stop at recognizing the perfect square fact when the multiplier isn't also 9." },
+      ],
+      82: [
+        { mistake: "Forgetting to add both parts of the 80+2 split", solution: "82×n needs BOTH 80×n and 2×n added together. 82×6 = 480 + 12 = 492 — don't stop after just the 80×n part." },
+        { mistake: "Confusing 82 with 28", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      83: [
+        { mistake: "Adding the wrong amount in the 80+3 trick", solution: "83×n = 80×n + 3×n, not 80×n + 3. Make sure to add triple the original number. 83×5 = 400 + 15 = 415." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "83 is prime, so no smaller times table can be doubled or tripled to reach it. The 80+3 split is the most reliable method." },
+      ],
+      84: [
+        { mistake: "Forgetting to add both parts of the 80+4 split", solution: "84×n needs BOTH 80×n and 4×n added together. 84×6 = 480 + 24 = 504 — don't stop after just the 80×n part." },
+        { mistake: "Confusing 84×n with the standalone fact 7×12=84", solution: "84×n is a full times table, not the single fact 7×12=84 — don't stop calculating after recognizing the number 84 itself." },
+      ],
+      85: [
+        { mistake: "Subtracting the wrong amount in the 90−5 trick", solution: "85×n = 90×n − 5×n, not 90×n − 5. Make sure to subtract five times the original number. 85×5 = 450 − 25 = 425." },
+        { mistake: "Confusing 85 with 58", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      86: [
+        { mistake: "Subtracting the wrong amount in the 90−4 trick", solution: "86×n = 90×n − 4×n, not 90×n − 4. Make sure to subtract four times the original number. 86×5 = 450 − 20 = 430." },
+        { mistake: "Forgetting to double after using the 43s shortcut", solution: "86×n is double the 43 times fact. 86×4 = double(43×4) = double(172) = 344, not 172." },
+      ],
+      87: [
+        { mistake: "Subtracting the wrong amount in the 90−3 trick", solution: "87×n = 90×n − 3×n, not 90×n − 3. Make sure to subtract triple the original number. 87×5 = 450 − 15 = 435." },
+        { mistake: "Confusing 87 with 78", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      88: [
+        { mistake: "Confusing 88×n with the standalone fact 8×11=88", solution: "88×n is a full times table, not the single fact 8×11=88 — don't stop calculating after recognizing the number 88 itself." },
+        { mistake: "Assuming 88 follows the same mirror pattern as 11", solution: "The 11 times table's mirror-digit trick doesn't carry over directly to 88 — multiply the 11 times fact by 8 instead of guessing a pattern." },
+      ],
+      89: [
+        { mistake: "Subtracting the wrong amount in the 90−1 trick", solution: "89×n = 90×n − n, not 90×n − 1. Make sure to subtract the full original number. 89×7 = 630 − 7 = 623." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "89 is prime, so no smaller times table can be doubled or tripled to reach it. The 90−1 split is the most reliable method." },
+      ],
+      90: [
+        { mistake: "Multiplying by 10 but forgetting the extra ×9", solution: "90×n is NOT the same as 10×n — it's 9 times larger. 90×5 = 9×(10×5) = 9×50 = 450, not 50." },
+        { mistake: "Confusing 90×n with 9×n", solution: "90×n always ends in 0 and is exactly ten times larger than 9×n. Double-check by comparing: 90×4=360 should be ten times 9×4=36." },
+      ],
+      91: [
+        { mistake: "Forgetting to add the extra group in the 90+1 trick", solution: "91×n is 90×n PLUS one more n — don't stop at the 90 times answer. 91×7 = 630 + 7 = 637, not 630." },
+        { mistake: "Assuming 91 is prime", solution: "91 is a famous example of a number that looks prime but isn't — it factors as 7 × 13. Don't assume primality without checking factors up through its square root." },
+      ],
+      92: [
+        { mistake: "Forgetting to add both parts of the 90+2 split", solution: "92×n needs BOTH 90×n and 2×n added together. 92×6 = 540 + 12 = 552 — don't stop after just the 90×n part." },
+        { mistake: "Forgetting to quadruple, not just double, the 23s shortcut", solution: "92×n is four times the 23 times fact, not two times. 92×3 = 4×(23×3) = 4×69 = 276, not 138." },
+      ],
+      93: [
+        { mistake: "Adding the wrong amount in the 90+3 trick", solution: "93×n = 90×n + 3×n, not 90×n + 3. Make sure to add triple the original number. 93×5 = 450 + 15 = 465." },
+        { mistake: "Confusing 93 with 39", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      94: [
+        { mistake: "Forgetting to add both parts of the 90+4 split", solution: "94×n needs BOTH 90×n and 4×n added together. 94×6 = 540 + 24 = 564 — don't stop after just the 90×n part." },
+        { mistake: "Confusing 94 with 49", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      95: [
+        { mistake: "Subtracting the wrong amount in the 100−5 trick", solution: "95×n = 100×n − 5×n, not 100×n − 5. Make sure to subtract five times the original number. 95×5 = 500 − 25 = 475." },
+        { mistake: "Confusing 95 with 59", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      96: [
+        { mistake: "Subtracting the wrong amount in the 100−4 trick", solution: "96×n = 100×n − 4×n, not 100×n − 4. Make sure to subtract four times the original number. 96×5 = 500 − 20 = 480." },
+        { mistake: "Confusing 96 with 69", solution: "Digit transpositions are an easy slip here — always double-check which number is being multiplied before starting." },
+      ],
+      97: [
+        { mistake: "Subtracting the wrong amount in the 100−3 trick", solution: "97×n = 100×n − 3×n, not 100×n − 3. Make sure to subtract triple the original number. 97×5 = 500 − 15 = 485." },
+        { mistake: "Trying to find a doubling or tripling shortcut", solution: "97 is prime, so no smaller times table can be doubled or tripled to reach it. The 100−3 split is the most reliable method." },
+      ],
+      98: [
+        { mistake: "Subtracting the wrong amount in the 100−2 trick", solution: "98×n = 100×n − 2×n, not 100×n − 2. Make sure to subtract double the original number. 98×5 = 500 − 10 = 490." },
+        { mistake: "Forgetting to double after using the 49s shortcut", solution: "98×n is double the 49 times fact. 98×4 = double(49×4) = double(196) = 392, not 196." },
+      ],
+      99: [
+        { mistake: "Subtracting the wrong amount in the 100−1 trick", solution: "99×n = 100×n − n, not 100×n − 1. Make sure to subtract the full original number. 99×7 = 700 − 7 = 693." },
+        { mistake: "Confusing 99×n with the standalone fact 9×11=99", solution: "99×n is a full times table, not the single fact 9×11=99 — don't stop calculating after recognizing the number 99 itself." },
+      ],
+      100: [
+        { mistake: "Adding zeros to the wrong place when the number already has decimals", solution: "The 'append two zeros' shortcut applies to whole numbers. For decimals, multiplying by 100 shifts the decimal point two places to the right instead." },
+        { mistake: "Treating ×100 and ×10 the same way", solution: "×100 adds two zeros; ×10 adds only one. Keep count of how many zeros the multiplier itself has." },
       ],
     }
 
@@ -944,6 +1305,246 @@ const strategies: { [key: number]: string[] } = {
         "Connect it to time: 60 seconds in a minute and 60 minutes in an hour are familiar everyday anchors.",
         "Skip count by 60s out loud: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600.",
       ],
+      61: [
+        "Use 61×n = 60×n + n: multiply by 60, then add one more group of the original number. 61×6 = 360 + 6 = 366.",
+        "Say it aloud as a habit: 'sixty groups, plus one more.'",
+        "Skip count by 61s out loud: 61, 122, 183, 244, 305, 366, 427, 488, 549, 610.",
+        "Accept that 61 has no shortcut beyond the split-and-add method, and rely on repetition to build speed.",
+      ],
+      62: [
+        "Use 62×n = 60×n + 2×n: multiply by 60, then add double the original number. 62×6 = 360 + 12 = 372.",
+        "Or double the 31 times table: 62×n = double(31×n).",
+        "Say it aloud as a habit: 'sixty groups, plus two more.'",
+        "Skip count by 62s out loud: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620.",
+      ],
+      63: [
+        "Use 63×n = 60×n + 3×n: multiply by 60, then add triple the original number. 63×6 = 360 + 18 = 378.",
+        "Or multiply the 9 times fact by 7: 63×n = 7×(9×n).",
+        "Remember 7×9=63 as a standalone landmark fact from the 7 and 9 times tables.",
+        "Skip count by 63s out loud: 63, 126, 189, 252, 315, 378, 441, 504, 567, 630.",
+      ],
+      64: [
+        "Double the 32 times table: 64×n = double(32×n).",
+        "Or square the 8 times table result: 64×n = 8×(8×n).",
+        "Connect it to a chessboard: 64 squares (8×8) is a familiar visual anchor for the number.",
+        "Skip count by 64s out loud: 64, 128, 192, 256, 320, 384, 448, 512, 576, 640.",
+      ],
+      65: [
+        "Use 65×n = 60×n + 5×n: multiply by 60, then add five times the original number. 65×6 = 360 + 30 = 390.",
+        "Or multiply the 13 times fact by 5: 65×n = 5×(13×n).",
+        "Remember results always end in 0 or 5, just like the 5 times table.",
+        "Skip count by 65s out loud: 65, 130, 195, 260, 325, 390, 455, 520, 585, 650.",
+      ],
+      66: [
+        "Multiply the 11 times fact by 6: 66×n = 6×(11×n).",
+        "Or split 66 into 60 + 6: multiply by 60, multiply by 6, then add the results.",
+        "Connect it to Route 66, the famous historic U.S. highway, for a memorable everyday anchor.",
+        "Skip count by 66s out loud: 66, 132, 198, 264, 330, 396, 462, 528, 594, 660.",
+      ],
+      67: [
+        "Use 67×n = 70×n − 3×n: multiply by 70, then subtract triple the original number. 67×6 = 420 − 18 = 402.",
+        "Say it aloud as a habit: 'seventy groups, minus three.'",
+        "Skip count by 67s out loud: 67, 134, 201, 268, 335, 402, 469, 536, 603, 670.",
+        "Accept that 67 has no shortcut beyond the split-and-subtract method, and rely on repetition to build speed.",
+      ],
+      68: [
+        "Use 68×n = 70×n − 2×n: multiply by 70, then subtract double the original number. 68×6 = 420 − 12 = 408.",
+        "Or multiply the 17 times fact by 4: 68×n = 4×(17×n).",
+        "Say it aloud as a habit: 'seventy groups, minus two.'",
+        "Skip count by 68s out loud: 68, 136, 204, 272, 340, 408, 476, 544, 612, 680.",
+      ],
+      69: [
+        "Use 69×n = 70×n − n: multiply by 70, then subtract the original number once. 69×6 = 420 − 6 = 414.",
+        "Or triple the 23 times table: 69×n = triple(23×n).",
+        "Say it aloud as a habit: 'seventy groups, minus one.'",
+        "Skip count by 69s out loud: 69, 138, 207, 276, 345, 414, 483, 552, 621, 690.",
+      ],
+      70: [
+        "Multiply by 10, then multiply the result by 7: for 70×6, first get 60, then multiply by 7 to get 420.",
+        "Or multiply the 7 times fact by 10: 70×n = 10×(7×n), appending a zero to the 7 times answer.",
+        "Connect it to the UK motorway speed limit of 70 mph for an everyday anchor.",
+        "Skip count by 70s out loud: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700.",
+      ],
+      71: [
+        "Use 71×n = 70×n + n: multiply by 70, then add one more group of the original number. 71×6 = 420 + 6 = 426.",
+        "Say it aloud as a habit: 'seventy groups, plus one more.'",
+        "Skip count by 71s out loud: 71, 142, 213, 284, 355, 426, 497, 568, 639, 710.",
+        "Accept that 71 has no shortcut beyond the split-and-add method, and rely on repetition to build speed.",
+      ],
+      72: [
+        "Multiply the 9 times fact by 8: 72×n = 8×(9×n).",
+        "Or double the 36 times table: 72×n = double(36×n).",
+        "Connect it to the 'Rule of 72' in finance, or to golf, where 72 is a typical par score for 18 holes.",
+        "Skip count by 72s out loud: 72, 144, 216, 288, 360, 432, 504, 576, 648, 720.",
+      ],
+      73: [
+        "Use 73×n = 70×n + 3×n: multiply by 70, then add triple the original number. 73×6 = 420 + 18 = 438.",
+        "Say it aloud as a habit: 'seventy groups, plus three more.'",
+        "Skip count by 73s out loud: 73, 146, 219, 292, 365, 438, 511, 584, 657, 730.",
+        "Accept that 73 has no shortcut beyond the split-and-add method, and rely on repetition to build speed.",
+      ],
+      74: [
+        "Use 74×n = 70×n + 4×n: multiply by 70, then add four times the original number. 74×6 = 420 + 24 = 444.",
+        "Or double the 37 times table: 74×n = double(37×n).",
+        "Say it aloud as a habit: 'seventy groups, plus four more.'",
+        "Skip count by 74s out loud: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740.",
+      ],
+      75: [
+        "Use 75×n = 50×n + 25×n: multiply by 50, then add a quarter of 100×n. 75×6 = 300 + 150 = 450.",
+        "Or multiply by 100, then take three quarters of the result: for 75×4, that's 400, then three quarters of 400 is 300.",
+        "Remember 75 is three quarters of 100 — a useful anchor for percentage-style calculations.",
+        "Skip count by 75s out loud: 75, 150, 225, 300, 375, 450, 525, 600, 675, 750.",
+      ],
+      76: [
+        "Use 76×n = 80×n − 4×n: multiply by 80, then subtract four times the original number. 76×6 = 480 − 24 = 456.",
+        "Or multiply the 19 times fact by 4: 76×n = 4×(19×n).",
+        "Connect it to '76 Trombones' from The Music Man for a memorable everyday anchor.",
+        "Skip count by 76s out loud: 76, 152, 228, 304, 380, 456, 532, 608, 684, 760.",
+      ],
+      77: [
+        "Multiply the 11 times fact by 7: 77×n = 7×(11×n).",
+        "Or split 77 into 70 + 7: multiply by 70, multiply by 7, then add the results.",
+        "Remember 7×11=77 as a standalone landmark fact, and note that 77 itself is a palindrome.",
+        "Skip count by 77s out loud: 77, 154, 231, 308, 385, 462, 539, 616, 693, 770.",
+      ],
+      78: [
+        "Use 78×n = 80×n − 2×n: multiply by 80, then subtract double the original number. 78×6 = 480 − 12 = 468.",
+        "Say it aloud as a habit: 'eighty groups, minus two.'",
+        "Connect it to 78 RPM records, the earliest standard gramophone disc speed, for an everyday anchor.",
+        "Skip count by 78s out loud: 78, 156, 234, 312, 390, 468, 546, 624, 702, 780.",
+      ],
+      79: [
+        "Use 79×n = 80×n − n: multiply by 80, then subtract the original number once. 79×6 = 480 − 6 = 474.",
+        "Say it aloud as a habit: 'eighty groups, minus one.'",
+        "Skip count by 79s out loud: 79, 158, 237, 316, 395, 474, 553, 632, 711, 790.",
+        "Accept that 79 has no shortcut beyond the split-and-subtract method, and rely on repetition to build speed.",
+      ],
+      80: [
+        "Multiply by 10, then multiply the result by 8: for 80×6, first get 60, then multiply by 8 to get 480.",
+        "Or double the result of ×10 three times in a row: 60 → 120 → 240 → 480.",
+        "Connect it to 80% being four fifths of a whole, a useful anchor for percentage-style thinking.",
+        "Skip count by 80s out loud: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800.",
+      ],
+      81: [
+        "Use 81×n = 80×n + n: multiply by 80, then add one more group of the original number. 81×6 = 480 + 6 = 486.",
+        "Anchor everything to 9×9=81, a fact you likely already know well.",
+        "Check your answer with the digit-sum rule: the digits should always add up to a multiple of 9.",
+        "Skip count by 81s out loud: 81, 162, 243, 324, 405, 486, 567, 648, 729, 810.",
+      ],
+      82: [
+        "Use 82×n = 80×n + 2×n: multiply by 80, then add double the original number. 82×6 = 480 + 12 = 492.",
+        "Or double the 41 times table: 82×n = double(41×n).",
+        "Say it aloud as a habit: 'eighty groups, plus two more.'",
+        "Skip count by 82s out loud: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820.",
+      ],
+      83: [
+        "Use 83×n = 80×n + 3×n: multiply by 80, then add triple the original number. 83×6 = 480 + 18 = 498.",
+        "Say it aloud as a habit: 'eighty groups, plus three more.'",
+        "Skip count by 83s out loud: 83, 166, 249, 332, 415, 498, 581, 664, 747, 830.",
+        "Accept that 83 has no shortcut beyond the split-and-add method, and rely on repetition to build speed.",
+      ],
+      84: [
+        "Use 84×n = 80×n + 4×n: multiply by 80, then add four times the original number. 84×6 = 480 + 24 = 504.",
+        "Or multiply the 12 times fact by 7: 84×n = 7×(12×n).",
+        "Remember 7×12=84 as a standalone landmark fact from the 7 and 12 times tables.",
+        "Skip count by 84s out loud: 84, 168, 252, 336, 420, 504, 588, 672, 756, 840.",
+      ],
+      85: [
+        "Use 85×n = 90×n − 5×n: multiply by 90, then subtract five times the original number. 85×6 = 540 − 30 = 510.",
+        "Or multiply the 17 times fact by 5: 85×n = 5×(17×n).",
+        "Remember results always end in 0 or 5, just like the 5 times table.",
+        "Skip count by 85s out loud: 85, 170, 255, 340, 425, 510, 595, 680, 765, 850.",
+      ],
+      86: [
+        "Use 86×n = 90×n − 4×n: multiply by 90, then subtract four times the original number. 86×6 = 540 − 24 = 516.",
+        "Or double the 43 times table: 86×n = double(43×n).",
+        "Connect it to restaurant slang: to '86' something means to discard it or remove it from the menu.",
+        "Skip count by 86s out loud: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860.",
+      ],
+      87: [
+        "Use 87×n = 90×n − 3×n: multiply by 90, then subtract triple the original number. 87×6 = 540 − 18 = 522.",
+        "Or triple the 29 times table: 87×n = triple(29×n).",
+        "Say it aloud as a habit: 'ninety groups, minus three.'",
+        "Skip count by 87s out loud: 87, 174, 261, 348, 435, 522, 609, 696, 783, 870.",
+      ],
+      88: [
+        "Multiply the 11 times fact by 8: 88×n = 8×(11×n).",
+        "Or use 88×n = 90×n − 2×n: multiply by 90, then subtract double the original number.",
+        "Connect it to a piano: 88 keys is a familiar everyday anchor for musicians.",
+        "Skip count by 88s out loud: 88, 176, 264, 352, 440, 528, 616, 704, 792, 880.",
+      ],
+      89: [
+        "Use 89×n = 90×n − n: multiply by 90, then subtract the original number once. 89×6 = 540 − 6 = 534.",
+        "Say it aloud as a habit: 'ninety groups, minus one.'",
+        "Skip count by 89s out loud: 89, 178, 267, 356, 445, 534, 623, 712, 801, 890.",
+        "Notice that 89 is a Fibonacci number (34+55=89) for an extra memory anchor.",
+      ],
+      90: [
+        "Multiply by 10, then multiply the result by 9: for 90×6, first get 60, then multiply by 9 to get 540.",
+        "Or multiply the 9 times fact by 10: 90×n = 10×(9×n), appending a zero to the 9 times answer.",
+        "Connect it to a standard football match: 90 minutes is the regular playing time, a familiar everyday anchor.",
+        "Skip count by 90s out loud: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900.",
+      ],
+      91: [
+        "Use 91×n = 90×n + n: multiply by 90, then add one more group of the original number. 91×6 = 540 + 6 = 546.",
+        "Or multiply the 13 times fact by 7: 91×n = 7×(13×n).",
+        "Remember that 91 = 7 × 13, a fact worth knowing since 91 is often mistaken for a prime number.",
+        "Skip count by 91s out loud: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910.",
+      ],
+      92: [
+        "Use 92×n = 90×n + 2×n: multiply by 90, then add double the original number. 92×6 = 540 + 12 = 552.",
+        "Or multiply the 23 times fact by 4: 92×n = 4×(23×n).",
+        "Connect it to chemistry: uranium's atomic number, 92, is a memorable everyday anchor.",
+        "Skip count by 92s out loud: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920.",
+      ],
+      93: [
+        "Use 93×n = 90×n + 3×n: multiply by 90, then add triple the original number. 93×6 = 540 + 18 = 558.",
+        "Or triple the 31 times table: 93×n = triple(31×n).",
+        "Say it aloud as a habit: 'ninety groups, plus three more.'",
+        "Skip count by 93s out loud: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930.",
+      ],
+      94: [
+        "Use 94×n = 90×n + 4×n: multiply by 90, then add four times the original number. 94×6 = 540 + 24 = 564.",
+        "Or double the 47 times table: 94×n = double(47×n).",
+        "Say it aloud as a habit: 'ninety groups, plus four more.'",
+        "Skip count by 94s out loud: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940.",
+      ],
+      95: [
+        "Use 95×n = 100×n − 5×n: multiply by 100, then subtract five times the original number. 95×6 = 600 − 30 = 570.",
+        "Or multiply the 19 times fact by 5: 95×n = 5×(19×n).",
+        "Remember results always end in 0 or 5, just like the 5 times table.",
+        "Skip count by 95s out loud: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950.",
+      ],
+      96: [
+        "Use 96×n = 100×n − 4×n: multiply by 100, then subtract four times the original number. 96×6 = 600 − 24 = 576.",
+        "Or triple the 32 times table: 96×n = triple(32×n).",
+        "Say it aloud as a habit: 'one hundred groups, minus four.'",
+        "Skip count by 96s out loud: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960.",
+      ],
+      97: [
+        "Use 97×n = 100×n − 3×n: multiply by 100, then subtract triple the original number. 97×6 = 600 − 18 = 582.",
+        "Say it aloud as a habit: 'one hundred groups, minus three.'",
+        "Skip count by 97s out loud: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970.",
+        "Remember 97 as the largest two-digit prime — a useful landmark as you approach 100.",
+      ],
+      98: [
+        "Use 98×n = 100×n − 2×n: multiply by 100, then subtract double the original number. 98×6 = 600 − 12 = 588.",
+        "Or double the 49 times table: 98×n = double(49×n).",
+        "Say it aloud as a habit: 'one hundred groups, minus two.'",
+        "Skip count by 98s out loud: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980.",
+      ],
+      99: [
+        "Use 99×n = 100×n − n: multiply by 100, then subtract the original number once. 99×6 = 600 − 6 = 594.",
+        "Or multiply the 11 times fact by 9: 99×n = 9×(11×n).",
+        "Say it aloud as a habit: 'one hundred groups, minus one.'",
+        "Skip count by 99s out loud: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990.",
+      ],
+      100: [
+        "Just append two zeros to the end of the number: for 6×100, write 6 then add 00 to get 600.",
+        "Use it as a shortcut for other tables: to check 99×6, calculate 100×6=600 and subtract 6 to get 594.",
+        "Practice counting by hundreds out loud: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000.",
+        "Connect it to percentages: 100% represents the whole, a useful everyday anchor for the number.",
+      ],
     }
 
 const realLifeExamples: { [key: number]: RealLifeItem[] } = {
@@ -1165,6 +1766,66 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
       60: [
         { context: "Seconds in a minute", detail: "A minute is made up of 60 seconds." },
         { context: "Minutes in an hour", detail: "An hour is made up of 60 minutes." },
+      ],
+      64: [
+        { context: "Squares on a chessboard", detail: "A standard chessboard is an 8×8 grid, containing exactly 64 squares." },
+        { context: "A classic Crayola box", detail: "The iconic Crayola 'Big Box' has long included 64 crayon colors." },
+        { context: "Nintendo 64", detail: "The Nintendo 64 was a landmark video game console released in the 1990s, named for its 64-bit processor." },
+      ],
+      65: [
+        { context: "A traditional retirement age", detail: "65 has long been used as a standard retirement age in many countries, and remains the eligibility age for U.S. Medicare." },
+        { context: "A common highway speed limit", detail: "65 miles per hour is a common speed limit on highways in many U.S. states." },
+      ],
+      66: [
+        { context: "Route 66", detail: "Route 66 was one of the original U.S. highways, running from Chicago to Santa Monica, and became a cultural symbol of American road travel." },
+      ],
+      70: [
+        { context: "'Three score years and ten'", detail: "This traditional phrase for a lifespan of 70 years comes from the Bible (Psalm 90:10)." },
+        { context: "UK motorway speed limit", detail: "70 miles per hour is the standard speed limit on UK motorways." },
+      ],
+      72: [
+        { context: "The 'Rule of 72'", detail: "In finance, dividing 72 by an interest rate gives a rough estimate of how many years it takes an investment to double." },
+        { context: "72 hours", detail: "72 hours is exactly three full days." },
+        { context: "Par in golf", detail: "Many golf courses use a par of 72 for a standard 18-hole round." },
+      ],
+      75: [
+        { context: "A 75th anniversary", detail: "In some commemorative traditions, a 75th anniversary is referred to as a 'diamond' anniversary, though the term is most famously associated with 60-year milestones, such as Queen Elizabeth II's Diamond Jubilee in 2012." },
+      ],
+      76: [
+        { context: "'76 Trombones'", detail: "'Seventy-Six Trombones' is the famous marching-band song from the 1957 musical The Music Man." },
+      ],
+      78: [
+        { context: "78 RPM records", detail: "78 RPM was the earliest standard playback speed for gramophone records, before 33⅓ and 45 RPM formats became common." },
+      ],
+      80: [
+        { context: "Around the World in Eighty Days", detail: "Jules Verne's classic 1873 novel follows a race to circle the globe in 80 days." },
+      ],
+      86: [
+        { context: "Restaurant slang '86'", detail: "In restaurant and bar slang, to '86' an item means to discard it or take it off the menu, and can also mean removing a disruptive customer." },
+      ],
+      88: [
+        { context: "Keys on a standard piano", detail: "A standard modern piano has 88 keys." },
+        { context: "Officially recognized constellations", detail: "The International Astronomical Union recognizes 88 official constellations." },
+      ],
+      90: [
+        { context: "A standard football (soccer) match", detail: "A regulation football match lasts 90 minutes, split into two 45-minute halves." },
+        { context: "A right angle", detail: "A right angle measures exactly 90 degrees." },
+      ],
+      92: [
+        { context: "Uranium's atomic number", detail: "Uranium, atomic number 92, is traditionally cited as the heaviest naturally occurring element on the periodic table." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "Windows 95 was a landmark Microsoft operating system released in 1995 that helped popularize personal computing." },
+      ],
+      99: [
+        { context: "'.99' pricing", detail: "Retailers commonly price items at amounts ending in .99 (like $19.99) because the price is perceived as meaningfully lower than the next round number." },
+      ],
+      100: [
+        { context: "A century", detail: "100 years is called a century." },
+        { context: "100% as 'the whole'", detail: "Percentages are built around 100 as the reference point for a complete whole." },
+        { context: "U.S. Senate", detail: "The U.S. Senate has 100 members — two from each of the 50 states." },
+        { context: "Cents in a dollar", detail: "There are 100 cents in a U.S. dollar." },
+        { context: "Boiling point of water", detail: "Water boils at 100°C at standard atmospheric pressure." },
       ],
     }
 
@@ -1404,6 +2065,133 @@ const funFacts: { [key: number]: FunFactItem[] } = {
       60: [
         { fact: "60 is a highly composite number — its divisors (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) outnumber those of any smaller positive number." },
         { fact: "The ancient Babylonians used a base-60 (sexagesimal) number system, which is why time and angles are still divided into units of 60 today." },
+      ],
+      61: [
+        { fact: "61 is a prime number — its only factors are 1 and itself." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31, so its times table is a direct doubling of the 31 times table." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7, combining the square of 3 with a factor of 7." },
+        { fact: "63 = 2⁶ − 1 (64 minus 1), sitting exactly one below the power of 2 that follows it." },
+      ],
+      64: [
+        { fact: "64 is both a perfect square (8²) and a perfect cube (4³) — one of the few numbers with both properties." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13, the product of two smaller times tables." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11, combining three of the smaller times tables." },
+      ],
+      67: [
+        { fact: "67 is a prime number — its only factors are 1 and itself." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17, so its times table is a direct quadrupling of the 17 times table." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23, the product of two smaller times tables." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7, combining three of the smallest prime numbers used in the standard times tables." },
+      ],
+      71: [
+        { fact: "71 is a prime number — its only factors are 1 and itself." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3², combining a power of 2 with the square of 3." },
+      ],
+      73: [
+        { fact: "73 is a prime number — its only factors are 1 and itself. It's also the 21st prime in the sequence starting from 2." },
+        { fact: "Written in binary, 73 is 1001001 — a palindrome that reads the same forwards and backwards." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37, so its times table is a direct doubling of the 37 times table." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5², combining a factor of 3 with the square of 5." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19, so its times table is a direct quadrupling of the 19 times table." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11, the product of two smaller times tables." },
+        { fact: "77 is a numerical palindrome — it reads the same forwards and backwards." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13, combining three of the smaller times tables." },
+      ],
+      79: [
+        { fact: "79 is a prime number — its only factors are 1 and itself." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5, combining a power of 2 with a factor of 5." },
+        { fact: "80% is equivalent to four fifths (4/5) of a whole." },
+      ],
+      81: [
+        { fact: "81 is a perfect square (9×9) and also equals 3⁴ (3 to the 4th power)." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41, so its times table is a direct doubling of the 41 times table." },
+      ],
+      83: [
+        { fact: "83 is a prime number — its only factors are 1 and itself." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7, combining a power of 2 with factors of 3 and 7." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17, the product of two smaller times tables." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43, so its times table is a direct doubling of the 43 times table." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29, the product of two smaller times tables." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11, the product of two smaller times tables." },
+      ],
+      89: [
+        { fact: "89 is a prime number — its only factors are 1 and itself." },
+        { fact: "89 is a Fibonacci number — it equals the sum of the two Fibonacci numbers before it, 34 and 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5, combining a power of 2, the square of 3, and a factor of 5." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13, making it a famous example in math education of a number that looks prime but isn't." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23, so its times table is a direct quadrupling of the 23 times table." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31, the product of two smaller times tables." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47, so its times table is a direct doubling of the 47 times table." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19, the product of two smaller times tables." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3, combining a power of 2 with a single factor of 3." },
+      ],
+      97: [
+        { fact: "97 is a prime number — its only factors are 1 and itself." },
+        { fact: "97 is the largest prime number below 100." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7², combining a single factor of 2 with the square of 7." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11, the product of two smaller times tables." },
+        { fact: "Because 99 is a multiple of 9, the digits of any multiple of 99 always add up to a multiple of 9." },
+      ],
+      100: [
+        { fact: "100 = 10², the square of 10, and also equals 4 × 25." },
       ],
     }
 
