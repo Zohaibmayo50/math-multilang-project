@@ -1,8 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import type { Locale } from '../../../lib/i18n-config'
+import { numberGamesTranslations } from '../../../lib/number-games-translations'
 
-interface NumberGamesProps {
+interface UniversalNumberGamesProps {
+  lang: Locale
   number: number
 }
 
@@ -30,22 +33,32 @@ interface Card {
   isMatched: boolean
 }
 
-export default function NumberGames({ number }: NumberGamesProps) {
+/** Replace {token} placeholders in a translation pattern string. */
+function fillTemplate(template: string, vars: Record<string, string | number>): string {
+  return Object.entries(vars).reduce(
+    (acc, [key, value]) => acc.split(`{${key}}`).join(String(value)),
+    template
+  )
+}
+
+export default function UniversalNumberGames({ lang, number }: UniversalNumberGamesProps) {
+  const t = numberGamesTranslations[lang]
+
   const [activeGame, setActiveGame] = useState<'balloon' | 'race' | 'memory'>('balloon')
-  
+
   // Balloon Pop Game State
   const [balloons, setBalloons] = useState<Balloon[]>([])
   const [bpScore, setBpScore] = useState(0)
   const [bpGameActive, setBpGameActive] = useState(false)
   const [bpMissed, setBpMissed] = useState(0)
-  const [popAnimation, setPopAnimation] = useState<{id: number, x: number, y: number} | null>(null)
-  
+  const [popAnimation, setPopAnimation] = useState<{ id: number, x: number, y: number } | null>(null)
+
   // Racing Game State
   const [raceCar, setRaceCar] = useState<RaceCar>({ position: 0, question: { multiplier: 1, answer: number }, options: [] })
   const [raceScore, setRaceScore] = useState(0)
   const [raceGameActive, setRaceGameActive] = useState(false)
   const [wrongAnimation, setWrongAnimation] = useState(false)
-  
+
   // Memory Game State
   const [cards, setCards] = useState<Card[]>([])
   const [flippedCards, setFlippedCards] = useState<number[]>([])
@@ -58,14 +71,14 @@ export default function NumberGames({ number }: NumberGamesProps) {
     const correctAnswer = number * multiplier
     const isCorrect = Math.random() > 0.3
     const answer = isCorrect ? correctAnswer : correctAnswer + (Math.random() > 0.5 ? 1 : -1)
-    
+
     return {
       id: Date.now() + Math.random(),
       multiplier,
       answer,
       x: Math.random() * 80 + 10,
       y: 100,
-      speed: Math.random() * 0.5 + 0.4,
+      speed: Math.random() * 0.5 + 0.3,
       isCorrect
     }
   }
@@ -92,12 +105,12 @@ export default function NumberGames({ number }: NumberGamesProps) {
           }
           return true
         })
-        
+
         // Add new balloon occasionally
         if (Math.random() > 0.7 && remaining.length < 4) {
           remaining.push(generateBalloon())
         }
-        
+
         return remaining
       })
     }, 50)
@@ -115,33 +128,33 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Balloon Pop: Click balloon
   const popBalloon = (balloon: Balloon) => {
     if (balloon.isCorrect) {
-      setBpScore(bpScore + 1)
+      setBpScore(prev => prev + 1)
       setPopAnimation({ id: balloon.id, x: balloon.x, y: balloon.y })
       setTimeout(() => setPopAnimation(null), 500)
     } else {
-      setBpMissed(bpMissed + 1)
+      setBpMissed(prev => prev + 1)
     }
-    setBalloons(balloons.filter(b => b.id !== balloon.id))
+    setBalloons(prev => prev.filter(b => b.id !== balloon.id))
   }
 
   // Racing Game: Generate question
-  const generateRaceQuestion = (currentPosition: number = raceCar.position) => {
+  const generateRaceQuestion = () => {
     const multiplier = Math.floor(Math.random() * 10) + 1
     const correctAnswer = number * multiplier
     const options = [correctAnswer]
-    
+
     while (options.length < 4) {
       const wrong = correctAnswer + (Math.floor(Math.random() * 6) - 3)
       if (!options.includes(wrong) && wrong > 0) {
         options.push(wrong)
       }
     }
-    
-    setRaceCar({
-      position: currentPosition,
+
+    setRaceCar(prev => ({
+      position: prev.position,
       question: { multiplier, answer: correctAnswer },
       options: options.sort(() => Math.random() - 0.5)
-    })
+    }))
   }
 
   // Racing Game: Start
@@ -155,15 +168,16 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Racing Game: Check answer
   const checkRaceAnswer = (selected: number) => {
     if (selected === raceCar.question.answer) {
-      setRaceScore(raceScore + 1)
-      const newPosition = raceCar.position + 10
-      
-      if (newPosition >= 100) {
-        setRaceCar(prev => ({ ...prev, position: newPosition }))
-        setRaceGameActive(false)
-      } else {
-        setTimeout(() => generateRaceQuestion(newPosition), 300)
-      }
+      setRaceScore(prev => prev + 1)
+      setRaceCar(prev => {
+        const newPosition = prev.position + 10
+        if (newPosition >= 90) {
+          setTimeout(() => setRaceGameActive(false), 300)
+        } else {
+          setTimeout(() => generateRaceQuestion(), 300)
+        }
+        return { ...prev, position: newPosition }
+      })
     } else {
       setWrongAnimation(true)
       setTimeout(() => setWrongAnimation(false), 500)
@@ -174,7 +188,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
   const initMemoryGame = () => {
     const pairs: Card[] = []
     const multipliers = [1, 2, 3, 4, 5, 6]
-    
+
     multipliers.forEach((mult, idx) => {
       pairs.push({
         id: idx * 2,
@@ -191,7 +205,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
         isMatched: false
       })
     })
-    
+
     setCards(pairs.sort(() => Math.random() - 0.5))
     setMemoryScore(0)
     setMemoryMoves(0)
@@ -201,18 +215,18 @@ export default function NumberGames({ number }: NumberGamesProps) {
   // Memory Game: Flip card
   const flipCard = (id: number) => {
     if (flippedCards.length === 2 || cards[id].isMatched || cards[id].isFlipped) return
-    
+
     const newCards = [...cards]
     newCards[id].isFlipped = true
     setCards(newCards)
-    
+
     const newFlipped = [...flippedCards, id]
     setFlippedCards(newFlipped)
-    
+
     if (newFlipped.length === 2) {
       setMemoryMoves(memoryMoves + 1)
       const [first, second] = newFlipped
-      
+
       if (cards[first].value === cards[second].value) {
         setTimeout(() => {
           const matched = [...cards]
@@ -239,10 +253,10 @@ export default function NumberGames({ number }: NumberGamesProps) {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            🎮 Juegos de la Tabla del {number}
+            {fillTemplate(t.sectionHeading, { number })}
           </h2>
           <p className="text-lg text-slate-700">
-            ¡Refuerza la tabla del {number} con juegos animados y divertidos!
+            {fillTemplate(t.subtitle, { number })}
           </p>
         </div>
 
@@ -256,7 +270,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🎈 <span className="hidden sm:inline">Explotar Globos</span><span className="sm:hidden">Globos</span>
+            🎈 <span className="hidden sm:inline">{t.balloonTabLabel}</span><span className="sm:hidden">{t.balloonTabLabelShort}</span>
           </button>
           <button
             onClick={() => setActiveGame('race')}
@@ -266,7 +280,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🏎️ <span className="hidden sm:inline">Juego de Carreras</span><span className="sm:hidden">Carrera</span>
+            🏎️ <span className="hidden sm:inline">{t.raceTabLabel}</span><span className="sm:hidden">{t.raceTabLabelShort}</span>
           </button>
           <button
             onClick={() => setActiveGame('memory')}
@@ -276,7 +290,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 : 'bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            🧠 <span className="hidden sm:inline">Juego de Memoria</span><span className="sm:hidden">Memoria</span>
+            🧠 <span className="hidden sm:inline">{t.memoryTabLabel}</span><span className="sm:hidden">{t.memoryTabLabelShort}</span>
           </button>
         </div>
 
@@ -285,29 +299,29 @@ export default function NumberGames({ number }: NumberGamesProps) {
           <div className="bg-gradient-to-b from-sky-100 to-sky-300 rounded-2xl p-4 sm:p-8 shadow-xl min-h-[400px] sm:min-h-[600px] relative overflow-hidden">
             <div className="absolute top-2 sm:top-4 left-2 sm:left-4 right-2 sm:right-4 flex justify-between items-center z-10">
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Skor: <span className="text-pink-600">{bpScore}</span>
+                {t.balloonScoreLabel} <span className="text-pink-600">{bpScore}</span>
               </div>
               <div className="bg-white/90 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-lg font-bold text-sm sm:text-lg">
-                Kaçan: <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
+                {t.balloonMissedLabel} <span className={bpMissed >= 3 ? 'text-red-600' : 'text-orange-600'}>{bpMissed}/5</span>
               </div>
             </div>
 
             {!bpGameActive ? (
               <div className="flex flex-col items-center justify-center h-[350px] sm:h-[500px]">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6 animate-bounce">🎈</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Juego de Explotar Globos</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">{t.balloonGameTitle}</h3>
                 <p className="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6 text-center max-w-md px-4">
-                  ¡Explota los globos que contienen la respuesta correcta! ¡No toques globos incorrectos ni dejes escapar los correctos!
+                  {t.balloonInstructions}
                 </p>
                 <button
                   onClick={startBalloonGame}
                   className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform shadow-lg"
                 >
-                  Iniciar Juego 🎈
+                  {t.balloonStartButton}
                 </button>
                 {bpScore > 0 && (
                   <div className="mt-4 sm:mt-6 text-base sm:text-lg">
-                    Última Puntuación: <span className="font-bold text-pink-600">{bpScore}</span>
+                    {t.balloonLastScoreLabel} <span className="font-bold text-pink-600">{bpScore}</span>
                   </div>
                 )}
               </div>
@@ -316,7 +330,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 {/* Clouds decoration */}
                 <div className="absolute top-10 left-5 sm:left-10 text-4xl sm:text-6xl opacity-60 animate-float">☁️</div>
                 <div className="absolute top-20 right-5 sm:right-20 text-3xl sm:text-5xl opacity-60 animate-float-delayed">☁️</div>
-                
+
                 {/* Balloons */}
                 {balloons.map(balloon => (
                   <button
@@ -361,8 +375,8 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'race' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ Juego de Carreras</h3>
-              <p className="text-slate-600">¡Gana la carrera dando respuestas correctas!</p>
+              <h3 className="text-2xl font-bold text-blue-600 mb-2">🏎️ {t.raceGameTitle}</h3>
+              <p className="text-slate-600">{t.raceSubtitle}</p>
             </div>
 
             {!raceGameActive || raceCar.position >= 90 ? (
@@ -370,19 +384,19 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🏁</div>
                 {raceCar.position >= 90 ? (
                   <>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">🎉 ¡Felicitaciones! ¡Ganaste!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4 px-4">{t.raceWinHeading}</h3>
                     <div className="text-xl sm:text-2xl mb-4 sm:mb-6">
-                      Puntuación Total: <span className="font-bold text-blue-600">{raceScore}</span>
+                      {t.raceTotalScoreLabel} <span className="font-bold text-blue-600">{raceScore}</span>
                     </div>
                   </>
                 ) : (
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">¿Listo para la Carrera?</h3>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4 px-4">{t.raceReadyHeading}</h3>
                 )}
                 <button
                   onClick={startRaceGame}
                   className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  {raceCar.position >= 90 ? 'Jugar de Nuevo' : 'Iniciar Carrera'} 🏎️
+                  {raceCar.position >= 90 ? t.racePlayAgainLabel : t.raceStartLabel} 🏎️
                 </button>
               </div>
             ) : (
@@ -393,15 +407,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
                   <div className="absolute inset-0 flex items-center">
                     <div className="w-full h-1 border-t-2 sm:border-t-4 border-dashed border-white/30"></div>
                   </div>
-                  
+
                   {/* Car */}
-                  <div 
+                  <div
                     className={`text-4xl sm:text-6xl transition-all duration-300 ${wrongAnimation ? 'animate-bounce' : ''}`}
                     style={{ marginLeft: `${raceCar.position}%` }}
                   >
                     🏎️
                   </div>
-                  
+
                   {/* Finish line */}
                   <div className="absolute right-2 sm:right-4 top-0 bottom-0 flex items-center">
                     <div className="text-4xl sm:text-6xl">🏁</div>
@@ -410,7 +424,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
 
                 {/* Progress bar */}
                 <div className="bg-gray-200 rounded-full h-3 sm:h-4 mb-4 sm:mb-6">
-                  <div 
+                  <div
                     className="bg-gradient-to-r from-blue-500 to-cyan-500 h-3 sm:h-4 rounded-full transition-all duration-300"
                     style={{ width: `${raceCar.position}%` }}
                   ></div>
@@ -421,7 +435,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                   <div className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6">
                     {number} × {raceCar.question.multiplier} = ?
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     {raceCar.options.map((option, idx) => (
                       <button
@@ -436,7 +450,7 @@ export default function NumberGames({ number }: NumberGamesProps) {
                 </div>
 
                 <div className="text-center text-base sm:text-lg font-semibold">
-                  Puntos: <span className="text-blue-600">{raceScore}</span>
+                  {t.raceScoreLabel} <span className="text-blue-600">{raceScore}</span>
                 </div>
               </div>
             )}
@@ -447,30 +461,30 @@ export default function NumberGames({ number }: NumberGamesProps) {
         {activeGame === 'memory' && (
           <div className="bg-white rounded-2xl p-8 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 Juego de Memoria</h3>
-              <p className="text-slate-600">¡Encuentra las tarjetas que coinciden!</p>
+              <h3 className="text-2xl font-bold text-purple-600 mb-2">🧠 {t.memoryGameTitle}</h3>
+              <p className="text-slate-600">{t.memorySubtitle}</p>
             </div>
 
             {cards.length === 0 ? (
               <div className="text-center py-8 sm:py-12">
                 <div className="text-6xl sm:text-8xl mb-4 sm:mb-6">🃏</div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">Emparejar Tarjetas</h3>
-                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">¡Empareja las multiplicaciones con sus resultados!</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 px-4">{t.memoryMatchCardsHeading}</h3>
+                <p className="text-sm sm:text-base text-slate-600 mb-4 sm:mb-6 px-4">{t.memoryInstructions}</p>
                 <button
                   onClick={initMemoryGame}
                   className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                 >
-                  Iniciar Juego 🧠
+                  {t.memoryStartButton}
                 </button>
               </div>
             ) : (
               <div>
                 <div className="flex justify-center gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div className="text-base sm:text-lg font-semibold">
-                    Emparejadas: <span className="text-green-600">{memoryScore}/6</span>
+                    {t.memoryMatchedLabel} <span className="text-green-600">{memoryScore}/6</span>
                   </div>
                   <div className="text-base sm:text-lg font-semibold">
-                    Movimientos: <span className="text-purple-600">{memoryMoves}</span>
+                    {t.memoryMovesLabel} <span className="text-purple-600">{memoryMoves}</span>
                   </div>
                 </div>
 
@@ -499,15 +513,15 @@ export default function NumberGames({ number }: NumberGamesProps) {
 
                 {memoryScore === 6 && (
                   <div className="text-center mt-6 sm:mt-8">
-                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">🎉 ¡Felicitaciones!</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-green-600 mb-3 sm:mb-4">{t.memoryWinHeading}</h3>
                     <p className="text-lg sm:text-xl mb-3 sm:mb-4">
-                      ¡Completaste en {memoryMoves} movimientos!
+                      {fillTemplate(t.memoryWinTextTemplate, { n: memoryMoves })}
                     </p>
                     <button
                       onClick={initMemoryGame}
                       className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-base sm:text-lg hover:scale-105 transition-transform"
                     >
-                      Jugar de Nuevo
+                      {t.memoryPlayAgainLabel}
                     </button>
                   </div>
                 )}

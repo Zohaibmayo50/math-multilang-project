@@ -1,36 +1,41 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import type { Locale } from '../../../lib/i18n-config'
+import { gamesSectionTranslations } from '../../../lib/games-section-translations'
 
 type GameType = 'speed' | 'hero' | 'memory' | 'space' | null
 
-interface GamesSectionProps {
+interface UniversalGamesSectionProps {
+  lang: Locale
   rangeStart?: number
   rangeEnd?: number
 }
 
-export default function GamesSectionPl({ rangeStart = 1, rangeEnd = 10 }: GamesSectionProps) {
+export default function UniversalGamesSection({ lang, rangeStart = 1, rangeEnd = 10 }: UniversalGamesSectionProps) {
+  const t = gamesSectionTranslations[lang]
+
   const [activeGame, setActiveGame] = useState<GameType>(null)
-  
+
   // Speed Game states
   const [speedTimer, setSpeedTimer] = useState(60)
   const [speedScore, setSpeedScore] = useState(0)
   const [speedQuestion, setSpeedQuestion] = useState({ num1: 5, num2: 6 })
   const [speedAnswer, setSpeedAnswer] = useState('')
   const [speedActive, setSpeedActive] = useState(false)
-  
+
   // Hero Game states
   const [heroLevel, setHeroLevel] = useState(1)
   const [heroLives, setHeroLives] = useState(3)
   const [heroQuestion, setHeroQuestion] = useState({ num1: 2, num2: 3 })
   const [heroAnswer, setHeroAnswer] = useState('')
   const [heroQuestionsCleared, setHeroQuestionsCleared] = useState(0)
-  
+
   // Memory Game states
-  const [memoryCards, setMemoryCards] = useState<Array<{id: number, question: string, answer: number, flipped: boolean, matched: boolean}>>([])
+  const [memoryCards, setMemoryCards] = useState<Array<{ id: number, question: string, answer: number, flipped: boolean, matched: boolean }>>([])
   const [memoryFlipped, setMemoryFlipped] = useState<number[]>([])
   const [memoryMatches, setMemoryMatches] = useState(0)
-  
+
   // Space Game states
   const [rocketHeight, setRocketHeight] = useState(0)
   const [spaceQuestion, setSpaceQuestion] = useState({ num1: 3, num2: 4 })
@@ -90,7 +95,7 @@ export default function GamesSectionPl({ rangeStart = 1, rangeEnd = 10 }: GamesS
 
   const checkHeroAnswer = () => {
     const isCorrect = parseInt(heroAnswer) === heroQuestion.num1 * heroQuestion.num2
-if (isCorrect) {
+    if (isCorrect) {
       setHeroQuestionsCleared(prev => {
         const newCleared = prev + 1
         if (newCleared >= heroLevel * 5) {
@@ -133,14 +138,14 @@ if (isCorrect) {
   const flipMemoryCard = (id: number) => {
     if (memoryFlipped.length === 2) return
     if (memoryCards[id].flipped || memoryCards[id].matched) return
-    
+
     const newCards = [...memoryCards]
     newCards[id].flipped = true
     setMemoryCards(newCards)
-    
+
     const newFlipped = [...memoryFlipped, id]
     setMemoryFlipped(newFlipped)
-    
+
     if (newFlipped.length === 2) {
       const [first, second] = newFlipped
       if (memoryCards[first].answer === memoryCards[second].answer && first !== second) {
@@ -199,11 +204,11 @@ if (isCorrect) {
     <section id="games" className="section-container bg-gradient-to-br from-indigo-50 to-purple-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          🎮 Gry Edukacyjne
+          {t.sectionHeading}
         </h2>
-        
+
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Ucz się tabliczek mnożenia w zabawny sposób dzięki grom. Każda gra oferuje inną metodę nauki.
+          {t.subtitle}
         </p>
 
         {/* Game Selection */}
@@ -213,43 +218,43 @@ if (isCorrect) {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎯
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Wyzwanie Szybkości</h3>
-              <p className="text-slate-600 mb-4">Ile pytań możesz rozwiązać w 60 sekund?</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{t.speedCardTitle}</h3>
+              <p className="text-slate-600 mb-4">{t.speedCardDesc}</p>
               <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all">
-                Graj
+                {t.playButtonLabel}
               </button>
             </div>
-            
+
             <div onClick={() => { setActiveGame('hero'); startHeroGame(); }} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all cursor-pointer border border-gray-200 group">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🏆
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Bohater Mnożenia</h3>
-              <p className="text-slate-600 mb-4">Ukończ poziomy i osiągnij mistrzostwo</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{t.heroCardTitle}</h3>
+              <p className="text-slate-600 mb-4">{t.heroCardDesc}</p>
               <button className="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-purple-600 hover:to-purple-700 transition-all">
-                Graj
+                {t.playButtonLabel}
               </button>
             </div>
-            
+
             <div onClick={() => { setActiveGame('memory'); startMemoryGame(); }} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all cursor-pointer border border-gray-200 group">
               <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🎮
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Gra Pamięciowa</h3>
-              <p className="text-slate-600 mb-4">Dopasuj karty i mnóż</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{t.memoryCardTitle}</h3>
+              <p className="text-slate-600 mb-4">{t.memoryCardDesc}</p>
               <button className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-2 rounded-lg font-medium hover:from-pink-600 hover:to-pink-700 transition-all">
-                Graj
+                {t.playButtonLabel}
               </button>
             </div>
-            
+
             <div onClick={() => { setActiveGame('space'); startSpaceGame(); }} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all cursor-pointer border border-gray-200 group">
               <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 text-3xl group-hover:scale-110 transition-transform">
                 🚀
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">Przygoda Kosmiczna</h3>
-              <p className="text-slate-600 mb-4">Wystartuj swoją rakietą z poprawnymi odpowiedziami</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{t.spaceCardTitle}</h3>
+              <p className="text-slate-600 mb-4">{t.spaceCardDesc}</p>
               <button className="w-full bg-gradient-to-r from-indigo-500 to-indigo-600 text-white py-2 rounded-lg font-medium hover:from-indigo-600 hover:to-indigo-700 transition-all">
-                Graj
+                {t.playButtonLabel}
               </button>
             </div>
           </div>
@@ -260,17 +265,17 @@ if (isCorrect) {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-blue-600">🎯 Wyzwanie Szybkości</h3>
+                <h3 className="text-2xl font-bold text-blue-600">🎯 {t.speedCardTitle}</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Czas</div>
-                  <div className="text-3xl font-bold text-blue-600">{speedTimer}s</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.timeLabel}</div>
+                  <div className="text-3xl font-bold text-blue-600">{speedTimer}{t.timeUnit}</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Wynik</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.scoreLabel}</div>
                   <div className="text-3xl font-bold text-green-600">{speedScore}</div>
                 </div>
               </div>
@@ -304,10 +309,10 @@ if (isCorrect) {
               ) : (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Koniec Gry!</h4>
-                  <p className="text-xl text-slate-600 mb-6">Całkowity wynik: <span className="font-bold text-green-600">{speedScore}</span></p>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">{t.gameOverHeading}</h4>
+                  <p className="text-xl text-slate-600 mb-6">{t.totalScoreLabel} <span className="font-bold text-green-600">{speedScore}</span></p>
                   <button onClick={startSpeedGame} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700">
-                    Zagraj Ponownie
+                    {t.playAgainLabel}
                   </button>
                 </div>
               )}
@@ -316,25 +321,25 @@ if (isCorrect) {
         )}
 
         {/* Hero Game */}
-{activeGame === 'hero' && heroLives > 0 && (
+        {activeGame === 'hero' && heroLives > 0 && (
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-purple-600">🏆 Bohater Mnożenia</h3>
+                <h3 className="text-2xl font-bold text-purple-600">🏆 {t.heroCardTitle}</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
-              
+
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-purple-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Poziom</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.heroLevelLabel}</div>
                   <div className="text-3xl font-bold text-purple-600">{heroLevel}</div>
                 </div>
                 <div className="bg-red-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Życia</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.heroLivesLabel}</div>
                   <div className="text-3xl font-bold text-red-600">{'❤️'.repeat(heroLives)}</div>
                 </div>
                 <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Postęp</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.heroProgressLabel}</div>
                   <div className="text-2xl font-bold text-blue-600">{heroQuestionsCleared}/{heroLevel * 5}</div>
                 </div>
               </div>
@@ -358,7 +363,7 @@ if (isCorrect) {
                     disabled={!heroAnswer}
                     className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-purple-700 transition-all disabled:opacity-50"
                   >
-                    Zatwierdź
+                    {t.submitButtonLabel}
                   </button>
                 </div>
               </div>
@@ -371,23 +376,23 @@ if (isCorrect) {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-pink-600">🎮 Gra Pamięciowa</h3>
+                <h3 className="text-2xl font-bold text-pink-600">🎮 {t.memoryCardTitle}</h3>
                 <div className="flex items-center gap-4">
                   <div className="bg-pink-50 rounded-lg px-4 py-2">
-                    <span className="text-sm text-slate-600">Dopasowania: </span>
+                    <span className="text-sm text-slate-600">{t.memoryMatchesLabel} </span>
                     <span className="font-bold text-pink-600">{memoryMatches}/6</span>
                   </div>
                   <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
                 </div>
               </div>
-              
+
               {memoryMatches === 6 ? (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h4 className="text-2xl font-bold text-slate-900 mb-2">Gratulacje!</h4>
-                  <p className="text-xl text-slate-600 mb-6">Dopasowałeś wszystkie karty!</p>
+                  <h4 className="text-2xl font-bold text-slate-900 mb-2">{t.memoryWinHeading}</h4>
+                  <p className="text-xl text-slate-600 mb-6">{t.memoryWinText}</p>
                   <button onClick={startMemoryGame} className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-pink-700 hover:to-purple-700">
-                    Nowa Gra
+                    {t.newGameLabel}
                   </button>
                 </div>
               ) : (
@@ -416,17 +421,17 @@ if (isCorrect) {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-indigo-600">🚀 Przygoda Kosmiczna</h3>
+                <h3 className="text-2xl font-bold text-indigo-600">🚀 {t.spaceCardTitle}</h3>
                 <button onClick={() => setActiveGame(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-indigo-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Wysokość</div>
-                  <div className="text-3xl font-bold text-indigo-600">{rocketHeight}m</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.spaceHeightLabel}</div>
+                  <div className="text-3xl font-bold text-indigo-600">{rocketHeight}{t.spaceHeightUnit ?? ''}</div>
                 </div>
                 <div className="bg-orange-50 rounded-lg p-4 text-center">
-                  <div className="text-sm text-slate-600 mb-1">Seria</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.spaceStreakLabel}</div>
                   <div className="text-3xl font-bold text-orange-600">{spaceStreak} 🔥</div>
                 </div>
               </div>
@@ -434,7 +439,7 @@ if (isCorrect) {
               <div className="relative mb-6">
                 <div className="h-64 bg-gradient-to-b from-indigo-900 via-purple-900 to-blue-900 rounded-xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-stars opacity-50"></div>
-                  <div 
+                  <div
                     className="absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 text-6xl"
                     style={{ bottom: `${Math.min(rocketHeight / 2, 80)}%` }}
                   >
@@ -462,7 +467,7 @@ if (isCorrect) {
                     disabled={!spaceAnswer}
                     className="bg-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-indigo-700 transition-all disabled:opacity-50"
                   >
-                    Start! 🚀
+                    {t.launchButtonLabel}
                   </button>
                 </div>
               </div>
@@ -478,12 +483,10 @@ if (isCorrect) {
             </svg>
             <div>
               <h4 className="font-semibold text-slate-900 mb-2">
-                🎯 Wskazówki Dotyczące Gry
+                {t.tipsHeading}
               </h4>
               <p className="text-slate-700">
-                Każda gra wykorzystuje inną technikę nauki. Wyzwanie Szybkości zwiększa twoją szybkość, 
-                Bohater Mnożenia pomaga przezwyciężyć poziomy trudności, Gra Pamięciowa rozwija 
-                naukę wizualną, a Przygoda Kosmiczna zwiększa twoją motywację.
+                {t.tipsParagraph}
               </p>
             </div>
           </div>

@@ -1,18 +1,30 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import type { Locale } from '../../../lib/i18n-config'
+import { practicePreviewTranslations } from '../../../lib/practice-preview-translations'
 
 type ExerciseType = 'easy' | 'medium' | 'hard' | 'expert' | null
 
-interface PracticePreviewProps {
+interface UniversalPracticePreviewProps {
+  lang: Locale
   rangeStart?: number
   rangeEnd?: number
 }
 
-export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: PracticePreviewProps) {
+/** Replace {token} placeholders in a translation pattern string. */
+function fillTemplate(template: string, vars: Record<string, string | number>): string {
+  return Object.entries(vars).reduce(
+    (acc, [key, value]) => acc.split(`{${key}}`).join(String(value)),
+    template
+  )
+}
+
+export default function UniversalPracticePreview({ lang, rangeStart = 1, rangeEnd = 10 }: UniversalPracticePreviewProps) {
+  const t = practicePreviewTranslations[lang]
+
   const [activeTab, setActiveTab] = useState<'quick' | 'exercises'>('quick')
-  const [question, setQuestion] = useState({ 
+  const [question, setQuestion] = useState({
     num1: Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart,
     num2: Math.floor(Math.random() * 10) + 1
   })
@@ -20,9 +32,9 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
   const [score, setScore] = useState({ correct: 0, total: 0 })
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null)
   const [activeExercise, setActiveExercise] = useState<ExerciseType>(null)
-  
+
   // Exercise states
-  const [exerciseQuestions, setExerciseQuestions] = useState<Array<{num1: number, num2: number, userAnswer: string, correct: boolean | null}>>([])
+  const [exerciseQuestions, setExerciseQuestions] = useState<Array<{ num1: number, num2: number, userAnswer: string, correct: boolean | null }>>([])
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [exerciseCompleted, setExerciseCompleted] = useState(false)
 
@@ -38,7 +50,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
   const checkAnswer = () => {
     const correctAnswer = question.num1 * question.num2
     const isCorrect = parseInt(userAnswer) === correctAnswer
-    
+
     setFeedback(isCorrect ? 'correct' : 'wrong')
     setScore(prev => ({
       correct: prev.correct + (isCorrect ? 1 : 0),
@@ -66,7 +78,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
       hard: { min: Math.max(rangeStart, rangeEnd - 5), max: rangeEnd, count: 40 },
       expert: { min: rangeStart, max: rangeEnd, count: 50 }
     }
-    
+
     const { min, max, count } = config[type as keyof typeof config]
     const questions = Array.from({ length: count }, () => ({
       num1: Math.floor(Math.random() * (max - min + 1)) + min,
@@ -74,7 +86,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
       userAnswer: '',
       correct: null as boolean | null
     }))
-    
+
     setExerciseQuestions(questions)
     setCurrentQuestionIndex(0)
     setExerciseCompleted(false)
@@ -84,11 +96,11 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
   const submitExerciseAnswer = () => {
     const current = exerciseQuestions[currentQuestionIndex]
     const isCorrect = parseInt(current.userAnswer) === current.num1 * current.num2
-    
+
     const updated = [...exerciseQuestions]
     updated[currentQuestionIndex].correct = isCorrect
     setExerciseQuestions(updated)
-    
+
     if (currentQuestionIndex < exerciseQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
@@ -102,29 +114,44 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     setExerciseQuestions(updated)
   }
 
-  const exercises = [
+  const tableLabel = (start: number, end: number) =>
+    start === end
+      ? fillTemplate(t.tableSingleTemplate, { n: start })
+      : fillTemplate(t.tableRangeTemplate, { start, end })
+
+  const easyMax = Math.min(rangeStart + 4, rangeEnd)
+  const mediumMax = Math.min(rangeStart + 7, rangeEnd)
+  const hardMin = Math.max(rangeStart, rangeEnd - 5)
+
+  const exercises: Array<{ type: ExerciseType; level: string; range: string; questions: string; color: string }> = [
     {
-      level: 'Snadné',
-      range: rangeStart === rangeEnd ? `Tabulka ${rangeStart}` : `Tabulky ${rangeStart}-${Math.min(rangeStart + 4, rangeEnd)}`,
-      questions: '20 Otázek',
+      type: 'easy',
+      level: t.easyLevelLabel,
+      range: tableLabel(rangeStart, easyMax),
+      questions: fillTemplate(t.questionsCountTemplate, { n: 20 }),
       color: 'bg-green-100 text-green-700 border-green-300'
     },
     {
-      level: 'Střední',
-      range: rangeStart === rangeEnd ? `Tabulka ${rangeStart}` : `Tabulky ${rangeStart}-${Math.min(rangeStart + 7, rangeEnd)}`,
-      questions: '30 Otázek',
+      type: 'medium',
+      level: t.mediumLevelLabel,
+      range: tableLabel(rangeStart, mediumMax),
+      questions: fillTemplate(t.questionsCountTemplate, { n: 30 }),
       color: 'bg-yellow-100 text-yellow-700 border-yellow-300'
     },
     {
-      level: 'Těžké',
-      range: rangeStart === rangeEnd ? `Tabulka ${rangeStart}` : `Tabulky ${Math.max(rangeStart, rangeEnd - 5)}-${rangeEnd}`,
-      questions: '40 Otázek',
+      type: 'hard',
+      level: t.hardLevelLabel,
+      range: tableLabel(hardMin, rangeEnd),
+      questions: fillTemplate(t.questionsCountTemplate, { n: 40 }),
       color: 'bg-orange-100 text-orange-700 border-orange-300'
     },
     {
-      level: 'Expert',
-      range: rangeStart === rangeEnd ? `Tabulka ${rangeStart}` : `Tabulky ${rangeStart}-${rangeEnd}`,
-      questions: '50 Otázek',
+      type: 'expert',
+      level: t.expertLevelLabel,
+      range: rangeStart === rangeEnd
+        ? fillTemplate(t.tableSingleTemplate, { n: rangeStart })
+        : (t.expertMixedLabel ?? fillTemplate(t.tableRangeTemplate, { start: rangeStart, end: rangeEnd })),
+      questions: fillTemplate(t.questionsCountTemplate, { n: 50 }),
       color: 'bg-red-100 text-red-700 border-red-300'
     }
   ]
@@ -133,12 +160,11 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
     <section id="practice" className="section-container bg-gradient-to-br from-slate-50 to-blue-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          Cvičit Násobilku od {rangeStart} do {rangeEnd}
+          {fillTemplate(t.heading, { start: rangeStart, end: rangeEnd })}
         </h2>
-        
+
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Cvičení je velmi důležité pro upevnění naučené násobilky. 
-          Můžete cvičit zábavným způsobem pomocí následujících nástrojů.
+          {t.subtitle}
         </p>
 
         {/* Tab Navigation */}
@@ -152,7 +178,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              ⚡ Rychlé Cvičení
+              {t.tabQuickLabel}
             </button>
             <button
               onClick={() => setActiveTab('exercises')}
@@ -162,7 +188,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              📝 Cvičení
+              {t.tabExercisesLabel}
             </button>
           </div>
         </div>
@@ -173,15 +199,15 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-8">
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Správné</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.statCorrectLabel}</div>
                   <div className="text-2xl font-bold text-green-600">{score.correct}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Celkem</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.statTotalLabel}</div>
                   <div className="text-2xl font-bold text-blue-600">{score.total}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-sm text-slate-600 mb-1">Úspěšnost</div>
+                  <div className="text-sm text-slate-600 mb-1">{t.statSuccessLabel}</div>
                   <div className="text-2xl font-bold text-purple-600">
                     {score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0}%
                   </div>
@@ -201,7 +227,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={userAnswer}
                     onChange={(e) => setUserAnswer(e.target.value)}
                     onKeyPress={handleKeyPress}
-                    placeholder="Vaše odpověď"
+                    placeholder={t.answerPlaceholder}
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     disabled={feedback === 'correct'}
                   />
@@ -210,7 +236,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     disabled={!userAnswer || feedback === 'correct'}
                     className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                   >
-                    Zkontrolovat
+                    {t.checkAnswerButton}
                   </button>
                 </div>
 
@@ -221,16 +247,16 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     {feedback === 'correct' ? (
                       <div className="flex items-center justify-center gap-2">
                         <span className="text-3xl">✓</span>
-                        <span>Výborně! Správná odpověď!</span>
+                        <span>{t.feedbackCorrectText}</span>
                       </div>
                     ) : (
                       <div>
                         <div className="flex items-center justify-center gap-2 mb-2">
                           <span className="text-3xl">✗</span>
-                          <span>Zkuste to znovu!</span>
+                          <span>{t.feedbackWrongText}</span>
                         </div>
                         <div className="text-base text-slate-600">
-                          Správná odpověď: {question.num1 * question.num2}
+                          {t.correctAnswerPrefix} {question.num1 * question.num2}
                         </div>
                       </div>
                     )}
@@ -242,7 +268,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 onClick={generateQuestion}
                 className="w-full bg-gradient-to-r from-slate-600 to-slate-700 text-white py-3 rounded-xl font-semibold hover:from-slate-700 hover:to-slate-800 transition-all"
               >
-                🔄 Nová Otázka
+                {t.newQuestionButton}
               </button>
             </div>
           </div>
@@ -251,10 +277,10 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
         {/* Exercises Tab */}
         {activeTab === 'exercises' && !activeExercise && (
           <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
-            {exercises.map((exercise, index) => (
-              <div 
-                key={index}
-                onClick={() => startExercise(['easy', 'medium', 'hard', 'expert'][index] as ExerciseType)} 
+            {exercises.map((exercise) => (
+              <div
+                key={exercise.type}
+                onClick={() => startExercise(exercise.type)}
                 className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all cursor-pointer border-2 border-gray-200 group"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -268,7 +294,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                   <div className="text-3xl group-hover:scale-110 transition-transform">📋</div>
                 </div>
                 <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all mt-4">
-                  Začít
+                  {t.startButtonLabel}
                 </button>
               </div>
             ))}
@@ -276,25 +302,25 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
         )}
 
         {/* Active Exercise */}
-        {activeExercise && !exerciseCompleted && (
+        {activeExercise && !exerciseCompleted && exerciseQuestions.length > 0 && (
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-blue-600">📝 Cvičení</h3>
+                <h3 className="text-2xl font-bold text-blue-600">{t.exerciseHeading}</h3>
                 <button onClick={() => setActiveExercise(null)} className="text-slate-500 hover:text-slate-700">✕</button>
               </div>
 
               <div className="mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-slate-600">
-                    Otázka {currentQuestionIndex + 1} / {exerciseQuestions.length}
+                    {fillTemplate(t.questionCounterTemplate, { current: currentQuestionIndex + 1, total: exerciseQuestions.length })}
                   </span>
                   <span className="text-sm font-medium text-slate-600">
-                    Správné: {exerciseQuestions.filter(q => q.correct === true).length}
+                    {fillTemplate(t.scoreInExerciseTemplate, { n: exerciseQuestions.filter(q => q.correct === true).length })}
                   </span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
+                  <div
                     className="bg-blue-600 h-2 rounded-full transition-all"
                     style={{ width: `${((currentQuestionIndex + 1) / exerciseQuestions.length) * 100}%` }}
                   ></div>
@@ -311,7 +337,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     value={exerciseQuestions[currentQuestionIndex].userAnswer}
                     onChange={(e) => updateExerciseAnswer(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && exerciseQuestions[currentQuestionIndex].userAnswer && submitExerciseAnswer()}
-                    placeholder="Vaše odpověď"
+                    placeholder={t.answerPlaceholder}
                     className="w-40 text-3xl text-center px-6 py-4 border-2 border-gray-300 rounded-xl focus:border-blue-500 focus:outline-none"
                     autoFocus
                   />
@@ -320,7 +346,7 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                     disabled={!exerciseQuestions[currentQuestionIndex].userAnswer}
                     className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50"
                   >
-                    {currentQuestionIndex < exerciseQuestions.length - 1 ? 'Další' : 'Dokončit'}
+                    {currentQuestionIndex < exerciseQuestions.length - 1 ? t.nextButtonLabel : t.finishButtonLabel}
                   </button>
                 </div>
               </div>
@@ -336,23 +362,23 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 <div className="text-6xl mb-4">
                   {(exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) >= 0.8 ? '🎉' : '👍'}
                 </div>
-                <h3 className="text-3xl font-bold text-slate-900 mb-4">Cvičení Dokončeno!</h3>
-                
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">{t.exerciseCompleteHeading}</h3>
+
                 <div className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-8">
                   <div className="bg-green-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Správné</div>
+                    <div className="text-sm text-slate-600 mb-1">{t.statCorrectLabel}</div>
                     <div className="text-3xl font-bold text-green-600">
                       {exerciseQuestions.filter(q => q.correct === true).length}
                     </div>
                   </div>
                   <div className="bg-red-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Špatné</div>
+                    <div className="text-sm text-slate-600 mb-1">{t.resultWrongLabel}</div>
                     <div className="text-3xl font-bold text-red-600">
                       {exerciseQuestions.filter(q => q.correct === false).length}
                     </div>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4">
-                    <div className="text-sm text-slate-600 mb-1">Úspěšnost</div>
+                    <div className="text-sm text-slate-600 mb-1">{t.statSuccessLabel}</div>
                     <div className="text-3xl font-bold text-blue-600">
                       {Math.round((exerciseQuestions.filter(q => q.correct).length / exerciseQuestions.length) * 100)}%
                     </div>
@@ -360,33 +386,33 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
                 </div>
 
                 <div className="flex gap-4 justify-center">
-                  <button 
+                  <button
                     onClick={() => setActiveExercise(null)}
                     className="bg-gradient-to-r from-slate-600 to-slate-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-slate-700 hover:to-slate-800"
                   >
-                    Zpět
+                    {t.backButtonLabel}
                   </button>
-                  <button 
+                  <button
                     onClick={() => startExercise(activeExercise)}
                     className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700"
                   >
-                    Zkusit Znovu
+                    {t.tryAgainButtonLabel}
                   </button>
                 </div>
 
                 {/* Wrong answers review */}
                 {exerciseQuestions.filter(q => q.correct === false).length > 0 && (
                   <div className="mt-8 text-left max-w-xl mx-auto">
-                    <h4 className="font-semibold text-slate-900 mb-4">Špatné Odpovědi:</h4>
+                    <h4 className="font-semibold text-slate-900 mb-4">{t.incorrectAnswersHeading}</h4>
                     <div className="space-y-2">
-                      {exerciseQuestions.map((q, idx) => 
+                      {exerciseQuestions.map((q, idx) =>
                         q.correct === false && (
                           <div key={idx} className="bg-red-50 border border-red-200 rounded-lg p-3 flex justify-between items-center">
                             <span className="text-slate-700">
                               {q.num1} × {q.num2} = {q.num1 * q.num2}
                             </span>
                             <span className="text-red-600 font-medium">
-                              Vaše odpověď: {q.userAnswer}
+                              {t.yourAnswerLabel} {q.userAnswer}
                             </span>
                           </div>
                         )
@@ -407,14 +433,19 @@ export default function PracticePreview({ rangeStart = 1, rangeEnd = 10 }: Pract
             </svg>
             <div>
               <h4 className="font-semibold text-slate-900 mb-2">
-                💡 Tipy pro Cvičení
+                {t.tipsHeading}
               </h4>
-              <p className="text-slate-700">
-                Cvičení neznamená pouze rychlost. Pečlivě přemýšlejte o každé otázce, 
-                analyzujte své špatné odpovědi a rozpoznejte, které násobilky 
-                vám dělají potíže. Pravidelné cvičení 10-15 minut denně je 
-                nejúčinnější metodou pro dlouhodobé učení.
-              </p>
+              {t.tipsList ? (
+                <ul className="text-slate-700 space-y-1 text-sm">
+                  {t.tipsList.map((tip, idx) => (
+                    <li key={idx}>• {tip}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-slate-700">
+                  {t.tipsParagraph}
+                </p>
+              )}
             </div>
           </div>
         </div>

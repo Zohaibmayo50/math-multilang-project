@@ -9,6 +9,9 @@ import { getLocalizedPath } from '../../../lib/url-helpers'
 import type { PatternItem, MistakeItem } from '../../../lib/number-content-types'
 import UniversalHeader from './UniversalHeader'
 import UniversalFooter from './UniversalFooter'
+import UniversalPracticePreview from './UniversalPracticePreview'
+import UniversalPrintableExercises from './UniversalPrintableExercises'
+import UniversalNumberGames from './UniversalNumberGames'
 
 // Number-specific content modules (one per locale, see lib/number-content-*.ts)
 import * as trContent from '../../../lib/number-content-tr'
@@ -24,48 +27,8 @@ import * as enContent from '../../../lib/number-content-en'
 import * as plContent from '../../../lib/number-content-pl'
 import * as idContent from '../../../lib/number-content-id'
 
-// Sibling page sections (not yet unified — each locale still has its own real
-// implementation of PracticePreview / PrintableExercises / NumberGames).
-// Footer is unified — see UniversalFooter.tsx.
-
-import PracticePreviewTr from '../PracticePreview'
-import PracticePreviewEs from '../es/PracticePreview'
-import PracticePreviewDe from '../de/PracticePreview'
-import PracticePreviewCs from '../cs/PracticePreview'
-import PracticePreviewUk from '../uk/PracticePreview'
-import PracticePreviewFi from '../fi/PracticePreview'
-import PracticePreviewFr from '../fr/PracticePreview'
-import PracticePreviewSv from '../sv/PracticePreview'
-import PracticePreviewPt from '../pt/PracticePreview'
-import PracticePreviewEn from '../en/PracticePreview'
-import PracticePreviewPl from '../pl/PracticePreview'
-import PracticePreviewId from '../id/PracticePreview'
-
-import PrintableExercisesTr from '../PrintableExercises'
-import PrintableExercisesEs from '../es/PrintableExercises'
-import PrintableExercisesDe from '../de/PrintableExercises'
-import PrintableExercisesCs from '../cs/PrintableExercises'
-import PrintableExercisesUk from '../uk/PrintableExercises'
-import PrintableExercisesFi from '../fi/PrintableExercises'
-import PrintableExercisesFr from '../fr/PrintableExercises'
-import PrintableExercisesSv from '../sv/PrintableExercises'
-import PrintableExercisesPt from '../pt/PrintableExercises'
-import PrintableExercisesEn from '../en/PrintableExercises'
-import PrintableExercisesPl from '../pl/PrintableExercises'
-import PrintableExercisesId from '../id/PrintableExercises'
-
-import NumberGamesTr from '../NumberGames'
-import NumberGamesEs from '../es/NumberGames'
-import NumberGamesDe from '../de/NumberGames'
-import NumberGamesCs from '../cs/NumberGames'
-import NumberGamesUk from '../uk/NumberGames'
-import NumberGamesFi from '../fi/NumberGames'
-import NumberGamesFr from '../fr/NumberGames'
-import NumberGamesSv from '../sv/NumberGames'
-import NumberGamesPt from '../pt/NumberGames'
-import NumberGamesEn from '../en/NumberGames'
-import NumberGamesPl from '../pl/NumberGames'
-import NumberGamesId from '../id/NumberGames'
+// All sibling page sections are now unified — see UniversalFooter.tsx,
+// UniversalPracticePreview.tsx, UniversalPrintableExercises.tsx, UniversalNumberGames.tsx.
 
 interface UniversalNumberPageProps {
   lang: Locale
@@ -95,53 +58,6 @@ const contentByLocale: Record<Locale, NumberContentModule> = {
   en: enContent,
   pl: plContent,
   id: idContent,
-}
-
-type RangeProps = { rangeStart?: number; rangeEnd?: number }
-
-const PracticePreviewByLocale: Record<Locale, React.ComponentType<RangeProps>> = {
-  tr: PracticePreviewTr,
-  es: PracticePreviewEs,
-  de: PracticePreviewDe,
-  cs: PracticePreviewCs,
-  uk: PracticePreviewUk,
-  fi: PracticePreviewFi,
-  fr: PracticePreviewFr,
-  sv: PracticePreviewSv,
-  pt: PracticePreviewPt,
-  en: PracticePreviewEn,
-  pl: PracticePreviewPl,
-  id: PracticePreviewId,
-}
-
-const PrintableExercisesByLocale: Record<Locale, React.ComponentType<RangeProps>> = {
-  tr: PrintableExercisesTr,
-  es: PrintableExercisesEs,
-  de: PrintableExercisesDe,
-  cs: PrintableExercisesCs,
-  uk: PrintableExercisesUk,
-  fi: PrintableExercisesFi,
-  fr: PrintableExercisesFr,
-  sv: PrintableExercisesSv,
-  pt: PrintableExercisesPt,
-  en: PrintableExercisesEn,
-  pl: PrintableExercisesPl,
-  id: PrintableExercisesId,
-}
-
-const NumberGamesByLocale: Record<Locale, React.ComponentType<{ number: number }>> = {
-  tr: NumberGamesTr,
-  es: NumberGamesEs,
-  de: NumberGamesDe,
-  cs: NumberGamesCs,
-  uk: NumberGamesUk,
-  fi: NumberGamesFi,
-  fr: NumberGamesFr,
-  sv: NumberGamesSv,
-  pt: NumberGamesPt,
-  en: NumberGamesEn,
-  pl: NumberGamesPl,
-  id: NumberGamesId,
 }
 
 const gradientColors = [
@@ -175,9 +91,6 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
   const content = contentByLocale[lang]
   const topic = topicSlugs[lang]
 
-  const PracticePreview = PracticePreviewByLocale[lang]
-  const PrintableExercises = PrintableExercisesByLocale[lang]
-  const NumberGames = NumberGamesByLocale[lang]
 
   const colorIndex = (number - 1) % gradientColors.length
 
@@ -584,17 +497,17 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
 
         {/* Practice Section */}
         <div id="practice">
-          <PracticePreview rangeStart={number} rangeEnd={number} />
+          <UniversalPracticePreview lang={lang} rangeStart={number} rangeEnd={number} />
         </div>
 
         {/* Interactive Games */}
         <div id="games">
-          <NumberGames number={number} />
+          <UniversalNumberGames lang={lang} number={number} />
         </div>
 
         {/* Printable Worksheets */}
         <div id="worksheets">
-          <PrintableExercises rangeStart={number} rangeEnd={number} />
+          <UniversalPrintableExercises lang={lang} rangeStart={number} rangeEnd={number} />
         </div>
 
         {/* How to Practice (section skipped entirely if no curated strategies exist) */}

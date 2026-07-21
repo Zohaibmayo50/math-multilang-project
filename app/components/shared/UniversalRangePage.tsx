@@ -6,49 +6,12 @@ import { rangePageTranslations } from '../../../lib/range-page-translations'
 import { getLocalizedPath } from '../../../lib/url-helpers'
 import UniversalHeader from './UniversalHeader'
 import UniversalFooter from './UniversalFooter'
+import UniversalPracticePreview from './UniversalPracticePreview'
+import UniversalGamesSection from './UniversalGamesSection'
+import UniversalPrintableExercises from './UniversalPrintableExercises'
 
-// Sibling page sections (not yet unified — each locale still has its own real
-// implementation of PracticePreview / GamesSection / PrintableExercises).
-// Footer is unified — see UniversalFooter.tsx.
-
-import PracticePreviewTr from '../PracticePreview'
-import PracticePreviewEs from '../es/PracticePreview'
-import PracticePreviewDe from '../de/PracticePreview'
-import PracticePreviewCs from '../cs/PracticePreview'
-import PracticePreviewUk from '../uk/PracticePreview'
-import PracticePreviewFi from '../fi/PracticePreview'
-import PracticePreviewFr from '../fr/PracticePreview'
-import PracticePreviewSv from '../sv/PracticePreview'
-import PracticePreviewPt from '../pt/PracticePreview'
-import PracticePreviewEn from '../en/PracticePreview'
-import PracticePreviewPl from '../pl/PracticePreview'
-import PracticePreviewId from '../id/PracticePreview'
-
-import GamesSectionTr from '../GamesSection'
-import GamesSectionEs from '../es/GamesSection'
-import GamesSectionDe from '../de/GamesSection'
-import GamesSectionCs from '../cs/GamesSection'
-import GamesSectionUk from '../uk/GamesSection'
-import GamesSectionFi from '../fi/GamesSection'
-import GamesSectionFr from '../fr/GamesSection'
-import GamesSectionSv from '../sv/GamesSection'
-import GamesSectionPt from '../pt/GamesSection'
-import GamesSectionEn from '../en/GamesSection'
-import GamesSectionPl from '../pl/GamesSection'
-import GamesSectionId from '../id/GamesSection'
-
-import PrintableExercisesTr from '../PrintableExercises'
-import PrintableExercisesEs from '../es/PrintableExercises'
-import PrintableExercisesDe from '../de/PrintableExercises'
-import PrintableExercisesCs from '../cs/PrintableExercises'
-import PrintableExercisesUk from '../uk/PrintableExercises'
-import PrintableExercisesFi from '../fi/PrintableExercises'
-import PrintableExercisesFr from '../fr/PrintableExercises'
-import PrintableExercisesSv from '../sv/PrintableExercises'
-import PrintableExercisesPt from '../pt/PrintableExercises'
-import PrintableExercisesEn from '../en/PrintableExercises'
-import PrintableExercisesPl from '../pl/PrintableExercises'
-import PrintableExercisesId from '../id/PrintableExercises'
+// All sibling page sections are now unified — see UniversalFooter.tsx,
+// UniversalPracticePreview.tsx, UniversalGamesSection.tsx, UniversalPrintableExercises.tsx.
 
 interface UniversalRangePageProps {
   lang: Locale
@@ -58,53 +21,6 @@ interface UniversalRangePageProps {
   prevRangeUrl?: string
   difficultyLevel: 'beginner' | 'intermediate' | 'advanced'
   difficultyColor: string
-}
-
-type RangeProps = { rangeStart?: number; rangeEnd?: number }
-
-const PracticePreviewByLocale: Record<Locale, React.ComponentType<RangeProps>> = {
-  tr: PracticePreviewTr,
-  es: PracticePreviewEs,
-  de: PracticePreviewDe,
-  cs: PracticePreviewCs,
-  uk: PracticePreviewUk,
-  fi: PracticePreviewFi,
-  fr: PracticePreviewFr,
-  sv: PracticePreviewSv,
-  pt: PracticePreviewPt,
-  en: PracticePreviewEn,
-  pl: PracticePreviewPl,
-  id: PracticePreviewId,
-}
-
-const GamesSectionByLocale: Record<Locale, React.ComponentType<RangeProps>> = {
-  tr: GamesSectionTr,
-  es: GamesSectionEs,
-  de: GamesSectionDe,
-  cs: GamesSectionCs,
-  uk: GamesSectionUk,
-  fi: GamesSectionFi,
-  fr: GamesSectionFr,
-  sv: GamesSectionSv,
-  pt: GamesSectionPt,
-  en: GamesSectionEn,
-  pl: GamesSectionPl,
-  id: GamesSectionId,
-}
-
-const PrintableExercisesByLocale: Record<Locale, React.ComponentType<RangeProps>> = {
-  tr: PrintableExercisesTr,
-  es: PrintableExercisesEs,
-  de: PrintableExercisesDe,
-  cs: PrintableExercisesCs,
-  uk: PrintableExercisesUk,
-  fi: PrintableExercisesFi,
-  fr: PrintableExercisesFr,
-  sv: PrintableExercisesSv,
-  pt: PrintableExercisesPt,
-  en: PrintableExercisesEn,
-  pl: PrintableExercisesPl,
-  id: PrintableExercisesId,
 }
 
 const colors = [
@@ -139,9 +55,6 @@ export default function UniversalRangePage({
 }: UniversalRangePageProps) {
   const t = rangePageTranslations[lang]
 
-  const PracticePreview = PracticePreviewByLocale[lang]
-  const GamesSection = GamesSectionByLocale[lang]
-  const PrintableExercises = PrintableExercisesByLocale[lang]
 
   const rangeNumbers = Array.from({ length: rangeEnd - rangeStart + 1 }, (_, i) => rangeStart + i)
   const totalOps = rangeNumbers.length * 10
@@ -387,13 +300,13 @@ export default function UniversalRangePage({
         </section>
 
         {/* Practice Area */}
-        <PracticePreview rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        <UniversalPracticePreview lang={lang} rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
         {/* Games Section */}
-        <GamesSection rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        <UniversalGamesSection lang={lang} rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
         {/* Printable Worksheets */}
-        <PrintableExercises rangeStart={rangeStart} rangeEnd={rangeEnd} />
+        <UniversalPrintableExercises lang={lang} rangeStart={rangeStart} rangeEnd={rangeEnd} />
 
         {/* Range Table */}
         <section className="section-container bg-white">

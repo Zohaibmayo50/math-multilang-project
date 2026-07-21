@@ -68,44 +68,9 @@ import LearningPathsEn from '@/app/components/en/LearningPaths'
 import LearningPathsPl from '@/app/components/pl/LearningPaths'
 import LearningPathsId from '@/app/components/id/LearningPaths'
 
-import PracticePreview from '@/app/components/PracticePreview'
-import PracticePreviewEs from '@/app/components/es/PracticePreview'
-import PracticePreviewDe from '@/app/components/de/PracticePreview'
-import PracticePreviewCs from '@/app/components/cs/PracticePreview'
-import PracticePreviewUk from '@/app/components/uk/PracticePreview'
-import PracticePreviewFi from '@/app/components/fi/PracticePreview'
-import PracticePreviewFr from '@/app/components/fr/PracticePreview'
-import PracticePreviewSv from '@/app/components/sv/PracticePreview'
-import PracticePreviewPt from '@/app/components/pt/PracticePreview'
-import PracticePreviewEn from '@/app/components/en/PracticePreview'
-import PracticePreviewPl from '@/app/components/pl/PracticePreview'
-import PracticePreviewId from '@/app/components/id/PracticePreview'
-
-import GamesSection from '@/app/components/GamesSection'
-import GamesSectionEs from '@/app/components/es/GamesSection'
-import GamesSectionDe from '@/app/components/de/GamesSection'
-import GamesSectionCs from '@/app/components/cs/GamesSection'
-import GamesSectionUk from '@/app/components/uk/GamesSection'
-import GamesSectionFi from '@/app/components/fi/GamesSection'
-import GamesSectionFr from '@/app/components/fr/GamesSection'
-import GamesSectionSv from '@/app/components/sv/GamesSection'
-import GamesSectionPt from '@/app/components/pt/GamesSection'
-import GamesSectionEn from '@/app/components/en/GamesSection'
-import GamesSectionPl from '@/app/components/pl/GamesSection'
-import GamesSectionId from '@/app/components/id/GamesSection'
-
-import PrintableExercises from '@/app/components/PrintableExercises'
-import PrintableExercisesEs from '@/app/components/es/PrintableExercises'
-import PrintableExercisesDe from '@/app/components/de/PrintableExercises'
-import PrintableExercisesCs from '@/app/components/cs/PrintableExercises'
-import PrintableExercisesUk from '@/app/components/uk/PrintableExercises'
-import PrintableExercisesFi from '@/app/components/fi/PrintableExercises'
-import PrintableExercisesFr from '@/app/components/fr/PrintableExercises'
-import PrintableExercisesSv from '@/app/components/sv/PrintableExercises'
-import PrintableExercisesPt from '@/app/components/pt/PrintableExercises'
-import PrintableExercisesEn from '@/app/components/en/PrintableExercises'
-import PrintableExercisesPl from '@/app/components/pl/PrintableExercises'
-import PrintableExercisesId from '@/app/components/id/PrintableExercises'
+import UniversalPracticePreview from '@/app/components/shared/UniversalPracticePreview'
+import UniversalGamesSection from '@/app/components/shared/UniversalGamesSection'
+import UniversalPrintableExercises from '@/app/components/shared/UniversalPrintableExercises'
 
 import AudienceSection from '@/app/components/AudienceSection'
 import AudienceSectionEs from '@/app/components/es/AudienceSection'
@@ -162,24 +127,6 @@ const LearningPathsByLocale: Record<Locale, ComponentType> = {
   tr: LearningPaths, es: LearningPathsEs, de: LearningPathsDe, cs: LearningPathsCs,
   uk: LearningPathsUk, fi: LearningPathsFi, fr: LearningPathsFr, sv: LearningPathsSv,
   pt: LearningPathsPt, en: LearningPathsEn, pl: LearningPathsPl, id: LearningPathsId,
-}
-
-const PracticePreviewByLocale: Record<Locale, ComponentType<{ rangeStart: number; rangeEnd: number }>> = {
-  tr: PracticePreview, es: PracticePreviewEs, de: PracticePreviewDe, cs: PracticePreviewCs,
-  uk: PracticePreviewUk, fi: PracticePreviewFi, fr: PracticePreviewFr, sv: PracticePreviewSv,
-  pt: PracticePreviewPt, en: PracticePreviewEn, pl: PracticePreviewPl, id: PracticePreviewId,
-}
-
-const GamesSectionByLocale: Record<Locale, ComponentType> = {
-  tr: GamesSection, es: GamesSectionEs, de: GamesSectionDe, cs: GamesSectionCs,
-  uk: GamesSectionUk, fi: GamesSectionFi, fr: GamesSectionFr, sv: GamesSectionSv,
-  pt: GamesSectionPt, en: GamesSectionEn, pl: GamesSectionPl, id: GamesSectionId,
-}
-
-const PrintableExercisesByLocale: Record<Locale, ComponentType> = {
-  tr: PrintableExercises, es: PrintableExercisesEs, de: PrintableExercisesDe, cs: PrintableExercisesCs,
-  uk: PrintableExercisesUk, fi: PrintableExercisesFi, fr: PrintableExercisesFr, sv: PrintableExercisesSv,
-  pt: PrintableExercisesPt, en: PrintableExercisesEn, pl: PrintableExercisesPl, id: PrintableExercisesId,
 }
 
 const AudienceSectionByLocale: Record<Locale, ComponentType> = {
@@ -359,9 +306,6 @@ export default async function TopicHomePage({ params }: PageProps) {
   const WhyItMatters = WhyItMattersByLocale[locale]
   const HowToLearn = HowToLearnByLocale[locale]
   const LearningPaths = LearningPathsByLocale[locale]
-  const PracticePreview = PracticePreviewByLocale[locale]
-  const GamesSection = GamesSectionByLocale[locale]
-  const PrintableExercises = PrintableExercisesByLocale[locale]
   const AudienceSection = AudienceSectionByLocale[locale]
 
   return (
@@ -382,9 +326,9 @@ export default async function TopicHomePage({ params }: PageProps) {
       <main className="min-h-screen">
         <Hero />
         <LearningPaths />
-        <PracticePreview rangeStart={1} rangeEnd={100} />
-        <GamesSection />
-        <PrintableExercises />
+        <UniversalPracticePreview lang={locale} rangeStart={1} rangeEnd={100} />
+        <UniversalGamesSection lang={locale} />
+        <UniversalPrintableExercises lang={locale} />
         <DefinitionSection />
         <WhyItMatters />
         <HowToLearn />

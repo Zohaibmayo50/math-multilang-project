@@ -1,13 +1,26 @@
-﻿'use client'
+'use client'
 
 import { useState, useRef } from 'react'
+import type { Locale } from '../../../lib/i18n-config'
+import { printableExercisesTranslations } from '../../../lib/printable-exercises-translations'
 
-interface PrintableExercisesProps {
+interface UniversalPrintableExercisesProps {
+  lang: Locale
   rangeStart?: number
   rangeEnd?: number
 }
 
-export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, rangeEnd: defaultRangeEnd = 10 }: PrintableExercisesProps) {
+/** Replace {token} placeholders in a translation pattern string. */
+function fillTemplate(template: string, vars: Record<string, string | number>): string {
+  return Object.entries(vars).reduce(
+    (acc, [key, value]) => acc.split(`{${key}}`).join(String(value)),
+    template
+  )
+}
+
+export default function UniversalPrintableExercises({ lang, rangeStart: defaultRangeStart = 1, rangeEnd: defaultRangeEnd = 10 }: UniversalPrintableExercisesProps) {
+  const t = printableExercisesTranslations[lang]
+
   const [selectedTable, setSelectedTable] = useState<number>(defaultRangeStart)
   const [questionCount, setQuestionCount] = useState<number>(20)
   const [includeAnswers, setIncludeAnswers] = useState<boolean>(false)
@@ -18,7 +31,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
   const generateQuestions = () => {
     const questions: { num1: number; num2: number; answer: number }[] = []
-    
+
     if (exerciseType === 'single') {
       for (let i = 0; i < questionCount; i++) {
         const num2 = Math.floor(Math.random() * 10) + 1
@@ -37,21 +50,26 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
         questions.push({ num1, num2, answer: num1 * num2 })
       }
     }
-    
+
     return questions
   }
 
   const handlePrint = () => {
     const questions = generateQuestions()
     const printWindow = window.open('', '_blank')
-    
-    if (printWindow) {
-      const title = exerciseType === 'single' 
-        ? `Exercícios da Tabuada do ${selectedTable}`
-        : exerciseType === 'mixed'
-        ? 'Exercícios Mistos de Tabuada'
-        : `Exercícios de Tabuada ${rangeStart}-${rangeEnd}`
 
+    if (printWindow) {
+      const title = exerciseType === 'single'
+        ? fillTemplate(t.singleTitleTemplate, { n: selectedTable })
+        : exerciseType === 'mixed'
+        ? t.mixedTitle
+        : fillTemplate(t.rangeTitleTemplate, { start: rangeStart, end: rangeEnd })
+
+      // NOTE: HTML tags and CSS selectors (body, .question, .answer-key, ...) are
+      // hardcoded literals here and must NEVER be sourced from the translations
+      // object — see the DATA QUALITY FLAG in printable-exercises-translations.ts
+      // documenting how uk's source file had `body`/`<body>`/`</body>` mistranslated
+      // to a Ukrainian word, which broke its print stylesheet.
       printWindow.document.write(`
         <!DOCTYPE html>
         <html>
@@ -142,16 +160,16 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </style>
           </head>
           <body>
-            <button onclick="window.print()" class="print-button no-print">🖨️ Imprimir</button>
+            <button onclick="window.print()" class="print-button no-print">🖨️ ${t.printLabel}</button>
             <h1>${title}</h1>
             <div class="info">
-              <p>Data: ${new Date().toLocaleDateString('pt-BR')}</p>
-              <p>Total de Questões: ${questionCount}</p>
+              <p>${t.printDateLabel} ${new Date().toLocaleDateString(t.dateLocaleCode)}</p>
+              <p>${t.totalQuestionsPrintLabel} ${questionCount}</p>
             </div>
             <div class="questions">
               ${questions.map((q, i) => `
                 <div class="question">
-                  <div class="question-number">Questão ${i + 1}</div>
+                  <div class="question-number">${fillTemplate(t.questionLabelTemplate, { n: i + 1 })}</div>
                   <div class="equation">${q.num1} × ${q.num2} = </div>
                   <div class="answer-line"></div>
                 </div>
@@ -159,7 +177,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             </div>
             ${includeAnswers ? `
               <div class="answer-key">
-                <h2>Gabarito</h2>
+                <h2>${t.answerKeyHeading}</h2>
                 <div class="answers">
                   ${questions.map((q, i) => `
                     <div class="answer-item">
@@ -186,12 +204,11 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
     <section id="pdf-exercises" className="section-container bg-gradient-to-br from-purple-50 to-pink-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-slate-900 mb-4 text-center">
-          📄 Exercícios Imprimíveis
+          {t.sectionHeading}
         </h2>
-        
+
         <p className="text-center text-slate-700 max-w-3xl mx-auto mb-12 text-lg">
-          Crie exercícios personalizados de tabuada para seus alunos ou filhos. 
-          Imprima ou salve como PDF.
+          {t.introText}
         </p>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
@@ -200,7 +217,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Tipo de Exercício
+                  {t.exerciseTypeLabel}
                 </label>
                 <div className="space-y-2">
                   <label className="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
@@ -212,11 +229,11 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Tabuada Única</div>
-                      <div className="text-sm text-slate-600">Uma tabuada específica</div>
+                      <div className="font-medium text-slate-900">{t.singleOptionLabel}</div>
+                      <div className="text-sm text-slate-600">{t.singleOptionDesc}</div>
                     </div>
                   </label>
-                  
+
                   <label className="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                     <input
                       type="radio"
@@ -226,11 +243,11 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Intervalo</div>
-                      <div className="text-sm text-slate-600">Tabuadas dentro de um intervalo</div>
+                      <div className="font-medium text-slate-900">{t.rangeOptionLabel}</div>
+                      <div className="text-sm text-slate-600">{t.rangeOptionDesc}</div>
                     </div>
                   </label>
-                  
+
                   <label className="flex items-center p-3 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition-colors">
                     <input
                       type="radio"
@@ -240,8 +257,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                       className="mr-3"
                     />
                     <div>
-                      <div className="font-medium text-slate-900">Misto</div>
-                      <div className="text-sm text-slate-600">Aleatório de todas as tabuadas</div>
+                      <div className="font-medium text-slate-900">{t.mixedOptionLabel}</div>
+                      <div className="text-sm text-slate-600">{t.mixedOptionDesc}</div>
                     </div>
                   </label>
                 </div>
@@ -250,7 +267,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               {exerciseType === 'single' && (
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">
-                    Tabuada
+                    {t.singleTableLabel}
                   </label>
                   <select
                     value={selectedTable}
@@ -259,7 +276,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   >
                     {[...Array(11)].map((_, i) => (
                       <option key={i + 2} value={i + 2}>
-                        Tabuada do {i + 2}
+                        {fillTemplate(t.singleTableOptionTemplate, { n: i + 2 })}
                       </option>
                     ))}
                   </select>
@@ -270,7 +287,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Início
+                      {t.rangeStartLabel}
                     </label>
                     <select
                       value={rangeStart}
@@ -284,7 +301,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">
-                      Fim
+                      {t.rangeEndLabel}
                     </label>
                     <select
                       value={rangeEnd}
@@ -303,7 +320,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div>
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                  Número de Questões: {questionCount}
+                  {t.questionCountLabel} {questionCount}
                 </label>
                 <input
                   type="range"
@@ -330,8 +347,8 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
                     className="mr-3 w-5 h-5"
                   />
                   <div>
-                    <div className="font-medium text-slate-900">Incluir Gabarito</div>
-                    <div className="text-sm text-slate-600">Adiciona as respostas no final da página</div>
+                    <div className="font-medium text-slate-900">{t.includeAnswersLabel}</div>
+                    <div className="text-sm text-slate-600">{t.includeAnswersDesc}</div>
                   </div>
                 </label>
               </div>
@@ -340,37 +357,37 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
             {/* Right Column - Preview */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200">
               <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
-                <span>👁️</span> Pré-visualização
+                <span>👁️</span> {t.previewHeading}
               </h3>
-              
+
               <div className="bg-white rounded-lg p-4 mb-4 space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Tipo:</span>
+                  <span className="text-sm text-slate-600">{t.previewTypeLabel}</span>
                   <span className="font-semibold text-slate-900">
-                    {exerciseType === 'single' 
-                      ? `Tabuada do ${selectedTable}`
+                    {exerciseType === 'single'
+                      ? fillTemplate(t.previewSingleTemplate, { n: selectedTable })
                       : exerciseType === 'range'
-                      ? `Tabuadas ${rangeStart}-${rangeEnd}`
-                      : 'Misto'}
+                      ? fillTemplate(t.previewRangeTemplate, { start: rangeStart, end: rangeEnd })
+                      : t.previewMixedLabel}
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Número de Questões:</span>
+                  <span className="text-sm text-slate-600">{t.questionCountLabel}</span>
                   <span className="font-semibold text-slate-900">{questionCount}</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-sm text-slate-600">Gabarito:</span>
+                  <span className="text-sm text-slate-600">{t.answerKeyPreviewLabel}</span>
                   <span className={`font-semibold ${includeAnswers ? 'text-green-600' : 'text-slate-400'}`}>
-                    {includeAnswers ? 'Sim ✓' : 'Não ✗'}
+                    {includeAnswers ? t.yesLabel : t.noLabel}
                   </span>
                 </div>
               </div>
 
               <div className="bg-white rounded-lg p-4 space-y-2">
-                <div className="text-sm font-semibold text-slate-700 mb-2">Exemplos de Questões:</div>
+                <div className="text-sm font-semibold text-slate-700 mb-2">{t.sampleQuestionsLabel}</div>
                 {[...Array(3)].map((_, i) => {
-                  const num1 = exerciseType === 'single' 
-                    ? selectedTable 
+                  const num1 = exerciseType === 'single'
+                    ? selectedTable
                     : exerciseType === 'range'
                     ? Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart
                     : Math.floor(Math.random() * 10) + 1
@@ -386,7 +403,7 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
 
               <div className="mt-4 p-3 bg-blue-100 rounded-lg border border-blue-300">
                 <p className="text-sm text-blue-900">
-                  💡 <strong>Dica:</strong> Você pode salvar como PDF usando a função de impressão do seu navegador.
+                  💡 <strong>{t.tipLabel}</strong> {t.tipText}
                 </p>
               </div>
             </div>
@@ -399,14 +416,14 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
               className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg"
             >
               <span className="text-xl">🖨️</span>
-              Imprimir
+              {t.printLabel}
             </button>
             <button
               onClick={handleDownloadPDF}
               className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-purple-800 transition-all shadow-lg"
             >
               <span className="text-xl">📥</span>
-              Baixar PDF
+              {t.downloadPdfLabel}
             </button>
           </div>
         </div>
@@ -415,23 +432,23 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">🎯</div>
-            <h4 className="font-bold text-slate-900 mb-2">Personalizável</h4>
+            <h4 className="font-bold text-slate-900 mb-2">{t.infoCard1Title}</h4>
             <p className="text-sm text-slate-600">
-              Personalize o número de questões, tabuadas e nível de dificuldade conforme suas necessidades.
+              {t.infoCard1Text}
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">📱</div>
-            <h4 className="font-bold text-slate-900 mb-2">Compatível com Mobile</h4>
+            <h4 className="font-bold text-slate-900 mb-2">{t.infoCard2Title}</h4>
             <p className="text-sm text-slate-600">
-              Imprima facilmente de telefone, tablet ou computador.
+              {t.infoCard2Text}
             </p>
           </div>
           <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
             <div className="text-3xl mb-3">💾</div>
-            <h4 className="font-bold text-slate-900 mb-2">Salvar e Compartilhar</h4>
+            <h4 className="font-bold text-slate-900 mb-2">{t.infoCard3Title}</h4>
             <p className="text-sm text-slate-600">
-              Salve como PDF e compartilhe facilmente com seus alunos.
+              {t.infoCard3Text}
             </p>
           </div>
         </div>
@@ -439,6 +456,3 @@ export default function PrintableExercises({ rangeStart: defaultRangeStart = 1, 
     </section>
   )
 }
-
-
-
