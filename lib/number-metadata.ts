@@ -2052,9 +2052,11 @@ for (let i = 11; i <= 100; i++) {
   8: 'Master the 8 multiplication table. Learn with double-four, double-double-two strategies, and practical techniques.',
   9: 'Master the 9 multiplication table. Learn easily with the finger trick, 10-minus-1 strategy, and patterns.',
   10: 'Master the 10 multiplication table. Learn the easiest multiplication table with the zero-adding rule and practical strategies.',
+  11: 'Master the 11 multiplication table. Learn the mirror-digit pattern (11×4=44), the 10-plus-1 shortcut, and practical strategies.',
+  12: 'Master the 12 multiplication table. Learn the 10-plus-2 split, dozen-based real-world connections, and practical strategies.',
 }
-  // Generate descriptions for 11-100 (generic pattern)
-for (let i = 11; i <= 100; i++) {
+  // Generate descriptions for 13-100 (generic pattern)
+for (let i = 13; i <= 100; i++) {
   descriptions[i] = `Master the ${i} multiplication table. Learn to multiply by ${i} easily with practical exercises, patterns, and strategies.`
 }
   const specialProperties: Record<number, string> = {
@@ -2068,9 +2070,11 @@ for (let i = 11; i <= 100; i++) {
   8: 'Octal Systems',
   9: 'Finger Trick',
   10: 'Decimal System',
+  11: 'Mirror Digit Pattern',
+  12: 'A Dozen',
 }
   // Generic property for higher numbers
-for (let i = 11; i <= 100; i++) {
+for (let i = 13; i <= 100; i++) {
   specialProperties[i] = `Multiply by ${i}`
 }
   return { titles, descriptions, specialProperties }
