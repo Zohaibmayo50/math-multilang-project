@@ -2,6 +2,19 @@ import { MetadataRoute } from 'next'
 import { i18n, topicSlugs, siteConfig, guides } from '@/lib/i18n-config'
 import { getAllRanges, getAllNumbers } from '@/lib/url-helpers'
 
+// Date each group of pages was last meaningfully updated with new content.
+// Update the relevant entry when that group's content actually changes —
+// this is what tells Google the page genuinely deserves recrawling.
+const CONTENT_LAST_UPDATED: Record<string, string> = {
+  homepage: '2026-07-21',
+  languageHubs: '2026-07-21',
+  topicHubs: '2026-07-21',
+  rangePages: '2026-07-21',
+  audiencePages: '2026-07-21',
+  numberPages_1_12: '2026-07-21',
+  numberPages_13_100: '2026-07-21',
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.tr.domain
   const sitemap: MetadataRoute.Sitemap = []
@@ -9,9 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Root language selector page
   sitemap.push({
     url: baseUrl,
-    lastModified: new Date(),
+    lastModified: CONTENT_LAST_UPDATED.homepage,
     changeFrequency: 'weekly',
-    priority: 1,
+    priority: 1.0,
   })
 
   // Generate pages for all languages
@@ -22,49 +35,52 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Language hub page
     sitemap.push({
       url: `${baseUrl}/${locale}`,
-      lastModified: new Date(),
+      lastModified: CONTENT_LAST_UPDATED.languageHubs,
       changeFrequency: 'weekly',
-      priority: locale === 'tr' ? 0.95 : 0.7,
+      priority: 0.8,
     })
 
     // Topic homepage for each language
     sitemap.push({
       url: topicBase,
-      lastModified: new Date(),
+      lastModified: CONTENT_LAST_UPDATED.topicHubs,
       changeFrequency: 'weekly',
-      priority: locale === 'tr' ? 0.9 : 0.6,
+      priority: 0.8,
     })
 
     // Range pages
     const ranges = getAllRanges()
-    ranges.forEach((range, index) => {
+    ranges.forEach(range => {
       sitemap.push({
         url: `${topicBase}/${range}`,
-        lastModified: new Date(),
+        lastModified: CONTENT_LAST_UPDATED.rangePages,
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? (index === 0 ? 0.8 : 0.7) : 0.5,
+        priority: 0.6,
       })
     })
 
-    // Number pages (1-100)
+    // Number pages 1-12 (standard school times tables — treated as primary content)
     const numbers = getAllNumbers()
     numbers.forEach(number => {
+      const isCoreTable = Number(number) <= 12
       sitemap.push({
         url: `${topicBase}/${number}`,
-        lastModified: new Date(),
+        lastModified: isCoreTable
+          ? CONTENT_LAST_UPDATED.numberPages_1_12
+          : CONTENT_LAST_UPDATED.numberPages_13_100,
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? 0.6 : 0.4,
+        priority: isCoreTable ? 0.5 : 0.4,
       })
     })
 
-    // Guide pages (under topic)
+    // Guide pages (audience pages: students/teachers/parents)
     const localeGuides = guides[locale]
     Object.values(localeGuides).forEach(guideSlug => {
       sitemap.push({
         url: `${topicBase}/${guideSlug}`,
-        lastModified: new Date(),
+        lastModified: CONTENT_LAST_UPDATED.audiencePages,
         changeFrequency: 'monthly',
-        priority: locale === 'tr' ? 0.8 : 0.5,
+        priority: 0.6,
       })
     })
   })
@@ -75,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 // Legacy sitemap for old URLs (will be deprecated)
 export function legacySitemap(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.tr.domain
-  
+
   // Generate number pages (1-100) - old structure
   const numberPages = Array.from({ length: 100 }, (_, i) => ({
     url: `${baseUrl}/sayi/${i + 1}`,
@@ -83,7 +99,7 @@ export function legacySitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
-  
+
   // Generate range pages - old structure
   const rangePages = [
     { url: `${baseUrl}/1-10`, priority: 0.9 },
@@ -101,7 +117,7 @@ export function legacySitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
   }))
-  
+
   // Guide pages - old structure
   const guidePages = [
     { url: `${baseUrl}/ogrenciler-icin`, priority: 0.9 },
@@ -112,7 +128,7 @@ export function legacySitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
   }))
-  
+
   return [
     ...rangePages,
     ...guidePages,
