@@ -764,7 +764,6 @@ export default async function LanguageHub({ params }: PageProps) {
   const topics = topicMetadata[lang]
   const hub = hubContent[lang]
   const availableTopics = topics.filter(t => t.status === 'available')
-  const comingSoonTopics = topics.filter(t => t.status === 'coming-soon')
 
   const config = siteConfig[lang]
   
@@ -883,35 +882,6 @@ export default async function LanguageHub({ params }: PageProps) {
           </div>
         </div>
 
-        {/* Coming Soon Topics */}
-        {comingSoonTopics.length > 0 && (
-          <div className="max-w-4xl mx-auto mb-16">
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">{content.comingSoon}</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {comingSoonTopics.map((topic, index) => (
-                <div
-                  key={index}
-                  className="bg-white bg-opacity-60 rounded-2xl shadow-md p-6 border-2 border-dashed border-slate-300 opacity-75 cursor-not-allowed"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="text-6xl flex-shrink-0 opacity-50">{topic.icon}</div>
-                    <div className="flex-1 min-w-0">
-                      <h3 className="text-xl font-bold text-slate-700 mb-2">
-                        {topic.title}
-                      </h3>
-                      <p className="text-base text-slate-600 mb-3">
-                        {topic.description}
-                      </p>
-                      <div className="inline-flex items-center text-sm font-semibold text-slate-600">
-                        <span>{topic.shortDescription}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Introduction Section */}
