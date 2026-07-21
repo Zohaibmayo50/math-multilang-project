@@ -2,7 +2,7 @@
 // fixed generic template content instead of per-number data). Per product decision,
 // id's generic sections are NOT ported into the universal template — all functions
 // return null/[] unconditionally.
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 export function getNumberMeaning(_n: number): string | null {
   return null
@@ -22,4 +22,12 @@ export function getCommonMistakes(_n: number): MistakeItem[] {
 
 export function getPracticeStrategies(_n: number): string[] {
   return []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

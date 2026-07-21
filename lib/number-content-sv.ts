@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/sv/NumberPage.tsx
 // Per-number curated content for locale: sv
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Att multiplicera med 1 är ett specialfall i matematik. När du multiplicerar vilket tal som helst med 1, är resultatet alltid samma tal. Detta kallas multiplikationens identitetsegenskap. Tänk på det så här: 'Hur många grupper har jag?' Om du bara har 1 grupp, har du exakt vad du började med.",
@@ -93,4 +93,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

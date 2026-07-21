@@ -6,7 +6,7 @@ import type { Locale } from '../../../lib/i18n-config'
 import { topicSlugs } from '../../../lib/i18n-config'
 import { numberPageTranslations } from '../../../lib/number-page-translations'
 import { getLocalizedPath } from '../../../lib/url-helpers'
-import type { PatternItem, MistakeItem } from '../../../lib/number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from '../../../lib/number-content-types'
 import UniversalHeader from './UniversalHeader'
 import UniversalFooter from './UniversalFooter'
 import UniversalPracticePreview from './UniversalPracticePreview'
@@ -43,6 +43,8 @@ interface NumberContentModule {
   getPatterns: (n: number) => PatternItem[]
   getCommonMistakes: (n: number) => MistakeItem[]
   getPracticeStrategies: (n: number) => string[]
+  getRealLifeExamples: (n: number) => RealLifeItem[] | null
+  getFunFacts: (n: number) => FunFactItem[] | null
 }
 
 const contentByLocale: Record<Locale, NumberContentModule> = {
@@ -229,6 +231,8 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
   const patterns = content.getPatterns(number)
   const mistakes = content.getCommonMistakes(number)
   const strategies = content.getPracticeStrategies(number)
+  const realLifeExamples = content.getRealLifeExamples(number)
+  const funFacts = content.getFunFacts(number)
 
   const hasMeaningSection = Boolean(meaning) || Boolean(whyImportant)
 
@@ -564,6 +568,52 @@ export default function UniversalNumberPage({ lang, number, rangeStart, rangeEnd
                         </p>
                       </div>
                     </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Where You See {number} in Real Life (section skipped entirely if no curated examples exist) */}
+        {realLifeExamples && realLifeExamples.length > 0 && (
+          <section className="section-container bg-white py-8 sm:py-12">
+            <div className="max-w-6xl mx-auto px-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 sm:mb-6">
+                {fill(t.realLifeHeading)}
+              </h2>
+
+              <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                {realLifeExamples.map((item, index) => (
+                  <div key={index} className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-xl p-3 sm:p-4 border-2 border-sky-100">
+                    <h3 className="text-base sm:text-lg font-semibold text-slate-900 mb-1.5 sm:mb-2">
+                      {item.context}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                      {item.detail}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Fun Facts About {number} (section skipped entirely if no curated fun facts exist) */}
+        {funFacts && funFacts.length > 0 && (
+          <section className="section-container bg-gradient-to-br from-slate-50 to-gray-100">
+            <div className="max-w-4xl mx-auto px-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
+                {fill(t.funFactsHeading)}
+              </h2>
+
+              <div className="space-y-3 sm:space-y-4">
+                {funFacts.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3 sm:gap-4 bg-white rounded-xl p-4 sm:p-5 border-2 border-purple-100 shadow-sm">
+                    <span className="text-xl sm:text-2xl">✨</span>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      {item.fact}
+                    </p>
                   </div>
                 ))}
               </div>

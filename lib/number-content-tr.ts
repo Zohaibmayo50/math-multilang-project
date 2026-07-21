@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/NumberPage.tsx
 // Per-number curated content for locale: tr
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "1 ile çarpmak, matematikte özel bir durumdur. Herhangi bir sayıyı 1 ile çarptığınızda, sonuç her zaman aynı sayıdır. Buna çarpmanın özdeşlik özelliği denir. Bunu 'bir şeyden kaç grubum var?' diye sormak gibi düşünün. Sadece 1 grubunuz olduğunda, tam olarak başladığınız şeye sahipsiniz.",
@@ -1836,4 +1836,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

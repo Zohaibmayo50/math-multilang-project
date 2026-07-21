@@ -12,3 +12,12 @@ export interface MistakeItem {
   mistake: string
   solution: string
 }
+
+export interface RealLifeItem {
+  context: string
+  detail: string
+}
+
+export interface FunFactItem {
+  fact: string
+}

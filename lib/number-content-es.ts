@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/es/NumberPage.tsx
 // Per-number curated content for locale: es
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Multiplicar por 1 es un caso especial en matemáticas. Cuando multiplicas cualquier número por 1, el resultado siempre es ese mismo número. Esto se llama la propiedad de identidad de la multiplicación. Piénsalo como preguntar '¿cuántos grupos de algo tengo?' Cuando solo tienes 1 grupo, tienes exactamente lo que empezaste.",
@@ -1836,4 +1836,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/en/NumberPage.tsx
 // Per-number curated content for locale: en
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Multiplying by 1 is a special case in mathematics. When you multiply any number by 1, the result is always the same number. This is called the identity property of multiplication. Think of it this way: 'How many groups do I have?' If you only have 1 group, you have exactly what you started with.",
@@ -29,6 +29,7 @@ const importance: { [key: number]: string } = {
       1: "The 1 times table is the foundation of all multiplication operations. It teaches students that numbers have an identity: when multiplied by 1, they remain unchanged. This concept is important for understanding later algebraic properties. While it seems simple, learning this times table builds confidence and establishes the pattern that multiplication is orderly and predictable.",
       2: "The 2 times table is generally the first real times table students learn, and there's a good reason for that. Doubling is a natural concept that children encounter daily. Learning this times table makes mental arithmetic much faster and prepares students for even numbers, fractions (halves), and basic division. Many students find it the easiest times table, which builds confidence for more complex times tables.",
       3: "The 3 times table bridges the gap between simple and complex times tables. It requires students to go beyond simple doubling and recognize new patterns. This times table occurs constantly in real-world contexts, such as counting in groups of three, understanding triangular shapes, and working with time (three periods per day). Students who learn the 3 times table demonstrate mastery of abstract counting.",
+      7: "Seven is a prime number — its only factors are 1 and itself, making it the 4th prime after 2, 3, and 5. Unlike 4, 6, 8, 9, or 10, the 7 times table cannot be built as a shortcut from a smaller one. There is no doubling or tripling trick that gets you there — it has to be learned in its own right. Seven is also a Mersenne prime, fitting the pattern 2³ − 1. Its square, 7 × 7 = 49, is worth memorizing as a landmark in the table.",
     }
 
 const patterns: { [key: number]: PatternItem[] } = {
@@ -47,6 +48,10 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Counting by Threes", description: "Each answer increases by 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
         { title: "Odd-Even Alternation", description: "Results alternate: odd (3), even (6), odd (9), even (12), creating a predictable rhythm." },
       ],
+      7: [
+        { title: "Last digit cycle — all 10 digits", description: "The last digits of 7×1 through 7×10 are 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 — cycling through every single digit before repeating. This only happens for 1, 3, 7, and 9 (digits sharing no common factor with 10). After 7×10=70, the same cycle starts again: 77, 84, 91, 98, 105..." },
+        { title: "7 × 7 = 49 is a landmark", description: "49 is 7 squared. It sits in the middle of the table and is worth memorizing directly rather than deriving from a neighbor." },
+      ],
     }
 
 const mistakes: { [key: number]: MistakeItem[] } = {
@@ -57,6 +62,11 @@ const mistakes: { [key: number]: MistakeItem[] } = {
       2: [
         { mistake: "Confusing 2×6=12 with 2×7=14", solution: "Use skip counting: 2, 4, 6, 8, 10, 12, 14. Count carefully without skipping." },
         { mistake: "Confusion with larger numbers", solution: "Break it down: 2×8 is JUST 8+8. Doubling is simple addition." },
+      ],
+      7: [
+        { mistake: "Confusing 7 × 8 = 56 with neighboring facts", solution: "Use the rhyme: 5, 6, 7, 8 — 56 is 7 times 8. The four numbers run in counting order, making it easy to recall under pressure." },
+        { mistake: "Swapping 6 × 7 (42), 7 × 7 (49), and 7 × 8 (56)", solution: "These three sit right next to each other and are the most commonly confused. Memorize them as a group: 42, 49, 56 — each is 7 more than the last." },
+        { mistake: "Trying to use the last-digit shortcut from the 2 or 5 table", solution: "The 7 times table last digits cycle through all 10 possibilities — there is no short repeating pattern to exploit. Recognize this upfront and memorize the full cycle instead." },
       ],
     }
 
@@ -72,6 +82,32 @@ const strategies: { [key: number]: string[] } = {
         "Use your fingers: hold up fingers in pairs and count by twos",
         "Practice doubling numbers mentally throughout the day",
         "Say aloud: 'Two times five is five plus five, which is ten'",
+      ],
+      7: [
+        "Say '5, 6, 7, 8 — 56 is 7 times 8!' out loud until it is automatic. This covers the hardest single fact in the table.",
+        "Treat 7 × 7 = 49 as a standalone landmark to memorize, not something to calculate.",
+        "Split 7 into 5 + 2 for any fact you cannot recall: 7 × 6 = (5 × 6) + (2 × 6) = 30 + 12 = 42.",
+        "Or use 10 − 3: 7 × 6 = (10 × 6) − (3 × 6) = 60 − 18 = 42. Pick whichever split feels faster.",
+        "Once you know 7 × n, you know 14 × n for free — just double the answer.",
+      ],
+    }
+
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      7: [
+        { context: "7 days in a week", detail: "Used in nearly every calendar system in the world today." },
+        { context: "7 continents", detail: "Africa, Antarctica, Asia, Australia, Europe, North America, and South America — in the model most commonly taught in schools." },
+        { context: "7 notes in a musical scale", detail: "A, B, C, D, E, F, G — before the pattern repeats an octave higher." },
+        { context: "7 colors in a rainbow", detail: "Red, orange, yellow, green, blue, indigo, and violet — a division first popularized by Isaac Newton." },
+        { context: "The Seven Wonders of the Ancient World", detail: "Including the Great Pyramid of Giza (the only one still standing today)." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      7: [
+        { fact: "Seven is a Mersenne prime — it equals 2³ − 1 (2 × 2 × 2, minus 1), making it part of a rare family of primes tied to powers of 2." },
+        { fact: "The 7-day week traces back to ancient Babylonian astronomy, which tracked exactly 7 moving objects visible without a telescope: the Sun, the Moon, and five planets — Mercury, Venus, Mars, Jupiter, and Saturn." },
+        { fact: "Seven is widely considered lucky across many cultures, which is why it appears so often in games and gambling traditions worldwide." },
+        { fact: "James Bond's famous code number is 007, and Snow White lives with exactly seven dwarfs." },
       ],
     }
 
@@ -93,4 +129,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
+}
+
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

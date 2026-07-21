@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/pl/NumberPage.tsx
 // Per-number curated content for locale: pl
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Mnożenie przez 1 jest specjalnym przypadkiem w matematyce. Kiedy mnożysz dowolną liczbę przez 1, wynikiem jest zawsze ta sama liczba. Nazywa się to właściwością tożsamości mnożenia. Pomyśl o tym w ten sposób: 'Ile grup mam?' Jeśli masz tylko 1 grupę, masz dokładnie to, od czego zacząłeś.",
@@ -85,4 +85,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

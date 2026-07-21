@@ -63,6 +63,11 @@ export interface NumberPageTranslations {
   mistakesIntro: string
   solutionLabel: string
 
+  /** Pattern: {number} */
+  realLifeHeading: string
+  /** Pattern: {number} */
+  funFactsHeading: string
+
   relatedHeading: string
   /** Pattern: {number} */
   relatedIntro: string
@@ -113,6 +118,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Birçok öğrenci bu tabloyu öğrenirken benzer hatalar yapar. Bu yaygın hataların farkında olmak, onlardan kaçınmanıza ve daha verimli öğrenmenize yardımcı olacaktır.',
     solutionLabel: 'Çözüm:',
+    realLifeHeading: '{number} Sayısını Günlük Hayatta Nerede Görürsünüz',
+    funFactsHeading: '{number} Hakkında İlginç Bilgiler',
     relatedHeading: 'İlgili Çarpım Tabloları',
     relatedIntro:
       '{number} çarpım tablosu daha büyük bir öğrenme sisteminin parçasıdır. Aynı aralıktaki diğer tabloları keşfedebilir veya bir sonraki mantıksal sayıya geçebilirsiniz.',
@@ -161,6 +168,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Muchos estudiantes cometen errores similares al aprender esta tabla. Ser consciente de estos errores comunes te ayudará a evitarlos y aprender de manera más efectiva.',
     solutionLabel: 'Solución:',
+    realLifeHeading: 'Dónde Ves el {number} en la Vida Real',
+    funFactsHeading: 'Datos Curiosos Sobre el {number}',
     relatedHeading: 'Tablas de Multiplicar Relacionadas',
     relatedIntro:
       'La tabla del {number} es parte de un sistema de aprendizaje más amplio. Puedes explorar otras tablas en el mismo rango o pasar al siguiente número lógico.',
@@ -209,6 +218,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Viele Schüler machen ähnliche Fehler beim Lernen dieser Tabelle. Sich dieser häufigen Fehler bewusst zu sein, hilft dir, sie zu vermeiden und effektiver zu lernen.',
     solutionLabel: 'Lösung:',
+    realLifeHeading: 'Wo du die {number} im echten Leben siehst',
+    funFactsHeading: 'Interessante Fakten über die {number}',
     relatedHeading: 'Verwandte Einmaleins-Tabellen',
     relatedIntro:
       'Die Einmaleins-Tabelle von {number} ist Teil eines breiteren Lernsystems. Du kannst andere Tabellen im selben Bereich erkunden oder zur nächsten logischen Zahl übergehen.',
@@ -257,6 +268,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Mnoho studentů dělá podobné chyby při učení této tabulky. Uvědomění si těchto častých chyb vám pomůže se jim vyhnout a učit se efektivněji.',
     solutionLabel: 'Řešení:',
+    realLifeHeading: 'Kde se {number} objevuje v běžném životě',
+    funFactsHeading: 'Zajímavosti o čísle {number}',
     relatedHeading: 'Související Násobilky',
     relatedIntro:
       'Násobilka {number} je součástí širšího učebního systému. Můžete prozkoumat další tabulky ve stejném rozsahu nebo přejít k dalšímu logickému číslu.',
@@ -305,6 +318,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Багато учнів роблять подібні помилки під час вивчення цієї таблиці. Знання цих поширених помилок допоможе вам їх уникнути та навчатися ефективніше.',
     solutionLabel: 'Рішення:',
+    realLifeHeading: 'Де ви бачите {number} у повсякденному житті',
+    funFactsHeading: 'Цікаві факти про {number}',
     relatedHeading: 'Пов\'язані таблиці множення',
     relatedIntro:
       'Таблиця множення на {number} є частиною ширшої системи навчання. Ви можете дослідити інші таблиці в тому ж діапазоні або перейти до наступного логічного числа.',
@@ -353,6 +368,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Monet oppilaat tekevät samanlaisia virheitä oppiessaan tätä taulua. Tietoisuus näistä yleisistä virheistä auttaa sinua välttämään niitä ja oppimaan tehokkaammin.',
     solutionLabel: 'Ratkaisu:',
+    realLifeHeading: 'Missä Näet Luvun {number} Arkielämässä',
+    funFactsHeading: 'Hauskoja Faktoja Luvusta {number}',
     relatedHeading: 'Liittyvät Kertotaulut',
     relatedIntro:
       'Kertotaulu {number} on osa laajempaa oppimisjärjestelmää. Voit tutkia muita tauluja samalla alueella tai siirtyä seuraavaan loogiseen lukuun.',
@@ -401,6 +418,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'De nombreux élèves commettent des erreurs similaires en apprenant cette table. Être conscient de ces erreurs courantes vous aidera à les éviter et à apprendre plus efficacement.',
     solutionLabel: 'Solution :',
+    realLifeHeading: 'Où Voit-on le {number} dans la Vie Réelle',
+    funFactsHeading: 'Anecdotes Sur le {number}',
     relatedHeading: 'Tables de Multiplication Associées',
     relatedIntro:
       'La table de {number} fait partie d\'un système d\'apprentissage plus large. Vous pouvez explorer d\'autres tables dans la même plage ou passer au nombre logique suivant.',
@@ -449,6 +468,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Många elever gör liknande misstag när de lär sig denna tabell. Att vara medveten om dessa vanliga misstag hjälper dig att undvika dem och lära dig mer effektivt.',
     solutionLabel: 'Lösning:',
+    realLifeHeading: 'Var Du Ser Talet {number} I Vardagen',
+    funFactsHeading: 'Roliga Fakta Om Talet {number}',
     relatedHeading: 'Relaterade Multiplikationstabeller',
     relatedIntro:
       'Multiplikationstabellen {number} är en del av ett bredare inlärningssystem. Du kan utforska andra tabeller i samma intervall eller gå vidare till nästa logiska tal.',
@@ -497,6 +518,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Muitos alunos cometem erros semelhantes ao aprender esta tabuada. Estar ciente desses erros comuns ajuda você a evitá-los e aprender de forma mais eficaz.',
     solutionLabel: 'Solução:',
+    realLifeHeading: 'Onde Você Vê o {number} na Vida Real',
+    funFactsHeading: 'Curiosidades Sobre o {number}',
     relatedHeading: 'Tabuadas Relacionadas',
     relatedIntro:
       'A tabuada do {number} faz parte de um sistema de aprendizado mais amplo. Você pode explorar outras tabuadas no mesmo intervalo ou passar para o próximo número lógico.',
@@ -545,6 +568,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Many students make similar mistakes when learning this times table. Being aware of these common errors helps you avoid them and learn more effectively.',
     solutionLabel: 'Solution:',
+    realLifeHeading: 'Where You See {number} in Real Life',
+    funFactsHeading: 'Fun Facts About {number}',
     relatedHeading: 'Related Times Tables',
     relatedIntro:
       'The {number} times table is part of a broader learning system. You can explore other times tables in the same range or move on to the next logical number.',
@@ -593,6 +618,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Wielu uczniów popełnia podobne błędy podczas nauki tej tabliczki mnożenia. Świadomość tych częstych błędów pomaga ich unikać i uczyć się bardziej efektywnie.',
     solutionLabel: 'Rozwiązanie:',
+    realLifeHeading: 'Gdzie Widzisz Liczbę {number} w Życiu Codziennym',
+    funFactsHeading: 'Ciekawostki o Liczbie {number}',
     relatedHeading: 'Powiązane Tabliczki Mnożenia',
     relatedIntro:
       'Tabliczka mnożenia przez {number} jest częścią szerszego systemu nauki. Możesz odkrywać inne tabliczki mnożenia w tym samym zakresie lub przejść do następnej logicznej liczby.',
@@ -641,6 +668,8 @@ export const numberPageTranslations: Record<Locale, NumberPageTranslations> = {
     mistakesIntro:
       'Banyak siswa membuat kesalahan serupa saat mempelajari tabel perkalian ini. Menyadari kesalahan umum ini akan membantu Anda menghindarinya dan belajar lebih efektif.',
     solutionLabel: 'Solusi:',
+    realLifeHeading: 'Di Mana Anda Melihat Angka {number} dalam Kehidupan Nyata',
+    funFactsHeading: 'Fakta Menarik Tentang Angka {number}',
     relatedHeading: 'Tabel Perkalian Terkait',
     relatedIntro:
       'Tabel perkalian {number} adalah bagian dari sistem pembelajaran yang lebih luas. Anda dapat menjelajahi tabel perkalian lain dalam rentang yang sama atau lanjut ke angka logis berikutnya.',

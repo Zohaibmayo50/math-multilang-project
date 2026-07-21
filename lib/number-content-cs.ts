@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/cs/NumberPage.tsx
 // Per-number curated content for locale: cs
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Násobení 1 je zvláštní případ v matematice. Když násobíte jakékoli číslo 1, výsledek je vždy totéž číslo. Tomu se říká vlastnost identity násobení. Představte si to takto: 'Kolik skupin něčeho mám?' Pokud máte pouze 1 skupinu, máte přesně to, s čím jste začali.",
@@ -100,4 +100,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

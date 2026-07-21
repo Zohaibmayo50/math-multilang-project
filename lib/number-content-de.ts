@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/de/NumberPage.tsx
 // Per-number curated content for locale: de
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Mit 1 multiplizieren ist ein Spezialfall in der Mathematik. Wenn du eine beliebige Zahl mit 1 multiplizierst, ist das Ergebnis immer diese Zahl selbst. Das nennt man die Identitätseigenschaft der Multiplikation. Stell es dir so vor: 'Wie viele Gruppen von etwas habe ich?' Wenn du nur 1 Gruppe hast, hast du genau das, womit du angefangen hast.",
@@ -1836,4 +1836,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }

@@ -1,6 +1,6 @@
 // AUTO-EXTRACTED verbatim from app/components/fi/NumberPage.tsx
 // Per-number curated content for locale: fi
-import type { PatternItem, MistakeItem } from './number-content-types'
+import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
       1: "Luvulla 1 kertominen on erityistapaus matematiikassa. Kun kerrot minkä tahansa luvun 1:llä, tulos on aina sama luku. Tätä kutsutaan kertolaskun identiteettiominaisuudeksi. Ajattele sitä näin: 'Kuinka monta ryhmää minulla on?' Jos sinulla on vain 1 ryhmä, sinulla on täsmälleen se, millä aloitit.",
@@ -98,4 +98,12 @@ export function getCommonMistakes(n: number): MistakeItem[] {
 
 export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
+}
+
+export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
+  return null
+}
+
+export function getFunFacts(_n: number): FunFactItem[] | null {
+  return null
 }
