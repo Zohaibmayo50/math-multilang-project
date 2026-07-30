@@ -1818,6 +1818,143 @@ const strategies: { [key: number]: string[] } = {
       ],
     }
 
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Ser 'el número uno'", detail: "En muchos idiomas y culturas, ser el número uno significa ocupar el primer lugar o el puesto más alto — desde podios de carreras hasta rankings escolares." },
+        { context: "Un solo objeto de cualquier cosa", detail: "Cada vez que cuentas un solo objeto —una manzana, una silla— estás aplicando la idea de que 1 grupo de algo es simplemente eso, una unidad." },
+        { context: "La primera posición en una secuencia", detail: "Página 1, Día 1, Ronda 1 — el 1 marca el punto de partida de innumerables sistemas numerados." },
+      ],
+      2: [
+        { context: "Pares de zapatos, calcetines y guantes", detail: "La mayoría de los pares cotidianos vienen en conjuntos de 2 — un modelo directo del mundo real para duplicar." },
+        { context: "Ojos y oídos", detail: "El cuerpo humano tiene 2 ojos y 2 oídos, entre muchas otras características emparejadas." },
+        { context: "Ruedas de una bicicleta", detail: "Una bicicleta estándar tiene 2 ruedas, a diferencia de un triciclo (3) o un monociclo (1)." },
+        { context: "Código binario en computación", detail: "Las computadoras almacenan y procesan información usando el sistema binario (base 2), construido enteramente con solo dos dígitos: 0 y 1." },
+      ],
+      3: [
+        { context: "Semáforos", detail: "Los semáforos estándar usan 3 colores: rojo, amarillo y verde." },
+        { context: "Triángulos", detail: "Todo triángulo tiene exactamente 3 lados y 3 ángulos, el polígono más simple posible." },
+        { context: "Podios de medallas", detail: "Los Juegos Olímpicos y muchas otras competencias entregan 3 medallas: oro, plata y bronce." },
+        { context: "Colores primarios", detail: "En la teoría del color que se enseña tradicionalmente en la escuela, el rojo, el amarillo y el azul se consideran los 3 colores primarios." },
+      ],
+      4: [
+        { context: "Las cuatro estaciones", detail: "En muchas regiones del mundo, el año se describe con 4 estaciones: primavera, verano, otoño e invierno." },
+        { context: "Puntos cardinales", detail: "Una brújula tiene 4 direcciones principales: norte, sur, este y oeste." },
+        { context: "Patas de una mesa", detail: "La mayoría de las mesas y sillas se construyen con 4 patas para mayor estabilidad." },
+        { context: "Palos de la baraja", detail: "Una baraja estándar de 52 cartas se divide en 4 palos: corazones, diamantes, tréboles y picas." },
+      ],
+      5: [
+        { context: "Dedos de una mano", detail: "La mayoría de las personas tiene 5 dedos por mano, lo que hace del 5 uno de los números más naturales para aprender a contar desde pequeños." },
+        { context: "Los cinco sentidos", detail: "Vista, oído, olfato, gusto y tacto son descritos comúnmente como los 5 sentidos tradicionales del ser humano." },
+        { context: "Un pentágono", detail: "Un pentágono es una figura de cinco lados, y la sede del Departamento de Defensa de Estados Unidos es famosa por tener justamente esa forma." },
+        { context: "Dinero en billetes o monedas de 5", detail: "Muchas monedas incluyen una unidad de 5, como una moneda de 5 pesos o un billete de 5 dólares." },
+      ],
+      6: [
+        { context: "Caras de un dado", detail: "Un dado estándar de seis caras (un cubo) tiene exactamente 6 caras." },
+        { context: "Patas de los insectos", detail: "Todos los insectos, por definición, tienen 6 patas — uno de los rasgos que los distingue de las arañas, que tienen 8." },
+        { context: "Cuerdas de una guitarra", detail: "Una guitarra acústica o eléctrica estándar tiene 6 cuerdas." },
+        { context: "Media docena", detail: "Los huevos y productos de panadería suelen venderse por media docena — un paquete de 6." },
+      ],
+      7: [
+        { context: "Los 7 días de la semana", detail: "Se usan en prácticamente todos los sistemas de calendario del mundo actual." },
+        { context: "Los 7 continentes", detail: "África, Antártida, Asia, Oceanía, Europa, América del Norte y América del Sur — según el modelo que más se enseña en las escuelas." },
+        { context: "Las 7 notas de una escala musical", detail: "Do, Re, Mi, Fa, Sol, La, Si — antes de que el patrón se repita una octava más arriba." },
+        { context: "Los 7 colores del arcoíris", detail: "Rojo, naranja, amarillo, verde, azul, añil y violeta — una división popularizada por primera vez por Isaac Newton." },
+        { context: "Las Siete Maravillas del Mundo Antiguo", detail: "Incluida la Gran Pirámide de Guiza, la única que sigue en pie hoy en día." },
+      ],
+      8: [
+        { context: "Patas de las arañas", detail: "Las arañas y otros arácnidos tienen 8 patas, a diferencia de los insectos, que tienen 6." },
+        { context: "Brazos de un pulpo", detail: "Un pulpo tiene 8 brazos, de ahí proviene su nombre en griego, 'okto', que significa ocho." },
+        { context: "Un byte en informática", detail: "En informática, 8 bits forman 1 byte, la unidad básica para medir el almacenamiento y la memoria digital." },
+        { context: "Una octava musical", detail: "En la música occidental, una octava abarca 8 notas (por ejemplo, de Do al siguiente Do: Do, Re, Mi, Fa, Sol, La, Si, Do)." },
+      ],
+      9: [
+        { context: "Entradas en el béisbol", detail: "Un partido de béisbol estándar consta de 9 entradas." },
+        { context: "Un cuadrado de 3×3", detail: "El 9 es un cuadrado perfecto: una cuadrícula de 3 filas y 3 columnas contiene exactamente 9 casillas, como un tablero de tres en raya." },
+        { context: "El sistema solar, históricamente", detail: "Durante gran parte del siglo XX se enseñaba que había 9 planetas; Plutón fue reclasificado como planeta enano en 2006, dejando 8 planetas reconocidos hoy." },
+      ],
+      10: [
+        { context: "El sistema decimal", detail: "Casi todos los sistemas de conteo modernos son de base 10, construidos completamente sobre grupos de diez." },
+        { context: "Dedos de las manos y los pies", detail: "La mayoría de las personas tiene 10 dedos en las manos y 10 en los pies, lo que se considera parte del motivo por el que el conteo en base 10 se volvió tan común históricamente." },
+        { context: "El decatlón", detail: "El decatlón es una competencia de atletismo compuesta exactamente por 10 pruebas." },
+        { context: "Dinero en unidades de 10", detail: "Muchas monedas están estructuradas en torno a unidades de 10, como billetes de 10 dólares o 10 euros." },
+      ],
+      11: [
+        { context: "Jugadores en un equipo de fútbol", detail: "Cada equipo en un partido estándar de fútbol pone 11 jugadores en la cancha." },
+        { context: "Números capicúa de dos dígitos", detail: "El 11 es el número de dos dígitos más pequeño formado por un solo dígito repetido, un patrón que se ve directamente en su tabla de multiplicar." },
+      ],
+      12: [
+        { context: "Meses del año", detail: "El año calendario se divide en 12 meses." },
+        { context: "Pulgadas en un pie", detail: "En el sistema imperial de medidas, 1 pie equivale a 12 pulgadas." },
+        { context: "Números en la esfera de un reloj", detail: "Un reloj analógico estándar tiene su esfera dividida en 12 números." },
+        { context: "Una docena", detail: "Productos como los huevos y los artículos de panadería suelen venderse por docena — un grupo de 12." },
+        { context: "Signos del zodiaco", detail: "El zodiaco occidental se divide tradicionalmente en 12 signos." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "El 1 no es ni primo ni compuesto — por definición, un número primo debe tener exactamente dos divisores positivos distintos, y el 1 solo tiene uno (sí mismo)." },
+        { fact: "Multiplicar cualquier número por 1 se llama la propiedad de identidad de la multiplicación, una de las primeras reglas formales que aprenden los estudiantes en aritmética." },
+        { fact: "En números romanos, el 1 se escribe con un solo trazo: I — el símbolo más simple de todo el sistema de numeración." },
+      ],
+      2: [
+        { fact: "El 2 es el único número primo par — todos los demás números pares se pueden dividir entre 2, lo que los convierte en compuestos." },
+        { fact: "Como el 2 es el número primo más pequeño, es el punto de partida de todo el concepto de factorización en números primos." },
+        { fact: "Duplicar es uno de los trucos de cálculo mental más rápidos que existen — duplicar repetidamente también aparece en la computación binaria como potencias de 2: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "El truco de la suma de dígitos para el 3 funciona porque el 10 deja residuo 1 al dividirse entre 3 — la misma razón por la que el truco también funciona con el 9." },
+        { fact: "El 3 es el número primo impar más pequeño." },
+        { fact: "El triángulo es el único polígono naturalmente rígido, por eso las formas de tres lados se usan tanto en puentes como en estructuras de edificios." },
+      ],
+      4: [
+        { fact: "El 4 es el número compuesto más pequeño — el primer número mayor que 1 que no es primo, ya que se puede dividir exactamente entre 2." },
+        { fact: "El 4 es un cuadrado perfecto: 4 = 2 × 2, o 2²." },
+        { fact: "Como 4 = 2 × 2, la tabla del 4 siempre se puede obtener duplicando la tabla del 2 — no hace falta memorizar nada nuevo si ya te sabes la del 2." },
+      ],
+      5: [
+        { fact: "El 5 está exactamente a la mitad entre el 0 y el 10, por eso la tabla del 5 siempre es la mitad de la tabla del 10 correspondiente." },
+        { fact: "El 5 es un número primo, y es el único número primo que termina en el dígito 5." },
+        { fact: "Los relojes usan intervalos de 5 minutos entre cada número, así que multiplicar por 5 está integrado en la forma en que la mayoría de las personas leen la hora sin siquiera pensarlo." },
+      ],
+      6: [
+        { fact: "El 6 es el número perfecto más pequeño — la suma de sus divisores propios (1, 2 y 3) es exactamente igual a sí mismo: 1+2+3=6." },
+        { fact: "6 = 2 × 3, lo que lo convierte en el número más pequeño que es producto de dos números primos distintos." },
+        { fact: "Como el 6 es par y divisible entre 3, todo múltiplo de 6 es automáticamente divisible tanto entre 2 como entre 3." },
+      ],
+      7: [
+        { fact: "El siete es un primo de Mersenne — es igual a 2³ − 1 (2 × 2 × 2, menos 1), lo que lo hace parte de una familia poco común de primos ligados a potencias de 2." },
+        { fact: "La semana de 7 días se remonta a la astronomía babilónica antigua, que seguía exactamente 7 objetos celestes visibles a simple vista: el Sol, la Luna y cinco planetas — Mercurio, Venus, Marte, Júpiter y Saturno." },
+        { fact: "El siete se considera un número de buena suerte en muchas culturas, por eso aparece tan seguido en juegos y tradiciones de apuestas alrededor del mundo." },
+        { fact: "El famoso número de código de James Bond es el 007, y Blancanieves vive con exactamente siete enanitos." },
+      ],
+      8: [
+        { fact: "8 = 2³, lo que lo convierte en el primer número cúbico mayor que 1 (2 × 2 × 2 = 8)." },
+        { fact: "La palabra 'pulpo' (octopus en inglés) y el término musical 'octava' comparten la misma raíz griega que significa ocho." },
+        { fact: "El 8 es el único número entre el 1 y el 12 que requiere tres rondas de duplicación para alcanzarlo desde el 2 (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "El 9 es un cuadrado perfecto: 9 = 3 × 3, o 3²." },
+        { fact: "Sin importar qué tan grande sea un múltiplo de 9, sumar sus dígitos una y otra vez siempre terminará reduciéndose a 9 — una propiedad que los matemáticos llaman 'raíz digital'." },
+        { fact: "El 9 es el número de un solo dígito más grande, justo antes de que comience el valor posicional con el 10." },
+      ],
+      10: [
+        { fact: "La palabra 'decatlón' viene de raíces griegas que significan 'diez pruebas'." },
+        { fact: "Multiplicar por 10 es la única tabla de un solo dígito donde cada resultado sigue una regla exacta y sin excepciones: agregar un cero." },
+        { fact: "Como la mayoría de las personas tiene 10 dedos, se cree que el conteo en base 10 (decimal) es uno de los sistemas numéricos más comunes a lo largo de la historia humana." },
+      ],
+      11: [
+        { fact: "El 11 es un número primo — sus únicos divisores son 1 y él mismo." },
+        { fact: "El 11 es el número primo de dos dígitos más pequeño." },
+        { fact: "El patrón de dígitos espejo (11×4=44, 11×7=77) solo funciona con factores de un solo dígito — uno de los ejemplos más claros en las tablas de multiplicar de un patrón con un límite incorporado." },
+      ],
+      12: [
+        { fact: "El 12 es un número altamente compuesto — tiene más divisores (1, 2, 3, 4, 6, 12) que cualquier número positivo menor." },
+        { fact: "La palabra 'docena' proviene del francés antiguo 'douzaine', que significa un grupo de doce." },
+        { fact: "Un grupo de 144 artículos — 12 docenas — se conoce tradicionalmente como una 'gruesa'." },
+      ],
+    }
+
 export function getNumberMeaning(n: number): string | null {
   return meanings[n] ?? null
 }
@@ -1838,10 +1975,10 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }
