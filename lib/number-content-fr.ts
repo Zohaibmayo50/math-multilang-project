@@ -1889,6 +1889,209 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
         { context: "Une douzaine", detail: "Les œufs et les pâtisseries se vendent souvent à la douzaine — un lot de 12." },
         { context: "Les signes du zodiaque", detail: "Le zodiaque occidental se divise traditionnellement en 12 signes." },
       ],
+      13: [
+        { context: "Les 13 colonies américaines d'origine", detail: "Les États-Unis ont débuté comme 13 colonies britanniques le long de la côte atlantique, avant de déclarer leur indépendance." },
+        { context: "Cartes par couleur", detail: "Un jeu de 52 cartes standard compte 13 cartes dans chacune de ses quatre couleurs." },
+        { context: "La douzaine du boulanger", detail: "Traditionnellement, une 'douzaine du boulanger' désigne 13 articles au lieu de 12." },
+        { context: "La triskaïdékaphobie", detail: "Le 13 est le nombre le plus associé à la malchance dans la culture occidentale — cette peur a même son propre nom." },
+      ],
+      14: [
+        { context: "Quatorze jours, deux semaines", detail: "En anglais, le mot 'fortnight' désigne une période de 14 jours." },
+        { context: "La Saint-Valentin", detail: "La Saint-Valentin tombe chaque année le 14 février." },
+        { context: "Les vers d'un sonnet", detail: "Un sonnet classique, comme ceux écrits par Shakespeare, compte exactement 14 vers." },
+      ],
+      15: [
+        { context: "Un quart d'heure", detail: "15 minutes forment un quart d'heure, l'un des usages les plus courants de ce nombre au quotidien." },
+        { context: "L'effectif d'une équipe de rugby à XV", detail: "Une équipe de rugby à XV aligne 15 joueurs sur le terrain, contrairement aux 13 du rugby à XIII." },
+      ],
+      16: [
+        { context: "Onces dans une livre", detail: "Dans le système de mesure américain, 1 livre équivaut à 16 onces." },
+        { context: "Le système hexadécimal en informatique", detail: "Les informaticiens utilisent la base 16 (hexadécimale) comme façon compacte de représenter des données binaires." },
+        { context: "Les pions sur un échiquier", detail: "Un jeu d'échecs comprend 16 pions au total — 8 pour chaque joueur." },
+        { context: "Les 'sweet sixteen'", detail: "Le 16e anniversaire est considéré comme une étape marquante dans plusieurs cultures." },
+      ],
+      17: [
+        { context: "Le nombre qui 'semble' le plus aléatoire", detail: "Dans des sondages informels où l'on demande de choisir un nombre 'au hasard' dans un intervalle restreint, le 17 est choisi plus souvent que ne le prédirait le hasard réel — une curiosité de la psychologie humaine plutôt que du véritable aléatoire." },
+      ],
+      18: [
+        { context: "La majorité légale en France", detail: "En France comme dans de nombreux pays, la majorité légale est fixée à 18 ans." },
+        { context: "Les trous d'un parcours de golf", detail: "Un parcours de golf standard compte 18 trous." },
+      ],
+      19: [
+        { context: "La fin de l'adolescence", detail: "En anglais, les nombres se terminant par '-teen' vont de 13 à 19 — le 19 est le dernier avant d'atteindre 20 ans." },
+      ],
+      20: [
+        { context: "La vision 20/20", detail: "'20/20 vision' est le terme standard anglais pour une acuité visuelle normale, mesurée à une distance de 20 pieds." },
+        { context: "Doigts des mains et des pieds réunis", detail: "La plupart des gens ont 10 doigts et 10 orteils, soit 20 au total." },
+      ],
+      21: [
+        { context: "Le blackjack", detail: "Au jeu de cartes blackjack, 21 est le score cible que les joueurs cherchent à atteindre sans le dépasser." },
+        { context: "L'âge légal pour boire de l'alcool aux États-Unis", detail: "Aux États-Unis, l'âge minimum légal pour consommer de l'alcool est de 21 ans, uniformisé dans tout le pays depuis une loi fédérale de 1984." },
+      ],
+      22: [
+        { context: "Les joueurs sur un terrain de football", detail: "Un match de football complet réunit 22 joueurs sur le terrain — 11 par équipe." },
+        { context: "Catch-22", detail: "Le titre du roman de Joseph Heller, 'Catch-22', est devenu en anglais une expression courante pour désigner une situation sans issue." },
+      ],
+      23: [
+        { context: "Les paires de chromosomes humains", detail: "Une cellule humaine typique contient 23 paires de chromosomes — 46 au total." },
+      ],
+      24: [
+        { context: "24 heures dans une journée", detail: "Une journée complète compte 24 heures." },
+        { context: "24 carats, l'or pur", detail: "L'or 24 carats est considéré comme de l'or pur, la pureté la plus élevée utilisée en joaillerie." },
+        { context: "La cadence des films", detail: "24 images par seconde est la cadence standard du cinéma depuis l'arrivée du son." },
+      ],
+      25: [
+        { context: "Un quart de 100", detail: "25 est exactement le quart de 100, d'où le lien étroit entre ce nombre et les pourcentages." },
+        { context: "Les noces d'argent", detail: "Le 25e anniversaire de mariage est traditionnellement appelé 'noces d'argent'." },
+      ],
+      26: [
+        { context: "Les lettres de l'alphabet français", detail: "L'alphabet français compte 26 lettres, de A à Z." },
+        { context: "La longueur d'un marathon", detail: "Un marathon mesure exactement 42,195 km, soit environ 26,2 miles." },
+        { context: "Les os du pied humain", detail: "Selon les références anatomiques standards, chaque pied humain compte 26 os." },
+      ],
+      27: [
+        { context: "Le 'Club des 27'", detail: "Plusieurs musiciens influents — dont Jimi Hendrix, Janis Joplin et Kurt Cobain — sont morts à 27 ans, un schéma que la culture populaire a baptisé le 'Club des 27'." },
+      ],
+      28: [
+        { context: "Les jours de février", detail: "Février compte 28 jours chaque année non bissextile." },
+        { context: "Le cycle lunaire", detail: "Le cycle des phases de la Lune est souvent décrit, de façon approximative, comme durant environ 28 jours, bien que le mois synodique exact avoisine plutôt 29,5 jours." },
+      ],
+      29: [
+        { context: "Février en année bissextile", detail: "Lors d'une année bissextile, février compte 29 jours au lieu des 28 habituels." },
+      ],
+      30: [
+        { context: "Les mois de 30 jours", detail: "Avril, juin, septembre et novembre comptent chacun 30 jours, comme le rappelle la comptine traditionnelle sur les mois." },
+      ],
+      31: [
+        { context: "Les mois de 31 jours", detail: "Janvier, mars, mai, juillet, août, octobre et décembre comptent chacun 31 jours — sept mois au total." },
+      ],
+      32: [
+        { context: "Le point de congélation de l'eau", detail: "L'eau gèle à 32°F sur l'échelle Fahrenheit." },
+        { context: "Une dentition adulte complète", detail: "Une dentition humaine adulte complète, dents de sagesse comprises, compte 32 dents au total." },
+        { context: "Le nombre d'équipes de la NFL", detail: "La National Football League (NFL) est composée de 32 équipes." },
+      ],
+      33: [
+        { context: "Les vertèbres de la colonne vertébrale humaine", detail: "On dit souvent que la colonne vertébrale humaine compte 33 vertèbres, bien que plusieurs d'entre elles fusionnent à l'âge adulte au niveau du sacrum et du coccyx." },
+        { context: "L'âge du Christ à la crucifixion", detail: "Selon la tradition chrétienne la plus répandue, Jésus avait 33 ans lors de la crucifixion." },
+      ],
+      35: [
+        { context: "Le format de pellicule 35mm", detail: "Le 35mm est depuis longtemps le format standard, aussi bien en photographie qu'au cinéma." },
+      ],
+      36: [
+        { context: "Les pouces dans un yard", detail: "Dans le système de mesure américain, 1 yard équivaut à 36 pouces." },
+      ],
+      38: [
+        { context: "Le 38e parallèle", detail: "Cette ligne de latitude est historiquement associée à la frontière entre la Corée du Nord et la Corée du Sud." },
+      ],
+      39: [
+        { context: "Les 39 marches", detail: "'The 39 Steps' est un thriller classique de 1935 réalisé par Alfred Hitchcock, adapté d'un roman homonyme de 1915." },
+      ],
+      40: [
+        { context: "'Quarante jours et quarante nuits'", detail: "Le nombre 40 revient sans cesse dans la Bible, notamment dans le récit du déluge de la Genèse." },
+        { context: "La semaine de travail classique", detail: "Une semaine de travail de 40 heures est une norme courante dans de nombreux pays." },
+        { context: "L'origine du mot 'quarantaine'", detail: "'Quarantaine' vient de l'italien 'quaranta giorni' ('quarante jours'), la période d'isolement historiquement imposée aux navires lors des épidémies de peste." },
+      ],
+      42: [
+        { context: "'La réponse à la grande question sur la vie, l'univers et le reste'", detail: "Dans le roman Le Guide du voyageur galactique de Douglas Adams — un auteur anglais, mais l'œuvre est un classique lu dans le monde entier —, un supercalculateur détermine que la réponse à la question ultime est 42." },
+        { context: "Le nombre de points sur une paire de dés", detail: "Un dé standard compte 21 points au total (1+2+3+4+5+6), donc une paire de dés totalise 42 points." },
+      ],
+      44: [
+        { context: "Le 44e président des États-Unis", detail: "Barack Obama a été le 44e président des États-Unis." },
+      ],
+      45: [
+        { context: "Les disques 45 tours", detail: "Les 'singles' en vinyle étaient traditionnellement pressés pour tourner à 45 tours par minute." },
+      ],
+      46: [
+        { context: "Les chromosomes d'une cellule humaine", detail: "Une cellule humaine typique contient 46 chromosomes, organisés en 23 paires." },
+      ],
+      48: [
+        { context: "48 heures", detail: "48 heures équivalent exactement à deux journées complètes." },
+        { context: "Les États contigus des États-Unis", detail: "Les 48 États contigus des États-Unis excluent seulement l'Alaska et Hawaï, géographiquement séparés." },
+      ],
+      50: [
+        { context: "Les 50 États américains", detail: "Les États-Unis sont composés de 50 États." },
+        { context: "Les noces d'or", detail: "Le 50e anniversaire de mariage est traditionnellement appelé 'noces d'or'." },
+      ],
+      51: [
+        { context: "La Zone 51", detail: "La Zone 51 est une célèbre base de l'armée de l'air américaine dans le Nevada, longtemps classifiée et très référencée dans la culture populaire." },
+      ],
+      52: [
+        { context: "Le nombre de semaines dans une année", detail: "Une année standard compte 52 semaines." },
+        { context: "Les cartes d'un jeu de cartes", detail: "Un jeu de cartes standard compte 52 cartes, sans les jokers." },
+      ],
+      54: [
+        { context: "Les carrés d'un Rubik's Cube", detail: "Le Rubik's Cube classique 3×3 compte 9 carrés de couleur par face, soit 54 carrés au total sur ses 6 faces." },
+      ],
+      55: [
+        { context: "L'ancienne limite de vitesse américaine", detail: "De 1974 à 1995, 55 miles à l'heure était la limite de vitesse maximale sur les autoroutes américaines, imposée par une loi fédérale." },
+      ],
+      57: [
+        { context: "Le slogan '57 Varieties' de Heinz", detail: "L'entreprise H.J. Heinz utilise le slogan '57 Varieties' depuis 1896, bien après avoir dépassé les 57 produits." },
+      ],
+      59: [
+        { context: "Une seconde avant la minute suivante", detail: "Une minute compte 60 secondes, donc 59 est la dernière seconde avant le début d'une nouvelle minute." },
+      ],
+      60: [
+        { context: "Le nombre de secondes dans une minute", detail: "Une minute compte 60 secondes." },
+        { context: "Le nombre de minutes dans une heure", detail: "Une heure compte 60 minutes." },
+      ],
+      64: [
+        { context: "Les cases d'un échiquier", detail: "Un échiquier standard est une grille de 8×8 et compte exactement 64 cases." },
+        { context: "Une boîte classique de crayons Crayola", detail: "L'emblématique 'Big Box' Crayola compte depuis longtemps 64 couleurs de crayons." },
+        { context: "La Nintendo 64", detail: "La Nintendo 64 était une console de jeu culte des années 90, nommée d'après son processeur 64 bits." },
+      ],
+      65: [
+        { context: "L'âge traditionnel de la retraite", detail: "65 ans est depuis longtemps utilisé comme âge standard de départ à la retraite dans de nombreux pays." },
+        { context: "Une limite de vitesse courante sur autoroute", detail: "65 miles à l'heure est une limite de vitesse fréquente sur les autoroutes de nombreux États américains." },
+      ],
+      66: [
+        { context: "La Route 66", detail: "La Route 66 fut l'une des premières autoroutes américaines, reliant Chicago à Santa Monica, et devint un symbole culturel du road trip américain." },
+      ],
+      70: [
+        { context: "'Soixante-dix ans' — une durée de vie biblique", detail: "Cette expression traditionnelle désignant une vie de 70 ans provient de la Bible (Psaume 90:10)." },
+      ],
+      72: [
+        { context: "La 'règle des 72'", detail: "En finance, diviser 72 par un taux d'intérêt donne une estimation rapide du nombre d'années nécessaires pour doubler un investissement." },
+        { context: "72 heures", detail: "72 heures équivalent exactement à trois journées complètes." },
+      ],
+      75: [
+        { context: "Les noces de diamant", detail: "Dans certaines traditions commémoratives, le 75e anniversaire est appelé 'noces de diamant', bien que ce terme soit plus souvent associé aux 60 ans, comme lors du jubilé de diamant de la reine Élisabeth II en 2012." },
+      ],
+      76: [
+        { context: "'76 trombones'", detail: "'Seventy-Six Trombones' est la célèbre chanson de fanfare de la comédie musicale The Music Man, créée en 1957." },
+      ],
+      78: [
+        { context: "Les disques 78 tours", detail: "Le 78 tours fut la toute première vitesse standard de lecture des disques de gramophone, avant que les formats 33⅓ et 45 tours ne se généralisent." },
+      ],
+      80: [
+        { context: "Le Tour du monde en quatre-vingts jours", detail: "Le roman classique de Jules Verne, publié en 1873, raconte une course pour faire le tour du monde en 80 jours — un des grands classiques de la littérature française." },
+      ],
+      86: [
+        { context: "L'argot de restaurant '86'", detail: "Dans le jargon des bars et restaurants anglophones, '86' un plat signifie le retirer de la carte — l'expression peut aussi désigner le fait d'exclure un client indésirable." },
+      ],
+      88: [
+        { context: "Les touches d'un piano", detail: "Un piano moderne standard compte 88 touches." },
+        { context: "Les constellations officiellement reconnues", detail: "L'Union astronomique internationale reconnaît officiellement 88 constellations." },
+      ],
+      90: [
+        { context: "La durée d'un match de football", detail: "Un match de football réglementaire dure 90 minutes, réparties en deux mi-temps de 45 minutes." },
+        { context: "Un angle droit", detail: "Un angle droit mesure exactement 90 degrés." },
+      ],
+      92: [
+        { context: "Le numéro atomique de l'uranium", detail: "L'uranium, de numéro atomique 92, est traditionnellement cité comme l'élément naturel le plus lourd du tableau périodique." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "Windows 95 fut un système d'exploitation Microsoft marquant, lancé en 1995, qui a contribué à populariser l'informatique personnelle." },
+      ],
+      99: [
+        { context: "La psychologie des prix en '.99'", detail: "Les commerçants fixent souvent des prix se terminant par .99 (comme 19,99 €) car ils sont perçus comme nettement inférieurs au chiffre rond suivant." },
+      ],
+      100: [
+        { context: "Un siècle", detail: "Une période de 100 ans s'appelle un siècle." },
+        { context: "Les 100% comme 'le tout'", detail: "Les pourcentages se construisent autour de 100 comme point de référence d'un ensemble complet." },
+        { context: "Le Sénat américain", detail: "Le Sénat des États-Unis compte 100 membres — deux pour chacun des 50 États." },
+        { context: "Le point d'ébullition de l'eau", detail: "À pression atmosphérique standard, l'eau bout à 100°C." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -1952,6 +2155,308 @@ const funFacts: { [key: number]: FunFactItem[] } = {
         { fact: "Le 12 est un nombre hautement composé — il a plus de diviseurs (1, 2, 3, 4, 6, 12) que n'importe quel nombre positif plus petit." },
         { fact: "Le mot 'douzaine' vient de l'ancien français 'douzaine', qui désigne un groupe de douze." },
         { fact: "Un groupe de 144 objets — 12 douzaines — est traditionnellement appelé une 'grosse'." },
+      ],
+      13: [
+        { fact: "13 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "La peur du nombre 13 a un nom officiel : la triskaïdékaphobie." },
+        { fact: "Beaucoup d'immeubles omettent le 13e étage dans leur numérotation à cause de la superstition entourant ce nombre." },
+      ],
+      14: [
+        { fact: "14 = 2 × 7, donc chaque résultat de la table du 14 est exactement le double du résultat correspondant dans la table du 7." },
+        { fact: "Le mot anglais 'fortnight' est une contraction de 'fourteen nights' (quatorze nuits), l'ancien terme pour deux semaines." },
+      ],
+      15: [
+        { fact: "15 est un nombre triangulaire — il est la somme des cinq premiers nombres entiers : 1+2+3+4+5=15." },
+        { fact: "15 = 3 × 5, ce qui en fait le produit des deux plus petits nombres premiers impairs." },
+      ],
+      16: [
+        { fact: "16 = 2⁴, ce qui en fait la première puissance quatrième supérieure à 1." },
+        { fact: "16 est aussi un carré parfait : 16 = 4 × 4." },
+        { fact: "Les ordinateurs utilisent beaucoup la base 16 (hexadécimale) car chaque chiffre hexadécimal correspond exactement à 4 bits binaires." },
+      ],
+      17: [
+        { fact: "17 est un nombre premier, sans aucune table plus petite qu'on pourrait doubler ou tripler pour l'atteindre." },
+        { fact: "Dans des sondages psychologiques informels, quand on demande de citer un nombre 'au hasard' entre 1 et 20, les gens choisissent 17 de façon disproportionnée — une curiosité des préférences numériques humaines plutôt qu'un signe de vrai hasard." },
+      ],
+      18: [
+        { fact: "18 = 2 × 9 = 3 × 6, il existe donc plus d'une façon valide de doubler ou tripler une table plus petite pour y arriver." },
+        { fact: "Comme 18 est un multiple de 9, tous ses multiples suivent aussi la règle de la somme des chiffres du 9." },
+      ],
+      19: [
+        { fact: "19 est un nombre premier et c'est le dernier des nombres anglais en '-teen' (de 13 à 19)." },
+        { fact: "19 = 20 − 1, donc multiplier par 19 est souvent plus facile en multipliant d'abord par 20, puis en soustrayant le nombre de départ." },
+      ],
+      20: [
+        { fact: "L'ancien mot anglais 'score' signifie 20, comme dans la célèbre formule de Lincoln 'four score and seven years ago' (4×20+7=87)." },
+        { fact: "20 = 4 × 5 = 2 × 10, il existe donc plusieurs paires de facteurs pour construire cette table." },
+      ],
+      21: [
+        { fact: "21 = 3 × 7, le produit de deux tables plus petites que les élèves connaissent probablement déjà." },
+        { fact: "Au blackjack, 21 est exactement le score cible — le dépasser signifie perdre automatiquement." },
+      ],
+      22: [
+        { fact: "22 = 2 × 11, donc sa table est simplement le double de la table du 11." },
+        { fact: "Le titre du roman 'Catch-22' de Joseph Heller est devenu en anglais une expression à part entière pour désigner un dilemme sans issue." },
+      ],
+      23: [
+        { fact: "23 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "Les cellules humaines contiennent 23 paires de chromosomes, l'un des faits les plus cités sur le nombre 23 en dehors des mathématiques." },
+      ],
+      24: [
+        { fact: "24 est un nombre hautement composé — ses diviseurs (1, 2, 3, 4, 6, 8, 12, 24) sont plus nombreux que ceux de tout nombre positif plus petit." },
+        { fact: "24 = 2³ × 3, combinant une puissance de 2 avec un facteur 3." },
+      ],
+      25: [
+        { fact: "25 est un carré parfait : 25 = 5 × 5." },
+        { fact: "Comme 25 est exactement un quart de 100, multiplier par 25 est souvent plus rapide en faisant ×100 puis ÷4." },
+      ],
+      26: [
+        { fact: "26 = 2 × 13, donc sa table est simplement le double de la table du 13." },
+        { fact: "Les 26 lettres de l'alphabet font du 26 l'un des nombres les plus fréquemment rencontrés dans le langage écrit quotidien." },
+      ],
+      27: [
+        { fact: "27 est un cube parfait : 27 = 3 × 3 × 3, soit 3³." },
+        { fact: "Le 'Club des 27' est une expression de la culture populaire désignant des musiciens célèbres morts à cet âge — les chercheurs n'ont toutefois trouvé aucune preuve statistique d'un risque de mortalité anormal spécifiquement à 27 ans." },
+      ],
+      28: [
+        { fact: "28 est un nombre parfait — ses diviseurs propres (1, 2, 4, 7, 14) totalisent exactement 28 ; c'est le deuxième nombre parfait après 6." },
+        { fact: "28 = 4 × 7, ce qui le relie directement à deux tables plus petites." },
+      ],
+      29: [
+        { fact: "29 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "Le 29 n'apparaît au calendrier que les années bissextiles, quand février gagne un jour supplémentaire." },
+      ],
+      30: [
+        { fact: "30 = 2 × 3 × 5, le produit des trois plus petits nombres premiers." },
+        { fact: "30 possède un nombre inhabituellement élevé de petits diviseurs pour sa taille, l'une des raisons pour lesquelles il divise si souvent exactement les mesures du quotidien." },
+      ],
+      31: [
+        { fact: "31 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "31 = 2⁵ − 1, ce qui en fait un nombre premier de Mersenne, la même famille qui inclut 3, 7 et 127." },
+      ],
+      32: [
+        { fact: "32 = 2⁵, la cinquième puissance de 2." },
+        { fact: "32 est exactement le double de 16, lui-même le double de 8 — partie d'une chaîne ininterrompue de doublements remontant jusqu'à 1." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11, donc sa table est directement le triple du motif en miroir des chiffres de la table du 11." },
+      ],
+      34: [
+        { fact: "34 est un nombre de Fibonacci — il est la somme des deux nombres de Fibonacci précédents, 13 et 21." },
+        { fact: "Dans un carré magique de 4×4, chaque ligne, colonne et diagonale totalise 34 — la plus petite constante magique possible pour une grille 4×4." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7, le produit de deux tables plus petites que les élèves connaissent déjà." },
+      ],
+      36: [
+        { fact: "36 est à la fois un carré parfait (6×6) et un nombre triangulaire (1+2+...+8) — une combinaison que très peu de nombres partagent." },
+      ],
+      37: [
+        { fact: "37 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "37 × 3 = 111, ce qui fait que 37 divise exactement tout nombre à trois chiffres identiques (111, 222, 333... jusqu'à 999)." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19, donc sa table est simplement le double de la table du 19." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13, le produit de deux tables plus petites que les élèves connaissent probablement déjà." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5, combinant une puissance de 2 avec un facteur 5." },
+      ],
+      41: [
+        { fact: "41 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "41 et 43 sont des nombres premiers jumeaux — ils diffèrent exactement de 2." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7, combinant trois des plus petits nombres premiers utilisés dans les tables de multiplication standards." },
+      ],
+      43: [
+        { fact: "43 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "43, tout comme 41, forme la plus grande valeur d'une paire de nombres premiers jumeaux séparés par exactement un nombre pair, le 42." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11, donc sa table est directement le quadruple de la table du 11." },
+      ],
+      45: [
+        { fact: "45° est exactement la moitié d'un angle droit (90°), c'est pourquoi les angles de 45 degrés apparaissent constamment en géométrie et en design." },
+        { fact: "45 est à la fois un nombre triangulaire (1+2+...+9) et le produit de deux tables plus petites, 9 et 5." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23, donc sa table est simplement le double de la table du 23." },
+      ],
+      47: [
+        { fact: "47 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "47 est une célèbre private joke chez les fans et scénaristes de Star Trek, qui l'auraient glissé volontairement en arrière-plan de nombreux épisodes." },
+      ],
+      48: [
+        { fact: "48 est un nombre hautement composé pour sa taille — ses diviseurs (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) sont plus nombreux que ceux de tout nombre positif plus petit." },
+      ],
+      49: [
+        { fact: "49 est un carré parfait : 49 = 7 × 7." },
+        { fact: "7×7=49 est l'un des faits les plus mémorisés de toute la table de multiplication standard." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5², combinant un seul facteur 2 avec le carré de 5." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17, le produit de deux petits nombres premiers." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13, donc sa table est directement le quadruple de la table du 13." },
+      ],
+      53: [
+        { fact: "53 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³, combinant un seul facteur 2 avec le cube de 3." },
+      ],
+      55: [
+        { fact: "55 est à la fois un nombre triangulaire (1+2+...+10) et un nombre de Fibonacci — une combinaison que très peu de nombres partagent." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7, combinant une puissance de 2 avec un facteur 7." },
+        { fact: "7×8=56 est l'un des faits individuels les plus souvent confondus dans toute la table de multiplication standard." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19, le produit de deux petits nombres premiers." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29, donc sa table est simplement le double de la table du 29." },
+      ],
+      59: [
+        { fact: "59 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      60: [
+        { fact: "60 est un nombre hautement composé — ses diviseurs (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) sont plus nombreux que ceux de tout nombre positif plus petit." },
+        { fact: "Les anciens Babyloniens utilisaient un système numérique en base 60 (sexagésimal), c'est pourquoi le temps et les angles se divisent encore aujourd'hui en unités de 60." },
+      ],
+      61: [
+        { fact: "61 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31, donc sa table est simplement le double de la table du 31." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7, combinant le carré de 3 avec un facteur 7." },
+        { fact: "63 = 2⁶ − 1 (64 moins 1), soit juste un cran en dessous de la puissance de 2 suivante." },
+      ],
+      64: [
+        { fact: "64 est à la fois un carré parfait (8²) et un cube parfait (4³) — l'un des rares nombres à réunir ces deux propriétés." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13, le produit de deux tables plus petites." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11, combinant trois des tables plus petites." },
+      ],
+      67: [
+        { fact: "67 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17, donc sa table est directement le quadruple de la table du 17." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23, le produit de deux tables plus petites." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7, combinant trois des plus petits nombres premiers utilisés dans les tables de multiplication standards." },
+      ],
+      71: [
+        { fact: "71 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3², combinant une puissance de 2 avec le carré de 3." },
+      ],
+      73: [
+        { fact: "73 est un nombre premier — ses seuls diviseurs sont 1 et lui-même. C'est aussi le 21e nombre premier en partant de 2." },
+        { fact: "En binaire, 73 s'écrit 1001001 — un palindrome qui se lit de la même façon dans les deux sens." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37, donc sa table est simplement le double de la table du 37." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5², combinant un facteur 3 avec le carré de 5." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19, donc sa table est directement le quadruple de la table du 19." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11, le produit de deux tables plus petites." },
+        { fact: "77 est un palindrome numérique — il se lit de la même façon de gauche à droite et de droite à gauche." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13, combinant trois des tables plus petites." },
+      ],
+      79: [
+        { fact: "79 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5, combinant une puissance de 2 avec un facteur 5." },
+        { fact: "80 % équivaut aux quatre cinquièmes (4/5) d'un tout." },
+      ],
+      81: [
+        { fact: "81 est un carré parfait (9×9) et équivaut aussi à 3⁴ (3 puissance 4)." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41, donc sa table est simplement le double de la table du 41." },
+      ],
+      83: [
+        { fact: "83 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7, combinant une puissance de 2 avec les facteurs 3 et 7." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17, le produit de deux tables plus petites." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43, donc sa table est simplement le double de la table du 43." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29, le produit de deux tables plus petites." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11, le produit de deux tables plus petites." },
+      ],
+      89: [
+        { fact: "89 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "89 est aussi un nombre de Fibonacci — il est la somme des deux nombres de Fibonacci précédents, 34 et 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5, combinant une puissance de 2, le carré de 3 et un facteur 5." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13, ce qui en fait un exemple classique en enseignement des mathématiques d'un nombre qui a l'air premier sans l'être." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23, donc sa table est directement le quadruple de la table du 23." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31, le produit de deux tables plus petites." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47, donc sa table est simplement le double de la table du 47." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19, le produit de deux tables plus petites." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3, combinant une puissance de 2 avec un seul facteur 3." },
+      ],
+      97: [
+        { fact: "97 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "97 est le plus grand nombre premier inférieur à 100." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7², combinant un seul facteur 2 avec le carré de 7." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11, le produit de deux tables plus petites." },
+        { fact: "Comme 99 est un multiple de 9, les chiffres de tout multiple de 99 totalisent toujours un multiple de 9." },
+      ],
+      100: [
+        { fact: "100 = 10², le carré de 10, et équivaut aussi à 4 × 25." },
       ],
     }
 

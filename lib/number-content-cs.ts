@@ -173,6 +173,209 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
         { context: "Tucet", detail: "Vejce a pečivo se často prodávají po tuctech — ve skupinách po 12." },
         { context: "Znamení zvěrokruhu", detail: "Západní zvěrokruh se tradičně dělí na 12 znamení." },
       ],
+      13: [
+        { context: "13 původních amerických kolonií", detail: "USA vznikly jako 13 britských kolonií podél atlantického pobřeží, než vyhlásily nezávislost." },
+        { context: "Karty v každé barvě", detail: "Standardní balíček 52 karet má 13 karet v každé ze čtyř barev." },
+        { context: "Pekařský tucet", detail: "Tradičně 'pekařský tucet' znamená 13 kusů místo 12." },
+        { context: "Triskaidekafobie", detail: "13 je v západní kultuře číslo nejvíce spojované s neštěstím — strach z něj má dokonce svůj vlastní název." },
+      ],
+      14: [
+        { context: "Čtrnáct dní, dva týdny", detail: "V angličtině slovo 'fortnight' označuje období 14 dní." },
+        { context: "Valentýn", detail: "Svátek svatého Valentýna připadá každý rok na 14. února." },
+        { context: "Verše sonetu", detail: "Klasický sonet, jako psal Shakespeare, má přesně 14 veršů." },
+      ],
+      15: [
+        { context: "Čtvrthodina", detail: "15 minut je čtvrthodina — jedno z nejběžnějších každodenních použití tohoto čísla." },
+        { context: "Velikost týmu v ragby union", detail: "Tým v ragby union nastupuje na hřiště s 15 hráči, na rozdíl od 13 hráčů v ragby league." },
+      ],
+      16: [
+        { context: "Unce v libře", detail: "V americké soustavě měr se 1 libra rovná 16 uncím." },
+        { context: "Šestnáctková soustava v informatice", detail: "Informatici používají základ 16 (hexadecimální) jako kompaktní způsob zápisu binárních dat." },
+        { context: "Pěšci na šachovnici", detail: "Šachová sada obsahuje celkem 16 pěšců — 8 pro každého hráče." },
+        { context: "'Sladkých šestnáct'", detail: "16. narozeniny se v několika kulturách považují za významný milník." },
+      ],
+      17: [
+        { context: "Číslo, které 'působí' nejnáhodněji", detail: "V neformálních průzkumech, kde lidé mají vybrat 'náhodné' číslo z malého rozsahu, volí 17 častěji, než by odpovídalo čisté náhodě — kuriozita lidské psychiky, ne skutečné náhodnosti." },
+      ],
+      18: [
+        { context: "Plnoletost v ČR", detail: "V České republice, stejně jako v mnoha dalších zemích, se plnoletosti dosahuje v 18 letech." },
+        { context: "Jamky na golfovém hřišti", detail: "Standardní golfové hřiště má 18 jamek." },
+      ],
+      19: [
+        { context: "Konec teenagerských let", detail: "V angličtině čísla končící na '-teen' sahají od 13 do 19 — 19 je poslední před dosažením 20 let." },
+      ],
+      20: [
+        { context: "Zraková ostrost 20/20", detail: "'Vidění 20/20' je standardní anglický termín pro normální zrakovou ostrost, měřenou ze vzdálenosti 20 stop." },
+        { context: "Prsty na rukou a nohou dohromady", detail: "Většina lidí má 10 prstů na rukou a 10 na nohou, celkem tedy 20." },
+      ],
+      21: [
+        { context: "Blackjack", detail: "V karetní hře blackjack je 21 cílovým součtem, kterého se hráči snaží dosáhnout, aniž by ho překročili." },
+        { context: "Zákonný věk pro pití alkoholu v USA", detail: "Ve Spojených státech je minimální zákonný věk pro nákup alkoholu 21 let, sjednocený po celé zemi federálním zákonem z roku 1984." },
+      ],
+      22: [
+        { context: "Hráči na fotbalovém hřišti", detail: "Celý fotbalový zápas má na hřišti 22 hráčů — 11 z každého týmu." },
+        { context: "Hlava XXII", detail: "Název románu Josepha Hellera 'Hlava XXII' se v angličtině stal běžným výrazem pro bezvýchodnou situaci." },
+      ],
+      23: [
+        { context: "Páry lidských chromozomů", detail: "Typická lidská buňka obsahuje 23 párů chromozomů — celkem 46 chromozomů." },
+      ],
+      24: [
+        { context: "24 hodin denně", detail: "Celý den má 24 hodin." },
+        { context: "24karátové ryzí zlato", detail: "24karátové zlato se považuje za ryzí zlato — nejvyšší ryzost používanou ve šperkařství." },
+        { context: "Snímková frekvence filmu", detail: "24 snímků za sekundu je standardem kinematografie od dob zvukového filmu." },
+      ],
+      25: [
+        { context: "Čtvrtina ze sta", detail: "25 je přesně čtvrtina ze 100 — odtud silná souvislost tohoto čísla s procenty." },
+        { context: "Stříbrná svatba", detail: "25. výročí svatby se tradičně nazývá 'stříbrná svatba'." },
+      ],
+      26: [
+        { context: "Písmena anglické abecedy", detail: "Anglická abeceda má 26 písmen, od A do Z." },
+        { context: "Délka maratonu", detail: "Maraton měří přesně 42,195 km, což odpovídá zhruba 26,2 míle." },
+        { context: "Kosti v lidském chodidle", detail: "Podle standardních anatomických zdrojů obsahuje každé lidské chodidlo 26 kostí." },
+      ],
+      27: [
+        { context: "'Klub 27'", detail: "Několik vlivných hudebníků — mimo jiné Jimi Hendrix, Janis Joplin a Kurt Cobain — zemřelo ve věku 27 let, což popkultura pojmenovala 'Klub 27'." },
+      ],
+      28: [
+        { context: "Dny v únoru", detail: "Únor má 28 dní v každém roce, který není přestupný." },
+        { context: "Lunární cyklus", detail: "Cyklus fází Měsíce se často zjednodušeně popisuje jako přibližně 28denní, ačkoli přesný synodický měsíc je blíže 29,5 dni." },
+      ],
+      29: [
+        { context: "Únor v přestupném roce", detail: "V přestupném roce má únor 29 dní místo obvyklých 28." },
+      ],
+      30: [
+        { context: "Měsíce s 30 dny", detail: "Duben, červen, září a listopad mají po 30 dnech, jak připomíná i známá básnička o měsících." },
+      ],
+      31: [
+        { context: "Měsíce s 31 dny", detail: "Leden, březen, květen, červenec, srpen, říjen a prosinec mají po 31 dnech — celkem sedm měsíců." },
+      ],
+      32: [
+        { context: "Bod mrazu vody", detail: "Voda mrzne při 32°F na Fahrenheitově stupnici." },
+        { context: "Kompletní dospělý chrup", detail: "Kompletní dospělý lidský chrup, včetně zubů moudrosti, čítá celkem 32 zubů." },
+        { context: "Počet týmů v NFL", detail: "Americká Národní fotbalová liga (NFL) se skládá z 32 týmů." },
+      ],
+      33: [
+        { context: "Obratle v lidské páteři", detail: "Často se uvádí, že lidská páteř má 33 obratlů, ačkoli několik z nich v dospělosti srůstá v křížovou a kostrční kost." },
+        { context: "Věk Ježíše při ukřižování", detail: "Podle nejrozšířenější křesťanské tradice bylo Ježíšovi při ukřižování 33 let." },
+      ],
+      35: [
+        { context: "Formát filmu 35mm", detail: "35mm byl dlouho standardním formátem jak ve fotografii, tak ve filmu." },
+      ],
+      36: [
+        { context: "Palce v yardu", detail: "V anglosaské soustavě měr se 1 yard rovná 36 palcům." },
+      ],
+      38: [
+        { context: "38. rovnoběžka", detail: "Tato zeměpisná šířka je historicky spojena s hranicí mezi Severní a Jižní Koreou." },
+      ],
+      39: [
+        { context: "39 kroků", detail: "'39 kroků' je klasický thriller z roku 1935 v režii Alfreda Hitchcocka, natočený podle stejnojmenného románu z roku 1915." },
+      ],
+      40: [
+        { context: "'Čtyřicet dní a čtyřicet nocí'", detail: "Číslo 40 se v Bibli objevuje opakovaně, mimo jiné v příběhu o potopě v knize Genesis." },
+        { context: "Standardní pracovní týden", detail: "40hodinový pracovní týden je v mnoha zemích běžným standardem." },
+        { context: "Původ slova 'karanténa'", detail: "Slovo 'karanténa' pochází z italského 'quaranta giorni' ('čtyřicet dní') — historicky předepsané doby izolace pro lodě během epidemií moru." },
+      ],
+      42: [
+        { context: "'Odpověď na život, vesmír a vůbec'", detail: "V románu Stopařův průvodce po Galaxii od Douglase Adamse vypočítá obří superpočítač odpověď na zásadní otázku jako číslo 42." },
+        { context: "Počet ok na páru kostek", detail: "Standardní kostka má celkem 21 ok (1+2+3+4+5+6), takže pár kostek dává dohromady 42 ok." },
+      ],
+      44: [
+        { context: "44. prezident USA", detail: "Barack Obama byl 44. prezidentem Spojených států." },
+      ],
+      45: [
+        { context: "Desky s rychlostí 45 otáček", detail: "Vinylové singly se tradičně lisovaly tak, aby se přehrávaly rychlostí 45 otáček za minutu." },
+      ],
+      46: [
+        { context: "Chromozomy v lidské buňce", detail: "Typická lidská buňka obsahuje 46 chromozomů, uspořádaných do 23 párů." },
+      ],
+      48: [
+        { context: "48 hodin", detail: "48 hodin odpovídá přesně dvěma celým dnům." },
+        { context: "Sousedící státy USA", detail: "48 sousedících států USA vylučuje jen geograficky oddělené Aljašku a Havaj." },
+      ],
+      50: [
+        { context: "50 amerických států", detail: "Spojené státy se skládají z 50 států." },
+        { context: "Zlatá svatba", detail: "50. výročí svatby se tradičně nazývá 'zlatá svatba'." },
+      ],
+      51: [
+        { context: "Oblast 51", detail: "Oblast 51 je slavná, dlouho tajná základna amerického letectva v Nevadě, na kterou se často odkazuje v popkultuře." },
+      ],
+      52: [
+        { context: "Týdny v roce", detail: "Standardní rok má 52 týdnů." },
+        { context: "Karty v balíčku", detail: "Standardní balíček karet má 52 karet, bez žolíků." },
+      ],
+      54: [
+        { context: "Čtverečky na Rubikově kostce", detail: "Klasická Rubikova kostka 3×3 má 9 barevných čtverečků na každé straně, což při 6 stranách dává celkem 54 čtverečků." },
+      ],
+      55: [
+        { context: "Bývalý americký rychlostní limit", detail: "Od roku 1974 do roku 1995 platil na amerických dálnicích federálním zákonem stanovený maximální limit 55 mil za hodinu." },
+      ],
+      57: [
+        { context: "Heinzův slogan '57 druhů'", detail: "Firma H.J. Heinz používá slogan '57 druhů' od roku 1896, dávno poté, co prodává více než 57 produktů." },
+      ],
+      59: [
+        { context: "Sekunda před celou minutou", detail: "Minuta má 60 sekund, takže 59 je poslední sekunda předtím, než začne nová minuta." },
+      ],
+      60: [
+        { context: "Sekundy v minutě", detail: "Minuta má 60 sekund." },
+        { context: "Minuty v hodině", detail: "Hodina má 60 minut." },
+      ],
+      64: [
+        { context: "Pole na šachovnici", detail: "Standardní šachovnice je mřížka 8×8 a obsahuje přesně 64 polí." },
+        { context: "Klasická krabice Crayola", detail: "Ikonická 'Big Box' od Crayoly obsahuje už dlouho 64 barev pastelek." },
+        { context: "Nintendo 64", detail: "Nintendo 64 byla kultovní herní konzole z 90. let, pojmenovaná podle svého 64bitového procesoru." },
+      ],
+      65: [
+        { context: "Tradiční důchodový věk", detail: "65 let se v mnoha zemích dlouho používá jako standardní věk odchodu do důchodu." },
+        { context: "Běžný rychlostní limit na dálnici", detail: "65 mil za hodinu je běžný rychlostní limit na dálnicích v mnoha amerických státech." },
+      ],
+      66: [
+        { context: "Route 66", detail: "Route 66 byla jednou z prvních amerických dálnic, vedla z Chicaga do Santa Moniky a stala se kulturním symbolem amerického cestování po silnici." },
+      ],
+      70: [
+        { context: "'Sedmdesát let' — tradiční biblická délka života", detail: "Toto tradiční vyjádření pro délku lidského života 70 let pochází z Bible (Žalm 90:10)." },
+      ],
+      72: [
+        { context: "'Pravidlo 72'", detail: "Ve financích dává vydělení 72 úrokovou sazbou přibližný odhad počtu let, za které se investice zdvojnásobí." },
+        { context: "72 hodin", detail: "72 hodin odpovídá přesně třem celým dnům." },
+      ],
+      75: [
+        { context: "Diamantová svatba", detail: "V některých tradicích se 75. výročí nazývá 'diamantová svatba', ačkoli tento termín se častěji spojuje s 60. výročím, jako u diamantového jubilea královny Alžběty II. v roce 2012." },
+      ],
+      76: [
+        { context: "'76 pozounů'", detail: "'Seventy-Six Trombones' je slavná píseň dechové kapely z muzikálu The Music Man z roku 1957." },
+      ],
+      78: [
+        { context: "Desky s rychlostí 78 otáček", detail: "78 otáček za minutu byla první standardní rychlost přehrávání gramofonových desek, než se rozšířily formáty 33⅓ a 45." },
+      ],
+      80: [
+        { context: "Cesta kolem světa za 80 dní", detail: "Klasický román Julese Verna z roku 1873 vypráví o závodě obeplout svět za 80 dní." },
+      ],
+      86: [
+        { context: "Restaurační žargon '86'", detail: "V žargonu barů a restaurací znamená 'udělat 86' na položku jejím vyřazením z jídelníčku; může to znamenat i vyvedení obtížného hosta." },
+      ],
+      88: [
+        { context: "Klávesy klavíru", detail: "Standardní moderní klavír má 88 kláves." },
+        { context: "Oficiálně uznaná souhvězdí", detail: "Mezinárodní astronomická unie oficiálně uznává 88 souhvězdí." },
+      ],
+      90: [
+        { context: "Délka fotbalového zápasu", detail: "Řádný fotbalový zápas trvá 90 minut, rozdělených do dvou poločasů po 45 minutách." },
+        { context: "Pravý úhel", detail: "Pravý úhel měří přesně 90 stupňů." },
+      ],
+      92: [
+        { context: "Protonové číslo uranu", detail: "Uran s protonovým číslem 92 se tradičně uvádí jako nejtěžší přirozeně se vyskytující prvek v periodické tabulce." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "Windows 95 byl přelomový operační systém Microsoftu z roku 1995, který pomohl rozšířit osobní počítače mezi širokou veřejnost." },
+      ],
+      99: [
+        { context: "Cenová psychologie čísla '.99'", detail: "Obchody často stanovují ceny končící na ,99 (jako 19,99 Kč), protože působí výrazně nižším dojmem než následující kulaté číslo." },
+      ],
+      100: [
+        { context: "Století", detail: "Období 100 let se nazývá století (nebo věk)." },
+        { context: "100 % jako 'celek'", detail: "Procenta se odvozují od 100 jako referenčního bodu pro úplný celek." },
+        { context: "Senát USA", detail: "Senát Spojených států má 100 členů — dva z každého z 50 států." },
+        { context: "Bod varu vody", detail: "Při standardním atmosférickém tlaku vře voda při 100°C." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -236,6 +439,308 @@ const funFacts: { [key: number]: FunFactItem[] } = {
         { fact: "12 je vysoce složené číslo — má více dělitelů (1, 2, 3, 4, 6, 12) než kterékoli menší kladné číslo." },
         { fact: "Slovo 'tucet' pochází ze starofrancouzského 'douzaine', což znamená skupinu dvanácti." },
         { fact: "Skupina 144 předmětů — 12 tuctů — se tradičně nazývá 'veletucet'." },
+      ],
+      13: [
+        { fact: "13 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "Strach z čísla 13 má formální název: triskaidekafobie." },
+        { fact: "Mnoho budov kvůli pověře kolem tohoto čísla ve svém číslování vynechává 13. patro." },
+      ],
+      14: [
+        { fact: "14 = 2 × 7, takže každý výsledek násobilky 14 je přesně dvojnásobkem odpovídajícího výsledku násobilky 7." },
+        { fact: "Anglické slovo 'fortnight' je zkratkou 'fourteen nights' (čtrnáct nocí), starého výrazu pro dva týdny." },
+      ],
+      15: [
+        { fact: "15 je trojúhelníkové číslo — je součtem prvních pěti přirozených čísel: 1+2+3+4+5=15." },
+        { fact: "15 = 3 × 5, je tedy součinem prvních dvou lichých prvočísel." },
+      ],
+      16: [
+        { fact: "16 = 2⁴, čímž je první čtvrtou mocninou větší než 1." },
+        { fact: "16 je zároveň druhá mocnina: 16 = 4 × 4." },
+        { fact: "Počítače hodně používají základ 16 (hexadecimální), protože každá hexadecimální číslice odpovídá přesně 4 binárním bitům." },
+      ],
+      17: [
+        { fact: "17 je prvočíslo a neexistuje žádná menší násobilka, kterou by šlo zdvojnásobit nebo ztrojnásobit, aby se k němu dospělo." },
+        { fact: "V neformálních psychologických průzkumech, kde mají lidé říct 'náhodné' číslo mezi 1 a 20, volí 17 nepřiměřeně často — kuriozita lidských číselných preferencí, ne skutečné náhodnosti." },
+      ],
+      18: [
+        { fact: "18 = 2 × 9 = 3 × 6, existuje tedy víc než jeden platný způsob, jak k němu dospět zdvojnásobením nebo ztrojnásobením menší násobilky." },
+        { fact: "Protože 18 je násobkem 9, platí pro všechny jeho násobky i pravidlo ciferného součtu čísla 9." },
+      ],
+      19: [
+        { fact: "19 je prvočíslo a poslední z anglických čísel končících na '-teen' (od 13 do 19)." },
+        { fact: "19 = 20 − 1, takže násobení 19 bývá snazší, když nejprve násobíte 20 a pak odečtete původní číslo." },
+      ],
+      20: [
+        { fact: "Staré anglické slovo 'score' znamená 20, jako ve slavném Lincolnově výroku 'four score and seven years ago' (4×20+7=87)." },
+        { fact: "20 = 4 × 5 = 2 × 10, existuje tedy více dvojic činitelů pro sestavení této násobilky." },
+      ],
+      21: [
+        { fact: "21 = 3 × 7, součin dvou menších násobilek, které studenti pravděpodobně už znají." },
+        { fact: "V blackjacku je 21 přesně cílový součet — jeho překročení znamená automatickou prohru." },
+      ],
+      22: [
+        { fact: "22 = 2 × 11, takže jeho násobilka je jednoduše zdvojnásobená násobilka 11." },
+        { fact: "Název románu Josepha Hellera 'Hlava XXII' se v angličtině stal samostatným výrazem pro bezvýchodné dilema." },
+      ],
+      23: [
+        { fact: "23 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "Lidské buňky obsahují 23 párů chromozomů, jeden z nejcitovanějších faktů o čísle 23 mimo matematiku." },
+      ],
+      24: [
+        { fact: "24 je vysoce složené číslo — jeho dělitelé (1, 2, 3, 4, 6, 8, 12, 24) převyšují dělitele kteréhokoli menšího kladného čísla." },
+        { fact: "24 = 2³ × 3, kombinuje mocninu 2 s činitelem 3." },
+      ],
+      25: [
+        { fact: "25 je druhá mocnina: 25 = 5 × 5." },
+        { fact: "Protože 25 je přesně čtvrtina ze 100, násobení 25 bývá rychlejší jako ×100 a poté ÷4." },
+      ],
+      26: [
+        { fact: "26 = 2 × 13, takže jeho násobilka je jednoduše zdvojnásobená násobilka 13." },
+        { fact: "26 písmen abecedy dělá z čísla 26 jedno z nejčastěji se vyskytujících čísel v každodenním psaném jazyce." },
+      ],
+      27: [
+        { fact: "27 je třetí mocnina: 27 = 3 × 3 × 3, tedy 3³." },
+        { fact: "'Klub 27' je popkulturní termín pro slavné hudebníky, kteří zemřeli v tomto věku — vědci ale nenašli statistické důkazy o neobvyklém riziku úmrtí konkrétně ve věku 27 let." },
+      ],
+      28: [
+        { fact: "28 je dokonalé číslo — součet jeho vlastních dělitelů (1, 2, 4, 7, 14) se rovná přesně 28; je to druhé dokonalé číslo po 6." },
+        { fact: "28 = 4 × 7, což jej přímo spojuje se dvěma menšími násobilkami." },
+      ],
+      29: [
+        { fact: "29 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "29 se v kalendáři objevuje jako datum jen v přestupných letech, kdy únor získá navíc jeden den." },
+      ],
+      30: [
+        { fact: "30 = 2 × 3 × 5, součin prvních tří prvočísel." },
+        { fact: "30 má na svou velikost neobvykle mnoho malých dělitelů, což je jeden z důvodů, proč se tak často beze zbytku vejde do každodenních měření." },
+      ],
+      31: [
+        { fact: "31 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "31 = 2⁵ − 1, čímž je Mersennovým prvočíslem, do stejné rodiny patří i 3, 7 a 127." },
+      ],
+      32: [
+        { fact: "32 = 2⁵, tedy pátá mocnina čísla 2." },
+        { fact: "32 je přesně dvojnásobek 16, které je zase dvojnásobkem 8 — část nepřerušeného řetězce zdvojnásobování sahajícího až k 1." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11, takže jeho násobilka je přímo ztrojnásobený vzor zrcadlových číslic z násobilky 11." },
+      ],
+      34: [
+        { fact: "34 je Fibonacciho číslo — je součtem dvou předchozích Fibonacciho čísel, 13 a 21." },
+        { fact: "V magickém čtverci 4×4 se každý řádek, sloupec a úhlopříčka sečtou na 34 — nejmenší možnou magickou konstantu pro mřížku 4×4." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7, součin dvou menších násobilek, které studenti už znají." },
+      ],
+      36: [
+        { fact: "36 je zároveň druhá mocnina (6×6) i trojúhelníkové číslo (1+2+...+8) — kombinaci, kterou sdílí jen velmi málo čísel." },
+      ],
+      37: [
+        { fact: "37 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "37 × 3 = 111, proto 37 beze zbytku dělí každé trojciferné číslo se stejnými číslicemi (111, 222, 333... až po 999)." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19, takže jeho násobilka je jednoduše zdvojnásobená násobilka 19." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13, součin dvou menších násobilek, které studenti pravděpodobně už znají." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5, kombinuje mocninu 2 s činitelem 5." },
+      ],
+      41: [
+        { fact: "41 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "41 a 43 jsou dvojčata prvočísel — liší se přesně o 2." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7, kombinuje tři nejmenší prvočísla používaná ve standardních násobilkách." },
+      ],
+      43: [
+        { fact: "43 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "43, stejně jako 41, tvoří větší hodnotu dvojice prvočíselných dvojčat oddělených přesně jedním sudým číslem, 42." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11, takže jeho násobilka je přímo čtyřnásobek násobilky 11." },
+      ],
+      45: [
+        { fact: "45° je přesně polovina pravého úhlu (90°), proto se úhly 45 stupňů neustále objevují v geometrii a designu." },
+        { fact: "45 je zároveň trojúhelníkové číslo (1+2+...+9) a součin dvou menších násobilek, 9 a 5." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23, takže jeho násobilka je jednoduše zdvojnásobená násobilka 23." },
+      ],
+      47: [
+        { fact: "47 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "47 je slavný interní vtip mezi fanoušky a scenáristy Star Treku, kteří ho prý záměrně umísťovali do pozadí mnoha epizod." },
+      ],
+      48: [
+        { fact: "48 je na svou velikost vysoce složené číslo — jeho dělitelé (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) převyšují dělitele kteréhokoli menšího kladného čísla." },
+      ],
+      49: [
+        { fact: "49 je druhá mocnina: 49 = 7 × 7." },
+        { fact: "7×7=49 je jeden z nejčastěji zapamatovaných jednotlivých faktů v celé standardní násobilce." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5², kombinuje jediný činitel 2 s druhou mocninou čísla 5." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17, součin dvou malých prvočísel." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13, takže jeho násobilka je přímo čtyřnásobek násobilky 13." },
+      ],
+      53: [
+        { fact: "53 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³, kombinuje jediný činitel 2 s třetí mocninou čísla 3." },
+      ],
+      55: [
+        { fact: "55 je zároveň trojúhelníkové číslo (1+2+...+10) i Fibonacciho číslo — kombinaci, kterou sdílí jen velmi málo čísel." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7, kombinuje mocninu 2 s činitelem 7." },
+        { fact: "7×8=56 je jeden z nejčastěji zaměňovaných jednotlivých faktů v celé standardní násobilce." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19, součin dvou malých prvočísel." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29, takže jeho násobilka je jednoduše zdvojnásobená násobilka 29." },
+      ],
+      59: [
+        { fact: "59 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      60: [
+        { fact: "60 je vysoce složené číslo — jeho dělitelé (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) převyšují dělitele kteréhokoli menšího kladného čísla." },
+        { fact: "Staří Babyloňané používali číselnou soustavu o základu 60 (šedesátkovou), a proto se čas a úhly dodnes dělí na jednotky po 60." },
+      ],
+      61: [
+        { fact: "61 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31, takže jeho násobilka je jednoduše zdvojnásobená násobilka 31." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7, kombinuje druhou mocninu čísla 3 s činitelem 7." },
+        { fact: "63 = 2⁶ − 1 (64 minus 1), leží tedy přesně o jednu jednotku pod následující mocninou dvou." },
+      ],
+      64: [
+        { fact: "64 je zároveň druhá mocnina (8²) i třetí mocnina (4³) — jedno z mála čísel s oběma těmito vlastnostmi." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13, součin dvou menších násobilek." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11, kombinuje tři z menších násobilek." },
+      ],
+      67: [
+        { fact: "67 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17, takže jeho násobilka je přímo čtyřnásobek násobilky 17." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23, součin dvou menších násobilek." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7, kombinuje tři nejmenší prvočísla používaná ve standardních násobilkách." },
+      ],
+      71: [
+        { fact: "71 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3², kombinuje mocninu 2 s druhou mocninou čísla 3." },
+      ],
+      73: [
+        { fact: "73 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo. Zároveň je to 21. prvočíslo počítáno od 2." },
+        { fact: "Binárně se 73 zapisuje jako 1001001 — palindrom, který se čte stejně v obou směrech." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37, takže jeho násobilka je jednoduše zdvojnásobená násobilka 37." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5², kombinuje činitel 3 s druhou mocninou čísla 5." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19, takže jeho násobilka je přímo čtyřnásobek násobilky 19." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11, součin dvou menších násobilek." },
+        { fact: "77 je číselný palindrom — čte se stejně zleva doprava i zprava doleva." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13, kombinuje tři z menších násobilek." },
+      ],
+      79: [
+        { fact: "79 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5, kombinuje mocninu 2 s činitelem 5." },
+        { fact: "80 % odpovídá čtyřem pětinám (4/5) celku." },
+      ],
+      81: [
+        { fact: "81 je druhá mocnina (9×9) a zároveň se rovná 3⁴ (3 na čtvrtou)." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41, takže jeho násobilka je jednoduše zdvojnásobená násobilka 41." },
+      ],
+      83: [
+        { fact: "83 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7, kombinuje mocninu 2 s činiteli 3 a 7." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17, součin dvou menších násobilek." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43, takže jeho násobilka je jednoduše zdvojnásobená násobilka 43." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29, součin dvou menších násobilek." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11, součin dvou menších násobilek." },
+      ],
+      89: [
+        { fact: "89 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "89 je zároveň Fibonacciho číslo — je součtem dvou předchozích Fibonacciho čísel, 34 a 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5, kombinuje mocninu 2, druhou mocninu čísla 3 a činitel 5." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13, čímž je klasickým příkladem ve výuce matematiky pro číslo, které vypadá jako prvočíslo, ale není." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23, takže jeho násobilka je přímo čtyřnásobek násobilky 23." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31, součin dvou menších násobilek." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47, takže jeho násobilka je jednoduše zdvojnásobená násobilka 47." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19, součin dvou menších násobilek." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3, kombinuje mocninu 2 s jediným činitelem 3." },
+      ],
+      97: [
+        { fact: "97 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "97 je největší prvočíslo pod 100." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7², kombinuje jediný činitel 2 s druhou mocninou čísla 7." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11, součin dvou menších násobilek." },
+        { fact: "Protože 99 je násobkem 9, ciferný součet každého násobku 99 vždy dá násobek 9." },
+      ],
+      100: [
+        { fact: "100 = 10², tedy druhá mocnina čísla 10, a zároveň se rovná 4 × 25." },
       ],
     }
 

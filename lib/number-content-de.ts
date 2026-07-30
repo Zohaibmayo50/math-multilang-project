@@ -1889,6 +1889,209 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
         { context: "Ein Dutzend", detail: "Eier und Backwaren werden oft im Dutzend verkauft — einer Gruppe von 12." },
         { context: "Sternzeichen", detail: "Der westliche Tierkreis ist traditionell in 12 Zeichen unterteilt." },
       ],
+      13: [
+        { context: "Die 13 ursprünglichen amerikanischen Kolonien", detail: "Die USA begannen als 13 britische Kolonien entlang der Atlantikküste, bevor sie ihre Unabhängigkeit erklärten." },
+        { context: "Karten pro Farbe", detail: "Ein normales 52er-Kartenspiel hat 13 Karten in jeder seiner vier Farben." },
+        { context: "Ein Bäckerdutzend", detail: "Traditionell bedeutet ein 'Bäckerdutzend' 13 statt 12 Stück." },
+        { context: "Triskaidekaphobie", detail: "Die 13 ist in der westlichen Kultur die am stärksten mit Unglück verbundene Zahl — die Angst davor hat sogar einen eigenen Namen." },
+      ],
+      14: [
+        { context: "Vierzehn Tage, zwei Wochen", detail: "Im Englischen steht 'fortnight' für einen Zeitraum von 14 Tagen." },
+        { context: "Valentinstag", detail: "Der Valentinstag fällt jedes Jahr auf den 14. Februar." },
+        { context: "Verszeilen eines Sonetts", detail: "Ein klassisches Sonett, wie es Shakespeare schrieb, besteht aus genau 14 Zeilen." },
+      ],
+      15: [
+        { context: "Eine Viertelstunde", detail: "15 Minuten sind eine Viertelstunde — eine der alltäglichsten Verwendungen dieser Zahl." },
+        { context: "Rugby-Union-Mannschaftsgröße", detail: "Eine Rugby-Union-Mannschaft stellt 15 Spieler aufs Feld, anders als die 13 Spieler im Rugby League." },
+      ],
+      16: [
+        { context: "Unzen in einem Pfund", detail: "Im US-amerikanischen Maßsystem entspricht 1 Pfund 16 Unzen." },
+        { context: "Das Hexadezimalsystem in der Informatik", detail: "Informatiker nutzen die Basis 16 (hexadezimal) als kompakte Darstellung binärer Daten." },
+        { context: "Bauern auf dem Schachbrett", detail: "Ein Schachspiel enthält insgesamt 16 Bauern — 8 für jeden Spieler." },
+        { context: "'Süße Sechzehn'", detail: "Der 16. Geburtstag gilt in mehreren Kulturen als besonderer Meilenstein." },
+      ],
+      17: [
+        { context: "Die 'zufällig wirkendste' Zahl", detail: "Bittet man Menschen, in einem kleinen Bereich eine 'zufällige' Zahl zu nennen, wählen sie die 17 überdurchschnittlich oft — eine Eigenart der menschlichen Psychologie, nicht echter Zufälligkeit." },
+      ],
+      18: [
+        { context: "Volljährigkeit in Deutschland", detail: "In Deutschland und vielen anderen Ländern ist man mit 18 Jahren volljährig." },
+        { context: "Löcher auf einem Golfplatz", detail: "Ein normaler Golfplatz besteht aus 18 Löchern." },
+      ],
+      19: [
+        { context: "Das Ende der Teenagerjahre", detail: "Im Englischen enden die Zahlen mit der Endung '-teen' bei 19 — dem letzten Jahr vor dem 20. Geburtstag." },
+      ],
+      20: [
+        { context: "20/20-Sehschärfe", detail: "'20/20 vision' ist der englische Standardbegriff für normale Sehschärfe, gemessen aus 20 Fuß Entfernung." },
+        { context: "Finger und Zehen zusammen", detail: "Die meisten Menschen haben 10 Finger und 10 Zehen, zusammen also 20." },
+      ],
+      21: [
+        { context: "Blackjack", detail: "Beim Kartenspiel Blackjack ist 21 die Zielsumme, die Spieler erreichen wollen, ohne sie zu überschreiten." },
+        { context: "Das gesetzliche Alkoholalter in den USA", detail: "In den USA liegt das gesetzliche Mindestalter zum Alkoholkauf bei 21 Jahren, seit einem Bundesgesetz von 1984 landesweit einheitlich." },
+      ],
+      22: [
+        { context: "Spieler auf einem Fußballfeld", detail: "Bei einem vollständigen Fußballspiel stehen 22 Spieler auf dem Feld — 11 pro Mannschaft." },
+        { context: "Catch-22", detail: "Der Titel von Joseph Hellers berühmtem Roman 'Catch-22' ist im Englischen zu einer festen Redewendung für eine ausweglose Situation geworden." },
+      ],
+      23: [
+        { context: "Menschliche Chromosomenpaare", detail: "Eine typische menschliche Zelle enthält 23 Chromosomenpaare — insgesamt 46 Chromosomen." },
+      ],
+      24: [
+        { context: "24 Stunden am Tag", detail: "Ein voller Tag hat 24 Stunden." },
+        { context: "24 Karat reines Gold", detail: "24-karätiges Gold gilt als reines Gold — der höchste in der Schmuckherstellung verwendete Feingehalt." },
+        { context: "Bildrate im Film", detail: "24 Bilder pro Sekunde sind seit der Einführung des Tonfilms der Standard im Kino." },
+      ],
+      25: [
+        { context: "Ein Viertel von 100", detail: "25 ist genau ein Viertel von 100 — daher die enge Verbindung zwischen dieser Zahl und Prozentrechnung." },
+        { context: "Die Silberhochzeit", detail: "Der 25. Hochzeitstag wird traditionell 'Silberhochzeit' genannt." },
+      ],
+      26: [
+        { context: "Buchstaben im deutschen Alphabet", detail: "Das deutsche Alphabet hat 26 Grundbuchstaben, dazu kommen noch die Umlaute und das ß." },
+        { context: "Die Länge eines Marathons", detail: "Ein Marathon ist genau 42,195 km lang, was etwa 26,2 Meilen entspricht." },
+        { context: "Knochen im menschlichen Fuß", detail: "Nach Standardanatomie enthält jeder menschliche Fuß 26 Knochen." },
+      ],
+      27: [
+        { context: "Der '27er-Club'", detail: "Mehrere einflussreiche Musiker — darunter Jimi Hendrix, Janis Joplin und Kurt Cobain — starben im Alter von 27 Jahren, ein Muster, das die Popkultur '27er-Club' getauft hat." },
+      ],
+      28: [
+        { context: "Die Tage im Februar", detail: "Der Februar hat in jedem nicht-Schaltjahr 28 Tage." },
+        { context: "Der Mondzyklus", detail: "Der Mondphasenzyklus wird oft grob mit etwa 28 Tagen angegeben, obwohl der genaue synodische Monat eher bei 29,5 Tagen liegt." },
+      ],
+      29: [
+        { context: "Der Februar im Schaltjahr", detail: "In einem Schaltjahr hat der Februar 29 statt der üblichen 28 Tage." },
+      ],
+      30: [
+        { context: "Monate mit 30 Tagen", detail: "April, Juni, September und November haben je 30 Tage, wie es auch der bekannte Merkspruch über die Monate festhält." },
+      ],
+      31: [
+        { context: "Monate mit 31 Tagen", detail: "Januar, März, Mai, Juli, August, Oktober und Dezember haben je 31 Tage — sieben Monate insgesamt." },
+      ],
+      32: [
+        { context: "Der Gefrierpunkt von Wasser", detail: "Wasser gefriert auf der Fahrenheit-Skala bei 32°F." },
+        { context: "Ein vollständiges Erwachsenengebiss", detail: "Ein vollständiges erwachsenes menschliches Gebiss, Weisheitszähne eingeschlossen, umfasst insgesamt 32 Zähne." },
+        { context: "Anzahl der NFL-Teams", detail: "Die amerikanische National Football League (NFL) besteht aus 32 Teams." },
+      ],
+      33: [
+        { context: "Wirbel in der menschlichen Wirbelsäule", detail: "Die menschliche Wirbelsäule wird oft mit 33 Wirbeln beschrieben, wobei mehrere davon im Erwachsenenalter zum Kreuz- und Steißbein verschmelzen." },
+        { context: "Das Alter Jesu bei der Kreuzigung", detail: "Der christlichen Überlieferung nach war Jesus bei der Kreuzigung 33 Jahre alt." },
+      ],
+      35: [
+        { context: "Das 35mm-Filmformat", detail: "35mm war lange Zeit der Standard sowohl in der Fotografie als auch im Kino." },
+      ],
+      36: [
+        { context: "Zoll in einem Yard", detail: "Im US-amerikanischen Maßsystem entspricht 1 Yard 36 Zoll." },
+      ],
+      38: [
+        { context: "Der 38. Breitengrad", detail: "Dieser Breitengrad wurde historisch eng mit der Grenze zwischen Nord- und Südkorea verbunden." },
+      ],
+      39: [
+        { context: "Die 39 Stufen", detail: "'Die 39 Stufen' ist ein klassischer Thriller von 1935 unter der Regie von Alfred Hitchcock, basierend auf einem gleichnamigen Roman von 1915." },
+      ],
+      40: [
+        { context: "'Vierzig Tage und vierzig Nächte'", detail: "Die Zahl 40 kommt in der Bibel immer wieder vor, unter anderem in der Sintflutgeschichte im Buch Genesis." },
+        { context: "Die klassische Arbeitswoche", detail: "Eine 40-Stunden-Woche ist in vielen Ländern ein verbreiteter Standard." },
+        { context: "Der Ursprung des Wortes 'Quarantäne'", detail: "'Quarantäne' stammt vom italienischen 'quaranta giorni' ('vierzig Tage') — der historisch vorgeschriebenen Isolationszeit für Schiffe während Pestausbrüchen." },
+      ],
+      42: [
+        { context: "'Die Antwort auf die letzte Frage aller Fragen'", detail: "In Douglas Adams' Roman Per Anhalter durch die Galaxis berechnet ein gewaltiger Supercomputer die Antwort auf die ultimative Frage als 42." },
+        { context: "Augenzahlen auf einem Würfelpaar", detail: "Ein normaler Würfel hat insgesamt 21 Augen (1+2+3+4+5+6), ein Würfelpaar also 42." },
+      ],
+      44: [
+        { context: "Der 44. Präsident der USA", detail: "Barack Obama war der 44. Präsident der Vereinigten Staaten." },
+      ],
+      45: [
+        { context: "45er-Schallplatten", detail: "Vinyl-Singles wurden traditionell so gepresst, dass sie mit 45 Umdrehungen pro Minute abgespielt werden." },
+      ],
+      46: [
+        { context: "Chromosomen in einer menschlichen Zelle", detail: "Eine typische menschliche Zelle enthält 46 Chromosomen, organisiert in 23 Paaren." },
+      ],
+      48: [
+        { context: "48 Stunden", detail: "48 Stunden entsprechen genau zwei vollen Tagen." },
+        { context: "Die zusammenhängenden US-Bundesstaaten", detail: "Die 48 zusammenhängenden US-Bundesstaaten schließen nur das geografisch getrennte Alaska und Hawaii aus." },
+      ],
+      50: [
+        { context: "Die Bundesstaaten der USA", detail: "Die Vereinigten Staaten bestehen aus 50 Bundesstaaten." },
+        { context: "Die Goldene Hochzeit", detail: "Der 50. Hochzeitstag wird traditionell 'Goldene Hochzeit' genannt." },
+      ],
+      51: [
+        { context: "Area 51", detail: "Area 51 ist eine berühmte, lange geheime US-Luftwaffenbasis in Nevada, die in der Popkultur häufig referenziert wird." },
+      ],
+      52: [
+        { context: "Wochen im Jahr", detail: "Ein normales Jahr hat 52 Wochen." },
+        { context: "Karten in einem Kartenspiel", detail: "Ein normales Kartenspiel hat 52 Karten, ohne die Joker." },
+      ],
+      54: [
+        { context: "Felder auf einem Rubik's Cube", detail: "Der klassische 3×3-Zauberwürfel hat 9 farbige Felder pro Seite — bei 6 Seiten macht das insgesamt 54 Felder." },
+      ],
+      55: [
+        { context: "Das frühere US-Tempolimit", detail: "Von 1974 bis 1995 galt in den USA per Bundesgesetz ein Höchsttempo von 55 Meilen pro Stunde auf Highways." },
+      ],
+      57: [
+        { context: "Heinz' '57 Varieties'-Slogan", detail: "Die Firma H.J. Heinz nutzt seit 1896 den Slogan '57 Varieties' — obwohl sie längst mehr als 57 Produkte verkauft." },
+      ],
+      59: [
+        { context: "Eine Sekunde vor der vollen Minute", detail: "Eine Minute hat 60 Sekunden, sodass 59 die letzte Sekunde vor Beginn der nächsten Minute ist." },
+      ],
+      60: [
+        { context: "Sekunden in einer Minute", detail: "Eine Minute hat 60 Sekunden." },
+        { context: "Minuten in einer Stunde", detail: "Eine Stunde hat 60 Minuten." },
+      ],
+      64: [
+        { context: "Felder auf dem Schachbrett", detail: "Ein normales Schachbrett ist ein 8×8-Raster und enthält genau 64 Felder." },
+        { context: "Eine klassische Crayola-Box", detail: "Die ikonische Crayola-'Big Box' enthält seit Langem 64 Buntstiftfarben." },
+        { context: "Nintendo 64", detail: "Die Nintendo 64 war eine legendäre Spielkonsole der 1990er, benannt nach ihrem 64-Bit-Prozessor." },
+      ],
+      65: [
+        { context: "Das klassische Renteneintrittsalter", detail: "65 Jahre gelten in vielen Ländern seit Langem als Standard-Renteneintrittsalter." },
+        { context: "Ein übliches Autobahntempolimit", detail: "65 Meilen pro Stunde ist in vielen US-Bundesstaaten ein gängiges Tempolimit auf Highways." },
+      ],
+      66: [
+        { context: "Route 66", detail: "Die Route 66 war eine der ursprünglichen US-Highways von Chicago nach Santa Monica und wurde zum kulturellen Symbol des amerikanischen Roadtrips." },
+      ],
+      70: [
+        { context: "'Siebzig Jahre' — eine biblische Lebensspanne", detail: "Diese traditionelle Redewendung für eine Lebensspanne von 70 Jahren stammt aus der Bibel (Psalm 90,10)." },
+      ],
+      72: [
+        { context: "Die '72er-Regel'", detail: "In der Finanzwelt liefert die Division von 72 durch einen Zinssatz eine grobe Schätzung, wie viele Jahre sich eine Investition verdoppelt." },
+        { context: "72 Stunden", detail: "72 Stunden entsprechen genau drei vollen Tagen." },
+      ],
+      75: [
+        { context: "Die diamantene Hochzeit", detail: "In manchen Traditionen wird der 75. Hochzeitstag 'diamanten' genannt, wobei dieser Begriff meist eher mit dem 60. Jahrestag assoziiert wird, etwa bei Königin Elisabeths II. Diamantenem Thronjubiläum 2012." },
+      ],
+      76: [
+        { context: "'76 Posaunen'", detail: "'Seventy-Six Trombones' ist der berühmte Marschkapellen-Song aus dem Musical The Music Man von 1957." },
+      ],
+      78: [
+        { context: "78er-Schallplatten", detail: "78 Umdrehungen pro Minute war die früheste Standardabspielgeschwindigkeit für Grammophonplatten, bevor sich die Formate 33⅓ und 45 durchsetzten." },
+      ],
+      80: [
+        { context: "In 80 Tagen um die Welt", detail: "Jules Vernes klassischer Roman von 1873 erzählt von einem Wettlauf, die Welt in 80 Tagen zu umrunden." },
+      ],
+      86: [
+        { context: "'86' im Gastronomie-Jargon", detail: "Im Restaurant- und Bar-Jargon bedeutet, etwas zu '86en', es von der Karte zu streichen — oder auch, einen störenden Gast hinauszubefördern." },
+      ],
+      88: [
+        { context: "Tasten auf einem Klavier", detail: "Ein normales modernes Klavier hat 88 Tasten." },
+        { context: "Offiziell anerkannte Sternbilder", detail: "Die Internationale Astronomische Union erkennt offiziell 88 Sternbilder an." },
+      ],
+      90: [
+        { context: "Die Dauer eines Fußballspiels", detail: "Ein reguläres Fußballspiel dauert 90 Minuten, aufgeteilt in zwei Halbzeiten zu je 45 Minuten." },
+        { context: "Ein rechter Winkel", detail: "Ein rechter Winkel misst genau 90 Grad." },
+      ],
+      92: [
+        { context: "Die Ordnungszahl von Uran", detail: "Uran mit der Ordnungszahl 92 gilt traditionell als das schwerste natürlich vorkommende Element im Periodensystem." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "Windows 95 war ein bahnbrechendes Microsoft-Betriebssystem von 1995, das zur Verbreitung von Heimcomputern erheblich beitrug." },
+      ],
+      99: [
+        { context: "Die Preispsychologie der '.99'", detail: "Händler versehen Produkte oft mit Preisen, die auf .99 enden (wie 19,99 €), weil sie im Vergleich zur nächsten runden Zahl deutlich niedriger wirken." },
+      ],
+      100: [
+        { context: "Ein Jahrhundert", detail: "Ein Zeitraum von 100 Jahren wird Jahrhundert genannt." },
+        { context: "100% als 'das Ganze'", detail: "Prozente basieren auf der 100 als Bezugspunkt für ein vollständiges Ganzes." },
+        { context: "Der US-Senat", detail: "Der US-Senat hat 100 Mitglieder — zwei aus jedem der 50 Bundesstaaten." },
+        { context: "Der Siedepunkt von Wasser", detail: "Bei Normaldruck siedet Wasser auf der Celsius-Skala bei 100°C." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -1952,6 +2155,308 @@ const funFacts: { [key: number]: FunFactItem[] } = {
         { fact: "Die 12 ist eine hochzusammengesetzte Zahl — sie hat mehr Teiler (1, 2, 3, 4, 6, 12) als jede kleinere positive Zahl." },
         { fact: "Das Wort 'Dutzend' stammt vom altfranzösischen 'douzaine', was eine Gruppe von zwölf bedeutet." },
         { fact: "Eine Gruppe von 144 Gegenständen — 12 Dutzend — wird traditionell als 'Gros' bezeichnet." },
+      ],
+      13: [
+        { fact: "13 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "Die Angst vor der Zahl 13 hat einen offiziellen Namen: Triskaidekaphobie." },
+        { fact: "Viele Gebäude verzichten wegen des Aberglaubens rund um diese Zahl auf ein 13. Stockwerk." },
+      ],
+      14: [
+        { fact: "14 = 2 × 7, also ist jedes Ergebnis des 14er-Einmaleins genau das Doppelte des entsprechenden 7er-Ergebnisses." },
+        { fact: "Das englische Wort 'fortnight' ist eine Verkürzung von 'fourteen nights' (vierzehn Nächte), dem alten Ausdruck für zwei Wochen." },
+      ],
+      15: [
+        { fact: "15 ist eine Dreieckszahl — sie ist die Summe der ersten fünf natürlichen Zahlen: 1+2+3+4+5=15." },
+        { fact: "15 = 3 × 5, damit ist sie das Produkt der beiden kleinsten ungeraden Primzahlen." },
+      ],
+      16: [
+        { fact: "16 = 2⁴, also die erste vierte Potenz größer als 1." },
+        { fact: "16 ist zugleich eine Quadratzahl: 16 = 4 × 4." },
+        { fact: "Computer nutzen häufig die Basis 16 (hexadezimal), weil jede Hexadezimalziffer genau 4 Binärstellen (Bits) entspricht." },
+      ],
+      17: [
+        { fact: "17 ist eine Primzahl, die sich nicht durch Verdoppeln oder Verdreifachen einer kleineren Reihe herleiten lässt." },
+        { fact: "In informellen psychologischen Umfragen wählen Menschen, die zwischen 1 und 20 eine 'zufällige' Zahl nennen sollen, überdurchschnittlich oft die 17 — eine Eigenart menschlicher Zahlenvorlieben, nicht echter Zufälligkeit." },
+      ],
+      18: [
+        { fact: "18 = 2 × 9 = 3 × 6, es gibt also mehr als einen gültigen Weg, sie durch Verdoppeln oder Verdreifachen einer kleineren Reihe zu erreichen." },
+        { fact: "Da 18 ein Vielfaches von 9 ist, gilt für alle Vielfachen von 18 auch die Quersummenregel der 9." },
+      ],
+      19: [
+        { fact: "19 ist eine Primzahl und die letzte der englischen 'teen'-Zahlen (13 bis 19)." },
+        { fact: "19 = 20 − 1, weshalb sich das Multiplizieren mit 19 oft leichter berechnen lässt, indem man zuerst mit 20 multipliziert und dann die Ausgangszahl abzieht." },
+      ],
+      20: [
+        { fact: "Das alte englische Wort 'score' bedeutet 20, wie in der berühmten Lincoln-Formulierung 'four score and seven years ago' (4×20+7=87)." },
+        { fact: "20 = 4 × 5 = 2 × 10, es gibt also mehrere Faktorenpaare, um diese Reihe aufzubauen." },
+      ],
+      21: [
+        { fact: "21 = 3 × 7, das Produkt zweier kleinerer Reihen, die Schüler wahrscheinlich schon kennen." },
+        { fact: "Beim Blackjack ist 21 genau die Zielsumme — sie zu überschreiten bedeutet automatisch zu verlieren." },
+      ],
+      22: [
+        { fact: "22 = 2 × 11, also ist ihre Reihe einfach die verdoppelte 11er-Reihe." },
+        { fact: "Der Titel von Joseph Hellers Roman 'Catch-22' ist im Englischen zu einer eigenständigen Redewendung für ein ausweglose Dilemma geworden." },
+      ],
+      23: [
+        { fact: "23 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "Menschliche Zellen enthalten 23 Chromosomenpaare — eine der außerhalb der Mathematik meistzitierten Tatsachen über die Zahl 23." },
+      ],
+      24: [
+        { fact: "24 ist eine hochzusammengesetzte Zahl — ihre Teiler (1, 2, 3, 4, 6, 8, 12, 24) übertreffen die jeder kleineren positiven Zahl." },
+        { fact: "24 = 2³ × 3, kombiniert also eine Potenz von 2 mit einem Faktor 3." },
+      ],
+      25: [
+        { fact: "25 ist eine Quadratzahl: 25 = 5 × 5." },
+        { fact: "Da 25 genau ein Viertel von 100 ist, lässt sich eine Zahl mit 25 oft schneller multiplizieren, indem man ×100 und dann ÷4 rechnet." },
+      ],
+      26: [
+        { fact: "26 = 2 × 13, also ist ihre Reihe einfach die verdoppelte 13er-Reihe." },
+        { fact: "Die 26 Buchstaben des Alphabets machen die 26 zu einer der im Alltagsschrift häufigsten Zahlen." },
+      ],
+      27: [
+        { fact: "27 ist eine Kubikzahl: 27 = 3 × 3 × 3, also 3³." },
+        { fact: "Der '27er-Club' ist ein Popkultur-Begriff für bekannte Musiker, die in diesem Alter starben — Forscher fanden jedoch keine statistischen Belege für ein besonders erhöhtes Sterberisiko genau mit 27 Jahren." },
+      ],
+      28: [
+        { fact: "28 ist eine vollkommene Zahl — die Summe ihrer echten Teiler (1, 2, 4, 7, 14) ergibt genau 28; sie ist die zweite vollkommene Zahl nach der 6." },
+        { fact: "28 = 4 × 7, was sie direkt mit zwei kleineren Reihen verbindet." },
+      ],
+      29: [
+        { fact: "29 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "Die 29 erscheint im Kalender nur in Schaltjahren, wenn der Februar einen zusätzlichen Tag erhält." },
+      ],
+      30: [
+        { fact: "30 = 2 × 3 × 5, das Produkt der drei kleinsten Primzahlen." },
+        { fact: "30 hat für ihre Größe ungewöhnlich viele kleine Teiler — einer der Gründe, warum sie in Alltagsmessungen so oft glatt aufgeht." },
+      ],
+      31: [
+        { fact: "31 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "31 = 2⁵ − 1, damit ist sie eine Mersenne-Primzahl, zur selben Familie gehören auch 3, 7 und 127." },
+      ],
+      32: [
+        { fact: "32 = 2⁵, die fünfte Potenz von 2." },
+        { fact: "32 ist genau das Doppelte von 16, die wiederum das Doppelte von 8 ist — Teil einer ununterbrochenen Verdopplungskette bis zur 1." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11, also ist ihre Reihe direkt das verdreifachte Spiegelziffern-Muster der 11er-Reihe." },
+      ],
+      34: [
+        { fact: "34 ist eine Fibonacci-Zahl — sie ist die Summe der beiden vorhergehenden Fibonacci-Zahlen, 13 und 21." },
+        { fact: "In einem magischen 4×4-Quadrat ergibt jede Zeile, Spalte und Diagonale die Summe 34 — die kleinstmögliche magische Konstante für ein 4×4-Raster." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7, das Produkt zweier kleinerer Reihen, die Schüler bereits kennen." },
+      ],
+      36: [
+        { fact: "36 ist zugleich eine Quadratzahl (6×6) und eine Dreieckszahl (1+2+...+8) — eine Kombination, die nur sehr wenige Zahlen teilen." },
+      ],
+      37: [
+        { fact: "37 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "37 × 3 = 111, weshalb 37 jede dreistellige Zahl mit gleichen Ziffern (111, 222, 333... bis 999) glatt teilt." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19, also ist ihre Reihe einfach die verdoppelte 19er-Reihe." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13, das Produkt zweier kleinerer Reihen, die Schüler wahrscheinlich schon kennen." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5, kombiniert eine Potenz von 2 mit einem Faktor 5." },
+      ],
+      41: [
+        { fact: "41 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "41 und 43 sind Primzahlzwillinge — sie unterscheiden sich um genau 2." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7, kombiniert drei der kleinsten in den Standard-Einmaleins-Reihen verwendeten Primzahlen." },
+      ],
+      43: [
+        { fact: "43 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "43 bildet, wie 41, die größere Zahl eines Primzahlzwillingspaars, das durch genau eine gerade Zahl, die 42, getrennt ist." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11, also ist ihre Reihe direkt die vervierfachte 11er-Reihe." },
+      ],
+      45: [
+        { fact: "45° ist genau die Hälfte eines rechten Winkels (90°), weshalb 45-Grad-Winkel in Geometrie und Design ständig vorkommen." },
+        { fact: "45 ist zugleich eine Dreieckszahl (1+2+...+9) und das Produkt zweier kleinerer Reihen, 9 und 5." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23, also ist ihre Reihe einfach die verdoppelte 23er-Reihe." },
+      ],
+      47: [
+        { fact: "47 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "47 ist ein berühmter Insider-Scherz unter Star-Trek-Fans und -Autoren, die die Zahl angeblich absichtlich im Hintergrund vieler Episoden platzierten." },
+      ],
+      48: [
+        { fact: "48 ist für ihre Größe eine stark zusammengesetzte Zahl — ihre Teiler (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) übertreffen die jeder kleineren positiven Zahl." },
+      ],
+      49: [
+        { fact: "49 ist eine Quadratzahl: 49 = 7 × 7." },
+        { fact: "7×7=49 ist eine der am häufigsten auswendig gelernten Einzelfakten im gesamten Standard-Einmaleins." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5², kombiniert einen einzelnen Faktor 2 mit dem Quadrat von 5." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17, das Produkt zweier kleinerer Primzahlen." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13, also ist ihre Reihe direkt die vervierfachte 13er-Reihe." },
+      ],
+      53: [
+        { fact: "53 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³, kombiniert einen einzelnen Faktor 2 mit der dritten Potenz von 3." },
+      ],
+      55: [
+        { fact: "55 ist zugleich eine Dreieckszahl (1+2+...+10) und eine Fibonacci-Zahl — eine Kombination, die nur sehr wenige Zahlen teilen." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7, kombiniert eine Potenz von 2 mit einem Faktor 7." },
+        { fact: "7×8=56 ist eine der im gesamten Standard-Einmaleins am häufigsten verwechselten Einzelfakten." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19, das Produkt zweier kleinerer Primzahlen." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29, also ist ihre Reihe einfach die verdoppelte 29er-Reihe." },
+      ],
+      59: [
+        { fact: "59 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      60: [
+        { fact: "60 ist eine hochzusammengesetzte Zahl — ihre Teiler (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) übertreffen die jeder kleineren positiven Zahl." },
+        { fact: "Die alten Babylonier nutzten ein Zahlensystem zur Basis 60 (Sexagesimalsystem), weshalb Zeit und Winkel bis heute in 60er-Einheiten unterteilt werden." },
+      ],
+      61: [
+        { fact: "61 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31, also ist ihre Reihe einfach die verdoppelte 31er-Reihe." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7, kombiniert das Quadrat von 3 mit einem Faktor 7." },
+        { fact: "63 = 2⁶ − 1 (64 minus 1), liegt also genau eine Einheit unter der nächsten Zweierpotenz." },
+      ],
+      64: [
+        { fact: "64 ist zugleich eine Quadratzahl (8²) und eine Kubikzahl (4³) — eine der wenigen Zahlen mit beiden Eigenschaften." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13, das Produkt zweier kleinerer Reihen." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11, kombiniert drei der kleineren Reihen." },
+      ],
+      67: [
+        { fact: "67 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17, also ist ihre Reihe direkt die vervierfachte 17er-Reihe." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23, das Produkt zweier kleinerer Reihen." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7, kombiniert drei der kleinsten in den Standard-Einmaleins-Reihen verwendeten Primzahlen." },
+      ],
+      71: [
+        { fact: "71 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3², kombiniert eine Potenz von 2 mit dem Quadrat von 3." },
+      ],
+      73: [
+        { fact: "73 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst. Sie ist zudem die 21. Primzahl, von 2 an gezählt." },
+        { fact: "Binär geschrieben ist 73 gleich 1001001 — ein Palindrom, das vorwärts wie rückwärts gleich gelesen wird." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37, also ist ihre Reihe einfach die verdoppelte 37er-Reihe." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5², kombiniert einen Faktor 3 mit dem Quadrat von 5." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19, also ist ihre Reihe direkt die vervierfachte 19er-Reihe." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11, das Produkt zweier kleinerer Reihen." },
+        { fact: "77 ist ein Zahlenpalindrom — sie liest sich vorwärts wie rückwärts gleich." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13, kombiniert drei der kleineren Reihen." },
+      ],
+      79: [
+        { fact: "79 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5, kombiniert eine Potenz von 2 mit einem Faktor 5." },
+        { fact: "80% entsprechen vier Fünfteln (4/5) eines Ganzen." },
+      ],
+      81: [
+        { fact: "81 ist eine Quadratzahl (9×9) und zugleich gleich 3⁴ (3 hoch 4)." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41, also ist ihre Reihe einfach die verdoppelte 41er-Reihe." },
+      ],
+      83: [
+        { fact: "83 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7, kombiniert eine Potenz von 2 mit den Faktoren 3 und 7." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17, das Produkt zweier kleinerer Reihen." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43, also ist ihre Reihe einfach die verdoppelte 43er-Reihe." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29, das Produkt zweier kleinerer Reihen." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11, das Produkt zweier kleinerer Reihen." },
+      ],
+      89: [
+        { fact: "89 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "89 ist zugleich eine Fibonacci-Zahl — sie ist die Summe der beiden vorhergehenden Fibonacci-Zahlen, 34 und 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5, kombiniert eine Potenz von 2, das Quadrat von 3 und einen Faktor 5." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13, weshalb sie im Matheunterricht ein klassisches Beispiel für eine Zahl ist, die wie eine Primzahl aussieht, aber keine ist." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23, also ist ihre Reihe direkt die vervierfachte 23er-Reihe." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31, das Produkt zweier kleinerer Reihen." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47, also ist ihre Reihe einfach die verdoppelte 47er-Reihe." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19, das Produkt zweier kleinerer Reihen." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3, kombiniert eine Potenz von 2 mit einem einzelnen Faktor 3." },
+      ],
+      97: [
+        { fact: "97 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "97 ist die größte Primzahl unter 100." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7², kombiniert einen einzelnen Faktor 2 mit dem Quadrat von 7." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11, das Produkt zweier kleinerer Reihen." },
+        { fact: "Da 99 ein Vielfaches von 9 ist, ergibt die Quersumme jedes Vielfachen von 99 immer ein Vielfaches von 9." },
+      ],
+      100: [
+        { fact: "100 = 10², das Quadrat von 10, und zugleich gleich 4 × 25." },
       ],
     }
 

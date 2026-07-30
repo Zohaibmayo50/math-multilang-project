@@ -166,6 +166,209 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
         { context: "Uma dúzia", detail: "Ovos e produtos de padaria costumam ser vendidos por dúzia — um grupo de 12." },
         { context: "Signos do zodíaco", detail: "O zodíaco ocidental é tradicionalmente dividido em 12 signos." },
       ],
+      13: [
+        { context: "As 13 colônias originais dos EUA", detail: "Os Estados Unidos começaram como 13 colônias britânicas ao longo da costa atlântica, antes de declarar independência." },
+        { context: "Cartas por naipe", detail: "Um baralho padrão de 52 cartas tem 13 cartas em cada um dos seus quatro naipes." },
+        { context: "A dúzia do padeiro", detail: "Tradicionalmente, uma 'dúzia do padeiro' significa 13 itens em vez de 12." },
+        { context: "Triscaidecafobia", detail: "O 13 é o número mais associado ao azar na cultura ocidental — esse medo tem até nome próprio." },
+      ],
+      14: [
+        { context: "Catorze dias, duas semanas", detail: "Em inglês, a palavra 'fortnight' designa um período de 14 dias." },
+        { context: "Dia dos Namorados", detail: "Em muitos países, o Dia dos Namorados cai em 14 de fevereiro." },
+        { context: "Versos de um soneto", detail: "Um soneto clássico, como os escritos por Shakespeare, tem exatamente 14 versos." },
+      ],
+      15: [
+        { context: "Um quarto de hora", detail: "15 minutos equivalem a um quarto de hora, um dos usos mais comuns desse número no dia a dia." },
+        { context: "Equipe de rúgbi union", detail: "Uma equipe de rúgbi union coloca 15 jogadores em campo, diferente dos 13 do rugby league." },
+      ],
+      16: [
+        { context: "Onças em uma libra", detail: "No sistema de medidas americano, 1 libra equivale a 16 onças." },
+        { context: "O sistema hexadecimal na computação", detail: "Cientistas da computação usam a base 16 (hexadecimal) como forma compacta de representar dados binários." },
+        { context: "Peões em um tabuleiro de xadrez", detail: "Um jogo de xadrez inclui 16 peões no total — 8 para cada jogador." },
+        { context: "Os 'doces dezesseis'", detail: "Completar 16 anos é considerado um aniversário marcante em várias culturas." },
+      ],
+      17: [
+        { context: "O número que 'parece' mais aleatório", detail: "Em pesquisas informais que pedem um número 'aleatório' num intervalo pequeno, o 17 é escolhido com mais frequência do que o acaso puro preveria — uma curiosidade da psicologia humana, não da aleatoriedade real." },
+      ],
+      18: [
+        { context: "A maioridade no Brasil e em Portugal", detail: "No Brasil e em Portugal, assim como em muitos outros países, a maioridade legal é atingida aos 18 anos." },
+        { context: "Buracos em um campo de golfe", detail: "Um campo de golfe padrão tem 18 buracos." },
+      ],
+      19: [
+        { context: "O fim da adolescência", detail: "Em inglês, os números terminados em '-teen' vão de 13 a 19 — o 19 é o último antes de completar 20 anos." },
+      ],
+      20: [
+        { context: "Visão 20/20", detail: "'Visão 20/20' é o termo padrão para acuidade visual normal, medida a uma distância de 20 pés." },
+        { context: "Dedos das mãos e dos pés somados", detail: "A maioria das pessoas tem 10 dedos nas mãos e 10 nos pés, totalizando 20." },
+      ],
+      21: [
+        { context: "O blackjack", detail: "No jogo de cartas blackjack, 21 é a pontuação-alvo que os jogadores tentam alcançar sem ultrapassar." },
+        { context: "A idade legal para beber nos EUA", detail: "Nos Estados Unidos, a idade mínima legal para consumir álcool é 21 anos, padronizada em todo o país por uma lei federal de 1984." },
+      ],
+      22: [
+        { context: "Jogadores num campo de futebol", detail: "Uma partida completa de futebol tem 22 jogadores em campo — 11 por equipe." },
+        { context: "Catch-22", detail: "O título do romance de Joseph Heller, 'Catch-22', virou uma expressão comum em inglês para descrever uma situação sem saída." },
+      ],
+      23: [
+        { context: "Pares de cromossomos humanos", detail: "Uma célula humana típica contém 23 pares de cromossomos — 46 no total." },
+      ],
+      24: [
+        { context: "24 horas em um dia", detail: "Um dia completo se divide em 24 horas." },
+        { context: "24 quilates, o ouro puro", detail: "O ouro de 24 quilates é considerado ouro puro, a pureza máxima usada em joalheria." },
+        { context: "A taxa de quadros do cinema", detail: "24 quadros por segundo é o padrão do cinema desde a chegada do som." },
+      ],
+      25: [
+        { context: "Um quarto de 100", detail: "25 é exatamente a quarta parte de 100, daí a ligação forte entre esse número e as porcentagens." },
+        { context: "As bodas de prata", detail: "O 25º aniversário de casamento é tradicionalmente chamado de 'bodas de prata'." },
+      ],
+      26: [
+        { context: "Letras do alfabeto português", detail: "O alfabeto português tem 26 letras, de A a Z." },
+        { context: "A distância de uma maratona", detail: "Uma maratona mede exatamente 42,195 km, o que equivale a cerca de 26,2 milhas." },
+        { context: "Ossos em um pé humano", detail: "Segundo as referências anatômicas padrão, cada pé humano tem 26 ossos." },
+      ],
+      27: [
+        { context: "O Clube dos 27", detail: "Vários músicos influentes — entre eles Jimi Hendrix, Janis Joplin e Kurt Cobain — morreram aos 27 anos, um padrão que a cultura pop batizou de 'Clube dos 27'." },
+      ],
+      28: [
+        { context: "Os dias de fevereiro", detail: "Fevereiro tem 28 dias em todo ano que não é bissexto." },
+        { context: "O ciclo lunar", detail: "O ciclo das fases da Lua costuma ser descrito, de forma aproximada, como tendo cerca de 28 dias, embora o mês sinódico exato fique mais perto de 29,5 dias." },
+      ],
+      29: [
+        { context: "Fevereiro em ano bissexto", detail: "Em um ano bissexto, fevereiro tem 29 dias em vez dos habituais 28." },
+      ],
+      30: [
+        { context: "Meses com 30 dias", detail: "Abril, junho, setembro e novembro têm 30 dias cada, como lembra o conhecido ditado popular sobre os meses." },
+      ],
+      31: [
+        { context: "Meses com 31 dias", detail: "Janeiro, março, maio, julho, agosto, outubro e dezembro têm 31 dias cada — sete meses no total." },
+      ],
+      32: [
+        { context: "O ponto de congelamento da água", detail: "A água congela a 32°F na escala Fahrenheit." },
+        { context: "Uma dentição adulta completa", detail: "Uma dentição humana adulta completa, incluindo os dentes do siso, soma 32 dentes no total." },
+        { context: "O número de times da NFL", detail: "A National Football League (NFL) é formada por 32 times." },
+      ],
+      33: [
+        { context: "Vértebras na coluna humana", detail: "Costuma-se dizer que a coluna vertebral humana tem 33 vértebras, embora várias delas se fundam no sacro e no cóccix na vida adulta." },
+        { context: "A idade de Jesus na crucificação", detail: "Segundo a tradição cristã mais difundida, Jesus tinha 33 anos no momento da crucificação." },
+      ],
+      35: [
+        { context: "O formato de filme de 35mm", detail: "O 35mm foi por muito tempo o formato padrão tanto na fotografia quanto no cinema." },
+      ],
+      36: [
+        { context: "Polegadas em uma jarda", detail: "No sistema de medidas americano, 1 jarda equivale a 36 polegadas." },
+      ],
+      38: [
+        { context: "O paralelo 38", detail: "Essa linha de latitude ficou historicamente associada à fronteira entre Coreia do Norte e Coreia do Sul." },
+      ],
+      39: [
+        { context: "Os 39 degraus", detail: "'The 39 Steps' é um clássico thriller de 1935 dirigido por Alfred Hitchcock, baseado num romance homônimo de 1915." },
+      ],
+      40: [
+        { context: "'Quarenta dias e quarenta noites'", detail: "O número 40 aparece repetidamente na Bíblia, inclusive na história do dilúvio no Gênesis." },
+        { context: "A semana de trabalho padrão", detail: "Uma semana de trabalho de 40 horas é um padrão comum em muitos países." },
+        { context: "A origem da palavra 'quarentena'", detail: "'Quarentena' vem do italiano 'quaranta giorni' ('quarenta dias'), o período de isolamento historicamente exigido de navios durante surtos de peste." },
+      ],
+      42: [
+        { context: "'A resposta para a vida, o universo e tudo mais'", detail: "No romance O Guia do Mochileiro das Galáxias, de Douglas Adams, um supercomputador calcula que a resposta para a pergunta definitiva é o número 42." },
+        { context: "Pontos em um par de dados", detail: "Um dado padrão tem 21 pontos ao todo (1+2+3+4+5+6), então um par de dados soma 42 pontos." },
+      ],
+      44: [
+        { context: "O 44º presidente dos EUA", detail: "Barack Obama foi o 44º presidente dos Estados Unidos." },
+      ],
+      45: [
+        { context: "Os discos de 45 RPM", detail: "Os 'compactos' em vinil eram tradicionalmente prensados para girar a 45 rotações por minuto." },
+      ],
+      46: [
+        { context: "Cromossomos em uma célula humana", detail: "Uma célula humana típica contém 46 cromossomos, organizados em 23 pares." },
+      ],
+      48: [
+        { context: "48 horas", detail: "48 horas equivalem exatamente a dois dias completos." },
+        { context: "Os estados contíguos dos EUA", detail: "Os 48 estados contíguos dos Estados Unidos excluem apenas o Alasca e o Havaí, geograficamente separados." },
+      ],
+      50: [
+        { context: "Os 50 estados dos EUA", detail: "Os Estados Unidos são formados por 50 estados." },
+        { context: "As bodas de ouro", detail: "O 50º aniversário de casamento é tradicionalmente chamado de 'bodas de ouro'." },
+      ],
+      51: [
+        { context: "A Área 51", detail: "A Área 51 é uma famosa instalação da Força Aérea dos EUA em Nevada, mantida em sigilo por muito tempo e bastante referenciada na cultura pop." },
+      ],
+      52: [
+        { context: "Semanas em um ano", detail: "Um ano padrão tem 52 semanas." },
+        { context: "Cartas em um baralho", detail: "Um baralho padrão tem 52 cartas, sem contar os coringas." },
+      ],
+      54: [
+        { context: "Quadrados em um cubo mágico", detail: "O clássico cubo mágico 3×3 tem 9 quadrados coloridos por face, somando 54 quadrados no total em suas 6 faces." },
+      ],
+      55: [
+        { context: "O antigo limite de velocidade nos EUA", detail: "Entre 1974 e 1995, 55 milhas por hora foi o limite máximo de velocidade nas rodovias dos EUA por lei federal." },
+      ],
+      57: [
+        { context: "O slogan '57 Variedades' da Heinz", detail: "A empresa H.J. Heinz usa o slogan '57 Variedades' desde 1896, muito depois de já vender mais de 57 produtos." },
+      ],
+      59: [
+        { context: "Um segundo antes do próximo minuto", detail: "Um minuto tem 60 segundos, então o 59 é o último segundo antes de começar um novo minuto." },
+      ],
+      60: [
+        { context: "Segundos em um minuto", detail: "Um minuto tem 60 segundos." },
+        { context: "Minutos em uma hora", detail: "Uma hora tem 60 minutos." },
+      ],
+      64: [
+        { context: "Casas em um tabuleiro de xadrez", detail: "Um tabuleiro de xadrez padrão é uma grade de 8×8 e tem exatamente 64 casas." },
+        { context: "Uma caixa clássica de Crayola", detail: "A icônica 'Big Box' da Crayola inclui há muito tempo 64 cores de lápis de cera." },
+        { context: "Nintendo 64", detail: "O Nintendo 64 foi um console histórico dos anos 90, batizado por causa de seu processador de 64 bits." },
+      ],
+      65: [
+        { context: "A idade tradicional de aposentadoria", detail: "Os 65 anos são usados há muito tempo como idade padrão de aposentadoria em vários países." },
+        { context: "Um limite de velocidade comum em rodovia", detail: "65 milhas por hora é um limite de velocidade comum nas rodovias de muitos estados americanos." },
+      ],
+      66: [
+        { context: "A Rota 66", detail: "A Rota 66 foi uma das primeiras rodovias dos EUA, ligando Chicago a Santa Mônica, e virou um símbolo cultural das viagens de estrada americanas." },
+      ],
+      70: [
+        { context: "'Setenta anos' — uma expressão bíblica tradicional", detail: "Essa expressão tradicional para uma vida de 70 anos vem da Bíblia (Salmo 90:10)." },
+      ],
+      72: [
+        { context: "A 'regra dos 72'", detail: "Nas finanças, dividir 72 por uma taxa de juros dá uma estimativa rápida de quantos anos um investimento leva para dobrar." },
+        { context: "72 horas", detail: "72 horas equivalem exatamente a três dias completos." },
+      ],
+      75: [
+        { context: "As bodas de diamante", detail: "Em algumas tradições comemorativas, o 75º aniversário é chamado de 'bodas de diamante', embora o termo seja mais associado aos 60 anos, como no Jubileu de Diamante da rainha Elizabeth II em 2012." },
+      ],
+      76: [
+        { context: "'76 Trombones'", detail: "'Seventy-Six Trombones' é a famosa canção de banda marcial do musical de 1957 The Music Man." },
+      ],
+      78: [
+        { context: "Discos de 78 RPM", detail: "78 RPM foi a primeira velocidade padrão de reprodução dos discos de gramofone, antes de os formatos de 33⅓ e 45 RPM se popularizarem." },
+      ],
+      80: [
+        { context: "A Volta ao Mundo em Oitenta Dias", detail: "O clássico romance de Júlio Verne, de 1873, narra uma corrida para dar a volta ao mundo em 80 dias." },
+      ],
+      86: [
+        { context: "A gíria de restaurante '86'", detail: "Na gíria de bares e restaurantes americanos, 'dar um 86' num prato significa tirá-lo do cardápio; também pode significar retirar um cliente problemático." },
+      ],
+      88: [
+        { context: "Teclas de um piano", detail: "Um piano moderno padrão tem 88 teclas." },
+        { context: "Constelações oficialmente reconhecidas", detail: "A União Astronômica Internacional reconhece oficialmente 88 constelações." },
+      ],
+      90: [
+        { context: "A duração de uma partida de futebol", detail: "Uma partida de futebol oficial dura 90 minutos, divididos em dois tempos de 45 minutos." },
+        { context: "Um ângulo reto", detail: "Um ângulo reto mede exatamente 90 graus." },
+      ],
+      92: [
+        { context: "O número atômico do urânio", detail: "O urânio, de número atômico 92, é tradicionalmente citado como o elemento natural mais pesado da tabela periódica." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "O Windows 95 foi um sistema operacional histórico da Microsoft lançado em 1995 que ajudou a popularizar a informática pessoal." },
+      ],
+      99: [
+        { context: "A psicologia dos preços em '.99'", detail: "O comércio costuma marcar preços terminados em ,99 (como 19,99) porque são percebidos como bem mais baixos do que o número redondo seguinte." },
+      ],
+      100: [
+        { context: "Um século", detail: "Um período de 100 anos é chamado de século." },
+        { context: "Os 100% como 'o todo'", detail: "As porcentagens são construídas tendo o 100 como ponto de referência de um todo completo." },
+        { context: "O Senado dos EUA", detail: "O Senado dos Estados Unidos tem 100 membros — dois de cada um dos 50 estados." },
+        { context: "O ponto de ebulição da água", detail: "À pressão atmosférica padrão, a água ferve a 100°C." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -229,6 +432,308 @@ const funFacts: { [key: number]: FunFactItem[] } = {
         { fact: "O 12 é um número altamente composto — tem mais divisores (1, 2, 3, 4, 6, 12) do que qualquer número positivo menor." },
         { fact: "A palavra 'dúzia' vem do francês antigo 'douzaine', que significa um grupo de doze." },
         { fact: "Um grupo de 144 itens — 12 dúzias — é tradicionalmente chamado de 'grosa'." },
+      ],
+      13: [
+        { fact: "O 13 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O medo do número 13 tem nome formal: triscaidecafobia." },
+        { fact: "Muitos prédios pulam o 13º andar na numeração por causa da superstição em torno desse número." },
+      ],
+      14: [
+        { fact: "14 = 2 × 7, então cada resultado da tabuada do 14 é exatamente o dobro do resultado correspondente na tabuada do 7." },
+        { fact: "A palavra inglesa 'fortnight' é uma contração de 'fourteen nights' (catorze noites), o termo antigo para duas semanas." },
+      ],
+      15: [
+        { fact: "15 é um número triangular — é a soma dos cinco primeiros números naturais: 1+2+3+4+5=15." },
+        { fact: "15 = 3 × 5, sendo assim o produto dos dois primeiros números primos ímpares." },
+      ],
+      16: [
+        { fact: "16 = 2⁴, o que o torna a primeira quarta potência maior que 1." },
+        { fact: "16 também é um quadrado perfeito: 16 = 4 × 4." },
+        { fact: "Computadores usam bastante a base 16 (hexadecimal) porque cada dígito hexadecimal corresponde exatamente a 4 bits binários." },
+      ],
+      17: [
+        { fact: "O 17 é um número primo, sem nenhuma tabuada menor que, dobrada ou triplicada, chegue até ele." },
+        { fact: "Em pesquisas psicológicas informais, quando se pede para dizer um número 'aleatório' entre 1 e 20, as pessoas escolhem o 17 desproporcionalmente — uma curiosidade sobre preferências numéricas humanas, não sobre aleatoriedade real." },
+      ],
+      18: [
+        { fact: "18 = 2 × 9 = 3 × 6, então existe mais de uma forma válida de dobrar ou triplicar uma tabuada menor para chegar até ele." },
+        { fact: "Como 18 é múltiplo de 9, todos os seus múltiplos também seguem a regra da soma dos algarismos do 9." },
+      ],
+      19: [
+        { fact: "O 19 é um número primo e é o último dos números terminados em '-teen' em inglês (de 13 a 19)." },
+        { fact: "19 = 20 − 1, então multiplicar por 19 costuma ser mais fácil multiplicando primeiro por 20 e depois subtraindo o número original." },
+      ],
+      20: [
+        { fact: "A antiga palavra inglesa 'score' significa 20, como na célebre frase de Lincoln 'four score and seven years ago' (4×20+7=87)." },
+        { fact: "20 = 4 × 5 = 2 × 10, então há vários pares de fatores para construir essa tabuada." },
+      ],
+      21: [
+        { fact: "21 = 3 × 7, o produto de duas tabuadas menores que os alunos provavelmente já conhecem." },
+        { fact: "No blackjack, o 21 é exatamente a pontuação-alvo — ultrapassá-la significa perder automaticamente." },
+      ],
+      22: [
+        { fact: "22 = 2 × 11, então sua tabuada é simplesmente o dobro da tabuada do 11." },
+        { fact: "O título do romance 'Catch-22', de Joseph Heller, virou uma expressão independente em inglês para um dilema sem solução." },
+      ],
+      23: [
+        { fact: "O 23 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "Células humanas contêm 23 pares de cromossomos, um dos fatos mais citados sobre o número 23 fora da matemática." },
+      ],
+      24: [
+        { fact: "O 24 é um número altamente composto — seus divisores (1, 2, 3, 4, 6, 8, 12, 24) superam os de qualquer número positivo menor." },
+        { fact: "24 = 2³ × 3, combinando uma potência de 2 com um fator 3." },
+      ],
+      25: [
+        { fact: "25 é um quadrado perfeito: 25 = 5 × 5." },
+        { fact: "Como 25 é exatamente um quarto de 100, multiplicar por 25 costuma ser mais rápido fazendo ×100 e depois ÷4." },
+      ],
+      26: [
+        { fact: "26 = 2 × 13, então sua tabuada é simplesmente o dobro da tabuada do 13." },
+        { fact: "As 26 letras do alfabeto fazem do 26 um dos números mais frequentes na linguagem escrita cotidiana." },
+      ],
+      27: [
+        { fact: "27 é um cubo perfeito: 27 = 3 × 3 × 3, ou seja, 3³." },
+        { fact: "O 'Clube dos 27' é um termo da cultura pop para músicos famosos que morreram nessa idade — mas pesquisadores não encontraram evidência estatística de risco de mortalidade anormal especificamente aos 27 anos." },
+      ],
+      28: [
+        { fact: "O 28 é um número perfeito — seus divisores próprios (1, 2, 4, 7 e 14) somam exatamente 28; é o segundo número perfeito depois do 6." },
+        { fact: "28 = 4 × 7, o que o conecta diretamente a duas tabuadas menores." },
+      ],
+      29: [
+        { fact: "O 29 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O 29 só aparece como data no calendário em anos bissextos, quando fevereiro ganha um dia a mais." },
+      ],
+      30: [
+        { fact: "30 = 2 × 3 × 5, o produto dos três primeiros números primos." },
+        { fact: "O 30 tem uma quantidade incomumente alta de divisores pequenos para seu tamanho, uma das razões pelas quais aparece tanto em medidas do dia a dia." },
+      ],
+      31: [
+        { fact: "O 31 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "31 = 2⁵ − 1, o que o torna um primo de Mersenne, a mesma família que inclui 3, 7 e 127." },
+      ],
+      32: [
+        { fact: "32 = 2⁵, a quinta potência de 2." },
+        { fact: "32 é exatamente o dobro de 16, que por sua vez é o dobro de 8 — parte de uma cadeia ininterrupta de duplicações que vai até o 1." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11, então sua tabuada é o triplo direto do padrão de espelho de dígitos da tabuada do 11." },
+      ],
+      34: [
+        { fact: "34 é um número de Fibonacci — é a soma dos dois números de Fibonacci anteriores, 13 e 21." },
+        { fact: "Em um quadrado mágico 4×4, cada linha, coluna e diagonal soma 34 — a menor constante mágica possível para uma grade 4×4." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7, o produto de duas tabuadas menores que os alunos já conhecem." },
+      ],
+      36: [
+        { fact: "36 é ao mesmo tempo um quadrado perfeito (6×6) e um número triangular (1+2+...+8) — combinação que pouquíssimos números compartilham." },
+      ],
+      37: [
+        { fact: "O 37 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "37 × 3 = 111, por isso o 37 divide exatamente qualquer número repdigit de três algarismos (111, 222, 333... até 999)." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19, então sua tabuada é simplesmente o dobro da tabuada do 19." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13, o produto de duas tabuadas menores que os alunos provavelmente já conhecem." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5, combinando uma potência de 2 com um fator 5." },
+      ],
+      41: [
+        { fact: "O 41 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "41 e 43 são primos gêmeos — a diferença entre eles é exatamente 2." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7, combinando três dos menores números primos usados nas tabuadas padrão." },
+      ],
+      43: [
+        { fact: "O 43 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O 43, assim como o 41, forma o maior valor de um par de primos gêmeos separados por exatamente um número par, o 42." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11, então sua tabuada é diretamente o quádruplo da tabuada do 11." },
+      ],
+      45: [
+        { fact: "45° é exatamente a metade de um ângulo reto (90°), por isso ângulos de 45 graus aparecem o tempo todo em geometria e design." },
+        { fact: "45 é ao mesmo tempo um número triangular (1+2+...+9) e o produto de duas tabuadas menores, 9 e 5." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23, então sua tabuada é simplesmente o dobro da tabuada do 23." },
+      ],
+      47: [
+        { fact: "O 47 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O 47 é uma piada interna famosa entre fãs e roteiristas de Star Trek, que aparentemente o inseriram de propósito no fundo de vários episódios." },
+      ],
+      48: [
+        { fact: "O 48 é um número altamente composto para seu tamanho — seus divisores (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) superam os de qualquer número positivo menor." },
+      ],
+      49: [
+        { fact: "49 é um quadrado perfeito: 49 = 7 × 7." },
+        { fact: "7×7=49 é um dos fatos mais memorizados de toda a tabuada padrão." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5², combinando um único fator 2 com o quadrado de 5." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17, o produto de dois números primos pequenos." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13, então sua tabuada é diretamente o quádruplo da tabuada do 13." },
+      ],
+      53: [
+        { fact: "O 53 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³, combinando um único fator 2 com o cubo de 3." },
+      ],
+      55: [
+        { fact: "55 é ao mesmo tempo um número triangular (1+2+...+10) e um número de Fibonacci — combinação que pouquíssimos números compartilham." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7, combinando uma potência de 2 com um fator 7." },
+        { fact: "7×8=56 é um dos fatos individuais mais confundidos em toda a tabuada padrão." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19, o produto de dois números primos pequenos." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29, então sua tabuada é simplesmente o dobro da tabuada do 29." },
+      ],
+      59: [
+        { fact: "O 59 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      60: [
+        { fact: "O 60 é um número altamente composto — seus divisores (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) superam os de qualquer número positivo menor." },
+        { fact: "Os antigos babilônios usavam um sistema numérico de base 60 (sexagesimal), por isso o tempo e os ângulos ainda são divididos em unidades de 60." },
+      ],
+      61: [
+        { fact: "O 61 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31, então sua tabuada é simplesmente o dobro da tabuada do 31." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7, combinando o quadrado de 3 com um fator 7." },
+        { fact: "63 = 2⁶ − 1 (64 menos 1), ficando exatamente um número abaixo da próxima potência de 2." },
+      ],
+      64: [
+        { fact: "64 é ao mesmo tempo um quadrado perfeito (8²) e um cubo perfeito (4³) — uma das poucas cifras com ambas as propriedades." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13, o produto de duas tabuadas menores." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11, combinando três das tabuadas menores." },
+      ],
+      67: [
+        { fact: "O 67 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17, então sua tabuada é diretamente o quádruplo da tabuada do 17." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23, o produto de duas tabuadas menores." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7, combinando três dos menores números primos usados nas tabuadas padrão." },
+      ],
+      71: [
+        { fact: "O 71 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3², combinando uma potência de 2 com o quadrado de 3." },
+      ],
+      73: [
+        { fact: "O 73 é um número primo — seus únicos divisores são 1 e ele mesmo. Também é o 21º número primo contando a partir do 2." },
+        { fact: "Em binário, 73 se escreve 1001001 — um palíndromo que se lê igual nos dois sentidos." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37, então sua tabuada é simplesmente o dobro da tabuada do 37." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5², combinando um fator 3 com o quadrado de 5." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19, então sua tabuada é diretamente o quádruplo da tabuada do 19." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11, o produto de duas tabuadas menores." },
+        { fact: "77 é um palíndromo numérico — se lê igual de trás para frente." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13, combinando três das tabuadas menores." },
+      ],
+      79: [
+        { fact: "O 79 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5, combinando uma potência de 2 com um fator 5." },
+        { fact: "80% equivale a quatro quintos (4/5) de um todo." },
+      ],
+      81: [
+        { fact: "81 é um quadrado perfeito (9×9) e também é igual a 3⁴ (3 elevado à quarta potência)." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41, então sua tabuada é simplesmente o dobro da tabuada do 41." },
+      ],
+      83: [
+        { fact: "O 83 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7, combinando uma potência de 2 com fatores 3 e 7." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17, o produto de duas tabuadas menores." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43, então sua tabuada é simplesmente o dobro da tabuada do 43." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29, o produto de duas tabuadas menores." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11, o produto de duas tabuadas menores." },
+      ],
+      89: [
+        { fact: "O 89 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "89 também é um número de Fibonacci — é a soma dos dois números de Fibonacci anteriores, 34 e 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5, combinando uma potência de 2, o quadrado de 3 e um fator 5." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13, o que o torna um exemplo clássico no ensino de matemática de um número que parece primo mas não é." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23, então sua tabuada é diretamente o quádruplo da tabuada do 23." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31, o produto de duas tabuadas menores." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47, então sua tabuada é simplesmente o dobro da tabuada do 47." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19, o produto de duas tabuadas menores." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3, combinando uma potência de 2 com um único fator 3." },
+      ],
+      97: [
+        { fact: "O 97 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O 97 é o maior número primo abaixo de 100." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7², combinando um único fator 2 com o quadrado de 7." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11, o produto de duas tabuadas menores." },
+        { fact: "Como 99 é múltiplo de 9, os algarismos de qualquer múltiplo de 99 sempre somam um múltiplo de 9." },
+      ],
+      100: [
+        { fact: "100 = 10², o quadrado de 10, e também é igual a 4 × 25." },
       ],
     }
 
