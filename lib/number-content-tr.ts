@@ -1889,6 +1889,215 @@ const realLifeExamples: { [key: number]: RealLifeItem[] } = {
         { context: "Bir düzine", detail: "Yumurta ve unlu mamuller gibi ürünler genellikle düzine, yani 12'lik gruplar halinde satılır." },
         { context: "Burçlar", detail: "Batı burç sistemi geleneksel olarak 12 burca ayrılır." },
       ],
+      13: [
+        { context: "13 orijinal Amerikan kolonisi", detail: "Amerika Birleşik Devletleri, bağımsızlığını ilan etmeden önce Atlantik kıyısında 13 İngiliz kolonisi olarak kuruldu." },
+        { context: "Her bir seride 13 kart", detail: "Standart 52 kartlık bir iskambil destesinde her bir renkte (kupa, karo, sinek, maça) 13 kart bulunur." },
+        { context: "Fırıncı düzinesi", detail: "Geleneksel olarak 'fırıncı düzinesi' 12 yerine 13 öğe anlamına gelir." },
+        { context: "Triskaidekaphobia", detail: "Batı kültüründe kötü şansla en çok ilişkilendirilen sayı 13'tür — bu korkunun kendine özgü bir adı bile vardır." },
+      ],
+      14: [
+        { context: "İki hafta (fortnight)", detail: "İngilizcede 14 gün anlamına gelen 'fortnight' kelimesi, İngiliz ve Commonwealth kültüründe yaygın kullanılır." },
+        { context: "Sevgililer Günü", detail: "Sevgililer Günü her yıl 14 Şubat'a denk gelir." },
+        { context: "Bir sonedeki dize sayısı", detail: "Shakespeare'in yazdığı gibi geleneksel bir sone tam olarak 14 dizeden oluşur." },
+      ],
+      15: [
+        { context: "Çeyrek saat", detail: "15 dakika bir saatin çeyreğidir, bu sayının en yaygın günlük kullanım alanlarından biridir." },
+        { context: "Ragbi birliği takım sayısı", detail: "Bir ragbi birliği (union) takımı sahaya 15 oyuncu sürer, ragbi ligindeki 13 oyuncudan farklı olarak." },
+      ],
+      16: [
+        { context: "Bir librede kaç ons olduğu", detail: "ABD ölçü sisteminde 1 libre (pound), 16 ons'a eşittir." },
+        { context: "Bilgisayarda onaltılık sistem", detail: "Bilgisayar bilimciler ikili veriyi kompakt göstermek için taban-16 (hexadecimal) sistemini kullanır." },
+        { context: "Satranç tahtasındaki piyonlar", detail: "Bir satranç takımında toplam 16 piyon vardır — her oyuncu için 8'er tane." },
+        { context: "'Tatlı on altı' kavramı", detail: "Birçok kültürde 16 yaşına girmek önemli bir doğum günü kabul edilir." },
+      ],
+      17: [
+        { context: "'En rastgele hissettiren' sayı", detail: "İnsanlara 1-20 arasında 'rastgele' bir sayı söylemeleri istendiğinde, 17'yi tesadüfen beklenenden çok daha sık seçerler — bu, gerçek rastgelelikten çok insan psikolojisinin bir tuhaflığıdır." },
+      ],
+      18: [
+        { context: "Reşit olma yaşı", detail: "Dünyanın birçok ülkesinde yasal olarak yetişkin sayılma yaşı 18'dir." },
+        { context: "Bir golf sahasındaki delik sayısı", detail: "Standart bir golf sahası 18 delikten oluşur." },
+      ],
+      19: [
+        { context: "Teenage yılların sonu", detail: "İngilizcede 'teen' ekiyle biten yaşlar 13'ten 19'a kadar sürer — 19, 20 yaşına girmeden önceki son 'teen' yaştır." },
+      ],
+      20: [
+        { context: "20/20 görme keskinliği", detail: "'20/20 görme', 20 fit mesafeden ölçülen normal görme netliğinin standart terimidir." },
+        { context: "Bir 'score' (yirmilik)", detail: "Eski İngilizcede 'score' kelimesi 20 anlamına gelir; Abraham Lincoln'ün ünlü 'four score and seven years ago' (4×20+7=87) ifadesinde olduğu gibi." },
+        { context: "El ve ayak parmaklarının toplamı", detail: "Çoğu insanın 10 el parmağı ve 10 ayak parmağı vardır, toplamda 20 parmak eder." },
+      ],
+      21: [
+        { context: "Blackjack (yirmi bir)", detail: "İskambil oyunu blackjack'te 21, oyuncuların aşmadan ulaşmaya çalıştığı hedef puandır." },
+        { context: "ABD'de yasal içki içme yaşı", detail: "ABD'de 1984'te çıkarılan federal bir yasayla ülke genelinde standartlaştırılan asgari içki içme yaşı 21'dir." },
+        { context: "21 pare top atışı", detail: "21 pare top atışı, devlet törenlerinde ve cenazelerde kullanılan geleneksel bir askeri saygı gösterisidir." },
+      ],
+      22: [
+        { context: "Bir futbol sahasındaki oyuncular", detail: "Tam bir futbol maçında sahada 22 oyuncu bulunur — her takımdan 11'er kişi." },
+        { context: "Kriket sahası", detail: "Kriket sahasında iki direk grubu arasındaki oyun şeridi 22 yarda uzunluğundadır." },
+        { context: "Catch-22", detail: "Joseph Heller'ın ünlü romanının adı olan 'Catch-22', İngilizcede çıkışsız bir durumu ifade eden yaygın bir deyim haline gelmiştir." },
+      ],
+      23: [
+        { context: "İnsan kromozom çiftleri", detail: "Tipik bir insan hücresinde 23 çift kromozom bulunur — toplamda 46 kromozom." },
+      ],
+      24: [
+        { context: "Günde 24 saat", detail: "Bir tam gün 24 saate bölünür." },
+        { context: "24 ayar altın", detail: "24 ayar altın, mücevherlerde kullanılan en yüksek saflık derecesi olan saf altın kabul edilir." },
+        { context: "Film çekim hızı", detail: "Saniyede 24 kare, sesli film döneminden bu yana sinemanın standart çekim hızı olmuştur." },
+      ],
+      25: [
+        { context: "Çeyrek para birimi", detail: "ABD para biriminde 25 sentlik bozuk paraya 'quarter' denir çünkü tam olarak bir doların çeyreğidir." },
+        { context: "100'ün çeyreği", detail: "25, tam olarak 100'ün dörtte biridir — bu yüzden yüzdelerle 25 arasında güçlü bir bağ vardır." },
+      ],
+      26: [
+        { context: "İngiliz alfabesindeki harf sayısı", detail: "İngiliz alfabesi A'dan Z'ye 26 harften oluşur." },
+        { context: "Bir maratonun uzunluğu", detail: "Bir maraton tam olarak 42,195 km'dir, bu da yaklaşık 26,2 mile denk gelir." },
+        { context: "Bir insan ayağındaki kemikler", detail: "Standart anatomi kaynaklarına göre her insan ayağında 26 kemik bulunur." },
+      ],
+      27: [
+        { context: "'27 Kulübü'", detail: "Jimi Hendrix, Janis Joplin ve Kurt Cobain gibi etkili müzisyenlerin 27 yaşında hayatını kaybetmesi, popüler kültürde '27 Kulübü' olarak adlandırılan bir örüntü yaratmıştır." },
+      ],
+      28: [
+        { context: "Şubat ayının gün sayısı", detail: "Artık yıl olmayan her yılda Şubat ayı 28 gün çeker." },
+        { context: "Ay'ın evre döngüsü", detail: "Ay'ın evre döngüsü genellikle yaklaşık 28 gün olarak tanımlanır, ancak tam sinodik ay ortalaması 29,5 güne daha yakındır." },
+      ],
+      29: [
+        { context: "Artık yıl Şubatı", detail: "Artık yıllarda Şubat ayı, her zamanki 28 gün yerine 29 gün çeker." },
+      ],
+      30: [
+        { context: "30 gün çeken aylar", detail: "Nisan, Haziran, Eylül ve Kasım ayları, geleneksel takvim tekerlemesinde de yer aldığı gibi 30'ar gün çeker." },
+      ],
+      31: [
+        { context: "31 gün çeken aylar", detail: "Ocak, Mart, Mayıs, Temmuz, Ağustos, Ekim ve Aralık ayları 31'er gün çeker — toplamda yedi ay." },
+      ],
+      32: [
+        { context: "Suyun donma noktası", detail: "Su, Fahrenheit ölçeğinde 32°F'de donar." },
+        { context: "Tam bir yetişkin diş takımı", detail: "20 yaş dişleri dahil tam bir yetişkin insan diş takımı toplam 32 dişten oluşur." },
+        { context: "NFL takım sayısı", detail: "Amerikan Ulusal Futbol Ligi (NFL) 32 takımdan oluşur." },
+      ],
+      33: [
+        { context: "İnsan omurgasındaki omur sayısı", detail: "İnsan omurgasının genellikle 33 omurdan oluştuğu söylenir, ancak bunların bir kısmı yetişkinlikte sakrum ve koksiks içinde kaynaşır." },
+        { context: "Hristiyan geleneğinde İsa'nın yaşı", detail: "Yaygın Hristiyan geleneğine göre İsa, çarmıha gerildiğinde 33 yaşındaydı." },
+      ],
+      35: [
+        { context: "35mm film", detail: "35mm, hem fotoğrafçılıkta hem de sinemada uzun süredir standart film formatı olmuştur." },
+      ],
+      36: [
+        { context: "Bir yardadaki inç sayısı", detail: "ABD ölçü sisteminde 1 yarda, 36 inç'e eşittir." },
+      ],
+      38: [
+        { context: "38. paralel", detail: "Bu enlem çizgisi, tarihsel olarak Kuzey ve Güney Kore arasındaki sınırla özdeşleşmiştir." },
+      ],
+      39: [
+        { context: "Otuz Dokuz Basamak", detail: "'The 39 Steps', Alfred Hitchcock'un yönettiği, 1915 tarihli aynı adlı romana dayanan klasik bir 1935 gerilim filmidir." },
+      ],
+      40: [
+        { context: "'Kırk gün kırk gece'", detail: "40 sayısı İncil'de defalarca geçer, Tekvin'deki tufan hikâyesi de dahil." },
+        { context: "Standart çalışma haftası", detail: "Birçok ülkede 40 saatlik bir çalışma haftası yaygın bir standarttır." },
+        { context: "'Karantina' kelimesinin kökeni", detail: "'Karantina' kelimesi, veba salgınları sırasında gemilere tarihsel olarak uygulanan izolasyon süresini ifade eden İtalyanca 'quaranta giorni' (kırk gün) ifadesinden gelir." },
+      ],
+      42: [
+        { context: "'Hayatın, Evrenin ve Her Şeyin Cevabı'", detail: "Douglas Adams'ın Otostopçunun Galaksi Rehberi romanında dev bir süper bilgisayar, nihai sorunun cevabını 42 olarak hesaplar." },
+        { context: "Bir çift zardaki toplam nokta sayısı", detail: "Standart bir zarın toplam 21 noktası (1+2+3+4+5+6) vardır, yani bir çift zarda toplam 42 nokta bulunur." },
+      ],
+      44: [
+        { context: "ABD'nin 44. başkanı", detail: "Barack Obama, Amerika Birleşik Devletleri'nin 44. başkanı olarak görev yaptı." },
+      ],
+      45: [
+        { context: "45 RPM'lik plaklar", detail: "Vinil 'single' plaklar geleneksel olarak dakikada 45 devirle dönecek şekilde basılırdı." },
+      ],
+      46: [
+        { context: "Bir insan hücresindeki kromozom sayısı", detail: "Tipik bir insan hücresi, 23 eşleşen çiftten oluşan toplam 46 kromozom içerir." },
+      ],
+      48: [
+        { context: "48 saat", detail: "48 saat tam olarak iki tam güne eşittir." },
+        { context: "Bitişik ABD eyaletleri", detail: "Coğrafi olarak ayrı olan Alaska ve Hawaii hariç, ABD'nin bitişik 48 eyaleti bulunur." },
+      ],
+      50: [
+        { context: "ABD eyalet sayısı", detail: "Amerika Birleşik Devletleri 50 eyaletten oluşur." },
+        { context: "Altın yıldönümü", detail: "50. evlilik yıldönümü geleneksel olarak 'altın' yıldönümü olarak adlandırılır." },
+      ],
+      51: [
+        { context: "Bölge 51 (Area 51)", detail: "Bölge 51, Nevada'da bulunan ve uzun süre gizli tutulan ünlü bir ABD Hava Kuvvetleri tesisidir, popüler kültürde sıkça referans gösterilir." },
+      ],
+      52: [
+        { context: "Yılda kaç hafta olduğu", detail: "Standart bir yıl 52 haftadan oluşur." },
+        { context: "Bir iskambil destesindeki kart sayısı", detail: "Standart bir iskambil destesinde, jokerler hariç 52 kart bulunur." },
+      ],
+      54: [
+        { context: "Bir Rubik Küpündeki kare sayısı", detail: "Klasik 3×3'lük Rubik Küpü'nün her yüzünde 9 renkli kare bulunur, 6 yüzde toplamda tam 54 kare eder." },
+      ],
+      55: [
+        { context: "Eski ABD hız sınırı", detail: "1974'ten 1995'e kadar, federal yasa gereği ABD otoyollarındaki azami hız sınırı saatte 55 mildi." },
+      ],
+      57: [
+        { context: "Heinz'in '57 Çeşit' sloganı", detail: "H.J. Heinz şirketi 1896'dan bu yana '57 Çeşit' sloganını kullanır — şirket çoktan 57'den fazla ürün satmasına rağmen." },
+      ],
+      59: [
+        { context: "Bir dakikadan bir saniye eksik", detail: "Bir dakika 60 saniyeden oluştuğu için, 59 yeni bir dakikanın başlamasından hemen önceki son saniyedir." },
+      ],
+      60: [
+        { context: "Bir dakikadaki saniye sayısı", detail: "Bir dakika 60 saniyeden oluşur." },
+        { context: "Bir saatteki dakika sayısı", detail: "Bir saat 60 dakikadan oluşur." },
+      ],
+      64: [
+        { context: "Satranç tahtasındaki kare sayısı", detail: "Standart bir satranç tahtası 8×8'lik bir ızgaradır ve tam olarak 64 kare içerir." },
+        { context: "Klasik bir Crayola kutusu", detail: "İkonik Crayola 'Büyük Kutu', uzun yıllardır 64 farklı kalem rengi içerir." },
+        { context: "Nintendo 64", detail: "Nintendo 64, adını 64 bitlik işlemcisinden alan, 1990'larda çıkan efsanevi bir oyun konsoluydu." },
+      ],
+      65: [
+        { context: "Geleneksel emeklilik yaşı", detail: "65 yaşı, birçok ülkede uzun süredir standart emeklilik yaşı olarak kullanılır." },
+        { context: "Yaygın bir otoyol hız sınırı", detail: "Saatte 65 mil, birçok ABD eyaletinde yaygın bir otoyol hız sınırıdır." },
+      ],
+      66: [
+        { context: "Route 66", detail: "Route 66, Chicago'dan Santa Monica'ya uzanan ve Amerikan karayolu seyahatinin kültürel bir simgesi haline gelen orijinal ABD otoyollarından biridir." },
+      ],
+      70: [
+        { context: "'Yetmiş yıl' - geleneksel bir ömür ifadesi", detail: "Bir insan ömrünü 70 yıl olarak niteleyen bu geleneksel ifade, İncil'den (Mezmur 90:10) gelir." },
+        { context: "İngiltere'de otoyol hız sınırı", detail: "Saatte 70 mil, Birleşik Krallık otoyollarındaki standart hız sınırıdır." },
+      ],
+      72: [
+        { context: "'72 Kuralı'", detail: "Finansta, 72'yi bir faiz oranına bölmek, bir yatırımın ikiye katlanması için gereken yaklaşık yıl sayısını verir." },
+        { context: "72 saat", detail: "72 saat tam olarak üç tam güne eşittir." },
+        { context: "Golfte par", detail: "Birçok golf sahası, standart 18 delikli bir tur için 72 par kullanır." },
+      ],
+      75: [
+        { context: "75. yıldönümü", detail: "Bazı kutlama geleneklerinde 75. yıldönümü 'elmas' yıldönümü olarak anılır, ancak bu terim en çok Kraliçe II. Elizabeth'in 2012'deki Elmas Jübilesi gibi 60. yıl kutlamalarıyla ilişkilendirilir." },
+      ],
+      76: [
+        { context: "'76 Trombon'", detail: "'Seventy-Six Trombones', 1957 müzikali The Music Man'deki ünlü bando marşı şarkısıdır." },
+      ],
+      78: [
+        { context: "78 RPM'lik plaklar", detail: "78 RPM, 33⅓ ve 45 RPM formatları yaygınlaşmadan önce gramofon plakları için kullanılan ilk standart çalma hızıydı." },
+      ],
+      80: [
+        { context: "Seksen Günde Devriâlem", detail: "Jules Verne'nin 1873 tarihli klasik romanı, dünyayı 80 günde dolaşma yarışını konu alır." },
+      ],
+      86: [
+        { context: "Restoran argosunda '86'", detail: "Restoran ve bar argosunda bir ürünü '86 etmek', onu menüden kaldırmak anlamına gelir; huzursuzluk çıkaran bir müşteriyi dışarı çıkarmak için de kullanılabilir." },
+      ],
+      88: [
+        { context: "Standart bir piyanodaki tuş sayısı", detail: "Standart bir modern piyanoda 88 tuş bulunur." },
+        { context: "Resmi olarak tanınan takımyıldızları", detail: "Uluslararası Astronomi Birliği, resmi olarak 88 takımyıldız tanır." },
+      ],
+      90: [
+        { context: "Standart bir futbol maçının süresi", detail: "Resmi bir futbol maçı, ikişer 45 dakikalık iki devreye bölünmüş toplam 90 dakika sürer." },
+        { context: "Bir dik açı", detail: "Bir dik açı tam olarak 90 derecedir." },
+      ],
+      92: [
+        { context: "Uranyumun atom numarası", detail: "Atom numarası 92 olan uranyum, geleneksel olarak periyodik tablodaki en ağır doğal element olarak kabul edilir." },
+      ],
+      95: [
+        { context: "Windows 95", detail: "Windows 95, 1995'te piyasaya çıkan ve kişisel bilgisayarların yaygınlaşmasına büyük katkı sağlayan çığır açıcı bir Microsoft işletim sistemiydi." },
+      ],
+      99: [
+        { context: "'.99' fiyatlandırma psikolojisi", detail: "Perakendeciler genellikle ürünleri .99 ile biten fiyatlarla (19,99 TL gibi) etiketler, çünkü bu fiyat bir sonraki yuvarlak sayıdan belirgin şekilde daha düşük algılanır." },
+      ],
+      100: [
+        { context: "Bir yüzyıl", detail: "100 yıllık süreye yüzyıl (asır) denir." },
+        { context: "'Tam'ın karşılığı olarak %100", detail: "Yüzdeler, tam bir bütünün referans noktası olarak 100 üzerine kuruludur." },
+        { context: "ABD Senatosu", detail: "ABD Senatosu'nda, her eyaletten iki kişi olmak üzere toplam 100 senatör bulunur." },
+        { context: "Bir dolardaki sent sayısı", detail: "Bir ABD dolarında 100 sent vardır." },
+        { context: "Suyun kaynama noktası", detail: "Standart atmosfer basıncında su, Celsius ölçeğinde 100°C'de kaynar." },
+      ],
     }
 
 const funFacts: { [key: number]: FunFactItem[] } = {
@@ -1952,6 +2161,308 @@ const funFacts: { [key: number]: FunFactItem[] } = {
         { fact: "12, oldukça bileşik bir sayıdır — kendisinden küçük herhangi bir pozitif sayıdan daha fazla bölene (1, 2, 3, 4, 6, 12) sahiptir." },
         { fact: "'Düzine' kelimesi, on iki grubu anlamına gelen eski Fransızca 'douzaine'den gelir." },
         { fact: "144 öğeden oluşan bir grup — 12 düzine — geleneksel olarak 'gros' (gross) olarak adlandırılır." },
+      ],
+      13: [
+        { fact: "13 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "13 sayısından korkmanın resmi bir adı vardır: triskaidekaphobia." },
+        { fact: "Birçok bina, bu sayının etrafındaki batıl inanç yüzünden 13. katı numaralandırmaz." },
+      ],
+      14: [
+        { fact: "14 = 2 × 7 olduğundan, her 14 çarpım sonucu karşılık gelen 7 çarpımının iki katıdır." },
+        { fact: "'Fortnight' kelimesi, eski İngilizcede iki hafta anlamına gelen 'fourteen nights' ifadesinin kısaltmasıdır." },
+      ],
+      15: [
+        { fact: "15 üçgensel bir sayıdır — ilk beş sayma sayısının toplamıdır: 1+2+3+4+5=15." },
+        { fact: "15 = 3 × 5 olduğundan, en küçük iki tek asal sayının çarpımıdır." },
+      ],
+      16: [
+        { fact: "16 = 2⁴'tür, yani 1'den büyük ilk dördüncü kuvvet sayısıdır." },
+        { fact: "16 aynı zamanda tam karedir: 16 = 4 × 4." },
+        { fact: "Bilgisayarlar taban-16'yı (onaltılık sistemi) sıkça kullanır çünkü her onaltılık basamak, tam olarak 4 ikili basamağa (bit) karşılık gelir." },
+      ],
+      17: [
+        { fact: "17 bir asal sayıdır ve onu küçük bir tablodan ikiye veya üçe katlayarak elde etmenin bir yolu yoktur." },
+        { fact: "Gayriresmi psikolojik anketlerde, insanlardan 1 ile 20 arasında 'rastgele' bir sayı söylemeleri istendiğinde 17'yi orantısız derecede sık seçtikleri görülür — gerçek rastgelelikten çok insan sayı tercihlerine dair ilginç bir bulgu." },
+      ],
+      18: [
+        { fact: "18 = 2 × 9 = 3 × 6 olduğundan, ona ulaşmak için birden fazla geçerli ikiye veya üçe katlama yolu vardır." },
+        { fact: "18, 9'un bir katı olduğundan, 18'in her katı da 9'un basamak toplamı kuralına uyar." },
+      ],
+      19: [
+        { fact: "19 bir asal sayıdır ve 'teen' ekiyle biten yaşların (13-19) sonuncusudur." },
+        { fact: "19 = 20 − 1 olduğundan, 19 ile çarpmak genellikle önce 20 ile çarpıp sonra bir eksiltmekle daha kolay hesaplanır." },
+      ],
+      20: [
+        { fact: "'Score' kelimesi eski İngilizcede 20 anlamına gelir ve bugün en çok 'four score and seven years ago' gibi ifadelerde hatırlanır." },
+        { fact: "20 = 4 × 5 = 2 × 10 olduğundan, tabloyu oluşturmak için birden fazla çarpan çifti kullanılabilir." },
+      ],
+      21: [
+        { fact: "21 = 3 × 7 olduğundan, öğrencilerin muhtemelen zaten bildiği iki küçük çarpım tablosunun çarpımıdır." },
+        { fact: "Blackjack oyununda 21 sayısı tam hedef puandır — bu sayıyı aşmak otomatik kaybetmek anlamına gelir." },
+      ],
+      22: [
+        { fact: "22 = 2 × 11 olduğundan, 11 tablosunun ikiye katlanmış halidir." },
+        { fact: "Joseph Heller'ın romanı 'Catch-22'nin adı, İngilizcede çıkışsız bir ikilemi anlatan bağımsız bir deyim haline gelmiştir." },
+      ],
+      23: [
+        { fact: "23 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "İnsan hücreleri 23 çift kromozom içerir; bu, matematik dışında en çok bilinen '23' gerçeklerinden biridir." },
+      ],
+      24: [
+        { fact: "24, yüksek bileşik bir sayıdır — bölenleri (1, 2, 3, 4, 6, 8, 12, 24) kendisinden küçük herhangi bir sayıdan fazladır." },
+        { fact: "24 = 2³ × 3 olduğundan, bir ikinin kuvvetini bir 3 çarpanıyla birleştirir." },
+      ],
+      25: [
+        { fact: "25 tam karedir: 25 = 5 × 5." },
+        { fact: "25 tam olarak 100'ün çeyreği olduğundan, bir sayıyı 25 ile çarpmak genellikle ×100 sonra ÷4 yaparak doğrudan çarpmaktan daha hızlıdır." },
+      ],
+      26: [
+        { fact: "26 = 2 × 13 olduğundan, 13 tablosunun doğrudan ikiye katlanmış halidir." },
+        { fact: "İngiliz alfabesindeki 26 harf, 26 sayısını günlük yazılı dilde en sık karşılaşılan sayılardan biri yapar." },
+      ],
+      27: [
+        { fact: "27 tam bir küptür: 27 = 3 × 3 × 3, yani 3³." },
+        { fact: "'27 Kulübü', o yaşta ölen tanınmış müzisyenler için popüler kültürde kullanılan bir terimdir — ancak araştırmacılar özellikle 27 yaşında istatistiksel olarak anormal bir ölüm riski bulamamıştır." },
+      ],
+      28: [
+        { fact: "28 mükemmel bir sayıdır — kendisinden küçük bölenlerinin (1, 2, 4, 7, 14) toplamı tam olarak 28'e eşittir; bu, 6'dan sonraki ikinci mükemmel sayıdır." },
+        { fact: "28 = 4 × 7 olduğundan, doğrudan iki küçük çarpım tablosuna bağlanır." },
+      ],
+      29: [
+        { fact: "29 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "29, takvimde yalnızca artık yıllarda bir tarih olarak görünür; bu yıllarda Şubat bir gün fazladan kazanır." },
+      ],
+      30: [
+        { fact: "30 = 2 × 3 × 5 olduğundan, en küçük üç asal sayının çarpımıdır." },
+        { fact: "30'un boyutuna göre alışılmadık derecede çok küçük çarpanı vardır, bu da onun günlük ölçümlere bu kadar sık tam bölünebilmesinin nedenlerinden biridir." },
+      ],
+      31: [
+        { fact: "31 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "31 = 2⁵ − 1 olduğundan bir Mersenne asalıdır; bu aile 3, 7 ve 127'yi de içerir." },
+      ],
+      32: [
+        { fact: "32 = 2⁵'tir, yani 2'nin beşinci kuvvetidir." },
+        { fact: "32, 16'nın tam iki katıdır; 16 da 8'in iki katıdır — bu, 1'e kadar kesintisiz uzanan bir ikiye katlama zincirinin parçasıdır." },
+      ],
+      33: [
+        { fact: "33 = 3 × 11 olduğundan, 11 tablosunun ayna basamak deseninin doğrudan üçe katlanmış halidir." },
+      ],
+      34: [
+        { fact: "34 bir Fibonacci sayısıdır — kendinden önceki iki Fibonacci sayısının toplamına eşittir: 13 ve 21." },
+        { fact: "4×4'lük bir sihirli karede her satır, sütun ve köşegen toplamı 34 eder — bu, 4×4'lük bir ızgara için mümkün olan en küçük sihirli sabittir." },
+      ],
+      35: [
+        { fact: "35 = 5 × 7 olduğundan, öğrencilerin daha önce öğrendiği iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      36: [
+        { fact: "36 hem tam kare (6×6) hem de üçgensel sayıdır (1+2+...+8) — bu kombinasyona sahip sayılar oldukça azdır." },
+      ],
+      37: [
+        { fact: "37 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "37 × 3 = 111 olduğundan, 37 her üç basamaklı 'repdigit' sayıyı (111, 222, 333... 999'a kadar) tam böler." },
+      ],
+      38: [
+        { fact: "38 = 2 × 19 olduğundan, 19 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      39: [
+        { fact: "39 = 3 × 13 olduğundan, öğrencilerin muhtemelen zaten bildiği iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      40: [
+        { fact: "40 = 2³ × 5 olduğundan, bir ikinin kuvvetini bir 5 çarpanıyla birleştirir." },
+      ],
+      41: [
+        { fact: "41 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "41 ve 43, aralarında tam olarak 2 fark olan ikiz asal sayılardır." },
+      ],
+      42: [
+        { fact: "42 = 2 × 3 × 7 olduğundan, standart çarpım tablolarında kullanılan üç küçük asal sayının çarpımıdır." },
+      ],
+      43: [
+        { fact: "43 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "43, tıpkı 41 gibi, aralarında tam olarak bir çift sayı (42) bulunan ikiz asal çiftinin büyük olanıdır." },
+      ],
+      44: [
+        { fact: "44 = 4 × 11 olduğundan, 11 tablosunun doğrudan dört katına çıkarılmış halidir." },
+      ],
+      45: [
+        { fact: "45°, tam bir dik açının (90°) yarısıdır, bu yüzden 45 derecelik açılar geometride ve tasarımda sürekli karşımıza çıkar." },
+        { fact: "45 hem üçgensel bir sayıdır (1+2+...+9) hem de iki küçük çarpım tablosunun, 9 ve 5'in, çarpımıdır." },
+      ],
+      46: [
+        { fact: "46 = 2 × 23 olduğundan, 23 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      47: [
+        { fact: "47 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "47, Star Trek hayranları ve senaristleri arasında ünlü bir şakadır — pek çok bölümün arka planına bilerek yerleştirildiği söylenir." },
+      ],
+      48: [
+        { fact: "48, boyutuna göre yüksek bileşik bir sayıdır — bölenleri (1, 2, 3, 4, 6, 8, 12, 16, 24, 48) kendisinden küçük herhangi bir sayıdan fazladır." },
+      ],
+      49: [
+        { fact: "49 tam karedir: 49 = 7 × 7." },
+        { fact: "7×7=49, tüm standart çarpım tablosunda en sık ezberlenen tek gerçeklerden biridir." },
+      ],
+      50: [
+        { fact: "50 = 2 × 5² olduğundan, bir 2 çarpanını 5'in karesiyle birleştirir." },
+      ],
+      51: [
+        { fact: "51 = 3 × 17 olduğundan, iki küçük asal sayının çarpımıdır." },
+      ],
+      52: [
+        { fact: "52 = 4 × 13 olduğundan, 13 tablosunun doğrudan dört katına çıkarılmış halidir." },
+      ],
+      53: [
+        { fact: "53 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      54: [
+        { fact: "54 = 2 × 3³ olduğundan, tek bir 2 çarpanını 3'ün küpüyle birleştirir." },
+      ],
+      55: [
+        { fact: "55 hem üçgensel bir sayı (1+2+...+10) hem de bir Fibonacci sayısıdır — bu kombinasyona sahip çok az sayı vardır." },
+      ],
+      56: [
+        { fact: "56 = 2³ × 7 olduğundan, bir ikinin kuvvetini bir 7 çarpanıyla birleştirir." },
+        { fact: "7×8=56, tüm standart çarpım tablosunda en sık karıştırılan tek gerçeklerden biridir." },
+      ],
+      57: [
+        { fact: "57 = 3 × 19 olduğundan, iki küçük asal sayının çarpımıdır." },
+      ],
+      58: [
+        { fact: "58 = 2 × 29 olduğundan, 29 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      59: [
+        { fact: "59 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      60: [
+        { fact: "60, yüksek bileşik bir sayıdır — bölenleri (1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30, 60) kendisinden küçük herhangi bir sayıdan fazladır." },
+        { fact: "Antik Babilliler taban-60 (altmışlık) bir sayı sistemi kullanırdı; bu yüzden zaman ve açılar bugün hâlâ 60'lık birimlere bölünür." },
+      ],
+      61: [
+        { fact: "61 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      62: [
+        { fact: "62 = 2 × 31 olduğundan, 31 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      63: [
+        { fact: "63 = 3² × 7 olduğundan, 3'ün karesini bir 7 çarpanıyla birleştirir." },
+        { fact: "63 = 2⁶ − 1 (64 eksi 1) olduğundan, kendisinden hemen sonra gelen ikinin kuvvetinin tam bir altında yer alır." },
+      ],
+      64: [
+        { fact: "64 hem tam kare (8²) hem de tam küptür (4³) — hem de bu iki özelliğe birden sahip az sayıdaki sayıdan biridir." },
+      ],
+      65: [
+        { fact: "65 = 5 × 13 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      66: [
+        { fact: "66 = 2 × 3 × 11 olduğundan, üç küçük çarpım tablosunun çarpanlarını birleştirir." },
+      ],
+      67: [
+        { fact: "67 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      68: [
+        { fact: "68 = 4 × 17 olduğundan, 17 tablosunun doğrudan dört katına çıkarılmış halidir." },
+      ],
+      69: [
+        { fact: "69 = 3 × 23 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      70: [
+        { fact: "70 = 2 × 5 × 7 olduğundan, standart çarpım tablolarında kullanılan üç küçük asal sayının çarpımıdır." },
+      ],
+      71: [
+        { fact: "71 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      72: [
+        { fact: "72 = 2³ × 3² olduğundan, bir ikinin kuvvetini 3'ün karesiyle birleştirir." },
+      ],
+      73: [
+        { fact: "73 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir. Aynı zamanda 2'den başlayan dizideki 21. asal sayıdır." },
+        { fact: "İkilik tabanda 73, 1001001 olarak yazılır — ileriye ve geriye aynı okunan bir palindromdur." },
+      ],
+      74: [
+        { fact: "74 = 2 × 37 olduğundan, 37 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      75: [
+        { fact: "75 = 3 × 5² olduğundan, bir 3 çarpanını 5'in karesiyle birleştirir." },
+      ],
+      76: [
+        { fact: "76 = 4 × 19 olduğundan, 19 tablosunun doğrudan dört katına çıkarılmış halidir." },
+      ],
+      77: [
+        { fact: "77 = 7 × 11 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+        { fact: "77 sayısal bir palindromdur — ileriye ve geriye doğru aynı okunur." },
+      ],
+      78: [
+        { fact: "78 = 2 × 3 × 13 olduğundan, üç küçük çarpım tablosunun çarpanlarını birleştirir." },
+      ],
+      79: [
+        { fact: "79 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      80: [
+        { fact: "80 = 2⁴ × 5 olduğundan, bir ikinin kuvvetini bir 5 çarpanıyla birleştirir." },
+        { fact: "%80, bir bütünün beşte dördüne (4/5) eşittir." },
+      ],
+      81: [
+        { fact: "81 hem tam karedir (9×9) hem de 3⁴'e (3'ün 4. kuvveti) eşittir." },
+      ],
+      82: [
+        { fact: "82 = 2 × 41 olduğundan, 41 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      83: [
+        { fact: "83 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+      ],
+      84: [
+        { fact: "84 = 2² × 3 × 7 olduğundan, bir ikinin kuvvetini 3 ve 7 çarpanlarıyla birleştirir." },
+      ],
+      85: [
+        { fact: "85 = 5 × 17 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      86: [
+        { fact: "86 = 2 × 43 olduğundan, 43 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      87: [
+        { fact: "87 = 3 × 29 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      88: [
+        { fact: "88 = 8 × 11 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      89: [
+        { fact: "89 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "89 aynı zamanda bir Fibonacci sayısıdır — kendinden önceki iki Fibonacci sayısının toplamına eşittir: 34 ve 55." },
+      ],
+      90: [
+        { fact: "90 = 2 × 3² × 5 olduğundan, bir ikinin kuvvetini, 3'ün karesini ve bir 5 çarpanını birleştirir." },
+      ],
+      91: [
+        { fact: "91 = 7 × 13 olduğundan, matematik eğitiminde asal gibi görünüp aslında asal olmayan ünlü bir örnektir." },
+      ],
+      92: [
+        { fact: "92 = 4 × 23 olduğundan, 23 tablosunun doğrudan dört katına çıkarılmış halidir." },
+      ],
+      93: [
+        { fact: "93 = 3 × 31 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      94: [
+        { fact: "94 = 2 × 47 olduğundan, 47 tablosunun doğrudan ikiye katlanmış halidir." },
+      ],
+      95: [
+        { fact: "95 = 5 × 19 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+      ],
+      96: [
+        { fact: "96 = 2⁵ × 3 olduğundan, bir ikinin kuvvetini tek bir 3 çarpanıyla birleştirir." },
+      ],
+      97: [
+        { fact: "97 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "97, 100'den küçük en büyük asal sayıdır." },
+      ],
+      98: [
+        { fact: "98 = 2 × 7² olduğundan, tek bir 2 çarpanını 7'nin karesiyle birleştirir." },
+      ],
+      99: [
+        { fact: "99 = 9 × 11 olduğundan, iki küçük çarpım tablosunun çarpımıdır." },
+        { fact: "99, 9'un bir katı olduğundan, 99'un her katının basamakları toplandığında her zaman 9'un bir katına ulaşılır." },
+      ],
+      100: [
+        { fact: "100 = 10² eder, yani 10'un karesidir; aynı zamanda 4 × 25'e de eşittir." },
       ],
     }
 
