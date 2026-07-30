@@ -1818,6 +1818,143 @@ const strategies: { [key: number]: string[] } = {
       ],
     }
 
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Die Nummer eins sein", detail: "In vielen Sprachen und Kulturen steht die Eins für den ersten Platz oder den Spitzenplatz — vom Siegerpodest bis zur Schulnote 1, der besten Note im deutschen Notensystem." },
+        { context: "Ein einzelner Gegenstand", detail: "Sobald man einen einzelnen Gegenstand zählt — einen Apfel, einen Stuhl —, wendet man die Idee an, dass eine Gruppe von etwas einfach dieses eine Ding ist." },
+        { context: "Die erste Position in einer Reihenfolge", detail: "Seite 1, Tag 1, Runde 1 — die Eins markiert den Ausgangspunkt unzähliger Nummerierungssysteme." },
+      ],
+      2: [
+        { context: "Paare von Schuhen, Socken und Handschuhen", detail: "Die meisten Paare im Alltag bestehen aus 2 Stück — ein direktes, greifbares Beispiel fürs Verdoppeln." },
+        { context: "Augen und Ohren", detail: "Der menschliche Körper hat 2 Augen und 2 Ohren, neben vielen anderen paarigen Merkmalen." },
+        { context: "Fahrradräder", detail: "Ein normales Fahrrad hat 2 Räder, im Gegensatz zum Dreirad (3) oder Einrad (1)." },
+        { context: "Binärcode in der Informatik", detail: "Computer speichern und verarbeiten Informationen im Binärsystem (Basis 2), das nur aus zwei Ziffern besteht: 0 und 1." },
+      ],
+      3: [
+        { context: "Ampeln", detail: "Standardampeln verwenden 3 Farben: Rot, Gelb und Grün." },
+        { context: "Dreiecke", detail: "Jedes Dreieck hat genau 3 Seiten und 3 Winkel — das einfachste mögliche Vieleck." },
+        { context: "Medaillenpodeste", detail: "Bei Olympischen Spielen und vielen anderen Wettbewerben werden 3 Medaillen vergeben: Gold, Silber, Bronze." },
+        { context: "Grundfarben", detail: "In der klassischen Farbenlehre, die in der Schule gelehrt wird, gelten Rot, Gelb und Blau als die 3 Grundfarben." },
+      ],
+      4: [
+        { context: "Die vier Jahreszeiten", detail: "In vielen Regionen der Welt wird das Jahr in 4 Jahreszeiten eingeteilt: Frühling, Sommer, Herbst und Winter." },
+        { context: "Himmelsrichtungen", detail: "Ein Kompass hat 4 Haupthimmelsrichtungen: Norden, Süden, Osten und Westen." },
+        { context: "Tischbeine", detail: "Die meisten Tische und Stühle haben aus Stabilitätsgründen 4 Beine." },
+        { context: "Kartenfarben", detail: "Ein normales Kartenspiel mit 52 Karten ist in 4 Farben unterteilt: Herz, Karo, Kreuz und Pik." },
+      ],
+      5: [
+        { context: "Finger einer Hand", detail: "Die meisten Menschen haben 5 Finger pro Hand, was die 5 zu einer der natürlichsten Zahlen zum frühen Zählenlernen macht." },
+        { context: "Die fünf Sinne", detail: "Sehen, Hören, Riechen, Schmecken und Tasten werden gewöhnlich als die 5 menschlichen Sinne bezeichnet." },
+        { context: "Ein Fünfeck", detail: "Ein Fünfeck ist eine Figur mit fünf Seiten — das Pentagon, der Sitz des US-Verteidigungsministeriums, verdankt seinen Namen genau dieser Form." },
+        { context: "Geld in 5er-Einheiten", detail: "Viele Währungen kennen eine 5er-Münze oder einen 5er-Schein, etwa das 5-Euro-Stück oder den 5-Euro-Schein." },
+      ],
+      6: [
+        { context: "Seiten eines Würfels", detail: "Ein normaler sechsseitiger Würfel hat genau 6 Seiten." },
+        { context: "Beine von Insekten", detail: "Alle Insekten haben per Definition 6 Beine — ein Merkmal, das sie von Spinnen mit ihren 8 Beinen unterscheidet." },
+        { context: "Gitarrensaiten", detail: "Eine normale Akustik- oder E-Gitarre hat 6 Saiten." },
+        { context: "Ein halbes Dutzend", detail: "Eier und Backwaren werden oft im halben Dutzend verkauft — einer 6er-Packung." },
+      ],
+      7: [
+        { context: "Die 7 Wochentage", detail: "Sie werden heute in nahezu jedem Kalendersystem der Welt verwendet." },
+        { context: "Die 7 Kontinente", detail: "Afrika, Antarktika, Asien, Australien, Europa, Nordamerika und Südamerika — im Modell, das in Schulen am häufigsten gelehrt wird." },
+        { context: "Die 7 Töne einer Tonleiter", detail: "C, D, E, F, G, A, H — bevor sich das Muster eine Oktave höher wiederholt." },
+        { context: "Die 7 Farben des Regenbogens", detail: "Rot, Orange, Gelb, Grün, Blau, Indigo und Violett — eine Einteilung, die Isaac Newton zuerst populär gemacht hat." },
+        { context: "Die Sieben Weltwunder der Antike", detail: "Darunter die Große Pyramide von Gizeh, das einzige bis heute erhaltene Weltwunder." },
+      ],
+      8: [
+        { context: "Spinnenbeine", detail: "Spinnen und andere Spinnentiere haben 8 Beine, im Gegensatz zu Insekten, die 6 haben." },
+        { context: "Arme eines Oktopus", detail: "Ein Oktopus hat 8 Arme — daher kommt auch sein Name (griechisch 'okto' bedeutet acht)." },
+        { context: "Ein Byte in der Informatik", detail: "In der Informatik bilden 8 Bit 1 Byte, die Grundeinheit zur Messung von digitalem Speicher." },
+        { context: "Eine Oktave in der Musik", detail: "In der westlichen Musik umfasst eine Oktave 8 Töne (zum Beispiel von C zum nächsten C: C, D, E, F, G, A, H, C)." },
+      ],
+      9: [
+        { context: "Innings im Baseball", detail: "Ein reguläres Baseballspiel besteht aus 9 Innings." },
+        { context: "Ein 3×3-Quadrat", detail: "Die 9 ist eine Quadratzahl: ein Gitter mit 3 Reihen und 3 Spalten enthält genau 9 Felder, wie bei einem Tic-Tac-Toe-Brett." },
+        { context: "Das Sonnensystem, historisch betrachtet", detail: "Über weite Teile des 20. Jahrhunderts lernten Schüler, dass es 9 Planeten gibt; Pluto wurde 2006 zum Zwergplaneten herabgestuft, sodass heute 8 Planeten anerkannt sind." },
+      ],
+      10: [
+        { context: "Das Dezimalsystem", detail: "Fast alle modernen Zahlensysteme basieren auf der Basis 10, aufgebaut aus Zehnergruppen." },
+        { context: "Finger und Zehen", detail: "Die meisten Menschen haben 10 Finger und 10 Zehen, was als einer der Gründe gilt, warum sich das Zehnersystem historisch so weit verbreitet hat." },
+        { context: "Der Zehnkampf", detail: "Der Zehnkampf ist ein Leichtathletik-Wettbewerb aus genau 10 Disziplinen." },
+        { context: "Geld in 10er-Einheiten", detail: "Viele Währungen sind um 10er-Einheiten aufgebaut, etwa der 10-Euro-Schein." },
+      ],
+      11: [
+        { context: "Spieler einer Fußballmannschaft", detail: "Jede Mannschaft stellt bei einem regulären Fußballspiel 11 Spieler auf dem Feld." },
+        { context: "Zweistellige Zahlen mit gleichen Ziffern", detail: "Die 11 ist die kleinste zweistellige Zahl, die aus einer einzigen wiederholten Ziffer besteht — ein Muster, das sich direkt im Einmaleins zeigt." },
+      ],
+      12: [
+        { context: "Monate im Jahr", detail: "Das Kalenderjahr ist in 12 Monate unterteilt." },
+        { context: "Zoll in einem Fuß", detail: "Im imperialen Maßsystem entspricht 1 Fuß 12 Zoll." },
+        { context: "Zahlen auf einem Zifferblatt", detail: "Ein normales analoges Zifferblatt ist in 12 Zahlen unterteilt." },
+        { context: "Ein Dutzend", detail: "Eier und Backwaren werden oft im Dutzend verkauft — einer Gruppe von 12." },
+        { context: "Sternzeichen", detail: "Der westliche Tierkreis ist traditionell in 12 Zeichen unterteilt." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "Die 1 ist weder Primzahl noch zusammengesetzte Zahl — eine Primzahl muss per Definition genau zwei verschiedene positive Teiler haben, die 1 hat aber nur einen (sich selbst)." },
+        { fact: "Jede Zahl mit 1 zu multiplizieren nennt man das Identitätsgesetz der Multiplikation — eine der ersten festen Regeln, die man in der Arithmetik lernt." },
+        { fact: "In römischen Zahlen wird die 1 mit einem einzigen Strich geschrieben: I — das einfachste Symbol im gesamten Zahlensystem." },
+      ],
+      2: [
+        { fact: "Die 2 ist die einzige gerade Primzahl — alle anderen geraden Zahlen lassen sich durch 2 teilen und sind deshalb zusammengesetzte Zahlen." },
+        { fact: "Da 2 die kleinste Primzahl ist, bildet sie den Ausgangspunkt für das gesamte Konzept der Primfaktorzerlegung." },
+        { fact: "Verdoppeln ist einer der schnellsten Kopfrechentricks überhaupt — wiederholtes Verdoppeln taucht in der Informatik auch als Zweierpotenzen auf: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "Die Quersummenregel für die 3 funktioniert, weil 10 bei der Division durch 3 den Rest 1 lässt — derselbe Grund, warum der Trick auch bei der 9 funktioniert." },
+        { fact: "Die 3 ist die kleinste ungerade Primzahl." },
+        { fact: "Das Dreieck ist das einzige von Natur aus stabile Vieleck, weshalb dreieckige Formen so oft in Brücken und Gebäudekonstruktionen verwendet werden." },
+      ],
+      4: [
+        { fact: "Die 4 ist die kleinste zusammengesetzte Zahl — die erste Zahl größer als 1, die keine Primzahl ist, da sie sich durch 2 teilen lässt." },
+        { fact: "Die 4 ist eine Quadratzahl: 4 = 2 × 2, also 2²." },
+        { fact: "Da 4 = 2 × 2, lässt sich das 4er-Einmaleins immer durch Verdoppeln des 2er-Einmaleins herleiten — wer die 2er-Reihe kann, muss nichts Neues auswendig lernen." },
+      ],
+      5: [
+        { fact: "Die 5 liegt genau in der Mitte zwischen 0 und 10, weshalb das 5er-Einmaleins immer genau die Hälfte des entsprechenden 10er-Einmaleins ist." },
+        { fact: "Die 5 ist eine Primzahl und die einzige Primzahl, die auf die Ziffer 5 endet." },
+        { fact: "Uhren sind in 5-Minuten-Abschnitte unterteilt, sodass das Rechnen mit der 5 fest in der Art verankert ist, wie die meisten Menschen die Uhrzeit ablesen, ohne überhaupt darüber nachzudenken." },
+      ],
+      6: [
+        { fact: "Die 6 ist die kleinste vollkommene Zahl — die Summe ihrer echten Teiler (1, 2 und 3) ergibt genau sich selbst: 1+2+3=6." },
+        { fact: "6 = 2 × 3, damit ist sie die kleinste Zahl, die Produkt zweier verschiedener Primzahlen ist." },
+        { fact: "Da 6 gerade und durch 3 teilbar ist, ist jedes Vielfache von 6 automatisch sowohl durch 2 als auch durch 3 teilbar." },
+      ],
+      7: [
+        { fact: "Die Sieben ist eine Mersenne-Primzahl — sie entspricht 2³ − 1 (2 × 2 × 2, minus 1) und gehört damit zu einer seltenen Familie von Primzahlen, die an Zweierpotenzen gebunden sind." },
+        { fact: "Die 7-Tage-Woche geht auf die babylonische Astronomie zurück, die genau 7 mit bloßem Auge sichtbare Himmelskörper verfolgte: Sonne, Mond und fünf Planeten — Merkur, Venus, Mars, Jupiter und Saturn." },
+        { fact: "Die Sieben gilt in vielen Kulturen als Glückszahl, weshalb sie in Spielen und Glücksspieltraditionen weltweit so häufig vorkommt." },
+        { fact: "James Bonds berühmte Codenummer ist 007, und Schneewittchen lebt mit genau sieben Zwergen zusammen." },
+      ],
+      8: [
+        { fact: "8 = 2³, damit ist sie die erste Kubikzahl größer als 1 (2 × 2 × 2 = 8)." },
+        { fact: "Das Wort 'Oktopus' und der Musikbegriff 'Oktave' haben beide dieselbe griechische Wurzel, die acht bedeutet." },
+        { fact: "Die 8 ist die einzige Zahl zwischen 1 und 12, die von der 2 aus drei Verdopplungsrunden benötigt (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "Die 9 ist eine Quadratzahl: 9 = 3 × 3, also 3²." },
+        { fact: "Egal wie groß ein Vielfaches von 9 ist — addiert man wiederholt seine Ziffern, landet man am Ende immer bei 9. Mathematiker nennen das die 'Quersummenwurzel'." },
+        { fact: "Die 9 ist die größte einstellige Zahl, direkt bevor mit der 10 der Stellenwert beginnt." },
+      ],
+      10: [
+        { fact: "Das Wort 'Dekathlon' kommt aus dem Griechischen und bedeutet 'zehn Wettkämpfe'." },
+        { fact: "Multiplizieren mit 10 ist das einzige einstellige Einmaleins, bei dem jedes Ergebnis einer einzigen, ausnahmslosen Regel folgt: eine Null anhängen." },
+        { fact: "Da die meisten Menschen 10 Finger haben, gilt das Zehnersystem (Dezimalsystem) als eines der am weitesten verbreiteten Zahlensysteme der Menschheitsgeschichte." },
+      ],
+      11: [
+        { fact: "Die 11 ist eine Primzahl — ihre einzigen Teiler sind 1 und sie selbst." },
+        { fact: "Die 11 ist die kleinste zweistellige Primzahl." },
+        { fact: "Das Spiegelziffern-Muster (11×4=44, 11×7=77) funktioniert nur bei einstelligen Faktoren — eines der klarsten Beispiele im Einmaleins für ein Muster mit eingebauter Grenze." },
+      ],
+      12: [
+        { fact: "Die 12 ist eine hochzusammengesetzte Zahl — sie hat mehr Teiler (1, 2, 3, 4, 6, 12) als jede kleinere positive Zahl." },
+        { fact: "Das Wort 'Dutzend' stammt vom altfranzösischen 'douzaine', was eine Gruppe von zwölf bedeutet." },
+        { fact: "Eine Gruppe von 144 Gegenständen — 12 Dutzend — wird traditionell als 'Gros' bezeichnet." },
+      ],
+    }
+
 export function getNumberMeaning(n: number): string | null {
   return meanings[n] ?? null
 }
@@ -1838,10 +1975,10 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

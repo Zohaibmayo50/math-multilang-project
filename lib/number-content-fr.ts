@@ -1818,6 +1818,143 @@ const strategies: { [key: number]: string[] } = {
       ],
     }
 
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Être le numéro un", detail: "Dans de nombreuses langues et cultures, être le numéro un signifie occuper la première place ou le rang le plus élevé — des podiums sportifs aux classements scolaires." },
+        { context: "Un seul objet", detail: "Chaque fois que vous comptez un seul objet — une pomme, une chaise — vous appliquez l'idée qu'un groupe de 1 est simplement cette chose-là." },
+        { context: "La première position dans une série", detail: "Page 1, Jour 1, Manche 1 — le 1 marque le point de départ d'innombrables systèmes de numérotation." },
+      ],
+      2: [
+        { context: "Paires de chaussures, de chaussettes et de gants", detail: "La plupart des paires du quotidien viennent par 2 — un modèle concret et direct du doublement." },
+        { context: "Les yeux et les oreilles", detail: "Le corps humain a 2 yeux et 2 oreilles, parmi bien d'autres organes en paire." },
+        { context: "Les roues d'un vélo", detail: "Un vélo standard a 2 roues, contrairement à un tricycle (3) ou un monocycle (1)." },
+        { context: "Le code binaire en informatique", detail: "Les ordinateurs stockent et traitent l'information en binaire (base 2), construit entièrement à partir de deux chiffres : 0 et 1." },
+      ],
+      3: [
+        { context: "Les feux tricolores", detail: "Les feux de circulation standards utilisent 3 couleurs : rouge, orange et vert." },
+        { context: "Les triangles", detail: "Tout triangle a exactement 3 côtés et 3 angles, le polygone le plus simple qui soit." },
+        { context: "Les podiums de médailles", detail: "Les Jeux olympiques et de nombreuses autres compétitions décernent 3 médailles : or, argent, bronze." },
+        { context: "Les couleurs primaires", detail: "Dans la théorie des couleurs enseignée traditionnellement à l'école, le rouge, le jaune et le bleu sont considérés comme les 3 couleurs primaires." },
+      ],
+      4: [
+        { context: "Les quatre saisons", detail: "Dans de nombreuses régions du monde, l'année est découpée en 4 saisons : printemps, été, automne et hiver." },
+        { context: "Les points cardinaux", detail: "Une boussole a 4 directions principales : nord, sud, est et ouest." },
+        { context: "Les pieds d'une table", detail: "La plupart des tables et des chaises reposent sur 4 pieds pour plus de stabilité." },
+        { context: "Les couleurs d'un jeu de cartes", detail: "Un jeu de 52 cartes standard se divise en 4 couleurs : cœur, carreau, trèfle et pique." },
+      ],
+      5: [
+        { context: "Les doigts d'une main", detail: "La plupart des gens ont 5 doigts par main, ce qui fait du 5 l'un des nombres les plus naturels pour apprendre à compter très tôt." },
+        { context: "Les cinq sens", detail: "La vue, l'ouïe, l'odorat, le goût et le toucher sont communément décrits comme les 5 sens traditionnels de l'être humain." },
+        { context: "Un pentagone", detail: "Un pentagone est une figure à cinq côtés, et le Pentagone, siège du ministère de la Défense des États-Unis, doit justement son nom à cette forme." },
+        { context: "L'argent en pièces ou billets de 5", detail: "De nombreuses monnaies incluent une unité de 5, comme la pièce de 5 centimes d'euro ou le billet de 5 euros." },
+      ],
+      6: [
+        { context: "Les faces d'un dé", detail: "Un dé à six faces standard (un cube) a exactement 6 faces." },
+        { context: "Les pattes des insectes", detail: "Tous les insectes, par définition, ont 6 pattes — l'un des traits qui les distinguent des araignées, qui en ont 8." },
+        { context: "Les cordes d'une guitare", detail: "Une guitare acoustique ou électrique standard a 6 cordes." },
+        { context: "Une demi-douzaine", detail: "Les œufs et les pâtisseries se vendent souvent par demi-douzaine — un lot de 6." },
+      ],
+      7: [
+        { context: "Les 7 jours de la semaine", detail: "Utilisés aujourd'hui dans presque tous les systèmes de calendrier au monde." },
+        { context: "Les 7 continents", detail: "Afrique, Antarctique, Asie, Océanie, Europe, Amérique du Nord et Amérique du Sud — selon le modèle le plus enseigné à l'école." },
+        { context: "Les 7 notes d'une gamme musicale", detail: "Do, Ré, Mi, Fa, Sol, La, Si — avant que le motif ne se répète une octave plus haut." },
+        { context: "Les 7 couleurs de l'arc-en-ciel", detail: "Rouge, orange, jaune, vert, bleu, indigo et violet — une répartition popularisée pour la première fois par Isaac Newton." },
+        { context: "Les Sept Merveilles du monde antique", detail: "Dont la grande pyramide de Gizeh, la seule encore debout aujourd'hui." },
+      ],
+      8: [
+        { context: "Les pattes des araignées", detail: "Les araignées et autres arachnides ont 8 pattes, contrairement aux insectes qui en ont 6." },
+        { context: "Les bras d'une pieuvre", detail: "Une pieuvre a 8 bras — d'où vient son nom en grec, 'okto', qui signifie huit." },
+        { context: "Un octet en informatique", detail: "En informatique, 8 bits forment 1 octet, l'unité de base pour mesurer le stockage et la mémoire numériques." },
+        { context: "Une octave en musique", detail: "En musique occidentale, une octave couvre 8 notes (par exemple de Do au Do suivant : Do, Ré, Mi, Fa, Sol, La, Si, Do)." },
+      ],
+      9: [
+        { context: "Les manches au baseball", detail: "Un match de baseball standard se compose de 9 manches." },
+        { context: "Un carré de 3×3", detail: "Le 9 est un carré parfait : une grille de 3 lignes et 3 colonnes contient exactement 9 cases, comme un plateau de morpion." },
+        { context: "Le système solaire, autrefois", detail: "Pendant une grande partie du XXe siècle, on enseignait qu'il existait 9 planètes ; Pluton a été reclassée planète naine en 2006, laissant 8 planètes reconnues aujourd'hui." },
+      ],
+      10: [
+        { context: "Le système décimal", detail: "Presque tous les systèmes de comptage modernes sont en base 10, construits entièrement à partir de groupes de dix." },
+        { context: "Les doigts des mains et des pieds", detail: "La plupart des gens ont 10 doigts et 10 orteils, ce qui expliquerait en partie pourquoi le comptage en base 10 s'est autant répandu au fil de l'histoire." },
+        { context: "Le décathlon", detail: "Le décathlon est une épreuve d'athlétisme composée exactement de 10 disciplines." },
+        { context: "L'argent en unités de 10", detail: "De nombreuses monnaies s'organisent autour d'unités de 10, comme les billets de 10 euros." },
+      ],
+      11: [
+        { context: "Les joueurs d'une équipe de football", detail: "Chaque équipe aligne 11 joueurs sur le terrain lors d'un match de football standard." },
+        { context: "Les nombres à deux chiffres identiques", detail: "Le 11 est le plus petit nombre à deux chiffres formé d'un seul chiffre répété, un motif qui se retrouve directement dans sa table de multiplication." },
+      ],
+      12: [
+        { context: "Les mois de l'année", detail: "L'année civile est divisée en 12 mois." },
+        { context: "Les pouces dans un pied", detail: "Dans le système de mesure impérial, 1 pied équivaut à 12 pouces." },
+        { context: "Les chiffres sur un cadran de montre", detail: "Un cadran de montre analogique standard est divisé en 12 chiffres." },
+        { context: "Une douzaine", detail: "Les œufs et les pâtisseries se vendent souvent à la douzaine — un lot de 12." },
+        { context: "Les signes du zodiaque", detail: "Le zodiaque occidental se divise traditionnellement en 12 signes." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "Le 1 n'est ni premier ni composé — par définition, un nombre premier doit avoir exactement deux diviseurs positifs distincts, et 1 n'en a qu'un seul (lui-même)." },
+        { fact: "Multiplier n'importe quel nombre par 1 s'appelle la propriété d'identité de la multiplication, l'une des premières règles formelles apprises en arithmétique." },
+        { fact: "En chiffres romains, 1 s'écrit avec un seul trait : I — le symbole le plus simple de tout le système de numération." },
+      ],
+      2: [
+        { fact: "Le 2 est le seul nombre premier pair — tous les autres nombres pairs sont divisibles par 2, ce qui en fait des nombres composés." },
+        { fact: "Comme 2 est le plus petit nombre premier, il est le point de départ de toute la notion de décomposition en facteurs premiers." },
+        { fact: "Doubler est l'une des astuces de calcul mental les plus rapides qui existent — le doublement répété apparaît aussi en informatique sous forme de puissances de 2 : 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "L'astuce de la somme des chiffres pour le 3 fonctionne parce que 10 laisse un reste de 1 dans la division par 3 — la même raison pour laquelle elle fonctionne aussi avec le 9." },
+        { fact: "Le 3 est le plus petit nombre premier impair." },
+        { fact: "Le triangle est le seul polygone naturellement rigide, c'est pourquoi les formes à trois côtés sont tant utilisées dans les ponts et les charpentes." },
+      ],
+      4: [
+        { fact: "Le 4 est le plus petit nombre composé — le premier nombre supérieur à 1 qui n'est pas premier, puisqu'il se divise exactement par 2." },
+        { fact: "Le 4 est un carré parfait : 4 = 2 × 2, soit 2²." },
+        { fact: "Comme 4 = 2 × 2, la table du 4 peut toujours être obtenue en doublant la table du 2 — rien de nouveau à mémoriser si on connaît déjà celle du 2." },
+      ],
+      5: [
+        { fact: "Le 5 se situe exactement à mi-chemin entre 0 et 10, c'est pourquoi la table du 5 correspond toujours à la moitié de la table du 10." },
+        { fact: "Le 5 est un nombre premier, et c'est le seul nombre premier qui se termine par le chiffre 5." },
+        { fact: "Les horloges sont graduées par intervalles de 5 minutes, si bien que multiplier par 5 est ancré dans la façon dont la plupart des gens lisent l'heure sans même y penser." },
+      ],
+      6: [
+        { fact: "Le 6 est le plus petit nombre parfait — la somme de ses diviseurs propres (1, 2 et 3) est exactement égale à lui-même : 1+2+3=6." },
+        { fact: "6 = 2 × 3, ce qui en fait le plus petit nombre produit de deux nombres premiers distincts." },
+        { fact: "Comme 6 est pair et divisible par 3, tout multiple de 6 est automatiquement divisible à la fois par 2 et par 3." },
+      ],
+      7: [
+        { fact: "Le sept est un nombre premier de Mersenne — il est égal à 2³ − 1 (2 × 2 × 2, moins 1), ce qui en fait partie d'une famille rare de nombres premiers liés aux puissances de 2." },
+        { fact: "La semaine de 7 jours remonte à l'astronomie babylonienne antique, qui suivait exactement 7 objets célestes visibles à l'œil nu : le Soleil, la Lune et cinq planètes — Mercure, Vénus, Mars, Jupiter et Saturne." },
+        { fact: "Le sept est considéré comme porte-bonheur dans de nombreuses cultures, ce qui explique sa présence fréquente dans les jeux et les traditions liées aux paris à travers le monde." },
+        { fact: "Le célèbre numéro de code de James Bond est 007, et Blanche-Neige vit avec exactement sept nains." },
+      ],
+      8: [
+        { fact: "8 = 2³, ce qui en fait le premier nombre cube supérieur à 1 (2 × 2 × 2 = 8)." },
+        { fact: "Le mot 'pieuvre' (octopus) et le terme musical 'octave' viennent tous deux de la même racine grecque signifiant huit." },
+        { fact: "Le 8 est le seul nombre entre 1 et 12 qui nécessite trois doublements successifs à partir de 2 (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "Le 9 est un carré parfait : 9 = 3 × 3, soit 3²." },
+        { fact: "Quel que soit le multiple de 9 considéré, additionner ses chiffres de façon répétée finit toujours par redonner 9 — une propriété que les mathématiciens appellent la 'racine numérique'." },
+        { fact: "Le 9 est le plus grand nombre à un seul chiffre, juste avant que la notion de position ne commence avec le 10." },
+      ],
+      10: [
+        { fact: "Le mot 'décathlon' vient de racines grecques signifiant 'dix épreuves'." },
+        { fact: "Multiplier par 10 est la seule table à un chiffre où chaque résultat suit une règle unique et sans exception : ajouter un zéro." },
+        { fact: "Comme la plupart des gens ont 10 doigts, le comptage en base 10 (décimal) est considéré comme l'un des systèmes numériques les plus répandus de l'histoire humaine." },
+      ],
+      11: [
+        { fact: "Le 11 est un nombre premier — ses seuls diviseurs sont 1 et lui-même." },
+        { fact: "Le 11 est le plus petit nombre premier à deux chiffres." },
+        { fact: "Le motif des chiffres en miroir (11×4=44, 11×7=77) ne fonctionne que pour des facteurs à un seul chiffre — l'un des exemples les plus clairs, dans les tables de multiplication, d'un motif avec une limite intégrée." },
+      ],
+      12: [
+        { fact: "Le 12 est un nombre hautement composé — il a plus de diviseurs (1, 2, 3, 4, 6, 12) que n'importe quel nombre positif plus petit." },
+        { fact: "Le mot 'douzaine' vient de l'ancien français 'douzaine', qui désigne un groupe de douze." },
+        { fact: "Un groupe de 144 objets — 12 douzaines — est traditionnellement appelé une 'grosse'." },
+      ],
+    }
+
 export function getNumberMeaning(n: number): string | null {
   return meanings[n] ?? null
 }
@@ -1838,10 +1975,10 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

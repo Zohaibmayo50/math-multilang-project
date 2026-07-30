@@ -100,10 +100,147 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "'Numero yksi' oleminen", detail: "Monissa kielissä ja kulttuureissa numero yksi tarkoittaa ensimmäistä sijaa tai korkeinta asemaa — urheilun palkintopalleilta koulun arvosanoihin." },
+        { context: "Yksi ainoa esine", detail: "Aina kun lasket yhden esineen — yhden omenan, yhden tuolin — sovellat ajatusta, että 1 ryhmä jotakin on yksinkertaisesti se yksi asia." },
+        { context: "Ensimmäinen asema sarjassa", detail: "Sivu 1, Päivä 1, Kierros 1 — ykkönen merkitsee lukemattomien numerointijärjestelmien lähtökohtaa." },
+      ],
+      2: [
+        { context: "Kenkä-, sukka- ja hansikasparit", detail: "Suurin osa arkisista pareista koostuu 2 kappaleesta — suora, konkreettinen malli kaksinkertaistamisesta." },
+        { context: "Silmät ja korvat", detail: "Ihmisellä on 2 silmää ja 2 korvaa, monien muiden parillisten elinten joukossa." },
+        { context: "Polkupyörän pyörät", detail: "Tavallisessa polkupyörässä on 2 pyörää, toisin kuin kolmipyörässä (3) tai yksipyörässä (1)." },
+        { context: "Binäärikoodi tietotekniikassa", detail: "Tietokoneet tallentavat ja käsittelevät tietoa binäärimuodossa (kantaluku 2), joka rakentuu vain kahdesta numerosta: 0 ja 1." },
+      ],
+      3: [
+        { context: "Liikennevalot", detail: "Tavalliset liikennevalot käyttävät 3 väriä: punaista, keltaista ja vihreää." },
+        { context: "Kolmiot", detail: "Jokaisessa kolmiossa on täsmälleen 3 sivua ja 3 kulmaa — yksinkertaisin mahdollinen monikulmio." },
+        { context: "Mitalikorokkeet", detail: "Olympialaisissa ja monissa muissa kilpailuissa jaetaan 3 mitalia: kulta, hopea ja pronssi." },
+        { context: "Perusvärit", detail: "Koulussa perinteisesti opetetussa väriopissa punaista, keltaista ja sinistä pidetään 3 perusvärinä." },
+      ],
+      4: [
+        { context: "Neljä vuodenaikaa", detail: "Monilla alueilla maailmassa vuosi jaetaan 4 vuodenaikaan: kevät, kesä, syksy ja talvi." },
+        { context: "Ilmansuunnat", detail: "Kompassissa on 4 pääilmansuuntaa: pohjoinen, etelä, itä ja länsi." },
+        { context: "Pöydän jalat", detail: "Useimmissa pöydissä ja tuoleissa on 4 jalkaa vakauden vuoksi." },
+        { context: "Korttipakan maat", detail: "Tavallinen 52 kortin pakka jakautuu 4 maahan: hertta, ruutu, risti ja pata." },
+      ],
+      5: [
+        { context: "Yhden käden sormet", detail: "Useimmilla ihmisillä on 5 sormea kädessä, mikä tekee 5:stä yhden luonnollisimmista luvuista varhaiseen laskemisen opetteluun." },
+        { context: "Viisi aistia", detail: "Näkö, kuulo, haju, maku ja tunto kuvataan yleisesti ihmisen 5 perinteisenä aistina." },
+        { context: "Viisikulmio", detail: "Viisikulmio on viisisivuinen muoto, ja Yhdysvaltain puolustusministeriön päämaja, Pentagon, on saanut nimensä juuri tästä muodosta." },
+        { context: "Rahaa 5:n yksiköissä", detail: "Monissa valuutoissa on 5:n kolikko tai seteli, kuten 5 euron seteli." },
+      ],
+      6: [
+        { context: "Nopan sivut", detail: "Tavallisessa kuusisivuisessa nopassa (kuutiossa) on täsmälleen 6 sivua." },
+        { context: "Hyönteisten jalat", detail: "Kaikilla hyönteisillä on määritelmän mukaan 6 jalkaa — yksi piirre, joka erottaa ne 8-jalkaisista hämähäkeistä." },
+        { context: "Kitaran kielet", detail: "Tavallisessa akustisessa tai sähkökitarassa on 6 kieltä." },
+        { context: "Puoli tusinaa", detail: "Munia ja leivonnaisia myydään usein puolen tusinan erissä — 6 kappaleen pakkauksissa." },
+      ],
+      7: [
+        { context: "Viikon 7 päivää", detail: "Käytössä nykyään lähes kaikissa maailman kalenterijärjestelmissä." },
+        { context: "7 maanosaa", detail: "Afrikka, Antarktis, Aasia, Australia, Eurooppa, Pohjois-Amerikka ja Etelä-Amerikka — kouluissa yleisimmin opetetussa mallissa." },
+        { context: "Musiikkiasteikon 7 säveltä", detail: "C, D, E, F, G, A, H — ennen kuin kuvio toistuu oktaavia korkeammalla." },
+        { context: "Sateenkaaren 7 väriä", detail: "Punainen, oranssi, keltainen, vihreä, sininen, indigo ja violetti — jaottelu, jonka Isaac Newton popularisoi ensimmäisenä." },
+        { context: "Antiikin maailman seitsemän ihmettä", detail: "Mukaan lukien Gizan suuri pyramidi, ainoa niistä, joka on yhä pystyssä." },
+      ],
+      8: [
+        { context: "Hämähäkkien jalat", detail: "Hämähäkeillä ja muilla hämähäkkieläimillä on 8 jalkaa, toisin kuin hyönteisillä, joilla on 6." },
+        { context: "Mustekalan lonkerot", detail: "Mustekalalla on 8 lonkeroa — siitä sen nimikin tulee (kreikan 'okto', joka tarkoittaa kahdeksaa)." },
+        { context: "Tavu tietotekniikassa", detail: "Tietotekniikassa 8 bittiä muodostaa 1 tavun, digitaalisen tallennustilan ja muistin perusyksikön." },
+        { context: "Musiikillinen oktaavi", detail: "Länsimaisessa musiikissa oktaavi kattaa 8 säveltä (esimerkiksi C:stä seuraavaan C:hen: C, D, E, F, G, A, H, C)." },
+      ],
+      9: [
+        { context: "Baseball-erät", detail: "Tavallinen baseball-ottelu koostuu 9 erästä." },
+        { context: "3×3-neliö", detail: "9 on neliöluku: ruudukko, jossa on 3 riviä ja 3 saraketta, sisältää täsmälleen 9 ruutua, kuten ristinolla-lauta." },
+        { context: "Aurinkokunta, historiallisesti", detail: "Suuren osan 1900-lukua oppilaat oppivat, että planeettoja on 9; Pluto luokiteltiin kääpiöplaneetaksi vuonna 2006, jolloin tunnustettuja planeettoja on nykyään 8." },
+      ],
+      10: [
+        { context: "Kymmenjärjestelmä", detail: "Lähes kaikki nykyaikaiset laskentajärjestelmät perustuvat kantalukuun 10, rakentuen kokonaan kymmenen ryhmistä." },
+        { context: "Sormet ja varpaat", detail: "Useimmilla ihmisillä on 10 sormea ja 10 varvasta, minkä uskotaan olleen yksi syy siihen, miksi kymmenjärjestelmä on levinnyt historiallisesti niin laajalle." },
+        { context: "Kymmenottelu", detail: "Kymmenottelu on yleisurheilulaji, joka koostuu täsmälleen 10 lajista." },
+        { context: "Rahaa 10:n yksiköissä", detail: "Monet valuutat rakentuvat 10:n yksiköiden ympärille, kuten 10 euron setelit." },
+      ],
+      11: [
+        { context: "Jalkapallojoukkueen pelaajat", detail: "Kummallakin joukkueella on tavallisessa jalkapallo-ottelussa 11 pelaajaa kentällä." },
+        { context: "Kaksinumeroiset toistoluvut", detail: "11 on pienin kaksinumeroinen luku, joka koostuu yhdestä toistuvasta numerosta — kuvio, joka näkyy suoraan sen kertotaulussa." },
+      ],
+      12: [
+        { context: "Vuoden kuukaudet", detail: "Kalenterivuosi jakautuu 12 kuukauteen." },
+        { context: "Tuumat jalassa (foot)", detail: "Brittiläisessä mittajärjestelmässä 1 jalka vastaa 12 tuumaa." },
+        { context: "Kellotaulun numerot", detail: "Tavallinen analoginen kellotaulu on jaettu 12 numeroon." },
+        { context: "Tusina", detail: "Munia ja leivonnaisia myydään usein tusinoittain — 12 kappaleen erissä." },
+        { context: "Eläinradan merkit", detail: "Länsimainen eläinrata jaetaan perinteisesti 12 merkkiin." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "Luku 1 ei ole alkuluku eikä yhdistetty luku — alkuluvulla täytyy määritelmän mukaan olla täsmälleen kaksi eri positiivista tekijää, ja 1:llä on vain yksi (itsensä)." },
+        { fact: "Minkä tahansa luvun kertomista 1:llä kutsutaan kertolaskun neutraalialkio-ominaisuudeksi, yhdeksi ensimmäisistä muodollisista säännöistä, jotka opitaan aritmetiikassa." },
+        { fact: "Roomalaisin numeroin 1 kirjoitetaan yhdellä viivalla: I — koko numerojärjestelmän yksinkertaisin symboli." },
+      ],
+      2: [
+        { fact: "2 on ainoa parillinen alkuluku — kaikki muut parilliset luvut ovat jaollisia 2:lla, mikä tekee niistä yhdistettyjä lukuja." },
+        { fact: "Koska 2 on pienin alkuluku, se on lähtökohta koko alkutekijähajotelman käsitteelle." },
+        { fact: "Kaksinkertaistaminen on yksi nopeimmista päässälaskutempuista — toistuva kaksinkertaistaminen esiintyy myös tietotekniikassa kakkosen potensseina: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "Numeroiden summan temppu toimii 3:lla siksi, että 10 jättää jakojäännöksen 1, kun sen jakaa 3:lla — sama syy, miksi temppu toimii myös 9:llä." },
+        { fact: "3 on pienin pariton alkuluku." },
+        { fact: "Kolmio on ainoa luonnostaan jäykkä monikulmio, minkä vuoksi kolmisivuisia muotoja käytetään niin paljon silloissa ja rakennusten rungoissa." },
+      ],
+      4: [
+        { fact: "4 on pienin yhdistetty luku — ensimmäinen 1:tä suurempi luku, joka ei ole alkuluku, koska se on jaollinen tasan 2:lla." },
+        { fact: "4 on neliöluku: 4 = 2 × 2, eli 2²." },
+        { fact: "Koska 4 = 2 × 2, nelostaulun saa aina kaksinkertaistamalla kakkostaulun — jos osaa jo kakkostaulun, mitään uutta ei tarvitse opetella." },
+      ],
+      5: [
+        { fact: "5 on täsmälleen puolivälissä lukujen 0 ja 10 välillä, minkä vuoksi 5-taulu on aina puolet vastaavasta 10-taulusta." },
+        { fact: "5 on alkuluku, ja se on ainoa alkuluku, joka päättyy numeroon 5." },
+        { fact: "Kellot on jaettu 5 minuutin väleihin, joten 5:llä kertominen on sisäänrakennettu tapaan, jolla useimmat ihmiset lukevat kelloa edes ajattelematta sitä." },
+      ],
+      6: [
+        { fact: "6 on pienin täydellinen luku — sen omien tekijöiden (1, 2 ja 3) summa on täsmälleen sama kuin luku itse: 1+2+3=6." },
+        { fact: "6 = 2 × 3, mikä tekee siitä pienimmän luvun, joka on kahden eri alkuluvun tulo." },
+        { fact: "Koska 6 on parillinen ja jaollinen 3:lla, jokainen 6:n kerrannainen on automaattisesti jaollinen sekä 2:lla että 3:lla." },
+      ],
+      7: [
+        { fact: "Seitsemän on Mersennen alkuluku — se on yhtä suuri kuin 2³ − 1 (2 × 2 × 2, miinus 1), mikä tekee siitä osan harvinaista alkulukuperhettä, joka liittyy kakkosen potensseihin." },
+        { fact: "7 päivän viikko juontaa juurensa muinaiseen Babylonian tähtitieteeseen, joka seurasi täsmälleen 7:ää paljaalla silmällä näkyvää taivaankappaletta: Aurinkoa, Kuuta ja viittä planeettaa — Merkuriusta, Venusta, Marsia, Jupiteria ja Saturnusta." },
+        { fact: "Seitsemää pidetään monissa kulttuureissa onnennumerona, minkä vuoksi se esiintyy niin usein peleissä ja uhkapelaamiseen liittyvissä perinteissä ympäri maailmaa." },
+        { fact: "James Bondin tunnettu koodinumero on 007, ja Lumikki asuu täsmälleen seitsemän kääpiön kanssa." },
+      ],
+      8: [
+        { fact: "8 = 2³, mikä tekee siitä ensimmäisen 1:tä suuremman kuutioluvun (2 × 2 × 2 = 8)." },
+        { fact: "Sana 'mustekala' (octopus) ja musiikin termi 'oktaavi' juontuvat molemmat samasta kreikkalaisesta kahdeksaa tarkoittavasta sanasta." },
+        { fact: "8 on ainoa luku 1:n ja 12:n välillä, joka vaatii kolme peräkkäistä kaksinkertaistamista 2:sta lähtien (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "9 on neliöluku: 9 = 3 × 3, eli 3²." },
+        { fact: "Riippumatta siitä, kuinka suuri 9:n kerrannainen on, sen numeroiden toistuva yhteenlasku päätyy aina lopulta 9:ään — matemaatikot kutsuvat tätä ominaisuutta 'numerojuureksi'." },
+        { fact: "9 on suurin yksinumeroinen luku, aivan ennen kuin paikkajärjestelmä alkaa 10:stä." },
+      ],
+      10: [
+        { fact: "Sana 'kymmenottelu' juontaa kreikkalaisista sanoista, jotka tarkoittavat 'kymmentä kilpailua'." },
+        { fact: "10:llä kertominen on ainoa yksinumeroinen kertotaulu, jossa jokainen tulos noudattaa yhtä poikkeuksetonta sääntöä: lisää nolla loppuun." },
+        { fact: "Koska useimmilla ihmisillä on 10 sormea, kymmenjärjestelmän (desimaalijärjestelmän) uskotaan olevan yksi ihmiskunnan historian yleisimmistä lukujärjestelmistä." },
+      ],
+      11: [
+        { fact: "11 on alkuluku — sen ainoat tekijät ovat 1 ja se itse." },
+        { fact: "11 on pienin kaksinumeroinen alkuluku." },
+        { fact: "Peilikuvio (11×4=44, 11×7=77) toimii vain yksinumeroisilla kertojilla — yksi selkeimmistä esimerkeistä kertotauluissa kuviosta, jolla on sisäänrakennettu raja." },
+      ],
+      12: [
+        { fact: "12 on erittäin yhdistetty luku — sillä on enemmän tekijöitä (1, 2, 3, 4, 6, 12) kuin yhdelläkään sitä pienemmällä positiivisella luvulla." },
+        { fact: "Sana 'tusina' tulee vanhasta ranskan sanasta 'douzaine', joka tarkoittaa kahdentoista ryhmää." },
+        { fact: "144 esineen ryhmää — 12 tusinaa — kutsutaan perinteisesti 'grossiksi'." },
+      ],
+    }
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

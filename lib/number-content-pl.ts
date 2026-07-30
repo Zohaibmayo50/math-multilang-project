@@ -87,10 +87,147 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Bycie 'numerem jeden'", detail: "W wielu językach i kulturach bycie numerem jeden oznacza pierwsze miejsce lub najwyższą pozycję — od podium sportowego po szkolne rankingi." },
+        { context: "Pojedynczy przedmiot", detail: "Za każdym razem, gdy liczysz jeden przedmiot — jedno jabłko, jedno krzesło — stosujesz ideę, że 1 grupa czegoś to po prostu ta jedna rzecz." },
+        { context: "Pierwsza pozycja w kolejności", detail: "Strona 1, Dzień 1, Runda 1 — jedynka wyznacza punkt startowy niezliczonych systemów numeracji." },
+      ],
+      2: [
+        { context: "Pary butów, skarpetek i rękawiczek", detail: "Większość codziennych par składa się z 2 sztuk — bezpośredni, namacalny model podwajania." },
+        { context: "Oczy i uszy", detail: "Ludzkie ciało ma 2 oczy i 2 uszy, obok wielu innych parzystych narządów." },
+        { context: "Koła roweru", detail: "Standardowy rower ma 2 koła, w przeciwieństwie do trójkołowca (3) czy jednokołowca (1)." },
+        { context: "Kod binarny w informatyce", detail: "Komputery przechowują i przetwarzają informacje w systemie binarnym (podstawa 2), zbudowanym wyłącznie z dwóch cyfr: 0 i 1." },
+      ],
+      3: [
+        { context: "Sygnalizacja świetlna", detail: "Standardowe światła drogowe używają 3 kolorów: czerwonego, żółtego i zielonego." },
+        { context: "Trójkąty", detail: "Każdy trójkąt ma dokładnie 3 boki i 3 kąty — najprostszy możliwy wielokąt." },
+        { context: "Podium medalowe", detail: "Igrzyska olimpijskie i wiele innych zawodów przyznaje 3 medale: złoty, srebrny i brązowy." },
+        { context: "Barwy podstawowe", detail: "W tradycyjnej teorii barw uczonej w szkole czerwony, żółty i niebieski uznaje się za 3 barwy podstawowe." },
+      ],
+      4: [
+        { context: "Cztery pory roku", detail: "W wielu regionach świata rok dzieli się na 4 pory roku: wiosnę, lato, jesień i zimę." },
+        { context: "Strony świata", detail: "Kompas ma 4 główne kierunki: północ, południe, wschód i zachód." },
+        { context: "Nogi stołu", detail: "Większość stołów i krzeseł ma dla stabilności 4 nogi." },
+        { context: "Kolory w talii kart", detail: "Standardowa talia 52 kart dzieli się na 4 kolory: kier, karo, trefl i pik." },
+      ],
+      5: [
+        { context: "Palce jednej dłoni", detail: "Większość ludzi ma 5 palców na dłoni, co czyni 5 jedną z najbardziej naturalnych liczb do wczesnej nauki liczenia." },
+        { context: "Pięć zmysłów", detail: "Wzrok, słuch, węch, smak i dotyk są powszechnie opisywane jako 5 tradycyjnych zmysłów człowieka." },
+        { context: "Pięciokąt", detail: "Pięciokąt to figura o pięciu bokach, a siedziba amerykańskiego Departamentu Obrony, Pentagon, zawdzięcza swoją nazwę właśnie temu kształtowi." },
+        { context: "Pieniądze w jednostkach po 5", detail: "Wiele walut zawiera jednostkę 5, jak moneta 5-złotowa." },
+      ],
+      6: [
+        { context: "Ściany kostki do gry", detail: "Standardowa sześcienna kostka do gry ma dokładnie 6 ścian." },
+        { context: "Nogi owadów", detail: "Wszystkie owady z definicji mają 6 nóg — to jedna z cech odróżniających je od pająków, które mają 8." },
+        { context: "Struny gitary", detail: "Standardowa gitara akustyczna lub elektryczna ma 6 strun." },
+        { context: "Pół tuzina", detail: "Jajka i wypieki często sprzedaje się w ilości pół tuzina — czyli 6 sztuk." },
+      ],
+      7: [
+        { context: "7 dni tygodnia", detail: "Używane dziś w niemal każdym systemie kalendarzowym na świecie." },
+        { context: "7 kontynentów", detail: "Afryka, Antarktyda, Azja, Australia, Europa, Ameryka Północna i Ameryka Południowa — w modelu najczęściej nauczanym w szkołach." },
+        { context: "7 dźwięków w gamie muzycznej", detail: "C, D, E, F, G, A, H — zanim wzór powtórzy się o oktawę wyżej." },
+        { context: "7 kolorów tęczy", detail: "Czerwony, pomarańczowy, żółty, zielony, niebieski, indygo i fioletowy — podział spopularyzowany po raz pierwszy przez Isaaca Newtona." },
+        { context: "Siedem Cudów Świata Starożytnego", detail: "W tym Wielka Piramida w Gizie, jedyny cud, który przetrwał do dziś." },
+      ],
+      8: [
+        { context: "Nogi pająków", detail: "Pająki i inne pajęczaki mają 8 nóg, w przeciwieństwie do owadów, które mają 6." },
+        { context: "Ramiona ośmiornicy", detail: "Ośmiornica ma 8 ramion — stąd jej nazwa (od greckiego 'okto', czyli osiem)." },
+        { context: "Bajt w informatyce", detail: "W informatyce 8 bitów tworzy 1 bajt, podstawową jednostkę do mierzenia pamięci i przechowywania danych cyfrowych." },
+        { context: "Oktawa w muzyce", detail: "W muzyce zachodniej oktawa obejmuje 8 dźwięków (na przykład od C do kolejnego C: C, D, E, F, G, A, H, C)." },
+      ],
+      9: [
+        { context: "Zmiany w baseballu", detail: "Standardowy mecz baseballu składa się z 9 zmian (inningów)." },
+        { context: "Kwadrat 3×3", detail: "9 to liczba kwadratowa: siatka z 3 wierszy i 3 kolumn zawiera dokładnie 9 pól, jak plansza do kółka i krzyżyka." },
+        { context: "Układ Słoneczny, historycznie", detail: "Przez większą część XX wieku uczniowie uczyli się, że istnieje 9 planet; Pluton został przeklasyfikowany na planetę karłowatą w 2006 roku, pozostawiając dziś 8 uznanych planet." },
+      ],
+      10: [
+        { context: "System dziesiętny", detail: "Niemal wszystkie nowoczesne systemy liczenia są oparte na podstawie 10, zbudowane w całości z grup po dziesięć." },
+        { context: "Palce u rąk i nóg", detail: "Większość ludzi ma 10 palców u rąk i 10 u nóg, co uważa się za jeden z powodów, dla których liczenie w systemie dziesiętnym tak bardzo się rozpowszechniło." },
+        { context: "Dziesięciobój", detail: "Dziesięciobój to konkurencja lekkoatletyczna złożona dokładnie z 10 dyscyplin." },
+        { context: "Pieniądze w jednostkach po 10", detail: "Wiele walut jest zbudowanych wokół jednostek po 10, jak banknot 10-złotowy." },
+      ],
+      11: [
+        { context: "Zawodnicy w drużynie piłkarskiej", detail: "Każda drużyna wystawia na boisku 11 zawodników w standardowym meczu piłki nożnej." },
+        { context: "Dwucyfrowe liczby z powtórzoną cyfrą", detail: "11 to najmniejsza dwucyfrowa liczba złożona z jednej powtórzonej cyfry — wzór ten widać bezpośrednio w jej tabliczce mnożenia." },
+      ],
+      12: [
+        { context: "Miesiące w roku", detail: "Rok kalendarzowy dzieli się na 12 miesięcy." },
+        { context: "Cale w stopie (foot)", detail: "W systemie miar angielskich 1 stopa równa się 12 calom." },
+        { context: "Cyfry na tarczy zegara", detail: "Standardowa tarcza zegara analogowego jest podzielona na 12 cyfr." },
+        { context: "Tuzin", detail: "Jajka i wypieki często sprzedaje się na tuziny — grupy po 12." },
+        { context: "Znaki zodiaku", detail: "Zachodni zodiak tradycyjnie dzieli się na 12 znaków." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "Liczba 1 nie jest ani liczbą pierwszą, ani złożoną — z definicji liczba pierwsza musi mieć dokładnie dwa różne dodatnie dzielniki, a 1 ma tylko jeden (samą siebie)." },
+        { fact: "Mnożenie dowolnej liczby przez 1 nazywa się własnością elementu neutralnego mnożenia — jedną z pierwszych formalnych reguł, jakich uczniowie uczą się w arytmetyce." },
+        { fact: "W liczbach rzymskich 1 zapisuje się jedną kreską: I — najprostszym symbolem w całym systemie liczbowym." },
+      ],
+      2: [
+        { fact: "2 to jedyna parzysta liczba pierwsza — wszystkie inne liczby parzyste dzielą się przez 2, przez co są liczbami złożonymi." },
+        { fact: "Ponieważ 2 jest najmniejszą liczbą pierwszą, jest punktem wyjścia dla całej koncepcji rozkładu na czynniki pierwsze." },
+        { fact: "Podwajanie to jeden z najszybszych trików rachunku pamięciowego — wielokrotne podwajanie pojawia się też w informatyce jako potęgi liczby 2: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "Sztuczka z sumą cyfr dla liczby 3 działa, ponieważ 10 przy dzieleniu przez 3 daje resztę 1 — z tego samego powodu działa też dla liczby 9." },
+        { fact: "3 to najmniejsza nieparzysta liczba pierwsza." },
+        { fact: "Trójkąt to jedyny wielokąt naturalnie sztywny, dlatego trójkątne kształty są tak często stosowane w mostach i konstrukcjach budynków." },
+      ],
+      4: [
+        { fact: "4 to najmniejsza liczba złożona — pierwsza liczba większa od 1, która nie jest pierwsza, ponieważ dzieli się bez reszty przez 2." },
+        { fact: "4 to liczba kwadratowa: 4 = 2 × 2, czyli 2²." },
+        { fact: "Ponieważ 4 = 2 × 2, tabliczkę mnożenia przez 4 zawsze można uzyskać, podwajając tabliczkę przez 2 — kto zna tabliczkę przez 2, nie musi uczyć się niczego nowego." },
+      ],
+      5: [
+        { fact: "5 leży dokładnie w połowie drogi między 0 a 10, dlatego tabliczka mnożenia przez 5 zawsze jest połową odpowiadającej tabliczki przez 10." },
+        { fact: "5 to liczba pierwsza i jedyna liczba pierwsza kończąca się cyfrą 5." },
+        { fact: "Zegary są podzielone na 5-minutowe odstępy, więc mnożenie przez 5 jest wbudowane w sposób, w jaki większość ludzi odczytuje czas, nawet o tym nie myśląc." },
+      ],
+      6: [
+        { fact: "6 to najmniejsza liczba doskonała — suma jej właściwych dzielników (1, 2 i 3) daje dokładnie ją samą: 1+2+3=6." },
+        { fact: "6 = 2 × 3, co czyni ją najmniejszą liczbą będącą iloczynem dwóch różnych liczb pierwszych." },
+        { fact: "Ponieważ 6 jest parzysta i podzielna przez 3, każda wielokrotność 6 automatycznie dzieli się zarówno przez 2, jak i przez 3." },
+      ],
+      7: [
+        { fact: "Siedem to liczba pierwsza Mersenne'a — jest równa 2³ − 1 (2 × 2 × 2, minus 1), co czyni ją częścią rzadkiej rodziny liczb pierwszych związanych z potęgami 2." },
+        { fact: "Tydzień siedmiodniowy sięga starożytnej astronomii babilońskiej, która śledziła dokładnie 7 obiektów niebieskich widocznych gołym okiem: Słońce, Księżyc i pięć planet — Merkurego, Wenus, Marsa, Jowisza i Saturna." },
+        { fact: "Siódemka jest uznawana za szczęśliwą liczbę w wielu kulturach, dlatego tak często pojawia się w grach i tradycjach hazardowych na całym świecie." },
+        { fact: "Słynny numer kodowy Jamesa Bonda to 007, a Śnieżka mieszka z dokładnie siedmioma krasnoludkami." },
+      ],
+      8: [
+        { fact: "8 = 2³, co czyni ją pierwszą liczbą sześcienną większą od 1 (2 × 2 × 2 = 8)." },
+        { fact: "Słowo 'ośmiornica' (octopus) i muzyczny termin 'oktawa' pochodzą z tego samego greckiego rdzenia oznaczającego osiem." },
+        { fact: "8 to jedyna liczba między 1 a 12, do której trzeba dojść od 2 poprzez trzy kolejne podwojenia (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "9 to liczba kwadratowa: 9 = 3 × 3, czyli 3²." },
+        { fact: "Bez względu na to, jak duża jest wielokrotność 9, wielokrotne sumowanie jej cyfr zawsze ostatecznie sprowadza się do 9 — matematycy nazywają tę właściwość 'cyfrowym pierwiastkiem'." },
+        { fact: "9 to największa liczba jednocyfrowa, tuż przed tym, jak przy 10 zaczyna się wartość pozycyjna." },
+      ],
+      10: [
+        { fact: "Słowo 'dziesięciobój' pochodzi od greckich rdzeni oznaczających 'dziesięć zawodów'." },
+        { fact: "Mnożenie przez 10 to jedyna jednocyfrowa tabliczka mnożenia, w której każdy wynik podlega jednej, bezwyjątkowej regule: dopisz zero." },
+        { fact: "Ponieważ większość ludzi ma 10 palców, system dziesiętny (bazujący na 10) uważany jest za jeden z najbardziej rozpowszechnionych systemów liczbowych w historii ludzkości." },
+      ],
+      11: [
+        { fact: "11 to liczba pierwsza — jej jedynymi dzielnikami są 1 i ona sama." },
+        { fact: "11 to najmniejsza dwucyfrowa liczba pierwsza." },
+        { fact: "Wzór lustrzanych cyfr (11×4=44, 11×7=77) działa tylko dla jednocyfrowych czynników — jeden z najwyraźniejszych przykładów w tabliczkach mnożenia wzoru z wbudowaną granicą." },
+      ],
+      12: [
+        { fact: "12 to liczba silnie złożona — ma więcej dzielników (1, 2, 3, 4, 6, 12) niż jakakolwiek mniejsza liczba dodatnia." },
+        { fact: "Słowo 'tuzin' pochodzi od starofrancuskiego 'douzaine', oznaczającego grupę dwunastu." },
+        { fact: "Grupę 144 przedmiotów — 12 tuzinów — tradycyjnie nazywa się 'gross' (wielki tuzin)." },
+      ],
+    }
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

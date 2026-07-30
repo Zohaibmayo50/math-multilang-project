@@ -95,10 +95,147 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Att vara 'nummer ett'", detail: "I många språk och kulturer betyder att vara nummer ett att inta första platsen eller den högsta rangen — från prispallar till skolbetyg." },
+        { context: "Ett enda föremål", detail: "Varje gång du räknar ett enda föremål — ett äpple, en stol — tillämpar du idén att 1 grupp av något helt enkelt är just den saken." },
+        { context: "Den första positionen i en sekvens", detail: "Sida 1, Dag 1, Omgång 1 — ettan markerar startpunkten för otaliga numreringssystem." },
+      ],
+      2: [
+        { context: "Par av skor, strumpor och handskar", detail: "De flesta vardagliga par kommer i uppsättningar om 2 — en direkt, konkret modell för fördubbling." },
+        { context: "Ögon och öron", detail: "Människokroppen har 2 ögon och 2 öron, bland många andra parade drag." },
+        { context: "Cykelhjul", detail: "En vanlig cykel har 2 hjul, till skillnad från en trehjuling (3) eller enhjuling (1)." },
+        { context: "Binär kod inom datorteknik", detail: "Datorer lagrar och bearbetar information i binärt format (bas 2), uppbyggt enbart av två siffror: 0 och 1." },
+      ],
+      3: [
+        { context: "Trafikljus", detail: "Vanliga trafikljus använder 3 färger: rött, gult och grönt." },
+        { context: "Trianglar", detail: "Varje triangel har exakt 3 sidor och 3 vinklar — den enklast möjliga polygonen." },
+        { context: "Prispallar", detail: "Olympiska spelen och många andra tävlingar delar ut 3 medaljer: guld, silver och brons." },
+        { context: "Primärfärger", detail: "I den traditionella färglära som lärs ut i skolan betraktas rött, gult och blått som de 3 primärfärgerna." },
+      ],
+      4: [
+        { context: "De fyra årstiderna", detail: "I många delar av världen beskrivs året ha 4 årstider: vår, sommar, höst och vinter." },
+        { context: "Väderstreck", detail: "En kompass har 4 huvudriktningar: norr, söder, öster och väster." },
+        { context: "Bordsben", detail: "De flesta bord och stolar är byggda med 4 ben för stabilitet." },
+        { context: "Färger i en kortlek", detail: "En vanlig kortlek med 52 kort delas in i 4 färger: hjärter, ruter, klöver och spader." },
+      ],
+      5: [
+        { context: "Fingrar på en hand", detail: "De flesta människor har 5 fingrar per hand, vilket gör 5 till ett av de mest naturliga talen att lära sig räkna med tidigt." },
+        { context: "De fem sinnena", detail: "Syn, hörsel, lukt, smak och känsel beskrivs vanligen som människans 5 traditionella sinnen." },
+        { context: "En pentagon", detail: "En pentagon är en femsidig figur, och Pentagon, USA:s försvarsdepartements högkvarter, har fått sitt namn just av denna form." },
+        { context: "Pengar i enheter om 5", detail: "Många valutor har ett mynt eller en sedel i valören 5, till exempel en 5-kronorsmynt." },
+      ],
+      6: [
+        { context: "Sidor på en tärning", detail: "En vanlig sexsidig tärning (en kub) har exakt 6 sidor." },
+        { context: "Insekters ben", detail: "Alla insekter har per definition 6 ben — ett av de drag som skiljer dem från spindlar, som har 8." },
+        { context: "Gitarrsträngar", detail: "En vanlig akustisk eller elektrisk gitarr har 6 strängar." },
+        { context: "Ett halvdussin", detail: "Ägg och bakverk säljs ofta i halvdussin — en förpackning om 6." },
+      ],
+      7: [
+        { context: "Veckans 7 dagar", detail: "Används idag i nästan alla kalendersystem i världen." },
+        { context: "7 kontinenter", detail: "Afrika, Antarktis, Asien, Australien, Europa, Nordamerika och Sydamerika — enligt den modell som oftast lärs ut i skolan." },
+        { context: "7 toner i en musikskala", detail: "C, D, E, F, G, A, H — innan mönstret upprepas en oktav högre." },
+        { context: "Regnbågens 7 färger", detail: "Rött, orange, gult, grönt, blått, indigo och violett — en indelning som Isaac Newton först populariserade." },
+        { context: "Antikens sju underverk", detail: "Bland dem den stora pyramiden i Giza, det enda som fortfarande står kvar idag." },
+      ],
+      8: [
+        { context: "Spindlars ben", detail: "Spindlar och andra spindeldjur har 8 ben, till skillnad från insekter som har 6." },
+        { context: "En bläckfisks armar", detail: "En bläckfisk har 8 armar — därav namnet (grekiskans 'okto', som betyder åtta)." },
+        { context: "En byte inom datorteknik", detail: "Inom datavetenskap utgör 8 bitar 1 byte, grundenheten för att mäta digital lagring och minne." },
+        { context: "En musikalisk oktav", detail: "I västerländsk musik omfattar en oktav 8 toner (till exempel från C till nästa C: C, D, E, F, G, A, H, C)." },
+      ],
+      9: [
+        { context: "Innings i baseboll", detail: "En vanlig basebollmatch består av 9 innings." },
+        { context: "En 3×3-kvadrat", detail: "9 är ett kvadrattal: ett rutnät med 3 rader och 3 kolumner innehåller exakt 9 rutor, som en tre-i-rad-bräda." },
+        { context: "Solsystemet, historiskt sett", detail: "Under en stor del av 1900-talet lärde sig elever att det fanns 9 planeter; Pluto omklassificerades till dvärgplanet 2006, vilket lämnade 8 erkända planeter idag." },
+      ],
+      10: [
+        { context: "Decimalsystemet", detail: "Nästan alla moderna räknesystem har bas 10 och bygger helt på grupper om tio." },
+        { context: "Fingrar och tår", detail: "De flesta människor har 10 fingrar och 10 tår, vilket tros vara en av anledningarna till att räkning i basen 10 historiskt blivit så utbredd." },
+        { context: "Tiokamp", detail: "Tiokamp är en friidrottsgren som består av exakt 10 grenar." },
+        { context: "Pengar i enheter om 10", detail: "Många valutor är uppbyggda kring enheter om 10, som 10-kronorssedlar." },
+      ],
+      11: [
+        { context: "Spelare i ett fotbollslag", detail: "Varje lag ställer upp med 11 spelare på planen i en vanlig fotbollsmatch." },
+        { context: "Tvåsiffriga tal med upprepad siffra", detail: "11 är det minsta tvåsiffriga talet som består av en enda upprepad siffra — ett mönster som syns direkt i dess multiplikationstabell." },
+      ],
+      12: [
+        { context: "Månader på ett år", detail: "Kalenderåret är indelat i 12 månader." },
+        { context: "Tum i en fot (foot)", detail: "I det brittiska måttsystemet motsvarar 1 fot 12 tum." },
+        { context: "Siffror på en klocktavla", detail: "En vanlig analog klocktavla är indelad i 12 siffror." },
+        { context: "Ett dussin", detail: "Ägg och bakverk säljs ofta dussinvis — grupper om 12." },
+        { context: "Stjärntecken", detail: "Den västerländska zodiaken delas traditionellt in i 12 tecken." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "1 är varken ett primtal eller ett sammansatt tal — per definition måste ett primtal ha exakt två olika positiva delare, och 1 har bara en (sig själv)." },
+        { fact: "Att multiplicera vilket tal som helst med 1 kallas multiplikationens identitetsegenskap, en av de första formella regler eleverna lär sig i aritmetik." },
+        { fact: "Med romerska siffror skrivs 1 med ett enda streck: I — den enklaste symbolen i hela sifferssystemet." },
+      ],
+      2: [
+        { fact: "2 är det enda jämna primtalet — alla andra jämna tal är delbara med 2, vilket gör dem till sammansatta tal." },
+        { fact: "Eftersom 2 är det minsta primtalet är det utgångspunkten för hela begreppet primtalsfaktorisering." },
+        { fact: "Fördubbling är ett av de snabbaste huvudräkningsknepen som finns — upprepad fördubbling dyker också upp inom datavetenskap som tvåpotenser: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "Sifferssummeknepet för 3 fungerar eftersom 10 ger resten 1 vid division med 3 — samma anledning till att knepet också fungerar för 9." },
+        { fact: "3 är det minsta udda primtalet." },
+        { fact: "Triangeln är den enda polygon som är naturligt stel, vilket är varför triangulära former används så mycket i broar och byggnadsstommar." },
+      ],
+      4: [
+        { fact: "4 är det minsta sammansatta talet — det första talet större än 1 som inte är ett primtal, eftersom det är jämnt delbart med 2." },
+        { fact: "4 är en kvadrat: 4 = 2 × 2, alltså 2²." },
+        { fact: "Eftersom 4 = 2 × 2 kan 4:ans tabell alltid fås genom att fördubbla 2:ans tabell — den som redan kan 2:ans tabell behöver inte lära sig något nytt." },
+      ],
+      5: [
+        { fact: "5 ligger precis mitt emellan 0 och 10, vilket är varför 5:ans tabell alltid är hälften av motsvarande 10:ans tabell." },
+        { fact: "5 är ett primtal, och det är det enda primtal som slutar på siffran 5." },
+        { fact: "Klockor är indelade i 5-minutersintervall, så multiplikation med 5 är inbyggd i hur de flesta läser av klockan utan att ens tänka på det." },
+      ],
+      6: [
+        { fact: "6 är det minsta perfekta talet — summan av dess äkta delare (1, 2 och 3) är exakt lika med talet självt: 1+2+3=6." },
+        { fact: "6 = 2 × 3, vilket gör det till det minsta talet som är produkten av två olika primtal." },
+        { fact: "Eftersom 6 är jämnt och delbart med 3 är varje multipel av 6 automatiskt delbar med både 2 och 3." },
+      ],
+      7: [
+        { fact: "Sju är ett Mersenneprimtal — det är lika med 2³ − 1 (2 × 2 × 2, minus 1), vilket gör det till en del av en sällsynt familj primtal kopplade till tvåpotenser." },
+        { fact: "Sjudagarsveckan går tillbaka till antik babylonisk astronomi, som följde exakt 7 himlakroppar synliga för blotta ögat: solen, månen och fem planeter — Merkurius, Venus, Mars, Jupiter och Saturnus." },
+        { fact: "Sju anses vara ett lyckotal i många kulturer, vilket är varför det dyker upp så ofta i spel och speltraditioner världen över." },
+        { fact: "James Bonds berömda kodnummer är 007, och Snövit bor med exakt sju dvärgar." },
+      ],
+      8: [
+        { fact: "8 = 2³, vilket gör det till det första kubiktalet större än 1 (2 × 2 × 2 = 8)." },
+        { fact: "Ordet 'bläckfisk' (octopus) och den musikaliska termen 'oktav' härstammar båda från samma grekiska rot som betyder åtta." },
+        { fact: "8 är det enda talet mellan 1 och 12 som kräver tre på varandra följande fördubblingar från 2 (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "9 är ett kvadrattal: 9 = 3 × 3, alltså 3²." },
+        { fact: "Oavsett hur stor en multipel av 9 är, kommer upprepad addition av dess siffror alltid till slut ge 9 — matematiker kallar denna egenskap 'tvärsumma' eller 'digital rot'." },
+        { fact: "9 är det största ensiffriga talet, precis innan platsvärdet börjar med 10." },
+      ],
+      10: [
+        { fact: "Ordet 'tiokamp' kommer från grekiska rötter som betyder 'tio tävlingar'." },
+        { fact: "Multiplikation med 10 är den enda ensiffriga multiplikationstabellen där varje resultat följer en enda regel utan undantag: lägg till en nolla." },
+        { fact: "Eftersom de flesta människor har 10 fingrar anses räkning i basen 10 (decimalsystemet) vara ett av de mest utbredda sifferssystemen i mänsklighetens historia." },
+      ],
+      11: [
+        { fact: "11 är ett primtal — dess enda delare är 1 och talet självt." },
+        { fact: "11 är det minsta tvåsiffriga primtalet." },
+        { fact: "Spegelsiffermönstret (11×4=44, 11×7=77) fungerar bara för ensiffriga faktorer — ett av de tydligaste exemplen i multiplikationstabellerna på ett mönster med en inbyggd gräns." },
+      ],
+      12: [
+        { fact: "12 är ett högt sammansatt tal — det har fler delare (1, 2, 3, 4, 6, 12) än något mindre positivt tal." },
+        { fact: "Ordet 'dussin' kommer från gammalfranskans 'douzaine', som betyder en grupp om tolv." },
+        { fact: "En grupp om 144 föremål — 12 dussin — kallas traditionellt för ett 'gross'." },
+      ],
+    }
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

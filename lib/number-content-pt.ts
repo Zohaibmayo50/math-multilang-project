@@ -95,10 +95,147 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Ser o 'número um'", detail: "Em muitos idiomas e culturas, ser o número um significa ocupar o primeiro lugar ou o posto mais alto — de pódios esportivos a rankings escolares." },
+        { context: "Um único objeto", detail: "Toda vez que você conta um único objeto — uma maçã, uma cadeira — está aplicando a ideia de que 1 grupo de algo é simplesmente essa coisa." },
+        { context: "A primeira posição em uma sequência", detail: "Página 1, Dia 1, Rodada 1 — o 1 marca o ponto de partida de inúmeros sistemas de numeração." },
+      ],
+      2: [
+        { context: "Pares de sapatos, meias e luvas", detail: "A maioria dos pares do dia a dia vem em conjuntos de 2 — um modelo bem direto de dobrar." },
+        { context: "Olhos e ouvidos", detail: "O corpo humano tem 2 olhos e 2 ouvidos, entre muitas outras características em par." },
+        { context: "Rodas de uma bicicleta", detail: "Uma bicicleta comum tem 2 rodas, diferente de um triciclo (3) ou monociclo (1)." },
+        { context: "Código binário na computação", detail: "Computadores armazenam e processam informações em binário (base 2), formado por apenas dois dígitos: 0 e 1." },
+      ],
+      3: [
+        { context: "Semáforos", detail: "Semáforos padrão usam 3 cores: vermelho, amarelo e verde." },
+        { context: "Triângulos", detail: "Todo triângulo tem exatamente 3 lados e 3 ângulos, o polígono mais simples que existe." },
+        { context: "Pódios de medalhas", detail: "Nas Olimpíadas e em muitas outras competições são entregues 3 medalhas: ouro, prata e bronze." },
+        { context: "Cores primárias", detail: "Na teoria das cores ensinada tradicionalmente na escola, vermelho, amarelo e azul são consideradas as 3 cores primárias." },
+      ],
+      4: [
+        { context: "As quatro estações", detail: "Em várias partes do mundo, o ano é descrito com 4 estações: primavera, verão, outono e inverno." },
+        { context: "Pontos cardeais", detail: "Uma bússola tem 4 direções principais: norte, sul, leste e oeste." },
+        { context: "Pernas de mesa", detail: "A maioria das mesas e cadeiras é construída com 4 pernas para dar estabilidade." },
+        { context: "Naipes do baralho", detail: "Um baralho padrão de 52 cartas é dividido em 4 naipes: copas, ouros, paus e espadas." },
+      ],
+      5: [
+        { context: "Dedos de uma mão", detail: "A maioria das pessoas tem 5 dedos por mão, o que faz do 5 um dos números mais naturais para aprender a contar desde cedo." },
+        { context: "Os cinco sentidos", detail: "Visão, audição, olfato, paladar e tato são geralmente descritos como os 5 sentidos humanos tradicionais." },
+        { context: "Um pentágono", detail: "Um pentágono é uma figura de cinco lados, e o Pentágono, sede do Departamento de Defesa dos EUA, leva esse nome justamente por causa dessa forma." },
+        { context: "Dinheiro em notas ou moedas de 5", detail: "Muitas moedas incluem uma unidade de 5, como a nota de 5 reais." },
+      ],
+      6: [
+        { context: "Faces de um dado", detail: "Um dado comum de seis faces (um cubo) tem exatamente 6 faces." },
+        { context: "Pernas dos insetos", detail: "Todos os insetos, por definição, têm 6 pernas — uma das características que os diferencia das aranhas, que têm 8." },
+        { context: "Cordas de um violão", detail: "Um violão ou uma guitarra elétrica padrão tem 6 cordas." },
+        { context: "Meia dúzia", detail: "Ovos e produtos de padaria costumam ser vendidos em meia dúzia — um pacote de 6." },
+      ],
+      7: [
+        { context: "Os 7 dias da semana", detail: "Usados hoje em praticamente todos os sistemas de calendário do mundo." },
+        { context: "Os 7 continentes", detail: "África, Antártida, Ásia, Oceania, Europa, América do Norte e América do Sul — no modelo mais ensinado nas escolas." },
+        { context: "As 7 notas de uma escala musical", detail: "Dó, Ré, Mi, Fá, Sol, Lá, Si — antes de o padrão se repetir uma oitava acima." },
+        { context: "As 7 cores do arco-íris", detail: "Vermelho, laranja, amarelo, verde, azul, anil e violeta — uma divisão popularizada primeiro por Isaac Newton." },
+        { context: "As Sete Maravilhas do Mundo Antigo", detail: "Incluindo a Grande Pirâmide de Gizé, a única que ainda está de pé hoje." },
+      ],
+      8: [
+        { context: "Pernas das aranhas", detail: "Aranhas e outros aracnídeos têm 8 pernas, diferente dos insetos, que têm 6." },
+        { context: "Braços de um polvo", detail: "Um polvo tem 8 braços — daí vem o nome em grego, 'okto', que significa oito." },
+        { context: "Um byte na computação", detail: "Na informática, 8 bits formam 1 byte, a unidade básica usada para medir armazenamento e memória digital." },
+        { context: "Uma oitava na música", detail: "Na música ocidental, uma oitava abrange 8 notas (por exemplo, de Dó até o próximo Dó: Dó, Ré, Mi, Fá, Sol, Lá, Si, Dó)." },
+      ],
+      9: [
+        { context: "Entradas (innings) no beisebol", detail: "Uma partida padrão de beisebol tem 9 entradas." },
+        { context: "Um quadrado 3×3", detail: "O 9 é um quadrado perfeito: uma grade de 3 linhas e 3 colunas tem exatamente 9 quadrados, como um jogo da velha." },
+        { context: "O sistema solar, historicamente", detail: "Por boa parte do século 20, os alunos aprendiam que existiam 9 planetas; Plutão foi reclassificado como planeta anão em 2006, deixando 8 planetas reconhecidos hoje." },
+      ],
+      10: [
+        { context: "O sistema decimal", detail: "Quase todos os sistemas de contagem modernos são de base 10, construídos inteiramente em torno de grupos de dez." },
+        { context: "Dedos das mãos e dos pés", detail: "A maioria das pessoas tem 10 dedos nas mãos e 10 nos pés, o que se acredita ser parte do motivo pelo qual a contagem em base 10 se tornou tão comum historicamente." },
+        { context: "O decatlo", detail: "O decatlo é uma competição de atletismo composta exatamente por 10 provas." },
+        { context: "Dinheiro em unidades de 10", detail: "Muitas moedas são estruturadas em torno de unidades de 10, como a nota de 10 reais." },
+      ],
+      11: [
+        { context: "Jogadores de um time de futebol", detail: "Cada time coloca 11 jogadores em campo em uma partida padrão de futebol." },
+        { context: "Números de dois algarismos repetidos", detail: "O 11 é o menor número de dois algarismos formado por um único algarismo repetido, um padrão que aparece diretamente na sua tabuada." },
+      ],
+      12: [
+        { context: "Meses do ano", detail: "O ano do calendário é dividido em 12 meses." },
+        { context: "Polegadas em um pé (foot)", detail: "No sistema imperial de medidas, 1 pé equivale a 12 polegadas." },
+        { context: "Números no mostrador de um relógio", detail: "Um relógio analógico padrão tem seu mostrador dividido em 12 números." },
+        { context: "Uma dúzia", detail: "Ovos e produtos de padaria costumam ser vendidos por dúzia — um grupo de 12." },
+        { context: "Signos do zodíaco", detail: "O zodíaco ocidental é tradicionalmente dividido em 12 signos." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "O 1 não é nem primo nem composto — por definição, um número primo precisa ter exatamente dois divisores positivos distintos, e o 1 tem apenas um (ele mesmo)." },
+        { fact: "Multiplicar qualquer número por 1 é chamado de propriedade de identidade da multiplicação, uma das primeiras regras formais aprendidas em aritmética." },
+        { fact: "Em algarismos romanos, o 1 é escrito com um único traço: I — o símbolo mais simples de todo o sistema de numeração." },
+      ],
+      2: [
+        { fact: "O 2 é o único número primo par — todos os outros números pares são divisíveis por 2, o que os torna compostos." },
+        { fact: "Como o 2 é o menor número primo, é o ponto de partida de todo o conceito de fatoração em números primos." },
+        { fact: "Dobrar é um dos truques de cálculo mental mais rápidos que existem — dobrar repetidamente também aparece na computação binária como potências de 2: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "O truque da soma dos algarismos para o 3 funciona porque o 10 deixa resto 1 quando dividido por 3 — o mesmo motivo pelo qual o truque também funciona com o 9." },
+        { fact: "O 3 é o menor número primo ímpar." },
+        { fact: "O triângulo é o único polígono naturalmente rígido, por isso formas de três lados aparecem tanto em pontes quanto em estruturas de construções." },
+      ],
+      4: [
+        { fact: "O 4 é o menor número composto — o primeiro número maior que 1 que não é primo, já que é divisível exatamente por 2." },
+        { fact: "O 4 é um quadrado perfeito: 4 = 2 × 2, ou 2²." },
+        { fact: "Como 4 = 2 × 2, a tabuada do 4 sempre pode ser obtida dobrando a tabuada do 2 — quem já sabe a tabuada do 2 não precisa memorizar nada novo." },
+      ],
+      5: [
+        { fact: "O 5 fica exatamente no meio entre 0 e 10, por isso a tabuada do 5 é sempre metade da tabuada do 10 correspondente." },
+        { fact: "O 5 é um número primo, e é o único número primo que termina no algarismo 5." },
+        { fact: "Os relógios usam intervalos de 5 minutos entre os números, então multiplicar por 5 está embutido na forma como a maioria das pessoas lê as horas sem nem perceber." },
+      ],
+      6: [
+        { fact: "O 6 é o menor número perfeito — a soma de seus divisores próprios (1, 2 e 3) é exatamente igual a ele mesmo: 1+2+3=6." },
+        { fact: "6 = 2 × 3, o que o torna o menor número que é produto de dois números primos diferentes." },
+        { fact: "Como o 6 é par e divisível por 3, todo múltiplo de 6 é automaticamente divisível tanto por 2 quanto por 3." },
+      ],
+      7: [
+        { fact: "O sete é um primo de Mersenne — é igual a 2³ − 1 (2 × 2 × 2, menos 1), o que o coloca em uma família rara de primos ligados a potências de 2." },
+        { fact: "A semana de 7 dias remonta à astronomia babilônica antiga, que acompanhava exatamente 7 corpos celestes visíveis a olho nu: o Sol, a Lua e cinco planetas — Mercúrio, Vênus, Marte, Júpiter e Saturno." },
+        { fact: "O sete é considerado um número de sorte em muitas culturas, por isso aparece tanto em jogos e tradições de apostas ao redor do mundo." },
+        { fact: "O famoso número de código de James Bond é 007, e a Branca de Neve mora com exatamente sete anões." },
+      ],
+      8: [
+        { fact: "8 = 2³, o que o torna o primeiro número cúbico maior que 1 (2 × 2 × 2 = 8)." },
+        { fact: "A palavra 'polvo' (octopus em inglês) e o termo musical 'oitava' vêm da mesma raiz grega, que significa oito." },
+        { fact: "O 8 é o único número entre 1 e 12 que exige três rodadas de duplicação a partir do 2 (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "O 9 é um quadrado perfeito: 9 = 3 × 3, ou 3²." },
+        { fact: "Não importa o tamanho do múltiplo de 9: somar seus algarismos repetidamente sempre acaba resultando em 9 — uma propriedade que os matemáticos chamam de 'raiz digital'." },
+        { fact: "O 9 é o maior número de um único algarismo, bem antes de o valor posicional começar com o 10." },
+      ],
+      10: [
+        { fact: "A palavra 'decatlo' vem de raízes gregas que significam 'dez provas'." },
+        { fact: "Multiplicar por 10 é a única tabuada de um único algarismo em que cada resultado segue uma regra exata e sem exceções: acrescentar um zero." },
+        { fact: "Como a maioria das pessoas tem 10 dedos, acredita-se que a contagem em base 10 (decimal) seja um dos sistemas numéricos mais comuns ao longo da história humana." },
+      ],
+      11: [
+        { fact: "O 11 é um número primo — seus únicos divisores são 1 e ele mesmo." },
+        { fact: "O 11 é o menor número primo de dois algarismos." },
+        { fact: "O padrão de espelho dos algarismos (11×4=44, 11×7=77) só funciona com fatores de um único algarismo — um dos exemplos mais claros, nas tabuadas, de um padrão com limite embutido." },
+      ],
+      12: [
+        { fact: "O 12 é um número altamente composto — tem mais divisores (1, 2, 3, 4, 6, 12) do que qualquer número positivo menor." },
+        { fact: "A palavra 'dúzia' vem do francês antigo 'douzaine', que significa um grupo de doze." },
+        { fact: "Um grupo de 144 itens — 12 dúzias — é tradicionalmente chamado de 'grosa'." },
+      ],
+    }
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }

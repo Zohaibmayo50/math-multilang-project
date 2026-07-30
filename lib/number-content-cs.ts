@@ -102,10 +102,147 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "Být 'jednička'", detail: "V mnoha jazycích a kulturách znamená být jednička obsadit první místo nebo nejvyšší příčku — od sportovních pódií po školní žebříčky." },
+        { context: "Jeden jediný předmět", detail: "Kdykoli počítáte jeden jediný předmět — jedno jablko, jednu židli — uplatňujete myšlenku, že 1 skupina něčeho je prostě ta jedna věc." },
+        { context: "První pozice v pořadí", detail: "Strana 1, Den 1, Kolo 1 — jednička označuje výchozí bod nesčetných číslovacích systémů." },
+      ],
+      2: [
+        { context: "Páry bot, ponožek a rukavic", detail: "Většina párů v běžném životě přichází ve dvou kusech — přímý, hmatatelný model zdvojnásobení." },
+        { context: "Oči a uši", detail: "Lidské tělo má 2 oči a 2 uši, mezi mnoha dalšími párovými znaky." },
+        { context: "Kola jízdního kola", detail: "Standardní jízdní kolo má 2 kola, na rozdíl od tříkolky (3) nebo jednokolky (1)." },
+        { context: "Binární kód v informatice", detail: "Počítače ukládají a zpracovávají informace binárně (v soustavě o základu 2), postavené jen na dvou číslicích: 0 a 1." },
+      ],
+      3: [
+        { context: "Semafory", detail: "Standardní semafory používají 3 barvy: červenou, žlutou a zelenou." },
+        { context: "Trojúhelníky", detail: "Každý trojúhelník má přesně 3 strany a 3 úhly — nejjednodušší možný mnohoúhelník." },
+        { context: "Medailová pódia", detail: "Olympijské hry a mnoho dalších soutěží udělují 3 medaile: zlatou, stříbrnou a bronzovou." },
+        { context: "Základní barvy", detail: "V tradiční teorii barev vyučované ve škole se červená, žlutá a modrá považují za 3 základní barvy." },
+      ],
+      4: [
+        { context: "Čtyři roční období", detail: "V mnoha oblastech světa se rok popisuje jako 4 roční období: jaro, léto, podzim a zima." },
+        { context: "Světové strany", detail: "Kompas má 4 hlavní směry: sever, jih, východ a západ." },
+        { context: "Nohy stolu", detail: "Většina stolů a židlí je kvůli stabilitě postavena na 4 nohou." },
+        { context: "Barvy v balíčku karet", detail: "Standardní balíček 52 karet se dělí na 4 barvy: srdce, káry, kříže a piky." },
+      ],
+      5: [
+        { context: "Prsty na jedné ruce", detail: "Většina lidí má na ruce 5 prstů, což dělá z čísla 5 jedno z nejpřirozenějších čísel pro první počítání." },
+        { context: "Pět smyslů", detail: "Zrak, sluch, čich, chuť a hmat se běžně označují jako 5 tradičních lidských smyslů." },
+        { context: "Pětiúhelník", detail: "Pětiúhelník je útvar s pěti stranami a sídlo amerického ministerstva obrany, Pentagon, je po tomto tvaru přímo pojmenováno." },
+        { context: "Peníze v jednotkách po 5", detail: "Mnoho měn má minci nebo bankovku v hodnotě 5, například pětikorunu." },
+      ],
+      6: [
+        { context: "Stěny hrací kostky", detail: "Standardní šestistěnná kostka (krychle) má přesně 6 stěn." },
+        { context: "Nohy hmyzu", detail: "Veškerý hmyz má podle definice 6 nohou — jeden ze znaků, který jej odlišuje od pavouků, kteří mají 8." },
+        { context: "Struny kytary", detail: "Standardní akustická nebo elektrická kytara má 6 strun." },
+        { context: "Půl tuctu", detail: "Vejce a pečivo se často prodávají po půl tuctu — v balení po 6 kusech." },
+      ],
+      7: [
+        { context: "7 dní v týdnu", detail: "Používá se dnes téměř ve všech kalendářních systémech na světě." },
+        { context: "7 kontinentů", detail: "Afrika, Antarktida, Asie, Austrálie, Evropa, Severní Amerika a Jižní Amerika — v modelu nejčastěji vyučovaném ve školách." },
+        { context: "7 tónů hudební stupnice", detail: "C, D, E, F, G, A, H — než se vzor zopakuje o oktávu výš." },
+        { context: "7 barev duhy", detail: "Červená, oranžová, žlutá, zelená, modrá, indigová a fialová — dělení, které jako první zpopularizoval Isaac Newton." },
+        { context: "Sedm divů starověkého světa", detail: "Mezi nimi i Velká pyramida v Gíze, jediný div, který stojí dodnes." },
+      ],
+      8: [
+        { context: "Nohy pavouků", detail: "Pavouci a další pavoukovci mají 8 nohou, na rozdíl od hmyzu, který má 6." },
+        { context: "Chapadla chobotnice", detail: "Chobotnice má 8 chapadel — odtud pochází i její název (z řeckého 'okto', tedy osm)." },
+        { context: "Bajt v informatice", detail: "V informatice tvoří 8 bitů 1 bajt, základní jednotku pro měření digitálního úložiště a paměti." },
+        { context: "Oktáva v hudbě", detail: "V západní hudbě zahrnuje oktáva 8 tónů (například od C k dalšímu C: C, D, E, F, G, A, H, C)." },
+      ],
+      9: [
+        { context: "Směny v baseballu", detail: "Standardní baseballový zápas se skládá z 9 směn." },
+        { context: "Čtverec 3×3", detail: "9 je druhá mocnina: mřížka o 3 řádcích a 3 sloupcích obsahuje přesně 9 polí, jako hrací plocha piškvorek." },
+        { context: "Sluneční soustava, historicky", detail: "Po velkou část 20. století se studenti učili, že existuje 9 planet; Pluto bylo v roce 2006 přeřazeno mezi trpasličí planety, takže dnes zbývá 8 uznaných planet." },
+      ],
+      10: [
+        { context: "Desítková soustava", detail: "Téměř všechny moderní počítací systémy jsou postaveny na základu 10, celé vystavěné na skupinách po deseti." },
+        { context: "Prsty na rukou a nohou", detail: "Většina lidí má 10 prstů na rukou a 10 na nohou, což se považuje za jeden z důvodů, proč se počítání v desítkové soustavě historicky tak rozšířilo." },
+        { context: "Desetiboj", detail: "Desetiboj je atletická soutěž skládající se přesně z 10 disciplín." },
+        { context: "Peníze v jednotkách po 10", detail: "Mnoho měn je strukturováno kolem jednotek po 10, například desetikoruna." },
+      ],
+      11: [
+        { context: "Hráči ve fotbalovém týmu", detail: "Každé mužstvo nastupuje ve standardním fotbalovém zápase s 11 hráči na hřišti." },
+        { context: "Dvojciferná čísla ze stejné opakované číslice", detail: "11 je nejmenší dvojciferné číslo tvořené jednou opakovanou číslicí — tento vzor se přímo projevuje i v jeho násobilce." },
+      ],
+      12: [
+        { context: "Měsíce v roce", detail: "Kalendářní rok se dělí na 12 měsíců." },
+        { context: "Palce ve stopě (foot)", detail: "V anglosaské soustavě měr se 1 stopa rovná 12 palcům." },
+        { context: "Čísla na ciferníku hodin", detail: "Standardní ciferník analogových hodin je rozdělen na 12 čísel." },
+        { context: "Tucet", detail: "Vejce a pečivo se často prodávají po tuctech — ve skupinách po 12." },
+        { context: "Znamení zvěrokruhu", detail: "Západní zvěrokruh se tradičně dělí na 12 znamení." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "Číslo 1 není ani prvočíslo, ani složené číslo — prvočíslo musí mít podle definice přesně dva různé kladné dělitele, zatímco 1 má jen jeden (sebe samo)." },
+        { fact: "Násobení jakéhokoli čísla jedničkou se nazývá vlastnost neutrálního prvku násobení, jedno z prvních formálních pravidel, které se studenti v aritmetice učí." },
+        { fact: "V římských číslicích se 1 zapisuje jedním jediným tahem: I — nejjednodušší symbol v celé číselné soustavě." },
+      ],
+      2: [
+        { fact: "2 je jediné sudé prvočíslo — všechna ostatní sudá čísla jsou dělitelná 2, čímž se stávají čísly složenými." },
+        { fact: "Protože 2 je nejmenší prvočíslo, je výchozím bodem celého konceptu rozkladu na prvočinitele." },
+        { fact: "Zdvojnásobování je jeden z nejrychlejších triků pro počítání zpaměti — opakované zdvojnásobování se objevuje i v informatice jako mocniny čísla 2: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "Trik se ciferným součtem u čísla 3 funguje proto, že 10 dává při dělení 3 zbytek 1 — ze stejného důvodu funguje i u čísla 9." },
+        { fact: "3 je nejmenší liché prvočíslo." },
+        { fact: "Trojúhelník je jediný přirozeně tuhý mnohoúhelník, a proto se trojúhelníkové tvary tolik používají v mostech a konstrukcích budov." },
+      ],
+      4: [
+        { fact: "4 je nejmenší složené číslo — první číslo větší než 1, které není prvočíslem, protože je beze zbytku dělitelné 2." },
+        { fact: "4 je druhá mocnina: 4 = 2 × 2, tedy 2²." },
+        { fact: "Protože 4 = 2 × 2, násobilku čísla 4 lze vždy získat zdvojnásobením násobilky čísla 2 — kdo umí dvojku, nemusí se učit nic nového." },
+      ],
+      5: [
+        { fact: "Číslo 5 leží přesně uprostřed mezi 0 a 10, a proto je násobilka 5 vždy polovinou odpovídající násobilky 10." },
+        { fact: "5 je prvočíslo a je jediné prvočíslo končící číslicí 5." },
+        { fact: "Hodiny jsou rozdělené na pětiminutové úseky, takže násobení pěti je zabudované ve způsobu, jakým většina lidí čte čas, aniž by o tom vůbec přemýšlela." },
+      ],
+      6: [
+        { fact: "6 je nejmenší dokonalé číslo — součet jeho vlastních dělitelů (1, 2 a 3) se rovná přesně jemu samému: 1+2+3=6." },
+        { fact: "6 = 2 × 3, čímž je nejmenším číslem, které je součinem dvou různých prvočísel." },
+        { fact: "Protože je 6 sudé a dělitelné 3, je každý násobek 6 automaticky dělitelný jak 2, tak 3." },
+      ],
+      7: [
+        { fact: "Sedm je Mersennovo prvočíslo — rovná se 2³ − 1 (2 × 2 × 2, minus 1), čímž patří do vzácné rodiny prvočísel spojených s mocninami čísla 2." },
+        { fact: "Sedmidenní týden má kořeny ve starověké babylonské astronomii, která sledovala přesně 7 nebeských těles viditelných pouhým okem: Slunce, Měsíc a pět planet — Merkur, Venuši, Mars, Jupiter a Saturn." },
+        { fact: "Sedmička je v mnoha kulturách považována za šťastné číslo, a proto se tak často objevuje ve hrách a hazardních tradicích po celém světě." },
+        { fact: "Slavné kódové číslo Jamese Bonda je 007 a Sněhurka žije přesně se sedmi trpaslíky." },
+      ],
+      8: [
+        { fact: "8 = 2³, čímž je prvním krychlovým číslem větším než 1 (2 × 2 × 2 = 8)." },
+        { fact: "Slovo 'chobotnice' (octopus) a hudební pojem 'oktáva' mají společný řecký kořen znamenající osm." },
+        { fact: "8 je jediné číslo mezi 1 a 12, k němuž se od čísla 2 dostanete třemi po sobě jdoucími zdvojnásobeními (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "9 je druhá mocnina: 9 = 3 × 3, tedy 3²." },
+        { fact: "Ať je násobek čísla 9 jakkoli velký, opakované sčítání jeho číslic vždy nakonec vede k 9 — matematici tuto vlastnost nazývají 'ciferný kořen'." },
+        { fact: "9 je největší jednociferné číslo, těsně před tím, než u čísla 10 začíná hodnota podle pozice (řádu)." },
+      ],
+      10: [
+        { fact: "Slovo 'desetiboj' vychází z řeckých kořenů znamenajících 'deset soutěží'." },
+        { fact: "Násobení 10 je jediná jednociferná násobilka, kde každý výsledek podléhá jednomu jedinému pravidlu bez výjimek: připojit nulu." },
+        { fact: "Protože má většina lidí 10 prstů, počítání v desítkové soustavě je považováno za jeden z nejrozšířenějších číselných systémů v dějinách lidstva." },
+      ],
+      11: [
+        { fact: "11 je prvočíslo — jeho jedinými děliteli jsou 1 a ono samo." },
+        { fact: "11 je nejmenší dvojciferné prvočíslo." },
+        { fact: "Vzor zrcadlových číslic (11×4=44, 11×7=77) funguje jen u jednociferných činitelů — jeden z nejjasnějších příkladů v násobilkách, kdy má vzor vestavěnou hranici." },
+      ],
+      12: [
+        { fact: "12 je vysoce složené číslo — má více dělitelů (1, 2, 3, 4, 6, 12) než kterékoli menší kladné číslo." },
+        { fact: "Slovo 'tucet' pochází ze starofrancouzského 'douzaine', což znamená skupinu dvanácti." },
+        { fact: "Skupina 144 předmětů — 12 tuctů — se tradičně nazývá 'veletucet'." },
+      ],
+    }
+
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }
