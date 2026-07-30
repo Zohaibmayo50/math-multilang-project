@@ -7,12 +7,12 @@ import { getAllRanges, getAllNumbers } from '@/lib/url-helpers'
 // this is what tells Google the page genuinely deserves recrawling.
 const CONTENT_LAST_UPDATED: Record<string, string> = {
   homepage: '2026-07-21',
-  languageHubs: '2026-07-21',
-  topicHubs: '2026-07-21',
+  languageHubs: '2026-07-30',
+  topicHubs: '2026-07-30',
   rangePages: '2026-07-21',
   audiencePages: '2026-07-21',
-  numberPages_1_12: '2026-07-21',
-  numberPages_13_100: '2026-07-21',
+  numberPages_1_12: '2026-07-30',
+  numberPages_13_100: '2026-07-30',
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
