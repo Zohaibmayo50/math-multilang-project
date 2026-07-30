@@ -1818,6 +1818,143 @@ const strategies: { [key: number]: string[] } = {
       ],
     }
 
+const realLifeExamples: { [key: number]: RealLifeItem[] } = {
+      1: [
+        { context: "'Bir numara' olmak", detail: "Birçok dilde ve kültürde birincilik, en üst sıra ya da en iyi anlamına gelir — yarış podyumlarından okul sıralamalarına kadar." },
+        { context: "Herhangi bir tek nesne", detail: "Bir elma, bir sandalye gibi tek bir şeyi saydığınızda, bir şeyin 1 grubunun yalnızca o şey olduğu fikrini uygularsınız." },
+        { context: "Bir dizideki ilk sıra", detail: "Sayfa 1, Gün 1, Tur 1 — 1, sayısız numaralandırma sisteminin başlangıç noktasını gösterir." },
+      ],
+      2: [
+        { context: "Ayakkabı, çorap ve eldiven çiftleri", detail: "Günlük hayattaki çoğu çift, 2'li setler halinde gelir — ikiye katlamanın gerçek hayattaki en doğrudan örneği." },
+        { context: "Gözler ve kulaklar", detail: "İnsan vücudunda, birçok eşleşmiş organ gibi 2 göz ve 2 kulak bulunur." },
+        { context: "Bisiklet tekerlekleri", detail: "Standart bir bisikletin 2 tekerleği vardır; üç tekerlekli (3) veya tek tekerlekli (1) bisikletlerden farklı olarak." },
+        { context: "Bilgisayarlarda ikili kod", detail: "Bilgisayarlar bilgiyi ikili (taban-2) sistemde saklar ve işler; bu sistem sadece iki rakamdan oluşur: 0 ve 1." },
+      ],
+      3: [
+        { context: "Trafik ışıkları", detail: "Standart trafik sinyalleri 3 renk kullanır: kırmızı, sarı ve yeşil." },
+        { context: "Üçgenler", detail: "Her üçgenin tam olarak 3 kenarı ve 3 açısı vardır — mümkün olan en basit çokgen." },
+        { context: "Madalya podyumları", detail: "Olimpiyatlar ve birçok yarışma 3 madalya verir: altın, gümüş, bronz." },
+        { context: "Ana renkler", detail: "Okullarda öğretilen geleneksel renk teorisinde kırmızı, sarı ve mavi 3 ana renk kabul edilir." },
+      ],
+      4: [
+        { context: "Dört mevsim", detail: "Dünyanın birçok bölgesinde yıl 4 mevsime ayrılır: ilkbahar, yaz, sonbahar, kış." },
+        { context: "Ana yönler", detail: "Bir pusulanın 4 ana yönü vardır: kuzey, güney, doğu, batı." },
+        { context: "Masa ayakları", detail: "Çoğu masa ve sandalye, denge sağlamak için 4 ayak üzerine kurulur." },
+        { context: "İskambil takımları", detail: "Standart 52 kartlık bir deste 4 takıma ayrılır: kupa, karo, sinek, maça." },
+      ],
+      5: [
+        { context: "Bir eldeki parmaklar", detail: "Çoğu insanın her elinde 5 parmağı vardır, bu da 5'i erken yaşta saymayı öğrenmek için en doğal sayılardan biri yapar." },
+        { context: "Beş duyu", detail: "Görme, işitme, koku, tat ve dokunma genellikle 5 geleneksel insan duyusu olarak tanımlanır." },
+        { context: "Beşgen", detail: "Beşgen, beş kenarlı bir şekildir; ABD Savunma Bakanlığı'nın merkez binası da bu beşgen şeklinden dolayı 'Pentagon' olarak adlandırılır." },
+        { context: "Beşlik paralar", detail: "Birçok para biriminde 5 birimlik madeni para veya banknot bulunur, örneğin 5 liralık banknot." },
+      ],
+      6: [
+        { context: "Bir zarın yüzleri", detail: "Standart altı yüzlü bir zar (küp), tam olarak 6 yüze sahiptir." },
+        { context: "Böceklerin bacakları", detail: "Tüm böceklerin, tanım gereği 6 bacağı vardır — bu, onları 8 bacaklı örümceklerden ayıran özelliklerden biridir." },
+        { context: "Gitar telleri", detail: "Standart bir akustik veya elektro gitarın 6 teli vardır." },
+        { context: "Yarım düzine", detail: "Yumurta ve unlu mamuller genellikle yarım düzine, yani 6'lık paketler halinde satılır." },
+      ],
+      7: [
+        { context: "Haftanın 7 günü", detail: "Bugün dünyadaki hemen hemen her takvim sisteminde kullanılır." },
+        { context: "7 kıta", detail: "Afrika, Antarktika, Asya, Avustralya, Avrupa, Kuzey Amerika ve Güney Amerika — okullarda en yaygın öğretilen modelde." },
+        { context: "Müzik gamındaki 7 nota", detail: "Do, Re, Mi, Fa, Sol, La, Si — desen bir oktav yukarıda tekrar etmeden önce." },
+        { context: "Gökkuşağındaki 7 renk", detail: "Kırmızı, turuncu, sarı, yeşil, mavi, lacivert ve mor — ilk olarak Isaac Newton tarafından yaygınlaştırılan bir ayrım." },
+        { context: "Antik Dünyanın Yedi Harikası", detail: "Bugün hâlâ ayakta olan tek harika olan Giza'daki Büyük Piramit de bu listeye dahildir." },
+      ],
+      8: [
+        { context: "Örümcek bacakları", detail: "Örümceklerin ve diğer araknidlerin 8 bacağı vardır; 6 bacaklı böceklerin aksine." },
+        { context: "Ahtapot kolları", detail: "Bir ahtapotun 8 kolu vardır — adı da buradan gelir (Yunanca 'okto', sekiz anlamına gelir)." },
+        { context: "Bilgisayarda bir bayt", detail: "Bilgisayar biliminde 8 bit, 1 baytı oluşturur; dijital depolama ve belleği ölçmek için kullanılan temel birimdir." },
+        { context: "Müzikte bir oktav", detail: "Batı müziğinde bir oktav 8 notayı kapsar (örneğin Do'dan bir sonraki Do'ya: Do, Re, Mi, Fa, Sol, La, Si, Do)." },
+      ],
+      9: [
+        { context: "Beyzbolda devreler (inning)", detail: "Standart bir beyzbol maçı 9 devreden oluşur." },
+        { context: "3×3'lük bir kare", detail: "9 tam bir karedir: 3 satır ve 3 sütundan oluşan bir ızgara, tıpkı bir XOX tahtası gibi tam olarak 9 kare içerir." },
+        { context: "Tarihsel olarak güneş sistemi", detail: "20. yüzyılın büyük bölümünde öğrenciler 9 gezegen olduğunu öğrendi; Plüton 2006'da cüce gezegen ilan edildi ve bugün 8 gezegen kabul ediliyor." },
+      ],
+      10: [
+        { context: "Ondalık sayı sistemi", detail: "Neredeyse tüm modern sayma sistemleri, onarlı gruplar üzerine kurulu taban-10 sistemidir." },
+        { context: "El ve ayak parmakları", detail: "Çoğu insanın 10 parmağı ve 10 ayak parmağı vardır; taban-10 sayma sisteminin bu kadar yaygınlaşmasının nedenlerinden biri olarak gösterilir." },
+        { context: "Dekatlon", detail: "Dekatlon, tam olarak 10 etkinlikten oluşan bir atletizm yarışmasıdır." },
+        { context: "Onluk paralar", detail: "Birçok para birimi 10 birim etrafında yapılandırılmıştır, örneğin 10 liralık veya 10 euroluk banknotlar." },
+      ],
+      11: [
+        { context: "Bir futbol takımındaki oyuncular", detail: "Standart bir futbol maçında her takım sahaya 11 oyuncu sürer." },
+        { context: "İki basamaklı repdigit'ler", detail: "11, tek bir rakamın tekrarından oluşan en küçük iki basamaklı sayıdır — bu desen doğrudan çarpım tablosunda da görülür." },
+      ],
+      12: [
+        { context: "Yıldaki aylar", detail: "Takvim yılı 12 aya bölünmüştür." },
+        { context: "Bir ayakta inç", detail: "Emperyal ölçü sisteminde 1 ayak (foot), 12 inçe eşittir." },
+        { context: "Saat kadranındaki rakamlar", detail: "Standart bir analog saatin kadranı 12 rakama bölünmüştür." },
+        { context: "Bir düzine", detail: "Yumurta ve unlu mamuller gibi ürünler genellikle düzine, yani 12'lik gruplar halinde satılır." },
+        { context: "Burçlar", detail: "Batı burç sistemi geleneksel olarak 12 burca ayrılır." },
+      ],
+    }
+
+const funFacts: { [key: number]: FunFactItem[] } = {
+      1: [
+        { fact: "1, ne asal ne de bileşik sayıdır — asal sayı tanımı gereği tam olarak iki farklı pozitif bölene sahip olmalıdır, 1'in ise sadece bir böleni (kendisi) vardır." },
+        { fact: "Herhangi bir şeyi 1 ile çarpmaya çarpmanın özdeşlik özelliği denir; öğrencilerin aritmetikte öğrendiği ilk resmi kurallardan biridir." },
+        { fact: "Roma rakamlarında 1, tek bir çizgiyle yazılır: I — tüm rakam sisteminin en basit sembolü." },
+      ],
+      2: [
+        { fact: "2, tek çift asal sayıdır — diğer tüm çift sayılar 2'ye bölünebildiği için bileşik sayı olur." },
+        { fact: "2 en küçük asal sayı olduğundan, tüm asal çarpanlara ayırma kavramının başlangıç noktasıdır." },
+        { fact: "İkiye katlama, en hızlı zihinden hesaplama tekniklerinden biridir — tekrar tekrar ikiye katlama, bilgisayar biliminde ikinin kuvvetleri olarak da karşımıza çıkar: 2, 4, 8, 16, 32..." },
+      ],
+      3: [
+        { fact: "3 için basamak toplama kuralı işe yarar, çünkü 10 sayısı 3'e bölündüğünde kalan 1'dir — aynı temel neden 9 için de geçerlidir." },
+        { fact: "3, en küçük tek asal sayıdır." },
+        { fact: "Üçgen, doğal olarak sağlam olan tek çokgendir; bu yüzden üç kenarlı şekiller köprülerde ve bina iskeletlerinde sıkça kullanılır." },
+      ],
+      4: [
+        { fact: "4, en küçük bileşik sayıdır — 1'den büyük olup asal olmayan ilk sayıdır, çünkü 2'ye tam bölünür." },
+        { fact: "4 tam kare bir sayıdır: 4 = 2 × 2, ya da 2²." },
+        { fact: "4 = 2 × 2 olduğundan, 4 çarpım tablosu her zaman 2 tablosunu ikiye katlayarak bulunabilir — 2'leri zaten biliyorsanız yeni bir ezber gerekmez." },
+      ],
+      5: [
+        { fact: "5, 0 ile 10 arasının tam ortasındadır; bu yüzden 5 çarpım tablosu her zaman karşılık gelen 10 tablosunun yarısıdır." },
+        { fact: "5 bir asal sayıdır ve 5 rakamıyla biten tek asal sayıdır." },
+        { fact: "Saatlerde rakamlar arasında 5 dakikalık aralıklar kullanılır; bu yüzden 5 ile çarpma, çoğu insanın saati okuma biçimine fark ettirmeden yerleşmiştir." },
+      ],
+      6: [
+        { fact: "6, en küçük mükemmel sayıdır — kendisinden küçük bölenlerinin (1, 2 ve 3) toplamı kendisine eşittir: 1+2+3=6." },
+        { fact: "6 = 2 × 3 olduğundan, iki farklı asal sayının çarpımı olan en küçük sayıdır." },
+        { fact: "6 hem çift hem de 3'e bölünebildiği için, 6'nın her katı otomatik olarak hem 2'ye hem de 3'e bölünebilir." },
+      ],
+      7: [
+        { fact: "Yedi bir Mersenne asalıdır — 2³ − 1'e eşittir (2 × 2 × 2, eksi 1), ikinin kuvvetlerine bağlı nadir bir asal sayı ailesinin parçasıdır." },
+        { fact: "7 günlük hafta, teleskop olmadan görülebilen tam 7 hareketli gök cismini takip eden antik Babil astronomisine dayanır: Güneş, Ay ve beş gezegen — Merkür, Venüs, Mars, Jüpiter ve Satürn." },
+        { fact: "Yedi, birçok kültürde şanslı sayı kabul edilir; bu yüzden oyunlarda ve kumar geleneklerinde dünya çapında sıkça karşımıza çıkar." },
+        { fact: "James Bond'un ünlü kod numarası 007'dir ve Pamuk Prenses tam olarak yedi cüceyle birlikte yaşar." },
+      ],
+      8: [
+        { fact: "8 = 2³ olduğundan, 1'den büyük ilk küp sayıdır (2 × 2 × 2 = 8)." },
+        { fact: "'Ahtapot' (octopus) kelimesi ile müzikteki 'oktav' terimi aynı kökten gelir ve sekiz anlamına gelir." },
+        { fact: "8, 1'den 12'ye kadar olan sayılar arasında, 2'den başlayarak üç kez ikiye katlama gerektiren tek sayıdır (2 → 4 → 8)." },
+      ],
+      9: [
+        { fact: "9 tam kare bir sayıdır: 9 = 3 × 3, ya da 3²." },
+        { fact: "9'un herhangi bir katının basamaklarını ne kadar büyük olursa olsun tekrar tekrar toplarsanız, sonunda her zaman 9'a ulaşırsınız — matematikçilerin 'basamak kökü' dediği bir özellik." },
+        { fact: "9, tek basamaklı en büyük sayıdır; yer değeri 10'da başlamadan önce tek basamaklı sayma sisteminin tam sonunda yer alır." },
+      ],
+      10: [
+        { fact: "'Dekatlon' kelimesi, Yunanca 'on yarışma' anlamına gelen köklerden gelir." },
+        { fact: "10 ile çarpma, her sonucun tek ve istisnasız bir kurala uyduğu tek basamaklı çarpım tablosudur: sonuna bir sıfır ekleyin." },
+        { fact: "Çoğu insanın 10 parmağı olduğu için, taban-10 (ondalık) sayma insanlık tarihindeki en yaygın rakam sistemlerinden biri kabul edilir." },
+      ],
+      11: [
+        { fact: "11 bir asal sayıdır — sadece 1'e ve kendisine bölünebilir." },
+        { fact: "11, en küçük iki basamaklı asal sayıdır." },
+        { fact: "Ayna basamak deseni (11×4=44, 11×7=77) sadece tek basamaklı çarpanlar için işe yarar — çarpım tablolarında yerleşik bir sınırı olan bir desenin en net örneklerinden biridir." },
+      ],
+      12: [
+        { fact: "12, oldukça bileşik bir sayıdır — kendisinden küçük herhangi bir pozitif sayıdan daha fazla bölene (1, 2, 3, 4, 6, 12) sahiptir." },
+        { fact: "'Düzine' kelimesi, on iki grubu anlamına gelen eski Fransızca 'douzaine'den gelir." },
+        { fact: "144 öğeden oluşan bir grup — 12 düzine — geleneksel olarak 'gros' (gross) olarak adlandırılır." },
+      ],
+    }
+
 export function getNumberMeaning(n: number): string | null {
   return meanings[n] ?? null
 }
@@ -1838,10 +1975,10 @@ export function getPracticeStrategies(n: number): string[] {
   return strategies[n] ?? []
 }
 
-export function getRealLifeExamples(_n: number): RealLifeItem[] | null {
-  return null
+export function getRealLifeExamples(n: number): RealLifeItem[] | null {
+  return realLifeExamples[n] ?? null
 }
 
-export function getFunFacts(_n: number): FunFactItem[] | null {
-  return null
+export function getFunFacts(n: number): FunFactItem[] | null {
+  return funFacts[n] ?? null
 }
