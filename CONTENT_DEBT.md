@@ -32,4 +32,4 @@ correct French
 when Indonesian per-number content is prioritized
 
 ---
-Last updated: 2026-07-21
+Last updated: 2026-07-30
