@@ -6,8 +6,9 @@ for numbers 1-20 is corrupted — Czech text with scattered Ukrainian
 words swapped in, not genuine Ukrainian.
 **Scope:** All 5 functions, numbers 1-20 (the only entries that exist)
 **Fix needed:** Full retranslation pass by a Ukrainian speaker
-**Status:** realLifeExamples/funFacts for 1-12 were written correctly 
-in genuine Ukrainian and are unaffected.
+**Status:** AI-rewritten 2026-07-30 for numbers 1-20. 
+NEEDS NATIVE SPEAKER REVIEW before considered production-ready.
+Numbers 21-100 still return null — pending future content pass.
 
 ## German (lib/number-content-de.ts)
 **Issue:** Spanish-language text bleeding into mistakes/patterns/
