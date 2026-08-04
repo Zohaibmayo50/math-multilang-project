@@ -11,19 +11,33 @@ NEEDS NATIVE SPEAKER REVIEW before considered production-ready.
 Numbers 21-100 still return null — pending future content pass.
 
 ## German (lib/number-content-de.ts)
-**Issue:** Spanish-language text bleeding into mistakes/patterns/
-strategies sections within numbers 1-12 and beyond.
+**Issue:** Spanish-language text bleeding into importance/patterns/
+mistakes/strategies sections, far more extensively than first reported —
+initial audits (regex-based, narrow keyword lists) undercounted the
+scope twice before a full manual read of the strategies object revealed
+the true extent (96 of 100 entries contaminated across patterns/
+mistakes/strategies).
 **Example:** mistakes[12] contains "docenas" (Spanish) in German content
 **Fix needed:** Audit all entries, replace Spanish fragments with 
 correct German
-**Status:** Not touched — needs dedicated cleanup pass
+**Status:** Contaminated entries identified and rewritten 2026-07-30.
+NEEDS NATIVE SPEAKER SPOT-CHECK. See inline comments for changed entries.
 
 ## French (lib/number-content-fr.ts)  
-**Issue:** Spanish-language text bleeding into patterns/mistakes/
-strategies sections. patterns[2] confirmed entirely in Spanish.
+**Issue:** Spanish-language text bleeding into importance/patterns/
+mistakes/strategies sections. patterns[2] confirmed entirely in Spanish.
+Full audit (2026-07-30) found contamination is far more extensive than
+originally reported — 277 of 400 possible entries across the four
+functions (69% of the file), including importance which was not
+previously flagged as affected.
 **Example:** mistakes[12] contains "douzaines más que" (French/Spanish mix)
 **Fix needed:** Audit all entries, replace Spanish fragments with 
 correct French
+**Status:** NOT YET FIXED — scope confirmed far larger than originally
+scoped (277 entries, ~69% of patterns/mistakes/strategies/importance).
+Deferred to a dedicated follow-up task. Do not assume this file is
+clean; treat importance/patterns/mistakes/strategies as unreliable
+until a full rewrite pass is completed.
 **Status:** Not touched — needs dedicated cleanup pass
 
 ## Indonesian (lib/number-content-id.ts)

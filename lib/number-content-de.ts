@@ -1,5 +1,9 @@
 // AUTO-EXTRACTED verbatim from app/components/de/NumberPage.tsx
 // Per-number curated content for locale: de
+// Contamination audit performed 2026-07-30
+// Spanish-language fragments found and corrected (legacy of cloning from es.ts)
+// See CONTENT_DEBT.md for history
+// A native German speaker should spot-check corrected entries
 import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
 const meanings: { [key: number]: string } = {
@@ -404,10 +408,11 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "40-1 Strategie", description: "39=40-1. 39×n = (40×n) - n. Beispiel: 39×7 = 280 - 7 = 273. Sehr praktisch!" },
         { title: "Durch 3 Teilbar", description: "Alle Vielfachen von 39 sind durch 3 und 13. Die Quersumme ist ein Vielfaches von 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        { title: "4×10", description: "40=4×10. Mit 40 multiplizieren: mit 4 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 7×40: 7×4=28, fÃ¼ge 0 hinzu: 280." },
-        { title: "Endet Immer auf 0", description: "Alle Vielfachen von 40 enden auf 0: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
-        { title: "Vierfache der Zehner", description: "40, 80, 120, 160, 200... Jede Zahl erhÃ¶ht sich um 40. Sie sind das 4-fache der Zehner." },
+        { title: "4×10", description: "40=4×10. Mit 40 multiplizieren: mit 4 multiplizieren, dann eine 0 am Ende anfügen. 7×40: 7×4=28, dann 0 anfügen: 280." },
+        { title: "Endet immer auf 0", description: "Alle Vielfachen von 40 enden auf 0: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
+        { title: "Vierfache der Zehner", description: "40, 80, 120, 160, 200... Jede Zahl erhöht sich um 40. Sie sind das 4-Fache der Zehner." },
       ],
       41: [
         { title: "40+1 Strategie", description: "41=40+1. 41×n = (40×n) + n. Beispiel: 41×6 = 240 + 6 = 246. Die praktischste Methode!" },
@@ -454,10 +459,11 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "50-1 Strategie", description: "49=50-1. 49×n = (50×n) - n. Beispiel: 49×6 = 300 - 6 = 294. Sehr einfach!" },
         { title: "Quadratzahl-Muster", description: "49, 98, 147, 196, 245... Vielfache von 7 mit 7. Auch 7²×1, 7²×2, 7²×3..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        { title: "5×10", description: "50=5×10. Mit 50 multiplizieren: mit 5 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 8×50: 8×5=40, fÃ¼ge 0 hinzu: 400." },
+        { title: "5×10", description: "50=5×10. Mit 50 multiplizieren: mit 5 multiplizieren, dann eine 0 am Ende anfügen. 8×50: 8×5=40, dann 0 anfügen: 400." },
         { title: "Endet auf 0 oder 50", description: "Alle Vielfachen von 50 enden auf 0 oder 50: 50, 100, 150, 200, 250, 300, 350, 400..." },
-        { title: "HÃ¤lfte von 100", description: "50×n = (100×n)÷2. Beispiel: 50×7 = 700÷2 = 350. Útil en Berechnungen Prozent-Beziehungs." },
+        { title: "Hälfte von 100", description: "50×n = (100×n)÷2. Beispiel: 50×7 = 700÷2 = 350. Nützlich bei Prozentberechnungen." },
       ],
       51: [
         { title: "50+1 Strategie", description: "51=50+1. 51×n = (50×n) + n. Beispiel: 51×7 = 350 + 7 = 357. Sehr praktisch!" },
@@ -504,9 +510,10 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Primzahl-Einzigartigkeit", description: "Da 59 eine Primzahl ist hat spezielle Muster. Einerziffer: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "55+4 Alternative", description: "59=55+4. Beispiel: 59×8 = 440 + 32 = 472. Nützlich, wenn du die 55er-Tabelle kennst." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        { title: "6×10", description: "60=6×10. Mit 60 multiplizieren: mit 6 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 7×60: 7×6=42, fÃ¼ge 0 hinzu: 420." },
-        { title: "Endet Immer auf 0", description: "Alle Vielfachen von 60 enden auf 0: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
+        { title: "6×10", description: "60=6×10. Mit 60 multiplizieren: mit 6 multiplizieren, dann eine 0 am Ende anfügen. 7×60: 7×6=42, dann 0 anfügen: 420." },
+        { title: "Endet immer auf 0", description: "Alle Vielfachen von 60 enden auf 0: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
         { title: "Mehrfache Faktor-Beziehungen", description: "60=2×30=3×20=4×15=5×12=6×10. Kann auf viele Arten berechnet werden!" },
       ],
       61: [
@@ -554,9 +561,10 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "70-1 Strategie", description: "69=70-1. 69×n = (70×n) - n. Beispiel: 69×6 = 420 - 6 = 414. PERFEKT!" },
         { title: "Durch 3 Teilbar", description: "Alle Vielfachen von 69 sind durch 3 und 23. Die Quersumme ist ein Vielfaches von 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        { title: "7×10", description: "70=7×10. Mit 70 multiplizieren: mit 7 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 8×70: 8×7=56, fÃ¼ge 0 hinzu: 560." },
-        { title: "Endet Immer auf 0", description: "Alle Vielfachen von 70 enden auf 0: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
+        { title: "7×10", description: "70=7×10. Mit 70 multiplizieren: mit 7 multiplizieren, dann eine 0 am Ende anfügen. 8×70: 8×7=56, dann 0 anfügen: 560." },
+        { title: "Endet immer auf 0", description: "Alle Vielfachen von 70 enden auf 0: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
         { title: "Mehrfache Faktor-Beziehungen", description: "70=2×35=5×14=7×10. Kann auf viele Arten berechnet werden!" },
       ],
       71: [
@@ -569,9 +577,10 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "6×12 oder 3×24", description: "72=6×12=3×24=4×18. Kann auf mehrere Arten berechnet werden: 72×4 = 12×24 = 288." },
         { title: "Viele Teiler", description: "72 hat 12 Teiler: 1,2,3,4,6,8,9,12,18,24,36,72. Sehr nützlich für Brüche!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       73: [
         { title: "70+3 oder 75-2", description: "73=70+3 oder 75-2. Beispiel: 73×6 = 420+18 = 438 oder 450-12 = 438." },
-        { title: "Primzahl-Muster", description: "Da 73 eine Primzahl ist erfordert spezielle Strategien. Es Die 21º número primo. Einerziffer: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Primzahlmuster", description: "73 ist eine Primzahl, daher gibt es keine Verdopplungs- oder Verdreifachungsabkürzung. Sie ist die 21. Primzahl in der Reihe. Die Einerziffern folgen dem vollständigen Zyklus: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
         { title: "80-7 Strategie", description: "Mit großen Zahlen: 73×8 = 640-56 = 584. Von 80 subtrahieren ist eine alternative Methode." },
       ],
       74: [
@@ -604,15 +613,17 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Primzahl-Einzigartigkeit", description: "Da 79 eine Primzahl ist hat spezielle Muster. Einerziffer: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "75+4 Alternative", description: "79=75+4. Beispiel: 79×8 = 600 + 32 = 632. Nützlich, wenn du die 75er-Tabelle kennst." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        { title: "8×10", description: "80=8×10. Mit 80 multiplizieren: mit 8 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 7×80: 7×8=56, fÃ¼ge 0 hinzu: 560." },
-        { title: "Endet Immer auf 0", description: "Alle Vielfachen von 80 enden auf 0: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
+        { title: "8×10", description: "80=8×10. Mit 80 multiplizieren: mit 8 multiplizieren, dann eine 0 am Ende anfügen. 7×80: 7×8=56, dann 0 anfügen: 560." },
+        { title: "Endet immer auf 0", description: "Alle Vielfachen von 80 enden auf 0: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
         { title: "Mehrfache Faktor-Beziehungen", description: "80=2×40=4×20=5×16=8×10. Kann auf viele Arten berechnet werden!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        { title: "Quadrat von 9", description: "81=9×9=9². Außerdem 81=3⁴. Ejemplo perfecto de Beziehungen von cuadrados y potencias." },
+        { title: "Quadrat von 9", description: "81=9×9=9². Außerdem gilt 81=3⁴ — ein perfektes Beispiel für den Zusammenhang von Quadratzahlen und Potenzen." },
         { title: "80+1 Strategie", description: "81=80+1. 81×n = (80×n) + n. Beispiel: 81×7 = 560 + 7 = 567. Sehr praktisch!" },
-        { title: "Vierte Dreierpotenz", description: "81=3⁴=3×3×3×3. Wichtig für Zahlen mit Exponenten zu verstehen. Durch 9 Teilbar und 27." },
+        { title: "Vierte Dreierpotenz", description: "81=3⁴=3×3×3×3. Wichtig für Zahlen mit Exponenten zu verstehen. Durch 9 teilbar und durch 27." },
       ],
       82: [
         { title: "2×41", description: "82=2×41. Verdopple die 41er-Tabelle: 41×7=287, also 82×7=574." },
@@ -654,9 +665,10 @@ const patterns: { [key: number]: PatternItem[] } = {
         { title: "Primzahl-Einzigartigkeit", description: "Da 89 eine Primzahl ist hat spezielle Muster. Einerziffer: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
         { title: "85+4 Alternative", description: "89=85+4. Beispiel: 89×8 = 680 + 32 = 712. Nützlich, wenn du die 85er-Tabelle kennst." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       90: [
-        { title: "9×10", description: "90=9×10. Mit 90 multiplizieren: mit 9 multiplizieren, fÃ¼ge eine 0 am Ende hinzu. 7×90: 7×9=63, fÃ¼ge 0 hinzu: 630." },
-        { title: "Endet Immer auf 0", description: "Alle Vielfachen von 90 enden auf 0: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
+        { title: "9×10", description: "90=9×10. Mit 90 multiplizieren: mit 9 multiplizieren, dann eine 0 am Ende anfügen. 7×90: 7×9=63, dann 0 anfügen: 630." },
+        { title: "Endet immer auf 0", description: "Alle Vielfachen von 90 enden auf 0: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
         { title: "Mehrfache Faktor-Beziehungen", description: "90=2×45=3×30=5×18=6×15=9×10. Kann auf viele Arten berechnet werden!" },
       ],
       91: [
@@ -724,18 +736,19 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Verwechseln 3×6=18 mit 3×7=21", solution: "Denk daran, das +3-Muster: nach 18 kommt 21. Zähle in Dreierschritten zur Überprüfung." },
         { mistake: "Verwechseln 3×8=24 mit 3×9=27", solution: "Nutze den Trick von Quersumme: 24 (2+4=6) und 27 (2+7=9), folgt dem 3-6-9-Muster." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       4: [
-        { mistake: "Denken, dass 4×7=24 (statt 28)", solution: "Denk daran: 4×6=24, also 4×7 muss 4 mehr sein, also 28." },
-        { mistake: "Verwechseln mit der Tabelle der 2", solution: "Die 4er-Tabelle ist immer el doble de Die 2er-Tabelle. Überprüfe Verdoppeln." },
+        { mistake: "Nur einmal statt zweimal verdoppeln", solution: "Denken Sie daran: 4 = 2 × 2, also müssen Sie verdoppeln und dann noch einmal verdoppeln. 4×6 ist NICHT 6+6=12 (das ist nur 2×6) — es ist 12 noch einmal verdoppelt, also 24." },
+        { mistake: "4×7=28 mit 4×8=32 verwechseln", solution: "Zählen Sie sorgfältig in 4er-Schritten: 24, 28, 32, 36. Sprechen Sie jede Zahl laut aus, um nicht vorzuspringen." },
       ],
       5: [
         { mistake: "Verwechseln el orden (25 antes de 20)", solution: "Das Muster ist konsistent: 5, 10, 15, 20, 25. Jede Zahl erhÃ¶ht sich um 5." },
         { mistake: "Denken, dass 5×impar Endet Immer auf 5", solution: "En realidad 5×par endet auf 0, 5×impar endet auf 5." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       6: [
-        { mistake: "Verwechseln 6×7=42 mit 6×8=48", solution: "Das ist ein schwieriges Paar! Denk daran: 6×7=42 (reimt sich 'sieben sechs'), dann fÃ¼ge 6 hinzu: 48." },
-        { mistake: "Verwechseln 6×9=54 mit 6×8=48", solution: "Nutze die 6er-Tabelle: 6×8=48, dann +6=54. Oder berechne 6×9 como 60-6=54." },
-        { mistake: "Verwechseln mit der Tabelle der 3", solution: "Die 6er-Tabelle ist immer el doble de Die 3er-Tabelle. 3×4=12, also 6×4=24." },
+        { mistake: "Vergessen, die zusätzliche Gruppe beim Trick 5×n + n zu addieren", solution: "6×n ist 5×n PLUS ein weiteres n — hören Sie nicht bei der 5er-Antwort auf. 6×8 = 40 + 8 = 48, nicht 40." },
+        { mistake: "Verwechseln von 6×7=42 mit 7×7=49 oder 6×8=48", solution: "Diese drei Fakten liegen nah beieinander. Merken Sie sich 6×7=42, indem Sie sich daran erinnern, dass es ein 7 mehr ist als 5×7=35." },
       ],
       7: [
         { mistake: "Verwechseln 7×8=56 mit 7×6=42", solution: "Das sind die schwierigsten! Merktrick: '5-6-7-8' (56=7×8). O desde 7×7=49, dann +7=56." },
@@ -761,21 +774,25 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Falsch anwenden den Trick von Ziffernsumme", solution: "23×11: Addiere die Ziffern (2+3=5), setze es in die Mitte: 253. Wenn die Summe >9, gibt es einen Übertrag: 67×11: 6_(6+7=13)_7 = 6_(13)_7 = 737." },
         { mistake: "Denken, dass 11×11=111", solution: "11×11=121, nicht 111. Jedes Vielfache von 11 fügt 11 zum vorherigen hinzu: 99+11=110, 110+11=121." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       12: [
-        { mistake: "Verwechseln 12×8=84 mit 12×9=108", solution: "12×8=96 (8 docenas), 12×9=108 (9 docenas). 84 ist tatsächlich 12×7. Überprüfe contando docenas." },
-        { mistake: "Verwechseln 12 mit 10", solution: "12×5=60, 10×5=50. Die 12 ist immer 20% más que 10 (10 más 2)." },
+        { mistake: "Vergessen, beide Teile der Zerlegung 10+2 zu addieren", solution: "12×n braucht BEIDE Teile, 10×n und 2×n, addiert. 12×8 = 80 + 16 = 96 — hören Sie nicht schon nach dem 10×n-Teil auf." },
+        { mistake: "Verwechseln von 12×11=132 mit 12×12=144", solution: "Diese beiden liegen direkt nebeneinander am Ende der Standardtabelle. Merken Sie sich 12×12=144 als Quadratzahl, die es sich lohnt, direkt auswendig zu lernen." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       13: [
-        { mistake: "Verwechseln 13×7=91 mit 13×8=104", solution: "13×7=91, 13×8=104. Der Unterschied ist 13. Nutze la 10+3 Strategie: 70+21=91, 80+24=104." },
-        { mistake: "Verwechseln 13 mit 3 oder 30", solution: "13×4=52, no 3×4=12. Auch nicht 30×4=120. Die 13 ist genau 10+3." },
+        { mistake: "Vergessen, beide Teile der Zerlegung 10+3 zu addieren", solution: "13×n braucht BEIDE Teile, 10×n und 3×n, addiert. 13×7 = 70 + 21 = 91 — hören Sie nicht schon nach dem 10×n-Teil auf." },
+        { mistake: "13×6=78 mit 13×7=91 verwechseln", solution: "Prüfen Sie die Zerlegung für jede Zahl einzeln: 13×6 = 60+18=78, 13×7 = 70+21=91. Rechnen Sie beide Teile neu, statt zwischen Nachbarn zu raten." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       14: [
-        { mistake: "Denken, dass 14×7=98 (korrekt ist 14×7=98!)", solution: "14×7=98 ist korrekt! Aber vergiss nicht 14×8=112 (98+14=112). Denk daran, dass es el doble de Die 7er-Tabelle." },
-        { mistake: "Verwechseln 14×6=72 mit 14×6=84", solution: "14×6=84 ist korrekt (7×6=42, ×2=84). 72 ist tatsächlich 12×6 oder 8×9." },
+        { mistake: "Vergessen zu verdoppeln nach dem 7er-Trick", solution: "14×n ist das Doppelte des 7er-Fakts, nicht derselbe Wert. 14×5 = verdoppelt(7×5) = verdoppelt(35) = 70, nicht 35." },
+        { mistake: "14×6=84 mit 7×6=42 verwechseln", solution: "Denken Sie daran, dass 14 genau doppelt so groß ist wie 7, also sollte jede 14er-Antwort genau doppelt so groß sein wie die entsprechende 7er-Antwort — nutzen Sie das als eingebaute Kontrolle." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       15: [
-        { mistake: "Denken, dass 15×6=80 (statt 90)", solution: "15×6=90 (1.5 docenas). 80 ist tatsächlich 16×5. Calcula 15×6 como 3×6=18, dann ×5=90 oder 5×6=30, dann ×3=90." },
-        { mistake: "Verwechseln 15×4=50", solution: "15×4=60, nicht 50. Denk daran, dass 15 minutos×4 = 1 hora (60 minutos)." },
+        { mistake: "Nur einen Teil der Zerlegung 10+5 addieren", solution: "15×n braucht BEIDE Teile, 10×n und 5×n, addiert. 15×7 = 70 + 35 = 105 — hören Sie nicht schon nach dem 10×n-Teil auf." },
+        { mistake: "Den Unterschied zwischen geraden und ungeraden Multiplikatoren übersehen", solution: "Da 15 ein Vielfaches von 5 ist, enden die Ergebnisse je nach Multiplikator weiterhin auf 0 oder 5 — dieselbe Regel wie beim 5er-Einmaleins gilt auch hier." },
       ],
       16: [
         { mistake: "Verwechseln 16×6=84 mit 16×6=96", solution: "16×6=96 ist korrekt (8×6=48, ×2=96). 84 ist tatsächlich 14×6 oder 12×7." },
@@ -789,22 +806,25 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Verwechseln 18×7=126 mit 18×8=144", solution: "18×7=126 (9×7=63, ×2), 18×8=144 (9×8=72, ×2). Der Unterschied ist 18." },
         { mistake: "Verwechseln 18×6=108 mit 18×6=104", solution: "18×6=108 ist korrekt (6×6=36, ×3 oder 9×6=54, ×2). 104 ist tatsächlich 13×8." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       19: [
-        { mistake: "Denken, dass 19×5=100 (statt 95)", solution: "19×5=95, no 100 (20×5=100). 19 es 1 minus que 20, así que 100-5=95." },
-        { mistake: "Verwechseln 19×6=114 mit 19×7=133", solution: "20-1 Strategie: 19×6=120-6=114, 19×7=140-7=133. Jedes Mal subtrahiere den Multiplikator von 20." },
+        { mistake: "Beim 20-1-Trick die falsche Menge abziehen", solution: "19×n = 20×n − n, nicht 20×n − 1. Ziehen Sie die gesamte Ausgangszahl ab. 19×8 = 160 − 8 = 152." },
+        { mistake: "Vergessen, dass 19 eine Primzahl ist, und nach einer Abkürzung durch Faktorisierung suchen", solution: "Für 19 gibt es keine kleinere Tabelle zum Verdoppeln oder Verdreifachen. Die Zerlegung 20−1 ist hier die zuverlässigste Methode." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       20: [
-        { mistake: "Denken, dass 20×7=120 (statt 140)", solution: "20×7=140, no 120 (20×6=120). 10×7=70, duplica: 140. oder 7×20=7×10×2." },
-        { mistake: "Vergessen el cero", solution: "Alle Vielfachen von 20 müssen enden auf 0: 20, 40, 60, 80, 100... 20×8=160, no 16!" },
+        { mistake: "Denken, dass 20×7=120 (statt 140)", solution: "20×7=140, nicht 120 (20×6=120). 10×7=70, verdoppelt: 140. Oder 7×20=7×10×2." },
+        { mistake: "Die Null vergessen", solution: "Alle Vielfachen von 20 müssen auf 0 enden: 20, 40, 60, 80, 100... 20×8=160, nicht 16!" },
       ],
       21: [
         { mistake: "Denken, dass 21×5=100 (statt 105)", solution: "21×5=105, nicht 100. 20×5=100, más 5 más: 105. oder 3×7×5 = 21×5 = 105." },
         { mistake: "Verwechseln 21×7=140 mit 21×7=147", solution: "21×7=147 ist korrekt (3×7×7 oder 140+7). 140 ist tatsächlich 20×7." },
         { mistake: "Verwechseln 21 mit 12", solution: "21×4=84, no 12×4=48. Presta atención al orden de los dígitos: 21 es muy diferente de 12." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       22: [
-        { mistake: "Denken, dass 22×5=100 (statt 110)", solution: "22×5=110, nicht 100. 11×5=55, duplica: 110. oder 20×5=100, más 2×5=10: 110." },
-        { mistake: "Verwechseln 22×9=198 mit 22×9=188", solution: "22×9=198 ist korrekt (11×9=99, ×2). 188 es otro cálculo." },
+        { mistake: "Denken, dass 22×5=100 (statt 110)", solution: "22×5=110, nicht 100. 11×5=55, verdoppelt: 110. Oder 20×5=100, plus 2×5=10: 110." },
+        { mistake: "22×9=198 mit 22×9=188 verwechseln", solution: "22×9=198 ist korrekt (11×9=99, ×2). 188 ist ein anderes Ergebnis." },
       ],
       23: [
         { mistake: "Denken, dass 23×4=82 (statt 92)", solution: "23×4=92, nicht 82. 20×4=80, más 3×4=12: 92. 82 ist ein anderes Ergebnis." },
@@ -814,9 +834,10 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 24×5=100 (statt 120)", solution: "24×5=120, nicht 100. Un día Hat 24 horas, 5 Tage = 120 horas. oder 12×10=120." },
         { mistake: "Verwechseln 24×7=158 mit 24×7=168", solution: "24×7=168 ist korrekt (4×6×7 oder 3×8×7). 158 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       25: [
-        { mistake: "Denken, dass 25×8=180 (statt 200)", solution: "25×8=200, nicht 180. 25×4=100, also 25×8=200. oder 5×5×8 = 25×8 = 200." },
-        { mistake: "Adivinar incorrectamente los últimos dos dígitos", solution: "Los Vielfachen von 25 siempre enden auf 25, 50, 75 oder 00. No puede ser otra cosa!" },
+        { mistake: "Denken, dass 25×8=180 (statt 200)", solution: "25×8=200, nicht 180. 25×4=100, also 25×8=200. Oder 5×5×8 = 25×8 = 200." },
+        { mistake: "Die letzten zwei Ziffern falsch schätzen", solution: "Die Vielfachen von 25 enden immer auf 25, 50, 75 oder 00 — nichts anderes ist möglich!" },
       ],
       26: [
         { mistake: "Verwechseln 26×5=120 mit 26×5=130", solution: "26×5=130 ist korrekt (13×5=65, ×2). 120 ist tatsächlich 24×5." },
@@ -830,9 +851,10 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 28×5=130 (statt 140)", solution: "28×5=140, nicht 130. 4×7×5 = 20×7 = 140. oder 14×10=140." },
         { mistake: "Verwechseln 28×9=242 mit 28×9=252", solution: "28×9=252 ist korrekt (4×7×9 oder 30×9 minus 2×9). 242 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       29: [
         { mistake: "Denken, dass 29×5=140 (statt 145)", solution: "29×5=145, nicht 140. 30×5=150, minus 5: 145. 140 ist tatsächlich 28×5." },
-        { mistake: "Verwechseln 29×7=203 mit 29×7=193", solution: "29×7=203 ist korrekt (30×7=210, minus 7). 193 es otro cálculo." },
+        { mistake: "29×7=203 mit 29×7=193 verwechseln", solution: "29×7=203 ist korrekt (30×7=210, minus 7). 193 ist ein anderes Ergebnis." },
       ],
       30: [
         { mistake: "Denken, dass 30×7=200 (statt 210)", solution: "30×7=210, no 200 (30×6=180, 30×7=210). 10×7=70, ×3=210." },
@@ -842,17 +864,19 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 31×5=145 (statt 155)", solution: "31×5=155, nicht 145. 30×5=150, más 5: 155. 145 ist tatsächlich 29×5." },
         { mistake: "Verwechseln 31×7=207 mit 31×7=217", solution: "31×7=217 ist korrekt (30×7=210, más 7). 207 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       32: [
-        { mistake: "Denken, dass 32×5=150 (statt 160)", solution: "32×5=160, nicht 150. 16×5=80, duplica: 160. oder 32×10=320, la mitad es 160." },
-        { mistake: "Verwechseln 32×7=214 mit 32×7=224", solution: "32×7=224 ist korrekt (16×7=112, ×2). 214 es otro cálculo." },
+        { mistake: "Beim fünffachen Verdoppeln den Überblick verlieren", solution: "Sprechen Sie jeden Schritt laut aus und zählen Sie mit: 'verdoppeln, verdoppeln, verdoppeln, verdoppeln, verdoppeln' — für 32×2: 2→4→8→16→32→64." },
+        { mistake: "32 mit 23 verwechseln", solution: "Ziffernvertauschungen passieren bei dieser Größenordnung leicht — prüfen Sie vor dem Rechnen immer noch einmal, welche Zahl multipliziert wird." },
       ],
       33: [
         { mistake: "Denken, dass 33×4=122 (statt 132)", solution: "33×4=132, nicht 122. 11×4=44, ×3=132. oder 30×4=120, más 3×4=12: 132." },
         { mistake: "Verwechseln 33×9=297 mit 33×9=287", solution: "33×9=297 ist korrekt (11×9=99, ×3). 287 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       34: [
-        { mistake: "Denken, dass 34×5=160 (statt 170)", solution: "34×5=170, nicht 160. 17×5=85, duplica: 170. 160 ist tatsächlich 32×5." },
-        { mistake: "Verwechseln 34×8=262 mit 34×8=272", solution: "34×8=272 ist korrekt (17×8=136, ×2). 262 ist ein anderes Ergebnis." },
+        { mistake: "Denken, dass 34×5=160 (statt 170)", solution: "34×5=170, nicht 160. 17×5=85, verdoppelt: 170. 160 ist tatsächlich 32×5." },
+        { mistake: "34×8=262 mit 34×8=272 verwechseln", solution: "34×8=272 ist korrekt (17×8=136, ×2). 262 ist ein anderes Ergebnis." },
       ],
       35: [
         { mistake: "Denken, dass 35×6=200 (statt 210)", solution: "35×6=210, nicht 200. 5×6=30, 7×6=42, 30×7=210 oder 5×42=210." },
@@ -862,25 +886,29 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 36×5=170 (statt 180)", solution: "36×5=180, nicht 170. 6×5=30, ×6=180. oder 18×10=180. 170 ist tatsächlich 34×5." },
         { mistake: "Verwechseln 36×7=242 mit 36×7=252", solution: "36×7=252 ist korrekt (6×7=42, ×6 oder 9×7=63, ×4). 242 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       37: [
         { mistake: "Denken, dass 37×5=175 (statt 185)", solution: "37×5=185, nicht 175. 40×5=200, minus 3×5=15: 185. 175 ist tatsächlich 35×5." },
-        { mistake: "Calcular incorrectamente después de 37×3=111", solution: "37×3=111, 37×6=222, 37×9=333. Cada múltiplo de 3 es repdigit! 37×7=259, 37×8=296." },
+        { mistake: "Nach 37×3=111 falsch weiterrechnen", solution: "37×3=111, 37×6=222, 37×9=333. Jedes Vielfache von 3 ist eine Wiederholungszahl! 37×7=259, 37×8=296." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       38: [
-        { mistake: "Denken, dass 38×5=180 (statt 190)", solution: "38×5=190, nicht 180. 19×5=95, duplica: 190. 180 ist tatsächlich 36×5." },
-        { mistake: "Verwechseln 38×9=332 mit 38×9=342", solution: "38×9=342 ist korrekt (19×9=171, ×2 oder 40×9=360, minus 2×9=18). 332 ist ein anderes Ergebnis." },
+        { mistake: "Denken, dass 38×5=180 (statt 190)", solution: "38×5=190, nicht 180. 19×5=95, verdoppelt: 190. 180 ist tatsächlich 36×5." },
+        { mistake: "38×9=332 mit 38×9=342 verwechseln", solution: "38×9=342 ist korrekt (19×9=171, ×2 oder 40×9=360, minus 2×9=18). 332 ist ein anderes Ergebnis." },
       ],
       39: [
         { mistake: "Denken, dass 39×5=185 (statt 195)", solution: "39×5=195, nicht 185. 40×5=200, minus 5: 195. 185 ist tatsächlich 37×5." },
         { mistake: "Verwechseln 39×8=302 mit 39×8=312", solution: "39×8=312 ist korrekt (40×8=320, minus 8). 302 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        { mistake: "Denken, dass 40×7=270 (statt 280)", solution: "40×7=280, nicht 270. 4×7=28, fÃ¼ge hinzu un 0: 280. oder 10×7=70, ×4=280." },
-        { mistake: "Vergessen el cero", solution: "Alle Vielfachen von 40 müssen enden auf 0: 40, 80, 120, 160, 200... 40×9=360, no 36!" },
+        { mistake: "Denken, dass 40×7=270 (statt 280)", solution: "40×7=280, nicht 270. 4×7=28, dann eine 0 anfügen: 280. Oder 10×7=70, ×4=280." },
+        { mistake: "Die Null vergessen", solution: "Alle Vielfachen von 40 müssen auf 0 enden: 40, 80, 120, 160, 200... 40×9=360, nicht 36!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       41: [
-        { mistake: "Denken, dass 41×5=200 (statt 205)", solution: "41×5=205, nicht 200. 40×5=200, más 5: 205. Denk immer daran fÃ¼ge hinzur ese 1 extra." },
-        { mistake: "Verwechseln 41×9=360 mit 41×9=369", solution: "41×9=369 ist korrekt (40×9=360, más 9). 360 ist tatsächlich 40×9." },
+        { mistake: "Denken, dass 41×5=200 (statt 205)", solution: "41×5=205, nicht 200. 40×5=200, plus 5: 205. Denken Sie immer daran, diese zusätzliche 1 zu addieren." },
+        { mistake: "41×9=360 mit 41×9=369 verwechseln", solution: "41×9=369 ist korrekt (40×9=360, plus 9). 360 ist tatsächlich 40×9." },
       ],
       42: [
         { mistake: "Denken, dass 42×5=200 (statt 210)", solution: "42×5=210, nicht 200. 6×5=30, 7×5=35, 30+35=65... oder 40×5=200, más 2×5=10: 210." },
@@ -914,13 +942,15 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 49×5=240 (statt 245)", solution: "49×5=245, nicht 240. 50×5=250, minus 5: 245. oder 7×5=35, ×7=245." },
         { mistake: "Verwechseln 49×9=431 mit 49×9=441", solution: "49×9=441 ist korrekt (50×9=450, minus 9). Außerdem 441=21² (Quadratzahl). 431 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        { mistake: "Denken, dass 50×7=340 (statt 350)", solution: "50×7=350, nicht 340. 5×7=35, fÃ¼ge hinzu un 0: 350. oder 100×7=700, ÷2=350." },
-        { mistake: "Vergessen el cero", solution: "Die ungeraden Vielfachen von 50 enden auf 50, die geraden auf 0: 50, 100, 150, 200, 250... 50×8=400, no 40!" },
+        { mistake: "Denken, dass 50×7=340 (statt 350)", solution: "50×7=350, nicht 340. 5×7=35, dann eine 0 anfügen: 350. Oder 100×7=700, ÷2=350." },
+        { mistake: "Die Null vergessen", solution: "Die ungeraden Vielfachen von 50 enden auf 50, die geraden auf 0: 50, 100, 150, 200, 250... 50×8=400, nicht 40!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       51: [
-        { mistake: "Denken, dass 51×5=250 (statt 255)", solution: "51×5=255, nicht 250. 50×5=250, más 5: 255. Denk immer daran fÃ¼ge hinzur ese 1 extra." },
-        { mistake: "Verwechseln 51×9=450 mit 51×9=459", solution: "51×9=459 ist korrekt (50×9=450, más 9). 450 ist tatsächlich 50×9." },
+        { mistake: "Denken, dass 51×5=250 (statt 255)", solution: "51×5=255, nicht 250. 50×5=250, plus 5: 255. Denken Sie immer daran, diese zusätzliche 1 zu addieren." },
+        { mistake: "51×9=450 mit 51×9=459 verwechseln", solution: "51×9=459 ist korrekt (50×9=450, plus 9). 450 ist tatsächlich 50×9." },
       ],
       52: [
         { mistake: "Denken, dass 52×5=250 (statt 260)", solution: "52×5=260, nicht 250. 13×5=65, ×4=260. oder 50×5=250, más 2×5=10: 260." },
@@ -950,17 +980,20 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 58×5=280 (statt 290)", solution: "58×5=290, nicht 280. 29×5=145, ×2=290. oder 60×5=300, minus 2×5=10: 290." },
         { mistake: "Verwechseln 58×9=512 mit 58×9=522", solution: "58×9=522 ist korrekt (29×9=261, ×2 oder 60×9=540, minus 2×9=18). 512 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       59: [
-        { mistake: "Denken, dass 59×5=290 (statt 295)", solution: "59×5=295, nicht 290. 60×5=300, minus 5: 295. Muy simple!" },
-        { mistake: "Verwechseln 59×9=521 mit 59×9=531", solution: "59×9=531 ist korrekt (60×9=540, minus 9). 531 Auch es 9×59. 521 ist ein anderes Ergebnis." },
+        { mistake: "Beim 60-1-Trick die falsche Menge abziehen", solution: "59×n = 60×n − n, nicht 60×n − 1. Ziehen Sie die gesamte Ausgangszahl ab. 59×7 = 420 − 7 = 413." },
+        { mistake: "Nach einer Verdopplungs- oder Verdreifachungsabkürzung suchen", solution: "59 ist eine Primzahl, daher lässt sie sich nicht durch Verdoppeln oder Verdreifachen einer kleineren Tabelle erreichen. Die Zerlegung 60−1 ist hier die zuverlässigste Methode." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        { mistake: "Denken, dass 60×7=410 (statt 420)", solution: "60×7=420, nicht 410. 6×7=42, fÃ¼ge hinzu un 0: 420. oder 10×7=70, ×6=420." },
-        { mistake: "Vergessen el cero", solution: "Alle Vielfachen von 60 müssen enden auf 0: 60, 120, 180, 240, 300, 360, 420... 60×9=540, no 54!" },
+        { mistake: "Denken, dass 60×7=410 (statt 420)", solution: "60×7=420, nicht 410. 6×7=42, dann eine 0 anfügen: 420. Oder 10×7=70, ×6=420." },
+        { mistake: "Die Null vergessen", solution: "Alle Vielfachen von 60 müssen auf 0 enden: 60, 120, 180, 240, 300, 360, 420... 60×9=540, nicht 54!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       61: [
-        { mistake: "Denken, dass 61×5=300 (statt 305)", solution: "61×5=305, nicht 300. 60×5=300, más 5: 305. Denk immer daran fÃ¼ge hinzur ese 1 extra." },
-        { mistake: "Verwechseln 61×9=540 mit 61×9=549", solution: "61×9=549 ist korrekt (60×9=540, más 9). 540 ist tatsächlich 60×9." },
+        { mistake: "Denken, dass 61×5=300 (statt 305)", solution: "61×5=305, nicht 300. 60×5=300, plus 5: 305. Denken Sie immer daran, diese zusätzliche 1 zu addieren." },
+        { mistake: "61×9=540 mit 61×9=549 verwechseln", solution: "61×9=549 ist korrekt (60×9=540, plus 9). 540 ist tatsächlich 60×9." },
       ],
       62: [
         { mistake: "Denken, dass 62×5=300 (statt 310)", solution: "62×5=310, nicht 300. 31×5=155, ×2=310. oder 60×5=300, más 2×5=10: 310." },
@@ -994,13 +1027,15 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 69×5=340 (statt 345)", solution: "69×5=345, nicht 340. 70×5=350, minus 5: 345. Muy simple!" },
         { mistake: "Verwechseln 69×9=611 mit 69×9=621", solution: "69×9=621 ist korrekt (70×9=630, minus 9). 621=3×207. 611 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        { mistake: "Denken, dass 70×7=480 (statt 490)", solution: "70×7=490, nicht 480. 7×7=49, fÃ¼ge hinzu un 0: 490. oder 10×7=70, ×7=490." },
-        { mistake: "Vergessen el cero", solution: "Alle Vielfachen von 70 müssen enden auf 0: 70, 140, 210, 280, 350, 420, 490... 70×9=630, no 63!" },
+        { mistake: "Denken, dass 70×7=480 (statt 490)", solution: "70×7=490, nicht 480. 7×7=49, dann eine 0 anfügen: 490. Oder 10×7=70, ×7=490." },
+        { mistake: "Die Null vergessen", solution: "Alle Vielfachen von 70 müssen auf 0 enden: 70, 140, 210, 280, 350, 420, 490... 70×9=630, nicht 63!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       71: [
-        { mistake: "Denken, dass 71×5=350 (statt 355)", solution: "71×5=355, nicht 350. 70×5=350, más 5: 355. Denk immer daran fÃ¼ge hinzur ese 1 extra." },
-        { mistake: "Verwechseln 71×9=630 mit 71×9=639", solution: "71×9=639 ist korrekt (70×9=630, más 9). 630 ist tatsächlich 70×9." },
+        { mistake: "Denken, dass 71×5=350 (statt 355)", solution: "71×5=355, nicht 350. 70×5=350, plus 5: 355. Denken Sie immer daran, diese zusätzliche 1 zu addieren." },
+        { mistake: "71×9=630 mit 71×9=639 verwechseln", solution: "71×9=639 ist korrekt (70×9=630, plus 9). 630 ist tatsächlich 70×9." },
       ],
       72: [
         { mistake: "Denken, dass 72×5=350 (statt 360)", solution: "72×5=360, nicht 350. 8×5=40, 9×5=45, 40×9=360. oder 70×5=350, más 2×5=10: 360." },
@@ -1034,37 +1069,44 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "Denken, dass 79×5=390 (statt 395)", solution: "79×5=395, nicht 390. 80×5=400, minus 5: 395. Muy simple!" },
         { mistake: "Verwechseln 79×9=701 mit 79×9=711", solution: "79×9=711 ist korrekt (80×9=720, minus 9). 711 ist ein anderes Ergebnis." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        { mistake: "Denken, dass 80×7=550 (statt 560)", solution: "80×7=560, nicht 550. 8×7=56, fÃ¼ge hinzu un 0: 560. oder 10×7=70, ×8=560." },
-        { mistake: "Vergessen el cero", solution: "Alle Vielfachen von 80 müssen enden auf 0: 80, 160, 240, 320, 400, 480, 560... 80×9=720, no 72!" },
+        { mistake: "Denken, dass 80×7=550 (statt 560)", solution: "80×7=560, nicht 550. 8×7=56, dann eine 0 anfügen: 560. Oder 10×7=70, ×8=560." },
+        { mistake: "Die Null vergessen", solution: "Alle Vielfachen von 80 müssen auf 0 enden: 80, 160, 240, 320, 400, 480, 560... 80×9=720, nicht 72!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        { mistake: "Calcular 81 como 8×10+1 statt 9×9", solution: "81=9×9. Beispiel: 81×7 = (9×7)×9 = 63×9 = 567. Nutze die Quadratzahl-Beziehung!" },
-        { mistake: "Error de suma en 80+1 Strategie", solution: "81×7 = (80×7)+(1×7) = 560+7 = 567. Calcula beide partes cuidadosamente!" },
+        { mistake: "Beim 80+1-Trick vergessen, die zusätzliche Gruppe zu addieren", solution: "81×n ist 80×n PLUS ein weiteres n — hören Sie nicht bei der 80er-Antwort auf. 81×7 = 560 + 7 = 567, nicht 560." },
+        { mistake: "81×7 mit 9×9 verwechseln", solution: "81×7 ist eine andere Rechnung als 9×9=81 — hören Sie nicht schon bei der Quadratzahl auf, wenn der Multiplikator nicht auch 9 ist." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       82: [
-        { mistake: "Complicar 82×4", solution: "82×4 = (80×4)+(2×4) = 320+8 = 328. Descompone y suma!" },
-        { mistake: "Denken, dass 82 ist ungerade", solution: "82=2×41, Immer gerade. Alle Vielfachen sind gerade Zahlen: 82, 164, 246..." },
+        { mistake: "Nur einen Teil der Zerlegung 80+2 addieren", solution: "82×4 = (80×4)+(2×4) = 320+8 = 328. Zerlegen und addieren!" },
+        { mistake: "Denken, dass 82 ungerade ist", solution: "82=2×41, immer gerade. Alle Vielfachen sind gerade Zahlen: 82, 164, 246..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       83: [
-        { mistake: "Calcular incorrectamente 83×5", solution: "83×5 = (80×5)+(3×5) = 400+15 = 415. Descompone y suma!" },
-        { mistake: "Denken, dass 83 es par", solution: "83 es primo, NUR Durch 1 Teilbar und 83. ist ungerade y no Durch 2 Teilbar." },
+        { mistake: "83×5 falsch berechnen", solution: "83×5 = (80×5)+(3×5) = 400+15 = 415. Zerlegen und addieren!" },
+        { mistake: "Denken, dass 83 gerade ist", solution: "83 ist eine Primzahl, nur durch 1 und 83 teilbar. Sie ist ungerade und nicht durch 2 teilbar." },
       ],
       84: [
         { mistake: "Complicar 84×5", solution: "84×5 = 420 (7×12×5=7×60). oder (80×5)+(4×5)=400+20=420." },
         { mistake: "Vergessen los factores de 84", solution: "84=7×12=6×14=4×21=3×28. Se puede calcular de múltiples maneras!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       85: [
-        { mistake: "Calcular incorrectamente 85×4", solution: "85×4 = (80×4)+(5×4) = 320+20 = 340. oder 85×4=17×20=340." },
-        { mistake: "Vergessen el último dígito", solution: "Los Vielfachen von 85 siempre enden auf 5 oder 0: 85, 170, 255, 340, 425, 510..." },
+        { mistake: "85×4 falsch berechnen", solution: "85×4 = (80×4)+(5×4) = 320+20 = 340. Oder 85×4=17×20=340." },
+        { mistake: "Die letzte Ziffer vergessen", solution: "Die Vielfachen von 85 enden immer auf 5 oder 0: 85, 170, 255, 340, 425, 510..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       86: [
-        { mistake: "Complicar 86×5", solution: "86×5 = (80×5)+(6×5) = 400+30 = 430. Descompone y suma!" },
-        { mistake: "Denken, dass 86 ist ungerade", solution: "86=2×43, Immer gerade. Alle Vielfachen sind gerade Zahlen: 86, 172, 258..." },
+        { mistake: "86×5 falsch berechnen", solution: "86×5 = (80×5)+(6×5) = 400+30 = 430. Zerlegen und addieren!" },
+        { mistake: "Denken, dass 86 ungerade ist", solution: "86=2×43, immer gerade. Alle Vielfachen sind gerade Zahlen: 86, 172, 258..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       87: [
-        { mistake: "Calcular incorrectamente 87×5", solution: "87×5 = (90×5)-(3×5) = 450-15 = 435. Restar desde 90 es einfacher!" },
-        { mistake: "Denken, dass 87 eine Primzahl ist", solution: "87=3×29, ist keine Primzahl! Ist durch 3 teilbar (8+7=15, exakt durch 3 teilbar)." },
+        { mistake: "87×5 falsch berechnen", solution: "87×5 = (90×5)-(3×5) = 450-15 = 435. Das Abziehen von 90 ist einfacher!" },
+        { mistake: "Denken, dass 87 eine Primzahl ist", solution: "87=3×29, ist keine Primzahl! Sie ist durch 3 teilbar (8+7=15, genau durch 3 teilbar)." },
       ],
       88: [
         { mistake: "88×5 kompliziert machen", solution: "88×5 = (80×5)+(8×5) = 400+40 = 440. oder 88×5=11×40=440." },
@@ -1086,52 +1128,61 @@ const mistakes: { [key: number]: MistakeItem[] } = {
         { mistake: "92×5 kompliziert machen", solution: "92×5 = (90×5)+(2×5) = 450+10 = 460. Zerlege und addiere!" },
         { mistake: "Denken, dass 92 ungerade ist", solution: "92=2×46, immer gerade. Alle Vielfachen sind gerade Zahlen: 92, 184, 276..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       93: [
-        { mistake: "Calcular incorrectamente 93×5", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. Descompone y suma!" },
-        { mistake: "Denken, dass 93 es primo", solution: "93=3×31, no es primo! Es Durch 3 Teilbar (9+3=12, divisible exactamente por 3)." },
+        { mistake: "93×5 falsch berechnen", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. Zerlegen und addieren!" },
+        { mistake: "Denken, dass 93 eine Primzahl ist", solution: "93=3×31, keine Primzahl! Sie ist durch 3 teilbar (9+3=12, genau durch 3 teilbar)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       94: [
-        { mistake: "Complicar 94×5", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. Restar desde 100 es einfacher!" },
-        { mistake: "Denken, dass 94 ist ungerade", solution: "94=2×47, Immer gerade. Alle Vielfachen sind gerade Zahlen: 94, 188, 282..." },
+        { mistake: "94×5 falsch berechnen", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. Das Abziehen von 100 ist einfacher!" },
+        { mistake: "Denken, dass 94 ungerade ist", solution: "94=2×47, immer gerade. Alle Vielfachen sind gerade Zahlen: 94, 188, 282..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       95: [
-        { mistake: "Calcular incorrectamente 95×4", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. oder 95×4=19×20=380." },
-        { mistake: "Vergessen el último dígito", solution: "Los Vielfachen von 95 siempre enden auf 5 oder 0: 95, 190, 285, 380, 475, 570..." },
+        { mistake: "95×4 falsch berechnen", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. Oder 95×4=19×20=380." },
+        { mistake: "Die letzte Ziffer vergessen", solution: "Die Vielfachen von 95 enden immer auf 5 oder 0: 95, 190, 285, 380, 475, 570..." },
       ],
       96: [
         { mistake: "Complicar 96×5", solution: "96×5 = (100×5)-(4×5) = 500-20 = 480. oder 96×5=12×40=480." },
         { mistake: "Vergessen los factores de 96", solution: "96=8×12=6×16=4×24=3×32. Se puede calcular de múltiples maneras!" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       97: [
-        { mistake: "Calcular 97 sin redondear", solution: "97=100-3. Beispiel: 97×7 = (100×7)-21 = 700-21 = 679. Sehr einfach!" },
-        { mistake: "Calcular 97 como 96+1", solution: "La 100-3 Strategie es mucho einfacher! 97×7: 100×7=700, dann resta 21: 679." },
+        { mistake: "Beim 100-3-Trick die falsche Menge abziehen", solution: "97×n = 100×n − 3×n, nicht 100×n − 3. Ziehen Sie das Dreifache der Ausgangszahl ab. 97×5 = 500 − 15 = 485." },
+        { mistake: "Nach einer Verdopplungs- oder Verdreifachungsabkürzung suchen", solution: "97 ist eine Primzahl, daher lässt sie sich nicht durch Verdoppeln oder Verdreifachen einer kleineren Tabelle erreichen. Die Zerlegung 100−3 ist hier die zuverlässigste Methode." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       98: [
-        { mistake: "Complicar 98×5", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. Restar desde 100 es SUPER EINFACH!" },
-        { mistake: "Denken, dass 98 ist ungerade", solution: "98=2×49, Immer gerade. Alle Vielfachen sind gerade Zahlen: 98, 196, 294..." },
+        { mistake: "98×5 falsch berechnen", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. Das Abziehen von 100 ist super einfach!" },
+        { mistake: "Denken, dass 98 ungerade ist", solution: "98=2×49, immer gerade. Alle Vielfachen sind gerade Zahlen: 98, 196, 294..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       99: [
-        { mistake: "Calcular 99 sin redondear", solution: "99=100-1. Beispiel: 99×7 = (100×7)-7 = 700-7 = 693. PERFECTA!" },
-        { mistake: "Calcular 99 como 98+1", solution: "La 100-1 Strategie es mucho einfacher! 99×8: 100×8=800, dann resta 8: 792." },
+        { mistake: "Beim 100-1-Trick die falsche Menge abziehen", solution: "99×n = 100×n − n, nicht 100×n − 1. Ziehen Sie die gesamte Ausgangszahl ab. 99×7 = 700 − 7 = 693." },
+        { mistake: "99×n mit dem Einzelfakt 9×11=99 verwechseln", solution: "99×n ist die ganze Einmaleins-Reihe, nicht nur der einzelne Fakt 9×11=99 — hören Sie nicht mit dem Rechnen auf, sobald Sie die Zahl 99 erkennen." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       100: [
-        { mistake: "Complicar 100×5", solution: "100×5 = 500! NUR fÃ¼ge hinzu dos ceros al final: 5 → 500, 7 → 700!" },
-        { mistake: "Vergessen los ceros", solution: "Mit 100 multiplizieren: fÃ¼ge hinzu DOS ceros am Ende. 100×9=900, no 90!" },
+        { mistake: "Nullen an der falschen Stelle anfügen, wenn die Zahl bereits Dezimalstellen hat", solution: "Der Trick 'zwei Nullen anfügen' gilt für ganze Zahlen. Bei Dezimalzahlen verschiebt die Multiplikation mit 100 stattdessen das Komma um zwei Stellen nach rechts." },
+        { mistake: "×100 und ×10 gleich behandeln", solution: "×100 fügt zwei Nullen an; ×10 nur eine. Achten Sie darauf, wie viele Nullen der Multiplikator selbst hat." },
       ],
     }
 
 const strategies: { [key: number]: string[] } = {
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       1: [
-        "Sage jede Multiplikation laut: '1 por 1 es 1, 1 por 2 es 2...'",
-        "Übe das Schreiben der Tabelle einmal täglich für eine Woche",
-        "Suche das Muster: die Antwort ist immer dieselbe Zahl wie die zweite Zahl",
-        "Nutze tarjetas didácticas, obwohl diese Tabelle normalerweise sehr schnell gelernt wird",
+        "Sprechen Sie jede Multiplikation laut aus: 'Eins mal eins ist eins, eins mal zwei ist zwei...'",
+        "Üben Sie, die Tabelle eine Woche lang einmal täglich aufzuschreiben",
+        "Suchen Sie das Muster: Die Antwort ist immer dieselbe Zahl wie die zweite Zahl",
+        "Verwenden Sie Karteikarten, obwohl diese Tabelle meist sehr schnell gelernt wird",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       2: [
         "Zähle in Zweierschritten beim Gehen oder Treppensteigen: 2, 4, 6, 8...",
-        "Nutze tus dedos: halte Finger in Paaren und zähle in Zweierschritten",
+        "Nutze deine Finger: halte sie in Paaren und zähle in Zweierschritten",
         "Übe das Verdoppeln von Zahlen im Kopf während des Tages",
-        "Sage es laut: '2 por 5 ist 5 plus 5, was 10'",
+        "Sage laut: '2 mal 5 ist 5 plus 5, das ist 10'",
       ],
       3: [
         "Zähle rhythmisch in Dreierschritten: 3, 6, 9, 12, 15...",
@@ -1193,19 +1244,21 @@ const strategies: { [key: number]: string[] } = {
         "Erstelle ein Lied oder Reim: 'Elf mal fünf, fünfundfünfzig' (11×5=55)",
         "Finde ein Vielfaches von 11 im Alltag jeden Tag (11 Jahre, 11 Stunden, etc.)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       12: [
-        "Übe Dutzende zählend: zÃ¤hle Eierschachteln (12, 24, 36...)",
-        "Berechne 12 mit der 3er oder 4er-Tabelle: 12=3×4, also 12×5 = 3×5×4 = 15×4 = 60",
-        "Nutze el reloj: 12×5=60 minutos (1 hora)",
-        "Konzentriere dich auf los Vielfache más difíciles de 12: 12×7=84, 12×8=96, 12×9=108",
-        "Nutze 12 en vida diaria: Monate, Stunden, Dutzende",
+        "Übe Dutzende zählend: zähle Eierschachteln (12, 24, 36...)",
+        "Berechne 12 mit der 3er- oder 4er-Tabelle: 12=3×4, also 12×5 = 3×5×4 = 15×4 = 60",
+        "Nutze die Uhr: 12×5=60 Minuten (1 Stunde)",
+        "Konzentriere dich auf die schwierigsten Vielfachen von 12: 12×7=84, 12×8=96, 12×9=108",
+        "Nutze 12 im Alltag: Monate, Stunden, Dutzende",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       13: [
-        "Nutze siempre la 10+3 Strategie: 13×6 = 60+18 = 78",
-        "Convierte Die 13er-Tabelle en canción o encuentra un ritmo",
-        "Konzentriere dich auf los pares más difíciles: 13×7=91, 13×8=104, 13×9=117",
-        "Übe 2-3 Vielfache diferentes de 13 cada día, nicht alle auf einmal",
-        "Trabaja hacia atrás: 130, 117, 104, 91, 78... (subtrahiere 13 von 130)",
+        "Nutze immer die 10+3-Strategie: 13×6 = 60+18 = 78",
+        "Mache aus der 13er-Tabelle einen Reim oder finde einen Rhythmus",
+        "Konzentriere dich auf die schwierigsten Paare: 13×7=91, 13×8=104, 13×9=117",
+        "Übe täglich 2-3 verschiedene Vielfache von 13, nicht alle auf einmal",
+        "Arbeite rückwärts: 130, 117, 104, 91, 78... (ziehe jeweils 13 ab)",
       ],
       14: [
         "Lerne die 7er-Tabelle auswendig, dann verdopple jede Antwort",
@@ -1242,579 +1295,654 @@ const strategies: { [key: number]: string[] } = {
         "Verbinde es mit Volljährigkeit: 18, 36 (18×2), 54 (18×3)",
         "Zähle in Achtzehnerchritten: 18, 36, 54, 72, 90, 108, 126, 144, 162, 180",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       19: [
-        "Nutze siempre la 20-1 Strategie: 19×n = 20n - n",
-        "Beispiel: 19×7 = 140-7 = 133. Muy simple y efectivo!",
-        "Descomposición 10+9: 19×4 = 40+36 = 76",
-        "Übe los Vielfache más difíciles: 19×7=133, 19×8=152, 19×9=171",
-        "Aprende Die 19er-Tabelle hacia atrás: 190, 171, 152, 133... para flexibilidad mental",
+        "Nutze immer die 20-1-Strategie: 19×n = 20n - n",
+        "Beispiel: 19×7 = 140-7 = 133. Ganz einfach und wirkungsvoll!",
+        "Zerlegung 10+9: 19×4 = 40+36 = 76",
+        "Übe die schwierigsten Vielfachen: 19×7=133, 19×8=152, 19×9=171",
+        "Lerne die 19er-Tabelle auch rückwärts: 190, 171, 152, 133... für mehr mentale Flexibilität",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       20: [
-        "Lo einfacher: mit 10 multiplizieren, dann duplica",
-        "O: fÃ¼ge hinzu un cero al final, dann duplica (MÉTODO CORRECTO! 7×20: 70 luego ×2=140)",
-        "Método correcto: 7×10=70, 70×2=140 oder 7×2=14, fÃ¼ge hinzu un 0: 140",
-        "Cuenta rápidamente de veinte en veinte: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
-        "Ãœbe mit Geld: cuenta billetes de 20",
+        "Der einfachste Weg: mit 10 multiplizieren, dann verdoppeln",
+        "Oder: eine Null am Ende anfügen und dann verdoppeln (7×20: erst 70, dann ×2=140)",
+        "Kontrollmethode: 7×10=70, 70×2=140, oder 7×2=14, dann eine 0 anfügen: 140",
+        "Zähle zügig in Zwanzigerschritten: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
+        "Übe mit Geld: zähle 20-Euro-Scheine",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       21: [
-        "Nutze la 20+1 Strategie: 21×n = 20n + n",
+        "Nutze die 20+1-Strategie: 21×n = 20n + n",
         "Nutze die Beziehung 3×7: Kennst du die 3er-Tabelle? 3×6=18, 7×6=42, also 21×6=126",
-        "Übe los Vielfache más difíciles: 21×7=147, 21×8=168, 21×9=189",
+        "Übe die schwierigsten Vielfachen: 21×7=147, 21×8=168, 21×9=189",
         "Verbinde es mit der gesetzlichen Volljährigkeit: Was ändert sich mit 21 Jahren?",
-        "Zähle in veintiuno en veintiuno: 21, 42, 63, 84, 105, 126, 147, 168, 189, 210",
+        "Zähle in Einundzwanzigerschritten: 21, 42, 63, 84, 105, 126, 147, 168, 189, 210",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       22: [
-        "Lerne auswendig Die 11er-Tabelle, dann duplica cada resultado",
-        "Verbinde es mit equipos de fútbol: 2 equipos = 22 jugadores",
-        "Los Vielfache einfacheres primero: 22×5=110, 22×10=220",
-        "Zähle in veintidós en veintidós: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
-        "Observa el Muster de Doppelziffern en los primeros 4 resultados: 22, 44, 66, 88",
+        "Lerne die 11er-Tabelle auswendig, dann verdopple jedes Ergebnis",
+        "Verbinde es mit Fußballmannschaften: 2 Mannschaften = 22 Spieler",
+        "Übe zuerst die leichteren Vielfachen: 22×5=110, 22×10=220",
+        "Zähle in Zweiundzwanzigerschritten: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
+        "Beobachte das Doppelziffern-Muster in den ersten 4 Ergebnissen: 22, 44, 66, 88",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       23: [
-        "Nutze siempre la 20+3 Strategie: 23×6 = 120+18 = 138",
-        "O 25-2 Strategie: 23×4 = 100-8 = 92",
-        "Verbinde es mit cromosomas: Los humanos tienen 23 pares de cromosomas",
-        "Übe diariamente los Vielfache más difíciles: 23×7=161, 23×8=184, 23×9=207",
-        "23 es primo, así que ten paciencia y Übe mucho",
+        "Nutze immer die 20+3-Strategie: 23×6 = 120+18 = 138",
+        "Oder die 25-2-Strategie: 23×4 = 100-8 = 92",
+        "Verbinde es mit Chromosomen: Menschen haben 23 Chromosomenpaare",
+        "Übe täglich die schwierigsten Vielfachen: 23×7=161, 23×8=184, 23×9=207",
+        "23 ist eine Primzahl, also übe geduldig und regelmäßig",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       24: [
-        "Nutze die Beziehung de horas: 24 horas×3 Tage = 72 horas",
-        "Probiere mehrere Methoden: 24=2×12, 3×8, 4×6. Welche ist einfacher?",
-        "Si conoces Die 12er-Tabelle, duplica: 12×7=84, also 24×7=168",
-        "Cuenta por docenas: 24 = 2 docenas. 24×5 = 10 docenas = 120",
-        "Zähle in veinticuatro en veinticuatro: 24, 48, 72, 96, 120, 144, 168, 192, 216, 240",
+        "Verdreifachen Sie die 8er-Tabelle: 24×n = verdreifacht(8×n). 24×5 = verdreifacht(40) = 120.",
+        "Oder verdoppeln Sie die 12er-Tabelle: 24×n = verdoppelt(12×n) — nehmen Sie die kleinere Tabelle, die Sie besser kennen.",
+        "Verbinden Sie es mit der Zeit: 24 Stunden am Tag ist ein vertrauter Alltagsanker für diese Zahl.",
+        "Zählen Sie laut in 24er-Schritten: 24, 48, 72, 96, 120, 144, 168, 192, 216, 240.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       25: [
-        "System von cuartos: 25 = 100÷4. Also 25×4=100, 25×8=200",
-        "Lerne Muster de los últimos dos dígitos: 25, 50, 75, 00 se repite",
-        "Ãœbe mit Geld: cuenta monedas de 25 centavos",
-        "Denk daran, dass es el cuadrado de 5: 25=5×5",
-        "Cálculo Prozent-Beziehungs: 25% = 1/4. Nutze Diese Beziehung",
+        "Viertel-System: 25 = 100÷4. Also 25×4=100, 25×8=200",
+        "Lerne das Muster der letzten zwei Ziffern: 25, 50, 75, 00 wiederholt sich",
+        "Übe mit Geld: zähle 25-Cent-Münzen",
+        "Denk daran, dass es das Quadrat von 5 ist: 25=5×5",
+        "Prozentrechnung: 25% = 1/4. Nutze diese Beziehung",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       26: [
-        "Si conoces Die 13er-Tabelle, duplica: 13×8=104, also 26×8=208",
-        "25+1 Strategie: 26×4 = 100+4 = 104",
-        "Verbinde es mit el alfabeto: hay 26 letras",
-        "Zähle in veintiséis en veintiséis: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
-        "Übe los Vielfache más difíciles: 26×7=182, 26×9=234",
+        "Wenn du die 13er-Tabelle kennst, verdopple: 13×8=104, also 26×8=208",
+        "25+1-Strategie: 26×4 = 100+4 = 104",
+        "Verbinde es mit dem Alphabet: es gibt 26 Buchstaben",
+        "Zähle in Sechsundzwanzigerschritten: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
+        "Übe die schwierigsten Vielfachen: 26×7=182, 26×9=234",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       27: [
-        "Nutze la 30-3 Strategie: 27×n = 30n - 3n",
-        "Si conoces Die 9er-Tabelle, triplícala: 9×6=54, así que 27×6=162",
-        "Denk daran, dass es el cubo de 3: 27=3×3×3",
-        "ZÃ¤hle in 27er-Schritten: 27, 54, 81, 108, 135, 162, 189, 216, 243, 270",
-        "Übe los Vielfache más difíciles: 27×7=189, 27×8=216, 27×9=243",
+        "Nutze die 30-3-Strategie: 27×n = 30n - 3n",
+        "Wenn du die 9er-Tabelle kennst, verdreifache sie: 9×6=54, also 27×6=162",
+        "Denk daran, dass es die Kubikzahl von 3 ist: 27=3×3×3",
+        "Zähle in 27er-Schritten: 27, 54, 81, 108, 135, 162, 189, 216, 243, 270",
+        "Übe die schwierigsten Vielfachen: 27×7=189, 27×8=216, 27×9=243",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       28: [
-        "Nutze die Beziehung 4×7: multiplica Die 4er-Tabelle por 7",
-        "O duplica 14: 14×5=70, also 28×5=140",
-        "Verbinde es mit febrero: 28 Tage (año normal)",
-        "Zähle in veintiocho en veintiocho: 28, 56, 84, 112, 140, 168, 196, 224, 252, 280",
-        "Lerne auswendig los Vielfache más útiles: 28×5=140, 28×7=196, 28×10=280",
+        "Nutze die Beziehung 4×7: multipliziere die 4er-Tabelle mit 7",
+        "Oder verdopple 14: 14×5=70, also 28×5=140",
+        "Verbinde es mit dem Februar: 28 Tage in einem normalen Jahr",
+        "Zähle in Achtundzwanzigerschritten: 28, 56, 84, 112, 140, 168, 196, 224, 252, 280",
+        "Lerne die nützlichsten Vielfachen auswendig: 28×5=140, 28×7=196, 28×10=280",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       29: [
-        "Nutze la 30-1 Strategie: 29×n = 30n - n",
+        "Nutze die 30-1-Strategie: 29×n = 30n - n",
         "Beispiel: 29×8 = 240-8 = 232. Sehr einfach!",
-        "Verbinde es mit año bisiesto: 29 Tage en febrero",
-        "Zähle in veintinueve en veintinueve: 29, 58, 87, 116, 145, 174, 203, 232, 261, 290",
-        "Übe los Vielfache más difíciles: 29×7=203, 29×9=261",
+        "Verbinde es mit dem Schaltjahr: 29 Tage im Februar",
+        "Zähle in Neunundzwanzigerschritten: 29, 58, 87, 116, 145, 174, 203, 232, 261, 290",
+        "Übe die schwierigsten Vielfachen: 29×7=203, 29×9=261",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       30: [
-        "Estrategia 3×10: mit 10 multiplizieren, dann mit 3",
-        "Beispiel: 7×30 = 70×3 = 210 oder 7×3=21, fÃ¼ge hinzu un 0: 210",
-        "Verbinde es mit media hora: 30 minutos",
-        "Tage del mes: Muchos Monate tienen 30 Tage (abril, junio, septiembre, noviembre)",
-        "Zähle in treinta en treinta: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300",
+        "Strategie 3×10: mit 10 multiplizieren, dann mit 3",
+        "Beispiel: 7×30 = 70×3 = 210, oder 7×3=21, dann eine 0 anfügen: 210",
+        "Verbinde es mit einer halben Stunde: 30 Minuten",
+        "Monatstage: Viele Monate haben 30 Tage (April, Juni, September, November)",
+        "Zähle in Dreißigerschritten: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       31: [
-        "Nutze la 30+1 Strategie: 31×n = 30n + n",
-        "Beispiel: 31×8 = 240 + 8 = 248. Muy simple y efectivo!",
-        "Verbinde es mit el calendario: 31 Tage es la longitud máxima del mes",
-        "Zähle in treinta y uno en treinta y uno: 31, 62, 93, 124, 155, 186, 217, 248, 279, 310",
-        "Übe los Vielfache más difíciles: 31×7=217, 31×9=279",
+        "Nutze die 30+1-Strategie: 31×n = 30n + n",
+        "Beispiel: 31×8 = 240 + 8 = 248. Ganz einfach und wirkungsvoll!",
+        "Verbinde es mit dem Kalender: 31 Tage ist die maximale Monatslänge",
+        "Zähle in Einunddreißigerschritten: 31, 62, 93, 124, 155, 186, 217, 248, 279, 310",
+        "Übe die schwierigsten Vielfachen: 31×7=217, 31×9=279",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       32: [
-        "Nutze la Verdopplungskette: duplica 16",
+        "Nutze die Verdopplungskette: verdopple ausgehend von 16",
         "Beispiel: 16×5=80, also 32×5=160",
-        "Denk daran, dass es Potenz von 2: 32=2×2×2×2×2",
-        "Zähle in treinta y dos en treinta y dos: 32, 64, 96, 128, 160, 192, 224, 256, 288, 320",
-        "Verbinde es mit Computer-Begriffen: System von 32 bits",
+        "Denk daran, dass es eine Potenz von 2 ist: 32=2×2×2×2×2",
+        "Zähle in Zweiunddreißigerschritten: 32, 64, 96, 128, 160, 192, 224, 256, 288, 320",
+        "Verbinde es mit Computerbegriffen: 32-Bit-System",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       33: [
-        "Nutze la estrategia 3×11: Verdreifache die 11er-Tabelle",
+        "Nutze die Strategie 3×11: verdreifache die 11er-Tabelle",
         "Oder multipliziere die 3er-Tabelle mit 11: 3×7=21, 21×11=231, also 33×7=231",
-        "Observa el Muster de repetición: 33, 66, 99 (primeros tres resultados)",
-        "Zähle in treinta y tres en treinta y tres: 33, 66, 99, 132, 165, 198, 231, 264, 297, 330",
-        "Übe los Vielfache más difíciles: 33×7=231, 33×8=264, 33×9=297",
+        "Beobachte das Wiederholungsmuster: 33, 66, 99 (die ersten drei Ergebnisse)",
+        "Zähle in Dreiunddreißigerschritten: 33, 66, 99, 132, 165, 198, 231, 264, 297, 330",
+        "Übe die schwierigsten Vielfachen: 33×7=231, 33×8=264, 33×9=297",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       34: [
-        "Si conoces Die 17er-Tabelle, duplícala: 17×6=102, also 34×6=204",
-        "35-1 Strategie: 34×4 = 140-4 = 136",
-        "O Nutze 30+4: 34×5 = 150+20 = 170",
-        "Zähle in treinta y cuatro en treinta y cuatro: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340",
-        "Lerne auswendig los Vielfache más útiles: 34×5=170, 34×10=340",
+        "Wenn du die 17er-Tabelle kennst, verdopple sie: 17×6=102, also 34×6=204",
+        "35-1-Strategie: 34×4 = 140-4 = 136",
+        "Oder nutze 30+4: 34×5 = 150+20 = 170",
+        "Zähle in Vierunddreißigerschritten: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340",
+        "Lerne die nützlichsten Vielfachen auswendig: 34×5=170, 34×10=340",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       35: [
-        "Estrategia 5×7: multiplica Die 5er-Tabelle por 7 o viceversa",
+        "Strategie 5×7: multipliziere die 5er-Tabelle mit 7 oder umgekehrt",
         "Beispiel: 35×4 = 5×4×7 = 20×7 = 140",
-        "Nutze el Muster del último dígito: Endet auf 5 oder 0",
-        "Zähle in treinta y cinco en treinta y cinco: 35, 70, 105, 140, 175, 210, 245, 280, 315, 350",
-        "Cálculo de tiempo: 35 minutos = media hora + 5 minutos",
+        "Nutze das Muster der letzten Ziffer: endet auf 5 oder 0",
+        "Zähle in Fünfunddreißigerschritten: 35, 70, 105, 140, 175, 210, 245, 280, 315, 350",
+        "Zeitrechnung: 35 Minuten = halbe Stunde + 5 Minuten",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       36: [
-        "Denk daran, dass es el cuadrado de 6: 36=6×6",
+        "Denk daran, dass es das Quadrat von 6 ist: 36=6×6",
         "Mehrere Methoden: 36=4×9, 3×12, 2×18. Welche ist einfacher?",
-        "Si conoces Die 9er-Tabelle, multíplica por 4: 9×7=63, 63×4=252, also 36×7=252",
-        "Zähle in treinta y seis en treinta y seis: 36, 72, 108, 144, 180, 216, 252, 288, 324, 360",
-        "Medición de ángulos: 360° es una vuelta completa, 36° es la décima parte",
+        "Wenn du die 9er-Tabelle kennst, multipliziere mit 4: 9×7=63, 63×4=252, also 36×7=252",
+        "Zähle in Sechsunddreißigerschritten: 36, 72, 108, 144, 180, 216, 252, 288, 324, 360",
+        "Winkelmessung: 360° ist eine volle Umdrehung, 36° ist ein Zehntel davon",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       37: [
-        "Nutze la 40-3 Strategie: 37×n = 40n - 3n",
-        "Lerne auswendig la Magische Beziehung zu 111: 37×3=111, 37×6=222, 37×9=333!",
+        "Nutze die 40-3-Strategie: 37×n = 40n - 3n",
+        "Lerne die verblüffende Beziehung zu 111 auswendig: 37×3=111, 37×6=222, 37×9=333!",
         "Beispiel: 37×8 = 320 - 24 = 296",
-        "Zähle in treinta y siete en treinta y siete: 37, 74, 111, 148, 185, 222, 259, 296, 333, 370",
-        "Descubre el Muster de repetición: resultados interesantes en cada múltiplo de 3",
+        "Zähle in Siebenunddreißigerschritten: 37, 74, 111, 148, 185, 222, 259, 296, 333, 370",
+        "Entdecke das Wiederholungsmuster: interessante Ergebnisse bei jedem Vielfachen von 3",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       38: [
-        "Si conoces Die 19er-Tabelle, duplícala: 19×7=133, also 38×7=266",
-        "40-2 Strategie: 38×6 = 240 - 12 = 228",
-        "Zähle in treinta y ocho en treinta y ocho: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380",
-        "Übe los Vielfache más difíciles: 38×7=266, 38×9=342",
-        "Verbinde es mit la temperatura corporal: 38°C es fiebre leve",
+        "Wenn du die 19er-Tabelle kennst, verdopple sie: 19×7=133, also 38×7=266",
+        "40-2-Strategie: 38×6 = 240 - 12 = 228",
+        "Zähle in Achtunddreißigerschritten: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380",
+        "Übe die schwierigsten Vielfachen: 38×7=266, 38×9=342",
+        "Verbinde es mit der Körpertemperatur: 38°C ist leichtes Fieber",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       39: [
-        "40-1 Strategie es PERFECTA: 39×n = 40n - n",
+        "Die 40-1-Strategie ist ideal: 39×n = 40n - n",
         "Beispiel: 39×7 = 280 - 7 = 273. Sehr einfach!",
-        "O Nutze 3×13: Verdreifache die 13er-Tabelle",
-        "Zähle in treinta y nueve en treinta y nueve: 39, 78, 117, 156, 195, 234, 273, 312, 351, 390",
-        "Übe los Vielfache más difíciles: 39×7=273, 39×8=312",
+        "Oder nutze 3×13: verdreifache die 13er-Tabelle",
+        "Zähle in Neununddreißigerschritten: 39, 78, 117, 156, 195, 234, 273, 312, 351, 390",
+        "Übe die schwierigsten Vielfachen: 39×7=273, 39×8=312",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        "Estrategia 4×10: mit 10 multiplizieren, dann mit 4",
-        "Beispiel: 7×40 = 70×4 = 280 oder 7×4=28, fÃ¼ge hinzu un 0: 280",
-        "Semana laboral: 40 horas estándar de trabajo",
-        "Zähle in cuarenta en cuarenta: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400",
-        "Cálculo porcentual: 40% = 2/5",
+        "Strategie 4×10: mit 10 multiplizieren, dann mit 4",
+        "Beispiel: 7×40 = 70×4 = 280, oder 7×4=28, dann eine 0 anfügen: 280",
+        "Arbeitswoche: 40 Stunden sind der Standard",
+        "Zähle in Vierzigerschritten: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400",
+        "Prozentrechnung: 40% = 2/5",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       41: [
-        "40+1 Strategie es PERFECTA: 41×n = 40n + n",
+        "Die 40+1-Strategie ist ideal: 41×n = 40n + n",
         "Beispiel: 41×7 = 280 + 7 = 287. Sehr einfach!",
-        "Zähle in cuarenta y uno en cuarenta y uno: 41, 82, 123, 164, 205, 246, 287, 328, 369, 410",
-        "Übe los Vielfache más difíciles: 41×7=287, 41×8=328",
-        "Número primo: NUR Durch 1 Teilbar und 41",
+        "Zähle in Einundvierzigerschritten: 41, 82, 123, 164, 205, 246, 287, 328, 369, 410",
+        "Übe die schwierigsten Vielfachen: 41×7=287, 41×8=328",
+        "Primzahl: nur durch 1 und 41 teilbar",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       42: [
-        "Nutze die Beziehung 6×7: Stärkt beide Tabellen",
-        "Zähle in cuarenta y dos en cuarenta y dos: 42, 84, 126, 168, 210, 252, 294, 336, 378, 420",
+        "Nutze die Beziehung 6×7: stärkt beide Tabellen",
+        "Zähle in Zweiundvierzigerschritten: 42, 84, 126, 168, 210, 252, 294, 336, 378, 420",
         "Mehrere Methoden: 42=6×7=2×21=3×14. Welche ist einfacher?",
-        "Referencia a la Guía del Autoestopista: 42 es famoso en la cultura popular!",
-        "Übe los Vielfache más difíciles: 42×7=294, 42×8=336",
+        "Popkultur-Referenz: 42 ist berühmt als 'Antwort auf die letzte aller Fragen' aus dem Anhalter-Roman!",
+        "Übe die schwierigsten Vielfachen: 42×7=294, 42×8=336",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       43: [
-        "Prueba Die Strategien 40+3 oder 45-2",
-        "Beispiel: 43×6 = 240+18 = 258 oder 270-12 = 258",
-        "Zähle in cuarenta y tres en cuarenta y tres: 43, 86, 129, 172, 215, 258, 301, 344, 387, 430",
-        "Übe los Vielfache más difíciles: 43×7=301, 43×8=344",
-        "Número primo: un número especial que requiere estrategias creativas",
+        "Probiere die Strategien 40+3 oder 45-2",
+        "Beispiel: 43×6 = 240+18 = 258, oder 270-12 = 258",
+        "Zähle in Dreiundvierzigerschritten: 43, 86, 129, 172, 215, 258, 301, 344, 387, 430",
+        "Übe die schwierigsten Vielfachen: 43×7=301, 43×8=344",
+        "Primzahl: eine besondere Zahl, die kreative Strategien erfordert",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       44: [
-        "Cuatro veces 11: Vervierfache die 11er-Tabelle",
-        "Beispiel: 11×7=77, ×4=308, also 44×7=308",
-        "Zähle in cuarenta y cuatro en cuarenta y cuatro: 44, 88, 132, 176, 220, 264, 308, 352, 396, 440",
-        "Muster de repetición: 44, 88 muestran Muster de Doppelziffern",
-        "Übe los Vielfache más difíciles: 44×7=308, 44×9=396",
+        "Vervierfachen Sie den 11er-Fakt: 44×n = 4×(11×n).",
+        "Oder verdoppeln Sie die 22er-Tabelle: 44×n = verdoppelt(22×n).",
+        "Verbinden Sie es mit der Geschichte: Barack Obama war der 44. Präsident der USA — ein einprägsamer Anker für diese Zahl.",
+        "Zählen Sie laut in 44er-Schritten: 44, 88, 132, 176, 220, 264, 308, 352, 396, 440.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       45: [
-        "Relación 5×9: Du kannst beide Tabellen nutzen",
+        "Beziehung 5×9: du kannst beide Tabellen nutzen",
         "Beispiel: 45×7 = 9×7×5 = 63×5 = 315",
-        "Zähle in cuarenta y cinco en cuarenta y cinco: 45, 90, 135, 180, 225, 270, 315, 360, 405, 450",
-        "Ángulo: 45° es medio ángulo recto, importante en geometría",
-        "Tiempo: 45 minutos = tres cuartos de hora (3/4 de hora)",
+        "Zähle in Fünfundvierzigerschritten: 45, 90, 135, 180, 225, 270, 315, 360, 405, 450",
+        "Winkel: 45° ist ein halber rechter Winkel, wichtig in der Geometrie",
+        "Zeit: 45 Minuten = drei Viertelstunden",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       46: [
-        "El doble de 23: Verdopple die 23er-Tabelle",
+        "Verdopple die 23er-Tabelle",
         "Beispiel: 23×7=161, ×2=322, also 46×7=322",
-        "Estrategias 45+1 oder 50-4: 46×5 = 225+5 = 230",
-        "Zähle in cuarenta y seis en cuarenta y seis: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460",
-        "Biología: 46 cromosomas (23 pares) en el ADN humano",
+        "Strategien 45+1 oder 50-4: 46×5 = 225+5 = 230",
+        "Zähle in Sechsundvierzigerschritten: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460",
+        "Biologie: 46 Chromosomen (23 Paare) im menschlichen Erbgut",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       47: [
-        "50-3 Strategie es PERFECTA: 47×n = 50n - 3n",
+        "Die 50-3-Strategie ist ideal: 47×n = 50n - 3n",
         "Beispiel: 47×7 = 350 - 21 = 329. Sehr einfach!",
-        "Zähle in cuarenta y siete en cuarenta y siete: 47, 94, 141, 188, 235, 282, 329, 376, 423, 470",
-        "Übe los Vielfache más difíciles: 47×7=329, 47×8=376",
-        "Número primo: requiere estrategias mentales especiales",
+        "Zähle in Siebenundvierzigerschritten: 47, 94, 141, 188, 235, 282, 329, 376, 423, 470",
+        "Übe die schwierigsten Vielfachen: 47×7=329, 47×8=376",
+        "Primzahl: erfordert besondere Kopfrechenstrategien",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       48: [
-        "Múltiples métodos: 48=6×8=4×12=3×16=2×24",
+        "Mehrere Methoden: 48=6×8=4×12=3×16=2×24",
         "Beispiel: 48×5 = 12×20 = 240",
-        "Zähle in cuarenta y ocho en cuarenta y ocho: 48, 96, 144, 192, 240, 288, 336, 384, 432, 480",
-        "Tiempo: 48 horas = 2 Tage. 72 horas = 3 Tage",
-        "Übe los Vielfache más difíciles: 48×7=336, 48×9=432",
+        "Zähle in Achtundvierzigerschritten: 48, 96, 144, 192, 240, 288, 336, 384, 432, 480",
+        "Zeit: 48 Stunden = 2 Tage. 72 Stunden = 3 Tage",
+        "Übe die schwierigsten Vielfachen: 48×7=336, 48×9=432",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       49: [
-        "Cuadrado de 7: 49=7×7. Stärkt Die 7er-Tabelle",
-        "50-1 Strategie MUY FÁCIL: 49×n = 50n - n",
-        "Beispiel: 49×7 = 350 - 7 = 343. Simple!",
-        "Zähle in cuarenta y nueve en cuarenta y nueve: 49, 98, 147, 196, 245, 294, 343, 392, 441, 490",
-        "Quadratzahl: 49=7² para Berechnungen de área en geometría",
+        "Quadrat von 7: 49=7×7. Stärkt die 7er-Tabelle",
+        "Die 50-1-Strategie ist sehr leicht: 49×n = 50n - n",
+        "Beispiel: 49×7 = 350 - 7 = 343. Einfach!",
+        "Zähle in Neunundvierzigerschritten: 49, 98, 147, 196, 245, 294, 343, 392, 441, 490",
+        "Quadratzahl: 49=7² für Flächenberechnungen in der Geometrie",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        "Estrategia 5×10: mit 5 multiplizieren, fÃ¼ge hinzu un 0",
-        "Beispiel: 8×50: 8×5=40, fÃ¼ge hinzu un 0: 400",
-        "La HÃ¤lfte von 100: 50×7 = 350 (700÷2)",
-        "Zähle in cincuenta en cincuenta: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500",
-        "Porcentaje: 50% = 1/2, die Beziehung porcentual más importante",
+        "Strategie 5×10: mit 5 multiplizieren, dann eine 0 anfügen",
+        "Beispiel: 8×50: 8×5=40, dann eine 0 anfügen: 400",
+        "Die Hälfte von 100: 50×7 = 350 (700÷2)",
+        "Zähle in Fünfzigerschritten: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500",
+        "Prozentrechnung: 50% = 1/2, die wichtigste Prozentbeziehung",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       51: [
-        "50+1 Strategie es PERFECTA: 51×n = 50n + n",
+        "Die 50+1-Strategie ist ideal: 51×n = 50n + n",
         "Beispiel: 51×7 = 350 + 7 = 357. Sehr einfach!",
-        "Zähle in cincuenta y uno en cincuenta y uno: 51, 102, 153, 204, 255, 306, 357, 408, 459, 510",
-        "Relación 3×17: Verdreifache die 17er-Tabelle",
-        "Übe los Vielfache más difíciles: 51×7=357, 51×8=408",
+        "Zähle in Einundfünfzigerschritten: 51, 102, 153, 204, 255, 306, 357, 408, 459, 510",
+        "Beziehung 3×17: verdreifache die 17er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 51×7=357, 51×8=408",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       52: [
-        "Relación 4×13: Vervierfache die 13er-Tabelle",
+        "Beziehung 4×13: vervierfache die 13er-Tabelle",
         "Beispiel: 13×7=91, ×4=364, also 52×7=364",
-        "Zähle in cincuenta y dos en cincuenta y dos: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
-        "Calendario: 52 Wochen = 1 Jahr. Para Berechnungen anuales",
-        "Cartas: 52 cartas para juegos y problemas de probabilidad",
+        "Zähle in Zweiundfünfzigerschritten: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
+        "Kalender: 52 Wochen = 1 Jahr — nützlich für Jahresrechnungen",
+        "Karten: 52 Spielkarten für Spiele und Wahrscheinlichkeitsaufgaben",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       53: [
-        "50+3 Strategie: 53×n = 50n + 3n",
+        "50+3-Strategie: 53×n = 50n + 3n",
         "Beispiel: 53×6 = 300 + 18 = 318",
-        "Zähle in cincuenta y tres en cincuenta y tres: 53, 106, 159, 212, 265, 318, 371, 424, 477, 530",
-        "Übe los Vielfache más difíciles: 53×7=371, 53×8=424",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Zähle in Dreiundfünfzigerschritten: 53, 106, 159, 212, 265, 318, 371, 424, 477, 530",
+        "Übe die schwierigsten Vielfachen: 53×7=371, 53×8=424",
+        "Primzahl: erfordert kreative Rechenstrategien",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       54: [
-        "Relación 6×9: Du kannst beide Tabellen nutzen",
+        "Beziehung 6×9: du kannst beide Tabellen nutzen",
         "Beispiel: 54×5 = 9×5×6 = 45×6 = 270",
-        "Zähle in cincuenta y cuatro en cincuenta y cuatro: 54, 108, 162, 216, 270, 324, 378, 432, 486, 540",
-        "Múltiples métodos: 54=6×9=2×27=3×18",
-        "Übe los Vielfache más difíciles: 54×7=378, 54×8=432",
+        "Zähle in Vierundfünfzigerschritten: 54, 108, 162, 216, 270, 324, 378, 432, 486, 540",
+        "Mehrere Methoden: 54=6×9=2×27=3×18",
+        "Übe die schwierigsten Vielfachen: 54×7=378, 54×8=432",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       55: [
-        "Beziehung 5×11: Stärkt beide Tabellen",
+        "Beziehung 5×11: stärkt beide Tabellen",
         "Beispiel: 55×4 = 11×4×5 = 44×5 = 220",
-        "Zähle in cincuenta y cinco en cincuenta y cinco: 55, 110, 165, 220, 275, 330, 385, 440, 495, 550",
-        "Dreieckszahl: 55 = 1+2+3+...+10, propiedad matemática especial",
-        "Übe los Vielfache más difíciles: 55×7=385, 55×9=495",
+        "Zähle in Fünfundfünfzigerschritten: 55, 110, 165, 220, 275, 330, 385, 440, 495, 550",
+        "Dreieckszahl: 55 = 1+2+3+...+10, eine besondere mathematische Eigenschaft",
+        "Übe die schwierigsten Vielfachen: 55×7=385, 55×9=495",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       56: [
-        "Relación 7×8: Die SCHWIERIGSTE Multiplikation! Stärkt beide",
+        "Beziehung 7×8: die SCHWIERIGSTE Multiplikation! Stärkt beide Tabellen",
         "Beispiel: 56×5 = 7×5×8 = 35×8 = 280",
-        "Zähle in cincuenta y seis en cincuenta y seis: 56, 112, 168, 224, 280, 336, 392, 448, 504, 560",
-        "Alternativa: 56=4×14=2×28. Elige la forma einfacher",
-        "Übe los Vielfache más difíciles: 56×7=392, 56×9=504",
+        "Zähle in Sechsundfünfzigerschritten: 56, 112, 168, 224, 280, 336, 392, 448, 504, 560",
+        "Alternative: 56=4×14=2×28. Wähle die einfachere Variante",
+        "Übe die schwierigsten Vielfachen: 56×7=392, 56×9=504",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       57: [
-        "60-3 Strategie es PERFECTA: 57×n = 60n - 3n",
+        "Die 60-3-Strategie ist ideal: 57×n = 60n - 3n",
         "Beispiel: 57×7 = 420 - 21 = 399. Sehr einfach!",
-        "Zähle in cincuenta y siete en cincuenta y siete: 57, 114, 171, 228, 285, 342, 399, 456, 513, 570",
-        "Relación 3×19: Verdreifache die 19er-Tabelle",
-        "Übe los Vielfache más difíciles: 57×7=399, 57×8=456",
+        "Zähle in Siebenundfünfzigerschritten: 57, 114, 171, 228, 285, 342, 399, 456, 513, 570",
+        "Beziehung 3×19: verdreifache die 19er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 57×7=399, 57×8=456",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       58: [
-        "60-2 Strategie: 58×n = 60n - 2n",
+        "60-2-Strategie: 58×n = 60n - 2n",
         "Beispiel: 58×6 = 360 - 12 = 348",
-        "Zähle in cincuenta y ocho en cincuenta y ocho: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580",
-        "El doble de 29: Verdopple die 29er-Tabelle",
-        "Übe los Vielfache más difíciles: 58×7=406, 58×9=522",
+        "Zähle in Achtundfünfzigerschritten: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580",
+        "Verdopple die 29er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 58×7=406, 58×9=522",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       59: [
-        "60-1 Strategie SÚPER FÁCIL: 59×n = 60n - n",
+        "Die 60-1-Strategie ist super leicht: 59×n = 60n - n",
         "Beispiel: 59×7 = 420 - 7 = 413. PERFEKT!",
-        "Zähle in cincuenta y nueve en cincuenta y nueve: 59, 118, 177, 236, 295, 354, 413, 472, 531, 590",
-        "Tiempo: 59 minutos, 59 segundos - 1 minus que 60",
-        "Übe los Vielfache más difíciles: 59×7=413, 59×8=472",
+        "Zähle in Neunundfünfzigerschritten: 59, 118, 177, 236, 295, 354, 413, 472, 531, 590",
+        "Zeit: 59 Minuten, 59 Sekunden — eine Einheit weniger als 60",
+        "Übe die schwierigsten Vielfachen: 59×7=413, 59×8=472",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        "Estrategia 6×10: mit 6 multiplizieren, fÃ¼ge hinzu un 0",
-        "Beispiel: 7×60: 7×6=42, fÃ¼ge hinzu un 0: 420",
-        "Zähle in sesenta en sesenta: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600",
-        "Tiempo: 60 minutos=1 hora, 60 segundos=1 minuto",
-        "Múltiples métodos: 60=6×10=5×12=4×15=3×20=2×30",
+        "Strategie 6×10: mit 6 multiplizieren, dann eine 0 anfügen",
+        "Beispiel: 7×60: 7×6=42, dann eine 0 anfügen: 420",
+        "Zähle in Sechzigerschritten: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600",
+        "Zeit: 60 Minuten = 1 Stunde, 60 Sekunden = 1 Minute",
+        "Mehrere Methoden: 60=6×10=5×12=4×15=3×20=2×30",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       61: [
-        "60+1 Strategie es PERFECTA: 61×n = 60n + n",
+        "Die 60+1-Strategie ist ideal: 61×n = 60n + n",
         "Beispiel: 61×7 = 420 + 7 = 427. Sehr einfach!",
-        "Zähle in sesenta y uno en sesenta y uno: 61, 122, 183, 244, 305, 366, 427, 488, 549, 610",
-        "Übe los Vielfache más difíciles: 61×7=427, 61×8=488",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Zähle in Einundsechzigerschritten: 61, 122, 183, 244, 305, 366, 427, 488, 549, 610",
+        "Übe die schwierigsten Vielfachen: 61×7=427, 61×8=488",
+        "Primzahl: erfordert kreative Rechenstrategien",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       62: [
-        "60+2 Strategie: 62×n = 60n + 2n",
+        "60+2-Strategie: 62×n = 60n + 2n",
         "Beispiel: 62×6 = 360 + 12 = 372",
-        "Zähle in sesenta y dos en sesenta y dos: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620",
-        "El doble de 31: Verdopple die 31er-Tabelle",
-        "Übe los Vielfache más difíciles: 62×7=434, 62×9=558",
+        "Zähle in Zweiundsechzigerschritten: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620",
+        "Verdopple die 31er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 62×7=434, 62×9=558",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       63: [
-        "Beziehung 7×9: Stärkt beide Tabellen",
+        "Beziehung 7×9: stärkt beide Tabellen",
         "Beispiel: 63×5 = 9×5×7 = 45×7 = 315",
-        "Zähle in sesenta y tres en sesenta y tres: 63, 126, 189, 252, 315, 378, 441, 504, 567, 630",
-        "Alternativa: 63=3×21. Verdreifache die 21er-Tabelle",
-        "Übe los Vielfache más difíciles: 63×7=441, 63×8=504",
+        "Zähle in Dreiundsechzigerschritten: 63, 126, 189, 252, 315, 378, 441, 504, 567, 630",
+        "Alternative: 63=3×21. Verdreifache die 21er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 63×7=441, 63×8=504",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       64: [
-        "Cuadrado de 8: 64=8×8=8². Auch 2⁶",
+        "Quadrat von 8: 64=8×8=8². Auch 2⁶",
         "Beispiel: 64×5 = 8×5×8 = 40×8 = 320",
-        "Zähle in sesenta y cuatro en sesenta y cuatro: 64, 128, 192, 256, 320, 384, 448, 512, 576, 640",
-        "Ajedrez: 8×8=64 casillas, aplicación geométrica",
-        "Computación: 64-Bit-Architektur, contexto tecnológico",
+        "Zähle in Vierundsechzigerschritten: 64, 128, 192, 256, 320, 384, 448, 512, 576, 640",
+        "Schach: 8×8=64 Felder — eine geometrische Anwendung",
+        "Informatik: 64-Bit-Architektur, ein technologischer Bezug",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       65: [
-        "Relación 5×13: Du kannst beide Tabellen nutzen",
+        "Beziehung 5×13: du kannst beide Tabellen nutzen",
         "Beispiel: 65×4 = 13×4×5 = 52×5 = 260",
-        "Zähle in sesenta y cinco en sesenta y cinco: 65, 130, 195, 260, 325, 390, 455, 520, 585, 650",
-        "Du kannst nutzen Die Strategien 60+5 oder 70-5",
-        "Übe los Vielfache más difíciles: 65×7=455, 65×9=585",
+        "Zähle in Fünfundsechzigerschritten: 65, 130, 195, 260, 325, 390, 455, 520, 585, 650",
+        "Du kannst die Strategien 60+5 oder 70-5 nutzen",
+        "Übe die schwierigsten Vielfachen: 65×7=455, 65×9=585",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       66: [
-        "Beziehung 6×11: Stärkt beide Tabellen",
+        "Beziehung 6×11: stärkt beide Tabellen",
         "Beispiel: 66×5 = 11×5×6 = 55×6 = 330",
-        "Zähle in sesenta y seis en sesenta y seis: 66, 132, 198, 264, 330, 396, 462, 528, 594, 660",
-        "Muster de repetición: 66 (6×11), Muster de Die 11er-Tabelle",
-        "Übe los Vielfache más difíciles: 66×7=462, 66×9=594",
+        "Zähle in Sechsundsechzigerschritten: 66, 132, 198, 264, 330, 396, 462, 528, 594, 660",
+        "Wiederholungsmuster: 66 (6×11) folgt dem Muster der 11er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 66×7=462, 66×9=594",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       67: [
-        "70-3 Strategie es PERFECTA: 67×n = 70n - 3n",
+        "Die 70-3-Strategie ist ideal: 67×n = 70n - 3n",
         "Beispiel: 67×7 = 490 - 21 = 469. Sehr einfach!",
-        "Zähle in sesenta y siete en sesenta y siete: 67, 134, 201, 268, 335, 402, 469, 536, 603, 670",
-        "Übe los Vielfache más difíciles: 67×7=469, 67×8=536",
-        "Número primo: requiere estrategias mentales especiales",
+        "Zähle in Siebenundsechzigerschritten: 67, 134, 201, 268, 335, 402, 469, 536, 603, 670",
+        "Übe die schwierigsten Vielfachen: 67×7=469, 67×8=536",
+        "Primzahl: erfordert besondere Kopfrechenstrategien",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       68: [
-        "70-2 Strategie: 68×n = 70n - 2n",
+        "70-2-Strategie: 68×n = 70n - 2n",
         "Beispiel: 68×6 = 420 - 12 = 408",
-        "Zähle in sesenta y ocho en sesenta y ocho: 68, 136, 204, 272, 340, 408, 476, 544, 612, 680",
-        "Relación 4×17: Vervierfache die 17er-Tabelle",
-        "Übe los Vielfache más difíciles: 68×7=476, 68×9=612",
+        "Zähle in Achtundsechzigerschritten: 68, 136, 204, 272, 340, 408, 476, 544, 612, 680",
+        "Beziehung 4×17: vervierfache die 17er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 68×7=476, 68×9=612",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       69: [
-        "70-1 Strategie SÚPER FÁCIL: 69×n = 70n - n",
+        "Die 70-1-Strategie ist super leicht: 69×n = 70n - n",
         "Beispiel: 69×7 = 490 - 7 = 483. PERFEKT!",
-        "Zähle in sesenta y nueve en sesenta y nueve: 69, 138, 207, 276, 345, 414, 483, 552, 621, 690",
-        "Relación 3×23: Verdreifache die 23er-Tabelle",
-        "Übe los Vielfache más difíciles: 69×7=483, 69×8=552",
+        "Zähle in Neunundsechzigerschritten: 69, 138, 207, 276, 345, 414, 483, 552, 621, 690",
+        "Beziehung 3×23: verdreifache die 23er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 69×7=483, 69×8=552",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        "Estrategia 7×10: mit 7 multiplizieren, fÃ¼ge hinzu un 0",
-        "Beispiel: 8×70: 8×7=56, fÃ¼ge hinzu un 0: 560",
-        "Zähle in setenta en setenta: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700",
-        "Stärkt Die 7er-Tabelle: cada resultado es 10 veces 7",
-        "Múltiples métodos: 70=7×10=5×14=2×35",
+        "Multiplizieren Sie mit 10, dann multiplizieren Sie das Ergebnis mit 7: für 70×6 zuerst 60, dann mit 7 multiplizieren, um 420 zu erhalten.",
+        "Oder multiplizieren Sie den 7er-Fakt mit 10: 70×n = 10×(7×n), also eine Null an die 7er-Antwort anhängen.",
+        "Verbinden Sie es mit dem britischen Autobahn-Tempolimit von 70 mph als Alltagsanker.",
+        "Zählen Sie laut in 70er-Schritten: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       71: [
-        "70+1 Strategie es PERFECTA: 71×n = 70n + n",
+        "Die 70+1-Strategie ist ideal: 71×n = 70n + n",
         "Beispiel: 71×7 = 490 + 7 = 497. Sehr einfach!",
-        "Zähle in setenta y uno en setenta y uno: 71, 142, 213, 284, 355, 426, 497, 568, 639, 710",
-        "Übe los Vielfache más difíciles: 71×7=497, 71×8=568",
-        "Número primo: requiere estrategias de cálculo creativas",
+        "Zähle in Einundsiebzigerschritten: 71, 142, 213, 284, 355, 426, 497, 568, 639, 710",
+        "Übe die schwierigsten Vielfachen: 71×7=497, 71×8=568",
+        "Primzahl: erfordert kreative Rechenstrategien",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       72: [
-        "Beziehung 8×9: Stärkt beide Tabellen",
+        "Beziehung 8×9: stärkt beide Tabellen",
         "Beispiel: 72×5 = 9×5×8 = 45×8 = 360",
-        "Zähle in setenta y dos en setenta y dos: 72, 144, 216, 288, 360, 432, 504, 576, 648, 720",
-        "Múltiples métodos: 72=8×9=6×12=4×18=3×24",
-        "Tiempo: 72 horas = 3 Tage. Aplicación práctica",
+        "Zähle in Zweiundsiebzigerschritten: 72, 144, 216, 288, 360, 432, 504, 576, 648, 720",
+        "Mehrere Methoden: 72=8×9=6×12=4×18=3×24",
+        "Zeit: 72 Stunden = 3 Tage — eine praktische Anwendung",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       73: [
-        "70+3 Strategie: 73×n = 70n + 3n",
-        "Beispiel: 73×5 = 350 + 15 = 365 (Tage del año!)",
-        "Zähle in setenta y tres en setenta y tres: 73, 146, 219, 292, 365, 438, 511, 584, 657, 730",
-        "Übe los Vielfache más difíciles: 73×7=511, 73×8=584",
-        "Número primo: Die 21º número primo, curiosidad matemática",
+        "Nutzen Sie 73×n = 70×n + 3×n: mit 70 multiplizieren, dann das Dreifache der Ausgangszahl addieren. 73×6 = 420 + 18 = 438.",
+        "Sprechen Sie es als Gewohnheit laut aus: 'siebzig Gruppen, plus drei mehr.'",
+        "Zählen Sie laut in 73er-Schritten: 73, 146, 219, 292, 365, 438, 511, 584, 657, 730.",
+        "Akzeptieren Sie, dass es für 73 keine Abkürzung über die Zerlegungsmethode hinaus gibt, und verlassen Sie sich auf Wiederholung, um Tempo aufzubauen.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       74: [
-        "75-1 Strategie: 74×n = 75n - n",
+        "75-1-Strategie: 74×n = 75n - n",
         "Beispiel: 74×5 = 375 - 5 = 370",
-        "Zähle in setenta y cuatro en setenta y cuatro: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740",
-        "Relación 2×37: Verdopple die 37er-Tabelle",
-        "Übe los Vielfache más difíciles: 74×7=518, 74×9=666",
+        "Zähle in Vierundsiebzigerschritten: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740",
+        "Verdopple die 37er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 74×7=518, 74×9=666",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       75: [
-        "Relaciones 3×25 oder 5×15: múltiples métodos",
-        "Beispiel: 75×4 = 25×12 = 300",
-        "Zähle in setenta y cinco en setenta y cinco: 75, 150, 225, 300, 375, 450, 525, 600, 675, 750",
-        "Porcentaje: 75% = 3/4, relación fraccionaria importante",
-        "Übe los Vielfache más difíciles: 75×7=525, 75×9=675",
+        "Nutzen Sie 75×n = 50×n + 25×n: mit 50 multiplizieren, dann ein Viertel von 100×n addieren. 75×6 = 300 + 150 = 450.",
+        "Oder multiplizieren Sie mit 100 und nehmen Sie drei Viertel des Ergebnisses: für 75×4 sind das 400, und drei Viertel von 400 sind 300.",
+        "Merken Sie sich, dass 75 drei Viertel von 100 ist — ein nützlicher Anker für prozentähnliche Berechnungen.",
+        "Zählen Sie laut in 75er-Schritten: 75, 150, 225, 300, 375, 450, 525, 600, 675, 750.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       76: [
-        "80-4 Strategie: 76×n = 80n - 4n",
+        "80-4-Strategie: 76×n = 80n - 4n",
         "Beispiel: 76×6 = 480 - 24 = 456",
-        "Zähle in setenta y seis en setenta y seis: 76, 152, 228, 304, 380, 456, 532, 608, 684, 760",
-        "Relación 4×19: Vervierfache die 19er-Tabelle",
-        "Übe los Vielfache más difíciles: 76×7=532, 76×9=684",
+        "Zähle in Sechsundsiebzigerschritten: 76, 152, 228, 304, 380, 456, 532, 608, 684, 760",
+        "Beziehung 4×19: vervierfache die 19er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 76×7=532, 76×9=684",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       77: [
-        "Beziehung 7×11: Stärkt beide Tabellen",
+        "Beziehung 7×11: stärkt beide Tabellen",
         "Beispiel: 77×5 = 11×5×7 = 55×7 = 385",
-        "Zähle in setenta y siete en setenta y siete: 77, 154, 231, 308, 385, 462, 539, 616, 693, 770",
-        "Muster de repetición: 77 (7×11), Muster especial",
-        "Übe los Vielfache más difíciles: 77×7=539, 77×9=693",
+        "Zähle in Siebenundsiebzigerschritten: 77, 154, 231, 308, 385, 462, 539, 616, 693, 770",
+        "Wiederholungsmuster: 77 (7×11) ist ein besonderes Muster",
+        "Übe die schwierigsten Vielfachen: 77×7=539, 77×9=693",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       78: [
-        "80-2 Strategie: 78×n = 80n - 2n",
+        "80-2-Strategie: 78×n = 80n - 2n",
         "Beispiel: 78×7 = 560 - 14 = 546",
-        "Zähle in setenta y ocho en setenta y ocho: 78, 156, 234, 312, 390, 468, 546, 624, 702, 780",
-        "Relación 6×13: Du kannst beide Tabellen nutzen",
-        "Übe los Vielfache más difíciles: 78×7=546, 78×9=702",
+        "Zähle in Achtundsiebzigerschritten: 78, 156, 234, 312, 390, 468, 546, 624, 702, 780",
+        "Beziehung 6×13: du kannst beide Tabellen nutzen",
+        "Übe die schwierigsten Vielfachen: 78×7=546, 78×9=702",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       79: [
-        "80-1 Strategie SÚPER FÁCIL: 79×n = 80n - n",
+        "Die 80-1-Strategie ist super leicht: 79×n = 80n - n",
         "Beispiel: 79×7 = 560 - 7 = 553. PERFEKT!",
-        "Zähle in setenta y nueve en setenta y nueve: 79, 158, 237, 316, 395, 474, 553, 632, 711, 790",
-        "Übe los Vielfache más difíciles: 79×7=553, 79×8=632",
-        "Número primo: 1 minus que 80, einfache Berechnung",
+        "Zähle in Neunundsiebzigerschritten: 79, 158, 237, 316, 395, 474, 553, 632, 711, 790",
+        "Übe die schwierigsten Vielfachen: 79×7=553, 79×8=632",
+        "Primzahl: eine Einheit weniger als 80, leicht zu berechnen",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        "Estrategia 8×10: mit 8 multiplizieren, fÃ¼ge hinzu un 0",
-        "Beispiel: 7×80: 7×8=56, fÃ¼ge hinzu un 0: 560",
-        "Zähle in ochenta en ochenta: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800",
-        "Stärkt Die 8er-Tabelle: cada resultado es 10 veces 8",
-        "Múltiples métodos: 80=8×10=4×20=5×16=2×40",
+        "Multiplizieren Sie mit 10, dann multiplizieren Sie das Ergebnis mit 8: für 80×6 zuerst 60, dann mit 8 multiplizieren, um 480 zu erhalten.",
+        "Oder verdoppeln Sie das Ergebnis von ×10 dreimal hintereinander: 60 → 120 → 240 → 480.",
+        "Verbinden Sie es damit, dass 80% vier Fünftel eines Ganzen sind — ein nützlicher Anker für prozentuales Denken.",
+        "Zählen Sie laut in 80er-Schritten: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        "Nutze que es el cuadrado de 9: 81=9×9",
+        "Nutze, dass es das Quadrat von 9 ist: 81=9×9",
         "Beispiel: 81×5 = (9×5)×9 = 45×9 = 405",
-        "80+1 Strategie: 81×n = 80n + n. Beispiel: 81×7 = 560+7 = 567",
-        "Zähle in ochenta y uno en ochenta y uno: 81, 162, 243, 324, 405, 486, 567, 648, 729, 810",
-        "Übe los Vielfache más difíciles: 81×7=567, 81×8=648, 81×9=729",
+        "80+1-Strategie: 81×n = 80n + n. Beispiel: 81×7 = 560+7 = 567",
+        "Zähle in Einundachtzigerschritten: 81, 162, 243, 324, 405, 486, 567, 648, 729, 810",
+        "Übe die schwierigsten Vielfachen: 81×7=567, 81×8=648, 81×9=729",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       82: [
-        "80+2 Strategie: 82×n = 80n + 2n",
+        "80+2-Strategie: 82×n = 80n + 2n",
         "Beispiel: 82×6 = 480 + 12 = 492",
-        "Zähle in ochenta y dos en ochenta y dos: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820",
-        "Relación 2×41: Verdopple die 41er-Tabelle",
-        "Übe los Vielfache más difíciles: 82×7=574, 82×9=738",
+        "Zähle in Zweiundachtzigerschritten: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820",
+        "Beziehung 2×41: verdopple die 41er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 82×7=574, 82×9=738",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       83: [
-        "Nutze la 85-2 Strategie oder 80+3",
-        "Beispiel: 83×6 = 510-12 = 498 oder 480+18 = 498",
-        "Zähle in ochenta y tres en ochenta y tres: 83, 166, 249, 332, 415, 498, 581, 664, 747, 830",
-        "Número primo: requiere estrategias de cálculo creativas",
-        "Übe los Vielfache más difíciles: 83×7=581, 83×8=664, 83×9=747",
+        "Nutze die 85-2-Strategie oder 80+3",
+        "Beispiel: 83×6 = 510-12 = 498, oder 480+18 = 498",
+        "Zähle in Dreiundachtzigerschritten: 83, 166, 249, 332, 415, 498, 581, 664, 747, 830",
+        "Primzahl: erfordert kreative Rechenstrategien",
+        "Übe die schwierigsten Vielfachen: 83×7=581, 83×8=664, 83×9=747",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       84: [
-        "Relación 7×12: Du kannst beide Tabellen nutzen",
+        "Beziehung 7×12: du kannst beide Tabellen nutzen",
         "Beispiel: 84×5 = 12×5×7 = 60×7 = 420",
-        "Zähle in ochenta y cuatro en ochenta y cuatro: 84, 168, 252, 336, 420, 504, 588, 672, 756, 840",
-        "Múltiples métodos: 84=7×12=6×14=4×21=3×28",
-        "Übe los Vielfache más difíciles: 84×7=588, 84×9=756",
+        "Zähle in Vierundachtzigerschritten: 84, 168, 252, 336, 420, 504, 588, 672, 756, 840",
+        "Mehrere Methoden: 84=7×12=6×14=4×21=3×28",
+        "Übe die schwierigsten Vielfachen: 84×7=588, 84×9=756",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       85: [
-        "Beziehung 5×17: Du kannst beide Tabellen nutzen, die 5er und die 17er",
+        "Beziehung 5×17: du kannst die 5er- und die 17er-Tabelle nutzen",
         "Beispiel: 85×4 = 17×4×5 = 68×5 = 340",
-        "Zähle in ochenta y cinco en ochenta y cinco: 85, 170, 255, 340, 425, 510, 595, 680, 765, 850",
-        "Último dígito: Endet auf 5 oder 0",
-        "Estrategias 90-5 oder 80+5: 85×6 = 540-30 = 510",
+        "Zähle in Fünfundachtzigerschritten: 85, 170, 255, 340, 425, 510, 595, 680, 765, 850",
+        "Letzte Ziffer: endet auf 5 oder 0",
+        "Strategien 90-5 oder 80+5: 85×6 = 540-30 = 510",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       86: [
-        "90-4 Strategie: 86×n = 90n - 4n",
+        "90-4-Strategie: 86×n = 90n - 4n",
         "Beispiel: 86×6 = 540 - 24 = 516",
-        "Zähle in ochenta y seis en ochenta y seis: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860",
-        "Relación 2×43: Verdopple die 43er-Tabelle",
-        "Übe los Vielfache más difíciles: 86×7=602, 86×9=774",
+        "Zähle in Sechsundachtzigerschritten: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860",
+        "Beziehung 2×43: verdopple die 43er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 86×7=602, 86×9=774",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       87: [
-        "90-3 Strategie es PERFECTA: 87×n = 90n - 3n",
+        "Die 90-3-Strategie ist ideal: 87×n = 90n - 3n",
         "Beispiel: 87×7 = 630 - 21 = 609. Sehr einfach!",
-        "Zähle in ochenta y siete en ochenta y siete: 87, 174, 261, 348, 435, 522, 609, 696, 783, 870",
-        "Relación 3×29: Verdreifache die 29er-Tabelle",
-        "Übe los Vielfache más difíciles: 87×7=609, 87×8=696, 87×9=783",
+        "Zähle in Siebenundachtzigerschritten: 87, 174, 261, 348, 435, 522, 609, 696, 783, 870",
+        "Beziehung 3×29: verdreifache die 29er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 87×7=609, 87×8=696, 87×9=783",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       88: [
-        "Relación 8×11: Du kannst beide Tabellen nutzen",
+        "Beziehung 8×11: du kannst beide Tabellen nutzen",
         "Beispiel: 88×5 = 11×5×8 = 55×8 = 440",
-        "Zähle in ochenta y ocho en ochenta y ocho: 88, 176, 264, 352, 440, 528, 616, 704, 792, 880",
-        "Eigenschaft von repetición: facilidad de reconocimiento visual (88)",
-        "Múltiples métodos: 88=8×11=4×22=2×44",
+        "Zähle in Achtundachtzigerschritten: 88, 176, 264, 352, 440, 528, 616, 704, 792, 880",
+        "Wiederholungseigenschaft: 88 ist leicht visuell zu erkennen",
+        "Mehrere Methoden: 88=8×11=4×22=2×44",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       89: [
-        "90-1 Strategie SÚPER FÁCIL: 89×n = 90n - n",
+        "Die 90-1-Strategie ist super leicht: 89×n = 90n - n",
         "Beispiel: 89×7 = 630 - 7 = 623. PERFEKT!",
-        "Zähle in ochenta y nueve en ochenta y nueve: 89, 178, 267, 356, 445, 534, 623, 712, 801, 890",
-        "Übe los Vielfache más difíciles: 89×7=623, 89×8=712, 89×9=801",
-        "Número primo: la 90-1 Strategie es el método más práctico",
+        "Zähle in Neunundachtzigerschritten: 89, 178, 267, 356, 445, 534, 623, 712, 801, 890",
+        "Übe die schwierigsten Vielfachen: 89×7=623, 89×8=712, 89×9=801",
+        "Primzahl: die 90-1-Strategie ist hier die praktischste Methode",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       90: [
-        "Estrategia 9×10: mit 9 multiplizieren, fÃ¼ge hinzu un 0",
-        "Beispiel: 7×90: 7×9=63, fÃ¼ge hinzu un 0: 630",
-        "Zähle in noventa en noventa: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900",
-        "Stärkt Die 9er-Tabelle: cada resultado es 10 veces 9",
-        "Múltiples métodos: 90=9×10=3×30=5×18=6×15",
+        "Multiplizieren Sie mit 10, dann multiplizieren Sie das Ergebnis mit 9: für 90×6 zuerst 60, dann mit 9 multiplizieren, um 540 zu erhalten.",
+        "Oder multiplizieren Sie den 9er-Fakt mit 10: 90×n = 10×(9×n), also eine Null an die 9er-Antwort anhängen.",
+        "Verbinden Sie es mit einem Fußballspiel: 90 Minuten sind die reguläre Spielzeit — ein vertrauter Alltagsanker.",
+        "Zählen Sie laut in 90er-Schritten: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900.",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       91: [
-        "Relación 7×13: Du kannst beide Tabellen nutzen",
+        "Beziehung 7×13: du kannst beide Tabellen nutzen",
         "Beispiel: 91×5 = 13×5×7 = 65×7 = 455",
-        "90+1 Strategie: 91×n = 90n + n. Beispiel: 91×7 = 630+7 = 637",
-        "Zähle in noventa y uno en noventa y uno: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
-        "Übe los Vielfache más difíciles: 91×7=637, 91×8=728, 91×9=819",
+        "90+1-Strategie: 91×n = 90n + n. Beispiel: 91×7 = 630+7 = 637",
+        "Zähle in Einundneunzigerschritten: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
+        "Übe die schwierigsten Vielfachen: 91×7=637, 91×8=728, 91×9=819",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       92: [
-        "Nutze la 90+2 Strategie oder 100-8",
-        "Beispiel: 92×6 = 480+12 = 492 oder 600-48 = 552",
-        "Zähle in noventa y dos en noventa y dos: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
-        "Relación 4×23: Vervierfache die 23er-Tabelle",
-        "Übe los Vielfache más difíciles: 92×7=644, 92×9=828",
+        "Nutze die 90+2-Strategie oder 100-8",
+        "Beispiel: 92×6 = 480+12 = 492, oder 600-48 = 552",
+        "Zähle in Zweiundneunzigerschritten: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
+        "Beziehung 4×23: vervierfache die 23er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 92×7=644, 92×9=828",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       93: [
-        "90+3 Strategie: 93×n = 90n + 3n",
+        "90+3-Strategie: 93×n = 90n + 3n",
         "Beispiel: 93×7 = 630 + 21 = 651",
-        "Zähle in noventa y tres en noventa y tres: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
-        "Relación 3×31: Verdreifache die 31er-Tabelle",
-        "Übe los Vielfache más difíciles: 93×7=651, 93×8=744, 93×9=837",
+        "Zähle in Dreiundneunzigerschritten: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
+        "Beziehung 3×31: verdreifache die 31er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 93×7=651, 93×8=744, 93×9=837",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       94: [
-        "100-6 Strategie es PERFECTA: 94×n = 100n - 6n",
+        "Die 100-6-Strategie ist ideal: 94×n = 100n - 6n",
         "Beispiel: 94×7 = 700 - 42 = 658. Sehr einfach!",
-        "Zähle in noventa y cuatro en noventa y cuatro: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
-        "Relación 2×47: Verdopple die 47er-Tabelle",
-        "Übe los Vielfache más difíciles: 94×7=658, 94×8=752, 94×9=846",
+        "Zähle in Vierundneunzigerschritten: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
+        "Beziehung 2×47: verdopple die 47er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 94×7=658, 94×8=752, 94×9=846",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       95: [
-        "Beziehung 5×19: Du kannst beide Tabellen nutzen, die 5er und die 19er",
+        "Beziehung 5×19: du kannst die 5er- und die 19er-Tabelle nutzen",
         "Beispiel: 95×4 = 19×4×5 = 76×5 = 380",
-        "Zähle in noventa y cinco en noventa y cinco: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
-        "Último dígito: Endet auf 5 oder 0",
-        "100-5 Strategie: 95×6 = 600-30 = 570. Sehr praktisch!",
+        "Zähle in Fünfundneunzigerschritten: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
+        "Letzte Ziffer: endet auf 5 oder 0",
+        "100-5-Strategie: 95×6 = 600-30 = 570. Sehr praktisch!",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       96: [
-        "Relación 8×12: Du kannst beide Tabellen nutzen",
+        "Beziehung 8×12: du kannst beide Tabellen nutzen",
         "Beispiel: 96×5 = 12×5×8 = 60×8 = 480",
-        "Zähle in noventa y seis en noventa y seis: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
-        "Múltiples métodos: 96=8×12=6×16=4×24=3×32",
-        "Übe los Vielfache más difíciles: 96×7=672, 96×9=864",
+        "Zähle in Sechsundneunzigerschritten: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
+        "Mehrere Methoden: 96=8×12=6×16=4×24=3×32",
+        "Übe die schwierigsten Vielfachen: 96×7=672, 96×9=864",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       97: [
-        "100-3 Strategie SÚPER FÁCIL: 97×n = 100n - 3n",
+        "Die 100-3-Strategie ist super leicht: 97×n = 100n - 3n",
         "Beispiel: 97×7 = 700 - 21 = 679. PERFEKT!",
-        "Zähle in noventa y siete en noventa y siete: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
-        "Übe los Vielfache más difíciles: 97×7=679, 97×8=776, 97×9=873",
-        "Número primo: la 100-3 Strategie es el método más práctico",
+        "Zähle in Siebenundneunzigerschritten: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
+        "Übe die schwierigsten Vielfachen: 97×7=679, 97×8=776, 97×9=873",
+        "Primzahl: die 100-3-Strategie ist hier die praktischste Methode",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       98: [
-        "100-2 Strategie MUY FÁCIL: 98×n = 100n - 2n",
+        "Die 100-2-Strategie ist sehr leicht: 98×n = 100n - 2n",
         "Beispiel: 98×7 = 700 - 14 = 686. PERFEKT!",
-        "Zähle in noventa y ocho en noventa y ocho: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
-        "Relación 2×49: Verdopple die 49er-Tabelle",
-        "Übe los Vielfache más difíciles: 98×7=686, 98×8=784, 98×9=882",
+        "Zähle in Achtundneunzigerschritten: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
+        "Beziehung 2×49: verdopple die 49er-Tabelle",
+        "Übe die schwierigsten Vielfachen: 98×7=686, 98×8=784, 98×9=882",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       99: [
-        "100-1 Strategie LA einfacher: 99×n = 100n - n",
+        "Die 100-1-Strategie ist am einfachsten: 99×n = 100n - n",
         "Beispiel: 99×7 = 700 - 7 = 693. PERFEKT!",
-        "Zähle in noventa y nueve en noventa y nueve: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
-        "Relación 9×11: Du kannst beide Tabellen nutzen",
-        "Muster de repetición: 99 proporciona facilidad de reconocimiento visual",
+        "Zähle in Neunundneunzigerschritten: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
+        "Beziehung 9×11: du kannst beide Tabellen nutzen",
+        "Wiederholungsmuster: 99 ist leicht visuell zu erkennen",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       100: [
         "DIE EINFACHSTE TABELLE! Füge zwei Nullen am Ende hinzu",
-        "Beispiel: 7×100 = 700. NUR fÃ¼ge hinzu 00 después dDie 7!",
-        "Zähle in cien en cien: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
-        "10 Beziehung×10: 10 veces Die 10er-Tabelle",
-        "Es la base para Berechnungen porcentuales: 100%=completo, es la base de todo!",
+        "Beispiel: 7×100 = 700. Einfach 00 nach der 7 anfügen!",
+        "Zähle in Hunderterschritten: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
+        "Beziehung 10×10: das Zehnfache der 10er-Tabelle",
+        "Ist die Grundlage für Prozentrechnungen: 100%=vollständig, die Basis von allem!",
       ],
     }
 
