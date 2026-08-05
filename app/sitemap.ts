@@ -6,11 +6,11 @@ import { getAllRanges, getAllNumbers } from '@/lib/url-helpers'
 // Update the relevant entry when that group's content actually changes —
 // this is what tells Google the page genuinely deserves recrawling.
 const CONTENT_LAST_UPDATED: Record<string, string> = {
-  homepage: '2026-07-21',
+  homepage: '2026-07-30',
   languageHubs: '2026-07-30',
   topicHubs: '2026-07-30',
-  rangePages: '2026-07-21',
-  audiencePages: '2026-07-21',
+  rangePages: '2026-07-30',
+  audiencePages: '2026-07-30',
   numberPages_1_12: '2026-07-30',
   numberPages_13_100: '2026-07-30',
 }
