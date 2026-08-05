@@ -170,6 +170,12 @@ const nextConfig = {
       // Redirect any remaining /sayi/* (encoded or unknown) to homepage
       { source: '/sayi/:slug*', destination: '/', permanent: true },
 
+      // Redirect cross-language audience slugs found in GSC — wrong locale's
+      // slug was used for the guide page, resulting in 404s / broken URLs.
+      { source: '/es/tablas-de-multiplicar/untuk-guru', destination: '/es/tablas-de-multiplicar/para-profesores', permanent: true },
+      { source: '/cs/nasobilka/untuk-siswa', destination: '/cs/nasobilka/pro-studenty', permanent: true },
+      { source: '/de/einmaleins/para-estudiantes', destination: '/de/einmaleins/fuer-schueler', permanent: true },
+
       // Redirect missing static assets that bots / browsers always request
       { source: '/favicon.ico', destination: '/favicon.svg', permanent: false },
       { source: '/logo.png',    destination: '/og-image.jpg', permanent: false },
