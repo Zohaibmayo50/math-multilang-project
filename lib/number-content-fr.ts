@@ -2,6 +2,10 @@
 // Per-number curated content for locale: fr
 import type { PatternItem, MistakeItem, RealLifeItem, FunFactItem } from './number-content-types'
 
+// Contamination audit performed 2026-07-30
+// Spanish-language fragments found and corrected (legacy of cloning from es.ts)
+// A native French speaker should spot-check corrected entries
+
 const meanings: { [key: number]: string } = {
       1: "Multiplier par 1 est un cas spécial en mathématiques. Lorsque vous multipliez n'imparte quel nombre par 1, le résultat est toujours ce même nombre. C'est ce qu'on appelle la propriété d'identité de la multiplication. Pensez-y comme à la question 'combien de groupes de quelque chose ai-je ?' Lorsque vous n'avez qu'un seul groupe, vous avez exactement ce avec quoi vous avez commencé.",
       2: "Multiplier par 2 signifie doubler un nombre. Lorsque vous multipliez quelque chose par 2, vous l'ajoutez à lui-même. C'est l'une des opérations de multiplication les plus pratiques car nous devons souvent doubler des choses dans la vie réelle—compter les paires de chaussures, les roues de vélo, ou diviser quelque chose équitablement entre deux personnes.",
@@ -158,1663 +162,2006 @@ const importance: { [key: number]: string } = {
       50: "La table de 50 forme la base des calculs de pourcentage (50%=1/2). La relation 5×10 combine le système décimal et la multiplication. Elle est directement connectée avec le concept de moitié (½). Elle est utilisée constamment dans les systèmes monétaires (50 centimes, 50 euros), les mesures de temps et les mathématiques quotidiennes. Cette table améliore considérablement les compétences de calcul pratique.",
       51: "la table de 51 développe la capacité de travailler avec des nombres proches a 50. La stratégie 50+1 renforce l'utilisation de nombres complémentaires. la relation 3×17 renforce les comp\u00e9tences de factorisation. A une importance pratique dans le contexte de jeux de cartes (52 cartes). cette table enseigne à calculer avec de petites déviations de nombres ronds.",
       52: "la table de 52 est critique pour les calculs de temps et de calendrier. En raison du nombre de semaines dans une année (52 semaines), est utilis\u00e9 constamment en planification et calculs annuels. la relation 4×13 renforce \u00e0 la fois la table de 4 et celle de 13. La jeu de cartes (52 cartes) fournit un contexte à la pensée mathématique. cette table est très importante pour les mathématiques de la vie pratique.",
-      53: "la table de 53 am\u00e8ne les strat\u00e9gies de nombres premiers à un niveau avancé. L'approche 50+3 d\u00e9veloppe la flexibilit\u00e9 mental y méthodes alternatives de calcul. en raison de propriÃ©tÃ©s primas, requiert une résolution créative de problemas. cette table augmente la capacit\u00e9 de travailler avec de grands nombres premiers y \u00e9largit la profondeur de la pensée mathématique.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      53: "La table de 53 amène les stratégies de nombres premiers à un niveau avancé. L'approche 50+3 permet de développer la flexibilité mentale grâce à d'autres méthodes de calcul. En raison de ses propriétés de nombre premier, elle nécessite une résolution créative des problèmes. Cette table augmente la capacité à travailler avec de grands nombres premiers et approfondit la pensée mathématique.",
       54: "la table de 54 perfectionne les comp\u00e9tences de factorisation multiple. Les relations 54=6×9=2×27=3×18 enseignent à voir des connexions mathématiques. Comme elle combine les tables de 6 et 9, renforce les deux. Avoir de nombreux diviseurs (1,2,3,6,9,18,27,54) le rend id\u00e9al pour les fractions et proportions. cette table encourage la pensée mathématique flexible.",
-      55: "la table de 55 renforce les relations mathématiques en combinant les tables de 5 et 11. La propriÃ©tÃ© de nombre triangulaire (1+2+...+10=55) approfondit la compréhension de modÃ¨les mathématiques. la relation 5×11 renforce les deux tables. cette table forme une base para modÃ¨les numéricos y fórmulas de addition.",
-      56: "la table de 56 renforce \u00e0 la fois la table de 7 et celle de 8. 7×8=56 C'est l'un des paires de multiplication les plus difficiles y aprender cette table la renforce. Les alternatives 4×14=2×28 enseñan à utiliser de multiples stratégies. A une importance pratique en calculs laborales (semana de 7 días × día de 8 horas). cette table fournit une ma\u00eetrise de multiplications difficiles.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      55: "La table de 55 renforce les relations mathématiques en combinant les tables de 5 et de 11. La propriété de nombre triangulaire (1+2+...+10=55) approfondit la compréhension des modèles mathématiques. La relation 5×11 renforce les deux tables à la fois. Cette table relie ainsi deux grandes familles de modèles numériques et de formules d'addition.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      56: "La table de 56 renforce à la fois la table de 7 et celle de 8. 7×8=56 est l'un des faits de multiplication les plus souvent confondus, et apprendre cette table permet de le consolider. Les alternatives comme 4×14=2×28 enseignent à utiliser plusieurs stratégies. Cette table est utile dans les calculs de la vie quotidienne et offre une bonne maîtrise des multiplications difficiles.",
       57: "la table de 57 renforce les connexions mathématiques en combinant les tables de 3 et 19. La stratégie 60-3 perfectionne la capacit\u00e9 de soustraire à partir de nombres ronds. la relation 3×19 combine des stratégies de nombres premiers et non premiers. cette table d\u00e9veloppe le calcul mental avec de grands nombres de niveau moyen.",
-      58: "la table de 58 aide \u00e0 renforcer la table de 29. la relation 58=2×29 combine des stratégies de doublement et nombres premiers. L'approche 60-2 enseigne la stratégie de s'approcher de nombres ronds. cette table forme une base para propriÃ©tÃ©s de nombres pairs y calculs proches de 60.",
-      59: "la table de 59 maximise les strat\u00e9gies de nombres premiers. L'approche 60-1 perfecciona el calcul rápido usando números redondos. en raison de propriÃ©tÃ©s primas, n\u00e9cessite de la flexibilit\u00e9 mentale et méthodes creativos de solución. A une importance pratique dans le contexte de temps (59 minutes, 59 secondes). cette table fournit des comp\u00e9tences avancées de mathématique mentale.",
-      60: "la table de 60 forme la base des calculs de temps (60 minutes=1 heure, 60 secondes=1 minute). la relation 6×10 combine le système décimal y la multiplicación. Avoir de nombreux diviseurs (1,2,3,4,5,6,10,12,15,20,30,60) le rend id\u00e9al pour les fractions et proportions. A une importance géométrique dans les mesures d'angle (360°÷6=60°). cette table est l'une des plus utilisées dans la vie quotidienne.",
-      61: "la table de 61 am\u00e8ne les strat\u00e9gies de nombres premiers à un niveau avancé. L'approche 60+1 fournit une association avec des unités de temps (minute 61, seconde 61). en raison de ses propriÃ©tÃ©s primas, n\u00e9cessite de la flexibilit\u00e9 mental y résolution créative de problemas. cette table développe la capacité de calculer rapidement avec des nombres supérieurs à 60.",
-      62: "la table de 62 aide \u00e0 renforcer la table de 31. la relation 62=2×31 combine des stratégies de doublement et nombres premiers. L'approche 60+2 enseigne la stratégie de calculer près de nombres ronds. cette table forme une base para propriÃ©tÃ©s de nombres pairs y calculs après 60.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      58: "La table de 58 aide à renforcer la table de 29. La relation 58=2×29 combine les stratégies de doublement et de nombres premiers. L'approche 60-2 enseigne la stratégie consistant à se rapprocher d'un nombre rond. Cette table constitue une bonne base pour comprendre les propriétés des nombres pairs et les calculs proches de 60.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      59: "La table de 59 pousse les stratégies de nombres premiers à leur maximum. L'approche 60-1 permet un calcul rapide en utilisant des nombres ronds. En raison de ses propriétés de nombre premier, elle nécessite de la flexibilité mentale et des méthodes de résolution créatives. Elle a une utilité pratique dans le contexte du temps (59 minutes, 59 secondes). Cette table développe des compétences avancées de calcul mental.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      60: "La table de 60 forme la base des calculs de temps (60 minutes = 1 heure, 60 secondes = 1 minute). La relation 6×10 combine le système décimal et la multiplication. Ayant de nombreux diviseurs (1,2,3,4,5,6,10,12,15,20,30,60), elle est idéale pour les fractions et les proportions. Elle a aussi une importance géométrique dans les mesures d'angles (360°÷6=60°). Cette table est l'une des plus utilisées dans la vie quotidienne.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      61: "La table de 61 amène les stratégies de nombres premiers à un niveau avancé. L'approche 60+1 permet de l'associer aux unités de temps (61e minute, 61e seconde). En raison de ses propriétés de nombre premier, elle nécessite de la flexibilité mentale et une résolution créative des problèmes. Cette table développe la capacité à calculer rapidement avec des nombres supérieurs à 60.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      62: "La table de 62 aide à renforcer la table de 31. La relation 62=2×31 combine les stratégies de doublement et de nombres premiers. L'approche 60+2 enseigne la stratégie consistant à calculer près d'un nombre rond. Cette table constitue une bonne base pour comprendre les propriétés des nombres pairs et les calculs après 60.",
       63: "la table de 63 renforce \u00e0 la fois la table de 7 et celle de 9 en les combinant. 7×9=63 est une paire de multiplication importante. L'alternative 3×21 enseigne à utiliser de multiples stratégies. Être divisible à la fois par 7 que par 9 la rend utile pour les fractions et proportions. cette table approfondit la compréhension des relations de facteurs multiples.",
-      64: "la table de 64 est critique pour comprendre puissances de 2 (nombres exponentiels). Les relations 64=2⁶=8² renforcent à la fois les exposants et les nombres carrés. A une importance technologique en informatique en raison de la architecture de 64 bits. El échiquier (8×8=64 cases) fournit des applications géométriques. cette table est fondamentale pour nombres exponentiels y système binaire.",
-      65: "la table de 65 renforce les relations mathématiques en combinant les tables de 5 et 13. la relation 5×13 renforce les deux tables. A une importance pratique en contexte social (âge de la retraite 65 ans). Le motif du 5 (se termine en 5 ou 0) facilite le calcul. cette table est utile pour les mathématiques de vida práctica.",
-      66: "la table de 66 renforce \u00e0 la fois la table de 6 et celle de 11 en les combinant. la relation 6×11=66 crea un modèle similaire a repdigit. L'alternative 2×33 offre différentes stratégies. Être divisible à la fois par 6 que par 11 proparciona usos multiples. cette table développe des compétences de factores multiples.",
-      67: "la table de 67 maximise les strat\u00e9gies de nombres premiers. L'approche 70-3 perfectionne la stratégie de soustraire à partir de nombres ronds. en raison de propriÃ©tÃ©s primas, n\u00e9cessite de la flexibilit\u00e9 mentale et méthodes de solución alternativos. cette table fournit des comp\u00e9tences de mathématique mentale avancée y aisance avec de grands nombres premiers.",
-      68: "la table de 68 renforce les connexions mathématiques en combinant les tables de 4 et 17. Les relations 4×17=2×34 enseñan à utiliser de multiples stratégies. L'approche 70-2 développe la capacité de s'approcher de nombres ronds. cette table forme une base para propriÃ©tÃ©s de nombres pairs y calculs proches de 70.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      64: "La table de 64 est essentielle pour comprendre les puissances de 2 (nombres exponentiels). Les relations 64=2⁶=8² renforcent à la fois les exposants et les nombres carrés. Elle a une importance technologique en informatique en raison de l'architecture 64 bits. L'échiquier (8×8=64 cases) offre une application géométrique concrète. Cette table est fondamentale pour comprendre les nombres exponentiels et le système binaire.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      65: "La table de 65 renforce les relations mathématiques en combinant les tables de 5 et de 13. La relation 5×13 renforce les deux tables. Elle a une importance pratique dans le contexte social, 65 ans étant traditionnellement l'âge de la retraite dans de nombreux pays. Le motif du 5 (se termine en 5 ou 0) facilite le calcul. Cette table est utile pour les mathématiques de la vie pratique.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      66: "La table de 66 renforce à la fois la table de 6 et celle de 11 en les combinant. La relation 6×11=66 crée un modèle proche d'un repdigit. L'alternative 2×33 offre une stratégie différente. Le fait d'être divisible à la fois par 6 et par 11 lui donne de multiples usages. Cette table développe la compréhension des relations entre facteurs multiples.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      67: "La table de 67 pousse les stratégies de nombres premiers à leur maximum. L'approche 70-3 perfectionne la stratégie consistant à soustraire à partir d'un nombre rond. En raison de ses propriétés de nombre premier, elle nécessite de la flexibilité mentale et d'autres méthodes de résolution. Cette table apporte des compétences avancées de calcul mental et une aisance avec les grands nombres premiers.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      68: "La table de 68 renforce les connexions mathématiques en combinant les tables de 4 et de 17. Les relations 4×17=2×34 enseignent à utiliser plusieurs stratégies. L'approche 70-2 développe la capacité à se rapprocher d'un nombre rond. Cette table constitue une bonne base pour comprendre les propriétés des nombres pairs et les calculs proches de 70.",
       69: "la table de 69 renforce \u00e0 la fois la table de 3 et celle de 23 en les combinant. La stratégie 70-1 enseigne à calculer rapidement en utilisant des nombres ronds. la relation 3×23 combine des stratégies de petits et grands facteurs. cette table fournit une compétence en calculs proches de 70.",
-      70: "la table de 70 est parfaite pour renforcer la table de 7. la relation 7×10 combine le système décimal y la table de 7. A une importance social dans le contexte de espérance de vie (moyenne 70-80 ans). Les alternatives 2×35=5×14 enseñan à utiliser de multiples stratégies. cette table est très utile para calcul práctico y gestion du temps.",
-      71: "la table de 71 maximise les strat\u00e9gies de nombres premiers. L'approche 70+1 fournit une ma\u00eetrise en l'utilisation de nombres complémentaires. en raison de ses propriÃ©tÃ©s primas, n\u00e9cessite de la flexibilit\u00e9 mental y résolution créative de problemas. cette table développe la capacité de calculer rapidement avec de grands nombres premiers et approfondit la pensée mathématique.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      70: "La table de 70 est parfaite pour renforcer la table de 7. La relation 7×10 combine le système décimal et la table de 7. Elle a une importance sociale dans le contexte de l'espérance de vie (moyenne de 70 à 80 ans). Les alternatives 2×35=5×14 enseignent à utiliser plusieurs stratégies. Cette table est très utile pour le calcul pratique et la gestion du temps.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      71: "La table de 71 amène les stratégies de nombres premiers à un niveau avancé. L'approche 70+1 permet de maîtriser l'utilisation de nombres complémentaires. En raison de ses propriétés de nombre premier, elle nécessite de la flexibilité mentale et une résolution créative des problèmes. Cette table développe la capacité à calculer rapidement avec de grands nombres premiers et approfondit la pensée mathématique.",
       72: "la table de 72 est l'une des les plus polyvalentes. Avoir de nombreux diviseurs (1,2,3,4,6,8,9,12,18,24,36,72) le rend id\u00e9al pour les fractions et proportions. Les relations 8×9=6×12 enseignent des stratégies de facteurs multiples. A une importance pratique en calculs de temps (72 heures=3 jours). cette table perfectionne la flexibilité mathématique et l'utilisation de multiples stratégies.",
-      73: "la table de 73 am\u00e8ne les strat\u00e9gies de nombres premiers à un niveau avancé. L'approche 70+3 développe des compétences de calcul mental. Être le nombre premier numéro 21 éveille la curiosité mathématique. en raison de propriÃ©tÃ©s primas, requiert des méthodes de solution alternatives et une pensée créative. cette table fournit des comp\u00e9tences de mathématique mentale avancée.",
-      74: "la table de 74 aide \u00e0 renforcer la table de 37. la relation 74=2×37 combine des stratégies de doublement et nombres premiers. L'approche 75-1 enseigne la stratégie de s'approcher de nombres ronds. cette table forme une base para propriÃ©tÃ©s de nombres pairs y calculs proches de 75.",
-      75: "la table de 75 forme la base de calculs de pourcentage (75%=3/4). Les relations 3×25=5×15 enseñan à utiliser de multiples stratégies. Elle est directement connectée au le concept de trois quarts (¾). Le motif du 5 (se termine en 5 ou 0) facilite le calcul. cette table est extrêmement importante pour les mathématiques pratiques y calculs de pourcentage.",
-      76: "la table de 76 renforce les connexions mathématiques en combinant les tables de 4 et 19. Les relations 4×19=2×38 enseñan estrategias de multiplicación multiple. Les approches 75+1 ou 80-4 fournissent de la flexibilité. cette table prepara para calculs proches de 80 con propriÃ©tÃ©s de nombres pairs.",
-      77: "la table de 77 renforce \u00e0 la fois la table de 7 et celle de 11 en les combinant. la relation 7×11=77 crea un modèle similaire a repdigit. Comme les deux tables sont de difficulté moyenne, la table de 77 est parfaite pour les renforcer. Être divisible à la fois par 7 que par 11 la rend utile pour fracciones.",
-      78: "la table de 78 développe des compétences de factorisation multiple. Les relations 78=2×39=3×26=6×13 proparcionan flexibilidad matemática. L'approche 80-2 enseigne la stratégie de soustraire à partir de nombres ronds. Avoir de nombreux diviseurs offre plusieurs méthodes de calcul. cette table perfectionne l'utilisation de multiples estrategias.",
-      79: "la table de 79 maximise les strat\u00e9gies de nombres premiers. L'approche 80-1 perfecciona el calcul rápido usando números redondos. en raison de propriÃ©tÃ©s primas, n\u00e9cessite de la flexibilit\u00e9 mentale et méthodes de solución creativos. cette table fournit une compétence en calculs proches de 80 y développe des compétences mathématiques avanzadas.",
-      80: "la table de 80 est parfaite pour renforcer la table de 8. la relation 8×10 combine le système décimal y la table de 8. Les alternatives 2×40=4×20=5×16 enseñan à utiliser de multiples stratégies. A une importance social dans le contexte de espérance de vie (limite supérieure 80 ans). cette table améliore considérablement el calcul práctico y la capacité de travailler avec de grands nombres.",
-      81: "Multiplier par 81 utilise la relation 81=9² (neuf au carré) o 81=3⁴ (trois à la puissance quatre). Comme 81 est un carré parfait, tous ses multiples avec des carrés parfaits forment également des nombres carrés. Penser à 81 como 80+1 o 9×9 facilite le calcul. Le 81 est divisible à la fois par 9 que par 27 (27=3³). Les multiples de 81 se divisent uniformément par 9. Le 81 est la somme des nombres impairs del 1 al 9 (1+3+5+7+9+11+13+15+17=81). cette table développe la compréhension de modÃ¨les mathématiques.",
-      82: "Multiplier par 82 utilise la relation 2×41. Si vous connaissez la table de 41, vous pouvez doubler cada rÃ©sultat pour trouver la table de 82. Penser à 82 como 80+2 o 85-3 facilite le calcul. Como C'est un nombre par, tous ses multiples también son pares. Le 82 est divisible à la fois par 2 que par 41. cette table establece una base para calculs après 80.",
-      83: "Multiplier par 83 développe des stratégies de mathématique mentale en raison de ses propriÃ©tÃ©s de nombre premier. Les méthodes les plus pratiques sont Penser à 83 como 80+3 o 85-2. El 83 est un nombre premier y est divisible uniquement par 1 y 83. Aprender la table de 83 développe la capacité de calculer rapidement avec de grands nombres premiers.",
-      84: "Multiplier par 84 est l'une des tables les plus polyvalentes. Como 84=12×7=6×14=4×21=3×28=2×42, peut être calculé de nombreuses façons différentes. El 84 es 7 fois 12 (7 douzaines). Avoir de nombreux diviseurs (1,2,3,4,6,7,12,14,21,28,42,84) lo hace extrêmement utile en calculs de fracciones. El 84 es útil en calculs de temps (84 horas=1 semana+1/2 día). cette table perfectionne l'utilisation de multiples estrategias.",
-      85: "Multiplier par 85 utilise la relation 5×17. Si les deux tables sont connues, Multiplier par 85 est facile. Penser à 85 como 80+5 o 90-5 facilite le calcul mental. Le motif du 5 (se termine en 5 ou 0) facilite le calcul. El 85 Il est utilisé fréquemment en calculs de pourcentage (85%=17/20). cette table prepara para calculs proches de 90.",
-      86: "Multiplier par 86 utilise la relation 2×43. Si vous connaissez la table de 43, vous pouvez doubler cada rÃ©sultat pour trouver la table de 86. Penser à 86 como 80+6 o 90-4 facilite le calcul. Como C'est un nombre par, tous ses multiples también son pares. Le 86 est divisible à la fois par 2 que par 43. cette table establece una base para calculs proches de 90.",
-      87: "Multiplier par 87 utilise la relation 3×29. Tripler la table de 29 o multiplier la table de 3 par 29 fonctionne. Penser à 87 como 90-3 o 85+2 facilite le calcul mental. Como 87=3×29, est divisible à la fois par 3 et par 29. cette table es útil para calculs proches de 90 y perfectionne la capacit\u00e9 de soustraire à partir de nombres ronds.",
-      88: "Multiplier par 88 utilise les relations 8×11=4×22=2×44. peut être calculé de multiples façons. El 88 montre un motif similaire à repdigit (répétition de 8s). Penser à 88 como 90-2 o 80+8 facilite le calcul. Como C'est un nombre par, tous ses multiples también son pares. El 88 a de nombreux diviseurs. La propriÃ©tÃ© repdigit (88) facilite la reconnaissance visuelle et la mémorisation.",
-      89: "Multiplier par 89 nécessite des stratégies spéciales en raison de ses propriÃ©tÃ©s de nombre premier. La stratégie plus facile es Penser à 89 como 90-1: multiplica un nombre par 90 y soustrayez-lui le nombre lui-même. El 89 est un nombre premier y est divisible uniquement par 1 y 89. El 89 est très proche de 90, ce qui le rend utile pour les approximations. cette table fournit une compétence en calculs proches de 90 y développe des compétences mathématiques avanzadas.",
-      90: "Multiplier par 90 utilise la relation 9×10 y est très utile. Para multiplicar un nombre par 90, vous pouvez le multiplier par 9 y ajouter un zéro à la fin. Hay relaciones de factores alternativos como 90=2×45=3×30=5×18=6×15. Un angle droit mesure 90°. El 90 A une importance crítica en géométrie (ángulo recto de 90°). El 90 Il est utilisé fréquemment en medidas de ángulos y parcentajes. cette table renforce la table de 9 y est extrêmement importante para calculs prácticos y medidas de ángulos.",
-      91: "Multiplier par 91 utilise la relation 7×13. Si les deux tables sont connues, Multiplier par 91 est facile. Penser à 91 como 90+1 o 100-9 facilite le calcul. Como 91=7×13, est divisible à la fois par 7 que par 13. cette table refuerza la comprensión de relaciones de factores. Comme les deux tables sont de difficulté moyenne, la table de 91 est idéale pour les renforcer. Es un concepto fundamental pour les mathématiques avancées et la cryptographie.",
-      92: "Multiplier par 92 utilise les relations 4×23=2×46. peut être calculé de multiples façons. Penser à 92 como 90+2 o 100-8 facilite le calcul mental. Como C'est un nombre par, tous ses multiples también son pares. Le 92 est divisible à la fois par 4 que par 23. cette table prepara para calculs proches de 100 y développe des compétences de calcul en los 90s.",
-      93: "Multiplier par 93 utilise la relation 3×31. Tripler la table de 31 o multiplier la table de 3 par 31 fonctionne. Penser à 93 como 90+3 o 100-7 facilite le calcul. Como 93=3×31, est divisible à la fois par 3 et par 31. cette table es útil para calculs proches de 100. Proparciona práctica de multiplicación avec de grands nombres y d\u00e9veloppe la flexibilit\u00e9 mental.",
-      94: "Multiplier par 94 utilise la relation 2×47. Si vous connaissez la table de 47, vous pouvez doubler cada rÃ©sultat pour trouver la table de 94. Penser à 94 como 100-6 o 90+4 facilite le calcul. Como C'est un nombre par, tous ses multiples también son pares. Le 94 est divisible à la fois par 2 que par 47. La stratégie 100-6 perfecciona el método de soustraire à partir de nombres ronds. fournit des comp\u00e9tences críticas para mathématique mentale avancée.",
-      95: "Multiplier par 95 utilise la relation 5×19. Si les deux tables sont connues, Multiplier par 95 est facile. Penser à 95 como 100-5 o 90+5 facilite le calcul mental. Le motif du 5 (se termine en 5 ou 0) facilite le calcul. El 95 Il est utilisé fréquemment en calculs de pourcentage (95%=19/20). La stratégie 100-5 est très utile.",
-      96: "Multiplier par 96 utilise les relations 32×3=16×6=12×8=4×24=2×48. peut être calculé de nombreuses façons différentes. Penser à 96 como 100-4 o 90+6 facilite le calcul. Como C'est un nombre par, tous ses multiples también son pares. El 96 a de nombreux diviseurs (1,2,3,4,6,8,12,16,24,32,48,96), lo que la rend utile en calculs de fracciones. Montre la relation entre puissances de 2 y 3 (2⁵×3). cette table est parfaite pour la flexibilité mathématique et la théorie des nombres.",
-      97: "Multiplier par 97 développe des stratégies de mathématique mentale en raison de ses propriÃ©tÃ©s de nombre premier. La stratégie plus facile es Penser à 97 como 100-3: multiplica un nombre par 100 y soustrayez-lui trois fois le nombre lui-même. El 97 est un nombre premier y est divisible uniquement par 1 y 97. Aprender la table de 97 facilita calculs proches de 100. Être le nombre premier le plus proche de 100 facilite extrêmement le calcul mental. Ser primo es importante para teoría de números y criptografía.",
-      98: "Multiplier par 98 utilise les relations 2×49=7×14. peut être calculé de multiples façons. La stratégie plus facile es Penser à 98 como 100-2: multiplica un nombre par 100 y soustrayez-lui deux fois le nombre lui-même. Como C'est un nombre par, tous ses multiples también son pares. Le 98 est divisible à la fois par 2 que par 7 y 49. la relation 98=2×49=2×7² combina nombres carrés y stratégies de doublement. cette table fournit une ma\u00eetrise en calculs proches de 100.",
-      99: "Multiplier par 99 utilise la relation 9×11. La stratégie plus facile es Penser à 99 como 100-1: multiplica un nombre par 100 y soustrayez-lui le nombre lui-même. El 99 montre un motif similaire à repdigit (répétition de 9s). Como 99=9×11, est divisible à la fois par 9 que par 11. cette table es extrêmement utile para calculs proches de 100. La stratégie 100-1 est parfaite pour matemática mental. La propriÃ©tÃ© repdigit (99) approfondit la compréhension de modÃ¨les. cette table est extrêmement importante para habilidades de calcul práctico.",
-      100: "la table de 100 est la base du système décimal. Proparciona una comprensión perfecta del concepto de valor posicional. forme la base de calculs de pourcentage (100%=completo) y el système décimal. A une importance crítica pour les unités monétaires, les unités de mesure et les mathématiques quotidiennes. ¡est l'une des tables MÁS ÚTILES E IMparTANTES!",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      73: "La table de 73 amène les stratégies de nombres premiers à un niveau avancé. L'approche 70+3 développe des compétences de calcul mental. Le fait d'être le 21e nombre premier éveille la curiosité mathématique. En raison de ses propriétés de nombre premier, elle nécessite d'autres méthodes de résolution et une pensée créative. Cette table apporte des compétences avancées de calcul mental.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      74: "La table de 74 aide à renforcer la table de 37. La relation 74=2×37 combine les stratégies de doublement et de nombres premiers. L'approche 75-1 enseigne la stratégie consistant à se rapprocher d'un nombre rond. Cette table constitue une bonne base pour comprendre les propriétés des nombres pairs et les calculs proches de 75.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      75: "La table de 75 forme la base des calculs de pourcentage (75%=3/4). Les relations 3×25=5×15 enseignent à utiliser plusieurs stratégies. Elle est directement liée à la notion de trois quarts (¾). Le motif du 5 (se termine en 5 ou 0) facilite le calcul. Cette table est extrêmement importante pour les mathématiques pratiques et les calculs de pourcentage.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      76: "La table de 76 renforce les connexions mathématiques en combinant les tables de 4 et de 19. Les relations 4×19=2×38 enseignent des stratégies de multiplication multiple. Les approches 75+1 ou 80-4 offrent de la flexibilité. Cette table prépare aux calculs proches de 80 en s'appuyant sur les propriétés des nombres pairs.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      77: "La table de 77 renforce à la fois la table de 7 et celle de 11 en les combinant. La relation 7×11=77 crée un modèle proche d'un repdigit. Comme les deux tables sont d'une difficulté moyenne, la table de 77 est idéale pour les renforcer toutes les deux. Le fait d'être divisible à la fois par 7 et par 11 la rend utile pour les fractions.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      78: "La table de 78 développe des compétences de factorisation multiple. Les relations 78=2×39=3×26=6×13 offrent une grande flexibilité mathématique. L'approche 80-2 enseigne la stratégie consistant à soustraire à partir d'un nombre rond. Le fait d'avoir de nombreux diviseurs offre plusieurs méthodes de calcul. Cette table perfectionne l'utilisation de plusieurs stratégies à la fois.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      79: "La table de 79 pousse les stratégies de nombres premiers à leur maximum. L'approche 80-1 permet un calcul rapide en utilisant des nombres ronds. En raison de ses propriétés de nombre premier, elle nécessite de la flexibilité mentale et des méthodes de résolution créatives. Cette table apporte une compétence dans les calculs proches de 80 et développe des compétences mathématiques avancées.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      80: "La table de 80 est parfaite pour renforcer la table de 8. La relation 8×10 combine le système décimal et la table de 8. Les alternatives 2×40=4×20=5×16 enseignent à utiliser plusieurs stratégies. Elle a une importance sociale dans le contexte de l'espérance de vie (limite supérieure de 80 ans). Cette table améliore considérablement le calcul pratique et la capacité à travailler avec de grands nombres.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      81: "La table de 81 repose sur la relation 81=9² (neuf au carré), ou encore 81=3⁴ (trois à la puissance quatre). Comme 81 est un carré parfait, tous ses multiples partagent cette propriété avec d'autres nombres carrés. Penser à 81 comme 80+1 ou 9×9 facilite le calcul. Le 81 est divisible à la fois par 9 et par 27 (27=3³), et tous ses multiples se divisent uniformément par 9. Le 81 est aussi la somme des nombres impairs de 1 à 9 (1+3+5+7+9+11+13+15+17=81). Cette table développe la compréhension des modèles mathématiques.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      82: "La table de 82 utilise la relation 2×41. Si vous connaissez la table de 41, vous pouvez doubler chaque résultat pour trouver la table de 82. Penser à 82 comme 80+2 ou 85-3 facilite le calcul. Comme 82 est un nombre pair, tous ses multiples sont également pairs. Le 82 est divisible à la fois par 2 et par 41. Cette table établit une base pour les calculs après 80.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      83: "La table de 83 développe des stratégies de calcul mental en raison de ses propriétés de nombre premier. Les méthodes les plus pratiques consistent à penser 83 comme 80+3 ou 85-2. Le 83 est un nombre premier, divisible uniquement par 1 et par lui-même. Apprendre la table de 83 développe la capacité à calculer rapidement avec de grands nombres premiers.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      84: "La table de 84 est l'une des plus polyvalentes. Comme 84=12×7=6×14=4×21=3×28=2×42, elle peut se calculer de nombreuses façons différentes. Le 84 correspond aussi à 7 douzaines. Ayant de nombreux diviseurs (1,2,3,4,6,7,12,14,21,28,42,84), elle est extrêmement utile dans les calculs de fractions. Le 84 est également utile dans les calculs de temps (84 heures = 1 semaine et demie). Cette table perfectionne l'utilisation de plusieurs stratégies à la fois.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      85: "La table de 85 utilise la relation 5×17. Si les deux tables sont connues, multiplier par 85 devient facile. Penser à 85 comme 80+5 ou 90-5 facilite le calcul mental. Le motif du 5 (se termine en 5 ou 0) facilite également le calcul. Elle est fréquemment utilisée dans les calculs de pourcentage (85%=17/20). Cette table prépare aux calculs proches de 90.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      86: "La table de 86 utilise la relation 2×43. Si vous connaissez la table de 43, vous pouvez doubler chaque résultat pour trouver la table de 86. Penser à 86 comme 80+6 ou 90-4 facilite le calcul. Comme 86 est un nombre pair, tous ses multiples sont également pairs. Le 86 est divisible à la fois par 2 et par 43. Cette table établit une base pour les calculs proches de 90.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      87: "La table de 87 utilise la relation 3×29. Tripler la table de 29 ou multiplier la table de 3 par 29 fonctionne aussi bien. Penser à 87 comme 90-3 ou 85+2 facilite le calcul mental. Comme 87=3×29, elle est divisible à la fois par 3 et par 29. Cette table est utile pour les calculs proches de 90 et perfectionne la capacité à soustraire à partir d'un nombre rond.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      88: "La table de 88 utilise les relations 8×11=4×22=2×44 et peut se calculer de plusieurs façons. Le 88 présente un motif proche d'un repdigit (répétition du chiffre 8). Penser à 88 comme 90-2 ou 80+8 facilite le calcul. Comme 88 est un nombre pair, tous ses multiples sont également pairs. Le 88 a de nombreux diviseurs, et cette propriété de repdigit facilite la reconnaissance visuelle et la mémorisation.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      89: "La table de 89 nécessite des stratégies particulières en raison de ses propriétés de nombre premier. La méthode la plus simple consiste à penser 89 comme 90-1 : multipliez un nombre par 90, puis soustrayez ce nombre lui-même. Le 89 est un nombre premier, divisible uniquement par 1 et par lui-même. Étant très proche de 90, il se prête bien aux approximations. Cette table apporte une compétence dans les calculs proches de 90 et développe des compétences mathématiques avancées.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      90: "La table de 90 utilise la relation 9×10 et est très utile. Pour multiplier un nombre par 90, on peut le multiplier par 9 puis ajouter un zéro à la fin. Il existe aussi d'autres relations de facteurs comme 90=2×45=3×30=5×18=6×15. Un angle droit mesure 90°, ce qui donne à cette table une importance géométrique majeure. Elle est fréquemment utilisée dans les mesures d'angles et les pourcentages. Cette table renforce la table de 9 et est extrêmement importante pour les calculs pratiques et les mesures d'angles.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      91: "La table de 91 utilise la relation 7×13. Si les deux tables sont connues, multiplier par 91 devient facile. Penser à 91 comme 90+1 ou 100-9 facilite le calcul. Comme 91=7×13, elle est divisible à la fois par 7 et par 13. Cette table renforce la compréhension des relations entre facteurs. Comme les deux tables sont d'une difficulté moyenne, la table de 91 est idéale pour les consolider. C'est un concept fondamental pour les mathématiques avancées et la cryptographie.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      92: "La table de 92 utilise les relations 4×23=2×46 et peut se calculer de plusieurs façons. Penser à 92 comme 90+2 ou 100-8 facilite le calcul mental. Comme 92 est un nombre pair, tous ses multiples sont également pairs. Le 92 est divisible à la fois par 4 et par 23. Cette table prépare aux calculs proches de 100 et développe des compétences de calcul dans les années 90.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      93: "La table de 93 utilise la relation 3×31. Tripler la table de 31 ou multiplier la table de 3 par 31 fonctionne aussi bien. Penser à 93 comme 90+3 ou 100-7 facilite le calcul. Comme 93=3×31, elle est divisible à la fois par 3 et par 31. Cette table est utile pour les calculs proches de 100, offre de l'entraînement à la multiplication de grands nombres et développe la flexibilité mentale.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      94: "La table de 94 utilise la relation 2×47. Si vous connaissez la table de 47, vous pouvez doubler chaque résultat pour trouver la table de 94. Penser à 94 comme 100-6 ou 90+4 facilite le calcul. Comme 94 est un nombre pair, tous ses multiples sont également pairs. Le 94 est divisible à la fois par 2 et par 47. La stratégie 100-6 perfectionne la méthode consistant à soustraire à partir d'un nombre rond, et apporte des compétences essentielles pour le calcul mental avancé.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      95: "La table de 95 utilise la relation 5×19. Si les deux tables sont connues, multiplier par 95 devient facile. Penser à 95 comme 100-5 ou 90+5 facilite le calcul mental. Le motif du 5 (se termine en 5 ou 0) facilite le calcul. Elle est fréquemment utilisée dans les calculs de pourcentage (95%=19/20). La stratégie 100-5 est très pratique.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      96: "La table de 96 utilise les relations 32×3=16×6=12×8=4×24=2×48 et peut se calculer de nombreuses façons différentes. Penser à 96 comme 100-4 ou 90+6 facilite le calcul. Comme 96 est un nombre pair, tous ses multiples sont également pairs. Le 96 a de nombreux diviseurs (1,2,3,4,6,8,12,16,24,32,48,96), ce qui le rend utile dans les calculs de fractions. Il illustre la relation entre les puissances de 2 et de 3 (2⁵×3). Cette table est idéale pour la flexibilité mathématique et la théorie des nombres.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      97: "La table de 97 développe des stratégies de calcul mental en raison de ses propriétés de nombre premier. La stratégie la plus simple consiste à penser 97 comme 100-3 : multipliez un nombre par 100, puis soustrayez-lui trois fois ce nombre. Le 97 est un nombre premier, divisible uniquement par 1 et par lui-même. Apprendre la table de 97 facilite les calculs proches de 100. Être le nombre premier le plus proche de 100 rend le calcul mental particulièrement facile. Être premier est important pour la théorie des nombres et la cryptographie.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      98: "La table de 98 utilise les relations 2×49=7×14 et peut se calculer de plusieurs façons. La stratégie la plus simple consiste à penser 98 comme 100-2 : multipliez un nombre par 100, puis soustrayez-lui deux fois ce nombre. Comme 98 est un nombre pair, tous ses multiples sont également pairs. Le 98 est divisible à la fois par 2, par 7 et par 49. La relation 98=2×49=2×7² combine nombres carrés et stratégies de doublement. Cette table apporte une bonne maîtrise des calculs proches de 100.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      99: "La table de 99 utilise la relation 9×11. La stratégie la plus simple consiste à penser 99 comme 100-1 : multipliez un nombre par 100, puis soustrayez-lui ce nombre lui-même. Le 99 présente un motif proche d'un repdigit (répétition du chiffre 9). Comme 99=9×11, elle est divisible à la fois par 9 et par 11. Cette table est extrêmement utile pour les calculs proches de 100. La stratégie 100-1 est parfaite pour le calcul mental. La propriété de repdigit (99) approfondit la compréhension des modèles. Cette table est très importante pour les compétences de calcul pratique.",
+      // Rewritten 2026-07-30 — replaced Spanish contamination
+      100: "La table de 100 est la base du système décimal. Elle permet une compréhension parfaite de la notion de valeur positionnelle et fonde les calculs de pourcentage (100%=complet) ainsi que le système décimal. Elle a une importance majeure pour les unités monétaires, les unités de mesure et les mathématiques du quotidien. C'est l'une des tables les plus utiles et les plus importantes qui soient !",
     }
 
 const patterns: { [key: number]: PatternItem[] } = {
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       1: [
-        { title: "Patrón de Identidad", description: "Todo número multiplicado par 1 es igual à lui-même. Esto nunca cambia: 1×1=1, 1×2=2, 1×3=3, y así sucesivamente." },
-        { title: "Secuencia Predecible", description: "Los rÃ©sultats simplemente cuentan hacia arriba: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Solo estás listando números en orden." },
-        { title: "Base de Todas las Tables", description: "Cada tabla de multiplicar comienza con Multiplier par 1, par lo que este patrón aparece en todas las tables." },
+        { title: "Modèle d'identité", description: "Tout nombre multiplié par 1 donne lui-même. Cela ne change jamais : 1×1=1, 1×2=2, 1×3=3, et ainsi de suite." },
+        { title: "Suite prévisible", description: "Les résultats comptent simplement vers le haut : 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. On écrit juste les nombres dans l'ordre." },
+        { title: "Base de toutes les tables", description: "Chaque table de multiplication commence par la multiplication par 1, donc ce modèle apparaît dans toutes les tables." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       2: [
-        { title: "Solo nombres pairs", description: "Tous les multiples de 2 son nombres pairs. Los rÃ©sultats siempre se terminent par 0, 2, 4, 6 u 8." },
-        { title: "Contar de Dos en Dos", description: "Cada respuesta es 2 más que la anterior: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
-        { title: "Patrón de Duplicación", description: "Cada rÃ©sultat es exactamente el doble del factor: 2×5=10 es el doble de 5." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 2 sont des nombres pairs. Les résultats se terminent toujours par 0, 2, 4, 6 ou 8." },
+        { title: "Compter de deux en deux", description: "Chaque réponse est 2 de plus que la précédente : 2, 4, 6, 8, 10, 12, 14, 16, 18, 20." },
+        { title: "Modèle de doublement", description: "Chaque résultat est exactement le double du facteur : 2×5=10 est le double de 5." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       3: [
-        { title: "Patrón de Suma de Dígitos", description: "Suma les chiffres de cada rÃ©sultat: 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). ¡El patrón 3-6-9 se repite!" },
-        { title: "Contar de Tres en Tres", description: "Cada respuesta aumenta en 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
-        { title: "Alternancia Impar-Par", description: "Los rÃ©sultats alternan: impar (3), par (6), impar (9), par (12), creando un ritmo predecible." },
+        { title: "Modèle de la somme des chiffres", description: "Additionnez les chiffres de chaque résultat : 3 (3), 6 (6), 9 (9), 12 (1+2=3), 15 (1+5=6), 18 (1+8=9). Le motif 3-6-9 se répète !" },
+        { title: "Compter de trois en trois", description: "Chaque réponse augmente de 3 : 3, 6, 9, 12, 15, 18, 21, 24, 27, 30." },
+        { title: "Alternance impair-pair", description: "Les résultats alternent : impair (3), pair (6), impair (9), pair (12), créant un rythme prévisible." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       4: [
-        { title: "Siempre nombres pairs", description: "Como la table de 2, Tous les multiples de 4 son pares, se terminent par 0, 2, 4, 6 u 8." },
-        { title: "Doble de la Table de 2", description: "Cada respuesta es exactamente el doble de la respuesta correspondiente en la table de 2: 4×3=12 es el doble de 2×3=6." },
-        { title: "Contar de Cuatro en Cuatro", description: "Cada respuesta aumenta en 4: 4, 8, 12, 16, 20, 24, 28, 32, 36, 40." },
+        { title: "Toujours des nombres pairs", description: "Comme la table de 2, tous les multiples de 4 sont pairs et se terminent par 0, 2, 4, 6 ou 8." },
+        { title: "Le double de la table de 2", description: "Chaque réponse est exactement le double de la réponse correspondante dans la table de 2 : 4×3=12 est le double de 2×3=6." },
+        { title: "Compter de quatre en quatre", description: "Chaque réponse augmente de 4 : 4, 8, 12, 16, 20, 24, 28, 32, 36, 40." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       5: [
-        { title: "se termine en 0 ou 5", description: "Cada múltiplo de 5 se termine en 0 ou 5. Esto hace que el patrón sea instantáneamente reconocible." },
-        { title: "Patrón Alternante", description: "Los rÃ©sultats alternan entre terminar en 5 (impar) y 0 (par): 5, 10, 15, 20, 25, 30..." },
-        { title: "Mitad de la Table de 10", description: "Cada rÃ©sultat es exactamente la moitié de la table de 10: 5×4=20 es la moitié de 10×4=40." },
+        { title: "Se termine par 0 ou 5", description: "Chaque multiple de 5 se termine par 0 ou 5. Cela rend le modèle immédiatement reconnaissable." },
+        { title: "Modèle alternant", description: "Les résultats alternent entre se terminer par 5 (impair) et 0 (pair) : 5, 10, 15, 20, 25, 30..." },
+        { title: "Moitié de la table de 10", description: "Chaque résultat est exactement la moitié de la table de 10 : 5×4=20 est la moitié de 10×4=40." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       6: [
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 6 son pares. Los rÃ©sultats progresan como 6, 12, 18, 24, 30... y todos sont divisibles par 2." },
-        { title: "Doble de la Table de 3", description: "Cada respuesta es exactamente el doble de la table de 3: 6×4=24 es el doble de 3×4=12." },
-        { title: "motif du Dígito de las Unidades", description: "El dígito de las unidades sigue este patrón: 6, 2, 8, 4, 0 y se repite. Este patrón te ayuda a identificar la table de 6." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 6 sont pairs. Les résultats progressent ainsi : 6, 12, 18, 24, 30... et tous sont divisibles par 2." },
+        { title: "Le double de la table de 3", description: "Chaque réponse est exactement le double de la table de 3 : 6×4=24 est le double de 3×4=12." },
+        { title: "Motif du chiffre des unités", description: "Le chiffre des unités suit ce motif : 6, 2, 8, 4, 0 puis se répète. Ce motif aide à identifier la table de 6." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       7: [
-        { title: "Patrón de Suma de Dígitos", description: "Cuando sumas les chiffres de Les multiples de 7, emerge un patrón interesante: 7, 14(1+4=5), 21(2+1=3), 28(2+8=10)..." },
-        { title: "répétition del Dígito de las Unidades", description: "El dígito de las unidades sigue esta secuencia: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 y se repite." },
-        { title: "Propiedad de nombre premier", description: "El 7 est un nombre premier, par lo que no tiene relaciones simples con otras tables. Sin embargo, memorizar pares especialest comme 7×8=56 ayuda." },
+        { title: "Modèle de la somme des chiffres", description: "Quand on additionne les chiffres des multiples de 7, un motif intéressant apparaît : 7, 14(1+4=5), 21(2+1=3), 28(2+8=10)..." },
+        { title: "Répétition du chiffre des unités", description: "Le chiffre des unités suit cette séquence : 7, 4, 1, 8, 5, 2, 9, 6, 3, 0 puis se répète." },
+        { title: "Propriété de nombre premier", description: "7 est un nombre premier, donc il n'a pas de relation simple avec les autres tables. Cependant, mémoriser des paires spéciales comme 7×8=56 aide beaucoup." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       8: [
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 8 son tanto parest comme divisibles par 4: 8, 16, 24, 32, 40, 48..." },
-        { title: "Doble de la Table de 4", description: "Cada respuesta es exactamente el doble de la table de 4: 8×5=40 es el doble de 4×5=20." },
-        { title: "motif du Dígito de las Unidades", description: "El dígito de las unidades sigue este patrón: 8, 6, 4, 2, 0 y se repite. Siempre un patrón descendente con nombres pairs." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 8 sont à la fois pairs et divisibles par 4 : 8, 16, 24, 32, 40, 48..." },
+        { title: "Le double de la table de 4", description: "Chaque réponse est exactement le double de la table de 4 : 8×5=40 est le double de 4×5=20." },
+        { title: "Motif du chiffre des unités", description: "Le chiffre des unités suit ce motif : 8, 6, 4, 2, 0 puis se répète. Toujours un motif décroissant avec des nombres pairs." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       9: [
-        { title: "Suma de Dígitos est toujours 9", description: "Suma les chiffres de Les multiples de 9: 18(1+8=9), 27(2+7=9), 36(3+6=9), 45(4+5=9). ¡Este patrón mágico siempre fonctionne!" },
-        { title: "motif du Dígito de las Decenas", description: "Si haces 9×n, el dígito de las decenas es n-1: 9×3=27 (decenas:2), 9×6=54 (decenas:5), 9×9=81 (decenas:8)." },
-        { title: "1 Menos que 10", description: "La fórmula 9×n = (10×n) - n est très utile: 9×6 = 60-6 = 54, 9×8 = 80-8 = 72." },
+        { title: "La somme des chiffres donne toujours 9", description: "Additionnez les chiffres des multiples de 9 : 18(1+8=9), 27(2+7=9), 36(3+6=9), 45(4+5=9). Ce motif magique fonctionne toujours !" },
+        { title: "Motif du chiffre des dizaines", description: "Pour 9×n, le chiffre des dizaines est toujours n-1 : 9×3=27 (dizaine : 2), 9×6=54 (dizaine : 5), 9×9=81 (dizaine : 8)." },
+        { title: "Un de moins que 10", description: "La formule 9×n = (10×n) - n est très utile : 9×6 = 60-6 = 54, 9×8 = 80-8 = 72." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       10: [
-        { title: "Agrega un Cero al Final", description: "Lorsque vous multipliez tout nombre par 10, simplemente agregas un cero al final: 7×10=70, 23×10=230." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 10 se terminent par 0: 10, 20, 30, 40, 50... Este patrón nunca cambia." },
-        { title: "Sistema de Valor Posicional", description: "Multiplier par 10 desplaza cada dígito una posición a la izquierda. Esta es la base de nuestro système décimal: 25×10=250." },
+        { title: "Ajoutez un zéro à la fin", description: "Quand on multiplie n'importe quel nombre par 10, on ajoute simplement un zéro à la fin : 7×10=70, 23×10=230." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 10 se terminent par 0 : 10, 20, 30, 40, 50... Ce motif ne change jamais." },
+        { title: "Système de valeur positionnelle", description: "Multiplier par 10 décale chaque chiffre d'une position vers la gauche. C'est la base de notre système décimal : 25×10=250." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       11: [
-        { title: "Patrón de Dígitos Dobles", description: "Cuando se multiplica par nombres de un chiffre, el rÃ©sultat es dígitos dobles: 11×2=22, 11×3=33, 11×7=77, 11×9=99." },
-        { title: "Truco de Suma de Dígitos", description: "Multiplica un nombre de deux chiffres par 11: addition les chiffres y colócalos en el medio. 23×11: 2_(2+3)_3 = 253." },
-        { title: "Incremento de Decenas", description: "Múltiplos de 11: 11, 22, 33, 44, 55, 66, 77, 88, 99, 110. Los primeros 9 muestran el patrón de dígitos dobles." },
+        { title: "Modèle des chiffres doublés", description: "En multipliant par un nombre à un chiffre, le résultat est ce chiffre répété deux fois : 11×2=22, 11×3=33, 11×7=77, 11×9=99." },
+        { title: "Astuce de la somme des chiffres", description: "Pour multiplier un nombre à deux chiffres par 11 : additionnez les chiffres et placez-les au milieu. 23×11 : 2_(2+3)_3 = 253." },
+        { title: "Progression par onze", description: "Multiples de 11 : 11, 22, 33, 44, 55, 66, 77, 88, 99, 110. Les 9 premiers montrent le motif des chiffres doublés." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       12: [
-        { title: "Patrón de Docena", description: "Múltiplos de 12: 12, 24, 36, 48, 60, 72, 84, 96, 108, 120. Cada uno muestra un aumento de une douzaine." },
-        { title: "Múltiplos de Ambos 3 y 4", description: "Como 12=3×4, todos los rÃ©sultats sont divisibles à la fois par 3 et par 4. 12×5=60: 60÷3=20, 60÷4=15." },
-        { title: "Patrón de nombres pairs", description: "Tous les multiples de 12 son pares y divisibles par 4: 12, 24, 36, 48..." },
+        { title: "Modèle de la douzaine", description: "Multiples de 12 : 12, 24, 36, 48, 60, 72, 84, 96, 108, 120. Chacun montre une augmentation d'une douzaine." },
+        { title: "Multiple à la fois de 3 et de 4", description: "Comme 12=3×4, tous les résultats sont divisibles à la fois par 3 et par 4. 12×5=60 : 60÷3=20, 60÷4=15." },
+        { title: "Modèle de nombres pairs", description: "Tous les multiples de 12 sont pairs et divisibles par 4 : 12, 24, 36, 48..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       13: [
-        { title: "Descomposición 10+3", description: "13×n = (10×n) + (3×n). Ejemplo: 13×4 = 40 + 12 = 52. Esta estrategia facilite le calcul." },
-        { title: "Ciclo del Dígito de las Unidades", description: "Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 y se repite. Se completa un ciclo en exactamente 10 pasos." },
-        { title: "Compartamiento de nombre premier", description: "Como 13 es primo, est divisible uniquement par 1 y 13. Esto nécessite des stratégies spéciales de memorización." },
+        { title: "Aucun raccourci — décomposer en 10+3", description: "13×n = (10×n) + (3×n). Exemple : 13×4 = 40 + 12 = 52. Cette stratégie facilite le calcul." },
+        { title: "Cycle du chiffre des unités", description: "Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0 puis se répète. Le cycle se termine en exactement 10 étapes." },
+        { title: "Comportement de nombre premier", description: "Comme 13 est premier, il est divisible uniquement par 1 et par 13. Cela demande des stratégies de mémorisation particulières." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       14: [
-        { title: "Doble del 7", description: "Como 14=2×7, Si vous connaissez la table de 7 duplica cada rÃ©sultat: 7×6=42, entonces 14×6=84." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 14 son pares: 14, 28, 42, 56, 70, 84, 98, 112, 126, 140." },
-        { title: "Patrón de Dos semaines", description: "14 días = 2 semaines. Les multiples de 14 se usan en planificación semanal: 28 días = 4 semaines." },
+        { title: "Le double de la table de 7", description: "Comme 14=2×7, si vous connaissez la table de 7, doublez chaque résultat : 7×6=42, donc 14×6=84." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 14 sont pairs : 14, 28, 42, 56, 70, 84, 98, 112, 126, 140." },
+        { title: "Modèle de deux semaines", description: "14 jours = 2 semaines. Les multiples de 14 sont utiles dans la planification hebdomadaire : 28 jours = 4 semaines." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       15: [
-        { title: "se termine en 0 ou 5", description: "Tous les multiples de 15 se terminent par 0 o 5: 15, 30, 45, 60, 75, 90, 105, 120, 135, 150." },
-        { title: "Relación 3×5", description: "Como 15=3×5, está relacionado con las tables del 3 y 5. 15×4=60: 3×4=12, 5×4=20, no es 12+20=32 pero sí 3×20=60 o 5×12=60." },
-        { title: "Múltiplos de Cuarto de Hora", description: "15 minutos = cuarto de hora. 30 minutos = demi-heure, 45 minutos = tres cuartos, 60 minutos = 1 hora." },
+        { title: "Se termine par 0 ou 5", description: "Tous les multiples de 15 se terminent par 0 ou 5 : 15, 30, 45, 60, 75, 90, 105, 120, 135, 150." },
+        { title: "Relation 3×5", description: "Comme 15=3×5, cette table est liée aux tables de 3 et de 5. 15×4=60 : on peut passer par 3×20=60 ou 5×12=60." },
+        { title: "Multiples du quart d'heure", description: "15 minutes = un quart d'heure. 30 minutes = une demi-heure, 45 minutes = trois quarts, 60 minutes = 1 heure." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       16: [
-        { title: "Potencia de 2", description: "16=2⁴ (2×2×2×2). Cadena de duplicación: 2→4→8→16. Cada múltiplo preserva este patrón." },
-        { title: "Doble del 8", description: "Como 16=2×8, Si vous connaissez la table de 8 duplica cada rÃ©sultat: 8×3=24, entonces 16×3=48." },
-        { title: "Siempre Par y Divisible par 8", description: "Tous les multiples de 16 son pares y divisibles par 4 y 8: 16, 32, 48, 64, 80..." },
+        { title: "Puissance de 2", description: "16=2⁴ (2×2×2×2). Chaîne de doublement : 2→4→8→16. Chaque multiple conserve ce motif." },
+        { title: "Le double de la table de 8", description: "Comme 16=2×8, si vous connaissez la table de 8, doublez chaque résultat : 8×3=24, donc 16×3=48." },
+        { title: "Toujours pair et divisible par 8", description: "Tous les multiples de 16 sont pairs et divisibles par 4 et par 8 : 16, 32, 48, 64, 80..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       17: [
-        { title: "Estrategia 20-3", description: "Piensa en 17=20-3. 17×6 = (20×6) - (3×6) = 120 - 18 = 102." },
-        { title: "Descomposición 10+7", description: "17×n = (10×n) + (7×n). Ejemplo: 17×4 = 40 + 28 = 68." },
-        { title: "Singularidad de nombre premier", description: "17 es primo, par lo que solo tiene modÃ¨les únicos. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Stratégie 20-3", description: "Pensez à 17 comme 20-3. 17×6 = (20×6) - (3×6) = 120 - 18 = 102." },
+        { title: "Décomposition 10+7", description: "17×n = (10×n) + (7×n). Exemple : 17×4 = 40 + 28 = 68." },
+        { title: "Singularité du nombre premier", description: "17 est premier, donc il n'a que des motifs qui lui sont propres. Chiffre des unités : 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       18: [
-        { title: "Doble del 9", description: "Como 18=2×9, duplica la table de 9: 9×5=45, entonces 18×5=90." },
-        { title: "Triple del 6", description: "Como 18=3×6, triplica la table de 6: 6×4=24, entonces 18×4=72." },
-        { title: "Siempre Par y Divisible par 9", description: "Les multiples de 18 son pares y divisibles par 9. La addition de dígitos es múltiplo de 9: 18(1+8=9), 36(3+6=9), 54(5+4=9)." },
+        { title: "Le double de la table de 9", description: "Comme 18=2×9, doublez la table de 9 : 9×5=45, donc 18×5=90." },
+        { title: "Le triple de la table de 6", description: "Comme 18=3×6, triplez la table de 6 : 6×4=24, donc 18×4=72." },
+        { title: "Toujours pair et divisible par 9", description: "Les multiples de 18 sont pairs et divisibles par 9. La somme des chiffres est un multiple de 9 : 18(1+8=9), 36(3+6=9), 54(5+4=9)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       19: [
-        { title: "Estrategia 20-1", description: "Piensa en 19=20-1. 19×6 = (20×6) - 6 = 120 - 6 = 114. ¡Método très pratique!" },
-        { title: "Descomposición 10+9", description: "19×n = (10×n) + (9×n). Ejemplo: 19×3 = 30 + 27 = 57." },
-        { title: "Patrón de nombre premier", description: "Como 19 es primo tiene modÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente)." },
+        { title: "Stratégie 20-1", description: "Pensez à 19 comme 20-1. 19×6 = (20×6) - 6 = 120 - 6 = 114. Une méthode très pratique !" },
+        { title: "Décomposition 10+9", description: "19×n = (10×n) + (9×n). Exemple : 19×3 = 30 + 27 = 57." },
+        { title: "Motif de nombre premier", description: "Comme 19 est premier, il a des motifs particuliers. Chiffre des unités : 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (ordre décroissant)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       20: [
-        { title: "Agrega Cero y Duplica", description: "20=10×2. Para Multiplier par 20: 7×10=70, luego 70×2=140. (No es 7×20: 70×2=140 directamente)." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 20 se terminent par 0: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200." },
-        { title: "Decenas Pares", description: "20, 40, 60, 80, 100... Cada uno aumenta en 20. Son múltiplos pares de 10." },
+        { title: "Ajouter un zéro et doubler", description: "20=10×2. Pour multiplier par 20 : 7×10=70, puis 70×2=140." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 20 se terminent par 0 : 20, 40, 60, 80, 100, 120, 140, 160, 180, 200." },
+        { title: "Dizaines paires", description: "20, 40, 60, 80, 100... Chacun augmente de 20. Ce sont les multiples pairs de 10." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       21: [
-        { title: "Relación 3×7", description: "21=3×7. Puedes usar les deux tables del 3 y 7: 21×4 = 3×4×7 = 12×7 = 84." },
-        { title: "Estrategia 20+1", description: "21×n = (20×n) + n. Ejemplo: 21×6 = 120 + 6 = 126. ¡très pratique!" },
-        { title: "Ciclo del Dígito de las Unidades", description: "Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 y se repite. Patrón de incremento simple." },
+        { title: "Relation 3×7", description: "21=3×7. On peut utiliser les deux tables, du 3 et du 7 : 21×4 = 3×4×7 = 12×7 = 84." },
+        { title: "Stratégie 20+1", description: "21×n = (20×n) + n. Exemple : 21×6 = 120 + 6 = 126. Très pratique !" },
+        { title: "Cycle du chiffre des unités", description: "Chiffre des unités : 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 puis se répète. Un motif d'augmentation simple." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       22: [
-        { title: "Doble del 11", description: "22=2×11. Si vous connaissez la table de 11 duplica: 11×3=33, entonces 22×3=66." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 22 son pares: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220." },
-        { title: "Patrón de Dígitos Dobles", description: "22×1=22, 22×2=44, 22×3=66, 22×4=88. Los primeros 4 muestran patrón de dígitos dobles." },
+        { title: "Le double de la table de 11", description: "22=2×11. Si vous connaissez la table de 11, doublez : 11×3=33, donc 22×3=66." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 22 sont pairs : 22, 44, 66, 88, 110, 132, 154, 176, 198, 220." },
+        { title: "Modèle des chiffres doublés", description: "22×1=22, 22×2=44, 22×3=66, 22×4=88. Les 4 premiers montrent un motif de chiffres doublés." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       23: [
-        { title: "Descomposición 20+3", description: "23×n = (20×n) + (3×n). Ejemplo: 23×5 = 100 + 15 = 115." },
-        { title: "Estrategia 25-2", description: "23=25-2. Ejemplo: 23×4 = 100 - 8 = 92. Útil cuando Multiplier par 25 es plus facile." },
-        { title: "Patrón de nombre premier", description: "Como 23 es primo tiene patrón especial. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Décomposition 20+3", description: "23×n = (20×n) + (3×n). Exemple : 23×5 = 100 + 15 = 115." },
+        { title: "Stratégie 25-2", description: "23=25-2. Exemple : 23×4 = 100 - 8 = 92. Utile quand multiplier par 25 est plus facile." },
+        { title: "Motif de nombre premier", description: "Comme 23 est premier, il a un motif particulier. Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       24: [
-        { title: "Relaciones de multiples Factores", description: "24=2×12=3×8=4×6. Puede calcularse de muchas formas. 24×5 = 12×10 = 120." },
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 24 son pares y divisibles par 3, 4, 6 y 8." },
-        { title: "Relación con las Horas", description: "24 horas = 1 día. 48 horas = 2 días, 72 horas = 3 días. Útil en calculs de temps." },
+        { title: "Relations de facteurs multiples", description: "24=2×12=3×8=4×6. Peut se calculer de plusieurs façons. 24×5 = 12×10 = 120." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 24 sont pairs et divisibles par 3, 4, 6 et 8." },
+        { title: "Relation avec les heures", description: "24 heures = 1 jour. 48 heures = 2 jours, 72 heures = 3 jours. Utile dans les calculs de temps." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       25: [
-        { title: "Patrón 25, 50, 75, 00", description: "Tous les multiples de 25 se terminent par 25, 50, 75 o 00. très régulier y predecible." },
-        { title: "Relación de Cuarto", description: "25 = 100÷4. Entonces 25×4=100. Esta relación est très utile en calculs de pourcentages y fracciones." },
-        { title: "Cuadrado del 5", description: "25=5². Esta relación especial: 25×n = 5×5×n. Ejemplo: 25×8 = 5×40 = 200." },
+        { title: "Motif 25, 50, 75, 00", description: "Tous les multiples de 25 se terminent par 25, 50, 75 ou 00 — un motif très régulier et prévisible." },
+        { title: "Relation au quart", description: "25 = 100÷4. Donc 25×4=100. Cette relation est très utile dans les calculs de pourcentages et de fractions." },
+        { title: "Carré de 5", description: "25=5². Relation spéciale : 25×n = 5×5×n. Exemple : 25×8 = 5×40 = 200." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       26: [
-        { title: "Doble del 13", description: "26=2×13. Si vous connaissez la table de 13 duplica: 13×7=91, entonces 26×7=182." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 26 son pares: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260." },
-        { title: "25+1 o 30-4", description: "26×n = (25×n) + n o (30×n) - (4×n). Ejemplo: 26×4 = 100+4 = 104." },
+        { title: "Le double de la table de 13", description: "26=2×13. Si vous connaissez la table de 13, doublez : 13×7=91, donc 26×7=182." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 26 sont pairs : 26, 52, 78, 104, 130, 156, 182, 208, 234, 260." },
+        { title: "25+1 ou 30-4", description: "26×n = (25×n) + n ou (30×n) - (4×n). Exemple : 26×4 = 100+4 = 104." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       27: [
-        { title: "Potencia del 3", description: "27=3³ (3×3×3). Relación de número cúbico: 27, 54, 81, 108... (múltiplos de 3)." },
-        { title: "Triple del 9", description: "27=3×9. Triplica la table de 9: 9×4=36, entonces 27×4=108." },
-        { title: "Estrategia 30-3", description: "27=30-3. Ejemplo: 27×6 = 180-18 = 162. Método de calcul fácil." },
+        { title: "Puissance de 3", description: "27=3³ (3×3×3). Relation de nombre cubique : 27, 54, 81, 108... (multiples de 3)." },
+        { title: "Le triple de la table de 9", description: "27=3×9. Triplez la table de 9 : 9×4=36, donc 27×4=108." },
+        { title: "Stratégie 30-3", description: "27=30-3. Exemple : 27×6 = 180-18 = 162. Une méthode de calcul facile." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       28: [
-        { title: "4×7 o 2×14", description: "28=4×7=2×14. Puede calcularse de multiples formas: 28×3 = 4×3×7 = 12×7 = 84." },
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 28 son pares y divisibles par 4 y 7: 28, 56, 84, 112, 140..." },
-        { title: "Relación con la Semana", description: "28 días = 4 semaines. Esta relación es útil en calculs de calendario." },
+        { title: "4×7 ou 2×14", description: "28=4×7=2×14. Peut se calculer de plusieurs façons : 28×3 = 4×3×7 = 12×7 = 84." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 28 sont pairs et divisibles par 4 et par 7 : 28, 56, 84, 112, 140..." },
+        { title: "Relation avec la semaine", description: "28 jours = 4 semaines. Cette relation est utile dans les calculs de calendrier." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       29: [
-        { title: "Estrategia 30-1", description: "29=30-1. 29×n = (30×n) - n. Ejemplo: 29×7 = 210-7 = 203. ¡El método más efectivo!" },
-        { title: "motif du Dígito de las Unidades", description: "Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (orden descendente). Predecible." },
-        { title: "Propiedad de nombre premier", description: "Como 29 es primo no tiene relaciones simples de factores. nécessite des stratégies mentales." },
+        { title: "Stratégie 30-1", description: "29=30-1. 29×n = (30×n) - n. Exemple : 29×7 = 210-7 = 203. La méthode la plus efficace !" },
+        { title: "Motif du chiffre des unités", description: "Chiffre des unités : 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 (ordre décroissant). Prévisible." },
+        { title: "Propriété de nombre premier", description: "Comme 29 est premier, il n'a pas de relation simple avec d'autres facteurs. Il nécessite des stratégies mentales spécifiques." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       30: [
-        { title: "Relación 3×10", description: "30=3×10. Multiplier par 30: multiplica par 10, luego par 3. 7×30 = 70×3 = 210." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 30 se terminent par 0: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300." },
-        { title: "Múltiplos Triples de las Decenas", description: "30, 60, 90, 120, 150... Cada uno aumenta en 30. Son 3 fois las decenas." },
+        { title: "Relation 3×10", description: "30=3×10. Pour multiplier par 30 : multipliez par 10, puis par 3. 7×30 = 70×3 = 210." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 30 se terminent par 0 : 30, 60, 90, 120, 150, 180, 210, 240, 270, 300." },
+        { title: "Multiples triples des dizaines", description: "30, 60, 90, 120, 150... Chacun augmente de 30. Ce sont trois fois les dizaines." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       31: [
-        { title: "Estrategia 30+1", description: "31=30+1. 31×n = (30×n) + n. Ejemplo: 31×7 = 210 + 7 = 217." },
-        { title: "Patrón de nombre premier", description: "Como 31 es primo tiene patrón especial. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Relación con Días del Mes", description: "31 días es la longitud máxima de un mes. 31, 62 (2 meses), 93 (3 meses), 124 (4 meses) en calculs de calendario." },
+        { title: "Stratégie 30+1", description: "31=30+1. 31×n = (30×n) + n. Exemple : 31×7 = 210 + 7 = 217." },
+        { title: "Motif de nombre premier", description: "Comme 31 est premier, il a un motif particulier. Chiffre des unités : 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "Relation avec les jours du mois", description: "31 jours est la durée maximale d'un mois. 31, 62 (2 mois), 93 (3 mois), 124 (4 mois) — utile en calculs de calendrier." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       32: [
-        { title: "Potencia de 2", description: "32=2⁵. Cadena de duplicación: 2→4→8→16→32. Tous les multiples preservan este patrón." },
-        { title: "Doble del 16", description: "32=2×16. Si vous connaissez la table de 16 duplica: 16×5=80, entonces 32×5=160." },
-        { title: "Siempre Par y Divisible par 8", description: "Tous les multiples de 32 son pares y divisibles par 4, 8 y 16: 32, 64, 96, 128..." },
+        { title: "Puissance de 2", description: "32=2⁵. Chaîne de doublement : 2→4→8→16→32. Tous les multiples conservent ce motif." },
+        { title: "Le double de la table de 16", description: "32=2×16. Si vous connaissez la table de 16, doublez : 16×5=80, donc 32×5=160." },
+        { title: "Toujours pair et divisible par 8", description: "Tous les multiples de 32 sont pairs et divisibles par 4, 8 et 16 : 32, 64, 96, 128..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       33: [
-        { title: "Relación 3×11", description: "33=3×11. Triplica la table de 11: 11×4=44, entonces 33×4=132. O multiplica la table de 3 par 11." },
-        { title: "Patrón Repdigit", description: "33×1=33, 33×2=66, 33×3=99. Los primeros 3 muestran dígitos dobles. Luego 132, 165..." },
-        { title: "Siempre Divisible par 3", description: "Tous les multiples de 33 sont divisibles par 3 y 11. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 3×11", description: "33=3×11. Triplez la table de 11 : 11×4=44, donc 33×4=132. Ou multipliez la table de 3 par 11." },
+        { title: "Motif repdigit", description: "33×1=33, 33×2=66, 33×3=99. Les 3 premiers montrent des chiffres doublés. Puis 132, 165..." },
+        { title: "Toujours divisible par 3", description: "Tous les multiples de 33 sont divisibles par 3 et par 11. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       34: [
-        { title: "Doble del 17", description: "34=2×17. Duplica la table de 17: 17×6=102, entonces 34×6=204." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 34 son pares: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340." },
-        { title: "35-1 o 30+4", description: "34×n = (35×n) - n o (30×n) + (4×n). Ejemplo: 34×5 = 175-5 = 170." },
+        { title: "Le double de la table de 17", description: "34=2×17. Doublez la table de 17 : 17×6=102, donc 34×6=204." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 34 sont pairs : 34, 68, 102, 136, 170, 204, 238, 272, 306, 340." },
+        { title: "35-1 ou 30+4", description: "34×n = (35×n) - n ou (30×n) + (4×n). Exemple : 34×5 = 175-5 = 170." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       35: [
-        { title: "Relación 5×7", description: "35=5×7. Puedes usar les deux tables del 5 y 7: 35×4 = 5×4×7 = 20×7 = 140." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 35 se terminent par 5 o 0: 35, 70, 105, 140, 175, 210, 245, 280..." },
-        { title: "Cincos del 7", description: "35, 70, 105, 140, 175... Multiplica múltiplos del 7 par 5. O múltiplos del 5 par 7." },
+        { title: "Relation 5×7", description: "35=5×7. On peut utiliser les deux tables, du 5 et du 7 : 35×4 = 5×4×7 = 20×7 = 140." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 35 se terminent par 5 ou 0 : 35, 70, 105, 140, 175, 210, 245, 280..." },
+        { title: "Multiples de 7 par 5", description: "35, 70, 105, 140, 175... En multipliant les multiples de 7 par 5, ou les multiples de 5 par 7." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       36: [
-        { title: "Cuadrado del 6", description: "36=6². Además 36=4×9=3×12=2×18. Relaciones de multiples factores." },
-        { title: "nombreux diviseurs", description: "36 tiene 9 divisores: 1,2,3,4,6,9,12,18,36. Esto lo hace très utile para fracciones." },
-        { title: "Divisible par 9 y 4", description: "Tous les multiples de 36 sont divisibles par 4 y 9. La addition de dígitos es múltiplo de 9." },
+        { title: "Carré de 6", description: "36=6². De plus, 36=4×9=3×12=2×18 — plusieurs relations de facteurs possibles." },
+        { title: "De nombreux diviseurs", description: "36 a 9 diviseurs : 1, 2, 3, 4, 6, 9, 12, 18, 36. Cela le rend très utile pour les fractions." },
+        { title: "Divisible par 9 et par 4", description: "Tous les multiples de 36 sont divisibles par 4 et par 9. La somme des chiffres est un multiple de 9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       37: [
-        { title: "Estrategia 40-3", description: "37=40-3. 37×n = (40×n) - (3×n). Ejemplo: 37×6 = 240 - 18 = 222." },
-        { title: "Relación Mágica con 111", description: "37×3=111. Esta relación especial: 37×6=222, 37×9=333. ¡En cada múltiplo de 3 hay rÃ©sultat repdigit!" },
-        { title: "Singularidad de nombre premier", description: "Como 37 es primo tiene modÃ¨les especiales. Las estrategias 35+2 o 40-3 son útiles." },
+        { title: "Stratégie 40-3", description: "37=40-3. 37×n = (40×n) - (3×n). Exemple : 37×6 = 240 - 18 = 222." },
+        { title: "Relation magique avec 111", description: "37×3=111. Relation spéciale : 37×6=222, 37×9=333. Chaque multiple de 3 donne un résultat repdigit !" },
+        { title: "Singularité du nombre premier", description: "Comme 37 est premier, il a des motifs particuliers. Les stratégies 35+2 ou 40-3 sont utiles." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       38: [
-        { title: "Doble del 19", description: "38=2×19. Duplica la table de 19: 19×7=133, entonces 38×7=266." },
-        { title: "Estrategia 40-2", description: "38=40-2. 38×n = (40×n) - (2×n). Ejemplo: 38×5 = 200 - 10 = 190." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 38 son pares: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380." },
+        { title: "Le double de la table de 19", description: "38=2×19. Doublez la table de 19 : 19×7=133, donc 38×7=266." },
+        { title: "Stratégie 40-2", description: "38=40-2. 38×n = (40×n) - (2×n). Exemple : 38×5 = 200 - 10 = 190." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 38 sont pairs : 38, 76, 114, 152, 190, 228, 266, 304, 342, 380." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       39: [
-        { title: "Relación 3×13", description: "39=3×13. Triplica la table de 13: 13×4=52, entonces 39×4=156." },
-        { title: "Estrategia 40-1", description: "39=40-1. 39×n = (40×n) - n. Ejemplo: 39×7 = 280 - 7 = 273. ¡très pratique!" },
-        { title: "Divisible par 3", description: "Tous les multiples de 39 sont divisibles par 3 y 13. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 3×13", description: "39=3×13. Triplez la table de 13 : 13×4=52, donc 39×4=156." },
+        { title: "Stratégie 40-1", description: "39=40-1. 39×n = (40×n) - n. Exemple : 39×7 = 280 - 7 = 273. Très pratique !" },
+        { title: "Divisible par 3", description: "Tous les multiples de 39 sont divisibles par 3 et par 13. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        { title: "Relación 4×10", description: "40=4×10. Multiplier par 40: multiplica par 4, agrega un 0 al final. 7×40: 7×4=28, agrega 0: 280." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 40 se terminent par 0: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
-        { title: "Cuatro Veces las Decenas", description: "40, 80, 120, 160, 200... Cada uno aumenta en 40. Son 4 fois las decenas." },
+        { title: "Relation 4×10", description: "40=4×10. Pour multiplier par 40 : multipliez par 4, puis ajoutez un 0 à la fin. 7×40 : 7×4=28, puis 280." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 40 se terminent par 0 : 40, 80, 120, 160, 200, 240, 280, 320, 360, 400." },
+        { title: "Quatre fois les dizaines", description: "40, 80, 120, 160, 200... Chacun augmente de 40. Ce sont quatre fois les dizaines." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       41: [
-        { title: "Estrategia 40+1", description: "41=40+1. 41×n = (40×n) + n. Ejemplo: 41×6 = 240 + 6 = 246. ¡El méthode la plus pratique!" },
-        { title: "Propiedades de nombre premier", description: "Como 41 es primo est divisible uniquement par 1 y 41. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "45-4 o 50-9", description: "Estrategias alternativas: 41×4 = 180-16 = 164. O 41×5 = 250-45 = 205." },
+        { title: "Stratégie 40+1", description: "41=40+1. 41×n = (40×n) + n. Exemple : 41×6 = 240 + 6 = 246. La méthode la plus pratique !" },
+        { title: "Propriétés du nombre premier", description: "Comme 41 est premier, il est divisible uniquement par 1 et par 41. Chiffre des unités : 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "45-4 ou 50-9", description: "Stratégies alternatives : 41×4 = 180-16 = 164. Ou 41×5 = 250-45 = 205." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       42: [
-        { title: "Relación 6×7", description: "42=6×7. Puedes usar les deux tables del 6 y 7: 42×3 = 6×3×7 = 18×7 = 126." },
-        { title: "2×21 o 3×14", description: "42=2×21=3×14. peut être calculé de multiples façons: 42×5 = 21×10 = 210." },
-        { title: "Siempre Divisible par 6", description: "Tous les multiples de 42 sont divisibles par 2, 3, 6 y 7: 42, 84, 126, 168, 210..." },
+        { title: "Relation 6×7", description: "42=6×7. On peut utiliser les deux tables, du 6 et du 7 : 42×3 = 6×3×7 = 18×7 = 126." },
+        { title: "2×21 ou 3×14", description: "42=2×21=3×14. Peut se calculer de plusieurs façons : 42×5 = 21×10 = 210." },
+        { title: "Toujours divisible par 6", description: "Tous les multiples de 42 sont divisibles par 2, 3, 6 et 7 : 42, 84, 126, 168, 210..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       43: [
-        { title: "40+3 o 45-2", description: "43=40+3 o 45-2. Ejemplo: 43×7 = 280+21 = 301 o 315-14 = 301." },
-        { title: "Patrón de nombre premier", description: "Como 43 es primo nécessite des stratégies spéciales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 50-7", description: "avec de grands nombres: 43×8 = 400-56 = 344. Restar de 50 es un método alternativo." },
+        { title: "40+3 ou 45-2", description: "43=40+3 ou 45-2. Exemple : 43×7 = 280+21 = 301 ou 315-14 = 301." },
+        { title: "Motif de nombre premier", description: "Comme 43 est premier, il demande des stratégies particulières. Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Stratégie 50-7", description: "Avec de grands nombres : 43×8 = 400-56 = 344. Soustraire à partir de 50 est une méthode alternative." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       44: [
-        { title: "Cuatro Veces el 11", description: "44=4×11. Cuadruplica la table de 11: 11×6=66, entonces 44×6=264." },
-        { title: "Similar a Repdigit", description: "44×1=44, 44×2=88. Los primeros 2 muestran dígitos dobles. Luego 132, 176, 220..." },
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 44 son pares y divisibles par 4 y 11: 44, 88, 132, 176, 220..." },
+        { title: "Quatre fois la table de 11", description: "44=4×11. Quadruplez la table de 11 : 11×6=66, donc 44×6=264." },
+        { title: "Proche d'un repdigit", description: "44×1=44, 44×2=88. Les 2 premiers montrent des chiffres doublés. Puis 132, 176, 220..." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 44 sont pairs et divisibles par 4 et par 11 : 44, 88, 132, 176, 220..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       45: [
-        { title: "Relación 5×9", description: "45=5×9. Puedes usar les deux tables del 5 y 9: 45×4 = 5×4×9 = 20×9 = 180." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 45 se terminent par 5 o 0: 45, 90, 135, 180, 225, 270, 315, 360..." },
-        { title: "Divisible par 9", description: "Tous les multiples de 45 sont divisibles par 9. La addition de dígitos es múltiplo de 9: 135 (1+3+5=9)." },
+        { title: "Relation 5×9", description: "45=5×9. On peut utiliser les deux tables, du 5 et du 9 : 45×4 = 5×4×9 = 20×9 = 180." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 45 se terminent par 5 ou 0 : 45, 90, 135, 180, 225, 270, 315, 360..." },
+        { title: "Divisible par 9", description: "Tous les multiples de 45 sont divisibles par 9. La somme des chiffres est un multiple de 9 : 135 (1+3+5=9)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       46: [
-        { title: "Doble del 23", description: "46=2×23. Duplica la table de 23: 23×7=161, entonces 46×7=322." },
-        { title: "45+1 o 50-4", description: "46×n = (45×n) + n o (50×n) - (4×n). Ejemplo: 46×5 = 225+5 = 230." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 46 son pares: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460." },
+        { title: "Le double de la table de 23", description: "46=2×23. Doublez la table de 23 : 23×7=161, donc 46×7=322." },
+        { title: "45+1 ou 50-4", description: "46×n = (45×n) + n ou (50×n) - (4×n). Exemple : 46×5 = 225+5 = 230." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 46 sont pairs : 46, 92, 138, 184, 230, 276, 322, 368, 414, 460." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       47: [
-        { title: "Estrategia 50-3", description: "47=50-3. 47×n = (50×n) - (3×n). Ejemplo: 47×6 = 300 - 18 = 282. ¡El más efectivo!" },
-        { title: "Alternativa 45+2", description: "47=45+2. Ejemplo: 47×8 = 360 + 16 = 376. Útil Si vous connaissez la table de 45." },
-        { title: "Singularidad de nombre premier", description: "Como 47 es primo tiene modÃ¨les especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Stratégie 50-3", description: "47=50-3. 47×n = (50×n) - (3×n). Exemple : 47×6 = 300 - 18 = 282. La plus efficace !" },
+        { title: "Alternative 45+2", description: "47=45+2. Exemple : 47×8 = 360 + 16 = 376. Utile si vous connaissez la table de 45." },
+        { title: "Singularité du nombre premier", description: "Comme 47 est premier, il a des motifs particuliers. Chiffre des unités : 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       48: [
-        { title: "Relaciones de multiples Factores", description: "48=6×8=4×12=3×16=2×24. Puede calcularse de muchas formas: 48×5 = 12×20 = 240." },
-        { title: "Siempre Par y multiples Divisores", description: "Tous les multiples de 48 sont divisibles par 2, 3, 4, 6, 8 y 12." },
-        { title: "Estrategia 50-2", description: "48=50-2. Ejemplo: 48×7 = 350 - 14 = 336. soustraire à partir de nombres ronds." },
+        { title: "Relations de facteurs multiples", description: "48=6×8=4×12=3×16=2×24. Peut se calculer de plusieurs façons : 48×5 = 12×20 = 240." },
+        { title: "Pair et nombreux diviseurs", description: "Tous les multiples de 48 sont divisibles par 2, 3, 4, 6, 8 et 12." },
+        { title: "Stratégie 50-2", description: "48=50-2. Exemple : 48×7 = 350 - 14 = 336 — soustraire à partir d'un nombre rond." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       49: [
-        { title: "Cuadrado del 7", description: "49=7². Usa la table de 7: 49×3 = 7×7×3 = 7×21 = 147. O 7×3×7." },
-        { title: "Estrategia 50-1", description: "49=50-1. 49×n = (50×n) - n. Ejemplo: 49×6 = 300 - 6 = 294. ¡Muy fácil!" },
-        { title: "Patrón de Número Cuadrado", description: "49, 98, 147, 196, 245... Múltiplos del 7 par 7. También 7²×1, 7²×2, 7²×3..." },
+        { title: "Carré de 7", description: "49=7². Utilisez la table de 7 : 49×3 = 7×7×3 = 7×21 = 147." },
+        { title: "Stratégie 50-1", description: "49=50-1. 49×n = (50×n) - n. Exemple : 49×6 = 300 - 6 = 294. Très facile !" },
+        { title: "Motif de nombre carré", description: "49, 98, 147, 196, 245... les multiples de 7 par 7, soit 7²×1, 7²×2, 7²×3..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        { title: "Relación 5×10", description: "50=5×10. Multiplier par 50: multiplica par 5, agrega un 0 al final. 8×50: 8×5=40, agrega 0: 400." },
-        { title: "Siempre se termine en 0 ou 50", description: "Tous les multiples de 50 se terminent par 0 o 50: 50, 100, 150, 200, 250, 300, 350, 400..." },
-        { title: "Mitad de 100", description: "50×n = (100×n)÷2. Ejemplo: 50×7 = 700÷2 = 350. Útil en calculs de pourcentages." },
+        { title: "Relation 5×10", description: "50=5×10. Pour multiplier par 50 : multipliez par 5, puis ajoutez un 0 à la fin. 8×50 : 8×5=40, puis 400." },
+        { title: "Se termine par 0 ou 50", description: "Tous les multiples de 50 se terminent par 0 ou 50 : 50, 100, 150, 200, 250, 300, 350, 400..." },
+        { title: "Moitié de 100", description: "50×n = (100×n)÷2. Exemple : 50×7 = 700÷2 = 350. Utile dans les calculs de pourcentages." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       51: [
-        { title: "Estrategia 50+1", description: "51=50+1. 51×n = (50×n) + n. Ejemplo: 51×7 = 350 + 7 = 357. ¡très pratique!" },
-        { title: "Relación 3×17", description: "51=3×17. Triplica la table de 17: 17×6=102, entonces 51×6=306." },
-        { title: "Alternativa 55-4", description: "51=55-4. Ejemplo: 51×5 = 275-20 = 255. Útil cuando Multiplier par 55 es plus facile." },
+        { title: "Stratégie 50+1", description: "51=50+1. 51×n = (50×n) + n. Exemple : 51×7 = 350 + 7 = 357. Très pratique !" },
+        { title: "Relation 3×17", description: "51=3×17. Triplez la table de 17 : 17×6=102, donc 51×6=306." },
+        { title: "Alternative 55-4", description: "51=55-4. Exemple : 51×5 = 275-20 = 255. Utile quand multiplier par 55 est plus facile." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       52: [
-        { title: "Relación 4×13", description: "52=4×13. Cuadruplica la table de 13: 13×7=91, entonces 52×7=364." },
-        { title: "50+2 o 2×26", description: "52×n = (50×n) + (2×n) o duplica la table de 26. Ejemplo: 52×5 = 250+10 = 260." },
-        { title: "Patrón de Número de semaines", description: "52 semaines = 1 año. 52, 104 (2 ans), 156 (3 ans)... Útil en calculs de calendario." },
+        { title: "Relation 4×13", description: "52=4×13. Quadruplez la table de 13 : 13×7=91, donc 52×7=364." },
+        { title: "50+2 ou 2×26", description: "52×n = (50×n) + (2×n) ou doublez la table de 26. Exemple : 52×5 = 250+10 = 260." },
+        { title: "Motif du nombre de semaines", description: "52 semaines = 1 an. 52, 104 (2 ans), 156 (3 ans)... utile en calculs de calendrier." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       53: [
-        { title: "50+3 o 55-2", description: "53=50+3 o 55-2. Ejemplo: 53×6 = 300+18 = 318 o 330-12 = 318." },
-        { title: "Patrón de nombre premier", description: "Como 53 es primo nécessite des stratégies spéciales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 60-7", description: "avec de grands nombres: 53×8 = 480-56 = 424. Restar de 60 es un método alternativo." },
+        { title: "50+3 ou 55-2", description: "53=50+3 ou 55-2. Exemple : 53×6 = 300+18 = 318 ou 330-12 = 318." },
+        { title: "Motif de nombre premier", description: "Comme 53 est premier, il demande des stratégies particulières. Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Stratégie 60-7", description: "Avec de grands nombres : 53×8 = 480-56 = 424. Soustraire à partir de 60 est une méthode alternative." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       54: [
-        { title: "Relación 6×9", description: "54=6×9. Puedes usar les deux tables del 6 y 9: 54×5 = 9×5×6 = 45×6 = 270." },
-        { title: "2×27 o 3×18", description: "54=2×27=3×18. Puede calcularse de multiples formas: 54×4 = 27×8 = 216." },
-        { title: "Divisible par 9", description: "Tous les multiples de 54 sont divisibles par 9. La addition de dígitos es múltiplo de 9: 108 (1+0+8=9)." },
+        { title: "Relation 6×9", description: "54=6×9. On peut utiliser les deux tables, du 6 et du 9 : 54×5 = 9×5×6 = 45×6 = 270." },
+        { title: "2×27 ou 3×18", description: "54=2×27=3×18. Peut se calculer de plusieurs façons : 54×4 = 27×8 = 216." },
+        { title: "Divisible par 9", description: "Tous les multiples de 54 sont divisibles par 9. La somme des chiffres est un multiple de 9 : 108 (1+0+8=9)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       55: [
-        { title: "Relación 5×11", description: "55=5×11. Puedes usar les deux tables del 5 y 11: 55×4 = 11×4×5 = 44×5 = 220." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 55 se terminent par 5 o 0: 55, 110, 165, 220, 275, 330, 385, 440..." },
-        { title: "nombre triangulaire", description: "55 = 1+2+3+4+5+6+7+8+9+10. Esta propriÃ©tÃ© de addition especial hace que 55 sea matemáticamente interesante." },
+        { title: "Relation 5×11", description: "55=5×11. On peut utiliser les deux tables, du 5 et du 11 : 55×4 = 11×4×5 = 44×5 = 220." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 55 se terminent par 5 ou 0 : 55, 110, 165, 220, 275, 330, 385, 440..." },
+        { title: "Nombre triangulaire", description: "55 = 1+2+3+4+5+6+7+8+9+10. Cette propriété d'addition spéciale rend 55 mathématiquement intéressant." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       56: [
-        { title: "Relación 7×8", description: "56=7×8. ¡Una de las parejas de multiplicación más difíciles! renforce \u00e0 la fois la table de 7 como del 8." },
-        { title: "4×14 o 2×28", description: "56=4×14=2×28. Puede calcularse de multiples formas: 56×5 = 14×20 = 280." },
-        { title: "Siempre Par y Divisible par 7", description: "Tous les multiples de 56 son pares y divisibles par 4, 7 y 8: 56, 112, 168, 224..." },
+        { title: "Relation 7×8", description: "56=7×8. L'une des paires de multiplication les plus difficiles ! Apprendre cette table renforce à la fois celle de 7 et celle de 8." },
+        { title: "4×14 ou 2×28", description: "56=4×14=2×28. Peut se calculer de plusieurs façons : 56×5 = 14×20 = 280." },
+        { title: "Toujours pair et divisible par 7", description: "Tous les multiples de 56 sont pairs et divisibles par 4, 7 et 8 : 56, 112, 168, 224..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       57: [
-        { title: "Relación 3×19", description: "57=3×19. Triplica la table de 19: 19×7=133, entonces 57×7=399." },
-        { title: "Estrategia 60-3", description: "57=60-3. 57×n = (60×n) - (3×n). Ejemplo: 57×6 = 360 - 18 = 342. ¡Muy fácil!" },
-        { title: "Divisible par 3", description: "Tous les multiples de 57 sont divisibles par 3 y 19. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 3×19", description: "57=3×19. Triplez la table de 19 : 19×7=133, donc 57×7=399." },
+        { title: "Stratégie 60-3", description: "57=60-3. 57×n = (60×n) - (3×n). Exemple : 57×6 = 360 - 18 = 342. Très facile !" },
+        { title: "Divisible par 3", description: "Tous les multiples de 57 sont divisibles par 3 et par 19. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       58: [
-        { title: "Doble del 29", description: "58=2×29. Duplica la table de 29: 29×7=203, entonces 58×7=406." },
-        { title: "Estrategia 60-2", description: "58=60-2. 58×n = (60×n) - (2×n). Ejemplo: 58×6 = 360 - 12 = 348." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 58 son pares: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580." },
+        { title: "Le double de la table de 29", description: "58=2×29. Doublez la table de 29 : 29×7=203, donc 58×7=406." },
+        { title: "Stratégie 60-2", description: "58=60-2. 58×n = (60×n) - (2×n). Exemple : 58×6 = 360 - 12 = 348." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 58 sont pairs : 58, 116, 174, 232, 290, 348, 406, 464, 522, 580." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       59: [
-        { title: "Estrategia 60-1", description: "59=60-1. 59×n = (60×n) - n. Ejemplo: 59×7 = 420 - 7 = 413. ¡PERFECTO!" },
-        { title: "Singularidad de nombre premier", description: "Como 59 es primo tiene modÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 55+4", description: "59=55+4. Ejemplo: 59×8 = 440 + 32 = 472. Útil Si vous connaissez la table de 55." },
+        { title: "Stratégie 60-1", description: "59=60-1. 59×n = (60×n) - n. Exemple : 59×7 = 420 - 7 = 413. Parfait !" },
+        { title: "Singularité du nombre premier", description: "Comme 59 est premier, il a des motifs particuliers. Chiffre des unités : 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternative 55+4", description: "59=55+4. Exemple : 59×8 = 440 + 32 = 472. Utile si vous connaissez la table de 55." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        { title: "Relación 6×10", description: "60=6×10. Multiplier par 60: multiplica par 6, agrega un 0 al final. 7×60: 7×6=42, agrega 0: 420." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 60 se terminent par 0: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
-        { title: "Relaciones de multiples Factores", description: "60=2×30=3×20=4×15=5×12=6×10. ¡Puede calcularse de muchas formas!" },
+        { title: "Relation 6×10", description: "60=6×10. Pour multiplier par 60 : multipliez par 6, puis ajoutez un 0 à la fin. 7×60 : 7×6=42, puis 420." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 60 se terminent par 0 : 60, 120, 180, 240, 300, 360, 420, 480, 540, 600." },
+        { title: "Relations de facteurs multiples", description: "60=2×30=3×20=4×15=5×12=6×10 — de nombreuses façons de le calculer !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       61: [
-        { title: "Estrategia 60+1", description: "61=60+1. 61×n = (60×n) + n. Ejemplo: 61×7 = 420 + 7 = 427. ¡très pratique!" },
-        { title: "Propiedades de nombre premier", description: "Como 61 es primo est divisible uniquement par 1 y 61. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Alternativa 65-4", description: "61=65-4. Ejemplo: 61×5 = 325-20 = 305. Útil cuando Multiplier par 65 es plus facile." },
+        { title: "Stratégie 60+1", description: "61=60+1. 61×n = (60×n) + n. Exemple : 61×7 = 420 + 7 = 427. Très pratique !" },
+        { title: "Propriétés du nombre premier", description: "Comme 61 est premier, il est divisible uniquement par 1 et par 61. Chiffre des unités : 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "Alternative 65-4", description: "61=65-4. Exemple : 61×5 = 325-20 = 305. Utile quand multiplier par 65 est plus facile." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       62: [
-        { title: "Doble del 31", description: "62=2×31. Duplica la table de 31: 31×7=217, entonces 62×7=434." },
-        { title: "Estrategia 60+2", description: "62=60+2. 62×n = (60×n) + (2×n). Ejemplo: 62×6 = 360 + 12 = 372." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 62 son pares: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620." },
+        { title: "Le double de la table de 31", description: "62=2×31. Doublez la table de 31 : 31×7=217, donc 62×7=434." },
+        { title: "Stratégie 60+2", description: "62=60+2. 62×n = (60×n) + (2×n). Exemple : 62×6 = 360 + 12 = 372." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 62 sont pairs : 62, 124, 186, 248, 310, 372, 434, 496, 558, 620." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       63: [
-        { title: "Relación 7×9", description: "63=7×9. Puedes usar les deux tables del 7 y 9: 63×5 = 9×5×7 = 45×7 = 315." },
-        { title: "Alternativa 3×21", description: "63=3×21. Triplica la table de 21: 21×4=84, entonces 63×4=252." },
-        { title: "Divisible par 7 y 9", description: "Tous les multiples de 63 sont divisibles par 7 y 9. La addition de dígitos es múltiplo de 9." },
+        { title: "Relation 7×9", description: "63=7×9. On peut utiliser les deux tables, du 7 et du 9 : 63×5 = 9×5×7 = 45×7 = 315." },
+        { title: "Alternative 3×21", description: "63=3×21. Triplez la table de 21 : 21×4=84, donc 63×4=252." },
+        { title: "Divisible par 7 et par 9", description: "Tous les multiples de 63 sont divisibles par 7 et par 9. La somme des chiffres est un multiple de 9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       64: [
-        { title: "Cuadrado del 8", description: "64=8×8=8². Además 64=2⁶. Cadena de duplicación: 2→4→8→16→32→64." },
-        { title: "Sexta Potencia del 2", description: "64=2⁶. importante para architecture de 64 bits en computación. forme la base del système binaire." },
-        { title: "Siempre Par y Divisible par 8", description: "Tous les multiples de 64 son pares y divisibles par 4, 8, 16 y 32: 64, 128, 192, 256..." },
+        { title: "Carré de 8", description: "64=8×8=8². De plus, 64=2⁶. Chaîne de doublement : 2→4→8→16→32→64." },
+        { title: "Sixième puissance de 2", description: "64=2⁶ — important pour l'architecture 64 bits en informatique, la base du système binaire." },
+        { title: "Toujours pair et divisible par 8", description: "Tous les multiples de 64 sont pairs et divisibles par 4, 8, 16 et 32 : 64, 128, 192, 256..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       65: [
-        { title: "Relación 5×13", description: "65=5×13. Puedes usar les deux tables del 5 y 13: 65×4 = 13×4×5 = 52×5 = 260." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 65 se terminent par 5 o 0: 65, 130, 195, 260, 325, 390, 455, 520..." },
-        { title: "60+5 o 70-5", description: "65×n = (60×n) + (5×n) o (70×n) - (5×n). Ejemplo: 65×6 = 360+30 = 390." },
+        { title: "Relation 5×13", description: "65=5×13. On peut utiliser les deux tables, du 5 et du 13 : 65×4 = 13×4×5 = 52×5 = 260." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 65 se terminent par 5 ou 0 : 65, 130, 195, 260, 325, 390, 455, 520..." },
+        { title: "60+5 ou 70-5", description: "65×n = (60×n) + (5×n) ou (70×n) - (5×n). Exemple : 65×6 = 360+30 = 390." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       66: [
-        { title: "Relación 6×11", description: "66=6×11. Puedes usar les deux tables del 6 y 11: 66×5 = 11×5×6 = 55×6 = 330." },
-        { title: "Similar a Repdigit", description: "66×1=66, 66×2=132. Como 6 fois 11, sigue el patrón de la table de 11." },
-        { title: "Alternativa 2×33", description: "66=2×33. Duplica la table de 33: 33×7=231, entonces 66×7=462." },
+        { title: "Relation 6×11", description: "66=6×11. On peut utiliser les deux tables, du 6 et du 11 : 66×5 = 11×5×6 = 55×6 = 330." },
+        { title: "Proche d'un repdigit", description: "66×1=66, 66×2=132. En tant que 6 fois 11, il suit le motif de la table de 11." },
+        { title: "Alternative 2×33", description: "66=2×33. Doublez la table de 33 : 33×7=231, donc 66×7=462." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       67: [
-        { title: "Estrategia 70-3", description: "67=70-3. 67×n = (70×n) - (3×n). Ejemplo: 67×7 = 490 - 21 = 469. ¡Muy fácil!" },
-        { title: "Patrón de nombre premier", description: "Como 67 es primo nécessite des stratégies spéciales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
-        { title: "Alternativa 65+2", description: "67=65+2. Ejemplo: 67×8 = 520 + 16 = 536. Útil Si vous connaissez la table de 65." },
+        { title: "Stratégie 70-3", description: "67=70-3. 67×n = (70×n) - (3×n). Exemple : 67×7 = 490 - 21 = 469. Très facile !" },
+        { title: "Motif de nombre premier", description: "Comme 67 est premier, il demande des stratégies particulières. Chiffre des unités : 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Alternative 65+2", description: "67=65+2. Exemple : 67×8 = 520 + 16 = 536. Utile si vous connaissez la table de 65." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       68: [
-        { title: "Relación 4×17", description: "68=4×17. Cuadruplica la table de 17: 17×7=119, entonces 68×7=476." },
-        { title: "2×34 o 70-2", description: "68=2×34 o 70-2. Ejemplo: 68×6 = 420 - 12 = 408." },
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 68 son pares y divisibles par 4 y 17: 68, 136, 204, 272, 340..." },
+        { title: "Relation 4×17", description: "68=4×17. Quadruplez la table de 17 : 17×7=119, donc 68×7=476." },
+        { title: "2×34 ou 70-2", description: "68=2×34 ou 70-2. Exemple : 68×6 = 420 - 12 = 408." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 68 sont pairs et divisibles par 4 et par 17 : 68, 136, 204, 272, 340..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       69: [
-        { title: "Relación 3×23", description: "69=3×23. Triplica la table de 23: 23×7=161, entonces 69×7=483." },
-        { title: "Estrategia 70-1", description: "69=70-1. 69×n = (70×n) - n. Ejemplo: 69×6 = 420 - 6 = 414. ¡PERFECTO!" },
-        { title: "Divisible par 3", description: "Tous les multiples de 69 sont divisibles par 3 y 23. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 3×23", description: "69=3×23. Triplez la table de 23 : 23×7=161, donc 69×7=483." },
+        { title: "Stratégie 70-1", description: "69=70-1. 69×n = (70×n) - n. Exemple : 69×6 = 420 - 6 = 414. Parfait !" },
+        { title: "Divisible par 3", description: "Tous les multiples de 69 sont divisibles par 3 et par 23. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        { title: "Relación 7×10", description: "70=7×10. Multiplier par 70: multiplica par 7, agrega un 0 al final. 8×70: 8×7=56, agrega 0: 560." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 70 se terminent par 0: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
-        { title: "Relaciones de multiples Factores", description: "70=2×35=5×14=7×10. ¡Puede calcularse de muchas formas!" },
+        { title: "Relation 7×10", description: "70=7×10. Pour multiplier par 70 : multipliez par 7, puis ajoutez un 0 à la fin. 8×70 : 8×7=56, puis 560." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 70 se terminent par 0 : 70, 140, 210, 280, 350, 420, 490, 560, 630, 700." },
+        { title: "Relations de facteurs multiples", description: "70=2×35=5×14=7×10 — de nombreuses façons de le calculer !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       71: [
-        { title: "Estrategia 70+1", description: "71=70+1. 71×n = (70×n) + n. Ejemplo: 71×7 = 490 + 7 = 497. ¡très pratique!" },
-        { title: "Propiedades de nombre premier", description: "Como 71 es primo est divisible uniquement par 1 y 71. Dígito de las unidades: 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
-        { title: "Alternativa 75-4", description: "71=75-4. Ejemplo: 71×5 = 375-20 = 355. Útil cuando Multiplier par 75 es plus facile." },
+        { title: "Stratégie 70+1", description: "71=70+1. 71×n = (70×n) + n. Exemple : 71×7 = 490 + 7 = 497. Très pratique !" },
+        { title: "Propriétés du nombre premier", description: "Comme 71 est premier, il est divisible uniquement par 1 et par 71. Chiffre des unités : 1, 2, 3, 4, 5, 6, 7, 8, 9, 0." },
+        { title: "Alternative 75-4", description: "71=75-4. Exemple : 71×5 = 375-20 = 355. Utile quand multiplier par 75 est plus facile." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       72: [
-        { title: "Relación 8×9", description: "72=8×9. Puedes usar les deux tables del 8 y 9: 72×5 = 9×5×8 = 45×8 = 360." },
-        { title: "6×12 o 3×24", description: "72=6×12=3×24=4×18. Puede calcularse de multiples formas: 72×4 = 12×24 = 288." },
-        { title: "nombreux diviseurs", description: "72 tiene 12 divisores: 1,2,3,4,6,8,9,12,18,24,36,72. ¡très utile para fracciones!" },
+        { title: "Relation 8×9", description: "72=8×9. On peut utiliser les deux tables, du 8 et du 9 : 72×5 = 9×5×8 = 45×8 = 360." },
+        { title: "6×12 ou 3×24", description: "72=6×12=3×24=4×18. Peut se calculer de plusieurs façons : 72×4 = 12×24 = 288." },
+        { title: "De nombreux diviseurs", description: "72 a 12 diviseurs : 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72 — très utile pour les fractions !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       73: [
-        { title: "70+3 o 75-2", description: "73=70+3 o 75-2. Ejemplo: 73×6 = 420+18 = 438 o 450-12 = 438." },
-        { title: "Patrón de nombre premier", description: "Como 73 es primo nécessite des stratégies spéciales. Es el 21º nombre premier. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 80-7", description: "avec de grands nombres: 73×8 = 640-56 = 584. Restar de 80 es un método alternativo." },
+        { title: "70+3 ou 75-2", description: "73=70+3 ou 75-2. Exemple : 73×6 = 420+18 = 438 ou 450-12 = 438." },
+        { title: "Motif de nombre premier", description: "Comme 73 est premier, il demande des stratégies particulières. C'est le 21e nombre premier. Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Stratégie 80-7", description: "Avec de grands nombres : 73×8 = 640-56 = 584. Soustraire à partir de 80 est une méthode alternative." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       74: [
-        { title: "Relación 2×37", description: "74=2×37. Duplica la table de 37: 37×7=259, entonces 74×7=518." },
-        { title: "75-1 o 70+4", description: "74×n = (75×n) - n o (70×n) + (4×n). Ejemplo: 74×5 = 375-5 = 370." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 74 son pares: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740." },
+        { title: "Relation 2×37", description: "74=2×37. Doublez la table de 37 : 37×7=259, donc 74×7=518." },
+        { title: "75-1 ou 70+4", description: "74×n = (75×n) - n ou (70×n) + (4×n). Exemple : 74×5 = 375-5 = 370." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 74 sont pairs : 74, 148, 222, 296, 370, 444, 518, 592, 666, 740." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       75: [
-        { title: "3×25 o 5×15", description: "75=3×25=5×15. Ejemplo: 75×4 = 25×12 = 300 o 15×20 = 300." },
-        { title: "Patrón 25, 50, 75, 00", description: "Tous les multiples de 75 se terminent par 25, 50, 75 o 00. très régulier y predecible." },
-        { title: "Relación de parcentaje", description: "75 = 100×¾. Entonces 75% = 3/4. Esta relación est très utile en calculs de pourcentages." },
+        { title: "3×25 ou 5×15", description: "75=3×25=5×15. Exemple : 75×4 = 25×12 = 300 ou 15×20 = 300." },
+        { title: "Motif 25, 50, 75, 00", description: "Tous les multiples de 75 se terminent par 25, 50, 75 ou 00 — très régulier et prévisible." },
+        { title: "Relation aux pourcentages", description: "75 = 100×¾. Donc 75% = 3/4. Cette relation est très utile dans les calculs de pourcentages." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       76: [
-        { title: "Relación 4×19", description: "76=4×19. Cuadruplica la table de 19: 19×7=133, entonces 76×7=532." },
-        { title: "2×38 o 80-4", description: "76=2×38 o 80-4. Ejemplo: 76×6 = 480 - 24 = 456." },
-        { title: "Siempre Par y Divisible par 4", description: "Tous les multiples de 76 son pares y divisibles par 4 y 19: 76, 152, 228, 304, 380..." },
+        { title: "Relation 4×19", description: "76=4×19. Quadruplez la table de 19 : 19×7=133, donc 76×7=532." },
+        { title: "2×38 ou 80-4", description: "76=2×38 ou 80-4. Exemple : 76×6 = 480 - 24 = 456." },
+        { title: "Toujours pair et divisible par 4", description: "Tous les multiples de 76 sont pairs et divisibles par 4 et par 19 : 76, 152, 228, 304, 380..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       77: [
-        { title: "Relación 7×11", description: "77=7×11. Puedes usar les deux tables del 7 y 11: 77×5 = 11×5×7 = 55×7 = 385." },
-        { title: "modèle similaire a Repdigit", description: "77×1=77, 77×2=154. Como producto de 7 y 11 montre un modèle especial." },
-        { title: "Estrategia 80-3", description: "77=80-3. Ejemplo: 77×6 = 480 - 18 = 462. soustraire à partir de nombres ronds." },
+        { title: "Relation 7×11", description: "77=7×11. On peut utiliser les deux tables, du 7 et du 11 : 77×5 = 11×5×7 = 55×7 = 385." },
+        { title: "Modèle proche d'un repdigit", description: "77×1=77, 77×2=154. En tant que produit de 7 et de 11, il montre un motif particulier." },
+        { title: "Stratégie 80-3", description: "77=80-3. Exemple : 77×6 = 480 - 18 = 462 — soustraire à partir d'un nombre rond." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       78: [
-        { title: "Relación 6×13", description: "78=6×13=2×39=3×26. Puede calcularse de multiples formas: 78×5 = 13×30 = 390." },
-        { title: "Estrategia 80-2", description: "78=80-2. 78×n = (80×n) - (2×n). Ejemplo: 78×7 = 560 - 14 = 546." },
-        { title: "Divisible par 2 y 3", description: "Tous les multiples de 78 sont divisibles par 2 y 3. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 6×13", description: "78=6×13=2×39=3×26. Peut se calculer de plusieurs façons : 78×5 = 13×30 = 390." },
+        { title: "Stratégie 80-2", description: "78=80-2. 78×n = (80×n) - (2×n). Exemple : 78×7 = 560 - 14 = 546." },
+        { title: "Divisible par 2 et par 3", description: "Tous les multiples de 78 sont divisibles par 2 et par 3. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       79: [
-        { title: "Estrategia 80-1", description: "79=80-1. 79×n = (80×n) - n. Ejemplo: 79×7 = 560 - 7 = 553. ¡PERFECTO!" },
-        { title: "Singularidad de nombre premier", description: "Como 79 es primo tiene modÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 75+4", description: "79=75+4. Ejemplo: 79×8 = 600 + 32 = 632. Útil Si vous connaissez la table de 75." },
+        { title: "Stratégie 80-1", description: "79=80-1. 79×n = (80×n) - n. Exemple : 79×7 = 560 - 7 = 553. Parfait !" },
+        { title: "Singularité du nombre premier", description: "Comme 79 est premier, il a des motifs particuliers. Chiffre des unités : 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternative 75+4", description: "79=75+4. Exemple : 79×8 = 600 + 32 = 632. Utile si vous connaissez la table de 75." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        { title: "Relación 8×10", description: "80=8×10. Multiplier par 80: multiplica par 8, agrega un 0 al final. 7×80: 7×8=56, agrega 0: 560." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 80 se terminent par 0: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
-        { title: "Relaciones de multiples Factores", description: "80=2×40=4×20=5×16=8×10. ¡Puede calcularse de muchas formas!" },
+        { title: "Relation 8×10", description: "80=8×10. Pour multiplier par 80 : multipliez par 8, puis ajoutez un 0 à la fin. 7×80 : 7×8=56, puis 560." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 80 se terminent par 0 : 80, 160, 240, 320, 400, 480, 560, 640, 720, 800." },
+        { title: "Relations de facteurs multiples", description: "80=2×40=4×20=5×16=8×10 — de nombreuses façons de le calculer !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        { title: "Cuadrado del 9", description: "81=9×9=9². Además 81=3⁴. Ejemplo perfecto de relaciones de cuadrados y potencias." },
-        { title: "Estrategia 80+1", description: "81=80+1. 81×n = (80×n) + n. Ejemplo: 81×7 = 560 + 7 = 567. ¡très pratique!" },
-        { title: "Cuarta Potencia del 3", description: "81=3⁴=3×3×3×3. importante pour comprendre números con exponentes. Divisible par 9 y 27." },
+        { title: "Carré de 9", description: "81=9×9=9². De plus, 81=3⁴ — un exemple parfait de la relation entre carrés et puissances." },
+        { title: "Stratégie 80+1", description: "81=80+1. 81×n = (80×n) + n. Exemple : 81×7 = 560 + 7 = 567. Très pratique !" },
+        { title: "Quatrième puissance de 3", description: "81=3⁴=3×3×3×3 — important pour comprendre les nombres avec exposants. Divisible par 9 et par 27." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       82: [
-        { title: "Relación 2×41", description: "82=2×41. Duplica la table de 41: 41×7=287, entonces 82×7=574." },
-        { title: "Estrategia 80+2", description: "82=80+2. 82×n = (80×n) + (2×n). Ejemplo: 82×6 = 480 + 12 = 492." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 82 son pares: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820." },
+        { title: "Relation 2×41", description: "82=2×41. Doublez la table de 41 : 41×7=287, donc 82×7=574." },
+        { title: "Stratégie 80+2", description: "82=80+2. 82×n = (80×n) + (2×n). Exemple : 82×6 = 480 + 12 = 492." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 82 sont pairs : 82, 164, 246, 328, 410, 492, 574, 656, 738, 820." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       83: [
-        { title: "80+3 o 85-2", description: "83=80+3 o 85-2. Ejemplo: 83×6 = 480+18 = 498 o 510-12 = 498." },
-        { title: "Patrón de nombre premier", description: "Como 83 es primo nécessite des stratégies spéciales. Dígito de las unidades: 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
-        { title: "Estrategia 90-7", description: "avec de grands nombres: 83×8 = 720-56 = 664. Restar de 90 es un método alternativo." },
+        { title: "80+3 ou 85-2", description: "83=80+3 ou 85-2. Exemple : 83×6 = 480+18 = 498 ou 510-12 = 498." },
+        { title: "Motif de nombre premier", description: "Comme 83 est premier, il demande des stratégies particulières. Chiffre des unités : 3, 6, 9, 2, 5, 8, 1, 4, 7, 0." },
+        { title: "Stratégie 90-7", description: "Avec de grands nombres : 83×8 = 720-56 = 664. Soustraire à partir de 90 est une méthode alternative." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       84: [
-        { title: "Relación 7×12", description: "84=7×12. Puedes usar les deux tables del 7 y 12: 84×5 = 12×5×7 = 60×7 = 420." },
-        { title: "6×14 o 4×21", description: "84=6×14=4×21=3×28. Puede calcularse de multiples formas: 84×4 = 21×16 = 336." },
-        { title: "nombreux diviseurs", description: "84 tiene 12 divisores: 1,2,3,4,6,7,12,14,21,28,42,84. ¡très utile para fracciones!" },
+        { title: "Relation 7×12", description: "84=7×12. On peut utiliser les deux tables, du 7 et du 12 : 84×5 = 12×5×7 = 60×7 = 420." },
+        { title: "6×14 ou 4×21", description: "84=6×14=4×21=3×28. Peut se calculer de plusieurs façons : 84×4 = 21×16 = 336." },
+        { title: "De nombreux diviseurs", description: "84 a 12 diviseurs : 1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84 — très utile pour les fractions !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       85: [
-        { title: "Relación 5×17", description: "85=5×17. Puedes usar les deux tables del 5 y 17: 85×4 = 17×4×5 = 68×5 = 340." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 85 se terminent par 5 o 0: 85, 170, 255, 340, 425, 510, 595, 680..." },
-        { title: "90-5 o 80+5", description: "85×n = (90×n) - (5×n) o (80×n) + (5×n). Ejemplo: 85×6 = 540-30 = 510." },
+        { title: "Relation 5×17", description: "85=5×17. On peut utiliser les deux tables, du 5 et du 17 : 85×4 = 17×4×5 = 68×5 = 340." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 85 se terminent par 5 ou 0 : 85, 170, 255, 340, 425, 510, 595, 680..." },
+        { title: "90-5 ou 80+5", description: "85×n = (90×n) - (5×n) ou (80×n) + (5×n). Exemple : 85×6 = 540-30 = 510." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       86: [
-        { title: "Relación 2×43", description: "86=2×43. Duplica la table de 43: 43×7=301, entonces 86×7=602." },
-        { title: "Estrategia 90-4", description: "86=90-4. 86×n = (90×n) - (4×n). Ejemplo: 86×6 = 540 - 24 = 516." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 86 son pares: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860." },
+        { title: "Relation 2×43", description: "86=2×43. Doublez la table de 43 : 43×7=301, donc 86×7=602." },
+        { title: "Stratégie 90-4", description: "86=90-4. 86×n = (90×n) - (4×n). Exemple : 86×6 = 540 - 24 = 516." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 86 sont pairs : 86, 172, 258, 344, 430, 516, 602, 688, 774, 860." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       87: [
-        { title: "Relación 3×29", description: "87=3×29. Triplica la table de 29: 29×7=203, entonces 87×7=609." },
-        { title: "Estrategia 90-3", description: "87=90-3. 87×n = (90×n) - (3×n). Ejemplo: 87×7 = 630 - 21 = 609. ¡Muy fácil!" },
-        { title: "Divisible par 3", description: "Tous les multiples de 87 sont divisibles par 3 y 29. La addition de dígitos es múltiplo de 3." },
+        { title: "Relation 3×29", description: "87=3×29. Triplez la table de 29 : 29×7=203, donc 87×7=609." },
+        { title: "Stratégie 90-3", description: "87=90-3. 87×n = (90×n) - (3×n). Exemple : 87×7 = 630 - 21 = 609. Très facile !" },
+        { title: "Divisible par 3", description: "Tous les multiples de 87 sont divisibles par 3 et par 29. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       88: [
-        { title: "Relación 8×11", description: "88=8×11. Puedes usar les deux tables del 8 y 11: 88×5 = 11×5×8 = 55×8 = 440." },
-        { title: "Número Repdigit", description: "88×1=88, 88×2=176. La propriÃ©tÃ© repdigit (répétition de 8s) facilita el reconocimiento visual." },
-        { title: "4×22 o 2×44", description: "88=4×22=2×44. Puede calcularse de multiples formas: 88×5 = 22×20 = 440." },
+        { title: "Relation 8×11", description: "88=8×11. On peut utiliser les deux tables, du 8 et du 11 : 88×5 = 11×5×8 = 55×8 = 440." },
+        { title: "Nombre repdigit", description: "88×1=88, 88×2=176. La propriété repdigit (répétition du chiffre 8) facilite la reconnaissance visuelle." },
+        { title: "4×22 ou 2×44", description: "88=4×22=2×44. Peut se calculer de plusieurs façons : 88×5 = 22×20 = 440." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       89: [
-        { title: "Estrategia 90-1", description: "89=90-1. 89×n = (90×n) - n. Ejemplo: 89×7 = 630 - 7 = 623. ¡PERFECTO!" },
-        { title: "Singularidad de nombre premier", description: "Como 89 es primo tiene modÃ¨les especiales. Dígito de las unidades: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
-        { title: "Alternativa 85+4", description: "89=85+4. Ejemplo: 89×8 = 680 + 32 = 712. Útil Si vous connaissez la table de 85." },
+        { title: "Stratégie 90-1", description: "89=90-1. 89×n = (90×n) - n. Exemple : 89×7 = 630 - 7 = 623. Parfait !" },
+        { title: "Singularité du nombre premier", description: "Comme 89 est premier, il a des motifs particuliers. Chiffre des unités : 9, 8, 7, 6, 5, 4, 3, 2, 1, 0." },
+        { title: "Alternative 85+4", description: "89=85+4. Exemple : 89×8 = 680 + 32 = 712. Utile si vous connaissez la table de 85." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       90: [
-        { title: "Relación 9×10", description: "90=9×10. Multiplier par 90: multiplica par 9, agrega un 0 al final. 7×90: 7×9=63, agrega 0: 630." },
-        { title: "Siempre se termine en 0", description: "Tous les multiples de 90 se terminent par 0: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
-        { title: "Relaciones de multiples Factores", description: "90=2×45=3×30=5×18=6×15=9×10. ¡Puede calcularse de muchas formas!" },
+        { title: "Relation 9×10", description: "90=9×10. Pour multiplier par 90 : multipliez par 9, puis ajoutez un 0 à la fin. 7×90 : 7×9=63, puis 630." },
+        { title: "Se termine toujours par 0", description: "Tous les multiples de 90 se terminent par 0 : 90, 180, 270, 360, 450, 540, 630, 720, 810, 900." },
+        { title: "Relations de facteurs multiples", description: "90=2×45=3×30=5×18=6×15=9×10 — de nombreuses façons de le calculer !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       91: [
-        { title: "Relación 7×13", description: "91=7×13. Puedes usar les deux tables del 7 y 13: 91×5 = 7×5×13 = 35×13 = 455." },
-        { title: "Estrategia 90+1", description: "91=90+1. 91×n = (90×n) + n. Ejemplo: 91×6 = 540 + 6 = 546. ¡Práctico!" },
-        { title: "Producto de Primos", description: "91=7×13 (producto de dos primos). Divisible par 7 y 13." },
+        { title: "Relation 7×13", description: "91=7×13. On peut utiliser les deux tables, du 7 et du 13 : 91×5 = 7×5×13 = 35×13 = 455." },
+        { title: "Stratégie 90+1", description: "91=90+1. 91×n = (90×n) + n. Exemple : 91×6 = 540 + 6 = 546. Pratique !" },
+        { title: "Produit de deux nombres premiers", description: "91=7×13 (produit de deux nombres premiers). Divisible par 7 et par 13." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       92: [
-        { title: "Relación 4×23", description: "92=4×23. Cuadruplica la table de 23: 23×7=161, entonces 92×7=644." },
-        { title: "90+2 o 100-8", description: "92×n = (90×n)+(2×n) o (100×n)-(8×n). Ejemplo: 92×5 = 450+10 = 460." },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 92 son pares: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920." },
+        { title: "Relation 4×23", description: "92=4×23. Quadruplez la table de 23 : 23×7=161, donc 92×7=644." },
+        { title: "90+2 ou 100-8", description: "92×n = (90×n)+(2×n) ou (100×n)-(8×n). Exemple : 92×5 = 450+10 = 460." },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 92 sont pairs : 92, 184, 276, 368, 460, 552, 644, 736, 828, 920." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       93: [
-        { title: "Relación 3×31", description: "93=3×31. Triplica la table de 31: 31×6=186, entonces 93×6=558." },
-        { title: "Estrategia 90+3", description: "93=90+3. 93×n = (90×n) + (3×n). Ejemplo: 93×7 = 630 + 21 = 651." },
-        { title: "Divisible par 3", description: "Tous les multiples de 93 sont divisibles par 3. La addition de les chiffres es múltiplo de 3." },
+        { title: "Relation 3×31", description: "93=3×31. Triplez la table de 31 : 31×6=186, donc 93×6=558." },
+        { title: "Stratégie 90+3", description: "93=90+3. 93×n = (90×n) + (3×n). Exemple : 93×7 = 630 + 21 = 651." },
+        { title: "Divisible par 3", description: "Tous les multiples de 93 sont divisibles par 3. La somme des chiffres est un multiple de 3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       94: [
-        { title: "Relación 2×47", description: "94=2×47. Duplica la table de 47: 47×7=329, entonces 94×7=658." },
-        { title: "Estrategia 100-6", description: "94=100-6. 94×n = (100×n) - (6×n). Ejemplo: 94×5 = 500 - 30 = 470. ¡PERFECTO!" },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 94 son pares: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940." },
+        { title: "Relation 2×47", description: "94=2×47. Doublez la table de 47 : 47×7=329, donc 94×7=658." },
+        { title: "Stratégie 100-6", description: "94=100-6. 94×n = (100×n) - (6×n). Exemple : 94×5 = 500 - 30 = 470. Parfait !" },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 94 sont pairs : 94, 188, 282, 376, 470, 564, 658, 752, 846, 940." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       95: [
-        { title: "Relación 5×19", description: "95=5×19. Puedes usar les deux tables del 5 y 19: 95×4 = 19×4×5 = 76×5 = 380." },
-        { title: "se termine en 5 ou 0", description: "Tous les multiples de 95 se terminent par 5 o 0: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950." },
-        { title: "Estrategia 100-5", description: "95=100-5. 95×n = (100×n) - (5×n). Ejemplo: 95×6 = 600 - 30 = 570. ¡Muy fácil!" },
+        { title: "Relation 5×19", description: "95=5×19. On peut utiliser les deux tables, du 5 et du 19 : 95×4 = 19×4×5 = 76×5 = 380." },
+        { title: "Se termine par 5 ou 0", description: "Tous les multiples de 95 se terminent par 5 ou 0 : 95, 190, 285, 380, 475, 570, 665, 760, 855, 950." },
+        { title: "Stratégie 100-5", description: "95=100-5. 95×n = (100×n) - (5×n). Exemple : 95×6 = 600 - 30 = 570. Très facile !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       96: [
-        { title: "Relación 8×12", description: "96=8×12. Puedes usar les deux tables: 96×5 = 12×5×8 = 60×8 = 480." },
-        { title: "Relaciones de multiples Factores", description: "96=8×12=6×16=4×24=3×32=2×48. ¡Puede calcularse de muchas formas!" },
-        { title: "Potencia de 2 × 3", description: "96=2⁵×3. Relación 32×3. a de nombreux diviseurs (12 divisores)." },
+        { title: "Relation 8×12", description: "96=8×12. On peut utiliser les deux tables : 96×5 = 12×5×8 = 60×8 = 480." },
+        { title: "Relations de facteurs multiples", description: "96=8×12=6×16=4×24=3×32=2×48 — de nombreuses façons de le calculer !" },
+        { title: "Puissance de 2 fois 3", description: "96=2⁵×3, soit 32×3. Il a de nombreux diviseurs (12 diviseurs)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       97: [
-        { title: "Estrategia 100-3", description: "97=100-3. 97×n = (100×n) - (3×n). Ejemplo: 97×7 = 700 - 21 = 679. ¡PERFECTO!" },
-        { title: "Patrones de nombre premier", description: "Como 97 es primo tiene modÃ¨les especiales. Dígito de las unidades: 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
-        { title: "Primo Más Cercano a 100", description: "El mayor nombre premier menor que 100. Esta propriÃ©tÃ© facilita mucho el calcul." },
+        { title: "Stratégie 100-3", description: "97=100-3. 97×n = (100×n) - (3×n). Exemple : 97×7 = 700 - 21 = 679. Parfait !" },
+        { title: "Motifs de nombre premier", description: "Comme 97 est premier, il a des motifs particuliers. Chiffre des unités : 7, 4, 1, 8, 5, 2, 9, 6, 3, 0." },
+        { title: "Le nombre premier le plus proche de 100", description: "C'est le plus grand nombre premier inférieur à 100. Cette propriété facilite beaucoup le calcul." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       98: [
-        { title: "Relación 2×49", description: "98=2×49=2×7². Duplica la table de 49: 49×7=343, entonces 98×7=686." },
-        { title: "Estrategia 100-2", description: "98=100-2. 98×n = (100×n) - (2×n). Ejemplo: 98×6 = 600 - 12 = 588. ¡SÚPER FÁCIL!" },
-        { title: "Siempre nombres pairs", description: "Tous les multiples de 98 son pares: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980." },
+        { title: "Relation 2×49", description: "98=2×49=2×7². Doublez la table de 49 : 49×7=343, donc 98×7=686." },
+        { title: "Stratégie 100-2", description: "98=100-2. 98×n = (100×n) - (2×n). Exemple : 98×6 = 600 - 12 = 588. Super facile !" },
+        { title: "Toujours des nombres pairs", description: "Tous les multiples de 98 sont pairs : 98, 196, 294, 392, 490, 588, 686, 784, 882, 980." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       99: [
-        { title: "Relación 9×11", description: "99=9×11. Puedes usar les deux tables: 99×5 = 11×5×9 = 55×9 = 495." },
-        { title: "Estrategia 100-1", description: "99=100-1. 99×n = (100×n) - n. Ejemplo: 99×7 = 700 - 7 = 693. ¡PERFECTO!" },
-        { title: "Patrón Repdigit", description: "99 (répétition de 9s), 198, 297, 396, 495... ¡El reconocimiento visual est facile!" },
+        { title: "Relation 9×11", description: "99=9×11. On peut utiliser les deux tables : 99×5 = 11×5×9 = 55×9 = 495." },
+        { title: "Stratégie 100-1", description: "99=100-1. 99×n = (100×n) - n. Exemple : 99×7 = 700 - 7 = 693. Parfait !" },
+        { title: "Motif repdigit", description: "99 (répétition du chiffre 9), 198, 297, 396, 495... la reconnaissance visuelle est facile !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       100: [
-        { title: "Relación 10×10", description: "100=10×10=10². Multiplier par 100: agrega dos ceros al final. 7×100: ¡700!" },
-        { title: "Siempre se termine en 00", description: "Tous les multiples de 100 se terminent par 00: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000." },
-        { title: "Base del système décimal", description: "100=10². Sistema de centenas, calculs de pourcentages, ¡base pour comprendre nombres decimales!" },
+        { title: "Relation 10×10", description: "100=10×10=10². Pour multiplier par 100 : ajoutez deux zéros à la fin. 7×100 : 700 !" },
+        { title: "Se termine toujours par 00", description: "Tous les multiples de 100 se terminent par 00 : 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000." },
+        { title: "Base du système décimal", description: "100=10² — système des centaines, calculs de pourcentages, base pour comprendre les nombres décimaux !" },
       ],
     }
 
 const mistakes: { [key: number]: MistakeItem[] } = {
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       1: [
-        { mistake: "Pensar que 1×1=2", solution: "Recuerda: Todo lo que se multiplica par 1 es igual à lui-même. 1 groupe de 1 es solo 1." },
-        { mistake: "Confundir con la addition", solution: "Multiplier par 1 es diferente de sumar. 5+1=6, pero 5×1=5." },
+        { mistake: "Penser que 1×1=2", solution: "Rappel : tout ce qui est multiplié par 1 reste égal à lui-même. 1 groupe de 1, c'est juste 1." },
+        { mistake: "Confondre avec l'addition", solution: "Multiplier par 1 est différent d'additionner. 5+1=6, mais 5×1=5." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       2: [
-        { mistake: "Confundir 2×6=12 con 2×7=14", solution: "Usa contar de dos en dos: 2, 4, 6, 8, 10, 12, 14. Cuenta cuidadosamente sin saltarte." },
-        { mistake: "Confundirse avec de grands nombres", solution: "Descompón: 2×8 es solo 8+8. Duplicar es addition simple." },
+        { mistake: "Confondre 2×6=12 avec 2×7=14", solution: "Utilisez le comptage de deux en deux : 2, 4, 6, 8, 10, 12, 14. Comptez soigneusement sans sauter." },
+        { mistake: "Se tromper avec les grands nombres", solution: "Décomposez : 2×8, c'est juste 8+8. Doubler, c'est une simple addition." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       3: [
-        { mistake: "Confundir 3×6=18 con 3×7=21", solution: "Recuerda el patrón +3: après 18 viene 21. Cuenta de tres en tres para verificar." },
-        { mistake: "Confundir 3×8=24 con 3×9=27", solution: "Usa el truco de addition de dígitos: 24 (2+4=6) y 27 (2+7=9), sigue el patrón 3-6-9." },
+        { mistake: "Confondre 3×6=18 avec 3×7=21", solution: "Souvenez-vous du motif +3 : après 18 vient 21. Comptez de trois en trois pour vérifier." },
+        { mistake: "Confondre 3×8=24 avec 3×9=27", solution: "Utilisez l'astuce de la somme des chiffres : 24 (2+4=6) et 27 (2+7=9), suivez le motif 3-6-9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       4: [
-        { mistake: "Pensar que 4×7=24 (en lugar de 28)", solution: "Recuerda: 4×6=24, entonces 4×7 debe ser 4 más, es decir 28." },
-        { mistake: "Confundir con la table de 2", solution: "la table de 4 es siempre el doble de la table de 2. Verifica duplicando." },
+        { mistake: "Penser que 4×7=24 (au lieu de 28)", solution: "Rappel : 4×6=24, donc 4×7 doit être 4 de plus, c'est-à-dire 28." },
+        { mistake: "Confondre avec la table de 2", solution: "La table de 4 est toujours le double de la table de 2. Vérifiez en doublant." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       5: [
-        { mistake: "Confundir el orden (25 antes de 20)", solution: "El patrón es consistente: 5, 10, 15, 20, 25. Cada uno aumenta en 5." },
-        { mistake: "Pensar que 5×impar siempre se termine en 5", solution: "En realidad 5×par se termine en 0, 5×impar se termine en 5." },
+        { mistake: "Confondre l'ordre (25 avant 20)", solution: "Le motif est régulier : 5, 10, 15, 20, 25. Chaque terme augmente de 5." },
+        { mistake: "Penser que 5×impair se termine toujours par 5", solution: "En réalité, 5×pair se termine par 0, et 5×impair se termine par 5." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       6: [
-        { mistake: "Confundir 6×7=42 con 6×8=48", solution: "¡Esta es una pareja difícil! Recuerda: 6×7=42 (rima 'siete seis'), luego agrega 6: 48." },
+        { mistake: "Confondre 6×7=42 avec 6×8=48", solution: "Cette paire est difficile ! Rappel : 6×7=42, puis ajoutez 6 : 48." },
         { mistake: "Confondre 6×9=54 avec 6×8=48", solution: "Utilisez la table de 6 : 6×8=48, puis +6=54. Ou calculez 6×9 comme 60-6=54." },
         { mistake: "Confondre avec la table de 3", solution: "La table de 6 est toujours le double de la table de 3. 3×4=12, donc 6×4=24." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       7: [
-        { mistake: "Confondre 7×8=56 avec 7×6=42", solution: "Ce sont les plus difficiles ! Astuce mémoire : '5-6-7-8' (56=7×8). Ou depuis 7×7=49, puis +7=56." },
-        { mistake: "Confondre 7×9=63 avec 7×8=56", solution: "Modèle : 7×8=56, puis +7=63. Ou addition de chiffres : 63 (6+3=9), 56 (5+6=11)." },
-        { mistake: "Sauter complètement la table de 7", solution: "Bien que le 7 semble difficile, il peut s'apprendre avec de la pratique. Commencez par petites étapes : mémorisez les faciles 7×1, 7×2, 7×5, 7×10." },
+        { mistake: "Confondre 7×8=56 avec 7×6=42", solution: "Ce sont les plus difficiles ! Astuce mémo : « 5-6-7-8 » (56=7×8). Ou depuis 7×7=49, puis +7=56." },
+        { mistake: "Confondre 7×9=63 avec 7×8=56", solution: "Motif : 7×8=56, puis +7=63. Ou somme des chiffres : 63 (6+3=9), 56 (5+6=11)." },
+        { mistake: "Éviter complètement la table de 7", solution: "Bien que le 7 semble difficile, il s'apprend avec de la pratique. Commencez petit : mémorisez d'abord 7×1, 7×2, 7×5, 7×10." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       8: [
-        { mistake: "Confondre 8×7=56 avec 8×8=64", solution: "Façon facile de mémoriser 8×8=64 : 'huit huit 64' ou '8²=64'." },
-        { mistake: "Confondre 8×9=72 avec 8×8=64", solution: "Commencez depuis 8×8=64, puis +8=72. Ou 80-8=72 (10×8 moins 8)." },
-        { mistake: "Confundir con la table de 4", solution: "El 8 es siempre el doble del 4. 4×6=24, entonces 8×6=48. Verifica duplicando." },
+        { mistake: "Confondre 8×7=56 avec 8×8=64", solution: "Astuce facile pour 8×8=64 : « huit huit soixante-quatre » ou « 8²=64 »." },
+        { mistake: "Confondre 8×9=72 avec 8×8=64", solution: "Partez de 8×8=64, puis +8=72. Ou 80-8=72 (10×8 moins 8)." },
+        { mistake: "Confondre avec la table de 4", solution: "8 est toujours le double de 4. 4×6=24, donc 8×6=48. Vérifiez en doublant." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       9: [
-        { mistake: "Confundir 9×8=72 con 9×7=63", solution: "Usa el truco de los dedos o addition de dígitos: 72 (7+2=9), 63 (6+3=9). Recuerda que 72>63." },
-        { mistake: "Aplicar mal el truco de los dedos", solution: "Orden correcto: Dedos izquierdos 1-5, dedos derechos 6-10. Los dedos a la izquierda del dedo doblado son decenas, los de la derecha son unidades." },
-        { mistake: "Confundir 9×9=81 con 9×8=72", solution: "9×9=81 es especial: 'nueve nueve 81' o '9²=81'. Suma de dígitos: 81 (8+1=9), 72 (7+2=9)." },
+        { mistake: "Confondre 9×8=72 avec 9×7=63", solution: "Utilisez l'astuce des doigts ou la somme des chiffres : 72 (7+2=9), 63 (6+3=9). Souvenez-vous que 72>63." },
+        { mistake: "Mal appliquer l'astuce des doigts", solution: "Ordre correct : doigts de gauche 1-5, doigts de droite 6-10. Les doigts à gauche du doigt plié sont les dizaines, ceux à droite sont les unités." },
+        { mistake: "Confondre 9×9=81 avec 9×8=72", solution: "9×9=81 est spécial : « neuf neuf quatre-vingt-un » ou « 9²=81 ». Somme des chiffres : 81 (8+1=9), 72 (7+2=9)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       10: [
-        { mistake: "Olvidar el cero", solution: "El recordatorio plus facile: Lorsque vous multipliez par 10, SOLO agrega un cero al final. 6×10=60, 25×10=250." },
-        { mistake: "Agregar demasiados ceros", solution: "Multiplier par 10 agrega SOLO un cero. No 100 (dos ceros), 1000 (tres ceros), solo 10 (un cero)." },
+        { mistake: "Oublier le zéro", solution: "Le rappel le plus simple : quand on multiplie par 10, on ajoute SEULEMENT un zéro à la fin. 6×10=60, 25×10=250." },
+        { mistake: "Ajouter trop de zéros", solution: "Multiplier par 10 ajoute UN SEUL zéro. Pas 100 (deux zéros), 1000 (trois zéros), juste 10 (un zéro)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       11: [
-        { mistake: "Pensar que 11×12=121 (en lugar de 132)", solution: "El patrón de dígitos dobles solo fonctionne de 11×1 a 11×9. 11×10=110, 11×12=132." },
-        { mistake: "Aplicar mal el truco de addition de dígitos", solution: "23×11: Suma les chiffres (2+3=5), colócalo en el medio: 253. Si la addition >9, hay acarreo: 67×11: 6_(6+7=13)_7 = 6_(13)_7 = 737." },
-        { mistake: "Pensar que 11×11=111", solution: "11×11=121, no 111. Cada múltiplo de 11 agrega 11 al anterior: 99+11=110, 110+11=121." },
+        { mistake: "Penser que 11×12=121 (au lieu de 132)", solution: "Le motif des chiffres doublés ne fonctionne que de 11×1 à 11×9. 11×10=110, 11×12=132." },
+        { mistake: "Mal appliquer l'astuce de la somme des chiffres", solution: "23×11 : additionnez les chiffres (2+3=5), placez-les au milieu : 253. Si la somme dépasse 9, il y a une retenue : 67×11 : 6_(6+7=13)_7 = 737." },
+        { mistake: "Penser que 11×11=111", solution: "11×11=121, pas 111. Chaque multiple de 11 ajoute 11 au précédent : 99+11=110, 110+11=121." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       12: [
-        { mistake: "Confundir 12×8=84 con 12×9=108", solution: "12×8=96 (8 douzaines), 12×9=108 (9 douzaines). 84 en realidad es 12×7. Verifica contando douzaines." },
-        { mistake: "Confundir 12 con 10", solution: "12×5=60, 10×5=50. El 12 es siempre 20% más que 10 (10 más 2)." },
+        { mistake: "Confondre 12×8=84 avec 12×9=108", solution: "12×8=96 (8 douzaines), 12×9=108 (9 douzaines). 84 est en fait 12×7. Vérifiez en comptant les douzaines." },
+        { mistake: "Confondre 12 avec 10", solution: "12×5=60, 10×5=50. 12 vaut toujours 20% de plus que 10 (10 plus 2)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       13: [
-        { mistake: "Confundir 13×7=91 con 13×8=104", solution: "13×7=91, 13×8=104. La diferencia es 13. Usa La stratégie 10+3: 70+21=91, 80+24=104." },
-        { mistake: "Confundir 13 con 3 o 30", solution: "13×4=52, no 3×4=12. Tampoco 30×4=120. El 13 es exactamente 10+3." },
+        { mistake: "Confondre 13×7=91 avec 13×8=104", solution: "13×7=91, 13×8=104. La différence est 13. Utilisez la stratégie 10+3 : 70+21=91, 80+24=104." },
+        { mistake: "Confondre 13 avec 3 ou 30", solution: "13×4=52, pas 3×4=12. Ni 30×4=120. 13, c'est exactement 10+3." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       14: [
-        { mistake: "Pensar que 14×7=98 (¡correcto es 14×7=98!)", solution: "¡14×7=98 es correcto! Pero no olvides 14×8=112 (98+14=112). Recuerda que es el doble de la table de 7." },
-        { mistake: "Confundir 14×6=72 con 14×6=84", solution: "14×6=84 es correcto (7×6=42, ×2=84). 72 en realidad es 12×6 o 8×9." },
+        { mistake: "Penser que 14×7=98 (c'est en fait correct !)", solution: "14×7=98 est correct ! Mais n'oubliez pas 14×8=112 (98+14=112). Rappelez-vous que c'est le double de la table de 7." },
+        { mistake: "Confondre 14×6=84 avec un autre résultat", solution: "14×6=84 est correct (7×6=42, ×2=84). 72 est en fait 12×6 ou 8×9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       15: [
-        { mistake: "Pensar que 15×6=80 (en lugar de 90)", solution: "15×6=90 (1.5 douzaines). 80 en realidad es 16×5. Calcula 15×6 como 3×6=18, luego ×5=90 o 5×6=30, luego ×3=90." },
-        { mistake: "Confundir 15×4=50", solution: "15×4=60, no 50. Recuerda que 15 minutos×4 = 1 hora (60 minutos)." },
+        { mistake: "Penser que 15×6=80 (au lieu de 90)", solution: "15×6=90 (1,5 douzaine). 80 est en fait 16×5. Calculez 15×6 comme 3×6=18, puis ×5=90, ou 5×6=30, puis ×3=90." },
+        { mistake: "Confondre 15×4", solution: "15×4=60, pas 50. Rappelez-vous que 15 minutes×4 = 1 heure (60 minutes)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       16: [
-        { mistake: "Confundir 16×6=84 con 16×6=96", solution: "16×6=96 es correcto (8×6=48, ×2=96). 84 en realidad es 14×6 o 12×7." },
-        { mistake: "Confundir 16 con 6", solution: "16×4=64, no 6×4=24. 16 es muy diferente de 6. Recuerda que 16=2⁴." },
+        { mistake: "Confondre 16×6=96 avec un autre résultat", solution: "16×6=96 est correct (8×6=48, ×2=96). 84 est en fait 14×6 ou 12×7." },
+        { mistake: "Confondre 16 avec 6", solution: "16×4=64, pas 6×4=24. 16 est très différent de 6. Rappelez-vous que 16=2⁴." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       17: [
-        { mistake: "Confundir 17×6=102 con 17×7=119", solution: "Estrategia 20-3: 17×6=120-18=102, 17×7=140-21=119. O 10+7: 60+42=102, 70+49=119." },
-        { mistake: "Confundir 17×8=126 con 17×9=153", solution: "17×8=136 (170-34), 17×9=153 (180-27). 126 en realidad es 18×7." },
+        { mistake: "Confondre 17×6=102 avec 17×7=119", solution: "Stratégie 20-3 : 17×6=120-18=102, 17×7=140-21=119. Ou 10+7 : 60+42=102, 70+49=119." },
+        { mistake: "Confondre 17×8=136 avec un autre résultat", solution: "17×8=136 (170-34), 17×9=153 (180-27). 126 est en fait 18×7." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       18: [
-        { mistake: "Confundir 18×7=126 con 18×8=144", solution: "18×7=126 (9×7=63, ×2), 18×8=144 (9×8=72, ×2). La diferencia es 18." },
-        { mistake: "Confundir 18×6=108 con 18×6=104", solution: "18×6=108 es correcto (6×6=36, ×3 o 9×6=54, ×2). 104 en realidad es 13×8." },
+        { mistake: "Confondre 18×7=126 avec 18×8=144", solution: "18×7=126 (9×7=63, ×2), 18×8=144 (9×8=72, ×2). La différence est 18." },
+        { mistake: "Confondre 18×6=108 avec un autre résultat", solution: "18×6=108 est correct (6×6=36, ×3 ou 9×6=54, ×2). 104 est en fait 13×8." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       19: [
-        { mistake: "Pensar que 19×5=100 (en lugar de 95)", solution: "19×5=95, no 100 (20×5=100). 19 es 1 menos que 20, así que 100-5=95." },
-        { mistake: "Confundir 19×6=114 con 19×7=133", solution: "Estrategia 20-1: 19×6=120-6=114, 19×7=140-7=133. Cada vez soustraction el multiplicador de 20." },
+        { mistake: "Penser que 19×5=100 (au lieu de 95)", solution: "19×5=95, pas 100 (20×5=100). 19 est 1 de moins que 20, donc 100-5=95." },
+        { mistake: "Confondre 19×6=114 avec 19×7=133", solution: "Stratégie 20-1 : 19×6=120-6=114, 19×7=140-7=133. On soustrait toujours le multiplicateur de 20." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       20: [
-        { mistake: "Pensar que 20×7=120 (en lugar de 140)", solution: "20×7=140, no 120 (20×6=120). 10×7=70, duplica: 140. O 7×20=7×10×2." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 20 deben terminar en 0: 20, 40, 60, 80, 100... ¡20×8=160, no 16!" },
+        { mistake: "Penser que 20×7=120 (au lieu de 140)", solution: "20×7=140, pas 120 (20×6=120). 10×7=70, doublez : 140. Ou 7×20=7×10×2." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 20 se terminent par 0 : 20, 40, 60, 80, 100... 20×8=160, pas 16 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       21: [
-        { mistake: "Pensar que 21×5=100 (en lugar de 105)", solution: "21×5=105, no 100. 20×5=100, más 5 más: 105. O 3×7×5 = 21×5 = 105." },
-        { mistake: "Confundir 21×7=140 con 21×7=147", solution: "21×7=147 es correcto (3×7×7 o 140+7). 140 en realidad es 20×7." },
-        { mistake: "Confundir 21 con 12", solution: "21×4=84, no 12×4=48. Presta atención al orden de les chiffres: 21 es muy diferente de 12." },
+        { mistake: "Penser que 21×5=100 (au lieu de 105)", solution: "21×5=105, pas 100. 20×5=100, plus 5 : 105. Ou 3×7×5 = 21×5 = 105." },
+        { mistake: "Confondre 21×7=147 avec un autre résultat", solution: "21×7=147 est correct (3×7×7 ou 140+7). 140 est en fait 20×7." },
+        { mistake: "Confondre 21 avec 12", solution: "21×4=84, pas 12×4=48. Faites attention à l'ordre des chiffres : 21 est très différent de 12." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       22: [
-        { mistake: "Pensar que 22×5=100 (en lugar de 110)", solution: "22×5=110, no 100. 11×5=55, duplica: 110. O 20×5=100, más 2×5=10: 110." },
-        { mistake: "Confundir 22×9=198 con 22×9=188", solution: "22×9=198 es correcto (11×9=99, ×2). 188 es otro calcul." },
+        { mistake: "Penser que 22×5=100 (au lieu de 110)", solution: "22×5=110, pas 100. 11×5=55, doublez : 110. Ou 20×5=100, plus 2×5=10 : 110." },
+        { mistake: "Confondre 22×9=198 avec un autre résultat", solution: "22×9=198 est correct (11×9=99, ×2). 188 est un autre calcul." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       23: [
-        { mistake: "Pensar que 23×4=82 (en lugar de 92)", solution: "23×4=92, no 82. 20×4=80, más 3×4=12: 92. 82 es otro rÃ©sultat." },
-        { mistake: "Confundir 23×5=105 con 23×5=115", solution: "23×5=115 es correcto (20×5=100, 3×5=15, total 115). 105 en realidad es 21×5." },
+        { mistake: "Penser que 23×4=82 (au lieu de 92)", solution: "23×4=92, pas 82. 20×4=80, plus 3×4=12 : 92. 82 est un autre résultat." },
+        { mistake: "Confondre 23×5=115 avec un autre résultat", solution: "23×5=115 est correct (20×5=100, 3×5=15, total 115). 105 est en fait 21×5." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       24: [
-        { mistake: "Pensar que 24×5=100 (en lugar de 120)", solution: "24×5=120, no 100. Un día tiene 24 horas, 5 días = 120 horas. O 12×10=120." },
-        { mistake: "Confundir 24×7=158 con 24×7=168", solution: "24×7=168 es correcto (4×6×7 o 3×8×7). 158 es otro rÃ©sultat." },
+        { mistake: "Penser que 24×5=100 (au lieu de 120)", solution: "24×5=120, pas 100. Un jour compte 24 heures, 5 jours = 120 heures. Ou 12×10=120." },
+        { mistake: "Confondre 24×7=168 avec un autre résultat", solution: "24×7=168 est correct (4×6×7 ou 3×8×7). 158 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       25: [
-        { mistake: "Pensar que 25×8=180 (en lugar de 200)", solution: "25×8=200, no 180. 25×4=100, entonces 25×8=200. O 5×5×8 = 25×8 = 200." },
-        { mistake: "Adivinar incorrectamente los últimos deux chiffres", solution: "¡Les multiples de 25 siempre se terminent par 25, 50, 75 o 00. No puede ser otra cosa!" },
+        { mistake: "Penser que 25×8=180 (au lieu de 200)", solution: "25×8=200, pas 180. 25×4=100, donc 25×8=200. Ou 5×5×8 = 25×8 = 200." },
+        { mistake: "Deviner incorrectement les deux derniers chiffres", solution: "Les multiples de 25 se terminent toujours par 25, 50, 75 ou 00. Ça ne peut pas être autre chose !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       26: [
-        { mistake: "Confundir 26×5=120 con 26×5=130", solution: "26×5=130 es correcto (13×5=65, ×2). 120 en realidad es 24×5." },
-        { mistake: "Confundir 26 con 16 o 36", solution: "26×4=104, no 16×4=64 o 36×4=144. Lee les chiffres cuidadosamente." },
+        { mistake: "Confondre 26×5=130 avec un autre résultat", solution: "26×5=130 est correct (13×5=65, ×2). 120 est en fait 24×5." },
+        { mistake: "Confondre 26 avec 16 ou 36", solution: "26×4=104, pas 16×4=64 ou 36×4=144. Lisez les chiffres attentivement." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       27: [
-        { mistake: "Pensar que 27×4=98 (en lugar de 108)", solution: "27×4=108, no 98. 30×4=120, menos 3×4=12: 108. O 9×4=36, ×3=108." },
-        { mistake: "Confundir 27×7=179 con 27×7=189", solution: "27×7=189 es correcto (30×7=210, menos 3×7=21: 189). 179 es otro rÃ©sultat." },
+        { mistake: "Penser que 27×4=98 (au lieu de 108)", solution: "27×4=108, pas 98. 30×4=120, moins 3×4=12 : 108. Ou 9×4=36, ×3=108." },
+        { mistake: "Confondre 27×7=189 avec un autre résultat", solution: "27×7=189 est correct (30×7=210, moins 3×7=21 : 189). 179 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       28: [
-        { mistake: "Pensar que 28×5=130 (en lugar de 140)", solution: "28×5=140, no 130. 4×7×5 = 20×7 = 140. O 14×10=140." },
-        { mistake: "Confundir 28×9=242 con 28×9=252", solution: "28×9=252 es correcto (4×7×9 o 30×9 menos 2×9). 242 es otro rÃ©sultat." },
+        { mistake: "Penser que 28×5=130 (au lieu de 140)", solution: "28×5=140, pas 130. 4×7×5 = 20×7 = 140. Ou 14×10=140." },
+        { mistake: "Confondre 28×9=252 avec un autre résultat", solution: "28×9=252 est correct (4×7×9 ou 30×9 moins 2×9). 242 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       29: [
-        { mistake: "Pensar que 29×5=140 (en lugar de 145)", solution: "29×5=145, no 140. 30×5=150, menos 5: 145. 140 en realidad es 28×5." },
-        { mistake: "Confundir 29×7=203 con 29×7=193", solution: "29×7=203 es correcto (30×7=210, menos 7). 193 es otro calcul." },
+        { mistake: "Penser que 29×5=140 (au lieu de 145)", solution: "29×5=145, pas 140. 30×5=150, moins 5 : 145. 140 est en fait 28×5." },
+        { mistake: "Confondre 29×7=203 avec un autre résultat", solution: "29×7=203 est correct (30×7=210, moins 7). 193 est un autre calcul." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       30: [
-        { mistake: "Pensar que 30×7=200 (en lugar de 210)", solution: "30×7=210, no 200 (30×6=180, 30×7=210). 10×7=70, ×3=210." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 30 deben terminar en 0: 30, 60, 90, 120, 150... ¡30×8=240, no 24!" },
+        { mistake: "Penser que 30×7=200 (au lieu de 210)", solution: "30×7=210, pas 200 (30×6=180, 30×7=210). 10×7=70, ×3=210." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 30 se terminent par 0 : 30, 60, 90, 120, 150... 30×8=240, pas 24 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       31: [
-        { mistake: "Pensar que 31×5=145 (en lugar de 155)", solution: "31×5=155, no 145. 30×5=150, más 5: 155. 145 en realidad es 29×5." },
-        { mistake: "Confundir 31×7=207 con 31×7=217", solution: "31×7=217 es correcto (30×7=210, más 7). 207 es otro rÃ©sultat." },
+        { mistake: "Penser que 31×5=145 (au lieu de 155)", solution: "31×5=155, pas 145. 30×5=150, plus 5 : 155. 145 est en fait 29×5." },
+        { mistake: "Confondre 31×7=217 avec un autre résultat", solution: "31×7=217 est correct (30×7=210, plus 7). 207 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       32: [
-        { mistake: "Pensar que 32×5=150 (en lugar de 160)", solution: "32×5=160, no 150. 16×5=80, duplica: 160. O 32×10=320, la mitad es 160." },
-        { mistake: "Confundir 32×7=214 con 32×7=224", solution: "32×7=224 es correcto (16×7=112, ×2). 214 es otro calcul." },
+        { mistake: "Penser que 32×5=150 (au lieu de 160)", solution: "32×5=160, pas 150. 16×5=80, doublez : 160. Ou 32×10=320, la moitié est 160." },
+        { mistake: "Confondre 32×7=224 avec un autre résultat", solution: "32×7=224 est correct (16×7=112, ×2). 214 est un autre calcul." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       33: [
-        { mistake: "Pensar que 33×4=122 (en lugar de 132)", solution: "33×4=132, no 122. 11×4=44, ×3=132. O 30×4=120, más 3×4=12: 132." },
-        { mistake: "Confundir 33×9=297 con 33×9=287", solution: "33×9=297 es correcto (11×9=99, ×3). 287 es otro rÃ©sultat." },
+        { mistake: "Penser que 33×4=122 (au lieu de 132)", solution: "33×4=132, pas 122. 11×4=44, ×3=132. Ou 30×4=120, plus 3×4=12 : 132." },
+        { mistake: "Confondre 33×9=297 avec un autre résultat", solution: "33×9=297 est correct (11×9=99, ×3). 287 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       34: [
-        { mistake: "Pensar que 34×5=160 (en lugar de 170)", solution: "34×5=170, no 160. 17×5=85, duplica: 170. 160 en realidad es 32×5." },
-        { mistake: "Confundir 34×8=262 con 34×8=272", solution: "34×8=272 es correcto (17×8=136, ×2). 262 es otro rÃ©sultat." },
+        { mistake: "Penser que 34×5=160 (au lieu de 170)", solution: "34×5=170, pas 160. 17×5=85, doublez : 170. 160 est en fait 32×5." },
+        { mistake: "Confondre 34×8=272 avec un autre résultat", solution: "34×8=272 est correct (17×8=136, ×2). 262 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       35: [
-        { mistake: "Pensar que 35×6=200 (en lugar de 210)", solution: "35×6=210, no 200. 5×6=30, 7×6=42, 30×7=210 o 5×42=210." },
-        { mistake: "Confundir 35×8=270 con 35×8=280", solution: "35×8=280 es correcto (5×8=40, 7×8=56, 40×7=280). 270 en realidad es 27×10." },
+        { mistake: "Penser que 35×6=200 (au lieu de 210)", solution: "35×6=210, pas 200. 5×6=30, 7×6=42, 30×7=210 ou 5×42=210." },
+        { mistake: "Confondre 35×8=280 avec un autre résultat", solution: "35×8=280 est correct (5×8=40, 7×8=56, 40×7=280). 270 est en fait 27×10." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       36: [
-        { mistake: "Pensar que 36×5=170 (en lugar de 180)", solution: "36×5=180, no 170. 6×5=30, ×6=180. O 18×10=180. 170 en realidad es 34×5." },
-        { mistake: "Confundir 36×7=242 con 36×7=252", solution: "36×7=252 es correcto (6×7=42, ×6 o 9×7=63, ×4). 242 es otro rÃ©sultat." },
+        { mistake: "Penser que 36×5=170 (au lieu de 180)", solution: "36×5=180, pas 170. 6×5=30, ×6=180. Ou 18×10=180. 170 est en fait 34×5." },
+        { mistake: "Confondre 36×7=252 avec un autre résultat", solution: "36×7=252 est correct (6×7=42, ×6 ou 9×7=63, ×4). 242 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       37: [
-        { mistake: "Pensar que 37×5=175 (en lugar de 185)", solution: "37×5=185, no 175. 40×5=200, menos 3×5=15: 185. 175 en realidad es 35×5." },
-        { mistake: "Calcular incorrectamente après 37×3=111", solution: "37×3=111, 37×6=222, 37×9=333. ¡Cada múltiplo de 3 es repdigit! 37×7=259, 37×8=296." },
+        { mistake: "Penser que 37×5=175 (au lieu de 185)", solution: "37×5=185, pas 175. 40×5=200, moins 3×5=15 : 185. 175 est en fait 35×5." },
+        { mistake: "Se tromper après 37×3=111", solution: "37×3=111, 37×6=222, 37×9=333. Chaque multiple de 3 donne un nombre repdigit ! 37×7=259, 37×8=296." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       38: [
-        { mistake: "Pensar que 38×5=180 (en lugar de 190)", solution: "38×5=190, no 180. 19×5=95, duplica: 190. 180 en realidad es 36×5." },
-        { mistake: "Confundir 38×9=332 con 38×9=342", solution: "38×9=342 es correcto (19×9=171, ×2 o 40×9=360, menos 2×9=18). 332 es otro rÃ©sultat." },
+        { mistake: "Penser que 38×5=180 (au lieu de 190)", solution: "38×5=190, pas 180. 19×5=95, doublez : 190. 180 est en fait 36×5." },
+        { mistake: "Confondre 38×9=342 avec un autre résultat", solution: "38×9=342 est correct (19×9=171, ×2 ou 40×9=360, moins 2×9=18). 332 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       39: [
-        { mistake: "Pensar que 39×5=185 (en lugar de 195)", solution: "39×5=195, no 185. 40×5=200, menos 5: 195. 185 en realidad es 37×5." },
-        { mistake: "Confundir 39×8=302 con 39×8=312", solution: "39×8=312 es correcto (40×8=320, menos 8). 302 es otro rÃ©sultat." },
+        { mistake: "Penser que 39×5=185 (au lieu de 195)", solution: "39×5=195, pas 185. 40×5=200, moins 5 : 195. 185 est en fait 37×5." },
+        { mistake: "Confondre 39×8=312 avec un autre résultat", solution: "39×8=312 est correct (40×8=320, moins 8). 302 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        { mistake: "Pensar que 40×7=270 (en lugar de 280)", solution: "40×7=280, no 270. 4×7=28, agrega un 0: 280. O 10×7=70, ×4=280." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 40 deben terminar en 0: 40, 80, 120, 160, 200... ¡40×9=360, no 36!" },
+        { mistake: "Penser que 40×7=270 (au lieu de 280)", solution: "40×7=280, pas 270. 4×7=28, ajoutez un 0 : 280. Ou 10×7=70, ×4=280." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 40 se terminent par 0 : 40, 80, 120, 160, 200... 40×9=360, pas 36 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       41: [
-        { mistake: "Pensar que 41×5=200 (en lugar de 205)", solution: "41×5=205, no 200. 40×5=200, más 5: 205. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 41×9=360 con 41×9=369", solution: "41×9=369 es correcto (40×9=360, más 9). 360 en realidad es 40×9." },
+        { mistake: "Penser que 41×5=200 (au lieu de 205)", solution: "41×5=205, pas 200. 40×5=200, plus 5 : 205. Pensez toujours à ajouter ce 1 supplémentaire." },
+        { mistake: "Confondre 41×9=369 avec un autre résultat", solution: "41×9=369 est correct (40×9=360, plus 9). 360 est en fait 40×9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       42: [
-        { mistake: "Pensar que 42×5=200 (en lugar de 210)", solution: "42×5=210, no 200. 6×5=30, 7×5=35, 30+35=65... O 40×5=200, más 2×5=10: 210." },
-        { mistake: "Confundir 42×8=326 con 42×8=336", solution: "42×8=336 es correcto (6×8=48, 7×8=56 o 40×8=320, más 16). 326 es otro rÃ©sultat." },
+        { mistake: "Penser que 42×5=200 (au lieu de 210)", solution: "42×5=210, pas 200. 6×5=30, 7×5=35... Ou 40×5=200, plus 2×5=10 : 210." },
+        { mistake: "Confondre 42×8=336 avec un autre résultat", solution: "42×8=336 est correct (6×8=48, 7×8=56 ou 40×8=320, plus 16). 326 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       43: [
-        { mistake: "Pensar que 43×5=205 (en lugar de 215)", solution: "43×5=215, no 205. 40×5=200, más 3×5=15: 215. 205 en realidad es 41×5." },
-        { mistake: "Confundir 43×9=377 con 43×9=387", solution: "43×9=387 es correcto (40×9=360, más 3×9=27). 377 es otro rÃ©sultat." },
+        { mistake: "Penser que 43×5=205 (au lieu de 215)", solution: "43×5=215, pas 205. 40×5=200, plus 3×5=15 : 215. 205 est en fait 41×5." },
+        { mistake: "Confondre 43×9=387 avec un autre résultat", solution: "43×9=387 est correct (40×9=360, plus 3×9=27). 377 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       44: [
-        { mistake: "Pensar que 44×5=210 (en lugar de 220)", solution: "44×5=220, no 210. 11×5=55, ×4=220. O 40×5=200, más 4×5=20: 220." },
-        { mistake: "Confundir 44×9=386 con 44×9=396", solution: "44×9=396 es correcto (11×9=99, ×4 o 40×9=360, más 4×9=36). 386 es otro rÃ©sultat." },
+        { mistake: "Penser que 44×5=210 (au lieu de 220)", solution: "44×5=220, pas 210. 11×5=55, ×4=220. Ou 40×5=200, plus 4×5=20 : 220." },
+        { mistake: "Confondre 44×9=396 avec un autre résultat", solution: "44×9=396 est correct (11×9=99, ×4 ou 40×9=360, plus 4×9=36). 386 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       45: [
-        { mistake: "Pensar que 45×5=220 (en lugar de 225)", solution: "45×5=225, no 220. 9×5=45, ×5=225. O 40×5=200, más 5×5=25: 225." },
-        { mistake: "Confundir 45×8=350 con 45×8=360", solution: "45×8=360 es correcto (9×8=72, ×5 o 5×8=40, ×9). 350 es otro rÃ©sultat." },
+        { mistake: "Penser que 45×5=220 (au lieu de 225)", solution: "45×5=225, pas 220. 9×5=45, ×5=225. Ou 40×5=200, plus 5×5=25 : 225." },
+        { mistake: "Confondre 45×8=360 avec un autre résultat", solution: "45×8=360 est correct (9×8=72, ×5 ou 5×8=40, ×9). 350 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       46: [
-        { mistake: "Pensar que 46×5=225 (en lugar de 230)", solution: "46×5=230, no 225. 23×5=115, ×2=230. O 50×5=250, menos 4×5=20: 230." },
-        { mistake: "Confundir 46×9=404 con 46×9=414", solution: "46×9=414 es correcto (23×9=207, ×2 o 50×9=450, menos 4×9=36). 404 es otro rÃ©sultat." },
+        { mistake: "Penser que 46×5=225 (au lieu de 230)", solution: "46×5=230, pas 225. 23×5=115, ×2=230. Ou 50×5=250, moins 4×5=20 : 230." },
+        { mistake: "Confondre 46×9=414 avec un autre résultat", solution: "46×9=414 est correct (23×9=207, ×2 ou 50×9=450, moins 4×9=36). 404 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       47: [
-        { mistake: "Pensar que 47×5=230 (en lugar de 235)", solution: "47×5=235, no 230. 50×5=250, menos 3×5=15: 235. 230 en realidad es 46×5." },
-        { mistake: "Confundir 47×9=413 con 47×9=423", solution: "47×9=423 es correcto (50×9=450, menos 3×9=27). 413 es otro rÃ©sultat." },
+        { mistake: "Penser que 47×5=230 (au lieu de 235)", solution: "47×5=235, pas 230. 50×5=250, moins 3×5=15 : 235. 230 est en fait 46×5." },
+        { mistake: "Confondre 47×9=423 avec un autre résultat", solution: "47×9=423 est correct (50×9=450, moins 3×9=27). 413 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       48: [
-        { mistake: "Pensar que 48×5=230 (en lugar de 240)", solution: "48×5=240, no 230. 6×5=30, 8×5=40, 30×8=240. O 50×5=250, menos 2×5=10: 240." },
-        { mistake: "Confundir 48×9=422 con 48×9=432", solution: "48×9=432 es correcto (6×9=54, ×8 o 50×9=450, menos 2×9=18). 422 es otro rÃ©sultat." },
+        { mistake: "Penser que 48×5=230 (au lieu de 240)", solution: "48×5=240, pas 230. 6×5=30, 8×5=40, 30×8=240. Ou 50×5=250, moins 2×5=10 : 240." },
+        { mistake: "Confondre 48×9=432 avec un autre résultat", solution: "48×9=432 est correct (6×9=54, ×8 ou 50×9=450, moins 2×9=18). 422 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       49: [
-        { mistake: "Pensar que 49×5=240 (en lugar de 245)", solution: "49×5=245, no 240. 50×5=250, menos 5: 245. O 7×5=35, ×7=245." },
-        { mistake: "Confundir 49×9=431 con 49×9=441", solution: "49×9=441 es correcto (50×9=450, menos 9). Además 441=21² (número cuadrado). 431 es otro rÃ©sultat." },
+        { mistake: "Penser que 49×5=240 (au lieu de 245)", solution: "49×5=245, pas 240. 50×5=250, moins 5 : 245. Ou 7×5=35, ×7=245." },
+        { mistake: "Confondre 49×9=441 avec un autre résultat", solution: "49×9=441 est correct (50×9=450, moins 9). De plus 441=21² (nombre carré). 431 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        { mistake: "Pensar que 50×7=340 (en lugar de 350)", solution: "50×7=350, no 340. 5×7=35, agrega un 0: 350. O 100×7=700, ÷2=350." },
-        { mistake: "Olvidar el cero", solution: "Los múltiplos impares de 50 se terminent par 50, los pares en 0: 50, 100, 150, 200, 250... ¡50×8=400, no 40!" },
+        { mistake: "Penser que 50×7=340 (au lieu de 350)", solution: "50×7=350, pas 340. 5×7=35, ajoutez un 0 : 350. Ou 100×7=700, ÷2=350." },
+        { mistake: "Oublier le zéro", solution: "Les multiples impairs de 50 se terminent par 50, les pairs par 0 : 50, 100, 150, 200, 250... 50×8=400, pas 40 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       51: [
-        { mistake: "Pensar que 51×5=250 (en lugar de 255)", solution: "51×5=255, no 250. 50×5=250, más 5: 255. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 51×9=450 con 51×9=459", solution: "51×9=459 es correcto (50×9=450, más 9). 450 en realidad es 50×9." },
+        { mistake: "Penser que 51×5=250 (au lieu de 255)", solution: "51×5=255, pas 250. 50×5=250, plus 5 : 255. Pensez toujours à ajouter ce 1 supplémentaire." },
+        { mistake: "Confondre 51×9=459 avec un autre résultat", solution: "51×9=459 est correct (50×9=450, plus 9). 450 est en fait 50×9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       52: [
-        { mistake: "Pensar que 52×5=250 (en lugar de 260)", solution: "52×5=260, no 250. 13×5=65, ×4=260. O 50×5=250, más 2×5=10: 260." },
-        { mistake: "Confundir 52×9=458 con 52×9=468", solution: "52×9=468 es correcto (13×9=117, ×4 o 50×9=450, más 18). 458 es otro rÃ©sultat." },
+        { mistake: "Penser que 52×5=250 (au lieu de 260)", solution: "52×5=260, pas 250. 13×5=65, ×4=260. Ou 50×5=250, plus 2×5=10 : 260." },
+        { mistake: "Confondre 52×9=468 avec un autre résultat", solution: "52×9=468 est correct (13×9=117, ×4 ou 50×9=450, plus 18). 458 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       53: [
-        { mistake: "Pensar que 53×5=255 (en lugar de 265)", solution: "53×5=265, no 255. 50×5=250, más 3×5=15: 265. 255 en realidad es 51×5." },
-        { mistake: "Confundir 53×9=467 con 53×9=477", solution: "53×9=477 es correcto (50×9=450, más 3×9=27). 467 es otro rÃ©sultat." },
+        { mistake: "Penser que 53×5=255 (au lieu de 265)", solution: "53×5=265, pas 255. 50×5=250, plus 3×5=15 : 265. 255 est en fait 51×5." },
+        { mistake: "Confondre 53×9=477 avec un autre résultat", solution: "53×9=477 est correct (50×9=450, plus 3×9=27). 467 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       54: [
-        { mistake: "Pensar que 54×5=260 (en lugar de 270)", solution: "54×5=270, no 260. 6×5=30, 9×5=45, 30×9=270. O 50×5=250, más 4×5=20: 270." },
-        { mistake: "Confundir 54×9=476 con 54×9=486", solution: "54×9=486 es correcto (6×9=54, ×9 o 60×9=540, menos 6×9=54). 476 es otro rÃ©sultat." },
+        { mistake: "Penser que 54×5=260 (au lieu de 270)", solution: "54×5=270, pas 260. 6×5=30, 9×5=45, 30×9=270. Ou 50×5=250, plus 4×5=20 : 270." },
+        { mistake: "Confondre 54×9=486 avec un autre résultat", solution: "54×9=486 est correct (6×9=54, ×9 ou 60×9=540, moins 6×9=54). 476 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       55: [
-        { mistake: "Pensar que 55×5=270 (en lugar de 275)", solution: "55×5=275, no 270. 11×5=55, ×5=275. O 50×5=250, más 5×5=25: 275." },
-        { mistake: "Confundir 55×9=485 con 55×9=495", solution: "55×9=495 es correcto (11×9=99, ×5 o 60×9=540, menos 5×9=45). 485 es otro rÃ©sultat." },
+        { mistake: "Penser que 55×5=270 (au lieu de 275)", solution: "55×5=275, pas 270. 11×5=55, ×5=275. Ou 50×5=250, plus 5×5=25 : 275." },
+        { mistake: "Confondre 55×9=495 avec un autre résultat", solution: "55×9=495 est correct (11×9=99, ×5 ou 60×9=540, moins 5×9=45). 485 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       56: [
-        { mistake: "Pensar que 56×5=270 (en lugar de 280)", solution: "56×5=280, no 270. 7×5=35, 8×5=40, 35×8=280. O 60×5=300, menos 4×5=20: 280." },
-        { mistake: "Confundir 56×9=494 con 56×9=504", solution: "56×9=504 es correcto (7×9=63, ×8 o 60×9=540, menos 4×9=36). 494 es otro rÃ©sultat." },
+        { mistake: "Penser que 56×5=270 (au lieu de 280)", solution: "56×5=280, pas 270. 7×5=35, 8×5=40, 35×8=280. Ou 60×5=300, moins 4×5=20 : 280." },
+        { mistake: "Confondre 56×9=504 avec un autre résultat", solution: "56×9=504 est correct (7×9=63, ×8 ou 60×9=540, moins 4×9=36). 494 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       57: [
-        { mistake: "Pensar que 57×5=280 (en lugar de 285)", solution: "57×5=285, no 280. 60×5=300, menos 3×5=15: 285. 280 en realidad es 56×5." },
-        { mistake: "Confundir 57×9=503 con 57×9=513", solution: "57×9=513 es correcto (60×9=540, menos 3×9=27). 503 es otro rÃ©sultat." },
+        { mistake: "Penser que 57×5=280 (au lieu de 285)", solution: "57×5=285, pas 280. 60×5=300, moins 3×5=15 : 285. 280 est en fait 56×5." },
+        { mistake: "Confondre 57×9=513 avec un autre résultat", solution: "57×9=513 est correct (60×9=540, moins 3×9=27). 503 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       58: [
-        { mistake: "Pensar que 58×5=280 (en lugar de 290)", solution: "58×5=290, no 280. 29×5=145, ×2=290. O 60×5=300, menos 2×5=10: 290." },
-        { mistake: "Confundir 58×9=512 con 58×9=522", solution: "58×9=522 es correcto (29×9=261, ×2 o 60×9=540, menos 2×9=18). 512 es otro rÃ©sultat." },
+        { mistake: "Penser que 58×5=280 (au lieu de 290)", solution: "58×5=290, pas 280. 29×5=145, ×2=290. Ou 60×5=300, moins 2×5=10 : 290." },
+        { mistake: "Confondre 58×9=522 avec un autre résultat", solution: "58×9=522 est correct (29×9=261, ×2 ou 60×9=540, moins 2×9=18). 512 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       59: [
-        { mistake: "Pensar que 59×5=290 (en lugar de 295)", solution: "59×5=295, no 290. 60×5=300, menos 5: 295. ¡Muy simple!" },
-        { mistake: "Confundir 59×9=521 con 59×9=531", solution: "59×9=531 es correcto (60×9=540, menos 9). 531 est également 9×59. 521 es otro rÃ©sultat." },
+        { mistake: "Penser que 59×5=290 (au lieu de 295)", solution: "59×5=295, pas 290. 60×5=300, moins 5 : 295. Très simple !" },
+        { mistake: "Confondre 59×9=531 avec un autre résultat", solution: "59×9=531 est correct (60×9=540, moins 9). 531 est aussi 9×59. 521 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        { mistake: "Pensar que 60×7=410 (en lugar de 420)", solution: "60×7=420, no 410. 6×7=42, agrega un 0: 420. O 10×7=70, ×6=420." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 60 deben terminar en 0: 60, 120, 180, 240, 300, 360, 420... ¡60×9=540, no 54!" },
+        { mistake: "Penser que 60×7=410 (au lieu de 420)", solution: "60×7=420, pas 410. 6×7=42, ajoutez un 0 : 420. Ou 10×7=70, ×6=420." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 60 se terminent par 0 : 60, 120, 180, 240, 300, 360, 420... 60×9=540, pas 54 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       61: [
-        { mistake: "Pensar que 61×5=300 (en lugar de 305)", solution: "61×5=305, no 300. 60×5=300, más 5: 305. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 61×9=540 con 61×9=549", solution: "61×9=549 es correcto (60×9=540, más 9). 540 en realidad es 60×9." },
+        { mistake: "Penser que 61×5=300 (au lieu de 305)", solution: "61×5=305, pas 300. 60×5=300, plus 5 : 305. Pensez toujours à ajouter ce 1 supplémentaire." },
+        { mistake: "Confondre 61×9=549 avec un autre résultat", solution: "61×9=549 est correct (60×9=540, plus 9). 540 est en fait 60×9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       62: [
-        { mistake: "Pensar que 62×5=300 (en lugar de 310)", solution: "62×5=310, no 300. 31×5=155, ×2=310. O 60×5=300, más 2×5=10: 310." },
-        { mistake: "Confundir 62×9=548 con 62×9=558", solution: "62×9=558 es correcto (31×9=279, ×2 o 60×9=540, más 18). 548 es otro rÃ©sultat." },
+        { mistake: "Penser que 62×5=300 (au lieu de 310)", solution: "62×5=310, pas 300. 31×5=155, ×2=310. Ou 60×5=300, plus 2×5=10 : 310." },
+        { mistake: "Confondre 62×9=558 avec un autre résultat", solution: "62×9=558 est correct (31×9=279, ×2 ou 60×9=540, plus 18). 548 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       63: [
-        { mistake: "Pensar que 63×5=305 (en lugar de 315)", solution: "63×5=315, no 305. 7×5=35, 9×5=45, 35×9=315. O 60×5=300, más 3×5=15: 315." },
-        { mistake: "Confundir 63×9=557 con 63×9=567", solution: "63×9=567 es correcto (7×9=63, ×9 o 60×9=540, más 27). 557 es otro rÃ©sultat." },
+        { mistake: "Penser que 63×5=305 (au lieu de 315)", solution: "63×5=315, pas 305. 7×5=35, 9×5=45, 35×9=315. Ou 60×5=300, plus 3×5=15 : 315." },
+        { mistake: "Confondre 63×9=567 avec un autre résultat", solution: "63×9=567 est correct (7×9=63, ×9 ou 60×9=540, plus 27). 557 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       64: [
-        { mistake: "Pensar que 64×5=310 (en lugar de 320)", solution: "64×5=320, no 310. 8×5=40, ×8=320. O 60×5=300, más 4×5=20: 320." },
-        { mistake: "Confundir 64×9=566 con 64×9=576", solution: "64×9=576 es correcto (8×9=72, ×8 o 60×9=540, más 36). Además 576=24². 566 es otro rÃ©sultat." },
+        { mistake: "Penser que 64×5=310 (au lieu de 320)", solution: "64×5=320, pas 310. 8×5=40, ×8=320. Ou 60×5=300, plus 4×5=20 : 320." },
+        { mistake: "Confondre 64×9=576 avec un autre résultat", solution: "64×9=576 est correct (8×9=72, ×8 ou 60×9=540, plus 36). De plus 576=24². 566 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       65: [
-        { mistake: "Pensar que 65×5=320 (en lugar de 325)", solution: "65×5=325, no 320. 13×5=65, ×5=325. O 60×5=300, más 5×5=25: 325." },
-        { mistake: "Confundir 65×9=575 con 65×9=585", solution: "65×9=585 es correcto (13×9=117, ×5 o 70×9=630, menos 5×9=45). 575 es otro rÃ©sultat." },
+        { mistake: "Penser que 65×5=320 (au lieu de 325)", solution: "65×5=325, pas 320. 13×5=65, ×5=325. Ou 60×5=300, plus 5×5=25 : 325." },
+        { mistake: "Confondre 65×9=585 avec un autre résultat", solution: "65×9=585 est correct (13×9=117, ×5 ou 70×9=630, moins 5×9=45). 575 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       66: [
-        { mistake: "Pensar que 66×5=325 (en lugar de 330)", solution: "66×5=330, no 325. 11×5=55, ×6=330. O 60×5=300, más 6×5=30: 330." },
-        { mistake: "Confundir 66×9=584 con 66×9=594", solution: "66×9=594 es correcto (11×9=99, ×6 o 70×9=630, menos 4×9=36). 584 es otro rÃ©sultat." },
+        { mistake: "Penser que 66×5=325 (au lieu de 330)", solution: "66×5=330, pas 325. 11×5=55, ×6=330. Ou 60×5=300, plus 6×5=30 : 330." },
+        { mistake: "Confondre 66×9=594 avec un autre résultat", solution: "66×9=594 est correct (11×9=99, ×6 ou 70×9=630, moins 4×9=36). 584 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       67: [
-        { mistake: "Pensar que 67×5=330 (en lugar de 335)", solution: "67×5=335, no 330. 70×5=350, menos 3×5=15: 335. 330 en realidad es 66×5." },
-        { mistake: "Confundir 67×9=593 con 67×9=603", solution: "67×9=603 es correcto (70×9=630, menos 3×9=27). 593 es otro rÃ©sultat." },
+        { mistake: "Penser que 67×5=330 (au lieu de 335)", solution: "67×5=335, pas 330. 70×5=350, moins 3×5=15 : 335. 330 est en fait 66×5." },
+        { mistake: "Confondre 67×9=603 avec un autre résultat", solution: "67×9=603 est correct (70×9=630, moins 3×9=27). 593 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       68: [
-        { mistake: "Pensar que 68×5=330 (en lugar de 340)", solution: "68×5=340, no 330. 17×5=85, ×4=340. O 70×5=350, menos 2×5=10: 340." },
-        { mistake: "Confundir 68×9=602 con 68×9=612", solution: "68×9=612 es correcto (17×9=153, ×4 o 70×9=630, menos 2×9=18). 602 es otro rÃ©sultat." },
+        { mistake: "Penser que 68×5=330 (au lieu de 340)", solution: "68×5=340, pas 330. 17×5=85, ×4=340. Ou 70×5=350, moins 2×5=10 : 340." },
+        { mistake: "Confondre 68×9=612 avec un autre résultat", solution: "68×9=612 est correct (17×9=153, ×4 ou 70×9=630, moins 2×9=18). 602 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       69: [
-        { mistake: "Pensar que 69×5=340 (en lugar de 345)", solution: "69×5=345, no 340. 70×5=350, menos 5: 345. ¡Muy simple!" },
-        { mistake: "Confundir 69×9=611 con 69×9=621", solution: "69×9=621 es correcto (70×9=630, menos 9). 621=3×207. 611 es otro rÃ©sultat." },
+        { mistake: "Penser que 69×5=340 (au lieu de 345)", solution: "69×5=345, pas 340. 70×5=350, moins 5 : 345. Très simple !" },
+        { mistake: "Confondre 69×9=621 avec un autre résultat", solution: "69×9=621 est correct (70×9=630, moins 9). 621=3×207. 611 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        { mistake: "Pensar que 70×7=480 (en lugar de 490)", solution: "70×7=490, no 480. 7×7=49, agrega un 0: 490. O 10×7=70, ×7=490." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 70 deben terminar en 0: 70, 140, 210, 280, 350, 420, 490... ¡70×9=630, no 63!" },
+        { mistake: "Penser que 70×7=480 (au lieu de 490)", solution: "70×7=490, pas 480. 7×7=49, ajoutez un 0 : 490. Ou 10×7=70, ×7=490." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 70 se terminent par 0 : 70, 140, 210, 280, 350, 420, 490... 70×9=630, pas 63 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       71: [
-        { mistake: "Pensar que 71×5=350 (en lugar de 355)", solution: "71×5=355, no 350. 70×5=350, más 5: 355. Siempre recuerda agregar ese 1 extra." },
-        { mistake: "Confundir 71×9=630 con 71×9=639", solution: "71×9=639 es correcto (70×9=630, más 9). 630 en realidad es 70×9." },
+        { mistake: "Penser que 71×5=350 (au lieu de 355)", solution: "71×5=355, pas 350. 70×5=350, plus 5 : 355. Pensez toujours à ajouter ce 1 supplémentaire." },
+        { mistake: "Confondre 71×9=639 avec un autre résultat", solution: "71×9=639 est correct (70×9=630, plus 9). 630 est en fait 70×9." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       72: [
-        { mistake: "Pensar que 72×5=350 (en lugar de 360)", solution: "72×5=360, no 350. 8×5=40, 9×5=45, 40×9=360. O 70×5=350, más 2×5=10: 360." },
-        { mistake: "Confundir 72×9=638 con 72×9=648", solution: "72×9=648 es correcto (8×9=72, ×9 o 80×9=720, menos 72). 638 es otro rÃ©sultat." },
+        { mistake: "Penser que 72×5=350 (au lieu de 360)", solution: "72×5=360, pas 350. 8×5=40, 9×5=45, 40×9=360. Ou 70×5=350, plus 2×5=10 : 360." },
+        { mistake: "Confondre 72×9=648 avec un autre résultat", solution: "72×9=648 est correct (8×9=72, ×9 ou 80×9=720, moins 72). 638 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       73: [
-        { mistake: "Pensar que 73×5=355 (en lugar de 365)", solution: "73×5=365, no 355. 70×5=350, más 3×5=15: 365. ¡Además 365=número de días en un año!" },
-        { mistake: "Confundir 73×9=647 con 73×9=657", solution: "73×9=657 es correcto (70×9=630, más 3×9=27). 647 es otro rÃ©sultat." },
+        { mistake: "Penser que 73×5=355 (au lieu de 365)", solution: "73×5=365, pas 355. 70×5=350, plus 3×5=15 : 365. 365 est aussi le nombre de jours dans une année !" },
+        { mistake: "Confondre 73×9=657 avec un autre résultat", solution: "73×9=657 est correct (70×9=630, plus 3×9=27). 647 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       74: [
-        { mistake: "Pensar que 74×5=360 (en lugar de 370)", solution: "74×5=370, no 360. 37×5=185, ×2=370. O 75×5=375, menos 5: 370." },
-        { mistake: "Confundir 74×9=656 con 74×9=666", solution: "74×9=666 es correcto (37×9=333, ×2 o 75×9=675, menos 9). 666 C'est un nombre repdigit. 656 es otro rÃ©sultat." },
+        { mistake: "Penser que 74×5=360 (au lieu de 370)", solution: "74×5=370, pas 360. 37×5=185, ×2=370. Ou 75×5=375, moins 5 : 370." },
+        { mistake: "Confondre 74×9=666 avec un autre résultat", solution: "74×9=666 est correct (37×9=333, ×2 ou 75×9=675, moins 9). 666 est un nombre repdigit. 656 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       75: [
-        { mistake: "Pensar que 75×5=370 (en lugar de 375)", solution: "75×5=375, no 370. 15×5=75, ×5=375. O 25×5=125, ×3=375." },
-        { mistake: "Confundir 75×9=665 con 75×9=675", solution: "75×9=675 es correcto (25×9=225, ×3 o 80×9=720, menos 5×9=45). 675=3³×5². 665 es otro rÃ©sultat." },
+        { mistake: "Penser que 75×5=370 (au lieu de 375)", solution: "75×5=375, pas 370. 15×5=75, ×5=375. Ou 25×5=125, ×3=375." },
+        { mistake: "Confondre 75×9=675 avec un autre résultat", solution: "75×9=675 est correct (25×9=225, ×3 ou 80×9=720, moins 5×9=45). 675=3³×5². 665 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       76: [
-        { mistake: "Pensar que 76×5=370 (en lugar de 380)", solution: "76×5=380, no 370. 19×5=95, ×4=380. O 80×5=400, menos 4×5=20: 380." },
-        { mistake: "Confundir 76×9=674 con 76×9=684", solution: "76×9=684 es correcto (19×9=171, ×4 o 80×9=720, menos 4×9=36). 684 es otro rÃ©sultat." },
+        { mistake: "Penser que 76×5=370 (au lieu de 380)", solution: "76×5=380, pas 370. 19×5=95, ×4=380. Ou 80×5=400, moins 4×5=20 : 380." },
+        { mistake: "Confondre 76×9=684 avec un autre résultat", solution: "76×9=684 est correct (19×9=171, ×4 ou 80×9=720, moins 4×9=36). 674 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       77: [
-        { mistake: "Pensar que 77×5=380 (en lugar de 385)", solution: "77×5=385, no 380. 7×5=35, 11×5=55, 35×11=385. O 80×5=400, menos 3×5=15: 385." },
-        { mistake: "Confundir 77×9=683 con 77×9=693", solution: "77×9=693 es correcto (7×9=63, ×11 o 80×9=720, menos 3×9=27). 693=7×9×11. 683 es otro rÃ©sultat." },
+        { mistake: "Penser que 77×5=380 (au lieu de 385)", solution: "77×5=385, pas 380. 7×5=35, 11×5=55, 35×11=385. Ou 80×5=400, moins 3×5=15 : 385." },
+        { mistake: "Confondre 77×9=693 avec un autre résultat", solution: "77×9=693 est correct (7×9=63, ×11 ou 80×9=720, moins 3×9=27). 693=7×9×11. 683 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       78: [
-        { mistake: "Pensar que 78×5=380 (en lugar de 390)", solution: "78×5=390, no 380. 13×5=65, 6×5=30, 65×6=390. O 80×5=400, menos 2×5=10: 390." },
-        { mistake: "Confundir 78×9=692 con 78×9=702", solution: "78×9=702 es correcto (13×9=117, ×6 o 80×9=720, menos 2×9=18). 702 es otro rÃ©sultat." },
+        { mistake: "Penser que 78×5=380 (au lieu de 390)", solution: "78×5=390, pas 380. 13×5=65, 6×5=30, 65×6=390. Ou 80×5=400, moins 2×5=10 : 390." },
+        { mistake: "Confondre 78×9=702 avec un autre résultat", solution: "78×9=702 est correct (13×9=117, ×6 ou 80×9=720, moins 2×9=18). 692 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       79: [
-        { mistake: "Pensar que 79×5=390 (en lugar de 395)", solution: "79×5=395, no 390. 80×5=400, menos 5: 395. ¡Muy simple!" },
-        { mistake: "Confundir 79×9=701 con 79×9=711", solution: "79×9=711 es correcto (80×9=720, menos 9). 711 es otro rÃ©sultat." },
+        { mistake: "Penser que 79×5=390 (au lieu de 395)", solution: "79×5=395, pas 390. 80×5=400, moins 5 : 395. Très simple !" },
+        { mistake: "Confondre 79×9=711 avec un autre résultat", solution: "79×9=711 est correct (80×9=720, moins 9). 701 est un autre résultat." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        { mistake: "Pensar que 80×7=550 (en lugar de 560)", solution: "80×7=560, no 550. 8×7=56, agrega un 0: 560. O 10×7=70, ×8=560." },
-        { mistake: "Olvidar el cero", solution: "Tous les multiples de 80 deben terminar en 0: 80, 160, 240, 320, 400, 480, 560... ¡80×9=720, no 72!" },
+        { mistake: "Penser que 80×7=550 (au lieu de 560)", solution: "80×7=560, pas 550. 8×7=56, ajoutez un 0 : 560. Ou 10×7=70, ×8=560." },
+        { mistake: "Oublier le zéro", solution: "Tous les multiples de 80 se terminent par 0 : 80, 160, 240, 320, 400, 480, 560... 80×9=720, pas 72 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        { mistake: "Calcular 81 como 8×10+1 en lugar de 9×9", solution: "81=9×9. Ejemplo: 81×7 = (9×7)×9 = 63×9 = 567. ¡utilise la relation cuadrada!" },
-        { mistake: "Error de addition en estrategia 80+1", solution: "81×7 = (80×7)+(1×7) = 560+7 = 567. ¡Calcula ambas partes cuidadosamente!" },
+        { mistake: "Calculer 81 comme 8×10+1 au lieu de 9×9", solution: "81=9×9. Exemple : 81×7 = (9×7)×9 = 63×9 = 567. Utilisez la relation avec le carré !" },
+        { mistake: "Erreur d'addition dans la stratégie 80+1", solution: "81×7 = (80×7)+(1×7) = 560+7 = 567. Calculez soigneusement les deux parties !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       82: [
-        { mistake: "Complicar 82×4", solution: "82×4 = (80×4)+(2×4) = 320+8 = 328. ¡Descompone y addition!" },
-        { mistake: "Pensar que 82 es impar", solution: "82=2×41, siempre par. tous ses multiples son nombres pairs: 82, 164, 246..." },
+        { mistake: "Compliquer 82×4", solution: "82×4 = (80×4)+(2×4) = 320+8 = 328. Décomposez et additionnez !" },
+        { mistake: "Penser que 82 est impair", solution: "82=2×41, toujours pair. Tous ses multiples sont des nombres pairs : 82, 164, 246..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       83: [
-        { mistake: "Calcular incorrectamente 83×5", solution: "83×5 = (80×5)+(3×5) = 400+15 = 415. ¡Descompone y addition!" },
-        { mistake: "Pensar que 83 es par", solution: "83 es primo, solo divisible par 1 y 83. Es impar y no divisible par 2." },
+        { mistake: "Mal calculer 83×5", solution: "83×5 = (80×5)+(3×5) = 400+15 = 415. Décomposez et additionnez !" },
+        { mistake: "Penser que 83 est pair", solution: "83 est premier, uniquement divisible par 1 et 83. Il est impair et non divisible par 2." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       84: [
-        { mistake: "Complicar 84×5", solution: "84×5 = 420 (7×12×5=7×60). O (80×5)+(4×5)=400+20=420." },
-        { mistake: "Olvidar los factores de 84", solution: "84=7×12=6×14=4×21=3×28. ¡peut être calculé de multiples façons!" },
+        { mistake: "Compliquer 84×5", solution: "84×5 = 420 (7×12×5=7×60). Ou (80×5)+(4×5)=400+20=420." },
+        { mistake: "Oublier les facteurs de 84", solution: "84=7×12=6×14=4×21=3×28. Peut être calculé de plusieurs façons !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       85: [
-        { mistake: "Calcular incorrectamente 85×4", solution: "85×4 = (80×4)+(5×4) = 320+20 = 340. O 85×4=17×20=340." },
-        { mistake: "Olvidar el último dígito", solution: "Les multiples de 85 siempre se terminent par 5 o 0: 85, 170, 255, 340, 425, 510..." },
+        { mistake: "Mal calculer 85×4", solution: "85×4 = (80×4)+(5×4) = 320+20 = 340. Ou 85×4=17×20=340." },
+        { mistake: "Oublier le dernier chiffre", solution: "Les multiples de 85 se terminent toujours par 5 ou 0 : 85, 170, 255, 340, 425, 510..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       86: [
-        { mistake: "Complicar 86×5", solution: "86×5 = (80×5)+(6×5) = 400+30 = 430. ¡Descompone y addition!" },
-        { mistake: "Pensar que 86 es impar", solution: "86=2×43, siempre par. tous ses multiples son nombres pairs: 86, 172, 258..." },
+        { mistake: "Compliquer 86×5", solution: "86×5 = (80×5)+(6×5) = 400+30 = 430. Décomposez et additionnez !" },
+        { mistake: "Penser que 86 est impair", solution: "86=2×43, toujours pair. Tous ses multiples sont des nombres pairs : 86, 172, 258..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       87: [
-        { mistake: "Calcular incorrectamente 87×5", solution: "87×5 = (90×5)-(3×5) = 450-15 = 435. ¡Restar desde 90 es plus facile!" },
-        { mistake: "Pensar que 87 es primo", solution: "87=3×29, no es primo! est divisible par 3 (8+7=15, divisible exactamente par 3)." },
+        { mistake: "Mal calculer 87×5", solution: "87×5 = (90×5)-(3×5) = 450-15 = 435. Soustraire depuis 90 est plus facile !" },
+        { mistake: "Penser que 87 est premier", solution: "87=3×29, ce n'est pas un nombre premier ! Il est divisible par 3 (8+7=15, divisible exactement par 3)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       88: [
-        { mistake: "Complicar 88×5", solution: "88×5 = (80×5)+(8×5) = 400+40 = 440. O 88×5=11×40=440." },
-        { mistake: "Calcular incorrectamente 88×11", solution: "88×11 = 88×10 + 88 = 880+88 = 968. ¡Usa la regla de Multiplier par 11!" },
+        { mistake: "Compliquer 88×5", solution: "88×5 = (80×5)+(8×5) = 400+40 = 440. Ou 88×5=11×40=440." },
+        { mistake: "Mal calculer 88×11", solution: "88×11 = 88×10 + 88 = 880+88 = 968. Utilisez la règle de multiplication par 11 !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       89: [
-        { mistake: "Calcular 89 sin redondear", solution: "89=90-1. Ejemplo: 89×7 = (90×7)-7 = 630-7 = 623. ¡MUY FÁCIL!" },
-        { mistake: "Calcular 89 como 88+1", solution: "¡La stratégie 90-1 es mucho plus facile! 89×7: 90×7=630, luego soustraction 7: 623." },
+        { mistake: "Calculer 89 sans arrondir", solution: "89=90-1. Exemple : 89×7 = (90×7)-7 = 630-7 = 623. TRÈS FACILE !" },
+        { mistake: "Calculer 89 comme 88+1", solution: "La stratégie 90-1 est bien plus facile ! 89×7 : 90×7=630, puis soustrayez 7 : 623." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       90: [
-        { mistake: "Complicar 90×5", solution: "90×5 = 450 (9×50). ¡Solo 9×5=45, agrega un 0!" },
-        { mistake: "Olvidar el cero", solution: "90=9×10. Siempre agrega 0 al final: 90, 180, 270, 360, 450..." },
+        { mistake: "Compliquer 90×5", solution: "90×5 = 450 (9×50). Juste 9×5=45, ajoutez un 0 !" },
+        { mistake: "Oublier le zéro", solution: "90=9×10. Ajoutez toujours 0 à la fin : 90, 180, 270, 360, 450..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       91: [
-        { mistake: "Calcular incorrectamente 91×5", solution: "91×5 = (90×5)+(1×5) = 450+5 = 455. ¡Descompone y addition!" },
-        { mistake: "Pensar que 91 es primo", solution: "91=7×13, no es primo! est divisible par 7 y 13." },
+        { mistake: "Mal calculer 91×5", solution: "91×5 = (90×5)+(1×5) = 450+5 = 455. Décomposez et additionnez !" },
+        { mistake: "Penser que 91 est premier", solution: "91=7×13, ce n'est pas un nombre premier ! Il est divisible par 7 et par 13." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       92: [
-        { mistake: "Complicar 92×5", solution: "92×5 = (90×5)+(2×5) = 450+10 = 460. ¡Descompone y addition!" },
-        { mistake: "Pensar que 92 es impar", solution: "92=2×46, siempre par. tous ses multiples son nombres pairs: 92, 184, 276..." },
+        { mistake: "Compliquer 92×5", solution: "92×5 = (90×5)+(2×5) = 450+10 = 460. Décomposez et additionnez !" },
+        { mistake: "Penser que 92 est impair", solution: "92=2×46, toujours pair. Tous ses multiples sont des nombres pairs : 92, 184, 276..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       93: [
-        { mistake: "Calcular incorrectamente 93×5", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. ¡Descompone y addition!" },
-        { mistake: "Pensar que 93 es primo", solution: "93=3×31, no es primo! est divisible par 3 (9+3=12, divisible exactamente par 3)." },
+        { mistake: "Mal calculer 93×5", solution: "93×5 = (90×5)+(3×5) = 450+15 = 465. Décomposez et additionnez !" },
+        { mistake: "Penser que 93 est premier", solution: "93=3×31, ce n'est pas un nombre premier ! Il est divisible par 3 (9+3=12, divisible exactement par 3)." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       94: [
-        { mistake: "Complicar 94×5", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. ¡Restar desde 100 es plus facile!" },
-        { mistake: "Pensar que 94 es impar", solution: "94=2×47, siempre par. tous ses multiples son nombres pairs: 94, 188, 282..." },
+        { mistake: "Compliquer 94×5", solution: "94×5 = (100×5)-(6×5) = 500-30 = 470. Soustraire depuis 100 est plus facile !" },
+        { mistake: "Penser que 94 est impair", solution: "94=2×47, toujours pair. Tous ses multiples sont des nombres pairs : 94, 188, 282..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       95: [
-        { mistake: "Calcular incorrectamente 95×4", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. O 95×4=19×20=380." },
-        { mistake: "Olvidar el último dígito", solution: "Les multiples de 95 siempre se terminent par 5 o 0: 95, 190, 285, 380, 475, 570..." },
+        { mistake: "Mal calculer 95×4", solution: "95×4 = (100×4)-(5×4) = 400-20 = 380. Ou 95×4=19×20=380." },
+        { mistake: "Oublier le dernier chiffre", solution: "Les multiples de 95 se terminent toujours par 5 ou 0 : 95, 190, 285, 380, 475, 570..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       96: [
-        { mistake: "Complicar 96×5", solution: "96×5 = (100×5)-(4×5) = 500-20 = 480. O 96×5=12×40=480." },
-        { mistake: "Olvidar los factores de 96", solution: "96=8×12=6×16=4×24=3×32. ¡peut être calculé de multiples façons!" },
+        { mistake: "Compliquer 96×5", solution: "96×5 = (100×5)-(4×5) = 500-20 = 480. Ou 96×5=12×40=480." },
+        { mistake: "Oublier les facteurs de 96", solution: "96=8×12=6×16=4×24=3×32. Peut être calculé de plusieurs façons !" },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       97: [
-        { mistake: "Calcular 97 sin redondear", solution: "97=100-3. Ejemplo: 97×7 = (100×7)-21 = 700-21 = 679. ¡MUY FÁCIL!" },
-        { mistake: "Calcular 97 como 96+1", solution: "¡La stratégie 100-3 es mucho plus facile! 97×7: 100×7=700, luego soustraction 21: 679." },
+        { mistake: "Calculer 97 sans arrondir", solution: "97=100-3. Exemple : 97×7 = (100×7)-21 = 700-21 = 679. TRÈS FACILE !" },
+        { mistake: "Calculer 97 comme 96+1", solution: "La stratégie 100-3 est bien plus facile ! 97×7 : 100×7=700, puis soustrayez 21 : 679." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       98: [
-        { mistake: "Complicar 98×5", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. ¡Restar desde 100 es SÚPER FÁCIL!" },
-        { mistake: "Pensar que 98 es impar", solution: "98=2×49, siempre par. tous ses multiples son nombres pairs: 98, 196, 294..." },
+        { mistake: "Compliquer 98×5", solution: "98×5 = (100×5)-(2×5) = 500-10 = 490. Soustraire depuis 100 est SUPER FACILE !" },
+        { mistake: "Penser que 98 est impair", solution: "98=2×49, toujours pair. Tous ses multiples sont des nombres pairs : 98, 196, 294..." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       99: [
-        { mistake: "Calcular 99 sin redondear", solution: "99=100-1. Ejemplo: 99×7 = (100×7)-7 = 700-7 = 693. ¡PERFECTA!" },
-        { mistake: "Calcular 99 como 98+1", solution: "¡La stratégie 100-1 es mucho plus facile! 99×8: 100×8=800, luego soustraction 8: 792." },
+        { mistake: "Calculer 99 sans arrondir", solution: "99=100-1. Exemple : 99×7 = (100×7)-7 = 700-7 = 693. PARFAIT !" },
+        { mistake: "Calculer 99 comme 98+1", solution: "La stratégie 100-1 est bien plus facile ! 99×8 : 100×8=800, puis soustrayez 8 : 792." },
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       100: [
-        { mistake: "Complicar 100×5", solution: "100×5 = 500! Solo agrega dos ceros al final: 5 → 500, 7 → 700!" },
-        { mistake: "Olvidar los ceros", solution: "Multiplier par 100: agrega DOS ceros al final. 100×9=900, ¡no 90!" },
+        { mistake: "Compliquer 100×5", solution: "100×5 = 500 ! Ajoutez simplement deux zéros à la fin : 5 → 500, 7 → 700 !" },
+        { mistake: "Oublier les zéros", solution: "Multiplier par 100 : ajoutez DEUX zéros à la fin. 100×9=900, pas 90 !" },
       ],
     }
 
 const strategies: { [key: number]: string[] } = {
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       1: [
-        "Di cada multiplicación en voz alta: '1 par 1 es 1, 1 par 2 es 2...'",
-        "Practica escribir la tabla una vez al día durante una semana",
-        "Busca el patrón: la respuesta est toujours le même nombre que el segundo número",
-        "Usa tarjetas didácticas, aunque cette table generalmente se aprende muy rápido",
+        "Dites chaque multiplication à voix haute : « 1 fois 1 égale 1, 1 fois 2 égale 2... »",
+        "Entraînez-vous à écrire la table une fois par jour pendant une semaine",
+        "Cherchez le motif : la réponse est toujours le même nombre que le second facteur",
+        "Utilisez des cartes mémoire, même si cette table s'apprend généralement très vite",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       2: [
-        "Cuenta de dos en dos mientras caminas o subes escaleras: 2, 4, 6, 8...",
-        "Usa tus dedos: sostén dedos en pares y cuenta de dos en dos",
-        "Practica duplicar números en tu cabeza durante el día",
-        "Dílo en voz alta: '2 par 5 es 5 más 5, lo que hace 10'",
+        "Comptez de deux en deux en marchant ou en montant les escaliers : 2, 4, 6, 8...",
+        "Utilisez vos doigts : levez-les par paires et comptez de deux en deux",
+        "Entraînez-vous à doubler des nombres de tête pendant la journée",
+        "Dites-le à voix haute : « 2 fois 5, c'est 5 plus 5, ce qui fait 10 »",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       3: [
-        "Cuenta rítmicamente de tres en tres: 3, 6, 9, 12, 15...",
-        "Usa el truco de los dedos: sostén dedos en groupes de 3",
-        "Busca el patrón de addition de dígitos para verificar tus respuestas (repite 3-6-9)",
-        "Practica 5-10 minutos diarios en lugar de una sesión larga",
+        "Comptez rythmiquement de trois en trois : 3, 6, 9, 12, 15...",
+        "Utilisez l'astuce des doigts : levez-les par groupes de 3",
+        "Cherchez le motif de la somme des chiffres pour vérifier vos réponses (répète 3-6-9)",
+        "Entraînez-vous 5-10 minutes par jour plutôt qu'une longue séance",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       4: [
-        "Aprende primero la table de 2, luego duplica cada respuesta para obtener los 4s",
-        "Cuenta de cuatro en cuatro: 4, 8, 12, 16, 20...",
-        "Usa objetos en groupes de 4 para visualizar (patas de silla, ruedas de auto)",
-        "Practica par separado los más difíciles (4×6, 4×7, 4×8, 4×9)",
+        "Apprenez d'abord la table de 2, puis doublez chaque réponse pour obtenir celle de 4",
+        "Comptez de quatre en quatre : 4, 8, 12, 16, 20...",
+        "Utilisez des objets par groupes de 4 pour visualiser (pieds de chaise, roues de voiture)",
+        "Entraînez-vous séparément sur les plus difficiles (4×6, 4×7, 4×8, 4×9)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       5: [
-        "Usa tus dedos para contar de cinco en cinco—cada dedo representa 5",
-        "Mira un reloj y cuenta en intervalos de 5 minutos",
-        "Practica con dinero: cuenta monedas de 5 centavos",
-        "Recuerda: multiplicadores pares se terminent par 0, impares en 5",
+        "Utilisez vos doigts pour compter de cinq en cinq — chaque doigt représente 5",
+        "Regardez une horloge et comptez par intervalles de 5 minutes",
+        "Entraînez-vous avec de l'argent : comptez des pièces de 5 centimes",
+        "Rappel : les multiplicateurs pairs se terminent par 0, les impairs par 5",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       6: [
-        "Memoriza la table de 3, luego duplica cada respuesta pour trouver los 6s",
-        "Estrategia de la caja de huevos: cuenta de seis en seis (6, 12, 18, 24...)",
-        "Enfócate en los pares difíciles: estudia 6×7=42, 6×8=48, 6×9=54 par separado",
-        "Memoriza el patrón de unidades: 6, 2, 8, 4, 0 y repite",
-        "Verifica usando les deux tables del 2 y 3, ya que 6 es múltiplo de ambos",
+        "Mémorisez la table de 3, puis doublez chaque réponse pour trouver celle de 6",
+        "Stratégie de la boîte d'œufs : comptez de six en six (6, 12, 18, 24...)",
+        "Concentrez-vous sur les paires difficiles : étudiez 6×7=42, 6×8=48, 6×9=54 séparément",
+        "Mémorisez le motif du chiffre des unités : 6, 2, 8, 4, 0 puis répétez",
+        "Vérifiez avec les tables de 2 et 3, puisque 6 est un multiple des deux",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       7: [
-        "Memoriza el par más difícil: 7×8=56 (rima 'cinco seis, siete ocho')",
-        "Conéctalo con los días de la semana: 7 días, 14 días (2 semaines), 21 días (3 semaines)",
-        "Memoriza especialmente 7×7=49 (7²=49), calcula otros desde ahí",
-        "Truco de dedos: Cuenta 7 dedos desde la izquierda, los restantes son unidades, los contados son decenas",
-        "¡Solo practica 3-4 hechos reales al día. El 7 requiere paciencia!",
+        "Mémorisez la paire la plus difficile : 7×8=56 (rime « cinq-six, sept-huit »)",
+        "Reliez-le aux jours de la semaine : 7 jours, 14 jours (2 semaines), 21 jours (3 semaines)",
+        "Mémorisez surtout 7×7=49 (7²=49), calculez les autres à partir de là",
+        "Astuce des doigts : comptez 7 doigts depuis la gauche, les restants sont les unités, les comptés sont les dizaines",
+        "Entraînez-vous sur seulement 3-4 faits réels par jour. La table de 7 demande de la patience !",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       8: [
-        "Memoriza la table de 4, luego duplica cada respuesta pour trouver los 8s",
-        "Memoriza especialmente 8×8=64 ('ocho ocho sesenta y cuatro')",
-        "Cuenta de ocho en ocho: 8, 16, 24, 32, 40, 48, 56, 64, 72, 80",
-        "Cadena de duplicación: Duplica Le nombre (×2), luego otra vez (×4), luego otra vez (×8)",
-        "Las unidades son siempre pares y descienden: 8, 6, 4, 2, 0 y repite",
+        "Mémorisez la table de 4, puis doublez chaque réponse pour trouver celle de 8",
+        "Mémorisez surtout 8×8=64 (« huit huit soixante-quatre »)",
+        "Comptez de huit en huit : 8, 16, 24, 32, 40, 48, 56, 64, 72, 80",
+        "Chaîne de doublement : doublez le nombre (×2), encore (×4), encore (×8)",
+        "Les unités sont toujours paires et décroissantes : 8, 6, 4, 2, 0 puis répétez",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       9: [
-        "Aprende el truco de los dedos: usa tus 10 dedos para mostrar la table de 9",
-        "Usa la regla de addition de dígitos: addition les chiffres de la respuesta, siempre da 9",
-        "Resta desde 10: 9×6 = 60-6 = 54, 9×8 = 80-8 = 72",
-        "Memoriza especialmente 9×9=81 (9²=81)",
-        "Patrón de decenas: En 9×n, el dígito de las decenas est toujours n-1",
+        "Apprenez l'astuce des doigts : utilisez vos 10 doigts pour afficher la table de 9",
+        "Utilisez la règle de la somme des chiffres : additionnez les chiffres de la réponse, ça donne toujours 9",
+        "Soustrayez depuis 10 fois le nombre : 9×6 = 60-6 = 54, 9×8 = 80-8 = 72",
+        "Mémorisez surtout 9×9=81 (9²=81)",
+        "Motif des dizaines : dans 9×n, le chiffre des dizaines est toujours n-1",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       10: [
-        "¡La regla plus facile: Solo agrega un cero al final!",
-        "Cuenta de diez en diez: 10, 20, 30, 40, 50, 60, 70, 80, 90, 100",
-        "Entiende la relation de valor posicional: Multiplier par 10 desplaza un chiffre a la izquierda",
-        "Practica avec de grands nombres: 23×10=230, 47×10=470",
-        "Usa cette table para verificar otras tables (ej: 9×6 = 60-6)",
+        "La règle la plus facile : ajoutez simplement un zéro à la fin !",
+        "Comptez de dix en dix : 10, 20, 30, 40, 50, 60, 70, 80, 90, 100",
+        "Comprenez la relation de valeur positionnelle : multiplier par 10 décale chaque chiffre vers la gauche",
+        "Entraînez-vous avec de grands nombres : 23×10=230, 47×10=470",
+        "Utilisez cette table pour vérifier les autres (ex : 9×6 = 60-6)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       11: [
-        "Memoriza el patrón de dígitos dobles: 11, 22, 33, 44, 55, 66, 77, 88, 99",
-        "Practica el truco de addition de dígitos: 23×11 = 253 (2_[2+3]_3)",
-        "Memoriza especialmente 11×11=121 y 11×12=132",
-        "Crea canción o rima: 'Once par cinco, cincuenta y cinco' (11×5=55)",
-        "Encuentra un múltiplo de 11 dans la vie réelle cada día (11 ans, 11 horas, etc.)",
+        "Mémorisez le motif des chiffres doublés : 11, 22, 33, 44, 55, 66, 77, 88, 99",
+        "Entraînez-vous à l'astuce de la somme des chiffres : 23×11 = 253 (2_[2+3]_3)",
+        "Mémorisez surtout 11×11=121 et 11×12=132",
+        "Créez une chanson ou une rime : « Onze fois cinq, cinquante-cinq » (11×5=55)",
+        "Trouvez un multiple de 11 dans la vie réelle chaque jour (11 ans, 11 heures, etc.)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       12: [
-        "Practica contando douzaines: cuenta cajas de huevos (12, 24, 36...)",
-        "Calcula 12 usando tabla del 3 o 4: 12=3×4, entonces 12×5 = 3×5×4 = 15×4 = 60",
-        "Usa el reloj: 12×5=60 minutos (1 hora)",
-        "Enfócate en los múltiplos más difíciles de 12: 12×7=84, 12×8=96, 12×9=108",
-        "Usa 12 en vida diaria: meses, horas, douzaines",
+        "Entraînez-vous à compter des douzaines : comptez des boîtes d'œufs (12, 24, 36...)",
+        "Calculez avec la table de 3 ou 4 : 12=3×4, donc 12×5 = 3×5×4 = 15×4 = 60",
+        "Utilisez l'horloge : 12×5=60 minutes (1 heure)",
+        "Concentrez-vous sur les multiples les plus difficiles de 12 : 12×7=84, 12×8=96, 12×9=108",
+        "Utilisez 12 dans la vie quotidienne : mois, heures, douzaines",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       13: [
-        "Usa siempre La stratégie 10+3: 13×6 = 60+18 = 78",
-        "Convierte la table de 13 en canción o encuentra un ritmo",
-        "Enfócate en los pares más difíciles: 13×7=91, 13×8=104, 13×9=117",
-        "Practica 2-3 múltiplos diferentes de 13 cada día, no todos a la vez",
-        "Trabaja hacia atrás: 130, 117, 104, 91, 78... (soustraction 13 desde 130)",
+        "Utilisez toujours la stratégie 10+3 : 13×6 = 60+18 = 78",
+        "Transformez la table de 13 en chanson ou trouvez un rythme",
+        "Concentrez-vous sur les paires les plus difficiles : 13×7=91, 13×8=104, 13×9=117",
+        "Entraînez-vous sur 2-3 multiples différents de 13 chaque jour, pas tous à la fois",
+        "Travaillez à rebours : 130, 117, 104, 91, 78... (soustrayez 13 depuis 130)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       14: [
-        "Memoriza la table de 7, luego duplica cada respuesta",
-        "Usa un calendario bisemanal: períodos de 14 días",
-        "Memoriza especialmente 14×7=98 y 14×8=112",
-        "Usa 14 para verificar la table de 7: 14×6=84, entonces 7×6=42",
-        "Cuenta de catorce en catorce: 14, 28, 42, 56, 70, 84, 98, 112, 126, 140",
+        "Mémorisez la table de 7, puis doublez chaque réponse",
+        "Utilisez un calendrier bimensuel : périodes de 14 jours",
+        "Mémorisez surtout 14×7=98 et 14×8=112",
+        "Utilisez 14 pour vérifier la table de 7 : 14×6=84, donc 7×6=42",
+        "Comptez de quatorze en quatorze : 14, 28, 42, 56, 70, 84, 98, 112, 126, 140",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       15: [
-        "Estrategia del reloj: 15 minutos = cuarto de hora. 15×4=60 minutos = 1 hora",
-        "Usa tabla del 3 o 5: 15=3×5, entonces 15×4 = 3×4×5 = 12×5 = 60",
-        "Sigue el patrón que se termine en 0 ou 5: 15, 30, 45, 60, 75, 90...",
-        "Practica calcul de propinas: cómo calcular 15% de propina (10%+5%)",
-        "Memoriza los múltiplos más útiles de 15: 15×4=60, 15×6=90, 15×8=120",
+        "Stratégie de l'horloge : 15 minutes = un quart d'heure. 15×4=60 minutes = 1 heure",
+        "Utilisez la table de 3 ou 5 : 15=3×5, donc 15×4 = 3×4×5 = 12×5 = 60",
+        "Suivez le motif se terminant par 0 ou 5 : 15, 30, 45, 60, 75, 90...",
+        "Entraînez-vous au calcul de pourboires : comment calculer 15% (10%+5%)",
+        "Mémorisez les multiples les plus utiles de 15 : 15×4=60, 15×6=90, 15×8=120",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       16: [
-        "Cadena de duplicación: Duplica Le nombre (×2), otra vez (×4), otra vez (×8), otra vez (×16)",
-        "Si vous connaissez la table de 8, duplica cada rÃ©sultat: 8×7=56, entonces 16×7=112",
-        "Memoriza especialmente 16×16=256 (2⁸=256)",
-        "Relaciónalo con términos informáticos: 16 bits, sistema hexadecimal",
-        "Cuenta de dieciséis en dieciséis: 16, 32, 48, 64, 80, 96, 112, 128, 144, 160",
+        "Chaîne de doublement : doublez le nombre (×2), encore (×4), encore (×8), encore (×16)",
+        "Si vous connaissez la table de 8, doublez chaque résultat : 8×7=56, donc 16×7=112",
+        "Mémorisez surtout 16×16=256 (2⁸=256)",
+        "Reliez-le aux termes informatiques : 16 bits, système hexadécimal",
+        "Comptez de seize en seize : 16, 32, 48, 64, 80, 96, 112, 128, 144, 160",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       17: [
-        "perfectionne la stratégie 20-3: 17×n = 20n - 3n",
-        "Descomposición 10+7: 17×6 = 60+42 = 102",
-        "Practica diariamente los pares más difíciles: 17×7=119, 17×8=136, 17×9=153",
-        "Relaciónalo con 17 ans de edad: qué pasa a los 17, qué pasa a los 34 (17×2)",
-        "¡Ten paciencia! 17 es primo, requiere práctica",
+        "Perfectionnez la stratégie 20-3 : 17×n = 20n - 3n",
+        "Décomposition 10+7 : 17×6 = 60+42 = 102",
+        "Entraînez-vous chaque jour sur les paires les plus difficiles : 17×7=119, 17×8=136, 17×9=153",
+        "Reliez-le à l'âge de 17 ans : que se passe-t-il à 17, puis à 34 ans (17×2) ?",
+        "Soyez patient ! 17 est premier, ça demande de la pratique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       18: [
-        "Usa tabla del 9 o 6: 18=2×9 o 18=3×6",
-        "Duplica la table de 9: 9×4=36, entonces 18×4=72",
-        "Triplica la table de 6: 6×5=30, entonces 18×5=90",
-        "Relaciónalo con mayoría de edad: 18, 36 (18×2), 54 (18×3)",
-        "Cuenta de dieciocho en dieciocho: 18, 36, 54, 72, 90, 108, 126, 144, 162, 180",
+        "Utilisez la table de 9 ou de 6 : 18=2×9 ou 18=3×6",
+        "Doublez la table de 9 : 9×4=36, donc 18×4=72",
+        "Triplez la table de 6 : 6×5=30, donc 18×5=90",
+        "Reliez-le à la majorité légale : 18, 36 (18×2), 54 (18×3)",
+        "Comptez de dix-huit en dix-huit : 18, 36, 54, 72, 90, 108, 126, 144, 162, 180",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       19: [
-        "Usa siempre La stratégie 20-1: 19×n = 20n - n",
-        "Ejemplo: 19×7 = 140-7 = 133. ¡Muy simple y efectivo!",
-        "Descomposición 10+9: 19×4 = 40+36 = 76",
-        "Practica los múltiplos más difíciles: 19×7=133, 19×8=152, 19×9=171",
-        "Aprende la table de 19 hacia atrás: 190, 171, 152, 133... para flexibilidad mental",
+        "Utilisez toujours la stratégie 20-1 : 19×n = 20n - n",
+        "Exemple : 19×7 = 140-7 = 133. Très simple et efficace !",
+        "Décomposition 10+9 : 19×4 = 40+36 = 76",
+        "Entraînez-vous sur les multiples les plus difficiles : 19×7=133, 19×8=152, 19×9=171",
+        "Apprenez la table de 19 à rebours : 190, 171, 152, 133... pour la flexibilité mentale",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       20: [
-        "Lo plus facile: Multiplica par 10, luego duplica",
-        "O: Agrega un cero al final, luego duplica (MÉTODO CORRECTO! 7×20: 70 luego ×2=140)",
-        "Método correcto: 7×10=70, 70×2=140 o 7×2=14, agrega un 0: 140",
-        "Cuenta rápidamente de veinte en veinte: 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
-        "Practica con dinero: cuenta billetes de 20",
+        "Le plus simple : multipliez par 10, puis doublez",
+        "Ou : ajoutez un zéro à la fin, puis doublez (7×20 : 70 puis ×2=140)",
+        "Méthode correcte : 7×10=70, 70×2=140 ou 7×2=14, ajoutez un 0 : 140",
+        "Comptez rapidement de vingt en vingt : 20, 40, 60, 80, 100, 120, 140, 160, 180, 200",
+        "Entraînez-vous avec de l'argent : comptez des billets de 20",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       21: [
-        "Usa La stratégie 20+1: 21×n = 20n + n",
-        "utilise la relation 3×7: ¿Conoces la table de 3? 3×6=18, 7×6=42, entonces 21×6=126",
-        "Practica los múltiplos más difíciles: 21×7=147, 21×8=168, 21×9=189",
-        "Relaciónalo con la mayoría de edad legal: ¿qué cambia a los 21 ans?",
-        "Cuenta de veintiuno en veintiuno: 21, 42, 63, 84, 105, 126, 147, 168, 189, 210",
+        "Utilisez la stratégie 20+1 : 21×n = 20n + n",
+        "Utilisez la relation 3×7 : connaissez-vous la table de 3 ? 3×6=18, 7×6=42, donc 21×6=126",
+        "Entraînez-vous sur les multiples les plus difficiles : 21×7=147, 21×8=168, 21×9=189",
+        "Reliez-le à la majorité légale : qu'est-ce qui change à 21 ans ?",
+        "Comptez de vingt-et-un en vingt-et-un : 21, 42, 63, 84, 105, 126, 147, 168, 189, 210",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       22: [
-        "Memoriza la table de 11, luego duplica cada rÃ©sultat",
-        "Relaciónalo con equipos de fútbol: 2 equipos = 22 jugadores",
-        "Los múltiplos plus facilees primero: 22×5=110, 22×10=220",
-        "Cuenta de veintidós en veintidós: 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
-        "Observa el patrón de dígitos dobles en los primeros 4 rÃ©sultats: 22, 44, 66, 88",
+        "Mémorisez la table de 11, puis doublez chaque résultat",
+        "Reliez-le aux équipes de football : 2 équipes = 22 joueurs",
+        "Les multiples les plus faciles d'abord : 22×5=110, 22×10=220",
+        "Comptez de vingt-deux en vingt-deux : 22, 44, 66, 88, 110, 132, 154, 176, 198, 220",
+        "Observez le motif des chiffres doublés dans les 4 premiers résultats : 22, 44, 66, 88",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       23: [
-        "Usa siempre La stratégie 20+3: 23×6 = 120+18 = 138",
-        "O estrategia 25-2: 23×4 = 100-8 = 92",
-        "Relaciónalo con cromosomas: Los humanos tienen 23 paires de chromosomes",
-        "Practica diariamente los múltiplos más difíciles: 23×7=161, 23×8=184, 23×9=207",
-        "23 es primo, así que ten paciencia y practica mucho",
+        "Utilisez toujours la stratégie 20+3 : 23×6 = 120+18 = 138",
+        "Ou la stratégie 25-2 : 23×4 = 100-8 = 92",
+        "Reliez-le aux chromosomes : les humains ont 23 paires de chromosomes",
+        "Entraînez-vous chaque jour sur les multiples les plus difficiles : 23×7=161, 23×8=184, 23×9=207",
+        "23 est premier, alors soyez patient et pratiquez beaucoup",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       24: [
-        "utilise la relation de horas: 24 horas×3 días = 72 horas",
-        "Prueba multiples métodos: 24=2×12, 3×8, 4×6. ¿Cuál es plus facile?",
-        "Si vous connaissez la table de 12, duplica: 12×7=84, entonces 24×7=168",
-        "Cuenta par douzaines: 24 = 2 douzaines. 24×5 = 10 douzaines = 120",
-        "Cuenta de veinticuatro en veinticuatro: 24, 48, 72, 96, 120, 144, 168, 192, 216, 240",
+        "Utilisez la relation des heures : 24 heures × 3 jours = 72 heures",
+        "Essayez plusieurs méthodes : 24=2×12, 3×8, 4×6. Laquelle est la plus facile ?",
+        "Si vous connaissez la table de 12, doublez : 12×7=84, donc 24×7=168",
+        "Comptez par douzaines : 24 = 2 douzaines. 24×5 = 10 douzaines = 120",
+        "Comptez de vingt-quatre en vingt-quatre : 24, 48, 72, 96, 120, 144, 168, 192, 216, 240",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       25: [
-        "Sistema de cuartos: 25 = 100÷4. Entonces 25×4=100, 25×8=200",
-        "Memoriza el patrón de los últimos deux chiffres: 25, 50, 75, 00 se repite",
-        "Practica con dinero: cuenta monedas de 25 centavos",
-        "Recuerda que es le carré de 5: 25=5×5",
-        "calcul de parcentajes: 25% = 1/4. Usa esta relación",
+        "Système des quarts : 25 = 100÷4. Donc 25×4=100, 25×8=200",
+        "Mémorisez le motif des deux derniers chiffres : 25, 50, 75, 00 se répète",
+        "Entraînez-vous avec de l'argent : comptez des pièces de 25 centimes",
+        "Rappelez-vous que c'est le carré de 5 : 25=5×5",
+        "Calcul de pourcentages : 25% = 1/4. Utilisez cette relation",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       26: [
-        "Si vous connaissez la table de 13, duplica: 13×8=104, entonces 26×8=208",
-        "Estrategia 25+1: 26×4 = 100+4 = 104",
-        "Relaciónalo con el alfabeto: hay 26 letras",
-        "Cuenta de veintiséis en veintiséis: 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
-        "Practica los múltiplos más difíciles: 26×7=182, 26×9=234",
+        "Si vous connaissez la table de 13, doublez : 13×8=104, donc 26×8=208",
+        "Stratégie 25+1 : 26×4 = 100+4 = 104",
+        "Reliez-le à l'alphabet : il y a 26 lettres",
+        "Comptez de vingt-six en vingt-six : 26, 52, 78, 104, 130, 156, 182, 208, 234, 260",
+        "Entraînez-vous sur les multiples les plus difficiles : 26×7=182, 26×9=234",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       27: [
-        "Usa La stratégie 30-3: 27×n = 30n - 3n",
-        "Si vous connaissez la table de 9, triplícala: 9×6=54, así que 27×6=162",
-        "Recuerda que es el cubo de 3: 27=3×3×3",
-        "Cuenta de 27 en 27: 27, 54, 81, 108, 135, 162, 189, 216, 243, 270",
-        "Practica los múltiplos más difíciles: 27×7=189, 27×8=216, 27×9=243",
+        "Utilisez la stratégie 30-3 : 27×n = 30n - 3n",
+        "Si vous connaissez la table de 9, triplez-la : 9×6=54, donc 27×6=162",
+        "Rappelez-vous que c'est le cube de 3 : 27=3×3×3",
+        "Comptez de vingt-sept en vingt-sept : 27, 54, 81, 108, 135, 162, 189, 216, 243, 270",
+        "Entraînez-vous sur les multiples les plus difficiles : 27×7=189, 27×8=216, 27×9=243",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       28: [
-        "utilise la relation 4×7: multiplica la table de 4 par 7",
-        "O duplica 14: 14×5=70, entonces 28×5=140",
-        "Relaciónalo con febrero: 28 días (año normal)",
-        "Cuenta de veintiocho en veintiocho: 28, 56, 84, 112, 140, 168, 196, 224, 252, 280",
-        "Memoriza los múltiplos más útiles: 28×5=140, 28×7=196, 28×10=280",
+        "Utilisez la relation 4×7 : multipliez la table de 4 par 7",
+        "Ou doublez la table de 14 : 14×5=70, donc 28×5=140",
+        "Reliez-le à février : 28 jours (année normale)",
+        "Comptez de vingt-huit en vingt-huit : 28, 56, 84, 112, 140, 168, 196, 224, 252, 280",
+        "Mémorisez les multiples les plus utiles : 28×5=140, 28×7=196, 28×10=280",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       29: [
-        "Usa La stratégie 30-1: 29×n = 30n - n",
-        "Ejemplo: 29×8 = 240-8 = 232. ¡Muy fácil!",
-        "Relaciónalo con année bissextile: 29 días en février",
-        "Cuenta de veintinueve en veintinueve: 29, 58, 87, 116, 145, 174, 203, 232, 261, 290",
-        "Practica los múltiplos más difíciles: 29×7=203, 29×9=261",
+        "Utilisez la stratégie 30-1 : 29×n = 30n - n",
+        "Exemple : 29×8 = 240-8 = 232. Très facile !",
+        "Reliez-le aux années bissextiles : 29 jours en février",
+        "Comptez de vingt-neuf en vingt-neuf : 29, 58, 87, 116, 145, 174, 203, 232, 261, 290",
+        "Entraînez-vous sur les multiples les plus difficiles : 29×7=203, 29×9=261",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       30: [
-        "Estrategia 3×10: multiplica par 10, luego par 3",
-        "Ejemplo: 7×30 = 70×3 = 210 o 7×3=21, agrega un 0: 210",
-        "Relaciónalo con demi-heure: 30 minutos",
-        "Días del mes: Muchos meses tienen 30 días (abril, junio, septiembre, noviembre)",
-        "Cuenta de treinta en treinta: 30, 60, 90, 120, 150, 180, 210, 240, 270, 300",
+        "Stratégie 3×10 : multipliez par 10, puis par 3",
+        "Exemple : 7×30 = 70×3 = 210 ou 7×3=21, ajoutez un 0 : 210",
+        "Reliez-le à la demi-heure : 30 minutes",
+        "Jours du mois : de nombreux mois ont 30 jours (avril, juin, septembre, novembre)",
+        "Comptez de trente en trente : 30, 60, 90, 120, 150, 180, 210, 240, 270, 300",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       31: [
-        "Usa La stratégie 30+1: 31×n = 30n + n",
-        "Ejemplo: 31×8 = 240 + 8 = 248. ¡Muy simple y efectivo!",
-        "Relaciónalo con el calendario: 31 días es la longitud máxima del mes",
-        "Cuenta de treinta y uno en treinta y uno: 31, 62, 93, 124, 155, 186, 217, 248, 279, 310",
-        "Practica los múltiplos más difíciles: 31×7=217, 31×9=279",
+        "Utilisez la stratégie 30+1 : 31×n = 30n + n",
+        "Exemple : 31×8 = 240 + 8 = 248. Très simple et efficace !",
+        "Reliez-le au calendrier : 31 jours est la durée maximale d'un mois",
+        "Comptez de trente-et-un en trente-et-un : 31, 62, 93, 124, 155, 186, 217, 248, 279, 310",
+        "Entraînez-vous sur les multiples les plus difficiles : 31×7=217, 31×9=279",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       32: [
-        "Usa la cadena de duplicación: duplica 16",
-        "Ejemplo: 16×5=80, entonces 32×5=160",
-        "Recuerda que es potencia de 2: 32=2×2×2×2×2",
-        "Cuenta de treinta y dos en treinta y dos: 32, 64, 96, 128, 160, 192, 224, 256, 288, 320",
-        "Relaciónalo con términos informáticos: sistema de 32 bits",
+        "Utilisez la chaîne de doublement : doublez 16",
+        "Exemple : 16×5=80, donc 32×5=160",
+        "Rappelez-vous que c'est une puissance de 2 : 32=2×2×2×2×2",
+        "Comptez de trente-deux en trente-deux : 32, 64, 96, 128, 160, 192, 224, 256, 288, 320",
+        "Reliez-le aux termes informatiques : système 32 bits",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       33: [
-        "Usa La stratégie 3×11: triplica la table de 11",
-        "O multiplica la table de 3 par 11: 3×7=21, 21×11=231, entonces 33×7=231",
-        "Observa el patrón de repetición: 33, 66, 99 (primeros tres rÃ©sultats)",
-        "Cuenta de treinta y tres en treinta y tres: 33, 66, 99, 132, 165, 198, 231, 264, 297, 330",
-        "Practica los múltiplos más difíciles: 33×7=231, 33×8=264, 33×9=297",
+        "Utilisez la stratégie 3×11 : triplez la table de 11",
+        "Ou multipliez la table de 3 par 11 : 3×7=21, 21×11=231, donc 33×7=231",
+        "Observez le motif de répétition : 33, 66, 99 (trois premiers résultats)",
+        "Comptez de trente-trois en trente-trois : 33, 66, 99, 132, 165, 198, 231, 264, 297, 330",
+        "Entraînez-vous sur les multiples les plus difficiles : 33×7=231, 33×8=264, 33×9=297",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       34: [
-        "Si vous connaissez la table de 17, duplícala: 17×6=102, entonces 34×6=204",
-        "Estrategia 35-1: 34×4 = 140-4 = 136",
-        "O usa 30+4: 34×5 = 150+20 = 170",
-        "Cuenta de treinta y cuatro en treinta y cuatro: 34, 68, 102, 136, 170, 204, 238, 272, 306, 340",
-        "Memoriza los múltiplos más útiles: 34×5=170, 34×10=340",
+        "Si vous connaissez la table de 17, doublez-la : 17×6=102, donc 34×6=204",
+        "Stratégie 35-1 : 34×4 = 140-4 = 136",
+        "Ou utilisez 30+4 : 34×5 = 150+20 = 170",
+        "Comptez de trente-quatre en trente-quatre : 34, 68, 102, 136, 170, 204, 238, 272, 306, 340",
+        "Mémorisez les multiples les plus utiles : 34×5=170, 34×10=340",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       35: [
-        "Estrategia 5×7: multiplica la table de 5 par 7 o viceversa",
-        "Ejemplo: 35×4 = 5×4×7 = 20×7 = 140",
-        "Usa Le motif du último dígito: siempre se termine en 5 ou 0",
-        "Cuenta de treinta y cinco en treinta y cinco: 35, 70, 105, 140, 175, 210, 245, 280, 315, 350",
-        "calcul de tiempo: 35 minutos = demi-heure + 5 minutos",
+        "Stratégie 5×7 : multipliez la table de 5 par 7 ou l'inverse",
+        "Exemple : 35×4 = 5×4×7 = 20×7 = 140",
+        "Utilisez le motif du dernier chiffre : toujours 5 ou 0",
+        "Comptez de trente-cinq en trente-cinq : 35, 70, 105, 140, 175, 210, 245, 280, 315, 350",
+        "Calcul de temps : 35 minutes = demi-heure + 5 minutes",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       36: [
-        "Recuerda que es le carré de 6: 36=6×6",
-        "multiples métodos: 36=4×9, 3×12, 2×18. ¿Cuál es plus facile?",
-        "Si vous connaissez la table de 9, multíplica par 4: 9×7=63, 63×4=252, entonces 36×7=252",
-        "Cuenta de treinta y seis en treinta y seis: 36, 72, 108, 144, 180, 216, 252, 288, 324, 360",
-        "Medición de ángulos: 360° es una vuelta completa, 36° es la décima parte",
+        "Rappelez-vous que c'est le carré de 6 : 36=6×6",
+        "Plusieurs méthodes : 36=4×9, 3×12, 2×18. Laquelle est la plus facile ?",
+        "Si vous connaissez la table de 9, multipliez par 4 : 9×7=63, 63×4=252, donc 36×7=252",
+        "Comptez de trente-six en trente-six : 36, 72, 108, 144, 180, 216, 252, 288, 324, 360",
+        "Mesure d'angles : 360° est un tour complet, 36° en est le dixième",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       37: [
-        "Usa La stratégie 40-3: 37×n = 40n - 3n",
-        "Memoriza la relation mágica con 111: 37×3=111, 37×6=222, 37×9=333!",
-        "Ejemplo: 37×8 = 320 - 24 = 296",
-        "Cuenta de treinta y siete en treinta y siete: 37, 74, 111, 148, 185, 222, 259, 296, 333, 370",
-        "Descubre el patrón de repetición: rÃ©sultats interesantes en cada múltiplo de 3",
+        "Utilisez la stratégie 40-3 : 37×n = 40n - 3n",
+        "Mémorisez la relation magique avec 111 : 37×3=111, 37×6=222, 37×9=333 !",
+        "Exemple : 37×8 = 320 - 24 = 296",
+        "Comptez de trente-sept en trente-sept : 37, 74, 111, 148, 185, 222, 259, 296, 333, 370",
+        "Découvrez le motif de répétition : résultats intéressants à chaque multiple de 3",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       38: [
-        "Si vous connaissez la table de 19, duplícala: 19×7=133, entonces 38×7=266",
-        "Estrategia 40-2: 38×6 = 240 - 12 = 228",
-        "Cuenta de treinta y ocho en treinta y ocho: 38, 76, 114, 152, 190, 228, 266, 304, 342, 380",
-        "Practica los múltiplos más difíciles: 38×7=266, 38×9=342",
-        "Relaciónalo con la température corparelle: 38°C es fièvre légère",
+        "Si vous connaissez la table de 19, doublez-la : 19×7=133, donc 38×7=266",
+        "Stratégie 40-2 : 38×6 = 240 - 12 = 228",
+        "Comptez de trente-huit en trente-huit : 38, 76, 114, 152, 190, 228, 266, 304, 342, 380",
+        "Entraînez-vous sur les multiples les plus difficiles : 38×7=266, 38×9=342",
+        "Reliez-le à la température corporelle : 38°C, c'est une légère fièvre",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       39: [
-        "Estrategia 40-1 es PERFECTA: 39×n = 40n - n",
-        "Ejemplo: 39×7 = 280 - 7 = 273. ¡Muy fácil!",
-        "O usa 3×13: triplica la table de 13",
-        "Cuenta de treinta y nueve en treinta y nueve: 39, 78, 117, 156, 195, 234, 273, 312, 351, 390",
-        "Practica los múltiplos más difíciles: 39×7=273, 39×8=312",
+        "La stratégie 40-1 est parfaite : 39×n = 40n - n",
+        "Exemple : 39×7 = 280 - 7 = 273. Très facile !",
+        "Ou utilisez 3×13 : triplez la table de 13",
+        "Comptez de trente-neuf en trente-neuf : 39, 78, 117, 156, 195, 234, 273, 312, 351, 390",
+        "Entraînez-vous sur les multiples les plus difficiles : 39×7=273, 39×8=312",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       40: [
-        "Estrategia 4×10: multiplica par 10, luego par 4",
-        "Ejemplo: 7×40 = 70×4 = 280 o 7×4=28, agrega un 0: 280",
-        "semaine de travail: 40 horas estándar de trabajo",
-        "Cuenta de cuarenta en cuarenta: 40, 80, 120, 160, 200, 240, 280, 320, 360, 400",
-        "calcul parcentual: 40% = 2/5",
+        "Stratégie 4×10 : multipliez par 10, puis par 4",
+        "Exemple : 7×40 = 70×4 = 280 ou 7×4=28, ajoutez un 0 : 280",
+        "Semaine de travail : 40 heures, la durée standard",
+        "Comptez de quarante en quarante : 40, 80, 120, 160, 200, 240, 280, 320, 360, 400",
+        "Calcul de pourcentages : 40% = 2/5",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       41: [
-        "Estrategia 40+1 es PERFECTA: 41×n = 40n + n",
-        "Ejemplo: 41×7 = 280 + 7 = 287. ¡Muy fácil!",
-        "Cuenta de cuarenta y uno en cuarenta y uno: 41, 82, 123, 164, 205, 246, 287, 328, 369, 410",
-        "Practica los múltiplos más difíciles: 41×7=287, 41×8=328",
-        "nombre premier: solo divisible par 1 y 41",
+        "La stratégie 40+1 est parfaite : 41×n = 40n + n",
+        "Exemple : 41×7 = 280 + 7 = 287. Très facile !",
+        "Comptez de quarante-et-un en quarante-et-un : 41, 82, 123, 164, 205, 246, 287, 328, 369, 410",
+        "Entraînez-vous sur les multiples les plus difficiles : 41×7=287, 41×8=328",
+        "Nombre premier : uniquement divisible par 1 et 41",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       42: [
-        "utilise la relation 6×7: renforce les deux tables",
-        "Cuenta de cuarenta y dos en cuarenta y dos: 42, 84, 126, 168, 210, 252, 294, 336, 378, 420",
-        "multiples métodos: 42=6×7=2×21=3×14. ¿Cuál es plus facile?",
-        "Referencia a la Guía del Autoestopista: ¡42 es célèbre dans la cultura popular!",
-        "Practica los múltiplos más difíciles: 42×7=294, 42×8=336",
+        "Utilisez la relation 6×7 : renforce les deux tables",
+        "Comptez de quarante-deux en quarante-deux : 42, 84, 126, 168, 210, 252, 294, 336, 378, 420",
+        "Plusieurs méthodes : 42=6×7=2×21=3×14. Laquelle est la plus facile ?",
+        "Référence au Guide du voyageur galactique : 42 est célèbre dans la culture populaire !",
+        "Entraînez-vous sur les multiples les plus difficiles : 42×7=294, 42×8=336",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       43: [
-        "Prueba las estrategias 40+3 o 45-2",
-        "Ejemplo: 43×6 = 240+18 = 258 o 270-12 = 258",
-        "Cuenta de cuarenta y tres en cuarenta y tres: 43, 86, 129, 172, 215, 258, 301, 344, 387, 430",
-        "Practica los múltiplos más difíciles: 43×7=301, 43×8=344",
-        "nombre premier: un nombre especial que nécessite des stratégies creativas",
+        "Essayez les stratégies 40+3 ou 45-2",
+        "Exemple : 43×6 = 240+18 = 258 ou 270-12 = 258",
+        "Comptez de quarante-trois en quarante-trois : 43, 86, 129, 172, 215, 258, 301, 344, 387, 430",
+        "Entraînez-vous sur les multiples les plus difficiles : 43×7=301, 43×8=344",
+        "Nombre premier : un nombre spécial qui demande des stratégies créatives",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       44: [
-        "Cuatro fois 11: cuadruplica la table de 11",
-        "Ejemplo: 11×7=77, ×4=308, entonces 44×7=308",
-        "Cuenta de cuarenta y cuatro en cuarenta y cuatro: 44, 88, 132, 176, 220, 264, 308, 352, 396, 440",
-        "Patrón de repetición: 44, 88 muestran patrón de dígitos dobles",
-        "Practica los múltiplos más difíciles: 44×7=308, 44×9=396",
+        "Quatre fois 11 : quadruplez la table de 11",
+        "Exemple : 11×7=77, ×4=308, donc 44×7=308",
+        "Comptez de quarante-quatre en quarante-quatre : 44, 88, 132, 176, 220, 264, 308, 352, 396, 440",
+        "Motif de répétition : 44, 88 montrent le motif des chiffres doublés",
+        "Entraînez-vous sur les multiples les plus difficiles : 44×7=308, 44×9=396",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       45: [
-        "Relación 5×9: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 45×7 = 9×7×5 = 63×5 = 315",
-        "Cuenta de cuarenta y cinco en cuarenta y cinco: 45, 90, 135, 180, 225, 270, 315, 360, 405, 450",
-        "Ángulo: 45° es medio ángulo recto, impartant en géométrie",
-        "Temps: 45 minutos = trois quarts d'heure (3/4 de hora)",
+        "Relation 5×9 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 45×7 = 9×7×5 = 63×5 = 315",
+        "Comptez de quarante-cinq en quarante-cinq : 45, 90, 135, 180, 225, 270, 315, 360, 405, 450",
+        "Angle : 45° est un demi-angle droit, important en géométrie",
+        "Temps : 45 minutes = trois quarts d'heure (3/4 d'heure)",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       46: [
-        "El doble de 23: duplica la table de 23",
-        "Ejemplo: 23×7=161, ×2=322, entonces 46×7=322",
-        "Estrategias 45+1 o 50-4: 46×5 = 225+5 = 230",
-        "Cuenta de cuarenta y seis en cuarenta y seis: 46, 92, 138, 184, 230, 276, 322, 368, 414, 460",
-        "Biología: 46 cromosomas (23 pares) en el ADN humano",
+        "Le double de 23 : doublez la table de 23",
+        "Exemple : 23×7=161, ×2=322, donc 46×7=322",
+        "Stratégies 45+1 ou 50-4 : 46×5 = 225+5 = 230",
+        "Comptez de quarante-six en quarante-six : 46, 92, 138, 184, 230, 276, 322, 368, 414, 460",
+        "Biologie : 46 chromosomes (23 paires) dans l'ADN humain",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       47: [
-        "Estrategia 50-3 es PERFECTA: 47×n = 50n - 3n",
-        "Ejemplo: 47×7 = 350 - 21 = 329. ¡Muy fácil!",
-        "Cuenta de cuarenta y siete en cuarenta y siete: 47, 94, 141, 188, 235, 282, 329, 376, 423, 470",
-        "Practica los múltiplos más difíciles: 47×7=329, 47×8=376",
-        "nombre premier: nécessite des stratégies mentales especiales",
+        "La stratégie 50-3 est parfaite : 47×n = 50n - 3n",
+        "Exemple : 47×7 = 350 - 21 = 329. Très facile !",
+        "Comptez de quarante-sept en quarante-sept : 47, 94, 141, 188, 235, 282, 329, 376, 423, 470",
+        "Entraînez-vous sur les multiples les plus difficiles : 47×7=329, 47×8=376",
+        "Nombre premier : nécessite des stratégies mentales particulières",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       48: [
-        "multiples métodos: 48=6×8=4×12=3×16=2×24",
-        "Ejemplo: 48×5 = 12×20 = 240",
-        "Cuenta de cuarenta y ocho en cuarenta y ocho: 48, 96, 144, 192, 240, 288, 336, 384, 432, 480",
-        "Temps: 48 horas = 2 días. 72 horas = 3 días",
-        "Practica los múltiplos más difíciles: 48×7=336, 48×9=432",
+        "Plusieurs méthodes : 48=6×8=4×12=3×16=2×24",
+        "Exemple : 48×5 = 12×20 = 240",
+        "Comptez de quarante-huit en quarante-huit : 48, 96, 144, 192, 240, 288, 336, 384, 432, 480",
+        "Temps : 48 heures = 2 jours. 72 heures = 3 jours",
+        "Entraînez-vous sur les multiples les plus difficiles : 48×7=336, 48×9=432",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       49: [
-        "Cuadrado de 7: 49=7×7. renforce la table de 7",
-        "Estrategia 50-1 MUY FÁCIL: 49×n = 50n - n",
-        "Ejemplo: 49×7 = 350 - 7 = 343. ¡Simple!",
-        "Cuenta de cuarenta y nueve en cuarenta y nueve: 49, 98, 147, 196, 245, 294, 343, 392, 441, 490",
-        "Número cuadrado: 49=7² para calculs de área en géométrie",
+        "Carré de 7 : 49=7×7. Renforce la table de 7",
+        "Stratégie 50-1 très facile : 49×n = 50n - n",
+        "Exemple : 49×7 = 350 - 7 = 343. Simple !",
+        "Comptez de quarante-neuf en quarante-neuf : 49, 98, 147, 196, 245, 294, 343, 392, 441, 490",
+        "Nombre carré : 49=7² pour les calculs d'aire en géométrie",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       50: [
-        "Estrategia 5×10: multiplica par 5, agrega un 0",
-        "Ejemplo: 8×50: 8×5=40, agrega un 0: 400",
-        "la moitié de 100: 50×7 = 350 (700÷2)",
-        "Cuenta de cincuenta en cincuenta: 50, 100, 150, 200, 250, 300, 350, 400, 450, 500",
-        "parcentaje: 50% = 1/2, la relation parcentual más importante",
+        "Stratégie 5×10 : multipliez par 5, ajoutez un 0",
+        "Exemple : 8×50 : 8×5=40, ajoutez un 0 : 400",
+        "La moitié de 100 : 50×7 = 350 (700÷2)",
+        "Comptez de cinquante en cinquante : 50, 100, 150, 200, 250, 300, 350, 400, 450, 500",
+        "Pourcentage : 50% = 1/2, la relation la plus importante",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       51: [
-        "Estrategia 50+1 es PERFECTA: 51×n = 50n + n",
-        "Ejemplo: 51×7 = 350 + 7 = 357. ¡Muy fácil!",
-        "Cuenta de cincuenta y uno en cincuenta y uno: 51, 102, 153, 204, 255, 306, 357, 408, 459, 510",
-        "Relación 3×17: triplica la table de 17",
-        "Practica los múltiplos más difíciles: 51×7=357, 51×8=408",
+        "La stratégie 50+1 est parfaite : 51×n = 50n + n",
+        "Exemple : 51×7 = 350 + 7 = 357. Très facile !",
+        "Comptez de cinquante-et-un en cinquante-et-un : 51, 102, 153, 204, 255, 306, 357, 408, 459, 510",
+        "Relation 3×17 : triplez la table de 17",
+        "Entraînez-vous sur les multiples les plus difficiles : 51×7=357, 51×8=408",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       52: [
-        "Relación 4×13: cuadruplica la table de 13",
-        "Ejemplo: 13×7=91, ×4=364, entonces 52×7=364",
-        "Cuenta de cincuenta y dos en cincuenta y dos: 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
-        "Calendario: 52 semaines = 1 año. Para calculs anuales",
-        "cartes: 52 cartes para juegos y problemas de probabilidad",
+        "Relation 4×13 : quadruplez la table de 13",
+        "Exemple : 13×7=91, ×4=364, donc 52×7=364",
+        "Comptez de cinquante-deux en cinquante-deux : 52, 104, 156, 208, 260, 312, 364, 416, 468, 520",
+        "Calendrier : 52 semaines = 1 an. Pour les calculs annuels",
+        "Cartes à jouer : 52 cartes pour les jeux et les problèmes de probabilité",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       53: [
-        "Estrategia 50+3: 53×n = 50n + 3n",
-        "Ejemplo: 53×6 = 300 + 18 = 318",
-        "Cuenta de cincuenta y tres en cincuenta y tres: 53, 106, 159, 212, 265, 318, 371, 424, 477, 530",
-        "Practica los múltiplos más difíciles: 53×7=371, 53×8=424",
-        "nombre premier: nécessite des stratégies de calcul creativas",
+        "Stratégie 50+3 : 53×n = 50n + 3n",
+        "Exemple : 53×6 = 300 + 18 = 318",
+        "Comptez de cinquante-trois en cinquante-trois : 53, 106, 159, 212, 265, 318, 371, 424, 477, 530",
+        "Entraînez-vous sur les multiples les plus difficiles : 53×7=371, 53×8=424",
+        "Nombre premier : demande des stratégies de calcul créatives",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       54: [
-        "Relación 6×9: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 54×5 = 9×5×6 = 45×6 = 270",
-        "Cuenta de cincuenta y cuatro en cincuenta y cuatro: 54, 108, 162, 216, 270, 324, 378, 432, 486, 540",
-        "multiples métodos: 54=6×9=2×27=3×18",
-        "Practica los múltiplos más difíciles: 54×7=378, 54×8=432",
+        "Relation 6×9 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 54×5 = 9×5×6 = 45×6 = 270",
+        "Comptez de cinquante-quatre en cinquante-quatre : 54, 108, 162, 216, 270, 324, 378, 432, 486, 540",
+        "Plusieurs méthodes : 54=6×9=2×27=3×18",
+        "Entraînez-vous sur les multiples les plus difficiles : 54×7=378, 54×8=432",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       55: [
-        "Relación 5×11: renforce les deux tables",
-        "Ejemplo: 55×4 = 11×4×5 = 44×5 = 220",
-        "Cuenta de cincuenta y cinco en cincuenta y cinco: 55, 110, 165, 220, 275, 330, 385, 440, 495, 550",
-        "nombre triangulaire: 55 = 1+2+3+...+10, propriÃ©tÃ© matemática especial",
-        "Practica los múltiplos más difíciles: 55×7=385, 55×9=495",
+        "Relation 5×11 : renforce les deux tables",
+        "Exemple : 55×4 = 11×4×5 = 44×5 = 220",
+        "Comptez de cinquante-cinq en cinquante-cinq : 55, 110, 165, 220, 275, 330, 385, 440, 495, 550",
+        "Nombre triangulaire : 55 = 1+2+3+...+10, une propriété mathématique particulière",
+        "Entraînez-vous sur les multiples les plus difficiles : 55×7=385, 55×9=495",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       56: [
-        "Relación 7×8: ¡La multiplicación MÁS DIFÍCIL! renforce les deux",
-        "Ejemplo: 56×5 = 7×5×8 = 35×8 = 280",
-        "Cuenta de cincuenta y seis en cincuenta y seis: 56, 112, 168, 224, 280, 336, 392, 448, 504, 560",
-        "Alternativa: 56=4×14=2×28. Elige la forma plus facile",
-        "Practica los múltiplos más difíciles: 56×7=392, 56×9=504",
+        "Relation 7×8 : la multiplication la plus difficile ! Renforce les deux tables",
+        "Exemple : 56×5 = 7×5×8 = 35×8 = 280",
+        "Comptez de cinquante-six en cinquante-six : 56, 112, 168, 224, 280, 336, 392, 448, 504, 560",
+        "Alternative : 56=4×14=2×28. Choisissez la méthode la plus simple",
+        "Entraînez-vous sur les multiples les plus difficiles : 56×7=392, 56×9=504",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       57: [
-        "Estrategia 60-3 es PERFECTA: 57×n = 60n - 3n",
-        "Ejemplo: 57×7 = 420 - 21 = 399. ¡Muy fácil!",
-        "Cuenta de cincuenta y siete en cincuenta y siete: 57, 114, 171, 228, 285, 342, 399, 456, 513, 570",
-        "Relación 3×19: triplica la table de 19",
-        "Practica los múltiplos más difíciles: 57×7=399, 57×8=456",
+        "La stratégie 60-3 est parfaite : 57×n = 60n - 3n",
+        "Exemple : 57×7 = 420 - 21 = 399. Très facile !",
+        "Comptez de cinquante-sept en cinquante-sept : 57, 114, 171, 228, 285, 342, 399, 456, 513, 570",
+        "Relation 3×19 : triplez la table de 19",
+        "Entraînez-vous sur les multiples les plus difficiles : 57×7=399, 57×8=456",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       58: [
-        "Estrategia 60-2: 58×n = 60n - 2n",
-        "Ejemplo: 58×6 = 360 - 12 = 348",
-        "Cuenta de cincuenta y ocho en cincuenta y ocho: 58, 116, 174, 232, 290, 348, 406, 464, 522, 580",
-        "El doble de 29: duplica la table de 29",
-        "Practica los múltiplos más difíciles: 58×7=406, 58×9=522",
+        "Stratégie 60-2 : 58×n = 60n - 2n",
+        "Exemple : 58×6 = 360 - 12 = 348",
+        "Comptez de cinquante-huit en cinquante-huit : 58, 116, 174, 232, 290, 348, 406, 464, 522, 580",
+        "Le double de 29 : doublez la table de 29",
+        "Entraînez-vous sur les multiples les plus difficiles : 58×7=406, 58×9=522",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       59: [
-        "Estrategia 60-1 SÚPER FÁCIL: 59×n = 60n - n",
-        "Ejemplo: 59×7 = 420 - 7 = 413. ¡PERFECTO!",
-        "Cuenta de cincuenta y nueve en cincuenta y nueve: 59, 118, 177, 236, 295, 354, 413, 472, 531, 590",
-        "Temps: 59 minutos, 59 segundos - 1 menos que 60",
-        "Practica los múltiplos más difíciles: 59×7=413, 59×8=472",
+        "Stratégie 60-1 très facile : 59×n = 60n - n",
+        "Exemple : 59×7 = 420 - 7 = 413. Parfait !",
+        "Comptez de cinquante-neuf en cinquante-neuf : 59, 118, 177, 236, 295, 354, 413, 472, 531, 590",
+        "Temps : 59 minutes, 59 secondes — 1 de moins que 60",
+        "Entraînez-vous sur les multiples les plus difficiles : 59×7=413, 59×8=472",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       60: [
-        "Estrategia 6×10: multiplica par 6, agrega un 0",
-        "Ejemplo: 7×60: 7×6=42, agrega un 0: 420",
-        "Cuenta de sesenta en sesenta: 60, 120, 180, 240, 300, 360, 420, 480, 540, 600",
-        "Temps: 60 minutes=1 heure, 60 secondes=1 minute",
-        "multiples métodos: 60=6×10=5×12=4×15=3×20=2×30",
+        "Stratégie 6×10 : multipliez par 6, ajoutez un 0",
+        "Exemple : 7×60 : 7×6=42, ajoutez un 0 : 420",
+        "Comptez de soixante en soixante : 60, 120, 180, 240, 300, 360, 420, 480, 540, 600",
+        "Temps : 60 minutes = 1 heure, 60 secondes = 1 minute",
+        "Plusieurs méthodes : 60=6×10=5×12=4×15=3×20=2×30",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       61: [
-        "Estrategia 60+1 es PERFECTA: 61×n = 60n + n",
-        "Ejemplo: 61×7 = 420 + 7 = 427. ¡Muy fácil!",
-        "Cuenta de sesenta y uno en sesenta y uno: 61, 122, 183, 244, 305, 366, 427, 488, 549, 610",
-        "Practica los múltiplos más difíciles: 61×7=427, 61×8=488",
-        "nombre premier: nécessite des stratégies de calcul creativas",
+        "La stratégie 60+1 est parfaite : 61×n = 60n + n",
+        "Exemple : 61×7 = 420 + 7 = 427. Très facile !",
+        "Comptez de soixante-et-un en soixante-et-un : 61, 122, 183, 244, 305, 366, 427, 488, 549, 610",
+        "Entraînez-vous sur les multiples les plus difficiles : 61×7=427, 61×8=488",
+        "Nombre premier : demande des stratégies de calcul créatives",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       62: [
-        "Estrategia 60+2: 62×n = 60n + 2n",
-        "Ejemplo: 62×6 = 360 + 12 = 372",
-        "Cuenta de sesenta y dos en sesenta y dos: 62, 124, 186, 248, 310, 372, 434, 496, 558, 620",
-        "El doble de 31: duplica la table de 31",
-        "Practica los múltiplos más difíciles: 62×7=434, 62×9=558",
+        "Stratégie 60+2 : 62×n = 60n + 2n",
+        "Exemple : 62×6 = 360 + 12 = 372",
+        "Comptez de soixante-deux en soixante-deux : 62, 124, 186, 248, 310, 372, 434, 496, 558, 620",
+        "Le double de 31 : doublez la table de 31",
+        "Entraînez-vous sur les multiples les plus difficiles : 62×7=434, 62×9=558",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       63: [
-        "Relación 7×9: renforce les deux tables",
-        "Ejemplo: 63×5 = 9×5×7 = 45×7 = 315",
-        "Cuenta de sesenta y tres en sesenta y tres: 63, 126, 189, 252, 315, 378, 441, 504, 567, 630",
-        "Alternativa: 63=3×21. Triplica la table de 21",
-        "Practica los múltiplos más difíciles: 63×7=441, 63×8=504",
+        "Relation 7×9 : renforce les deux tables",
+        "Exemple : 63×5 = 9×5×7 = 45×7 = 315",
+        "Comptez de soixante-trois en soixante-trois : 63, 126, 189, 252, 315, 378, 441, 504, 567, 630",
+        "Alternative : 63=3×21. Triplez la table de 21",
+        "Entraînez-vous sur les multiples les plus difficiles : 63×7=441, 63×8=504",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       64: [
-        "Cuadrado de 8: 64=8×8=8². También 2⁶",
-        "Ejemplo: 64×5 = 8×5×8 = 40×8 = 320",
-        "Cuenta de sesenta y cuatro en sesenta y cuatro: 64, 128, 192, 256, 320, 384, 448, 512, 576, 640",
-        "Ajedrez: 8×8=64 casillas, aplicación geométrica",
-        "Computación: architecture de 64 bits, contexto tecnológico",
+        "Carré de 8 : 64=8×8=8². Aussi 2⁶",
+        "Exemple : 64×5 = 8×5×8 = 40×8 = 320",
+        "Comptez de soixante-quatre en soixante-quatre : 64, 128, 192, 256, 320, 384, 448, 512, 576, 640",
+        "Échecs : 8×8=64 cases, une application géométrique",
+        "Informatique : architecture 64 bits, contexte technologique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       65: [
-        "Relación 5×13: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 65×4 = 13×4×5 = 52×5 = 260",
-        "Cuenta de sesenta y cinco en sesenta y cinco: 65, 130, 195, 260, 325, 390, 455, 520, 585, 650",
-        "Puedes usar las estrategias 60+5 o 70-5",
-        "Practica los múltiplos más difíciles: 65×7=455, 65×9=585",
+        "Relation 5×13 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 65×4 = 13×4×5 = 52×5 = 260",
+        "Comptez de soixante-cinq en soixante-cinq : 65, 130, 195, 260, 325, 390, 455, 520, 585, 650",
+        "Vous pouvez utiliser les stratégies 60+5 ou 70-5",
+        "Entraînez-vous sur les multiples les plus difficiles : 65×7=455, 65×9=585",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       66: [
-        "Relación 6×11: renforce les deux tables",
-        "Ejemplo: 66×5 = 11×5×6 = 55×6 = 330",
-        "Cuenta de sesenta y seis en sesenta y seis: 66, 132, 198, 264, 330, 396, 462, 528, 594, 660",
-        "Patrón de repetición: 66 (6×11), patrón de la table de 11",
-        "Practica los múltiplos más difíciles: 66×7=462, 66×9=594",
+        "Relation 6×11 : renforce les deux tables",
+        "Exemple : 66×5 = 11×5×6 = 55×6 = 330",
+        "Comptez de soixante-six en soixante-six : 66, 132, 198, 264, 330, 396, 462, 528, 594, 660",
+        "Motif de répétition : 66 (6×11), motif de la table de 11",
+        "Entraînez-vous sur les multiples les plus difficiles : 66×7=462, 66×9=594",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       67: [
-        "Estrategia 70-3 es PERFECTA: 67×n = 70n - 3n",
-        "Ejemplo: 67×7 = 490 - 21 = 469. ¡Muy fácil!",
-        "Cuenta de sesenta y siete en sesenta y siete: 67, 134, 201, 268, 335, 402, 469, 536, 603, 670",
-        "Practica los múltiplos más difíciles: 67×7=469, 67×8=536",
-        "nombre premier: nécessite des stratégies mentales especiales",
+        "La stratégie 70-3 est parfaite : 67×n = 70n - 3n",
+        "Exemple : 67×7 = 490 - 21 = 469. Très facile !",
+        "Comptez de soixante-sept en soixante-sept : 67, 134, 201, 268, 335, 402, 469, 536, 603, 670",
+        "Entraînez-vous sur les multiples les plus difficiles : 67×7=469, 67×8=536",
+        "Nombre premier : nécessite des stratégies mentales particulières",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       68: [
-        "Estrategia 70-2: 68×n = 70n - 2n",
-        "Ejemplo: 68×6 = 420 - 12 = 408",
-        "Cuenta de sesenta y ocho en sesenta y ocho: 68, 136, 204, 272, 340, 408, 476, 544, 612, 680",
-        "Relación 4×17: cuadruplica la table de 17",
-        "Practica los múltiplos más difíciles: 68×7=476, 68×9=612",
+        "Stratégie 70-2 : 68×n = 70n - 2n",
+        "Exemple : 68×6 = 420 - 12 = 408",
+        "Comptez de soixante-huit en soixante-huit : 68, 136, 204, 272, 340, 408, 476, 544, 612, 680",
+        "Relation 4×17 : quadruplez la table de 17",
+        "Entraînez-vous sur les multiples les plus difficiles : 68×7=476, 68×9=612",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       69: [
-        "Estrategia 70-1 SÚPER FÁCIL: 69×n = 70n - n",
-        "Ejemplo: 69×7 = 490 - 7 = 483. ¡PERFECTO!",
-        "Cuenta de sesenta y nueve en sesenta y nueve: 69, 138, 207, 276, 345, 414, 483, 552, 621, 690",
-        "Relación 3×23: triplica la table de 23",
-        "Practica los múltiplos más difíciles: 69×7=483, 69×8=552",
+        "Stratégie 70-1 très facile : 69×n = 70n - n",
+        "Exemple : 69×7 = 490 - 7 = 483. Parfait !",
+        "Comptez de soixante-neuf en soixante-neuf : 69, 138, 207, 276, 345, 414, 483, 552, 621, 690",
+        "Relation 3×23 : triplez la table de 23",
+        "Entraînez-vous sur les multiples les plus difficiles : 69×7=483, 69×8=552",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       70: [
-        "Estrategia 7×10: multiplica par 7, agrega un 0",
-        "Ejemplo: 8×70: 8×7=56, agrega un 0: 560",
-        "Cuenta de setenta en setenta: 70, 140, 210, 280, 350, 420, 490, 560, 630, 700",
-        "renforce la table de 7: cada rÃ©sultat es 10 fois 7",
-        "multiples métodos: 70=7×10=5×14=2×35",
+        "Stratégie 7×10 : multipliez par 7, ajoutez un 0",
+        "Exemple : 8×70 : 8×7=56, ajoutez un 0 : 560",
+        "Comptez de soixante-dix en soixante-dix : 70, 140, 210, 280, 350, 420, 490, 560, 630, 700",
+        "Renforce la table de 7 : chaque résultat est 10 fois 7",
+        "Plusieurs méthodes : 70=7×10=5×14=2×35",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       71: [
-        "Estrategia 70+1 es PERFECTA: 71×n = 70n + n",
-        "Ejemplo: 71×7 = 490 + 7 = 497. ¡Muy fácil!",
-        "Cuenta de setenta y uno en setenta y uno: 71, 142, 213, 284, 355, 426, 497, 568, 639, 710",
-        "Practica los múltiplos más difíciles: 71×7=497, 71×8=568",
-        "nombre premier: nécessite des stratégies de calcul creativas",
+        "La stratégie 70+1 est parfaite : 71×n = 70n + n",
+        "Exemple : 71×7 = 490 + 7 = 497. Très facile !",
+        "Comptez de soixante-et-onze en soixante-et-onze : 71, 142, 213, 284, 355, 426, 497, 568, 639, 710",
+        "Entraînez-vous sur les multiples les plus difficiles : 71×7=497, 71×8=568",
+        "Nombre premier : demande des stratégies de calcul créatives",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       72: [
-        "Relación 8×9: renforce les deux tables",
-        "Ejemplo: 72×5 = 9×5×8 = 45×8 = 360",
-        "Cuenta de setenta y dos en setenta y dos: 72, 144, 216, 288, 360, 432, 504, 576, 648, 720",
-        "multiples métodos: 72=8×9=6×12=4×18=3×24",
-        "Temps: 72 horas = 3 días. Aplicación práctica",
+        "Relation 8×9 : renforce les deux tables",
+        "Exemple : 72×5 = 9×5×8 = 45×8 = 360",
+        "Comptez de soixante-douze en soixante-douze : 72, 144, 216, 288, 360, 432, 504, 576, 648, 720",
+        "Plusieurs méthodes : 72=8×9=6×12=4×18=3×24",
+        "Temps : 72 heures = 3 jours. Application pratique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       73: [
-        "Estrategia 70+3: 73×n = 70n + 3n",
-        "Ejemplo: 73×5 = 350 + 15 = 365 (¡días del año!)",
-        "Cuenta de setenta y tres en setenta y tres: 73, 146, 219, 292, 365, 438, 511, 584, 657, 730",
-        "Practica los múltiplos más difíciles: 73×7=511, 73×8=584",
-        "nombre premier: el 21º nombre premier, curiosidad matemática",
+        "Stratégie 70+3 : 73×n = 70n + 3n",
+        "Exemple : 73×5 = 350 + 15 = 365 (le nombre de jours dans une année !)",
+        "Comptez de soixante-treize en soixante-treize : 73, 146, 219, 292, 365, 438, 511, 584, 657, 730",
+        "Entraînez-vous sur les multiples les plus difficiles : 73×7=511, 73×8=584",
+        "Nombre premier : le 21e nombre premier, une curiosité mathématique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       74: [
-        "Estrategia 75-1: 74×n = 75n - n",
-        "Ejemplo: 74×5 = 375 - 5 = 370",
-        "Cuenta de setenta y cuatro en setenta y cuatro: 74, 148, 222, 296, 370, 444, 518, 592, 666, 740",
-        "Relación 2×37: duplica la table de 37",
-        "Practica los múltiplos más difíciles: 74×7=518, 74×9=666",
+        "Stratégie 75-1 : 74×n = 75n - n",
+        "Exemple : 74×5 = 375 - 5 = 370",
+        "Comptez de soixante-quatorze en soixante-quatorze : 74, 148, 222, 296, 370, 444, 518, 592, 666, 740",
+        "Relation 2×37 : doublez la table de 37",
+        "Entraînez-vous sur les multiples les plus difficiles : 74×7=518, 74×9=666",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       75: [
-        "Relaciones 3×25 o 5×15: multiples métodos",
-        "Ejemplo: 75×4 = 25×12 = 300",
-        "Cuenta de setenta y cinco en setenta y cinco: 75, 150, 225, 300, 375, 450, 525, 600, 675, 750",
-        "parcentaje: 75% = 3/4, relación fraccionaria importante",
-        "Practica los múltiplos más difíciles: 75×7=525, 75×9=675",
+        "Relations 3×25 ou 5×15 : plusieurs méthodes",
+        "Exemple : 75×4 = 25×12 = 300",
+        "Comptez de soixante-quinze en soixante-quinze : 75, 150, 225, 300, 375, 450, 525, 600, 675, 750",
+        "Pourcentage : 75% = 3/4, une relation fractionnaire importante",
+        "Entraînez-vous sur les multiples les plus difficiles : 75×7=525, 75×9=675",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       76: [
-        "Estrategia 80-4: 76×n = 80n - 4n",
-        "Ejemplo: 76×6 = 480 - 24 = 456",
-        "Cuenta de setenta y seis en setenta y seis: 76, 152, 228, 304, 380, 456, 532, 608, 684, 760",
-        "Relación 4×19: cuadruplica la table de 19",
-        "Practica los múltiplos más difíciles: 76×7=532, 76×9=684",
+        "Stratégie 80-4 : 76×n = 80n - 4n",
+        "Exemple : 76×6 = 480 - 24 = 456",
+        "Comptez de soixante-seize en soixante-seize : 76, 152, 228, 304, 380, 456, 532, 608, 684, 760",
+        "Relation 4×19 : quadruplez la table de 19",
+        "Entraînez-vous sur les multiples les plus difficiles : 76×7=532, 76×9=684",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       77: [
-        "Relación 7×11: renforce les deux tables",
-        "Ejemplo: 77×5 = 11×5×7 = 55×7 = 385",
-        "Cuenta de setenta y siete en setenta y siete: 77, 154, 231, 308, 385, 462, 539, 616, 693, 770",
-        "Patrón de repetición: 77 (7×11), patrón especial",
-        "Practica los múltiplos más difíciles: 77×7=539, 77×9=693",
+        "Relation 7×11 : renforce les deux tables",
+        "Exemple : 77×5 = 11×5×7 = 55×7 = 385",
+        "Comptez de soixante-dix-sept en soixante-dix-sept : 77, 154, 231, 308, 385, 462, 539, 616, 693, 770",
+        "Motif de répétition : 77 (7×11), un motif particulier",
+        "Entraînez-vous sur les multiples les plus difficiles : 77×7=539, 77×9=693",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       78: [
-        "Estrategia 80-2: 78×n = 80n - 2n",
-        "Ejemplo: 78×7 = 560 - 14 = 546",
-        "Cuenta de setenta y ocho en setenta y ocho: 78, 156, 234, 312, 390, 468, 546, 624, 702, 780",
-        "Relación 6×13: puedes usar cualquiera de las dos tables",
-        "Practica los múltiplos más difíciles: 78×7=546, 78×9=702",
+        "Stratégie 80-2 : 78×n = 80n - 2n",
+        "Exemple : 78×7 = 560 - 14 = 546",
+        "Comptez de soixante-dix-huit en soixante-dix-huit : 78, 156, 234, 312, 390, 468, 546, 624, 702, 780",
+        "Relation 6×13 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Entraînez-vous sur les multiples les plus difficiles : 78×7=546, 78×9=702",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       79: [
-        "Estrategia 80-1 SÚPER FÁCIL: 79×n = 80n - n",
-        "Ejemplo: 79×7 = 560 - 7 = 553. ¡PERFECTO!",
-        "Cuenta de setenta y nueve en setenta y nueve: 79, 158, 237, 316, 395, 474, 553, 632, 711, 790",
-        "Practica los múltiplos más difíciles: 79×7=553, 79×8=632",
-        "nombre premier: 1 menos que 80, calcul fácil",
+        "Stratégie 80-1 très facile : 79×n = 80n - n",
+        "Exemple : 79×7 = 560 - 7 = 553. Parfait !",
+        "Comptez de soixante-dix-neuf en soixante-dix-neuf : 79, 158, 237, 316, 395, 474, 553, 632, 711, 790",
+        "Entraînez-vous sur les multiples les plus difficiles : 79×7=553, 79×8=632",
+        "Nombre premier : 1 de moins que 80, calcul facile",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       80: [
-        "Estrategia 8×10: multiplica par 8, agrega un 0",
-        "Ejemplo: 7×80: 7×8=56, agrega un 0: 560",
-        "Cuenta de ochenta en ochenta: 80, 160, 240, 320, 400, 480, 560, 640, 720, 800",
-        "renforce la table de 8: cada rÃ©sultat es 10 fois 8",
-        "multiples métodos: 80=8×10=4×20=5×16=2×40",
+        "Stratégie 8×10 : multipliez par 8, ajoutez un 0",
+        "Exemple : 7×80 : 7×8=56, ajoutez un 0 : 560",
+        "Comptez de quatre-vingts en quatre-vingts : 80, 160, 240, 320, 400, 480, 560, 640, 720, 800",
+        "Renforce la table de 8 : chaque résultat est 10 fois 8",
+        "Plusieurs méthodes : 80=8×10=4×20=5×16=2×40",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       81: [
-        "Usa que es le carré de 9: 81=9×9",
-        "Ejemplo: 81×5 = (9×5)×9 = 45×9 = 405",
-        "Estrategia 80+1: 81×n = 80n + n. Ejemplo: 81×7 = 560+7 = 567",
-        "Cuenta de ochenta y uno en ochenta y uno: 81, 162, 243, 324, 405, 486, 567, 648, 729, 810",
-        "Practica los múltiplos más difíciles: 81×7=567, 81×8=648, 81×9=729",
+        "Utilisez le fait que c'est le carré de 9 : 81=9×9",
+        "Exemple : 81×5 = (9×5)×9 = 45×9 = 405",
+        "Stratégie 80+1 : 81×n = 80n + n. Exemple : 81×7 = 560+7 = 567",
+        "Comptez de quatre-vingt-un en quatre-vingt-un : 81, 162, 243, 324, 405, 486, 567, 648, 729, 810",
+        "Entraînez-vous sur les multiples les plus difficiles : 81×7=567, 81×8=648, 81×9=729",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       82: [
-        "Estrategia 80+2: 82×n = 80n + 2n",
-        "Ejemplo: 82×6 = 480 + 12 = 492",
-        "Cuenta de ochenta y dos en ochenta y dos: 82, 164, 246, 328, 410, 492, 574, 656, 738, 820",
-        "Relación 2×41: duplica la table de 41",
-        "Practica los múltiplos más difíciles: 82×7=574, 82×9=738",
+        "Stratégie 80+2 : 82×n = 80n + 2n",
+        "Exemple : 82×6 = 480 + 12 = 492",
+        "Comptez de quatre-vingt-deux en quatre-vingt-deux : 82, 164, 246, 328, 410, 492, 574, 656, 738, 820",
+        "Relation 2×41 : doublez la table de 41",
+        "Entraînez-vous sur les multiples les plus difficiles : 82×7=574, 82×9=738",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       83: [
-        "Usa La stratégie 85-2 o 80+3",
-        "Ejemplo: 83×6 = 510-12 = 498 o 480+18 = 498",
-        "Cuenta de ochenta y tres en ochenta y tres: 83, 166, 249, 332, 415, 498, 581, 664, 747, 830",
-        "nombre premier: nécessite des stratégies de calcul creativas",
-        "Practica los múltiplos más difíciles: 83×7=581, 83×8=664, 83×9=747",
+        "Utilisez la stratégie 85-2 ou 80+3",
+        "Exemple : 83×6 = 510-12 = 498 ou 480+18 = 498",
+        "Comptez de quatre-vingt-trois en quatre-vingt-trois : 83, 166, 249, 332, 415, 498, 581, 664, 747, 830",
+        "Nombre premier : demande des stratégies de calcul créatives",
+        "Entraînez-vous sur les multiples les plus difficiles : 83×7=581, 83×8=664, 83×9=747",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       84: [
-        "Relación 7×12: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 84×5 = 12×5×7 = 60×7 = 420",
-        "Cuenta de ochenta y cuatro en ochenta y cuatro: 84, 168, 252, 336, 420, 504, 588, 672, 756, 840",
-        "multiples métodos: 84=7×12=6×14=4×21=3×28",
-        "Practica los múltiplos más difíciles: 84×7=588, 84×9=756",
+        "Relation 7×12 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 84×5 = 12×5×7 = 60×7 = 420",
+        "Comptez de quatre-vingt-quatre en quatre-vingt-quatre : 84, 168, 252, 336, 420, 504, 588, 672, 756, 840",
+        "Plusieurs méthodes : 84=7×12=6×14=4×21=3×28",
+        "Entraînez-vous sur les multiples les plus difficiles : 84×7=588, 84×9=756",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       85: [
-        "Relación 5×17: puedes usar les deux tables, la del 5 y la del 17",
-        "Ejemplo: 85×4 = 17×4×5 = 68×5 = 340",
-        "Cuenta de ochenta y cinco en ochenta y cinco: 85, 170, 255, 340, 425, 510, 595, 680, 765, 850",
-        "Último dígito: siempre se termine en 5 ou 0",
-        "Estrategias 90-5 o 80+5: 85×6 = 540-30 = 510",
+        "Relation 5×17 : vous pouvez utiliser les deux tables, celle de 5 et celle de 17",
+        "Exemple : 85×4 = 17×4×5 = 68×5 = 340",
+        "Comptez de quatre-vingt-cinq en quatre-vingt-cinq : 85, 170, 255, 340, 425, 510, 595, 680, 765, 850",
+        "Dernier chiffre : toujours 5 ou 0",
+        "Stratégies 90-5 ou 80+5 : 85×6 = 540-30 = 510",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       86: [
-        "Estrategia 90-4: 86×n = 90n - 4n",
-        "Ejemplo: 86×6 = 540 - 24 = 516",
-        "Cuenta de ochenta y seis en ochenta y seis: 86, 172, 258, 344, 430, 516, 602, 688, 774, 860",
-        "Relación 2×43: duplica la table de 43",
-        "Practica los múltiplos más difíciles: 86×7=602, 86×9=774",
+        "Stratégie 90-4 : 86×n = 90n - 4n",
+        "Exemple : 86×6 = 540 - 24 = 516",
+        "Comptez de quatre-vingt-six en quatre-vingt-six : 86, 172, 258, 344, 430, 516, 602, 688, 774, 860",
+        "Relation 2×43 : doublez la table de 43",
+        "Entraînez-vous sur les multiples les plus difficiles : 86×7=602, 86×9=774",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       87: [
-        "Estrategia 90-3 es PERFECTA: 87×n = 90n - 3n",
-        "Ejemplo: 87×7 = 630 - 21 = 609. ¡Muy fácil!",
-        "Cuenta de ochenta y siete en ochenta y siete: 87, 174, 261, 348, 435, 522, 609, 696, 783, 870",
-        "Relación 3×29: triplica la table de 29",
-        "Practica los múltiplos más difíciles: 87×7=609, 87×8=696, 87×9=783",
+        "La stratégie 90-3 est parfaite : 87×n = 90n - 3n",
+        "Exemple : 87×7 = 630 - 21 = 609. Très facile !",
+        "Comptez de quatre-vingt-sept en quatre-vingt-sept : 87, 174, 261, 348, 435, 522, 609, 696, 783, 870",
+        "Relation 3×29 : triplez la table de 29",
+        "Entraînez-vous sur les multiples les plus difficiles : 87×7=609, 87×8=696, 87×9=783",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       88: [
-        "Relación 8×11: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 88×5 = 11×5×8 = 55×8 = 440",
-        "Cuenta de ochenta y ocho en ochenta y ocho: 88, 176, 264, 352, 440, 528, 616, 704, 792, 880",
-        "Propiedad de repetición: facilidad de reconocimiento visual (88)",
-        "multiples métodos: 88=8×11=4×22=2×44",
+        "Relation 8×11 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 88×5 = 11×5×8 = 55×8 = 440",
+        "Comptez de quatre-vingt-huit en quatre-vingt-huit : 88, 176, 264, 352, 440, 528, 616, 704, 792, 880",
+        "Propriété de répétition : facilité de reconnaissance visuelle (88)",
+        "Plusieurs méthodes : 88=8×11=4×22=2×44",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       89: [
-        "Estrategia 90-1 SÚPER FÁCIL: 89×n = 90n - n",
-        "Ejemplo: 89×7 = 630 - 7 = 623. ¡PERFECTO!",
-        "Cuenta de ochenta y nueve en ochenta y nueve: 89, 178, 267, 356, 445, 534, 623, 712, 801, 890",
-        "Practica los múltiplos más difíciles: 89×7=623, 89×8=712, 89×9=801",
-        "nombre premier: La stratégie 90-1 es el méthode la plus pratique",
+        "Stratégie 90-1 très facile : 89×n = 90n - n",
+        "Exemple : 89×7 = 630 - 7 = 623. Parfait !",
+        "Comptez de quatre-vingt-neuf en quatre-vingt-neuf : 89, 178, 267, 356, 445, 534, 623, 712, 801, 890",
+        "Entraînez-vous sur les multiples les plus difficiles : 89×7=623, 89×8=712, 89×9=801",
+        "Nombre premier : la stratégie 90-1 est la méthode la plus pratique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       90: [
-        "Estrategia 9×10: multiplica par 9, agrega un 0",
-        "Ejemplo: 7×90: 7×9=63, agrega un 0: 630",
-        "Cuenta de noventa en noventa: 90, 180, 270, 360, 450, 540, 630, 720, 810, 900",
-        "renforce la table de 9: cada rÃ©sultat es 10 fois 9",
-        "multiples métodos: 90=9×10=3×30=5×18=6×15",
+        "Stratégie 9×10 : multipliez par 9, ajoutez un 0",
+        "Exemple : 7×90 : 7×9=63, ajoutez un 0 : 630",
+        "Comptez de quatre-vingt-dix en quatre-vingt-dix : 90, 180, 270, 360, 450, 540, 630, 720, 810, 900",
+        "Renforce la table de 9 : chaque résultat est 10 fois 9",
+        "Plusieurs méthodes : 90=9×10=3×30=5×18=6×15",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       91: [
-        "Relación 7×13: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 91×5 = 13×5×7 = 65×7 = 455",
-        "Estrategia 90+1: 91×n = 90n + n. Ejemplo: 91×7 = 630+7 = 637",
-        "Cuenta de noventa y uno en noventa y uno: 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
-        "Practica los múltiplos más difíciles: 91×7=637, 91×8=728, 91×9=819",
+        "Relation 7×13 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 91×5 = 13×5×7 = 65×7 = 455",
+        "Stratégie 90+1 : 91×n = 90n + n. Exemple : 91×7 = 630+7 = 637",
+        "Comptez de quatre-vingt-onze en quatre-vingt-onze : 91, 182, 273, 364, 455, 546, 637, 728, 819, 910",
+        "Entraînez-vous sur les multiples les plus difficiles : 91×7=637, 91×8=728, 91×9=819",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       92: [
-        "Usa La stratégie 90+2 o 100-8",
-        "Ejemplo: 92×6 = 480+12 = 492 o 600-48 = 552",
-        "Cuenta de noventa y dos en noventa y dos: 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
-        "Relación 4×23: cuadruplica la table de 23",
-        "Practica los múltiplos más difíciles: 92×7=644, 92×9=828",
+        "Utilisez la stratégie 90+2 ou 100-8",
+        "Exemple : 92×6 = 480+12 = 552 ou 600-48 = 552",
+        "Comptez de quatre-vingt-douze en quatre-vingt-douze : 92, 184, 276, 368, 460, 552, 644, 736, 828, 920",
+        "Relation 4×23 : quadruplez la table de 23",
+        "Entraînez-vous sur les multiples les plus difficiles : 92×7=644, 92×9=828",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       93: [
-        "Estrategia 90+3: 93×n = 90n + 3n",
-        "Ejemplo: 93×7 = 630 + 21 = 651",
-        "Cuenta de noventa y tres en noventa y tres: 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
-        "Relación 3×31: triplica la table de 31",
-        "Practica los múltiplos más difíciles: 93×7=651, 93×8=744, 93×9=837",
+        "Stratégie 90+3 : 93×n = 90n + 3n",
+        "Exemple : 93×7 = 630 + 21 = 651",
+        "Comptez de quatre-vingt-treize en quatre-vingt-treize : 93, 186, 279, 372, 465, 558, 651, 744, 837, 930",
+        "Relation 3×31 : triplez la table de 31",
+        "Entraînez-vous sur les multiples les plus difficiles : 93×7=651, 93×8=744, 93×9=837",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       94: [
-        "Estrategia 100-6 es PERFECTA: 94×n = 100n - 6n",
-        "Ejemplo: 94×7 = 700 - 42 = 658. ¡Muy fácil!",
-        "Cuenta de noventa y cuatro en noventa y cuatro: 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
-        "Relación 2×47: duplica la table de 47",
-        "Practica los múltiplos más difíciles: 94×7=658, 94×8=752, 94×9=846",
+        "La stratégie 100-6 est parfaite : 94×n = 100n - 6n",
+        "Exemple : 94×7 = 700 - 42 = 658. Très facile !",
+        "Comptez de quatre-vingt-quatorze en quatre-vingt-quatorze : 94, 188, 282, 376, 470, 564, 658, 752, 846, 940",
+        "Relation 2×47 : doublez la table de 47",
+        "Entraînez-vous sur les multiples les plus difficiles : 94×7=658, 94×8=752, 94×9=846",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       95: [
-        "Relación 5×19: puedes usar les deux tables, la del 5 y la del 19",
-        "Ejemplo: 95×4 = 19×4×5 = 76×5 = 380",
-        "Cuenta de noventa y cinco en noventa y cinco: 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
-        "Último dígito: siempre se termine en 5 ou 0",
-        "Estrategia 100-5: 95×6 = 600-30 = 570. ¡très pratique!",
+        "Relation 5×19 : vous pouvez utiliser les deux tables, celle de 5 et celle de 19",
+        "Exemple : 95×4 = 19×4×5 = 76×5 = 380",
+        "Comptez de quatre-vingt-quinze en quatre-vingt-quinze : 95, 190, 285, 380, 475, 570, 665, 760, 855, 950",
+        "Dernier chiffre : toujours 5 ou 0",
+        "Stratégie 100-5 : 95×6 = 600-30 = 570. Très pratique !",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       96: [
-        "Relación 8×12: puedes usar cualquiera de las dos tables",
-        "Ejemplo: 96×5 = 12×5×8 = 60×8 = 480",
-        "Cuenta de noventa y seis en noventa y seis: 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
-        "multiples métodos: 96=8×12=6×16=4×24=3×32",
-        "Practica los múltiplos más difíciles: 96×7=672, 96×9=864",
+        "Relation 8×12 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Exemple : 96×5 = 12×5×8 = 60×8 = 480",
+        "Comptez de quatre-vingt-seize en quatre-vingt-seize : 96, 192, 288, 384, 480, 576, 672, 768, 864, 960",
+        "Plusieurs méthodes : 96=8×12=6×16=4×24=3×32",
+        "Entraînez-vous sur les multiples les plus difficiles : 96×7=672, 96×9=864",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       97: [
-        "Estrategia 100-3 SÚPER FÁCIL: 97×n = 100n - 3n",
-        "Ejemplo: 97×7 = 700 - 21 = 679. ¡PERFECTO!",
-        "Cuenta de noventa y siete en noventa y siete: 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
-        "Practica los múltiplos más difíciles: 97×7=679, 97×8=776, 97×9=873",
-        "nombre premier: La stratégie 100-3 es el méthode la plus pratique",
+        "La stratégie 100-3 est très facile : 97×n = 100n - 3n",
+        "Exemple : 97×7 = 700 - 21 = 679. Parfait !",
+        "Comptez de quatre-vingt-dix-sept en quatre-vingt-dix-sept : 97, 194, 291, 388, 485, 582, 679, 776, 873, 970",
+        "Entraînez-vous sur les multiples les plus difficiles : 97×7=679, 97×8=776, 97×9=873",
+        "Nombre premier : la stratégie 100-3 est la méthode la plus pratique",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       98: [
-        "Estrategia 100-2 MUY FÁCIL: 98×n = 100n - 2n",
-        "Ejemplo: 98×7 = 700 - 14 = 686. ¡Perfecto!",
-        "Cuenta de noventa y ocho en noventa y ocho: 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
-        "Relación 2×49: duplica la table de 49",
-        "Practica los múltiplos más difíciles: 98×7=686, 98×8=784, 98×9=882",
+        "La stratégie 100-2 est très facile : 98×n = 100n - 2n",
+        "Exemple : 98×7 = 700 - 14 = 686. Parfait !",
+        "Comptez de quatre-vingt-dix-huit en quatre-vingt-dix-huit : 98, 196, 294, 392, 490, 588, 686, 784, 882, 980",
+        "Relation 2×49 : doublez la table de 49",
+        "Entraînez-vous sur les multiples les plus difficiles : 98×7=686, 98×8=784, 98×9=882",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       99: [
-        "Estrategia 100-1 LA plus facile: 99×n = 100n - n",
-        "Ejemplo: 99×7 = 700 - 7 = 693. ¡PERFECTO!",
-        "Cuenta de noventa y nueve en noventa y nueve: 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
-        "Relación 9×11: puedes usar cualquiera de las dos tables",
-        "Patrón de repetición: 99 proparciona facilidad de reconocimiento visual",
+        "La stratégie 100-1 est la plus simple : 99×n = 100n - n",
+        "Exemple : 99×7 = 700 - 7 = 693. Parfait !",
+        "Comptez de quatre-vingt-dix-neuf en quatre-vingt-dix-neuf : 99, 198, 297, 396, 495, 594, 693, 792, 891, 990",
+        "Relation 9×11 : vous pouvez utiliser l'une ou l'autre des deux tables",
+        "Motif de répétition : 99 facilite la reconnaissance visuelle",
       ],
+      // Rewritten 2026-07-30 — replaced Spanish contamination
       100: [
-        "¡LA TABLA plus facile! Agrega dos ceros al final",
-        "Ejemplo: 7×100 = 700. ¡Solo agrega 00 después del 7!",
-        "Cuenta de cien en cien: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
-        "Relación 10×10: 10 fois la table de 10",
-        "Es la base para calculs parcentuales: 100%=completo, ¡es la base de todo!",
+        "La table la plus simple ! Ajoutez deux zéros à la fin",
+        "Exemple : 7×100 = 700. Ajoutez simplement 00 après le 7 !",
+        "Comptez de cent en cent : 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000",
+        "Relation 10×10 : 10 fois la table de 10",
+        "C'est la base des calculs de pourcentages : 100%=complet, la base de tout !",
       ],
     }
 

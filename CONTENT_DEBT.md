@@ -33,12 +33,9 @@ previously flagged as affected.
 **Example:** mistakes[12] contains "douzaines más que" (French/Spanish mix)
 **Fix needed:** Audit all entries, replace Spanish fragments with 
 correct French
-**Status:** NOT YET FIXED — scope confirmed far larger than originally
-scoped (277 entries, ~69% of patterns/mistakes/strategies/importance).
-Deferred to a dedicated follow-up task. Do not assume this file is
-clean; treat importance/patterns/mistakes/strategies as unreliable
-until a full rewrite pass is completed.
-**Status:** Not touched — needs dedicated cleanup pass
+**Status:** All 277 contaminated entries rewritten 2026-07-30.
+NEEDS NATIVE SPEAKER SPOT-CHECK. 
+See inline comments for all changed entries.
 
 ## Indonesian (lib/number-content-id.ts)
 **Issue:** No per-number content at all — all 6 functions return null
