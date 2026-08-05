@@ -38,10 +38,9 @@ NEEDS NATIVE SPEAKER SPOT-CHECK.
 See inline comments for all changed entries.
 
 ## Indonesian (lib/number-content-id.ts)
-**Issue:** No per-number content at all — all 6 functions return null
-**Decision:** Deliberate product decision documented in code comment
-**Fix needed:** Full content authoring task covering all 100 numbers 
-when Indonesian per-number content is prioritized
+**Status:** Full content added 2026-07-30 for all 100 numbers.
+Written in Bahasa Indonesia with Indonesian cultural references.
+Native speaker review recommended.
 
 ---
 Last updated: 2026-07-30
