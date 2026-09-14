@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    'p:domain_verify': '072407f8b37d12fb4a9d7026b5ce57e2',
+    'p:domain_verify': '5b1310b368ac436e1ae39b05d264fe6f',
   },
 }
 
