@@ -177,8 +177,7 @@ const nextConfig = {
       { source: '/de/einmaleins/para-estudiantes', destination: '/de/einmaleins/fuer-schueler', permanent: true },
 
       // Redirect missing static assets that bots / browsers always request
-      { source: '/favicon.ico', destination: '/favicon.svg', permanent: false },
-      { source: '/logo.png',    destination: '/og-image.jpg', permanent: false },
+      { source: '/favicon.ico', destination: '/logo.png', permanent: false },
 
       // Redirect WordPress and malformed URLs to homepage
       { source: '/wp-content/:path*', destination: '/', permanent: true },

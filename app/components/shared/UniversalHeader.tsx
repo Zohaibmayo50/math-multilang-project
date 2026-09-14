@@ -34,9 +34,13 @@ export default function UniversalHeader({ lang }: UniversalHeaderProps) {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href={topicBase} className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shadow-lg">
-              <span className="text-xl md:text-2xl font-bold text-white">×</span>
-            </div>
+            <img
+              src="/logo.png"
+              alt={t.logoText}
+              width={48}
+              height={48}
+              className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-200"
+            />
             <div className="flex flex-col">
               <span className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 {t.logoText}
